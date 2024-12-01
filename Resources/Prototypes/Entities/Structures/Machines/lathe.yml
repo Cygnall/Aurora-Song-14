@@ -246,6 +246,7 @@
     - NFService # Frontier
     - NFScience # Frontier
     - NFPouches # Frontier
+    - SGDRecipe # Impstation
   - type: EmagLatheRecipes
     emagDynamicPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmo<NfsdAmmoStatic

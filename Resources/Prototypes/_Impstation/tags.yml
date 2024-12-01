@@ -10,6 +10,9 @@
   id: Plushie
 
 - type: Tag
+  id: SGD
+
+- type: Tag
   id: SpeedLoaderAM
 
 - type: Tag
