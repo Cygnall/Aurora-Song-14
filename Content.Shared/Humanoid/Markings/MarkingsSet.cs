@@ -169,8 +169,8 @@ public sealed partial class MarkingSet
                     toRemove.Add((category, marking.MarkingId));
                 }
 
-                if (prototype.SpeciesRestrictions != null
-                    && !prototype.SpeciesRestrictions.Contains(species))
+                // DEN - Invert marking restrictions
+                if (!markingManager.IsSpeciesWhitelisted(species, prototype))
                 {
                     toRemove.Add((category, marking.MarkingId));
                 }
@@ -189,7 +189,7 @@ public sealed partial class MarkingSet
             {
                 foreach (var marking in list)
                 {
-                    if (markingManager.TryGetMarking(marking, out var prototype)) // Frontier: modified this test to add forced marking test 
+                    if (markingManager.TryGetMarking(marking, out var prototype)) // Frontier: modified this test to add forced marking test
                     {
                         if (markingManager.MustMatchSkin(species, prototype.BodyPart, out var alpha, prototypeManager))
                             marking.SetColor(skinColor.Value.WithAlpha(alpha));
@@ -222,10 +222,9 @@ public sealed partial class MarkingSet
                     continue;
                 }
 
-                if (prototype.SexRestriction != null && prototype.SexRestriction != sex)
-                {
+                // DEN - Invert marking restrictions
+                if (!markingManager.IsSexWhitelisted(sex, prototype))
                     toRemove.Add((category, marking.MarkingId));
-                }
             }
         }
 
