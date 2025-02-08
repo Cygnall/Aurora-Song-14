@@ -647,7 +647,8 @@
       collection: Salutes
     Crack: # Imp
       collection: Cracks # Imp
-
+    Blink: # Imp
+      collection: Blinks # Imp
 - type: emoteSounds
   id: DionaBodyEmotes
   sounds:
@@ -666,6 +667,8 @@
        volume: -5
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp
+      collection: Blinks # Imp
 
 - type: emoteSounds
   id: ReptilianBodyEmotes
@@ -686,6 +689,8 @@
       collection: Salutes
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp
+      collection: Blinks # Imp
 
 - type: emoteSounds
   id: MothBodyEmotes
