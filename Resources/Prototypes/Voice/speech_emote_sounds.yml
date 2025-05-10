@@ -645,10 +645,14 @@
         volume: -6
     Salute:
       collection: Salutes
-    Crack: # Imp
-      collection: Cracks # Imp
-    Blink: # Imp
-      collection: Blinks # Imp
+    Crack: # Imp addition
+      collection: Cracks
+    Blink: # Imp addition
+      collection: Blinks
+      params:
+        volume: -3
+        variation: 0.1
+
 - type: emoteSounds
   id: DionaBodyEmotes
   sounds:
@@ -665,10 +669,13 @@
       path: /Audio/Voice/Diona/diona_salute.ogg
       params:
        volume: -5
-    Crack: # Imp
-      collection: Cracks # Imp
-    Blink: # Imp
-      collection: Blinks # Imp
+    Crack: # imp
+      collection: Cracks
+    Blink: # Imp addition
+      collection: Blinks
+      params:
+        volume: -3
+        variation: 0.1
 
 - type: emoteSounds
   id: ReptilianBodyEmotes
@@ -711,6 +718,9 @@
       collection: Cracks # Aurora's Song
     Blink: # Aurora's Song
       collection: Blinks # Aurora's Song
+      params: # imp
+        volume: -3 # imp
+        variation: 0.1 # imp
     Flutter: # Aurora's Song - Add flutter from fairy
       path: /Audio/Voice/Moth/moth_flap.ogg
 

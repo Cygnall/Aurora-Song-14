@@ -21,3 +21,13 @@
       collection: Weh
   params:
     variation: 0.125
+
+#body emotes
+- type: emoteSounds
+  id: SlimeBodyEmotes
+  sounds:
+    Blink:
+      collection: WetBlinks
+      params:
+        volume: -3
+        variation: 0.1
