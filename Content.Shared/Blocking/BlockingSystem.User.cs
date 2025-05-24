@@ -1,7 +1,7 @@
 using System.Linq;
 using Content.Shared.Damage;
-using Content.Shared.Damage.Components;
-using Content.Shared.Damage.Systems;
+using Content.Shared.Mobs;
+using Content.Shared.Standing;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Containers;
 
@@ -104,6 +104,6 @@ public sealed partial class BlockingSystem
     private void UserStopBlocking(EntityUid uid, BlockingUserComponent component)
     {
         if (TryComp<BlockingComponent>(component.BlockingItem, out var blockComp) && blockComp.IsBlocking)
-            StopBlocking(component.BlockingItem.Value, blockComp, uid);
+            StopBlocking((component.BlockingItem.Value, blockComp), uid); // imp - changed to Entity<T>
     }
 }
