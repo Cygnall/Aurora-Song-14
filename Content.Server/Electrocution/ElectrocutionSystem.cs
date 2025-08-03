@@ -392,12 +392,12 @@ public sealed class ElectrocutionSystem : SharedElectrocutionSystem
         }
 
         if (!Resolve(uid, ref statusEffects, false) ||
-            !_statusEffects.CanApplyEffect(uid, StatusEffectKey, statusEffects))
+            !_statusEffects.CanApplyEffect(uid, StatusKeyIn, statusEffects))
         {
             return false;
         }
 
-        if (!_statusEffects.TryAddStatusEffect<ElectrocutedComponent>(uid, StatusEffectKey, time, refresh, statusEffects))
+        if (!_statusEffects.TryAddStatusEffect<ElectrocutedComponent>(uid, StatusKeyIn, time, refresh, statusEffects))
             return false;
 
         var shouldStun = siemensCoefficient > 0.5f;
