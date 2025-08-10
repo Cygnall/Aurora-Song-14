@@ -1,5 +1,5 @@
-﻿- type: entity
-  parent: ClothingEyesBase
+- type: entity
+  parent: [ClothingEyesBase, BaseChameleon]
   id: ClothingEyesChameleon # no flash immunity, sorry
   name: sun glasses
   description: Useful for security. # Frontier - description change

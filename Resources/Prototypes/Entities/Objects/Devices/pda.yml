@@ -1522,7 +1522,7 @@
       - MedTekCartridge
 
 - type: entity
-  parent: BasePDA
+  parent: [BasePDA, VoiceLock]
   id: ChameleonPDA
   name: contractor PDA # Frontier passenger<contractor
   description: Why isn't it gray?
