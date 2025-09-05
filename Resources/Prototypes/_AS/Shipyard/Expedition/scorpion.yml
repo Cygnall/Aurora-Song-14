@@ -1,0 +1,46 @@
+# Author Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Maintainer Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Scorpion
+  parent: BaseVessel
+  name: BH Scorpion
+  description: An expedition capable vessel with salvage and engineering capabilities.
+  price: 87100 # ~67000 appraise, ~30% markup
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_AS/Shuttles/Expedition/scorpion.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  - Salvage
+  - Engineering
+  engine:
+  - AME
+
+- type: gameMap
+  id: Scorpion
+  mapName: 'KC Scorpion'
+  mapPath: /Maps/_AS/Shuttles/Expedition/scorpion.yml
+  minPlayers: 0
+  stations:
+    Scorpion:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Scorpion {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]
