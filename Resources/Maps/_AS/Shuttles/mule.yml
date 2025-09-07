@@ -4,7 +4,7 @@ meta:
   engineVersion: 261.1.0
   forkId: ""
   forkVersion: ""
-  time: 09/02/2025 20:09:23
+  time: 09/06/2025 22:48:06
   entityCount: 479
 maps: []
 grids:
@@ -3053,6 +3053,14 @@ entities:
     - type: Transform
       pos: 3.5,-7.5
       parent: 1
+- proto: Sink
+  entities:
+  - uid: 124
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 4.5,4.5
+      parent: 1
 - proto: SMESBasic
   entities:
   - uid: 188
@@ -3822,13 +3830,6 @@ entities:
     components:
     - type: Transform
       pos: 0.5,0.5
-      parent: 1
-- proto: WaterCooler
-  entities:
-  - uid: 124
-    components:
-    - type: Transform
-      pos: 4.5,4.5
       parent: 1
 - proto: WeaponCapacitorRecharger
   entities:
