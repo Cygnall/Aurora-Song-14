@@ -4297,3 +4297,10 @@ Entries:
   id: 8627
   time: '2025-09-07T15:26:30.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/446
+- author: assignedgod
+  changes:
+    - type: Remove
+      message: Removed corpse from Nyx
+  id: 8628
+  time: '2025-09-08T01:41:29.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/452
