@@ -1,7 +1,7 @@
 ﻿- type: vessel
   id: panacea
   parent: BaseVessel
-  name: ID panacea
+  name: ID Panacea
   description: The Interdyne Panacea, designed as a portable chemistry station, is a slow but powerful ship designed around industrial chem production and resupply.
   price: 50000 #Appraisal is 32700
   category: Medium
