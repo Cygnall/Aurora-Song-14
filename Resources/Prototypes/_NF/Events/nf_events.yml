@@ -74,7 +74,7 @@
     prototypeId: PaperDeadDropFax
     content: deaddrop-faxed-hint-content-arcadia # Default contents, will be edited.  //AS: Arcadia version
     stampedBy:
-    - stampedName: deaddrop-faxed-hint-signature
+    - stampedName: deaddrop-faxed-hint-signature-arcadia
       stampedColor: "#850000"
     stampState: paper_stamp-syndicate
     preFaxActions:
