@@ -4,7 +4,7 @@ meta:
   engineVersion: 261.1.0
   forkId: ""
   forkVersion: ""
-  time: 09/10/2025 18:35:12
+  time: 09/10/2025 18:50:39
   entityCount: 1438
 maps: []
 grids:
@@ -379,6 +379,13 @@ entities:
           decals:
             58: 7,1
             59: 8,1
+        - node:
+            angle: 1.5707963267948966 rad
+            color: '#FA7500FF'
+            id: BrickTileWhiteLineS
+          decals:
+            261: 9,5
+            262: 9,4
         - node:
             color: '#3EB38896'
             id: BrickTileWhiteLineW
