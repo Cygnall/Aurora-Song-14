@@ -33,7 +33,7 @@
 - type: startingGear
   id: DocGear
   equipment:
-    pocket1: HypoMini
+    pocket1: Hypospray # Aurora - was HypoMini, replaced with Hypospray
     pocket2: MedicalAppraisalTool
   storage:
     back:
@@ -41,9 +41,8 @@
     - MobileComputerTabletopCommsFlatpack
     - BoxFolderMedicalDoctor
     - RubberStampDoc
-    - ShipVoucherAuroraMedic # Aurora
-    - NFWeaponPistolUniversalNfsdLessLethal # Aurora
-    - Hypospray
+    - ShipVoucherAuroraMedic # Aurora - Medic voucher for free ship
+    - ASWeaponPistol58SLELessLethal # Aurora - LTL sidearm for DoC
   licenses:
   - LicenseContrabandHandling
 
