@@ -18,14 +18,9 @@
   name: mk58-S
   description: |-
     The Mark 58 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'
-  components: &universalComponents
-  - type: Gun
-    soundGunshot:
-      path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
 
 - type: entity
   id: ASWeaponPistol58SLELessLethal
   parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, ASWeaponPistolMK58SLE ]
   suffix: Frontier, Less-lethal
-  components: *universalComponents
 

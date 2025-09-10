@@ -33,7 +33,7 @@
 - type: startingGear
   id: DocGear
   equipment:
-    pocket1: HypoMini
+    pocket1: Hypospray
     pocket2: MedicalAppraisalTool
   storage:
     back:
@@ -42,8 +42,7 @@
     - BoxFolderMedicalDoctor
     - RubberStampDoc
     - ShipVoucherAuroraMedic # Aurora
-    - NFWeaponPistolUniversalNfsdLessLethal # Aurora
-    - Hypospray
+    - ASWeaponPistol58SLELessLethal # Aurora
   licenses:
   - LicenseContrabandHandling
 
