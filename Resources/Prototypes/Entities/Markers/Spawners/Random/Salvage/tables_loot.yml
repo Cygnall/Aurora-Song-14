@@ -90,15 +90,15 @@
       weight: 0.25 # Frontier
     - id: ScrapGenericMachineAncient # Frontier
       weight: 0.1 # Frontier
-    - !type:GroupSelector
-      weight: 2
-      children:
-      - !type:NestedSelector
-        weight: 3
-        tableId: RandomChemicalBarrel
-      - !type:NestedSelector
-        weight: 1
-        tableId: RandomChemicalBarrelRadioactive
+#    - !type:GroupSelector
+#      weight: 2
+#      children:
+#      - !type:NestedSelector
+#        weight: 3
+#        tableId: RandomChemicalBarrel
+#      - !type:NestedSelector
+#        weight: 1
+#        tableId: RandomChemicalBarrelRadioactive
 
 # Treasure: High-value scatterables that don't do a ton.
 
@@ -179,7 +179,7 @@
     - id: CardBoxNanotrasen # Frontier
       weight: 0.05 # Frontier
     - id: CardBoxSyndicate # Frontier
-      weight: 0.005 # Frontier
+      weight: 0.05 # Frontier, Aurora: Syndicate goods would be mroe common now
     - !type:NestedSelector # Frontier
       tableId: TableStashVariety # Frontier
     - id: ScrapGenericBrokenMachine # Frontier
