@@ -23,7 +23,7 @@
       stationProto: StandardFrontierVessel
       components:
         - type: StationNameSetup
-          mapNameTemplate: 'panacea {1}'
+          mapNameTemplate: 'Panacea {1}'
           nameGenerator:
             !type:NanotrasenNameGenerator
             prefixCreator: '14'
