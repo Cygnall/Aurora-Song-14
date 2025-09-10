@@ -45,10 +45,10 @@ A single line comment on a changed yml field:
   parent: [PartHarpy, BaseTorso] # Aurora Song: add BaseTorso
 ```
 
-A change to a value (note: `OLD<NEW`)
+A change to a value (note: `OLD>NEW`)
 ```yml
   - type: Gun
-    fireRate: 4 # Aurora Song: 3<4
+    fireRate: 4 # Aurora Song: 3>4
     availableModes:
     - SemiAuto
 ```
@@ -92,9 +92,9 @@ if (TryComp<StampComponent>(uid, out var stamp))
 // End Aurora Song
 ```
 
-An edit to a Delta-V locale file, note the `OLD<NEW` format and the separate line for the comment.
+An edit to a Delta-V locale file, note the `OLD>NEW` format and the separate line for the comment.
 ```fluent
-# Aurora Song: "Job Whitelists"<"Role Whitelists"
+# Aurora Song: "Job Whitelists">"Role Whitelists"
 player-panel-job-whitelists = Role Whitelists
 ```
 
