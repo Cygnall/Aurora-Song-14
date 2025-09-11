@@ -249,10 +249,8 @@ namespace Content.Client.Lobby.UI
             };
 
             RgbSkinColorContainer.AddChild(_rgbSkinColorSelector = new ColorSelectorSliders());
-            _rgbSkinColorSelector.OnColorChanged += _ =>
-            {
-                OnSkinColorOnValueChanged();
-            };
+            _rgbSkinColorSelector.OnColorChanged += _ => { OnSkinColorOnValueChanged(); };
+            SkinFurToggle.OnToggled += _ => { SetProfile(Profile, CharacterSlot); }; // DEN - Humanoid Skin Tones
 
             #endregion
 
@@ -792,9 +790,20 @@ namespace Content.Client.Lobby.UI
             PreviewDummy = _controller.LoadProfileEntity(Profile, JobOverride, ShowClothes.Pressed);
             SpriteView.SetEntity(PreviewDummy);
             _entManager.System<MetaDataSystem>().SetEntityName(PreviewDummy, Profile.Name);
+            UpdateSkinFurToggleVisibility(); // DEN - Humanoid Skin Tones
 
             // Check and set the dirty flag to enable the save/reset buttons as appropriate.
             SetDirty();
+        }
+
+        // DEN - Humanoid Skin Tones
+        private void UpdateSkinFurToggleVisibility()
+        {
+            if (Profile == null)
+                return;
+
+            var species = _prototypeManager.Index(Profile.Species);
+            SkinFurToggle.Visible = species.SkinColoration == HumanoidSkinColor.HumanAnimal;
         }
 
         /// <summary>
@@ -1257,6 +1266,29 @@ namespace Content.Client.Lobby.UI
                     break;
                 }
                 // End Frontier
+                // DEN - Humanoid Skin Tones
+                case HumanoidSkinColor.HumanAnimal:
+                    {
+                        SkinFurToggle.Visible = true;
+                        if (!SkinFurToggle.Pressed)
+                        {
+                            Skin.Visible = false;
+                            RgbSkinColorContainer.Visible = true;
+                            Markings.CurrentSkinColor = _rgbSkinColorSelector.Color;
+                            Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(_rgbSkinColorSelector.Color));
+                        }
+                        else
+                        {
+                            Skin.Visible = true;
+                            RgbSkinColorContainer.Visible = false;
+                            var color = SkinColor.HumanSkinTone((int)Skin.Value);
+                            Markings.CurrentSkinColor = color;
+                            Profile = Profile.WithCharacterAppearance(Profile.Appearance.WithSkinColor(color));
+                        }
+
+                        break;
+                    }
+                    // End DEN
             }
 
             ReloadProfilePreview();
@@ -1542,6 +1574,27 @@ namespace Content.Client.Lobby.UI
                     break;
                 }
                 // End Frontier
+                // DEN - Humanoid Skin Tones
+                case HumanoidSkinColor.HumanAnimal:
+                    {
+                        SkinFurToggle.Visible = true;
+                        if (!SkinFurToggle.Pressed)
+                        {
+                            Skin.Visible = false;
+                            RgbSkinColorContainer.Visible = true;
+                            _rgbSkinColorSelector.Color = Profile.Appearance.SkinColor;
+
+                        }
+                        else
+                        {
+                            Skin.Visible = true;
+                            RgbSkinColorContainer.Visible = false;
+                            Skin.Value = SkinColor.HumanSkinToneFromColor(Profile.Appearance.SkinColor);
+
+                        }
+                        break;
+                    }
+                    // End DEN
             }
 
         }

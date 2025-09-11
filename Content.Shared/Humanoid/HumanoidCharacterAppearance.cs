@@ -121,6 +121,7 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
             HumanoidSkinColor.VoxFeathers => Humanoid.SkinColor.ClosestVoxColor(speciesPrototype.DefaultSkinTone),
             HumanoidSkinColor.AnimalFur => Humanoid.SkinColor.ClosestAnimalFurColor(speciesPrototype.DefaultSkinTone), // Einstein Engines - Tajaran
             HumanoidSkinColor.ShelegToned => Humanoid.SkinColor.ShelegSkinTone(speciesPrototype.DefaultHumanSkinTone), // Frontier
+            HumanoidSkinColor.HumanAnimal => speciesPrototype.DefaultSkinTone, // DEN - Humanoid Skin Tones
             _ => Humanoid.SkinColor.ValidHumanSkinTone,
         };
 
@@ -190,6 +191,8 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
                 break;
             case HumanoidSkinColor.AnimalFur: // Einstein Engines - Tajaran
                 newSkinColor = Humanoid.SkinColor.ProportionalAnimalFurColor(newSkinColor);
+                break;
+            case HumanoidSkinColor.HumanAnimal: // The Den - Humanoid Skin Tones
                 break;
         }
 
