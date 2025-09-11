@@ -1028,7 +1028,7 @@
   entityIcon: hydroponicsTray
   discipline: NFService
   tier: 1
-  cost: 10000
+  cost: 5000 # Aurora: You can construct mushroom trays now, these aren't as scarce. Also 10k is a LOT of points.
   recipeUnlocks:
   - HydroponicsTrayMachineCircuitboard
   technologyPrerequisites:
@@ -1487,8 +1487,8 @@
   recipeUnlocks:
   - JetpackCaptain
   technologyPrerequisites:
-  - NFBasicPersonalPropulsion
-  position: 1, 36
+  - NFAdvancedPersonalPropulsion  #Aurora: Make this high tier research
+  position: 2, 36
 
 - type: technology
   id: NFArsenalNfsdPropulsion
@@ -1514,8 +1514,8 @@
   recipeUnlocks:
   - JetpackVoid
   technologyPrerequisites:
-  - NFPersonalPropulsion
-  position: 2, 36
+  - NFBasicPersonalPropulsion #Aurora This research is useless in comparison to the captains pack, make it a prereq
+  position: 1, 36
 
 # region Salvage
 
