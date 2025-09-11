@@ -4311,3 +4311,12 @@ Entries:
   id: 8629
   time: '2025-09-09T01:18:21.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/454
+- author: assignedgod
+  changes:
+    - type: Remove
+      message: Removed the weird small chem barrels from wrecks
+    - type: Tweak
+      message: Made the syndicate playing cards more common on wrecks
+  id: 8630
+  time: '2025-09-11T19:39:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/458
