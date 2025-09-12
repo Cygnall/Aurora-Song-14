@@ -4,8 +4,8 @@ meta:
   engineVersion: 261.1.0
   forkId: ""
   forkVersion: ""
-  time: 09/12/2025 00:38:26
-  entityCount: 3924
+  time: 09/12/2025 01:12:12
+  entityCount: 3925
 maps: []
 grids:
 - 2
@@ -27368,4 +27368,13 @@ entities:
       rot: 3.141592653589793 rad
       pos: -50.5,-5.5
       parent: 2
+- proto: WarpPoint
+  entities:
+  - uid: 3925
+    components:
+    - type: Transform
+      pos: 0.5,-11.5
+      parent: 2
+    - type: WarpPoint
+      location: Trade Spine
 ...
