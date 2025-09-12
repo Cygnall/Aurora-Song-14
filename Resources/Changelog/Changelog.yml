@@ -4327,3 +4327,12 @@ Entries:
   id: 8631
   time: '2025-09-12T00:19:11.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/453
+- author: portfiend
+  changes:
+    - type: Add
+      message: >-
+        Humans, harpies, and dwarves can now toggle between humanoid skin tones
+        and RGB color sliders.
+  id: 8632
+  time: '2025-09-12T18:45:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/466
