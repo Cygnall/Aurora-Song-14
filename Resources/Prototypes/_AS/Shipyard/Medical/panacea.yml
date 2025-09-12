@@ -1,0 +1,32 @@
+﻿- type: vessel
+  id: panacea
+  parent: BaseVessel
+  name: ID Panacea
+  description: The Interdyne Panacea, designed as a portable chemistry station, is a slow but powerful ship designed around industrial chem production and resupply.
+  price: 75000 #Appraisal is 32700
+  category: Medium
+  group: Medical
+  access: Medical
+  shuttlePath: /Maps/_AS/Shuttles/panacea.yml
+  class:
+  - Medical
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: panacea
+  mapName: 'ID Panacea'
+  mapPath: /Maps/_AS/Shuttles/panacea.yml
+  minPlayers: 0
+  stations:
+    panacea:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Panacea {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            Medic: [ 0, 0 ]
