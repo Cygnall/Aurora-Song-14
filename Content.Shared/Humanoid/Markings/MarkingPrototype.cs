@@ -4,10 +4,20 @@ using Robust.Shared.Utility;
 namespace Content.Shared.Humanoid.Markings
 {
     [Prototype]
-    public sealed partial class MarkingPrototype : IPrototype
+    // DEN: Make markings inheriting (IInheritingPrototype)
+    public sealed partial class MarkingPrototype : IPrototype, IInheritingPrototype
     {
         [IdDataField]
         public string ID { get; private set; } = "uwu";
+
+        // DEN: Make markings inheriting
+        [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<MarkingPrototype>))]
+        public string[]? Parents { get; }
+
+        [NeverPushInheritance]
+        [AbstractDataField]
+        public bool Abstract { get; }
+        // End DEN
 
         public string Name { get; private set; } = default!;
 
@@ -43,8 +53,8 @@ namespace Content.Shared.Humanoid.Markings
         public List<SpriteSpecifier> Sprites { get; private set; } = default!;
 
         // impstation edit - allow markings to support shaders
-		[DataField("shader")]
-		public string? Shader { get; private set; } = null;
+        [DataField("shader")]
+        public string? Shader { get; private set; } = null;
         // end impstation edit
         public Marking AsMarking()
         {
