@@ -1,5 +1,5 @@
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesChestStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesChestStandardOrganic] # AuroraSong: Marking inheritance
   id: ChestCutHere
   bodyPart: Chest
   markingCategory: Chest
@@ -8,7 +8,7 @@
     state: chest_cuthere
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AuroraSong: Marking inheritance
   id: ArmDollJointsTattooLeft
   bodyPart: LArm
   markingCategory: Arms
@@ -17,7 +17,7 @@
     state: l_arm_doll
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AuroraSong: Marking inheritance
   id: ArmDollJointsTattooRight
   bodyPart: RArm
   markingCategory: Arms
@@ -26,7 +26,7 @@
     state: r_arm_doll
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AuroraSong: Marking inheritance
   id: HandDollJointsTattooLeft
   bodyPart: LHand
   markingCategory: Arms
@@ -35,7 +35,7 @@
     state: l_hand_doll
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AuroraSong: Marking inheritance
   id: HandDollJointsTattooRight
   bodyPart: RHand
   markingCategory: Arms
@@ -44,7 +44,7 @@
     state: r_hand_doll
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: LegDollJointsTattooLeft
   bodyPart: LLeg
   markingCategory: Legs
@@ -53,7 +53,7 @@
     state: l_leg_doll
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: LegDollJointsTattooRight
   bodyPart: RLeg
   markingCategory: Legs
@@ -62,7 +62,7 @@
     state: r_leg_doll
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: FootDollJointsTattooLeft
   bodyPart: LFoot
   markingCategory: Legs
@@ -71,7 +71,7 @@
     state: l_foot_doll
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: FootDollJointsTattooRight
   bodyPart: RFoot
   markingCategory: Legs

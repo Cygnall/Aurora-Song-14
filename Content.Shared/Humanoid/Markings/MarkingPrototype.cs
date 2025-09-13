@@ -1,24 +1,24 @@
 using Robust.Shared.Prototypes;
-using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array; // AS - Marking Inheritance
+using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototype.Array; // AuroraSong
 using Robust.Shared.Utility;
 
 namespace Content.Shared.Humanoid.Markings
 {
     [Prototype]
-    // AS: Make markings inheriting (IInheritingPrototype)
+    // AuroraSong: Make markings inheriting (IInheritingPrototype)
     public sealed partial class MarkingPrototype : IPrototype, IInheritingPrototype
     {
         [IdDataField]
         public string ID { get; private set; } = "uwu";
 
-        // AS: Make markings inheriting
+        // AuroraSong: Make markings inheriting
         [ParentDataField(typeof(AbstractPrototypeIdArraySerializer<MarkingPrototype>))]
         public string[]? Parents { get; }
 
         [NeverPushInheritance]
         [AbstractDataField]
         public bool Abstract { get; }
-        // End AS
+        // End AuroraSong
 
         public string Name { get; private set; } = default!;
 

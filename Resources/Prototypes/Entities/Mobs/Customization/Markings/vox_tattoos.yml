@@ -1,5 +1,5 @@
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesVox] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesVox] # AuroraSong: Marking inheritance
   id: TattooVoxHeartLeftArm
   bodyPart: LArm
   markingCategory: Arms
@@ -8,7 +8,7 @@
     state: heart_l_arm
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesVox] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesVox] # AuroraSong: Marking inheritance
   id: TattooVoxHeartRightArm
   bodyPart: RArm
   markingCategory: Arms
@@ -17,7 +17,7 @@
     state: heart_r_arm
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesVox] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesVox] # AuroraSong: Marking inheritance
   id: TattooVoxHiveChest
   bodyPart: Chest
   markingCategory: Chest
@@ -26,7 +26,7 @@
     state: hive_s
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesVox] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesVox] # AuroraSong: Marking inheritance
   id: TattooVoxNightlingChest
   bodyPart: Chest
   markingCategory: Chest

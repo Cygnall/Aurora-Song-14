@@ -1,5 +1,5 @@
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesChestStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesChestStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooHiveChest
   bodyPart: Chest
   markingCategory: Chest
@@ -8,7 +8,7 @@
     state: tattoo_hive_chest
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesChestStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesChestStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooNightlingChest
   bodyPart: Chest
   markingCategory: Chest
@@ -17,7 +17,7 @@
     state: tattoo_nightling
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooSilverburghLeftLeg
   bodyPart: LLeg
   markingCategory: Legs
@@ -26,7 +26,7 @@
     state: tattoo_silverburgh_l_leg
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooSilverburghRightLeg
   bodyPart: RLeg
   markingCategory: Legs
@@ -35,7 +35,7 @@
     state: tattoo_silverburgh_r_leg
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooCampbellLeftArm
   bodyPart: LArm
   markingCategory: Arms
@@ -44,7 +44,7 @@
     state: tattoo_campbell_l_arm
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooCampbellRightArm
   bodyPart: RArm
   markingCategory: Arms
@@ -53,7 +53,7 @@
     state: tattoo_campbell_r_arm
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooCampbellLeftLeg
   bodyPart: LLeg
   markingCategory: Legs
@@ -62,7 +62,7 @@
     state: tattoo_campbell_l_leg
 
 - type: marking
-  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AS: Marking inheritance
+  parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooCampbellRightLeg
   bodyPart: RLeg
   markingCategory: Legs
@@ -71,21 +71,21 @@
     state: tattoo_campbell_r_leg
 
 - type: marking
-  parent: [BaseEyes, BaseSpeciesEyesStandard] # AS: Marking inheritance
+  parent: [BaseEyes, BaseSpeciesEyesStandard] # AuroraSong: Marking inheritance
   id: TattooEyeRight
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_r
 
 - type: marking
-  parent: [BaseEyes, BaseSpeciesEyesStandard] # AS: Marking inheritance
+  parent: [BaseEyes, BaseSpeciesEyesStandard] # AuroraSong: Marking inheritance
   id: TattooEyeLeft
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_l
 
 - type: marking
-  parent: [BaseEyes, BaseSpeciesMoth] # AS: Marking inheritance
+  parent: [BaseEyes, BaseSpeciesMoth] # AuroraSong: Marking inheritance
   id: TattooEyeMothRight
   markingCategory: Overlay
   sprites:
@@ -93,7 +93,7 @@
     state: tattoo_eye_moth_r
 
 - type: marking
-  parent: [BaseEyes, BaseSpeciesMoth] # AS: Marking inheritance
+  parent: [BaseEyes, BaseSpeciesMoth] # AuroraSong: Marking inheritance
   id: TattooEyeMothLeft
   markingCategory: Overlay
   sprites:
