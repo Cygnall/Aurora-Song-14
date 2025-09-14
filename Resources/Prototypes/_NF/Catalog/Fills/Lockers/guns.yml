@@ -6,4 +6,3 @@
   components:
   - type: AccessReader
     access: [["Captain"], ["Mercenary"]]
-    
