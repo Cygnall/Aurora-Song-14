@@ -10,3 +10,30 @@
       amount: 1
   products:
       ForceFemDrugs: 4
+
+- type: reaction
+  id: ASAgonyReaction
+  impact: Medium
+  reactants:
+    Mannitol:
+      amount: 2
+    Razorium:
+      amount: 1
+    SulfuricAcid:
+      amount: 1
+  products:
+      Agony: 3
+      SulfuricAcid: 1
+
+- type: reaction
+  id: ScaryDrugsReaction
+  impact: Medium
+  reactants:
+    Psicodine:
+      amount: 2
+    Lithium:
+      amount: 1
+    Radium:
+      amount: 0.1
+  products:
+      ScaryDrugs: 4
