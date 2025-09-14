@@ -4368,3 +4368,10 @@ Entries:
   id: 8636
   time: '2025-09-14T16:13:09.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/472
+- author: Shaman
+  changes:
+    - type: Add
+      message: Added high-vis tape to body bags
+  id: 8637
+  time: '2025-09-14T20:33:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/476
