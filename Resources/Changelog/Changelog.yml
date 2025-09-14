@@ -4359,3 +4359,12 @@ Entries:
   id: 8635
   time: '2025-09-14T00:29:16.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/470
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added paranoinol, a drug that scares you!
+    - type: Add
+      message: Added agony, a drug that hurts you!
+  id: 8636
+  time: '2025-09-14T16:13:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/472
