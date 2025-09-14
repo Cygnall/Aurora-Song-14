@@ -1,0 +1,20 @@
+# Markings are inheriting. That means they can have parents now. Yay!
+
+- type: marking
+  abstract: true
+  id: BaseTattoo
+  coloring:
+    default:
+      type: !type:TattooColoring
+      fallbackColor: "#666666"
+
+- type: marking
+  abstract: true
+  id: BaseEyes
+  bodyPart: Eyes
+  markingCategory: Head
+  coloring:
+    default:
+      type:
+        !type:EyeColoring
+          negative: true

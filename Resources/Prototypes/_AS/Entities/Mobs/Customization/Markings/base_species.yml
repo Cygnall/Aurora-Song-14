@@ -1,0 +1,97 @@
+# Markings are inheriting. That means they can have parents now. Yay!
+# This file is mostly for species restriction lists.
+# Keep in mind that there is no partial inheritance of species restrictions, so you have to redeclare the entire
+# species restriction list in its entirety for each speciesRestriction property.
+
+# Species for reference, excluding non-roundstart:
+# Arachnid
+# Diona
+# Dwarf
+# Felinid
+# Feroxi
+# Goblin
+# Harpy
+# Human
+# IPC
+# Moth
+# Oni
+# Reptilian
+# Rodentia
+# Sheleg
+# SlimePerson
+# Tajaran
+# Vox
+# Vulpkanin
+
+# "Standard [Body Part]" - Species' whose base body sprites have the same silhouettes / position as humans.
+# Not included are anything where that body part has a different silhouette. If the species has a
+# displacement map that completely changes the way clothes look, like Vox, it probably shoudld be excluded.
+
+- type: marking
+  abstract: true
+  id: BaseSpeciesEyesStandard
+  invertSpeciesRestriction: true
+  speciesRestriction:
+  - Arachnid
+  - Diona
+  - IPC
+  - Moth
+  - Vox
+
+# Organic - Species who can be assumed to have skin. If you can imagine giving this species a tattoo or a scar, it is
+# probably included. (Because this is used for tattoos and scars.)
+
+- type: marking
+  abstract: true
+  id: BaseSpeciesChestStandardOrganic
+  invertSpeciesRestriction: true
+  speciesRestriction:
+  # Non-standard
+  - Moth
+  - Vox
+  # Inorganic / Skinless
+  - Diona
+  - IPC
+
+- type: marking
+  abstract: true
+  id: BaseSpeciesArmsStandardOrganic
+  invertSpeciesRestriction: true
+  speciesRestriction:
+  # Non-standard
+  - Harpy
+  - Moth
+  - Vox
+  # Inorganic / Skinless
+  - Diona
+  - IPC
+
+- type: marking
+  abstract: true
+  id: BaseSpeciesLegsStandardOrganic
+  invertSpeciesRestriction: true
+  speciesRestriction:
+  # Non-standard
+  - Harpy
+  - Moth
+  - Vox
+  # Inorganic / Skinless
+  - Diona
+  - IPC
+  # Technically Tajaran are missing one pixel off the heel (like, very subtle digitigrade)
+  # but I'm not removing them from the legs tattoo list just because of that.
+
+# Non-standard species restrictions.
+# Why single-species restrictions, you ask? I would like to minimize the amount of `speciesRestriction` redeclaration
+# in general. Always easier to edit one prototype than it is to edit potentially dozens. Maybe you add a species that
+# has an identical body but does something different - not that I recommend this.
+
+- type: marking
+  abstract: true
+  id: BaseSpeciesMoth
+  speciesRestriction: [Moth]
+
+- type: marking
+  abstract: true
+  id: BaseSpeciesVox
+  speciesRestriction: [Vox]
