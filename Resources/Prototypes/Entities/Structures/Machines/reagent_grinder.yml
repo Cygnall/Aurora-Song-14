@@ -64,7 +64,7 @@
   - type: SolutionContainerManager
     solutions:
       output:
-        maxVol: 400 #*slaps roof of machine* This baby can fit so much omnizine in it
+        maxVol: 5000 #*slaps roof of machine* This baby can fit so much omnizine in it #Aurora Song: 400-> 5k. Needs to be usable for large scale argicultural automation
   - type: MaterialReclaimer
     whitelist:
       components:
