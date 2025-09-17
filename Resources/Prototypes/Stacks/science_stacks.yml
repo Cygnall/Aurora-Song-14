@@ -2,7 +2,7 @@
   id: ArtifactFragment
   name: stack-artifact-fragment
   spawn: ArtifactFragment1
-  maxCount: 30
+  maxCount: 100 #AS14: 30 => 100
 
 - type: stack
   id: Manipulator
