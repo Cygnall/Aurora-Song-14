@@ -4389,3 +4389,10 @@ Entries:
   id: 8639
   time: '2025-09-15T21:50:33.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/479
+- author: Jakumba
+  changes:
+    - type: Tweak
+      message: Increased the stack size of "sheet" materials.
+  id: 8640
+  time: '2025-09-17T14:17:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/482
