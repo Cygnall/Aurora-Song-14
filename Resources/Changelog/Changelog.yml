@@ -4403,3 +4403,10 @@ Entries:
   id: 8641
   time: '2025-09-17T14:19:52.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/475
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Tweaked wires on the BH Scorpion
+  id: 8642
+  time: '2025-09-17T14:20:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/481
