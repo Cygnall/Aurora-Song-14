@@ -24,7 +24,7 @@
   - type: Appearance
 
 # Surplus
-- type: entity # Aurora's Song - Copy of Lecter from NF with but legalized with sprite changes
+- type: entity # Aurora's Song - Copy of Lecter from NF but legalized with sprite changes
   name: Lecter
   description: |-
     A reliable military-grade assault rifle. On the receiver is a label that says 'Certified Surplus.'
@@ -42,7 +42,7 @@
   - type: Clothing
     sprite: _AS/Objects/Weapons/Guns/Rifles/surplecter.rsi
 
-- type: entity # Aurora's Song - Copy of Soland-Moss from NF with but legalized with sprite changes
+- type: entity # Aurora's Song - Copy of Soland-Moss from NF but legalized with sprite changes
   id: ASWeaponRifleAssaultSurpSm
   parent: [ BaseC2ContrabandUnredeemable, NFWeaponRifleAssaultSm ]
   name: Soland-Moss # Renamed: real brand name

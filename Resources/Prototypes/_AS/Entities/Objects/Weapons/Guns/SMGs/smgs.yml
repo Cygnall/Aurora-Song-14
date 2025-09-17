@@ -1,5 +1,5 @@
 # Surplus
-- type: entity # Aurora's Song - Copy of WT-550 from NF with but legalized with sprite changes
+- type: entity # Aurora's Song - Copy of WT-550 from NF but legalized with sprite changes
   id: ASWeaponSubMachineGunSurpWt550
   parent: [ BaseC2ContrabandUnredeemable, NFWeaponSubMachineGunWt550 ]
   name: WT-550
@@ -23,7 +23,7 @@
   - type: Clothing
     sprite: _AS/Objects/Weapons/Guns/SMGs/surpwt550.rsi
 
-- type: entity # Aurora's Song - Copy of Atreides from NF with but legalized with sprite changes
+- type: entity # Aurora's Song - Copy of Atreides from NF but legalized with sprite changes
   id: ASWeaponSubMachineGunSurpAtreides
   parent: [ BaseC2ContrabandUnredeemable, NFWeaponSubMachineGunAtreides ]
   name: Atreides
@@ -36,7 +36,7 @@
   - type: Clothing
     sprite: _AS/Objects/Weapons/Guns/SMGs/surpatreides.rsi
 
-- type: entity # Aurora's Song - Copy of Drozd from NF with but legalized with sprite changes
+- type: entity # Aurora's Song - Copy of Drozd from NF but legalized with sprite changes
   id: ASWeaponSubMachineGunSurpDrozd
   parent: [ BaseC2ContrabandUnredeemable, NFWeaponSubMachineGunDrozd ]
   name: Drozd
