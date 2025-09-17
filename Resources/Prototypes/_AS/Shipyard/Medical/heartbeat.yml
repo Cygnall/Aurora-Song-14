@@ -1,0 +1,42 @@
+# Author Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Maintainer Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Heartbeat
+  parent: BaseVessel
+  name: BH Heartbeat
+  description: A Medical rescue and repair vessel. Equipped with Robotics and an Engineering bay.
+  price: 85000 # 65300 appraise, ~30% markup
+  category: Medium
+  group: Medical
+  access: Medical
+  shuttlePath: /Maps/_AS/Shuttles/heartbeat.yml
+  guidebookPage: Null
+  class:
+  - Medical
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Heartbeat
+  mapName: 'BH Heartbeat'
+  mapPath: /Maps/_AS/Shuttles/heartbeat.yml
+  minPlayers: 0
+  stations:
+    Heartbeat:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Heartbeat {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          Medic: [ 0, 0 ]

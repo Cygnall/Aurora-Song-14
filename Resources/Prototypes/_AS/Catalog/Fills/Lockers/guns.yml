@@ -1,0 +1,29 @@
+#medical gun safe Fill
+- type: entity
+  parent: GunSafe
+  id: GunSafeMedical
+  suffix: Filled, Medical
+  components:
+  - type: AccessReader
+    access: [["Medical"]]
+  - type: StorageFill
+    contents:
+        - id: NFWeaponShotgunKammerer
+        - id: NFAmmunitionBoxShellShotgunBuckshot
+        - id: NFAmmunitionBoxShellShotgunBeanbag
+#medical gun safe Fill x2
+- type: entity
+  parent: GunSafe
+  id: GunSafeMedical2
+  suffix: Filled, Medical, x2
+  components:
+  - type: AccessReader
+    access: [["Medical"]]
+  - type: StorageFill
+    contents:
+        - id: NFWeaponShotgunKammerer
+          amount: 2
+        - id: NFAmmunitionBoxShellShotgunBuckshot
+          amount: 2
+        - id: NFAmmunitionBoxShellShotgunBeanbag
+          amount: 2
