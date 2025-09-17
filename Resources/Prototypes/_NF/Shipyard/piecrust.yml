@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: NC Piecrust
   description: A combination animal ranch and pie bakery
-  price: 33500 # 30500 0.05 32025
+  price: 33600 # 30500 0.05 32025 | Aurora's Song price increased by 100 for arbitrage check
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/piecrust.yml
