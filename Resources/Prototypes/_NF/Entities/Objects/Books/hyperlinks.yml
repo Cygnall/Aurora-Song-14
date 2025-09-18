@@ -22,7 +22,7 @@
     layers:
     - state: law_space
   - type: HyperlinkBook
-    url: https://wiki.aurorasong.net/index.php?title=Space_Law
+    url: https://wiki.aurorasong.net/index.php?title=Space_Law # Changed to Aurora Space Law page, pending full SLE refactor
   - type: Tag
     tags:
     - Book
@@ -39,7 +39,7 @@
     layers:
     - state: nfsd_sop
   - type: HyperlinkBook
-    url: https://wiki.aurorasong.net/index.php?title=Standard_Operating_Procedures
+    url: https://wiki.aurorasong.net/index.php?title=SLESOP # Changed to Aurora SLE SOP page, pending full SLE refactor
   - type: Tag
     tags:
     - Book
