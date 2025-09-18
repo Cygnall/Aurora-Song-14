@@ -13,7 +13,7 @@
 - type: entity
   id: LockerNfsdSilverDetectiveFilled
   suffix: Detective, Filled
-  parent: LockerNfsdDetective # Aurora - Changed from LockerNfsdSilver to LockerNfsdDetective to match the new detective locker prototype
+  parent: LockerNfsdSilver
   components:
   - type: StorageFill
     contents:

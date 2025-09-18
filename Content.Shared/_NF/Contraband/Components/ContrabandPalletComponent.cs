@@ -6,11 +6,11 @@ using Robust.Shared.Serialization.TypeSerializers.Implementations.Custom.Prototy
 
 namespace Content.Shared._NF.Contraband.Components;
 
-[RegisterComponent] // Aurora: Contraband Pallet component for contraband registration and licensing
+[RegisterComponent]
 [Access(typeof(SharedContrabandTurnInSystem))]
 public sealed partial class ContrabandPalletConsoleComponent : Component
 {
-    [ViewVariables(VVAccess.ReadWrite), DataField("cashType", serverOnly: true, customTypeSerializer: typeof(PrototypeIdSerializer<StackPrototype>))]
+    [ViewVariables(VVAccess.ReadWrite), DataField("cashType", serverOnly: true, customTypeSerializer:typeof(PrototypeIdSerializer<StackPrototype>))]
     public string RewardType = "FrontierUplinkCoin";
 
     [DataField]
@@ -61,18 +61,18 @@ public sealed partial class ContrabandPalletConsoleComponent : Component
         {"NFWeaponRifleAssaultGestioExpedition","NFWeaponRifleAssaultGestio"},
         {"NFWeaponRifleSVSExpedition","NFWeaponRifleSVS"},
         {"NFWeaponEnergyPistolLaserExpedition","NFWeaponEnergyPistolLaser"},
-        {"NFWeaponRifleAssaultLecterExpedition","ASWeaponRifleAssaultSurpLecter"},
+        {"NFWeaponRifleAssaultLecterExpedition","NFWeaponRifleAssaultLecter"},
         {"NFWeaponRifleAssaultM90Expedition","NFWeaponRifleAssaultM90"},
         {"NFWeaponRifleSniperHristovExpedition","NFWeaponRifleSniperHristov"},
         {"NFWeaponRifleMusketExpedition","NFWeaponRifleMusket"},
-        {"NFWeaponSubMachineGunWt550Expedition","ASWeaponSubMachineGunSurpWt550"},
-        {"NFWeaponSubMachineGunDrozdExpedition","ASWeaponSubMachineGunSurpDrozd"},
-        {"NFWeaponSubMachineGunAtreidesExpedition","ASWeaponSubMachineGunSurpAtreides"},
+        {"NFWeaponSubMachineGunWt550Expedition","NFWeaponSubMachineGunWt550"},
+        {"NFWeaponSubMachineGunDrozdExpedition","NFWeaponSubMachineGunDrozd"},
+        {"NFWeaponSubMachineGunAtreidesExpedition","NFWeaponSubMachineGunAtreides"},
         {"NFWeaponSubMachineGunTypewriterExpedition","NFWeaponSubMachineGunTypewriter"},
         {"NFWeaponEnergyPistolLaserSvalinnExpedition","NFWeaponEnergyPistolLaserSvalinn"},
         {"NFWeaponShotgunEnforcerExpedition","NFWeaponShotgunEnforcer"},
         {"NFWeaponShotgunBulldogExpedition","NFWeaponShotgunBulldog"},
-        {"NFWeaponRifleAssaultSmExpedition","ASWeaponRifleAssaultSurpSm"},
+        {"NFWeaponRifleAssaultSmExpedition","NFWeaponRifleAssaultSm"},
         {"NFWeaponRifleAssaultVulcanExpedition","NFWeaponRifleAssaultVulcan"},
         {"NFWeaponEnergyRifleCarbineExpedition","NFWeaponEnergyRifleCarbine"},
         {"NFWeaponEnergyPistolLaserAdvancedExpedition","NFWeaponEnergyPistolLaserAdvanced"},
