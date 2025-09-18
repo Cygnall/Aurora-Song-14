@@ -4410,3 +4410,16 @@ Entries:
   id: 8642
   time: '2025-09-17T14:20:02.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/481
+- author: Vandanna
+  changes:
+    - type: Add
+      message: SLE Uplink Vend
+    - type: Tweak
+      message: Lock MercVend to Mercenary Access
+    - type: Tweak
+      message: Change SLE SOP url
+    - type: Add
+      message: bulletproof vest to Commissioner loadout
+  id: 8643
+  time: '2025-09-18T19:49:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/488
