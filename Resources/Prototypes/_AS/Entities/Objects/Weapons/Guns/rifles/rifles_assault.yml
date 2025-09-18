@@ -1,5 +1,5 @@
-# Limited
-- type: entity # AKMS - Restored by Aurora's Song, intended for memes and reference
+
+- type: entity
   id: ASWeaponRifleAK
   parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultCybersun ]
   name: AKMS
@@ -24,48 +24,32 @@
   - type: Appearance
 
 # Surplus
-- type: entity # Aurora's Song - Copy of Lecter from NF but legalized with sprite changes
+- type: entity
   name: Lecter
   description: |-
     A reliable military-grade assault rifle. On the receiver is a label that says 'Certified Surplus.'
-  parent: [ BaseC2ContrabandUnredeemable, NFWeaponRifleAssaultLecter ]
-  id: ASWeaponRifleAssaultSurpLecter
+  parent: [BaseC2Contraband, NFWeaponRifleAssaultLecter]
+  id: ASWeaponRifleSurpLecter
   suffix: Surplus
   components:
   - type: Sprite
-    sprite: _AS/Objects/Weapons/Guns/Rifles/surplecter.rsi
+    sprite: _NF/Objects/Weapons/Guns/Rifles/surplecter.rsi
     layers:
     - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-0
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
-    sprite: _AS/Objects/Weapons/Guns/Rifles/surplecter.rsi
-
-- type: entity # Aurora's Song - Copy of Soland-Moss from NF but legalized with sprite changes
-  id: ASWeaponRifleAssaultSurpSm
-  parent: [ BaseC2ContrabandUnredeemable, NFWeaponRifleAssaultSm ]
-  name: Soland-Moss # Renamed: real brand name
-  suffix: Surplus
-  description: |-
-    An iconic weapon of war. Previously a firearm often used by Syndicate agents. On the receiver is a label that says 'Certified Surplus.'
-  components:
-  - type: Clothing
-    sprite: _AS/Objects/Weapons/Guns/Rifles/surpsolandmoss.rsi
-  - type: Sprite
-    sprite: _AS/Objects/Weapons/Guns/Rifles/surpsolandmoss.rsi
-  - type: MagazineVisuals
-    magState: mag
-    steps: 4
-    zeroVisible: true
+    sprite: _NF/Objects/Weapons/Guns/Rifles/surplecter.rsi
 
 # Admin
+
 - type: entity
-  name: Lecter # Aurora's Song - This is a admeme for the server owner, don't modify this one
+  name: Lecter #This is a admeme for the server owner, don't modify this one
   description: |-
     A reliable military-grade assault rifle. Blacked-out finish. On the receiver is a blue spray-paint marking.
   categories: [ HideSpawnMenu ] # Admin-only
-  parent: [ BaseC2ContrabandUnredeemable, NFWeaponRifleAssaultLecter ]
+  parent: [BaseC1Contraband, NFWeaponRifleAssaultLecter]
   id: ASWeaponRifleTFLecter
   suffix: TF
   components:

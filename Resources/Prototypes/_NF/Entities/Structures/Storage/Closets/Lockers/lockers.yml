@@ -108,32 +108,7 @@
 - type: entity
   id: LockerNfsdEvidence
   parent: [NFLockerBaseSecure, LockerSecurity]
-  name: SLE locker # Aurora - Changed from "evidence locker" to "SLE locker" to match other SLE lockers, added suffix "evidence"
-  suffix: Evidence
-  components:
-  - type: EntityStorageVisuals
-    stateBaseClosed: nfsd
-    stateDoorOpen: nfsd_open
-    stateDoorClosed: nfsd_evidence_door # Aurora - Changed from nfsd_door to nfsd_evidence_door to match new sprite
-
-# SLE - Blank - Added by Aurora's Song prior to full SLE refactor
-- type: entity
-  id: LockerNfsdBlank
-  parent: [NFLockerBaseSecure, LockerSecurity]
-  name: SLE locker
-  suffix: Blank
-  components:
-  - type: EntityStorageVisuals
-    stateBaseClosed: nfsd
-    stateDoorOpen: nfsd_open
-    stateDoorClosed: nfsd_door_blank
-
-# SLE - Badge - Added by Aurora's Song prior to full SLE refactor
-- type: entity
-  id: LockerNfsdBadge
-  parent: [NFLockerBaseSecure, LockerSecurity]
-  name: SLE locker
-  suffix: Badge
+  name: SLE evidence locker
   components:
   - type: EntityStorageVisuals
     stateBaseClosed: nfsd
@@ -163,18 +138,6 @@
     stateBaseClosed: nfsd_silver
     stateDoorOpen: nfsd_silver_open
     stateDoorClosed: nfsd_silver_door
-
-# SLE Detective - Added by Aurora's Song prior to full SLE refactor
-- type: entity
-  id: LockerNfsdDetective
-  parent: [NFLockerBaseSecure, LockerSecurity]
-  name: SLE locker
-  suffix: Detective
-  components:
-  - type: EntityStorageVisuals
-    stateBaseClosed: nfsd_silver
-    stateDoorOpen: nfsd_silver_open
-    stateDoorClosed: nfsd_detective_silver_door
 
 # NFSD Brigmedic
 - type: entity
