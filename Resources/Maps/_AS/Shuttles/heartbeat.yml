@@ -4,7 +4,7 @@ meta:
   engineVersion: 261.1.0
   forkId: ""
   forkVersion: ""
-  time: 09/18/2025 00:21:34
+  time: 09/18/2025 20:56:17
   entityCount: 755
 maps: []
 grids:
@@ -1093,7 +1093,7 @@ entities:
       pos: -0.5,6.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -43566.516
+      secondsUntilStateChange: -43631.863
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -1133,7 +1133,7 @@ entities:
       pos: 6.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -38179.99
+      secondsUntilStateChange: -38245.336
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -4937,6 +4937,17 @@ entities:
     - type: Transform
       pos: -4.5,9.5
       parent: 1
+    - type: DeviceLinkSource
+      linkedPorts:
+        129:
+        - - Pressed
+          - Toggle
+        143:
+        - - Pressed
+          - Toggle
+        126:
+        - - Pressed
+          - Toggle
 - proto: SignBridge
   entities:
   - uid: 226
