@@ -93,7 +93,7 @@
   - type: ActivatableUIRequiresAccess
 
 - type: entity
-  parent: [BaseStructureDisableAnchoring, BaseSecurityUplinkRadio, VendingMachine]
+  parent: [BaseStructureDisableAnchoring, StorePresetSecurityUplink, VendingMachine]
   id: VendingMachineSLEUplinkVend
   name: SLE Uplink Vend
   description: In defense of your pockets.
@@ -132,9 +132,9 @@
   - type: Tag
     tags:
     - SecurityUplink
-  #  - type: Store
-  #    balance:
-  #      MercCoin: 0 # Waits for the player to put in money
+#  - type: Store
+#    balance:
+#      FrontierUplinkCoin: 0
   - type: AccessReader
     access: [["Security"]]
   - type: ActivatableUIRequiresAccess
