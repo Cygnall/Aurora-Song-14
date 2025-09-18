@@ -4,7 +4,7 @@
     "x": 32,
     "y": 32
   },
-  "copyright": "Taken from tgstation, mercenary and pilot lockers are resprited armory locker by erhardsteinhauer (discord), janitor is by SungYandy, O2N2 locker by Tych0theSynth, FSB by dustylens(github)",
+  "copyright": "Taken from tgstation, mercenary and pilot lockers are resprited armory locker by erhardsteinhauer (discord), janitor is by SungYandy, O2N2 locker by Tych0theSynth, FSB by dustylens(github), NFSD to SLE recolors done by chamomileteatime",
   "license": "CC-BY-SA-3.0",
   "states": [
     {
@@ -79,6 +79,12 @@
     {
       "name": "nfsd_door"
     },
+	{
+	  "name": "nfsd_door_blank"
+	},
+	{
+	  "name": "nfsd_evidence_door"
+	},
     {
       "name": "nfsd_open"
     },
@@ -106,6 +112,9 @@
     {
       "name": "nfsd_silver_door"
     },
+	{
+	  "name": "nfsd_detective_silver_door"
+	},
     {
       "name": "nfsd_silver_open"
     },
