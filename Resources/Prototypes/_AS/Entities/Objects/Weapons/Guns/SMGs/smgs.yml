@@ -1,0 +1,53 @@
+# Surplus
+- type: entity # Aurora's Song - Copy of WT-550 from NF but legalized with sprite changes
+  id: ASWeaponSubMachineGunSurpWt550
+  parent: [ BaseC2ContrabandUnredeemable, NFWeaponSubMachineGunWt550 ]
+  name: WT-550
+  suffix: surplus
+  description: |-
+    An excellent SMG. On the receiver is a label that says 'Certified Surplus.'
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/SMGs/surpwt550.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: base-unshaded
+        map: ["enum.GunVisualLayers.BaseUnshaded"]
+        shader: unshaded
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+      - state: mag-unshaded-0
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/SMGs/surpwt550.rsi
+
+- type: entity # Aurora's Song - Copy of Atreides from NF but legalized with sprite changes
+  id: ASWeaponSubMachineGunSurpAtreides
+  parent: [ BaseC2ContrabandUnredeemable, NFWeaponSubMachineGunAtreides ]
+  name: Atreides
+  suffix: Surplus
+  description: |-
+    A submachinegun previously used by Syndicate agents. On the receiver is a label that says 'Certified Surplus.'
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/SMGs/surpatreides.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/SMGs/surpatreides.rsi
+
+- type: entity # Aurora's Song - Copy of Drozd from NF but legalized with sprite changes
+  id: ASWeaponSubMachineGunSurpDrozd
+  parent: [ BaseC2ContrabandUnredeemable, NFWeaponSubMachineGunDrozd ]
+  name: Drozd
+  suffix: Surplus
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/SMGs/surpdrozd.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/SMGs/surpdrozd.rsi

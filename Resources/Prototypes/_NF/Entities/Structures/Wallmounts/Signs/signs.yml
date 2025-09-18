@@ -169,6 +169,15 @@
   - type: Sprite
     state: evidence
 
+- type: entity # Aurora's Song - Added genpop brig sign in this file prior to later SLE refactor
+  parent: NFBaseSign
+  id: SignNfsdGenpop
+  name: genpop sign
+  description: A sign that marks the area beyond as an SLE genpop brig.
+  components:
+  - type: Sprite
+    state: genpop
+
 - type: entity
   parent: NFBaseSign
   id: NFSignDock
