@@ -160,8 +160,9 @@ public abstract class SharedOreSiloSystem : EntitySystem
         if (_transform.GetGrid(client) != _transform.GetGrid(silo.Owner))
             return false;
 
-        if (!_transform.InRange((silo.Owner, silo.Comp2), client, silo.Comp1.Range))
-            return false;
+        // AS14 - allow all machines on grid to pull from a linked silo
+        // if (!_transform.InRange((silo.Owner, silo.Comp2), client, silo.Comp1.Range))
+        //     return false;
 
         return true;
     }
