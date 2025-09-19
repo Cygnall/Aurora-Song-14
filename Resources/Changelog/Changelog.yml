@@ -4423,3 +4423,10 @@ Entries:
   id: 8643
   time: '2025-09-18T19:49:42.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/488
+- author: Jakumba
+  changes:
+    - type: Tweak
+      message: Material silos can now be accessed by grid instead of by range.
+  id: 8644
+  time: '2025-09-19T02:32:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/492
