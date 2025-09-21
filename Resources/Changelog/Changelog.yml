@@ -4430,3 +4430,10 @@ Entries:
   id: 8644
   time: '2025-09-19T02:32:25.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/492
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Ported harpy variant of the experimental salvager suit
+  id: 8645
+  time: '2025-09-21T17:20:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/495
