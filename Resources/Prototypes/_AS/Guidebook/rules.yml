@@ -1,0 +1,9 @@
+- type: guideEntry
+  id: AuroraRuleset
+  name: guide-entry-aurora-rules
+  text: "/ServerInfo/_AS/Guidebook/Rules/AuroraRuleset.xml"
+  priority: -2
+  ruleEntry: true
+  #children: # Commented out because we're going to have our rules point to our website.
+  #  - FrontierRuleZeroTolerance
+  #  - AuroraERP # Aurora

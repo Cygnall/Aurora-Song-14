@@ -34,7 +34,7 @@
 #  id: UplinkMercenaryWeaponSurpLecter
 #  name:  uplink-mercenary-rifle1-name
 #  description: uplink-mercenary-rifle1-desc
-#  productEntity: ASWeaponRifleSurpLecter
+#  productEntity: ASWeaponRifleAssaultSurpLecter
 #  icon: { sprite: _NF/Objects/Weapons/Guns/Rifles/surplecter.rsi, state: icon }
 #  cost:
 #    MercCoin: 8
@@ -66,7 +66,7 @@
 #  id: UplinkMercenarySurpDrozd
 #  name:  uplink-mercenary-smg1-name
 #  description: uplink-mercenary-smg1-desc
-#  productEntity: WeaponSubMachineGunSurpDrozd
+#  productEntity: ASWeaponSubMachineGunSurpDrozd
 #  icon: { sprite: _NF/Objects/Weapons/Guns/SMGs/surpdrozd.rsi, state: icon }
 #  cost:
 #    MercCoin: 6

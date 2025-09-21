@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 261.1.0
+  engineVersion: 261.2.1
   forkId: ""
   forkVersion: ""
-  time: 08/18/2025 20:04:54
-  entityCount: 4704
+  time: 09/18/2025 18:18:17
+  entityCount: 4705
 maps: []
 grids:
 - 1
@@ -2922,7 +2922,7 @@ entities:
       pos: 17.5,-5.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -42617.566
+      secondsUntilStateChange: -42714.047
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2975,7 +2975,7 @@ entities:
       pos: -2.5,2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -57963.887
+      secondsUntilStateChange: -58060.367
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -2986,7 +2986,7 @@ entities:
       pos: -1.5,3.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -15812.029
+      secondsUntilStateChange: -15908.511
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3017,7 +3017,7 @@ entities:
       pos: -11.5,1.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -57967.418
+      secondsUntilStateChange: -58063.9
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3033,7 +3033,7 @@ entities:
       pos: -11.5,-0.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -58748.953
+      secondsUntilStateChange: -58845.434
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3069,7 +3069,7 @@ entities:
       pos: -17.5,-2.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -60076.984
+      secondsUntilStateChange: -60173.465
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -3179,7 +3179,7 @@ entities:
       pos: 5.5,9.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -41750.938
+      secondsUntilStateChange: -41847.418
       state: Opening
     - type: DeviceLinkSource
       lastSignals:
@@ -22097,7 +22097,7 @@ entities:
       pos: -1.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -67062.06
+      secondsUntilStateChange: -67158.55
       state: Opening
   - uid: 3347
     components:
@@ -22105,7 +22105,7 @@ entities:
       pos: 0.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -67060.43
+      secondsUntilStateChange: -67156.914
       state: Opening
   - uid: 3348
     components:
@@ -22113,7 +22113,7 @@ entities:
       pos: 2.5,33.5
       parent: 1
     - type: Door
-      secondsUntilStateChange: -67059.06
+      secondsUntilStateChange: -67155.55
       state: Opening
 - proto: HospitalCurtainsOpen
   entities:
@@ -22849,7 +22849,7 @@ entities:
       rot: 1.5707963267948966 rad
       pos: 4.5,-3.5
       parent: 1
-- proto: PlasmaWindoorSecureArmoryLocked
+- proto: PlasmaWindoorSecureSecurityLocked
   entities:
   - uid: 978
     components:
@@ -25826,6 +25826,15 @@ entities:
     - type: Transform
       pos: 20.5,3.5
       parent: 1
+- proto: VendingMachineSLEUplinkVend
+  entities:
+  - uid: 1007
+    components:
+    - type: Transform
+      pos: 17.5,-2.5
+      parent: 1
+    - type: Physics
+      canCollide: False
 - proto: VendingMachineSnack
   entities:
   - uid: 3304
@@ -30739,7 +30748,7 @@ entities:
       lastSignals:
         DoorStatus: True
     - type: Door
-      secondsUntilStateChange: -66097.734
+      secondsUntilStateChange: -66194.22
       state: Opening
     - type: Airlock
       autoClose: False

@@ -313,7 +313,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdBronze
+        - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Bronze Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -329,7 +329,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdSilver
+        - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Bronze Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -345,7 +345,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdBrigmedic
+        - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Brigmed Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -361,7 +361,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdGold
+        - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Gold Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -377,7 +377,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdGold
+        - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Gold Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ClothingMaskGasNfsd
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd
@@ -393,7 +393,7 @@
   - type: StorageFill
     contents:
         - id: NFTankO2N2EqualFilled
-        - id: ClothingOuterHardsuitNfsdSheriff
+        - id: ClothingOuterSoftsuitSlePatrol # Aurora's Song - Sheriff Softsuit changed to SLE Patrol suit prior to full SLE refactor
         - id: ClothingMaskGasSheriff
         - id: JetpackNfsdFilled
         - id: ClothingShoesBootsMagNfsd

@@ -5,3 +5,11 @@
     proto: NFCoatCapable
   equipment:
     outerClothing: ClothingOuterCoatNfsdFormalSheriff
+
+- type: loadout
+  id: SheriffClothingOuterArmorBulletproof
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ClothingOuterArmorBulletproof

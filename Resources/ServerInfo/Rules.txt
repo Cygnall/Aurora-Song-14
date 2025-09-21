@@ -1,86 +1,13 @@
-﻿[head=3][color=#ff0000]You must be 18 or older to play. Users under 18 will be banned immediately.[/head][/color]
-    • Here at Aurora Song 14 adult relationships are allowed, but are not the focus of the server. This means that ERP is allowed, but the consent of all parties involved should be held at the highest priority. If any player involved revokes consent or uses the X-card system, all explicit roleplay should be ceased immediately
+﻿  #Aurora Song's Rules
 
-[color=#99ff99]Aurora Song is a Medium Roleplay server. Try to immerse yourself into your character. This includes doing your job as a station or ship crew member and delegating tasks that are outside of that description, or striking out upon space as a Captain of your ship. This does not imply you’re forced to play the whole round; Aurora is designed with pop-in-and-out gameplay in mind, where some players will come and go but their bank account remains persistent across server restarts.[/color]
+  [color=red]The server rules are expected to be read in their entirety.[/color]
 
-[color=#99ff99]You can access more information about the game using the Guidebook (NUMPAD 0).[/color]
+  [color=red]All players must be 18+. All characters must be of physical and mental maturity for their species.[/color]
 
-[color=#a4885c][head=3]0. Admins can disregard any and all of these rules if they deem it in the best interest of the current round, server, and/or community at large.[/head][/color]
-	• They will of course be held fully accountable for their actions if they exercise this privilege.
+  [color=red]To play various jobs, you are expected to have read their specific Standard Operating Procedures. This is regularly updated.[/color]
 
-[color=#a4885c][head=3]0.1. All of these rules have a specific intent [/head][/color]
-	• However, Admins may have to make an interpretation of their intent in any number of unpredictable scenarios. If you feel an interpretation was unfair or incorrect, please submit the decision for review and appeal via our Discord.
+  Below is the URL to the Aurora's Song wiki. You can find both the Server Rules and SOP within its pages. Type the link into your browser.
 
-[color=#a4885c][head=3]0.2. Staff is not obligated to cover player losses, deaths or delays.[/head][/color]
-	• This includes but is not limited to ship deeds, money, respawns or revivals. Any action taken will depend on the circumstances at hand.
+  We expect, given our community utilizes a whitelist and is curated to players who will uphold a higher standard of play, for everyone to be able open this link and read the documents provided.
 
-[color=#a4885c][head=3]1. ERP(Erotic Roleplay), erotic content and adult relationships are part of what this community allows.[/color][/head]
-	• For more information on conduct and guidelines, please consult the guidebook
-
-[color=#a4885c][head=3]2. Follow the community expectations. This includes both in game and elsewhere in our community.[/head][/color]
-    • This server is about chaotic fun, collaborative storytelling, and mutual respect. If you're here to have fun at other people's expense, you are in the wrong place.
-	• Don't make the game worse for others. If what you're doing would piss off a reasonable person, just don't do it.
-	• Roleplay is collaborative. Story, friction, and conflict make things interesting, but they're tools to make a good story together. Don't fight other players, fight their characters.
-	• Harassment and bigotry aren't welcome. No slurs, no bullying, no "just joking", no pushing boundaries to get a reaction.
-	• Antagonists are part of the story too. You create chaos, but your actions should pull others in, not push them out.
-	• Err towards not being a problem. If you're not sure about something you want to do, aim away from disrupting others, or ask OOC. If you have to make excuses for your behavior, you probably know you crossed the line - just apologize and move on.
-	• We forgive honest mistakes. But not repeated ones. We believe in growth and second chances, but if you consistently make the game less fun or less safe for others, you're not welcome here.
-	• Exploits, abusing bugs, cheating, power-gaming, and other extremely lame behavior go against the intent of the sandbox.
-	• Do not use or speak out-of-game knowledge your character cannot know in-character
-
-[color=#a4885c][head=3]3. After cloning, respawning, or taking a ghost role, you must follow the new life rule.[/head][/color]
-	• If cloned, resuscitated, or respawned, you don't have amnesia, but you can only recall vague details of who or what had killed you.
-	• If taking a ghost role, you have no memories from any past lives for the duration of playing as a ghost role.
-	• Don't act on anything you saw while ghosted.
-
-[color=#a4885c][head=3]5. Follow Chat Guidelines[/head][/color]
-	• Only speak in English.
-	• Do not spam.
-	• Do not advertise.
-	• Do not use Netspeak (i.e. LOL, ROFL, XD, FR).
-	• Hate speech, slurs and bigotry are [color=#ff0000]not allowed.[/color] Words that are closely tied to, or intended to replace/imitate, real life slurs are [color=#ff0000]not allowed.[/color]
-
-[color=#a4885c][head=3]6. Follow Roleplay Guidelines[/head][/color]
-	• Your IC name must be realistic and fit into the game's setting. Avoid joke names and names of locations, brands, fictional/real people or names parodying off from them (e.g. Baul Sadman, Tom Ford.) Additionally:
-		- Do not use numbers, symbols, titles or adjectives (i.e Mr ,Dr ,Big ,Old).
-		- Avoid using character names of other well-known players, do not impersonate players this way.
-		- All species have a naming convention, be sure to generally follow it.
-	• Treat your character as a separate entity from you, the player. Your character's actions, feelings, and knowledge in-game should be based solely on the character's experiences and not your own as the player. Low roleplay actions that have no regard for your character or the setting (Memes, silly copy paste spam IC) are not acceptable.
-	• Meta-friending/grudging is defined as treating a character, in character, with either reward or punishment respectively based off who the player is and not the character interactions. Neither are allowed.
-
-[color=#a4885c][head=3]7. Follow Antagonist Guidelines[/head][/color]
-	• All ghost roles have a set description for how the role should be played, you must follow the ghost role description unless told otherwise by an admin. Spamming ahelp asking for an exception will likely lead to being banned.
-	• Non-Antagonists may not explicitly seek out an antagonist to assist them, but you are not obligated to turn down any requests of aid from one unless it is an existential threat (such as nukies)
-	• Antagonists might force you to do things, and while this can be interesting roleplay please remember your consent is important!
-
-[color=#a4885c][head=3]8. Follow Bus Docks Safezone Guidelines[/head][/color]
-	• [color=#ff0000] The Bus dock hallway and Arrival Areas are considered a safe zone and absolutely no antag activity or griefing is permitted within that zone.[/color] This includes but is not limited to destruction, modification, removal, or otherwise restriction of use of any machine or device designed for public use, and the structure of the station itself.
-	• Fights and confrontations are completely disallowed on the safezone such as shooting, attacking or any forms of harm.
-	• Pirate actions may not begin on the Frontier. This includes stowing away while at the Frontier with intentions to steal the ship, outright stealing the ship or its cargo from the dock, selling someone else’s ship you hadn’t pirated outside the safe zone, or joining the crew under false pretenses with the intention to mutiny and take the ship.
-	• Dangerous research like artifacts and anomalies must not be done while inside the safezone boundaries.
-	• Do not transport any kind of creature or objects with the intent to cause harm/death, or bait into a conflict inside of the frontier.
-
-[color=#a4885c][head=3]9. Security Forces and Station Staff roles are held to a higher standard of roleplay and are strictly non-antagonists.[/head][/color]
-	• Security Forces roleplaying as ‘bad cops’ and intentionally violating space law is forbidden. Space Law is not optional for these roles, and strong knowledge is required before taking a security position.
-	• Civilian and Security staff are expected to maintain a minimum of competency and performance on their jobs. Security staff must follow Department Standard Operating Procedure (see Wiki in the menu for more details).
-	• Assets seized from criminals may only be used to make victims whole and to pay for any fines under the law. Any excess financials received from the sale of criminal assets is to be returned to their original owners, and are not to be plundered or extorted by security forces. This is a strict zero-tolerance policy.
-
-[color=#a4885c][head=3]10. Sector Command roles such as Station Rep and Sheriff are vital to the operation of the sector and are held to a much higher degree of roleplay and role handling.[/head][/color]
-	• Embezzlement of station funds is strictly forbidden.
-	• Both of these roles have higher access to station resources than should be allowed for most crew members. As such, if you must ever end your shift early, always bring your ID with you, and always return to cryosleep so that your access cannot be stolen and the station funds embezzled. If for any reason you cannot (disconnect, crash, power outage, etc.) Please ping the game admins in Discord and we will handle your in-game character accordingly.
-	• Sector Command is permitted and expected to issue and enforce any docking fines related to loitering in the terminal for shuttles that have been idle for more than 30 minutes in the station docks without a valid reason, up to and including forced eviction of shuttles.  Fines collected in this way are permitted to be used as payroll or the acquisition of station supplies. Time spent docked and waiting at the station is to be kept at a minimum.
-	• You may not tax, lease, rent, or otherwise reserve the free and fair use of station resources and space to the detriment of the public or for personal gain. This includes, but is not limited to: charging docking fees, granting docking extensions, vending access, and moving station resources behind access locked doors to restrict access.
-
-[color=#a4885c][head=3]11. Follow Escalation Guidelines[/head][/color]
-	• Antagonistic ghost roles, and pest ghost roles like mice are always fair game for attack. Don't attack sector-aligned ghost roles like familiars, drones, or pets without provocation.
-	• Do not attack another player without a legitimate, explainable roleplay reason that could be applied in a similar, real-life scenario.
-	• If a fight results in someone being critically injured or killed, do not hide the body. Take steps to prevent rot if it does not put you at risk.
-	• If at any point combat is disengaged and both parties leave the area, you cannot skip escalation and plunge back into a fight. What’s done is done.
-	• Security Forces, and only security forces, are expected to resolve situations with non-lethal force and to de-escalate IC confrontation except in cases where there is a reasonable chance of harm/death.
-	• Do not End of Round Grief (EORG), attacking/killing/griefing other players is not permitted after the shift ends.
-
-[color=#a4885c][head=3]12. Follow PVP & Piracy Guidelines[/head][/color]
-	• Antags have the full freedom to engage with their antagonistic nature, engaging in hostility and assault. However using the role as an excuse to constantly engage in PvP and 'robust' people will result in your access to the role being removed. Try and be more than a weapon so that people want you to show up in their stories.
-	• Pirate crews may never exceed a total force of four members, including the Captain.
-	• Non-hostile vessels that surrender: cannot be killed, left stranded, completely bankrupt, or otherwise. The safety of non-hostile merchant vessels is to be guaranteed by all parties.
-	• Hostile forces that are known, declared, and confirmed, may be considered 'belligerent', boarded non-conventionally, and have their systems disabled in attempts to bring them to justice. All suspects taken alive must be adequately cared for and unharmed according to Space Law.
+  [color=lightblue]Aurora's Song Wiki:[/color] wiki.aurorasong.net
