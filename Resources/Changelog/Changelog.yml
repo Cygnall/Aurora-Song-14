@@ -4437,3 +4437,10 @@ Entries:
   id: 8645
   time: '2025-09-21T17:20:12.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/495
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Linked engi bay doors on the BH Heartbeat to the button next to them
+  id: 8646
+  time: '2025-09-21T17:23:07.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/489
