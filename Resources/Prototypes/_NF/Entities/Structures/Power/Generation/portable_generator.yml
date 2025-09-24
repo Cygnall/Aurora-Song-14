@@ -92,6 +92,7 @@
     - type: SolidFuelGeneratorAdapter
       fuelMaterial: FuelGradeBananium
     - type: MaterialStorage
+      storageLimit: 120000 # AS14 - Increase storage limit to match stack size
       materialWhiteList: [Bananium, FuelGradeBananium, RawBananium, Skrungle]
     - type: PowerMonitoringDevice
       sprite: _NF/Structures/Power/Generation/portable_generator.rsi
