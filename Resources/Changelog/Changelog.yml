@@ -4444,3 +4444,10 @@ Entries:
   id: 8646
   time: '2025-09-21T17:23:07.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/489
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Wallets now have magnet pickup
+  id: 8647
+  time: '2025-09-24T16:53:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/477
