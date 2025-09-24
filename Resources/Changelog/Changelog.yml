@@ -4451,3 +4451,12 @@ Entries:
   id: 8647
   time: '2025-09-24T16:53:10.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/477
+- author: Jakumba
+  changes:
+    - type: Tweak
+      message: >-
+        Increased the size of material that fits inside portable generators to
+        120
+  id: 8648
+  time: '2025-09-24T23:47:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/500
