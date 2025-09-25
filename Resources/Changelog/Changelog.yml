@@ -4460,3 +4460,18 @@ Entries:
   id: 8648
   time: '2025-09-24T23:47:04.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/500
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Vulpkanin point markings now under arm/leg category
+    - type: Tweak
+      message: double-barrel and sawn off sizes reduced, sawn off goes in pockets
+    - type: Tweak
+      message: cardboard boxes can no longer go into trash bags
+    - type: Tweak
+      message: 'tajaran can now be a wider selection of colors '
+    - type: Tweak
+      message: tajaran should now heat up and cool down faster
+  id: 8649
+  time: '2025-09-25T21:37:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/502
