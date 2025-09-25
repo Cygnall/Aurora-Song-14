@@ -39,8 +39,8 @@
     - id: FoodMeatHuman
       amount: 5
   - type: TemperatureProtection # fur is a good insulator, actually
-    heatingCoefficient: 0.1
-    coolingCoefficient: 0.1
+    heatingCoefficient: 0.7 # Aurora Song 0.1>0.7,
+    coolingCoefficient: 0.7 # Aurora Song 0.1>0.7, Tajaran couldnt be cooled down before
   # - type: Flammable Aurora's Song commented out
   #   fireStackIncreaseMultiplier: 1.35 # until you light it up, cuz it's oily too
   # - type: NightVision

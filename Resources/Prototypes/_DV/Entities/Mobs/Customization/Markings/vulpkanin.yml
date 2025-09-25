@@ -570,7 +570,7 @@
 # Leg Markings
 - type: marking
   id: VulpPointsFeet
-  markingCategory: Overlay
+  markingCategory: Legs # Aurora Song Overlay>Legs
   bodyPart: RFoot
   speciesRestriction: [Vulpkanin]
   sprites:
@@ -607,7 +607,7 @@
 # Arm Markings
 - type: marking
   id: VulpPointsHands
-  markingCategory: Overlay
+  markingCategory: Arms # Aurora Song Overlay > Arms
   bodyPart: RHand
   speciesRestriction: [Vulpkanin]
   sprites:

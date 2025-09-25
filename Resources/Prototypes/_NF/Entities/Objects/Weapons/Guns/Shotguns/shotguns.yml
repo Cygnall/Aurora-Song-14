@@ -31,6 +31,9 @@
   - type: Clothing
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun.rsi
   - type: Item
+    size: Normal
+    shape:
+    - 0,0,4,0 # Aurora Song
     sprite: Objects/Weapons/Guns/Shotguns/db_shotgun_inhands_64x.rsi
   - type: BallisticAmmoProvider
     capacity: 2
@@ -93,9 +96,9 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Shotguns/sawn.rsi
   - type: Item
-    size: Normal
+    size: Small # Aurora Song Normal>Small
     shape:
-    - 0,0,4,0
+    - 0,0,1,0 # Aurora Song 0,0,4,0>0,0,1,0
   - type: BallisticAmmoProvider
     capacity: 2
   - type: NFWeaponDetails
