@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: CS Adept
   description: A combination salvage/engineering shuttle designed with the capability to jump planetside to scrap surface settlements.
-  price: 65000 #Appraises for 37758, uptick is 45309, would powercreep the pathfinder and sprinter
+  price: 75000 #Appraises for 38758, uptick is 45309, would powercreep the pathfinder and sprinter
   category: Medium
   group: Expedition
   shuttlePath: /Maps/_AS/Shuttles/Expedition/adept.yml
