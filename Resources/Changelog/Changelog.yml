@@ -4444,3 +4444,41 @@ Entries:
   id: 8646
   time: '2025-09-21T17:23:07.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/489
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Wallets now have magnet pickup
+  id: 8647
+  time: '2025-09-24T16:53:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/477
+- author: Jakumba
+  changes:
+    - type: Tweak
+      message: >-
+        Increased the size of material that fits inside portable generators to
+        120
+  id: 8648
+  time: '2025-09-24T23:47:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/500
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Vulpkanin point markings now under arm/leg category
+    - type: Tweak
+      message: double-barrel and sawn off sizes reduced, sawn off goes in pockets
+    - type: Tweak
+      message: cardboard boxes can no longer go into trash bags
+    - type: Tweak
+      message: 'tajaran can now be a wider selection of colors '
+    - type: Tweak
+      message: tajaran should now heat up and cool down faster
+  id: 8649
+  time: '2025-09-25T21:37:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/502
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: remove alt playtime allowances for skipping Rookie time as SLE
+  id: 8650
+  time: '2025-09-27T03:26:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/515

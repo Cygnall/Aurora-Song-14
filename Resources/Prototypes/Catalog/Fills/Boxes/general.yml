@@ -17,7 +17,7 @@
   - type: Tag
     tags:
     - BoxCardboard
-    - Trash # Frontier
+    # - Trash Aurora Song, removed to prevent nesting in trash bags
 
 - type: entity
   name: mousetrap box
