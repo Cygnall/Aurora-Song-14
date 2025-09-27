@@ -4475,3 +4475,10 @@ Entries:
   id: 8649
   time: '2025-09-25T21:37:04.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/502
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: remove alt playtime allowances for skipping Rookie time as SLE
+  id: 8650
+  time: '2025-09-27T03:26:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/515
