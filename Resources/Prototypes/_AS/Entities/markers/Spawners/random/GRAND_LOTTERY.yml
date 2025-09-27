@@ -45,18 +45,18 @@
     - SpaceCash
     - CigaretteSpent
     - SpawnDungeonLootMeleeT3
-    - SpawnDungeonLootGunT2 # Frontier: WeaponSniperMosin<NFWeaponRifleBarlowsBolt
-    - SpawnDungeonLootGunT3 # Frontier: WeMakeshiftLaser<NFWeaponEnergyPistolLaserMakeshift
+    - SpawnDungeonLootGunT2
+    - SpawnDungeonLootGunT3
     - Sledgehammer
     - WeaponMeleeToolboxRobust
-    - ThrowingStar #
-    - SpawnDungeonLootMeleeT2 # Frontier: WeaponShotgunHandmade<NFWeaponShotgunHandmade
+    - ThrowingStar
+    - SpawnDungeonLootMeleeT2
     - WeaponFlareGun
     - ToySword
     - Shovel
     - WeaponWaterPistol
     - WeaponWaterBlaster
-    - NFWeaponRifleFoam # Frontier: WeaponRifleFoam<NFWeaponRifleFoam
+    - NFWeaponRifleFoam
     - ClothingUniformJumpsuitFamilyGuy
     - ClothingOuterFlannelBlue
     - ClothingHeadHelmetBone
@@ -107,13 +107,13 @@
     - HydroponicsToolHatchet
     - ToyAmongPequeno
     - Lamp
-    - NFCartridgeCap # Frontier: CartridgeCap<NFCartridgeCap
+    - NFCartridgeCap
     - CableHVStack1
     - DrinkMugBlue
     - CablecuffsBroken
     - FoodPlateTin
-    - NFMagazineBoxFoam # Frontier: MagazineFoamBox<
-    - NFBoxDonkSoftBox # Frontier: use NF variant
+    - NFMagazineBoxFoam
+    - NFBoxDonkSoftBox
     - GrenadeFoamDart
     - StorageFillAmmoBoxHonk35
     - StorageFillAmmoBoxHonk35SMG

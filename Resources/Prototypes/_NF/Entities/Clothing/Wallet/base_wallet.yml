@@ -81,3 +81,7 @@
         closed-coin:
           Open: { state: open-coin }
           Closed: { state: closed-coin }
+  - type: MagnetPickup
+    magnetEnabled: false
+    magnetCanBeEnabled: true
+    slotFlags: WALLET

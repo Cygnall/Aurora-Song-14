@@ -1,4 +1,4 @@
-dead-drop-hint-note-arcadia = How would you like to earn some spesos?.
+dead-drop-hint-note-arcadia = How would you like to earn some spesos?
     Arcadia Industries needs help.
     Known drops:
 
