@@ -1,0 +1,104 @@
+﻿- type: entity
+  id: ASBaseWeaponPowerCell
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Sprite
+  - type: Item
+    size: Huge
+  - type: AmmoCounter
+  - type: Gun
+    fireRate: 2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_AS/Weapons/Guns/Gunshots/LasCrack_Samp4.ogg
+  - type: ProjectileBatteryAmmoProvider
+    proto: ASLasBoltHeavy
+    fireCost: 60
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        name: Magazine
+        startingItem: PowerCellMedium
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        whitelist:
+          tags:
+          - PowerCellSmall
+          - PowerCellMedium
+          - PowerCellHigh
+          - PowerCellHyper
+        blacklist:
+          tags:
+          - PowerCellAntique
+          - PowerCellFusion
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+  - type: Appearance
+  - type: StaticPrice
+    price: 500
+  - type: ContainerContainer
+    containers:
+      cell_slot: !type:ContainerSlot
+
+- type: entity
+  id: ASBaseWeaponFrameBatteryRifle
+  parent: [ NFBaseWeaponEncumbranceRifle, ASBaseWeaponPowerCell ]
+  suffix: Aurora Song
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+  - type: Appearance
+  - type: Wieldable
+    unwieldOnUse: false
+  - type: GunRequiresWield
+  - type: GunWieldBonus
+    minAngle: -0 # Set to 0 because GunRequiresWield
+    maxAngle: -0
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 1.5
+    maxAngle: 3
+    angleIncrease: 0.5
+    angleDecay: 1
+    fireRate: 3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: StaticPrice
+    price: 400
+  - type: NFWeaponDetails
+    class: weapon-details-class-rifle
+
+- type: entity
+  name: Kasyre Las Rifle
+  parent: [ ASBaseWeaponFrameBatteryRifle ]
+  suffix: LasRifle
+  id: ASWeaponLaserLasRifle
+  description: A Cell fed rifle, commonly used by naval officers and security personnel. On the handle is a label that says 'for authorized use only.'
+  components:
+  - type: Gun
+    availableModes:
+    - SemiAuto
+    - FullAuto
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Rifles/kaslasgun.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Rifles/kaslasgun.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
