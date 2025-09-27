@@ -4482,3 +4482,10 @@ Entries:
   id: 8650
   time: '2025-09-27T03:26:22.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/515
+- author: assignedgod
+  changes:
+    - type: Remove
+      message: Removed the temperature gun
+  id: 8651
+  time: '2025-09-27T14:38:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/508
