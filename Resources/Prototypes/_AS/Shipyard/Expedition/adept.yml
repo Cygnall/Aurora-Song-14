@@ -1,0 +1,44 @@
+﻿# Author Info
+# GitHub: AssignedGod
+# Discord: AssignedGod
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Adept
+  parent: BaseVessel
+  name: CS Adept
+  description: A combination salvage/engineering shuttle designed with the capability to jump planetside to scrap surface settlements.
+  price: 75000 #Appraises for 38758, uptick is 45309, would powercreep the pathfinder and sprinter
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_AS/Shuttles/Expedition/adept.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Adept
+  mapName: 'CS Adept'
+  mapPath: /Maps/_AS/Shuttles/Expedition/adept.yml
+  minPlayers: 0
+  stations:
+    Adept:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Adept {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]
