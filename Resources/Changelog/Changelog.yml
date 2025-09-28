@@ -4489,3 +4489,10 @@ Entries:
   id: 8651
   time: '2025-09-27T14:38:28.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/508
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added the Cybersun Adept, a new expedition/salvage ship!
+  id: 8652
+  time: '2025-09-28T23:41:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/507
