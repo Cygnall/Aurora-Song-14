@@ -255,7 +255,7 @@ public sealed partial class MarkingPicker : Control
         if (preferred is null)
             return 1;
 
-        return preferred.Contains(prototype.ID) ? 0 : 2;
+        return preferred.Contains(_currentSpecies) ? 0 : 2;
     }
     // End AuroraSong
 
