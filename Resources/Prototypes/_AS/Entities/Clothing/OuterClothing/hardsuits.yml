@@ -34,9 +34,9 @@
   description: An armored vacuum suit favored by mercenaries.
   components:
   - type: Sprite
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/mercenary.rsi
   - type: Clothing
-    sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/mercenary.rsi
   - type: PressureProtection
     highPressureMultiplier: 0.5
     lowPressureMultiplier: 1000
@@ -71,15 +71,15 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitPrivateSecurity
 
-- type: entity
-  parent: ClothingOuterHardsuitMercenary
-  id: ClothingOuterHardsuitMedicArmored # stats are of merc hardsuit, but for Outpost medic use, with different appearance
-  name: medic armored hardsuit
-  description: An armored vacuum suit employed by outpost medics, for protection during S&R operations.
-  components:
-  - type: Sprite
-    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
-  - type: Clothing
-    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
-  - type: ToggleableClothing
-    clothingPrototype: ClothingHeadHelmetHardsuitMedicArmored
+#- type: entity # Commented out for now, no sprites yet made
+#  parent: ClothingOuterHardsuitMercenary
+#  id: ClothingOuterHardsuitMedicArmored # stats are of merc hardsuit, but for Outpost medic use, with different appearance
+#  name: medic armored hardsuit
+#  description: An armored vacuum suit employed by outpost medics, for protection during S&R operations.
+#  components:
+#  - type: Sprite
+#    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
+#  - type: Clothing
+#    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
+#  - type: ToggleableClothing
+#    clothingPrototype: ClothingHeadHelmetHardsuitMedicArmored
