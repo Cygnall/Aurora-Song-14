@@ -4528,3 +4528,18 @@ Entries:
   id: 8656
   time: '2025-09-30T18:09:12.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/523
+- author: portfiend
+  changes:
+    - type: Add
+      message: Humans now have access to a lot of Rodentia markings.
+    - type: Tweak
+      message: Humans can now choose a tail marking.
+    - type: Tweak
+      message: >-
+        Markings now have "preferred species" internally. This means that anthro
+        markings given to Humans, for example, will be sorted at the bottom of
+        humans' marking lists. The actual process of adding species preference
+        to markings is ongoing.
+  id: 8657
+  time: '2025-09-30T19:45:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/519
