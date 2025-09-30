@@ -4503,3 +4503,10 @@ Entries:
   id: 8653
   time: '2025-09-29T17:47:31.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/516
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Medics get a raise!
+  id: 8654
+  time: '2025-09-30T02:18:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/517
