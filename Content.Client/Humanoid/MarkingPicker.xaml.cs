@@ -252,7 +252,7 @@ public sealed partial class MarkingPicker : Control
     private int GetPreferredSpeciesPriority(MarkingPrototype prototype)
     {
         var preferred = prototype.PreferredSpecies;
-        if (preferred.Count == 0)
+        if (preferred is null)
             return 1;
 
         return preferred.Contains(prototype.ID) ? 0 : 2;

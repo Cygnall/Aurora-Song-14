@@ -82,7 +82,7 @@ namespace Content.Shared.Humanoid.Markings
         /// top of humans' ear marking lists.
         /// </remarks>
         [DataField]
-        public HashSet<ProtoId<SpeciesPrototype>> PreferredSpecies = new();
+        public HashSet<ProtoId<SpeciesPrototype>>? PreferredSpecies = null;
 
         // End Aurora Song
 
