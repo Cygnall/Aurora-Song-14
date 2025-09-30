@@ -54,7 +54,7 @@
       points: 1
       required: false
     Tail: # the cat tail joke
-      points: 0
+      points: 1 # Aurora Song: You can have a tail. As a treat
       required: false
     HeadTop:
       points: 1
