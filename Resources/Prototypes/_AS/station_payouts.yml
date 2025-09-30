@@ -47,7 +47,7 @@
 
 - type: stationPay
   id: medicPay
-  payPerHour: 15000
+  payPerHour: 20000
   job: Medic
 
 - type: stationPay
