@@ -94,6 +94,12 @@
 
 - type: marking
   abstract: true
+  id: BaseSpeciesRodentia
+  speciesRestriction: [Rodentia]
+  preferredSpecies: [Rodentia]
+
+- type: marking
+  abstract: true
   id: BaseSpeciesVox
   speciesRestriction: [Vox]
   preferredSpecies: [Vox]
