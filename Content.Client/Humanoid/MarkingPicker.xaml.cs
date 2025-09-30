@@ -216,10 +216,20 @@ public sealed partial class MarkingPicker : Control
         CMarkingsUnused.Clear();
         _selectedUnusedMarking = null;
 
-        var sortedMarkings = GetMarkings(_selectedMarkingCategory).Values.Where(m =>
-            m.ID.ToLower().Contains(filter.ToLower()) ||
-            GetMarkingName(m).ToLower().Contains(filter.ToLower())
-        ).OrderBy(p => Loc.GetString(GetMarkingName(p)));
+        // Aurora Song: Sort markings based on preferred species.
+        var filteredMarkings = GetMarkings(_selectedMarkingCategory).Values;
+
+        if (!string.IsNullOrWhiteSpace(filter))
+        {
+            filteredMarkings = filteredMarkings.Where(m =>
+                m.ID.Contains(filter, StringComparison.InvariantCultureIgnoreCase)
+                || GetMarkingName(m).Contains(filter, StringComparison.InvariantCultureIgnoreCase));
+        }
+
+        var sortedMarkings = filteredMarkings
+            .OrderByDescending(m => m.PreferredSpecies.Contains(_currentSpecies))
+            .ThenBy(m => Loc.GetString(GetMarkingName(m)));
+        // End AuroraSong
 
         foreach (var marking in sortedMarkings)
         {
