@@ -4519,3 +4519,12 @@ Entries:
   id: 8655
   time: '2025-09-30T15:47:33.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/518
+- author: Vandanna
+  changes:
+    - type: Add
+      message: MedicGearVend
+    - type: Tweak
+      message: TO medbay contents (smart fridge, plasma, vendor)
+  id: 8656
+  time: '2025-09-30T18:09:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/523
