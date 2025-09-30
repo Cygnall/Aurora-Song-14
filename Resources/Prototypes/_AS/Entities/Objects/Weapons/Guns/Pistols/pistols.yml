@@ -13,14 +13,14 @@
   - type: NFWeaponDetails
 
 - type: entity
-  id: ASWeaponPistolMK58SLE
+  id: ASWeaponPistolMk58SLE
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponPistolChamber35HighCapacityOverpressure, ASWeaponPistolMk58SLEBase ]
   name: mk58-S
   description: |-
     The Mark 58 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'
 
 - type: entity
-  id: ASWeaponPistol58SLELessLethal
-  parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, ASWeaponPistolMK58SLE ]
+  id: ASWeaponPistolMk58SLELessLethal
+  parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, ASWeaponPistolMk58SLE ]
   suffix: Frontier, Less-lethal
 

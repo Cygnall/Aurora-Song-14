@@ -31,7 +31,7 @@
 - type: startingGear
   id: DeputyGear
   equipment:
-    pocket1: ASWeaponPistol58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
   storage:
     back:
     - Flash
