@@ -21,9 +21,9 @@
       amount: 1
     SulfuricAcid:
       amount: 1
+      catalyst: true
   products:
       Agony: 3
-      SulfuricAcid: 1
 
 - type: reaction
   id: ScaryDrugsReaction
@@ -37,3 +37,63 @@
       amount: 0.1
   products:
       ScaryDrugs: 4
+
+- type: reaction
+  id: serenityReaction
+  impact: Medium
+  reactants:
+    Psicodine:
+      amount: 1
+    ScaryDrugs:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+      Serenity: 2
+
+- type: reaction
+  id: MilkingDrugsReaction
+  impact: Medium
+  reactants:
+    Milk:
+      amount: 1
+    ForceFemDrugs:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+      MilkingDrugs: 2
+
+
+- type: reaction
+  id: BreakdownnReaction
+  impact: Medium
+  reactants:
+    Impedrezene:
+      amount: 1
+    ScaryDrugs:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+      Breakdown: 2
+
+
+
+- type: reaction
+  id: ConfusionReaction
+  impact: Medium
+  reactants:
+    Impedrezene:
+      amount: 1
+    Haloperidol:
+      amount: 1
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+      Confusiol: 5
+

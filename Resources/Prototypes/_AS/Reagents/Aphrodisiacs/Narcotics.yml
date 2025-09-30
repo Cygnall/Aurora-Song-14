@@ -64,3 +64,26 @@
         conditions:
           - !type:ReagentThreshold
             max: 0.1
+
+- type: reagent
+  id: MilkingDrugs
+  name: reagent-name-milkdrug
+  group: Narcotics
+  desc: reagent-desc-milkdrug
+  physicalDesc: reagent-physical-desc-creamy
+  flavor: milk
+  color: "#FFFFD4"
+  metabolisms:
+    Narcotic:
+      metabolismRate : 0.03 #One 5u dose is 2.7 minutes
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-lactation1"
+          - "reagent-effect-lactation2"
+          - "reagent-effect-lactation3"
+          - "reagent-effect-lactation4"
+          - "reagent-effect-lactation"
+        probability: 0.04
