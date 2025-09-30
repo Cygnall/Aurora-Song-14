@@ -681,13 +681,13 @@
     - sprite: _NF/Mobs/Species/Templates/human.rsi
       state: human
     # Suit
-    - sprite: _NF/Clothing/OuterClothing/Hardsuits/mercenary.rsi
+    - sprite: _AS/Clothing/OuterClothing/Hardsuits/mercenary.rsi
       state: equipped-OUTERCLOTHING
     # Gas tank
     - sprite: _NF/Objects/Tanks/o2n2equal.rsi
       state: equipped-SUITSTORAGE
     # Helmet
-    - sprite: _NF/Clothing/Head/Hardsuits/mercenary.rsi
+    - sprite: _AS/Clothing/Head/Hardsuits/mercenary.rsi
       state: on-equipped-HELMET
     # IFF
     - sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
@@ -734,13 +734,13 @@
     - sprite: _NF/Mobs/Species/Templates/human.rsi
       state: human
     # Suit
-    - sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi
+    - sprite: _AS/Clothing/OuterClothing/Hardsuits/private_security.rsi # Aurora - changed temporarily until we reimport the old sprites
       state: equipped-OUTERCLOTHING
     # Gas tank
     - sprite: _NF/Objects/Tanks/o2n2equal.rsi
       state: equipped-SUITSTORAGE
     # Helmet
-    - sprite: _NF/Clothing/Head/Hardsuits/private_security.rsi
+    - sprite: _AS/Clothing/Head/Hardsuits/private_security.rsi
       state: on-equipped-HELMET
     # IFF
     - sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
