@@ -90,8 +90,10 @@
   abstract: true
   id: BaseSpeciesMoth
   speciesRestriction: [Moth]
+  preferredSpecies: [Moth]
 
 - type: marking
   abstract: true
   id: BaseSpeciesVox
   speciesRestriction: [Vox]
+  preferredSpecies: [Vox]
