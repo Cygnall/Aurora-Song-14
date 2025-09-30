@@ -88,6 +88,12 @@
 
 - type: marking
   abstract: true
+  id: BaseSpeciesIPC
+  speciesRestriction: [IPC]
+  preferredSpecies: [IPC]
+
+- type: marking
+  abstract: true
   id: BaseSpeciesMoth
   speciesRestriction: [Moth]
   preferredSpecies: [Moth]
