@@ -8,6 +8,7 @@ using Robust.Client.UserInterface;
 using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Client.Utility;
+using Robust.Shared.Network.Messages;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using static Robust.Client.UserInterface.Controls.BoxContainer;
@@ -219,16 +220,17 @@ public sealed partial class MarkingPicker : Control
         // Aurora Song: Sort markings based on preferred species.
         var filteredMarkings = GetMarkings(_selectedMarkingCategory).Values;
 
-        if (!string.IsNullOrWhiteSpace(filter))
+        if (!string.IsNullOrEmpty(filter))
         {
             filteredMarkings = filteredMarkings.Where(m =>
                 m.ID.Contains(filter, StringComparison.InvariantCultureIgnoreCase)
                 || GetMarkingName(m).Contains(filter, StringComparison.InvariantCultureIgnoreCase));
         }
 
+        // Preferred species > no species preference > non-preferred species
+        // (then sort by name)
         var sortedMarkings = filteredMarkings
-            .OrderByDescending(m => m.PreferredSpecies.Contains(_currentSpecies))
-            .ThenBy(m => Loc.GetString(GetMarkingName(m)));
+            .OrderBy(m => (GetPreferredSpeciesPriority(m), GetMarkingName(m)));
         // End AuroraSong
 
         foreach (var marking in sortedMarkings)
@@ -244,6 +246,18 @@ public sealed partial class MarkingPicker : Control
 
         CMarkingPoints.Visible = _currentMarkings.PointsLeft(_selectedMarkingCategory) != -1;
     }
+
+    // AuroraSong: Sort markings based on preferred species.
+    // Preferred species > no species preference > non-preferred species
+    private int GetPreferredSpeciesPriority(MarkingPrototype prototype)
+    {
+        var preferred = prototype.PreferredSpecies;
+        if (preferred.Count == 0)
+            return 1;
+
+        return preferred.Contains(prototype.ID) ? 0 : 2;
+    }
+    // End AuroraSong
 
     // Populate the used marking list. Returns a list of markings that weren't
     // valid to add to the marking list.
