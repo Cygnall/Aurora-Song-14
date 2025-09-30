@@ -25,7 +25,7 @@
     ClothingOuterHardsuitPrivateSecurity: 4294967295 # Infinite - Private Security Hardsuit is placeholder until medical hardsuit is sprited
   # Weapons
     NFWeaponEnergyPistolDisabler: 4294967295 # Infinite
-    ASWeaponPistol58SLE: 4294967295 # Infinite
+    ASWeaponPistolMK58SLE: 4294967295 # Infinite
     NFWeaponShotgunKammerer: 4294967295 # Infinite
     Stunbaton: 4294967295 # Infinite
   # Magazines
