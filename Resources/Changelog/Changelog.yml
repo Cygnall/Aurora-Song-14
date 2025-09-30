@@ -4510,3 +4510,12 @@ Entries:
   id: 8654
   time: '2025-09-30T02:18:36.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/517
+- author: GreyScaleHarlequin
+  changes:
+    - type: Tweak
+      message: >-
+        AME now produces slightly more power as corecount goes up with injection
+        rate to match, though is diminishing on return. As was always intended.
+  id: 8655
+  time: '2025-09-30T15:47:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/518
