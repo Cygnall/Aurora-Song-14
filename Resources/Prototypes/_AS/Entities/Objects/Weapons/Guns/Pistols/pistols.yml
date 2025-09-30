@@ -20,7 +20,7 @@
     The Mark 58 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'
 
 - type: entity
-  id: ASWeaponPistol58SLELessLethal
+  id: ASWeaponPistolMK58SLELessLethal
   parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, ASWeaponPistolMK58SLE ]
   suffix: Frontier, Less-lethal
 
