@@ -1,390 +1,321 @@
 ## CANT SET THESE SCREENS TO "shader: unshaded"
 ## RobustToolbox/Robust.Shared/Utility/SpriteSpecifier.cs
 
+# Aurora Song: Add base markings
 - type: marking
-  speciesRestriction: [IPC]
-  id: ScreenStatic
+  abstract: true
+  parent: BaseSpeciesIPC
+  id: BaseRobotScreen
   bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
   markingCategory: Eyes
+# End Aurora Song
+
+- type: marking
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
+  id: ScreenStatic
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_static
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenBlue
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_blue
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenBreakout
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_breakout
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenEight
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_eight
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenGoggles
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_goggles
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenExclaim
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_exclaim
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenHeart
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_heart
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenMonoeye
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_monoeye
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenNature
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_nature
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenOrange
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_orange
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenPink
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_pink
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenQuestion
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_question
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenShower
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_shower
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenYellow
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_yellow
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenScroll
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_scroll
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenConsole
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_console
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenRgb
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_rgb
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenGlider
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_glider
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenRainbowhoriz
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_rainbowhoriz
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenBsod
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_bsod
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenRedtext
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_redtext
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenSinewave
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_sinewave
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenSquarewave
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_squarewave
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenEcgwave
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_ecgwave
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenEyes
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_eyes
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenEyestall
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_eyestall
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenEyesangry
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_eyesangry
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenLoading
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_loading
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenWindowsxp
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_windowsxp
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenTetris
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_tetris
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenTv
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_tv
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenTextdrop
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_textdrop
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenStars
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_stars
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenRainbowdiag
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_rainbowdiag
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenBlank
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_blank
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenSmile
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_smile
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenFrown
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_frown
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenRing
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_ring
 
 
 - type: marking
-  speciesRestriction: [IPC]
+  parent: BaseRobotScreen # Aurora Song: Add inheritance for species restriction / category
   id: ScreenL
-  bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
   sprites:
     - sprite: _EE/Mobs/Customization/ipc_screens.rsi
       state: ipc_screen_l

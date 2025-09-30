@@ -1,8 +1,8 @@
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
+  - BaseHead
   id: CyberLimbsMarkingXionHead
-  bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_monitor.rsi
     state: head-1
@@ -10,10 +10,10 @@
     state: head-2
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
+  - BaseHead
   id: CyberLimbsMarkingXionHeadAlt
-  bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_alt1.rsi
     state: head-1
@@ -21,10 +21,10 @@
     state: head-2
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
+  - BaseChest
   id: CyberLimbsMarkingXionChest
-  bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: torso-1
@@ -32,10 +32,11 @@
     state: torso-2
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
   id: CyberLimbsMarkingXionLArm
   bodyPart: LArm
   markingCategory: Arms
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: l_arm-1
@@ -43,10 +44,11 @@
     state: l_arm-2
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
   id: CyberLimbsMarkingXionLHand
   bodyPart: LHand
   markingCategory: Arms
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: l_hand-1
@@ -54,10 +56,11 @@
     state: l_hand-2
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
   id: CyberLimbsMarkingXionLLeg
   bodyPart: LLeg
   markingCategory: Legs
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: l_leg-1
@@ -66,10 +69,11 @@
 
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
   id: CyberLimbsMarkingXionLFoot
   bodyPart: LFoot
   markingCategory: Legs
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: l_foot-1
@@ -79,10 +83,11 @@
 
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
   id: CyberLimbsMarkingXionRArm
   bodyPart: RArm
   markingCategory: Arms
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: r_arm-1
@@ -92,10 +97,11 @@
 
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
   id: CyberLimbsMarkingXionRHand
   bodyPart: RHand
   markingCategory: Arms
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: r_hand-1
@@ -103,10 +109,11 @@
     state: r_hand-2
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
   id: CyberLimbsMarkingXionRLeg
   bodyPart: RLeg
   markingCategory: Legs
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: r_leg-1
@@ -115,10 +122,11 @@
 
 
 - type: marking
+  parent: # Aurora Song: Use inheritance for species restrictions / categories
+  - BaseSpeciesIPC
   id: CyberLimbsMarkingXionRFoot
   bodyPart: RFoot
   markingCategory: Legs
-  speciesRestriction: [IPC]
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/xion/xion_main.rsi
     state: r_foot-1
