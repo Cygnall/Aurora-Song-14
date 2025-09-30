@@ -21,6 +21,6 @@
 
 - type: entity
   id: ASWeaponPistolMk58SLELessLethal
-  parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, ASWeaponPistolMK58SLE ]
+  parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, ASWeaponPistolMk58SLE ]
   suffix: Frontier, Less-lethal
 
