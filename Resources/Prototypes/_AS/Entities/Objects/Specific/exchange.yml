@@ -18,7 +18,7 @@
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 2400 # 2400
+    price: 2400 # Sells for 3k
   - type: Currency
     price:
       ExchangeCoin: 1
