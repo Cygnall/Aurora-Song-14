@@ -18,7 +18,7 @@
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 2400 # Sells for 3k at trade spine and outpost consoles
+    price: 2400 # Sells for 3k at trade spine and outpost consoles, 2400 sells to 3000 at 1.25
   - type: Currency
     price:
       ExchangeCoin: 1
