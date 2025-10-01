@@ -4543,3 +4543,18 @@ Entries:
   id: 8657
   time: '2025-09-30T19:45:52.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/519
+- author: assignedgod
+  changes:
+    - type: Add
+      message: >-
+        Added several new roleplay chems, including Confusiol, Breakdown, and
+        Serenity! 
+    - type: Add
+      message: Added a new erp chemical Oxycremanol!
+    - type: Add
+      message: >-
+        Added a new medicine for removing mind altering substances from the
+        bloodstream, Purge!
+  id: 8658
+  time: '2025-10-01T15:25:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/522
