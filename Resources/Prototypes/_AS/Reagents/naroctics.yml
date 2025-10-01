@@ -61,4 +61,85 @@
         emote: Scream
         probability: 0.2
 
+- type: reagent
+  id: Serenity
+  name: reagent-name-serenity
+  group: Narcotics
+  desc: reagent-desc-serenity
+  physicalDesc: reagent-physical-desc-inky
+  flavor: hope
+  color: "#55B82E"
+  metabolisms:
+    Narcotic:
+      metabolismRate : 0.05
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-serenity1"
+          - "reagent-effect-serenity2"
+          - "reagent-effect-serenity3"
+          - "reagent-effect-serenity4"
+          - "reagent-effect-serenity5"
+        probability: 0.1
 
+- type: reagent
+  id: Confusiol
+  name: reagent-name-confusiol
+  group: Narcotics
+  desc: reagent-desc-confusiol
+  physicalDesc: reagent-physical-desc-inky
+  flavor: mindful
+  color: "#A77C8B"
+  metabolisms:
+    Narcotic:
+      metabolismRate : 0.5
+      effects:
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-confusiol1"
+          - "reagent-effect-confusiol2"
+          - "reagent-effect-confusiol3"
+          - "reagent-effect-confusiol4"
+          - "reagent-effect-confusiol5"
+        probability: 0.1
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.9
+        sprintSpeedModifier: 0.9
+
+- type: reagent
+  id: Breakdown
+  name: reagent-name-breakdown
+  group: Narcotics
+  desc: reagent-desc-breakdown
+  physicalDesc: reagent-physical-desc-acrid
+  flavor: spooky
+  color: "#363B4D"
+  metabolisms:
+    Narcotic:
+      metabolismRate: 0.1
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 0.35
+        sprintSpeedModifier: 0.35
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 3
+      - !type:ChemVomit
+        probability: 0.07
+      - !type:Drunk
+        boozePower: 5
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-breakdown1"
+          - "reagent-effect-breakdown2"
+          - "reagent-effect-breakdown3"
+          - "reagent-effect-breakdown4"
+          - "reagent-effect-breakdown5"
+        probability: 0.5

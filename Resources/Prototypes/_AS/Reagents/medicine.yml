@@ -104,3 +104,40 @@
           conditions:
             - !type:ReagentThreshold
               min: 20
+
+- type: reagent
+  id: Purge
+  name: reagent-name-purge
+  group: Elements
+  desc: reagent-desc-purge
+  physicalDesc: reagent-physical-desc-metallic
+  flavor: metallic
+  color: "#EDFAFF"
+  metabolisms:
+    Medicine:
+      metabolismRate: 0.5
+      effects:
+      - !type:AdjustReagent
+        reagent: ScaryDrugs
+        amount: -7
+      - !type:AdjustReagent
+        reagent: Serenity
+        amount: -7
+      - !type:AdjustReagent
+        reagent: Agony
+        amount: -7
+      - !type:AdjustReagent
+        reagent: ForceFemDrugs
+        amount: -7
+      - !type:AdjustReagent
+        reagent: Pomelustine
+        amount: -7
+      - !type:AdjustReagent
+        reagent: Philterex
+        amount: -7
+      - !type:AdjustReagent
+        reagent: Libidozenithizine
+        amount: -7
+      - !type:AdjustReagent
+        reagent: MilkingDrugs
+        amount: -7
