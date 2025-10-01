@@ -18,7 +18,7 @@
   - type: StaticPrice
     price: 0
   - type: StackPrice
-    price: 4000 # set to 4000 to multiply by 1.25 to 5000 by the "High" cargo sales computers standard to main station/ trade spine, which matches 5000 spesos exchange rate at the Exchange Vend
+    price: 2400 # set to 2400 to multiply by 1.25 to 3000 by the "High" cargo sales computers standard to main station/ trade spine, which matches 3000 spesos exchange rate at the Exchange Vend
   - type: Currency
     price:
       ExchangeCoin: 1
