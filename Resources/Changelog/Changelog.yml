@@ -4558,3 +4558,10 @@ Entries:
   id: 8658
   time: '2025-10-01T15:25:45.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/522
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Lowered EC exchange rates to 3k from 5k
+  id: 8659
+  time: '2025-10-02T17:41:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/525
