@@ -43,6 +43,7 @@
     containers:
       cell_slot: !type:ContainerSlot
 
+# region - battery rifle frames | Aurora Song
 - type: entity
   id: ASBaseWeaponFrameBatteryRifle
   parent: [ NFBaseWeaponEncumbranceRifle, ASBaseWeaponPowerCell ]
@@ -62,28 +63,101 @@
     maxAngle: -0
   - type: Gun
     projectileSpeed: 30
-    minAngle: 1.5
-    maxAngle: 3
-    angleIncrease: 0.5
-    angleDecay: 1
+    minAngle: 2
+    maxAngle: 3.8
+    angleIncrease: 0.7
+    angleDecay: 1.5
     fireRate: 3
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto
   - type: SpeedModifiedOnWield
-    walkModifier: 0.9
-    sprintModifier: 0.9
+    walkModifier: 1
+    sprintModifier: 1
   - type: StaticPrice
     price: 400
   - type: NFWeaponDetails
     class: weapon-details-class-rifle
 
 - type: entity
+  id: ASWeaponFrameBatteryRifleDualOptics
+  parent: ASBaseWeaponFrameBatteryRifle
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 1.6
+    maxAngle: 3.1
+    angleIncrease: 0.6
+    angleDecay: 1
+    fireRate: 3.2
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-dual-optics
+
+# endregion - battery rifle frames | Aurora Song
+
+# region - battery pistol frames | Aurora Song
+- type: entity
+  id: ASBaseWeaponFrameEnergyPistol
+  parent: [ NFBaseWeaponEncumbrancePistol, ASBaseWeaponPowerCell ]
+  abstract: true
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Appearance
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 3.1
+    maxAngle: 6.2
+    angleIncrease: 0.25
+    angleDecay: 1
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: StaticPrice
+    price: 250
+  - type: NFWeaponDetails
+    class: weapon-details-class-pistol
+
+- type: entity
+  id: ASWeaponFrameBatteryPistolDualOptics
+  parent: ASBaseWeaponFrameEnergyPistol
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 2.8
+    maxAngle: 5.5
+    angleIncrease: 0.2
+    angleDecay: 0.8
+    fireRate: 4.3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    - Burst
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-dual-optics
+
+
+# region - battery rifles | Aurora Song
+- type: entity
   name: Kasyre Las Rifle
-  parent: [ ASBaseWeaponFrameBatteryRifle ]
+  parent: [ ASWeaponFrameBatteryRifleDualOptics ]
   suffix: LasRifle
-  id: ASWeaponLaserLasRifle
-  description: A Cell fed rifle, commonly used by naval officers and security personnel. On the handle is a label that says 'for authorized use only.'
+  id: ASWeaponKasyreLasRifle
+  description: A Cell fed rifle, commonly used by naval officers and security personnel. On the handguard is a label that says 'for authorized use only.'
   components:
   - type: Gun
     availableModes:
@@ -98,6 +172,33 @@
       map: [ "enum.GunVisualLayers.Mag" ]
   - type: Clothing
     sprite: _AS/Objects/Weapons/Guns/Rifles/kaslasgun.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+
+# endregion - battery rifles | Aurora Song
+# region - battery pistols | Aurora Song
+- type: entity
+  name: Basin Las Pistol
+  parent: [ ASWeaponFrameBatteryPistolDualOptics ]
+  suffix: LasPistol
+  id: ASWeaponBasinLasPistol
+  description: A Cell fed pistol, commonly used by naval officers and security personnel. On the mag-well is a label that says 'for authorized use only.'
+  components:
+  - type: Gun
+    availableModes:
+    - SemiAuto
+    - Burst
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/pistols/basin.rsi
+    layers:
+    - state: base
+      map: [ "enum.GunVisualLayers.Base" ]
+    - state: mag-0
+      map: [ "enum.GunVisualLayers.Mag" ]
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/pistols/basin.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 5
