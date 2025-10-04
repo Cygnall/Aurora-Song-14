@@ -4565,3 +4565,10 @@ Entries:
   id: 8659
   time: '2025-10-02T17:41:31.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/525
+- author: TiredRat
+  changes:
+    - type: Add
+      message: QM Golden Knuckle Dusters to gamble crates. Rejoice.
+  id: 8660
+  time: '2025-10-04T01:38:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/528
