@@ -4572,3 +4572,10 @@ Entries:
   id: 8660
   time: '2025-10-04T01:38:47.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/528
+- author: Zenixic
+  changes:
+    - type: Fix
+      message: Fixed generators having too much storage
+  id: 8661
+  time: '2025-10-04T04:07:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/529
