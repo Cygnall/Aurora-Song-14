@@ -117,6 +117,7 @@
     - GrenadeFoamDart
     - StorageFillAmmoBoxHonk35
     - StorageFillAmmoBoxHonk35SMG
+    - ClothingHandsKnuckleDustersQM
     chance: 1
     offset: 0.0
     rarePrototypes:
