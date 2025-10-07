@@ -1,7 +1,13 @@
 - type: latheRecipe
   id: JugBluespace
   result: JugBluespace
-  parent: BluespaceBeaker # same size, 1:1 recipe
+  completetime: 3
+  materials:
+    Steel: 200
+    Plastic: 200
+    Plasma: 50
+    Silver: 50
+    Bluespace: 300 #Aurora Song: Other materials same as beaker, uses 3x the bluespace for 5x the storage.
 
 - type: latheRecipe
   id: VialBluespace

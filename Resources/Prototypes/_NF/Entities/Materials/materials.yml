@@ -48,6 +48,9 @@
   - type: PhysicalComposition
     materialComposition:
       Anomalite: 100
+  - type: Tag
+    tags:
+    - RawMaterial
 
 - type: entity
   parent: MaterialAnomalite

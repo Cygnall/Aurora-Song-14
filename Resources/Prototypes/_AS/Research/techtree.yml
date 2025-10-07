@@ -1,0 +1,12 @@
+﻿- type: technology
+  id: ASUnrealFoodService
+  name: as-unreal-processing
+  entityIcon: ASReagentGrinderIndustrialBluespace
+  discipline: NFService
+  tier: 1
+  cost: 9000
+  recipeUnlocks:
+  - ASBluespaceReagentGrinderIndustrialMachineCircuitboard
+  technologyPrerequisites:
+  - NFAdvancedFoodService
+  position: 3, 24
