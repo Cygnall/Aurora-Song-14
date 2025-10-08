@@ -1,0 +1,4 @@
+- type: soundCollection
+  id: ExpeditionEnd
+  files:
+  - /Audio/Expedition/chip_nightmare.ogg
