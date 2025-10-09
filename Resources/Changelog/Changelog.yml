@@ -4588,3 +4588,10 @@ Entries:
   id: 8662
   time: '2025-10-09T13:25:41.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/533
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Ported Plasma/Uranium floor tiles from Frontier
+  id: 8663
+  time: '2025-10-09T14:56:38.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/535
