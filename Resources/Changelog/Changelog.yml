@@ -4579,3 +4579,12 @@ Entries:
   id: 8661
   time: '2025-10-04T04:07:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/529
+- author: Inkbeanjo
+  changes:
+    - type: Add
+      message: >-
+        Added "Chip Nightmare" to the list of songs that play on expedition
+        timers running out.
+  id: 8662
+  time: '2025-10-09T13:25:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/533
