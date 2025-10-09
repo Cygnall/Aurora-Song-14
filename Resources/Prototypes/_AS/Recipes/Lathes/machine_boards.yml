@@ -1,4 +1,4 @@
 - type: latheRecipe
-  parent: [ BaseGoldCircuitboardRecipe, BaseMachineRecipeCategory ]
+  parent: [ BaseGoldCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
   id: ASBluespaceReagentGrinderIndustrialMachineCircuitboard
   result: ASBluespaceReagentGrinderIndustrialMachineCircuitboard
