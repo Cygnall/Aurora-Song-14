@@ -4595,3 +4595,10 @@ Entries:
   id: 8663
   time: '2025-10-09T14:56:38.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/535
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Made the jackdaw more accurate
+  id: 8664
+  time: '2025-10-10T22:09:18.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/530
