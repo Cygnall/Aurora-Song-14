@@ -95,9 +95,9 @@
   - type: Clothing
     sprite: _DV/Objects/Weapons/Guns/Rifles/jackdaw.rsi
   - type: Gun # Jackdaw given its own stats | Aurora
-    minAngle: 10
-    maxAngle: 35
-    angleIncrease: 2.5
+    minAngle: 3
+    maxAngle: 10
+    angleIncrease: 2
     angleDecay: 8
     fireRate: 8
     selectedMode: FullAuto
