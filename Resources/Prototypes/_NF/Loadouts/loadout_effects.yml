@@ -79,6 +79,13 @@
     - JobPlantManager
     - JobPlantTechnician
 
+- type: loadoutEffectGroup
+  id: NFNotStationRep
+  effects:
+  - !type:RoleBlacklistLoadoutEffect
+    blacklist:
+    - JobStationRepresentative
+
 # Begin Aurora Song
 - type: loadoutEffectGroup
   id: ASFeroxi
