@@ -62,7 +62,7 @@
     - type: SolutionContainerManager
       solutions:
         beaker:
-          maxVol: 1000
+          maxVol: 5000 # Aurora Song
     - type: Sprite
       sprite: _NF/Objects/Specific/Chemistry/jug_bluespace.rsi
       layers:
@@ -89,6 +89,9 @@
         - state: inhand-right-fill-1
           map: [ "enum.SolutionContainerLayers.Fill" ]
           visible: false
+    - type: SolutionTransfer # Aurora Song: Max transfer to 1k
+      canChangeTransferAmount: true
+      maxTransferAmount: 1000
     - type: StaticPrice
       price: 30 # Consistent with BaseBeakerMetallic
     - type: Destructible # Hacky - takes damage, but shouldn't be destructible

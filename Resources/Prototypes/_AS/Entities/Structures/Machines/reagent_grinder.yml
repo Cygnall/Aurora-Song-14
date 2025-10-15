@@ -1,0 +1,49 @@
+﻿- type: entity
+  parent: Recycler #too different so different parent
+  id: ASReagentGrinderIndustrialBluespace
+  name: bluespace industrial reagent grinder
+  description: Have we dreamed too large? Oceans may be contained within this reagent grinder, vast expanses of chemicals.
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      output:
+        maxVol: 50000 #For deranged people
+        canReact: false # Perserves things within itself. Careful pulling out your flourine and chlorine plant results in a hot beaker
+  - type: MaterialReclaimer
+    whitelist:
+      components:
+      - Extractable #same as reagent grinder
+    blacklist:
+      tags:
+      - HighRiskItem
+    efficiency: 0.9
+    onlyReclaimDrainable: false
+    solutionContainerId: output
+    processMaterials: false # Dix material duplication
+  - type: Sprite
+    sprite: _AS/Structures/Machines/recycling.rsi
+    layers:
+      - state: grinder-b0
+  - type: Machine
+    board: ASBluespaceReagentGrinderIndustrialMachineCircuitboard
+  - type: GenericVisualizer
+    visuals:
+      enum.ConveyorVisuals.State:
+        enum.ConveyorState.Off:
+          Forward: { state: grinder-b1 }
+          Reverse: { state: grinder-b1 }
+          Off: { state: grinder-b0 }
+  - type: ContainerContainer
+    containers:
+      machine_board: !type:Container
+      machine_parts: !type:Container
+  - type: Construction
+    graph: Machine
+    node: machine
+    containers:
+    - machine_parts
+    - machine_board
+  - type: DrainableSolution
+    solution: output
+  - type: ExaminableSolution
+    solution: output
