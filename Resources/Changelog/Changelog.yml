@@ -4602,3 +4602,10 @@ Entries:
   id: 8664
   time: '2025-10-10T22:09:18.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/530
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Redid pipes and added two stage airlock to the BH Mule
+  id: 8665
+  time: '2025-10-15T18:35:18.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/536
