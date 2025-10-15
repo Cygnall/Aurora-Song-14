@@ -92,6 +92,9 @@
     - Back
     - Belt
     - suitStorage
+  - type: SpeedModifiedOnWield # Why the hell would you need the mail launcher to slow you down by half? | Aurora
+    walkModifier: 1
+    sprintModifier: 1
   - type: BallisticAmmoProvider
     proto: null
     whitelist:

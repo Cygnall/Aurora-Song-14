@@ -93,6 +93,9 @@
     examineCaliber: gun-examine-caliber-40mm-grenade
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/grenade_launcher.ogg
+  - type: SpeedModifiedOnWield # Aurora Song | Reduce slowdown from standard launcher slowdown
+    walkModifier: 0.4
+    sprintModifier: 0.4
   - type: BallisticAmmoProvider
     whitelist:
       tags:
@@ -106,6 +109,9 @@
   id: NFBaseWeaponLauncherChamber40mmGrenadesNfsdSingleShot
   abstract: true
   components:
+  - type: SpeedModifiedOnWield # Much less dangerous than a typical launcher, can't use exposives | Aurora
+    walkModifier: 0.2
+    sprintModifier: 0.2
   - type: Gun
     examineCaliber: gun-examine-caliber-40mm-grenade
     soundGunshot:
