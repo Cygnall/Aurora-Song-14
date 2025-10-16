@@ -4609,3 +4609,10 @@ Entries:
   id: 8665
   time: '2025-10-15T18:35:18.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/536
+- author: GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: Two new laser weapons, accessible via research.
+  id: 8666
+  time: '2025-10-16T19:39:20.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/539
