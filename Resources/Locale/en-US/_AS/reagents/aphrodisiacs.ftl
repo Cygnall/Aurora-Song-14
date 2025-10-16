@@ -18,3 +18,11 @@ reagent-effect-forcecem-fade = You feel the euphoria leaving you... you need mor
 
 reagent-name-forcefem = Compound S-LBN-1A
 reagent-desc-forcefem = A new and highly regulated complex mix of aphrodisiacs and feminizing hormones that has recently taken certain underground scenes by storm.
+reagent-name-milkdrug = Oxycremanol
+reagent-desc-milkdrug = A chemical used to cause milk production within the user.
+
+reagent-effect-lactation1 = Your chest swells.
+reagent-effect-lactation2 = Your chest is so tender.
+reagent-effect-lactation3 = Your chest aches.
+reagent-effect-lactation4 = Milk beads on your nipples.
+reagent-effect-lactation5 =  Your chest feels sensitive.

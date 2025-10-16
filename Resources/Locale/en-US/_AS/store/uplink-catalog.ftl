@@ -87,8 +87,8 @@ uplink-exchange-debranded-hardsuit-desc = A Cybersun hardsuit with the paint str
 uplink-exchange-debranded-elite-hardsuit-name = Debranded Elite Armored Hardsuit
 uplink-exchange-debranded-elite-hardsuit-desc = An Elite Cybersun hardsuit with the paint stripped and trackers removed.
 
-uplink-exchange-spesos-name = 5000 spesos
-uplink-exchange-spesos-desc = A stack of 5000 spesos, hard currency.
+uplink-exchange-spesos-name = 3000 spesos
+uplink-exchange-spesos-desc = A stack of 3000 spesos, hard currency.
 
-uplink-exchange-spesos2-name = 25,000 spesos
-uplink-exchange-spesos2-desc = A stack of 25,000 spesos, hard currency.
+uplink-exchange-spesos2-name = 15,000 spesos
+uplink-exchange-spesos2-desc = A stack of 15,000 spesos, hard currency.

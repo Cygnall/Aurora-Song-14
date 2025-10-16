@@ -1,0 +1,14 @@
+﻿- type: entity
+  parent: BaseMachineCircuitboard
+  id: ASBluespaceReagentGrinderIndustrialMachineCircuitboard
+  name: bluespace industrial reagent grinder machine board
+  components:
+  - type: MachineBoard
+    prototype: ASReagentGrinderIndustrialBluespace
+    requirements:
+      MatterBin: 1
+      Manipulator: 3
+    stackRequirements:
+      Glass: 1
+      Bluespace: 2
+      Anomalite: 1

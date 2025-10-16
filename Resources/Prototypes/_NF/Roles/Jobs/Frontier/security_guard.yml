@@ -33,7 +33,7 @@
   id: SecurityGuardGear
   equipment:
     eyes: ClothingEyesGlassesSunglasses #ClothingEyesGlassesSecurity
-    pocket1: ASWeaponPistol58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
     pocket2: NFMagazineHighCapacityPistol35
   storage:
     back:

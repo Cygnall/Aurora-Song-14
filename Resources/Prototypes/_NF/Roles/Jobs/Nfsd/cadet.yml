@@ -28,7 +28,7 @@
 - type: startingGear
   id: CadetGear
   equipment:
-    pocket1: ASWeaponPistol58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLELessLethal
     pocket2: BookSecurity
   storage:
     back:

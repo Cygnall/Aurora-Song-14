@@ -88,10 +88,24 @@
 
 - type: marking
   abstract: true
+  id: BaseSpeciesIPC
+  speciesRestriction: [IPC]
+  preferredSpecies: [IPC]
+
+- type: marking
+  abstract: true
   id: BaseSpeciesMoth
   speciesRestriction: [Moth]
+  preferredSpecies: [Moth]
+
+- type: marking
+  abstract: true
+  id: BaseSpeciesRodentia
+  speciesRestriction: [Rodentia]
+  preferredSpecies: [Rodentia]
 
 - type: marking
   abstract: true
   id: BaseSpeciesVox
   speciesRestriction: [Vox]
+  preferredSpecies: [Vox]

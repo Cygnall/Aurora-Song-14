@@ -19,7 +19,7 @@
   name:  uplink-mercenary-hardsuit1-name
   description: uplink-mercenary-hardsuit1-desc
   productEntity: ClothingOuterHardsuitPrivateSecurity
-  icon: { sprite: _NF/Clothing/OuterClothing/Hardsuits/private_security.rsi, state: icon }
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/private_security.rsi, state: icon }
   cost:
     MercCoin: 10
   categories:

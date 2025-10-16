@@ -331,6 +331,7 @@
   - SeedExtractorMachineCircuitboard
   - HydroponicsTrayMachineCircuitboard
   - ReagentGrinderIndustrialMachineCircuitboard
+  - ASBluespaceReagentGrinderIndustrialMachineCircuitboard # Aurora Song
   - PlantAnalyzer
   # AudioVisualCommunication
   - SurveillanceWirelessCameraMovableCircuitboard

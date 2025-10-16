@@ -4482,3 +4482,130 @@ Entries:
   id: 8650
   time: '2025-09-27T03:26:22.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/515
+- author: assignedgod
+  changes:
+    - type: Remove
+      message: Removed the temperature gun
+  id: 8651
+  time: '2025-09-27T14:38:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/508
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added the Cybersun Adept, a new expedition/salvage ship!
+  id: 8652
+  time: '2025-09-28T23:41:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/507
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: The Adept shuttle console should be powered
+  id: 8653
+  time: '2025-09-29T17:47:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/516
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Medics get a raise!
+  id: 8654
+  time: '2025-09-30T02:18:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/517
+- author: GreyScaleHarlequin
+  changes:
+    - type: Tweak
+      message: >-
+        AME now produces slightly more power as corecount goes up with injection
+        rate to match, though is diminishing on return. As was always intended.
+  id: 8655
+  time: '2025-09-30T15:47:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/518
+- author: Vandanna
+  changes:
+    - type: Add
+      message: MedicGearVend
+    - type: Tweak
+      message: TO medbay contents (smart fridge, plasma, vendor)
+  id: 8656
+  time: '2025-09-30T18:09:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/523
+- author: portfiend
+  changes:
+    - type: Add
+      message: Humans now have access to a lot of Rodentia markings.
+    - type: Tweak
+      message: Humans can now choose a tail marking.
+    - type: Tweak
+      message: >-
+        Markings now have "preferred species" internally. This means that anthro
+        markings given to Humans, for example, will be sorted at the bottom of
+        humans' marking lists. The actual process of adding species preference
+        to markings is ongoing.
+  id: 8657
+  time: '2025-09-30T19:45:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/519
+- author: assignedgod
+  changes:
+    - type: Add
+      message: >-
+        Added several new roleplay chems, including Confusiol, Breakdown, and
+        Serenity! 
+    - type: Add
+      message: Added a new erp chemical Oxycremanol!
+    - type: Add
+      message: >-
+        Added a new medicine for removing mind altering substances from the
+        bloodstream, Purge!
+  id: 8658
+  time: '2025-10-01T15:25:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/522
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Lowered EC exchange rates to 3k from 5k
+  id: 8659
+  time: '2025-10-02T17:41:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/525
+- author: TiredRat
+  changes:
+    - type: Add
+      message: QM Golden Knuckle Dusters to gamble crates. Rejoice.
+  id: 8660
+  time: '2025-10-04T01:38:47.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/528
+- author: Zenixic
+  changes:
+    - type: Fix
+      message: Fixed generators having too much storage
+  id: 8661
+  time: '2025-10-04T04:07:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/529
+- author: Inkbeanjo
+  changes:
+    - type: Add
+      message: >-
+        Added "Chip Nightmare" to the list of songs that play on expedition
+        timers running out.
+  id: 8662
+  time: '2025-10-09T13:25:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/533
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Ported Plasma/Uranium floor tiles from Frontier
+  id: 8663
+  time: '2025-10-09T14:56:38.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/535
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Made the jackdaw more accurate
+  id: 8664
+  time: '2025-10-10T22:09:18.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/530
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: Redid pipes and added two stage airlock to the BH Mule
+  id: 8665
+  time: '2025-10-15T18:35:18.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/536

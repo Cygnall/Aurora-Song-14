@@ -41,3 +41,18 @@
       Davisicium: 4
       Ash: 1 # a smoke for afterward
       GroundBee: 1 # rip
+
+
+- type: reaction
+  id: Purge
+  impact: Medium
+  reactants:
+    Copper:
+      amount: 1
+    Aluminium:
+      amount: 2
+    Plasma:
+      amount: 1
+      catalyst: true
+  products:
+      Purge: 3
