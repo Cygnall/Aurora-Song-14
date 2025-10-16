@@ -2,7 +2,7 @@
 - type: entity
   id: ASBaseWeaponFramePlasmaRifle
   parent: [ NFBaseWeaponEncumbranceRifle, BaseWeaponBattery ]
-  suffix: Frontier
+  suffix: Aurora Song
   abstract: true
   components:
   - type: Sprite

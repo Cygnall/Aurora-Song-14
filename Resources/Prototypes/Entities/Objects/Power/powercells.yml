@@ -129,6 +129,9 @@
   - type: MachinePart # Frontier
     part: PowerCell # Frontier
     rating: 2 # Frontier
+  - type: Tag # Aurora Song
+    tags: # Auroras Song
+      - PowerCellMedium # Aurora Song
 
 - type: entity
   id: PowerCellMediumPrinted
@@ -167,6 +170,9 @@
   - type: MachinePart # Frontier
     part: PowerCell # Frontier
     rating: 3 # Frontier
+  - type: Tag # Aurora Song
+    tags: # Aurora Song
+    - PowerCellHigh # Aurora Song
 
 - type: entity
   id: PowerCellHighPrinted
@@ -205,6 +211,9 @@
   - type: MachinePart # Frontier
     part: PowerCell # Frontier
     rating: 4 # Frontier
+  - type: Tag # Aurora Song
+    tags: # Aurora Song
+    - PowerCellHyper # Aurora Song
 
 - type: entity
   id: PowerCellHyperPrinted
@@ -246,6 +255,9 @@
   - type: MachinePart # Frontier
     part: PowerCell # Frontier
     rating: 3 # Frontier: tier of this is arguable
+  - type: Tag # Aurora Song
+    tags: # Aurora Song
+    - PowerCellFusion # Aurora Song
 
 - type: entity
   parent: PowerCellMicroreactor
@@ -285,6 +297,9 @@
     - type: MachinePart # Frontier
       part: PowerCell # Frontier
       rating: 4 # Frontier: tier of this is arguable
+    - type: Tag # Aurora Song
+      tags: # Aurora Song
+      - PowerCellAntique # Aurora Song
 
 # Power cage (big heavy power cell for big devices)
 

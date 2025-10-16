@@ -34,3 +34,20 @@
 #region licenses
 - type: Tag
   id: License
+
+#region Power Cells
+
+- type: Tag
+  id: PowerCellMedium
+
+- type: Tag
+  id: PowerCellHigh
+
+- type: Tag
+  id: PowerCellHyper
+
+- type: Tag
+  id: PowerCellFusion
+
+- type: Tag
+  id: PowerCellAntique

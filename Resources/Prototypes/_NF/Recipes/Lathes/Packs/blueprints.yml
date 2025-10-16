@@ -485,6 +485,9 @@
   - NFMagazineGrenadeEmpty
   # NFPortableMicrofusionWeaponry
   - NFPortableRecharger
+  # Aurora Song - weapons
+  - ASWeaponBasinLasPistol
+  - ASWeaponKasyreLasRifle
 
 # region Engineering & Science
 - type: latheRecipePack
