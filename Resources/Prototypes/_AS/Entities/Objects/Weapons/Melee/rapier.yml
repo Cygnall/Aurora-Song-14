@@ -18,6 +18,9 @@
         - ItemMask
         restitution: 0.3
         friction: 0.2
+  - type: Item
+    shape:
+    - 0,0,1,1
   - type: Sharp
   - type: Sprite
     sprite: _AS/Objects/Weapons/Guns/Melee/rapier.rsi
@@ -38,9 +41,8 @@
   - type: Reflect
     reflectProb: .1
     spread: 90
-    shape:
-    - 0,0,1,1
   - type: Clothing
+    quickEquip: false
     sprite: _AS/Objects/Weapons/Guns/Melee/rapier.rsi
     slots:
     - back
