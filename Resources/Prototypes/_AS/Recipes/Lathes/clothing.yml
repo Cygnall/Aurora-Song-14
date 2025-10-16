@@ -1,0 +1,14 @@
+﻿- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformSuitGRN
+  result: ClothingUniformSuitGRN
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformSuitYLW
+  result: ClothingUniformSuitYLW
+
+- type: latheRecipe
+  parent: BaseJumpsuitRecipe
+  id: ClothingUniformSuitCYN
+  result: ClothingUniformSuitCYN
