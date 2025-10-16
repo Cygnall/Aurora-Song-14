@@ -8,3 +8,37 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jumpsuit.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/sle_jumpsuit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSuitYLW
+  name: YLW suit
+  description: A refined suit for all occasions formal, logistical, or security. The standard uniform for a Yeoman Luxury Workshop official.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/ylw_suit.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/ylw_suit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSuitGRN
+  name: GRN suit
+  description: Hey, hey, hey! Don't touch that dial! A suit for the Galactic Radio Network.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/grn_suit.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/grn_suit.rsi
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformSuitCYN
+  name: CYN suit
+  description: Cargo where you need it, when you need it. A suit that denotes employment by the Central Yard Network.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/cyn_suit.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/cyn_suit.rsi
+

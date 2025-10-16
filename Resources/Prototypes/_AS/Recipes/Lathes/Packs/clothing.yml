@@ -1,0 +1,6 @@
+﻿- type: latheRecipePack
+  id: ASCompanySUits
+  recipes:
+    - ClothingUniformSuitGRN
+    - ClothingUniformSuitYLW
+    - ClothingUniformSuitCYN
