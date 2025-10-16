@@ -194,7 +194,7 @@
     - SemiAuto
     - Burst
   - type: Sprite
-    sprite: _AS/Objects/Weapons/Guns/pistols/basin.rsi
+    sprite: _AS/Objects/Weapons/Guns/Pistols/basin.rsi
     layers:
     - state: base
       map: [ "enum.GunVisualLayers.Base" ]
