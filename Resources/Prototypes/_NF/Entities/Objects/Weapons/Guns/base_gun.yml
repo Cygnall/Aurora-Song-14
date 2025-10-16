@@ -73,7 +73,7 @@
     slots:
     - Back
     - suitStorage
-#  - type: SpeedModifiedOnWield #Removes slowdown
+#  - type: SpeedModifiedOnWield Aurora song: Removes slowdown
 #    walkModifier: 0.9
 #    sprintModifier: 0.9
 
@@ -89,9 +89,9 @@
     slots:
     - Back
     - suitStorage
-#  - type: SpeedModifiedOnWield #Aurora song: removes slowdown
-#    walkModifier: 0.8
-#    sprintModifier: 0.8
+  - type: SpeedModifiedOnWield #Aurora song: 0.8>0.9
+    walkModifier: 0.9
+    sprintModifier: 0.9
 
 # Assault Rifles
 - type: entity
@@ -107,9 +107,9 @@
     slots:
     - Back
     - suitStorage
-#  - type: SpeedModifiedOnWield #Aurora Song: Remove slowdown
-#    walkModifier: 0.85
-#    sprintModifier: 0.85
+  - type: SpeedModifiedOnWield #Aurora Song: Decrease slowdown by 5%
+    walkModifier: 0.85
+    sprintModifier: 0.85
 
 # Launchers
 - type: entity

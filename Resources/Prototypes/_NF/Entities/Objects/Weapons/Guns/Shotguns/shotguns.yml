@@ -1,7 +1,7 @@
 #region WizDen
 - type: entity
   id: NFWeaponShotgunBulldog
-  parent: [BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponEncumbranceLMG, NFBaseWeaponFrameShotgunGorlex] # Contraband status adjusted | Aurora
+  parent: [BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12gMagazine, NFBaseWeaponFrameShotgunWieldable, NFBaseWeaponFrameShotgunGorlex] # Contraband status adjusted | Aurora
   name: Bulldog
   description: |-
     An automatic magazine-fed shotgun for close-quarters combat. Kicks like a mule on steroids.
@@ -12,6 +12,8 @@
     sprite: Objects/Weapons/Guns/Shotguns/bulldog.rsi
   - type: Item # Size fix attempted, possibly still goes into boots for some reason | Aurora
     size: Large
+    shape:
+    - 0,0,4,3
   - type: Gun
     selectedMode: FullAuto
     availableModes:

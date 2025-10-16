@@ -1,5 +1,5 @@
 ﻿- type: entity
-  id: NFBaseWeaponEncumbranceLMG
+  id: ASBaseWeaponEncumbranceLMG
   abstract: true
   components:
   - type: Item
@@ -14,3 +14,20 @@
   - type: SpeedModifiedOnWield
     walkModifier: 0.3
     sprintModifier: 0.3
+
+
+# Carbines
+- type: entity
+  id: ASBaseWeaponEncumbranceCarbine
+  abstract: true
+  components:
+  - type: Item
+    size: Large
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.9
+    sprintModifier: 0.9

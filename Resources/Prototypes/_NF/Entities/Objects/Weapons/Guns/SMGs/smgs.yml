@@ -16,7 +16,7 @@
 
 - type: entity
   id: NFWeaponSubMachineGunC20r
-  parent: [ NFBaseWeaponSubMachineGunChamber35, NFBaseWeaponFrameSubMachineGunCybersun ]
+  parent: [ NFBaseWeaponSubMachineGunChamber35, ASBaseWeaponFrameSubMachineGunCybersunWieldable ] #Carbine conversion | Aurora
   name: C-20r
   description: |-
     An illegal firearm that is often used by the infamous nuclear operatives.
@@ -37,7 +37,7 @@
 
 - type: entity
   id: NFWeaponSubMachineGunDrozd
-  parent: [ NFBaseWeaponSubMachineGunChamber35, NFBaseWeaponFrameSubMachineGunNanotrasen ]
+  parent: [ NFBaseWeaponSubMachineGunChamber35, ASBaseWeaponFrameSubMachineGunNanotrasenWieldable ] #Carbine conversion | Aurora
   name: Drozd
   description: A fully automatic SMG.
   components: &drozdComponents
@@ -65,7 +65,7 @@
     An excellent SMG. On the receiver is a label that says 'for authorized use only.'
   components:
   - type: Gun # Stats tweaked to give WT-550 more accurate performance profile | Aurora
-    minAngle: 6.7
+    minAngle: 4
     maxAngle: 15
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/SMGs/wt550.rsi

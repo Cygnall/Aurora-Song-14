@@ -5,8 +5,8 @@
   name: submachine gun
   abstract: true
   components:
-  - type: Wieldable
-    unwieldOnUse: false
+#  - type: Wieldable # Remove Wielding | AS
+#    unwieldOnUse: false
   - type: GunWieldBonus
     minAngle: -0.8
     maxAngle: -4
@@ -73,9 +73,9 @@
     minAngle: 0
     maxAngle: 0
     angleIncrease: -1
-  - type: Gun
+  - type: Gun #Adjust angle slightly | Aurora
     minAngle: 2
-    maxAngle: 21
+    maxAngle: 19
     fireRate: 8
     angleIncrease: 3
     angleDecay: 12
@@ -84,13 +84,13 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunFrontierGunsmith
-  parent: [ NFBaseWeaponFrameSubMachineGun ]
+  parent: [ ASBaseWeaponFrameSubMachineGunWieldable ] # Aurora: Wieldable SMG
   abstract: true
-  components:
+  components: #Adjusted to make the gun more accurate | Aurora Song
   - type: Gun
-    minAngle: 6.7
+    minAngle: 3
     maxAngle: 21
-    angleIncrease: 1
+    angleIncrease: 2
     angleDecay: 2
     fireRate: 7
   - type: NFWeaponDetails

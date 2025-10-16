@@ -1,0 +1,66 @@
+﻿#region frame
+- type: entity
+  id: ASBaseWeaponFrameSubMachineGunWieldable
+  parent: [ NFBaseWeaponEncumbranceSubMachineGun, NFBaseItemWeaponGunMagazineFed ]
+  name: submachine gun
+  abstract: true
+  components:
+  - type: Wieldable # Remove Wielding | AS
+    unwieldOnUse: false
+  - type: GunWieldBonus
+    minAngle: -0.8
+    maxAngle: -4
+  - type: Gun # base stats, to be modified by manufacturers, slight increase to projectile speed and fireRate | Aurora
+    projectileSpeed: 30
+    minAngle: 4.2
+    maxAngle: 14.6
+    angleIncrease: 1
+    angleDecay: 2
+    fireRate: 7
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+  - type: StaticPrice
+    price: 350
+  - type: NFWeaponDetails
+    class: weapon-details-class-submachine-gun
+
+- type: entity
+  id: ASBaseWeaponFrameSubMachineGunCybersunWieldable
+  parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponFrameSubMachineGunWieldable ] # Contraband adjusted | Aurora
+  abstract: true
+  components:
+  - type: GunWieldBonus # Make the C-20r better in two hands, but useable in one | Aurora
+    minAngle: -4.2
+    maxAngle: -7.3
+  - type: Gun
+    minAngle: 4
+    maxAngle: 21
+    angleIncrease: 1
+    angleDecay: 2
+    fireRate: 7
+    burstCooldown: 0.5
+    shotsPerBurst: 5
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-cybersun-industries
+
+
+#region manufacturer
+- type: entity
+  id: ASBaseWeaponFrameSubMachineGunNanotrasenWieldable
+  parent: ASBaseWeaponFrameSubMachineGunWieldable
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 6.7
+    maxAngle: 17 # Slightly less accurate but faster fire rate | Aurora
+    angleIncrease: 1
+    angleDecay: 2
+    fireRate: 7
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
