@@ -1,0 +1,13 @@
+﻿- type: technology
+  id: ASLaserFieldEndurance
+  name: as-research-technology-laser-field-endurance
+  entityIcon: ASWeaponBasinLasPistol
+  discipline: NFArsenalMercenary
+  tier: 2
+  cost: 12500
+  recipeUnlocks:
+  - ASWeaponBasinLasPistol
+  - ASWeaponKasyreLasRifle
+  technologyPrerequisites:
+  - NFDeterrenceTechnologies
+  position: 4, 42

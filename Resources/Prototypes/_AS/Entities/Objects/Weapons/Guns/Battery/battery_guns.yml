@@ -147,6 +147,9 @@
     availableModes:
     - SemiAuto
     - Burst
+  - type: ProjectileBatteryAmmoProvider
+    proto: ASLasBoltMedium
+    fireCost: 50
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-dual-optics
 
