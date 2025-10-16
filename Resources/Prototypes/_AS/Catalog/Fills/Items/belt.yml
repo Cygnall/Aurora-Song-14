@@ -10,3 +10,17 @@
         amount: 8
       - id: CigPackBlue
         amount: 1
+
+- type: entity
+  id: ChestRigTools
+  parent: ClothingBeltMilitaryWebbing
+  suffix: Mercenary, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrowbarYellow
+      - id: Wrench
+      - id: Screwdriver
+      - id: Wirecutter
+      - id: Welder
+      - id: Multitool
