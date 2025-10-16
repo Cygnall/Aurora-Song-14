@@ -4616,3 +4616,10 @@ Entries:
   id: 8666
   time: '2025-10-16T19:39:20.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/539
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added a loadout option for a chestrig with tools. Rejoice
+  id: 8667
+  time: '2025-10-16T19:45:18.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/540
