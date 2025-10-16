@@ -201,7 +201,7 @@
     - state: mag-0
       map: [ "enum.GunVisualLayers.Mag" ]
   - type: Clothing
-    sprite: _AS/Objects/Weapons/Guns/pistols/basin.rsi
+    sprite: _AS/Objects/Weapons/Guns/Pistols/basin.rsi
   - type: MagazineVisuals
     magState: mag
     steps: 5
