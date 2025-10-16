@@ -1,0 +1,6 @@
+﻿- type: loadout
+  id: ChestRigToolsLoadoutAS
+  name: Chest Rig (filled, tools)
+  price: 5000
+  equipment:
+    belt: ChestRigTools
