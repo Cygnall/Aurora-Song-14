@@ -52,3 +52,17 @@
       - id: Wirecutter
       - id: Welder
       - id: Multitool
+
+- type: entity
+  id: MedicRigMedical
+  parent: ClothingBeltMilitaryWebbingMed
+  suffix: Mercenary, Filled, Medical
+  components:
+  - type: StorageFill
+    contents:
+      - id: Brutepack
+      - id: Ointment
+      - id: Bloodpack
+      - id: Gauze
+      - id: EmergencyMedipen #You never know what people are going to latejoin into
+        amount: 3

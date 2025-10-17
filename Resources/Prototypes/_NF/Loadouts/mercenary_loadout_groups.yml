@@ -159,5 +159,6 @@
   - ChestRigToolsLoadoutAS # Aurora Song
   - MercRigToolsLoadoutAS # Aurora Song
   - MedicRigToolsLoadoutAS # Aurora Song
+  - MedicRigMedical # Aurora Song
   subgroups:
   - ContractorBelt

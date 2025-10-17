@@ -18,3 +18,11 @@
   price: 2500
   equipment:
     belt: MedicRigTools
+
+- type: loadout
+  id: MedicRigMedicalLoadoutAS
+  name: medical chest rig (filled, tools)
+  price: 2500
+  equipment:
+    belt: MedicRigMedical
+
