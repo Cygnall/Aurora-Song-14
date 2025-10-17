@@ -24,3 +24,31 @@
       - id: Wirecutter
       - id: Welder
       - id: Multitool
+
+- type: entity
+  id: MercWebTools
+  parent: ClothingBeltMercenaryWebbing
+  suffix: Mercenary, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrowbarYellow
+      - id: Wrench
+      - id: Screwdriver
+      - id: Wirecutter
+      - id: Welder
+      - id: Multitool
+
+- type: entity
+  id: MedicRigTools
+  parent: ClothingBeltMilitaryWebbingMed
+  suffix: Mercenary, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrowbarYellow
+      - id: Wrench
+      - id: Screwdriver
+      - id: Wirecutter
+      - id: Welder
+      - id: Multitool
