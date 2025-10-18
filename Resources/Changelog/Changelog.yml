@@ -4648,3 +4648,10 @@ Entries:
   id: 8670
   time: '2025-10-18T07:26:49.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/544
+- author: GreyScaleHarlequin
+  changes:
+    - type: Tweak
+      message: Damage on Dual Optics weapons
+  id: 8671
+  time: '2025-10-18T22:43:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/547
