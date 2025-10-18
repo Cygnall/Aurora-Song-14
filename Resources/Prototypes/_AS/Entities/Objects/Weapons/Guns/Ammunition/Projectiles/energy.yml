@@ -69,7 +69,7 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 15
+        Heat: 18
 
 - type: entity
   id: ASLasBoltMedium
@@ -86,5 +86,5 @@
     impactEffect: BulletImpactEffectOrangeDisabler
     damage:
       types:
-        Heat: 10
+        Heat: 13
 

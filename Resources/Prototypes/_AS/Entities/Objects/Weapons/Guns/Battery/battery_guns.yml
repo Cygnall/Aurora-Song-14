@@ -157,7 +157,7 @@
 # region - battery rifles | Aurora Song
 - type: entity
   name: Kasyre Las Rifle
-  parent: [ ASWeaponFrameBatteryRifleDualOptics ]
+  parent: [ ASWeaponFrameBatteryRifleDualOptics, BaseC1Contraband ]
   suffix: LasRifle
   id: ASWeaponKasyreLasRifle
   description: A Cell fed rifle, commonly used by naval officers and security personnel. On the handguard is a label that says 'for authorized use only.'
@@ -184,7 +184,7 @@
 # region - battery pistols | Aurora Song
 - type: entity
   name: Basin Las Pistol
-  parent: [ ASWeaponFrameBatteryPistolDualOptics ]
+  parent: [ ASWeaponFrameBatteryPistolDualOptics, BaseC1Contraband ]
   suffix: LasPistol
   id: ASWeaponBasinLasPistol
   description: A Cell fed pistol, commonly used by naval officers and security personnel. On the mag-well is a label that says 'for authorized use only.'
