@@ -588,6 +588,7 @@
     - NFUniformSpecial # Frontier
     - NFUniformCloaks # Frontier
     - NFWallets # Frontier
+    - ASCompanySuits # Aurora
     dynamicPacks: # Frontier
     - NFPouches # Frontier
   - type: EmagLatheRecipes
