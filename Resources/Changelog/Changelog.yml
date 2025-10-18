@@ -4623,3 +4623,12 @@ Entries:
   id: 8667
   time: '2025-10-16T19:45:18.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/540
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added merc webbing tool fill medic rig tool fill to merc loadouts
+    - type: Tweak
+      message: Changed merc tool fills to 2k
+  id: 8668
+  time: '2025-10-18T07:22:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/541
