@@ -4639,3 +4639,12 @@ Entries:
   id: 8669
   time: '2025-10-18T07:26:10.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/542
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: >-
+        Made the syndicate hardsuits, pilot hardsuits, and wizard hardsuit have
+        usable headlamps 
+  id: 8670
+  time: '2025-10-18T07:26:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/544
