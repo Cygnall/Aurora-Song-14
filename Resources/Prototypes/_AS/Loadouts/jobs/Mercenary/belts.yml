@@ -1,6 +1,28 @@
 ﻿- type: loadout
   id: ChestRigToolsLoadoutAS
-  name: Chest Rig (filled, tools)
-  price: 5000
+  name: chest rig (filled, tools)
+  price: 2000
   equipment:
     belt: ChestRigTools
+
+- type: loadout
+  id: MercRigToolsLoadoutAS
+  name: mercenary webbing (filled, tools)
+  price: 2000
+  equipment:
+    belt: MercWebTools
+
+- type: loadout
+  id: MedicRigToolsLoadoutAS
+  name: medical chest rig (filled, tools)
+  price: 2500
+  equipment:
+    belt: MedicRigTools
+
+- type: loadout
+  id: MedicRigMedicalLoadoutAS
+  name: medical chest rig (filled, tools)
+  price: 2500
+  equipment:
+    belt: MedicRigMedical
+

@@ -157,5 +157,8 @@
   - MercenaryClothingBeltMilitaryWebbingMed
   - MercenaryClothingBeltSecurity
   - ChestRigToolsLoadoutAS # Aurora Song
+  - MercRigToolsLoadoutAS # Aurora Song
+  - MedicRigToolsLoadoutAS # Aurora Song
+  - MedicRigMedicalLoadoutAS # Aurora Song
   subgroups:
   - ContractorBelt

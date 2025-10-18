@@ -24,3 +24,45 @@
       - id: Wirecutter
       - id: Welder
       - id: Multitool
+
+- type: entity
+  id: MercWebTools
+  parent: ClothingBeltMercenaryWebbing
+  suffix: Mercenary, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrowbarYellow
+      - id: Wrench
+      - id: Screwdriver
+      - id: Wirecutter
+      - id: Welder
+      - id: Multitool
+
+- type: entity
+  id: MedicRigTools
+  parent: ClothingBeltMilitaryWebbingMed
+  suffix: Mercenary, Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: CrowbarYellow
+      - id: Wrench
+      - id: Screwdriver
+      - id: Wirecutter
+      - id: Welder
+      - id: Multitool
+
+- type: entity
+  id: MedicRigMedical
+  parent: ClothingBeltMilitaryWebbingMed
+  suffix: Mercenary, Filled, Medical
+  components:
+  - type: StorageFill
+    contents:
+      - id: Brutepack
+      - id: Ointment
+      - id: Bloodpack
+      - id: Gauze
+      - id: EmergencyMedipen #You never know what people are going to latejoin into
+        amount: 3
