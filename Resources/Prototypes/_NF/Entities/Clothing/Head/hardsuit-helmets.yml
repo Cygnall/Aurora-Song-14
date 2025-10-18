@@ -18,6 +18,7 @@
     sprite: _NF/Clothing/Head/Hardsuits/pilot.rsi
   - type: PointLight
     color: "#ffdbad"
+    radius: 5 # Aurora
   - type: PressureProtection
     highPressureMultiplier: 0.1
     lowPressureMultiplier: 1000
@@ -276,6 +277,7 @@
     sprite: _NF/Clothing/Head/Hardsuits/brickwizard.rsi
   - type: PointLight
     color: "#6dead6"
+    radius: 6 # Aurora
   - type: PressureProtection
     highPressureMultiplier: 0.27
     lowPressureMultiplier: 1000
