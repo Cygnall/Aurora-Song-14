@@ -4632,3 +4632,10 @@ Entries:
   id: 8668
   time: '2025-10-18T07:22:16.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/541
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: Added grn ylw and cyn suits to the uniform printer
+  id: 8669
+  time: '2025-10-18T07:26:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/542
