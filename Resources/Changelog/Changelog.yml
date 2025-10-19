@@ -4655,3 +4655,10 @@ Entries:
   id: 8671
   time: '2025-10-18T22:43:12.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/547
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: changed splash logo
+  id: 8672
+  time: '2025-10-19T15:38:15.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/548
