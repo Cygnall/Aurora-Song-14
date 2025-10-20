@@ -128,7 +128,7 @@
       - !type:HealthChange
         damage:
           types:
-            Poison: 3
+            Poison: 0.3
       - !type:ChemVomit
         probability: 0.07
       - !type:Drunk
