@@ -73,7 +73,7 @@
 #    angleIncrease: -1
   - type: Gun #Adjust angle slightly | Aurora
     minAngle: 2
-    maxAngle: 20
+    maxAngle: 21
     fireRate: 8
     angleIncrease: 3
     angleDecay: 12
