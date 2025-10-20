@@ -7,9 +7,9 @@
   components:
 #  - type: Wieldable # Remove Wielding | AS
 #    unwieldOnUse: false
-  - type: GunWieldBonus
-    minAngle: -0.8
-    maxAngle: -4
+#  - type: GunWieldBonus
+#    minAngle: -0.8
+#    maxAngle: -4
   - type: Gun # base stats, to be modified by manufacturers, slight increase to projectile speed and fireRate | Aurora
     projectileSpeed: 30
     minAngle: 4.2
@@ -46,9 +46,6 @@
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: GunWieldBonus # Make the C-20r better in two hands, but useable in one | Aurora
-    minAngle: -4.2
-    maxAngle: -7.3
   - type: Gun
     minAngle: 4
     maxAngle: 21
@@ -69,10 +66,11 @@
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: GunWieldBonus #Gorlex SMG doesn't become more accurate, but does handle recoil better in two hands | Aurora
-    minAngle: 0
-    maxAngle: 0
-    angleIncrease: -1
+# SMG frames no longer inherently wieldable | AS
+#  - type: GunWieldBonus #Gorlex SMG doesn't become more accurate, but does handle recoil better in two hands | Aurora
+#    minAngle: 0
+#    maxAngle: 0
+#    angleIncrease: -1
   - type: Gun #Adjust angle slightly | Aurora
     minAngle: 2
     maxAngle: 19

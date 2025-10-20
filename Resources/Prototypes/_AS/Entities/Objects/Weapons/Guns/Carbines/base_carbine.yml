@@ -1,11 +1,14 @@
-﻿- type: entity
+﻿## Carbine frame prototype
+# Carbines as a weapon class are intended to be a middle ground between SMGs and Rifles, featuring functionality in one
+# handed use but being at their best in two hands. They should be less accurate than rifles and more so than SMGs
+- type: entity
   id: ASBaseWeaponFrameCarbine
   parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponEncumbranceCarbine ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: GunWieldBonus # Make the C-20r better in two hands, but useable in one | Aurora
-    minAngle: -4.2
-    maxAngle: -7.3
+  - type: GunWieldBonus
+    minAngle: -3
+    maxAngle: -5.3
   - type: Gun
     minAngle: 4
     maxAngle: 21
@@ -19,7 +22,7 @@
     - FullAuto
     - SemiAuto
   - type: NFWeaponDetails
-    manufacturer: weapon-details-manufacturer-cybersun-industries
+    manufacturer: weapon-details-manufacturer-custom-made
 
 #region manufacturer
 - type: entity

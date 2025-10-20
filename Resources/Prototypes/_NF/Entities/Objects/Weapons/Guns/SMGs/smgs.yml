@@ -21,6 +21,10 @@
   description: |-
     An illegal firearm that is often used by the infamous nuclear operatives.
   components:
+  - type: Wieldable # SMG class no longer inherently wieldable | AS
+  - type: GunWieldBonus # Make the C-20r better in two hands, but useable in one | Aurora
+    minAngle: -4.2
+    maxAngle: -7.3
   - type: Gun
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
@@ -51,7 +55,7 @@
 
 - type: entity
   id: NFWeaponSubMachineGunDrozdLessLethal # Frontier-specific rubber variant
-  parent: [ NFBaseWeaponSubMachineGunChamber35Rubber, NFBaseWeaponFrameSubMachineGunNanotrasen ]
+  parent: [ NFBaseWeaponSubMachineGunChamber35Rubber, ASBaseWeaponFrameSubMachineGunNanotrasenWieldable ] #Carbine conversion | Aurora
   name: Drozd
   description: A fully automatic SMG.
   suffix: Frontier, Less-Lethal
