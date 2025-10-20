@@ -73,9 +73,9 @@
     slots:
     - Back
     - suitStorage
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.9
-    sprintModifier: 0.9
+#  - type: SpeedModifiedOnWield Aurora song: Removes slowdown
+#    walkModifier: 0.9
+#    sprintModifier: 0.9
 
 # Rifles / Shotguns
 - type: entity
@@ -89,9 +89,9 @@
     slots:
     - Back
     - suitStorage
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.8
-    sprintModifier: 0.8
+  - type: SpeedModifiedOnWield #Aurora song: 0.8>0.9
+    walkModifier: 0.9
+    sprintModifier: 0.9
 
 # Assault Rifles
 - type: entity
@@ -107,7 +107,7 @@
     slots:
     - Back
     - suitStorage
-  - type: SpeedModifiedOnWield
+  - type: SpeedModifiedOnWield #Aurora Song: Decrease slowdown by 5%
     walkModifier: 0.85
     sprintModifier: 0.85
 
@@ -136,23 +136,6 @@
   components:
   - type: Item
     size: Huge
-  - type: Clothing
-    quickEquip: false
-    slots:
-    - Back
-    - suitStorage
-  - type: SpeedModifiedOnWield
-    walkModifier: 0.3
-    sprintModifier: 0.3
-
-- type: entity #Aurora
-  id: NFBaseWeaponEncumbranceLMG
-  abstract: true
-  components:
-  - type: Item
-    size: Huge
-    shape:
-    - 0,0,4,3
   - type: Clothing
     quickEquip: false
     slots:

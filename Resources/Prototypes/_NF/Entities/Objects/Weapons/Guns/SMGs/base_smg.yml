@@ -5,11 +5,11 @@
   name: submachine gun
   abstract: true
   components:
-  - type: Wieldable
-    unwieldOnUse: false
-  - type: GunWieldBonus
-    minAngle: -0.8
-    maxAngle: -4
+#  - type: Wieldable # Remove Wielding | AS
+#    unwieldOnUse: false
+#  - type: GunWieldBonus
+#    minAngle: -0.8
+#    maxAngle: -4
   - type: Gun # base stats, to be modified by manufacturers, slight increase to projectile speed and fireRate | Aurora
     projectileSpeed: 30
     minAngle: 4.2
@@ -46,9 +46,6 @@
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: GunWieldBonus # Make the C-20r better in two hands, but useable in one | Aurora
-    minAngle: -4.2
-    maxAngle: -7.3
   - type: Gun
     minAngle: 4
     maxAngle: 21
@@ -69,11 +66,12 @@
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponFrameSubMachineGun ] # Contraband adjusted | Aurora
   abstract: true
   components:
-  - type: GunWieldBonus #Gorlex SMG doesn't become more accurate, but does handle recoil better in two hands | Aurora
-    minAngle: 0
-    maxAngle: 0
-    angleIncrease: -1
-  - type: Gun
+# SMG frames no longer inherently wieldable | AS
+#  - type: GunWieldBonus #Gorlex SMG doesn't become more accurate, but does handle recoil better in two hands | Aurora
+#    minAngle: 0
+#    maxAngle: 0
+#    angleIncrease: -1
+  - type: Gun #Adjust angle slightly | Aurora
     minAngle: 2
     maxAngle: 21
     fireRate: 8
@@ -84,13 +82,13 @@
 
 - type: entity
   id: NFBaseWeaponFrameSubMachineGunFrontierGunsmith
-  parent: [ NFBaseWeaponFrameSubMachineGun ]
+  parent: [ ASBaseWeaponFrameSubMachineGunWieldable ] # Aurora: Wieldable SMG
   abstract: true
-  components:
+  components: #Adjusted to make the gun more accurate | Aurora Song
   - type: Gun
-    minAngle: 6.7
+    minAngle: 3
     maxAngle: 21
-    angleIncrease: 1
+    angleIncrease: 2
     angleDecay: 2
     fireRate: 7
   - type: NFWeaponDetails

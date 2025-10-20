@@ -1,7 +1,7 @@
 #region base
 - type: entity
   id: NFBaseWeaponFrameLightMachineGun
-  parent: [ NFBaseWeaponEncumbranceLMG, NFBaseItemWeaponGunMagazineFed ] # Encumbrance adjusted for LMGs | Aurora
+  parent: [ ASBaseWeaponEncumbranceLMG, NFBaseItemWeaponGunMagazineFed ] # Encumbrance adjusted for LMGs | Aurora
   suffix: Frontier
   abstract: true
   components:

@@ -16,11 +16,15 @@
 
 - type: entity
   id: NFWeaponSubMachineGunC20r
-  parent: [ NFBaseWeaponSubMachineGunChamber35, NFBaseWeaponFrameSubMachineGunCybersun ]
+  parent: [ NFBaseWeaponSubMachineGunChamber35, ASBaseWeaponFrameSubMachineGunCybersunWieldable ] #Carbine conversion | Aurora
   name: C-20r
   description: |-
     An illegal firearm that is often used by the infamous nuclear operatives.
   components:
+  - type: Wieldable # SMG class no longer inherently wieldable | AS
+  - type: GunWieldBonus # Make the C-20r better in two hands, but useable in one | Aurora
+    minAngle: -4.2
+    maxAngle: -7.3
   - type: Gun
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/c-20r.ogg
@@ -37,7 +41,7 @@
 
 - type: entity
   id: NFWeaponSubMachineGunDrozd
-  parent: [ NFBaseWeaponSubMachineGunChamber35, NFBaseWeaponFrameSubMachineGunNanotrasen ]
+  parent: [ NFBaseWeaponSubMachineGunChamber35, ASBaseWeaponFrameSubMachineGunNanotrasenWieldable ] #Carbine conversion | Aurora
   name: Drozd
   description: A fully automatic SMG.
   components: &drozdComponents
@@ -51,7 +55,7 @@
 
 - type: entity
   id: NFWeaponSubMachineGunDrozdLessLethal # Frontier-specific rubber variant
-  parent: [ NFBaseWeaponSubMachineGunChamber35Rubber, NFBaseWeaponFrameSubMachineGunNanotrasen ]
+  parent: [ NFBaseWeaponSubMachineGunChamber35Rubber, ASBaseWeaponFrameSubMachineGunNanotrasenWieldable ] #Carbine conversion | Aurora
   name: Drozd
   description: A fully automatic SMG.
   suffix: Frontier, Less-Lethal
@@ -65,7 +69,7 @@
     An excellent SMG. On the receiver is a label that says 'for authorized use only.'
   components:
   - type: Gun # Stats tweaked to give WT-550 more accurate performance profile | Aurora
-    minAngle: 6.7
+    minAngle: 4
     maxAngle: 15
   - type: Sprite
     sprite: _NF/Objects/Weapons/Guns/SMGs/wt550.rsi

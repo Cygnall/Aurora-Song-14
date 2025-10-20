@@ -1,0 +1,67 @@
+﻿## Carbine frame prototype
+# Carbines as a weapon class are intended to be a middle ground between SMGs and Rifles, featuring functionality in one
+# handed use but being at their best in two hands. They should be less accurate than rifles and more so than SMGs
+- type: entity
+  id: ASBaseWeaponFrameCarbine
+  parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponEncumbranceCarbine ] # Contraband adjusted | Aurora
+  abstract: true
+  components:
+  - type: GunWieldBonus
+    minAngle: -3
+    maxAngle: -5.3
+  - type: Gun
+    minAngle: 4
+    maxAngle: 21
+    angleIncrease: 1
+    angleDecay: 2
+    fireRate: 7
+    burstCooldown: 0.5
+    shotsPerBurst: 5
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-custom-made
+
+#region manufacturer
+- type: entity
+  id: ASBaseWeaponFrameCarbineNanotrasen
+  parent: ASBaseWeaponFrameCarbine
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 6.7
+    maxAngle: 22
+    angleIncrease: 1
+    angleDecay: 2
+    fireRate: 7
+    burstFireRate: 8 # Faster burst fire
+    burstCooldown: 0.2
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+
+
+- type: entity
+  id: ASBaseWeaponFrameCarbineCybersun
+  parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponEncumbranceCarbine ] # Contraband adjusted | Aurora
+  abstract: true
+  components:
+  - type: GunWieldBonus # Make the C-20r better in two hands, but useable in one | Aurora
+    minAngle: -4.2
+    maxAngle: -7.3
+  - type: Gun
+    minAngle: 4
+    maxAngle: 21
+    angleIncrease: 1
+    angleDecay: 2
+    fireRate: 7
+    burstCooldown: 0.5
+    shotsPerBurst: 5
+    availableModes:
+    - Burst
+    - FullAuto
+    - SemiAuto
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-cybersun-industries
+
