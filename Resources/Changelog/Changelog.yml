@@ -4662,3 +4662,10 @@ Entries:
   id: 8672
   time: '2025-10-19T15:38:15.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/548
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: 'Lowered breakdown damage '
+  id: 8673
+  time: '2025-10-20T20:53:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/543
