@@ -4669,3 +4669,10 @@ Entries:
   id: 8673
   time: '2025-10-20T20:53:19.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/543
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Changed many wield-speed debuffs. Enjoy
+  id: 8674
+  time: '2025-10-20T21:21:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/538
