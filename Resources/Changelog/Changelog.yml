@@ -4676,3 +4676,12 @@ Entries:
   id: 8674
   time: '2025-10-20T21:21:27.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/538
+- author: GreyScaleHarlequin
+  changes:
+    - type: Tweak
+      message: >-
+        Dungeon loot tables for weapons retouched to respect the effectiveness
+        of the weapons at different tiers
+  id: 8675
+  time: '2025-10-21T14:35:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/549
