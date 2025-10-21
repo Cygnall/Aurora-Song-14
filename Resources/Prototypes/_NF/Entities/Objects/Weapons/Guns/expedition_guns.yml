@@ -307,7 +307,7 @@
 
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier3Pirate
+  - BaseExpeditionWeaponTier2Pirate
   - NFWeaponRifleMusket
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleMusketExpedition
