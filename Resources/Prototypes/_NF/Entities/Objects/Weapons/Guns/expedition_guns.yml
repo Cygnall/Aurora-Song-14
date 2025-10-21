@@ -300,7 +300,7 @@
 ## Snipers
 - type: entity
   parent:
-  - BaseExpeditionWeaponTier3Syndicate
+  - BaseExpeditionWeaponTier4Syndicate
   - NFWeaponRifleSniperHristov
   categories: [ HideSpawnMenu ]
   id: NFWeaponRifleSniperHristovExpedition

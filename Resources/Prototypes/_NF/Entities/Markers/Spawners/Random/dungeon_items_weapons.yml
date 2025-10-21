@@ -250,7 +250,7 @@
     - WeaponCaseLongDrozdExpedition
     - WeaponCaseLongM90Expedition
     - WeaponCaseLongLecterExpedition
-    - WeaponCaseLongHristovExpedition
+    #- WeaponCaseLongHristovExpedition
     chance: 1.0
     offset: 0.0
     rarePrototypes:
@@ -284,6 +284,7 @@
     - WeaponCaseShortAntiqueLaserExpedition
     - WeaponCaseShortAdvancedLaserExpedition
     - WeaponCaseLongXrayCannonExpedition
+    - WeaponCaseLongHristovExpedition # Hristov to T4, this thing eats walls like candy |Aurora Song
     #- WeaponCaseLongTemperatureGunExpedition | Aurora Song - Too PVP focused, not much PVE use.
     chance: 1.0
     offset: 0.0
