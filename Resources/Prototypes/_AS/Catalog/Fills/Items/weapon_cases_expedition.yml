@@ -2,7 +2,7 @@
 
 # T3
 - type: entity
-  parent: WeaponCaseShort
+  parent: WeaponCaselong
   id: WeaponCaseKasyreExpedition
   suffix: Dungeon, Kasyre
   categories: [ HideSpawnMenu ]
@@ -10,7 +10,7 @@
   - type: StorageFill
     contents:
     - id: ASWeaponKasyreLasRifleExpedition
-      amount: 1
+      amount: 2
     - id: PowerCellHigh
       amount: 2
 
