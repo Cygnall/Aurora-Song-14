@@ -2,7 +2,7 @@
 
 # T3
 - type: entity
-  parent: WeaponCaselong
+  parent: WeaponCaseLong
   id: WeaponCaseKasyreExpedition
   suffix: Dungeon, Kasyre
   categories: [ HideSpawnMenu ]
