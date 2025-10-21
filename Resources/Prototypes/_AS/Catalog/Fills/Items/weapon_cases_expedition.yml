@@ -10,7 +10,7 @@
   - type: StorageFill
     contents:
     - id: ASWeaponKasyreLasRifleExpedition
-      amount: 2
+      amount: 1
     - id: PowerCellHigh
       amount: 2
 
@@ -23,7 +23,7 @@
   - type: StorageFill
     contents:
     - id: ASWeaponBasinLasPistolExpedition
-      amount: 1
+      amount: 2
     - id: PowerCellHigh
       amount: 2
 
