@@ -176,10 +176,10 @@
     - WeaponCaseShortArgentiExpedition
     - WeaponCaseShortLuckyExpedition
     - WeaponCaseShortDeckardExpedition
-    - WeaponCaseShortPython45Expedition
     - WeaponCaseLongBarlowsBoltExpedition
     - WeaponCaseLongRepeaterExpedition
     - WeaponCaseLongSniperCeremonialExpedition
+    - WeaponCaseShortSvalinnExpedition # Svalinn to T1 | Aurora Song
     chance: 1.0
     offset: 0.0
     rarePrototypes:
@@ -205,18 +205,19 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - WeaponCaseShortCobra
-    - WeaponCaseShortN1984Expedition
+    - WeaponCaseLongTypewriterExpedition # Typewriter to T2 | Aurora Song
+    - WeaponCaseShortPython45Expedition #Python to T2 | Aurora Song
     - WeaponCaseShortViper
     - WeaponCaseShortFitzExpedition
     - WeaponCaseShortWard45Expedition
     - WeaponCaseShortRevolverPirate
-    - WeaponCaseLongC20r
     - WeaponCaseLongGestioExpedition
     - WeaponCaseLongWeaponRifleNovaliteC1Expedition
     - WeaponCaseLongSVSExpedition
     - WeaponCaseLongKammererExpedition
     - WeaponCaseShortLaserGunExpedition
+    - WeaponCaseLongMusketExpedition # Musket to T2 | Aurora Song
+    - WeaponCaseLongLaserCarbineExpedition # Laser Carbine to T2 | Aurora Song
     chance: 1.0
     offset: 0.0
     rarePrototypes:
@@ -242,18 +243,17 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - WeaponCaseLongTypewriterExpedition
+    - WeaponCaseShortCobra # Cobra to T3 | Aurora Song
     - WeaponCaseLongAtreidesExpedition
+    - WeaponCaseShortN1984Expedition # N1984 to T3 | Aurora Song
     - WeaponCaseLongWT550Expedition
     - WeaponCaseLongDrozdExpedition
     - WeaponCaseLongM90Expedition
     - WeaponCaseLongLecterExpedition
-    - WeaponCaseShortSvalinnExpedition
-    - WeaponCaseLongHristovExpedition
-    - WeaponCaseLongMusketExpedition
     - WeaponCaseLongFalchionExpedition # Aurora Weapon
     - WeaponCaseShortBasinExpedition # Aurora Weapon
     - WeaponCaseKasyreExpedition # Aurora Weapon
+    #- WeaponCaseLongHristovExpedition
     chance: 1.0
     offset: 0.0
     rarePrototypes:
@@ -280,14 +280,15 @@
   - type: RandomSpawner
     prototypes:
     - WeaponCaseLongSm
+    - WeaponCaseLongC20r # C20r to T4, how was this gun even conceived of as T2. Madness. | Aurora Song
     - WeaponCaseLongVulcanExpedition
     - WeaponCaseLongBulldog
     - WeaponCaseLongEnforcerExpedition
     - WeaponCaseShortAntiqueLaserExpedition
     - WeaponCaseShortAdvancedLaserExpedition
-    - WeaponCaseLongLaserCarbineExpedition
     - WeaponCaseLongXrayCannonExpedition
-    #- WeaponCaseLongTemperatureGunExpedition
+    - WeaponCaseLongHristovExpedition # Hristov to T4, this thing eats walls like candy |Aurora Song
+    #- WeaponCaseLongTemperatureGunExpedition | Aurora Song - Too PVP focused, not much PVE use.
     chance: 1.0
     offset: 0.0
     rarePrototypes:
