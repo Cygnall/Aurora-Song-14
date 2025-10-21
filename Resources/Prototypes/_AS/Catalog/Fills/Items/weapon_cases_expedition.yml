@@ -9,7 +9,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: ASWeaponKasyreLasRifleExpeditionExpedition
+    - id: ASWeaponKasyreLasRifleExpedition
       amount: 1
     - id: PowerCellHigh
       amount: 2
@@ -22,7 +22,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: ASWeaponBasinLasPistolExpeditionExpedition
+    - id: ASWeaponBasinLasPistolExpedition
       amount: 1
     - id: PowerCellHigh
       amount: 2
