@@ -251,6 +251,9 @@
     - WeaponCaseShortSvalinnExpedition
     - WeaponCaseLongHristovExpedition
     - WeaponCaseLongMusketExpedition
+    - WeaponCaseLongFalchionExpedition # Aurora Weapon
+    - WeaponCaseShortBasinExpedition # Aurora Weapon
+    - WeaponCaseKasyreExpedition # Aurora Weapon
     chance: 1.0
     offset: 0.0
     rarePrototypes:

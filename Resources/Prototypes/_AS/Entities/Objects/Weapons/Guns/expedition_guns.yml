@@ -1,0 +1,20 @@
+﻿- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - ASWeaponKasyreLasRifle
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponKasyreLasRifleExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - ASWeaponBasinLasPistol
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponBasinLasPistolExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - ASWeaponShotgunSurpFalchion
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponShotgunSurpFalchionExpedition
