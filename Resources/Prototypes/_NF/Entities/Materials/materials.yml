@@ -48,7 +48,7 @@
   - type: PhysicalComposition
     materialComposition:
       Anomalite: 100
-  - type: Tag
+  - type: Tag # Aurora
     tags:
     - RawMaterial
 
