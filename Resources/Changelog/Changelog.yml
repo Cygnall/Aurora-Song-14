@@ -4692,3 +4692,10 @@ Entries:
   id: 8676
   time: '2025-10-24T17:59:46.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/550
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: Added the BS reagent grinder into the circuit imprinter list
+  id: 8677
+  time: '2025-10-24T18:08:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/551
