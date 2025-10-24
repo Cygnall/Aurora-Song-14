@@ -1,0 +1,41 @@
+﻿
+
+# T3
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseKasyreExpedition
+  suffix: Dungeon, Kasyre
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: ASWeaponKasyreLasRifleExpedition
+      amount: 1
+    - id: PowerCellHigh
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseShortBasinExpedition
+  suffix: Dungeon, Basin
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: ASWeaponBasinLasPistolExpedition
+      amount: 2
+    - id: PowerCellHigh
+      amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongFalchionExpedition
+  suffix: Dungeon, Kammerer
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: ASWeaponShotgunSurpFalchionExpedition
+      amount: 1
+    - id: NFAmmunitionBoxShellShotgunBuckshot
+      amount: 2
