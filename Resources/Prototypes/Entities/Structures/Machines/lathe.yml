@@ -305,6 +305,7 @@
     - NFEngineeringBoards # Frontier
     - NFMedicalBoards # Frontier
     - NFServiceBoards # Frontier
+    - BluespaceReagentGrinderRecipieAS #Aurora
   - type: EmagLatheRecipes
     emagDynamicPacks: [] # Frontier: empty list
     # - SecurityBoards # Frontier
