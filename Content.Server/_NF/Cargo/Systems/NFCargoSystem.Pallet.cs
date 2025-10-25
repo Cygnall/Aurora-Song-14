@@ -197,7 +197,7 @@ public sealed partial class NFCargoSystem
                     noMultiplierAmount += price;
                 else
                     amount += price;
-                
+
                 // Check for any additional currency payouts
                 if (TryComp(ent, out AdditionalPalletCurrencyComponent? currencyComponent))
                 {
@@ -268,7 +268,7 @@ public sealed partial class NFCargoSystem
         var stackUid = _stack.Spawn((int)price, stackPrototype, args.Actor.ToCoordinates());
         if (!_hands.TryPickupAnyHand(args.Actor, stackUid))
             _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
-        
+
         // Iterate through additional currency payouts, putting them in hand if possible
         foreach (var (currencyId, currencyAmount) in additionalCurrency)
         {

@@ -14,12 +14,12 @@ public sealed partial class AdditionalPalletCurrencyComponent : Component
     ///     The stack prototype to spawn when the item is sold.
     /// </summary>
     [DataField(required: true)] public ProtoId<StackPrototype> Currency;
-    
+
     /// <summary>
     ///     The amount of entities to spawn.
     /// </summary>
     [DataField] public int Amount = 1;
-    
+
     /// <summary>
     ///     The probability that the entity will spawn.
     /// </summary>
