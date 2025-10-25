@@ -4699,3 +4699,18 @@ Entries:
   id: 8677
   time: '2025-10-24T18:08:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/551
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: 'Upstream:  Slightly raised the contravend spawn chance on expeds'
+    - type: Tweak
+      message: >-
+        Upstream: You now have a chance to get telecrystals from selling
+        smuggling crates. Dead drops no longer hold loose TC.
+    - type: Fix
+      message: 'Upstream: VGRoid ground loot makes a triumphant return.'
+    - type: Fix
+      message: 'Upstream: Bluespace parts spawner now spawns bluespace manipulators.'
+  id: 8678
+  time: '2025-10-25T22:12:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/552
