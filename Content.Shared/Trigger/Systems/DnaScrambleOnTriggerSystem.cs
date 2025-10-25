@@ -10,6 +10,7 @@ using Robust.Shared.Network;
 namespace Content.Shared.Trigger.Systems;
 
 public sealed class DnaScrambleOnTriggerSystem : XOnTriggerSystem<DnaScrambleOnTriggerComponent>
+public sealed class DnaScrambleOnTriggerSystem : XOnTriggerSystem<DnaScrambleOnTriggerComponent>
 {
     [Dependency] private readonly MetaDataSystem _metaData = default!;
     [Dependency] private readonly SharedHumanoidAppearanceSystem _humanoidAppearance = default!;
@@ -18,6 +19,8 @@ public sealed class DnaScrambleOnTriggerSystem : XOnTriggerSystem<DnaScrambleOnT
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly INetManager _net = default!;
 
+    protected override void OnTrigger(Entity<DnaScrambleOnTriggerComponent> ent, EntityUid target, ref TriggerEvent args)
+    {
     protected override void OnTrigger(Entity<DnaScrambleOnTriggerComponent> ent, EntityUid target, ref TriggerEvent args)
     {
         if (!TryComp<HumanoidAppearanceComponent>(target, out var humanoid))
@@ -33,11 +36,17 @@ public sealed class DnaScrambleOnTriggerSystem : XOnTriggerSystem<DnaScrambleOnT
         var newProfile = HumanoidCharacterProfile.RandomWithSpecies(humanoid.Species);
         _humanoidAppearance.LoadProfile(target, newProfile, humanoid);
         _metaData.SetEntityName(target, newProfile.Name, raiseEvents: false); // raising events would update ID card, station record, etc.
+        _humanoidAppearance.LoadProfile(target, newProfile, humanoid);
+        _metaData.SetEntityName(target, newProfile.Name, raiseEvents: false); // raising events would update ID card, station record, etc.
 
         // If the entity has the respective components, then scramble the dna and fingerprint strings.
         _forensics.RandomizeDNA(target);
         _forensics.RandomizeFingerprint(target);
+        _forensics.RandomizeDNA(target);
+        _forensics.RandomizeFingerprint(target);
 
+        RemComp<DetailExaminableComponent>(target); // remove MRP+ custom description if one exists
+        _identity.QueueIdentityUpdate(target); // manually queue identity update since we don't raise the event
         RemComp<DetailExaminableComponent>(target); // remove MRP+ custom description if one exists
         _identity.QueueIdentityUpdate(target); // manually queue identity update since we don't raise the event
 
