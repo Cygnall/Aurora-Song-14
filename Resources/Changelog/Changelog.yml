@@ -4714,3 +4714,10 @@ Entries:
   id: 8678
   time: '2025-10-25T22:12:13.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/552
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added blue and magenta flash/floodlights!
+  id: 8679
+  time: '2025-10-27T03:42:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/553
