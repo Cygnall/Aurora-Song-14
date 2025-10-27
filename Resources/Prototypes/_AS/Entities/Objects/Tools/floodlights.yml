@@ -1,0 +1,17 @@
+﻿
+- type: entity
+  name: Blue floodlight
+  id: ASFloodlightBlue
+  parent: [Floodlight] # Frontier: Add MixedPowerMachine
+  description: A pole with blue powerful mounted lights on it.
+- type: PointLight
+  color: "#FF00FF"
+
+
+- type: entity
+  name: Magenta floodlight
+  id: ASFloodlightMagenta
+  parent: [Floodlight] # Frontier: Add MixedPowerMachine
+  description: A pole with magenta powerful mounted lights on it.
+- type: PointLight
+  color: "#0000FFFF"

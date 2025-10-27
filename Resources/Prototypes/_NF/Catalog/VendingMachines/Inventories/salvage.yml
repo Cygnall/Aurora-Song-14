@@ -9,6 +9,8 @@
     Pickaxe: 10
     OreBag: 6
     Floodlight: 10
+    ASFloodlightBlue: 10 # Aurora
+    ASFloodlightMagenta: 10 # Aurora
     BoxDispenserFlare: 5
     FlashlightLantern: 15
     RadioHandheldNF: 5
@@ -24,6 +26,8 @@
     Pickaxe: 4294967295 # Infinite
     OreBag: 4294967295 # Infinite
     Floodlight: 4294967295 # Infinite
+    ASFloodlightBlue: 4294967295 # Aurora
+    ASFloodlightMagenta: 4294967295 # Aurora
     BoxDispenserFlare: 4294967295 # Infinite
     FlashlightLantern: 4294967295 # Infinite
     RadioHandheldNF: 4294967295 # Infinite

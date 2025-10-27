@@ -1,0 +1,19 @@
+﻿- type: latheRecipe
+  id: BlueFloodlight
+  result: ASFloodlightBlue
+  parent: Floodlight
+
+- type: latheRecipe
+  id: MagentaFloodlight
+  result: ASFloodlightMagenta
+  parent: Floodlight
+
+- type: latheRecipe
+  id: MagentaFlashlight
+  result: ASFlashlightMagenta
+  parent: FlashlightSecliteNF
+
+- type: latheRecipe
+  id: BlueFlashlight
+  result: ASFlashlightBlue
+  parent: FlashlightSecliteNF

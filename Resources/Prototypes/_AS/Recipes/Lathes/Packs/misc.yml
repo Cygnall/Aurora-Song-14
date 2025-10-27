@@ -4,3 +4,11 @@
     - ClothingNeckShockCollar
     - LeashBasic
     - ClothingNeckCollarCmd
+
+- type: latheRecipePack
+  id: ASBlueMagentaColorFlashlights
+  recipes:
+    - BlueFloodlight
+    - MagentaFloodlight
+    - MagentaFlashlight
+    - BlueFlashlight
