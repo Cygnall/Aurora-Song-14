@@ -4,8 +4,9 @@
   id: ASFloodlightBlue
   parent: [Floodlight] # Frontier: Add MixedPowerMachine
   description: A pole with blue powerful mounted lights on it.
-- type: PointLight
-  color: "#FF00FF"
+  components:
+  - type: PointLight
+    color: "#FF00FF"
 
 
 - type: entity
@@ -13,5 +14,6 @@
   id: ASFloodlightMagenta
   parent: [Floodlight] # Frontier: Add MixedPowerMachine
   description: A pole with magenta powerful mounted lights on it.
-- type: PointLight
-  color: "#0000FFFF"
+  components:
+  - type: PointLight
+    color: "#0000FFFF"
