@@ -1,0 +1,27 @@
+﻿- type: entity
+  name: blue flashlight
+  parent: FlashlightLantern
+  id: ASFlashlightBlue
+  description: A blue light.
+  components:
+  - type: PointLight
+    color: "#FF00FF"
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 6
+    netsync: false
+
+- type: entity
+  name: magenta flashlight
+  parent: FlashlightLantern
+  id: ASFlashlightMagenta
+  description: A magenta light.
+  components:
+  - type: PointLight
+    color: "#0000FFFF"
+    enabled: false
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    radius: 6
+    netsync: false
