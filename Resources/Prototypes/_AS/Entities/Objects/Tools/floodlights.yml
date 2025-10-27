@@ -7,6 +7,10 @@
   components:
   - type: PointLight
     color: "#FF00FF"
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 250
+      Steel: 200
 
 
 - type: entity
@@ -17,3 +21,7 @@
   components:
   - type: PointLight
     color: "#0000FFFF"
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 250
+      Steel: 200
