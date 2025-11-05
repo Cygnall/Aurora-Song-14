@@ -338,7 +338,7 @@
   components:
   - type: StorageFill
     contents:
-    - id: NFWeaponRifleAssaultSm
+    - id: NFWeaponRifleAssaultSmExpedition # Corrected to be using the expedition version of the gun | Aurora Song
       amount: 1
     - id: NFMagazineRifle30
       amount: 2

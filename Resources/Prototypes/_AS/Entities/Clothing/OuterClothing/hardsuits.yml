@@ -83,3 +83,46 @@
 #    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
 #  - type: ToggleableClothing
 #    clothingPrototype: ClothingHeadHelmetHardsuitMedicArmored
+
+- type: entity
+  parent:
+  - ClothingOuterHardsuitSyndie
+  - ContrabandClothing
+  id: ClothingOuterHardsuitSyndieMedicUnremoveable
+  name: syndicate hardsuit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/syndiemedic.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/syndiemedic.rsi
+
+
+- type: entity
+  parent:
+  - ClothingOuterHardsuitWizardBrick
+  - ContrabandClothing
+  id: ClothingOuterHardsuitWizardBrickUnremoveable
+  name: brick wizard hardsuit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: _NF/Clothing/OuterClothing/Hardsuits/brickwizard.rsi
+  - type: Clothing
+    sprite: _NF/Clothing/OuterClothing/Hardsuits/brickwizard.rsi
+
+- type: entity
+  parent:
+  - ClothingOuterHardsuitWizard
+  - ContrabandClothing
+  id: ClothingOuterHardsuitWizardUnremoveable
+  name: brick wizard hardsuit
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Unremoveable
+  - type: Sprite
+    sprite: Clothing/OuterClothing/Hardsuits/wizard.rsi
+  - type: Clothing
+    sprite: Clothing/OuterClothing/Hardsuits/wizard.rsi

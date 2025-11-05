@@ -10,9 +10,9 @@ namespace Content.Server.Devour;
 
 public sealed partial class DevourSystem
 {
-    private void OnMobStateChanged(Entity<DragonUnrottingComponent> ent, ref MobStateChangedEvent args)
-    {
-        if (args.NewMobState == MobState.Alive)
-            RemComp<DragonUnrottingComponent>(ent);
-    }
+   // private void OnMobStateChanged(Entity<DragonUnrottingComponent> ent, ref MobStateChangedEvent args)
+   // {
+   //     if (args.NewMobState == MobState.Alive)
+   //         RemComp<DragonUnrottingComponent>(ent);
+   // } Aurora: Rot won't be a problem, nor is this referenced anywhere
 }

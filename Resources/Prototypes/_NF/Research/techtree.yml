@@ -1795,6 +1795,7 @@
   - TimerTrigger
   - FlashPayload
   - ChemicalPayload
+  - ExplosivePayload # Added back | Aurora Song
   technologyPrerequisites:
   - NFAdvancedRiotControl
   position: 3, 41

@@ -425,7 +425,7 @@
   equipment:
     outerClothing: ClothingOuterHospitalGown
     mask: ClothingMaskMuzzle
-    neck: ClothingNeckHeadphones
+    neck: ClothingMultipleHeadphones
   inhand:
     - ReinforcedShiv
 
@@ -704,7 +704,7 @@
     belt: ClothingBeltMedicalFilled
     neck: ClothingNeckStethoscope
 #    mask: ClothingMaskGasSyndicate
-    outerClothing: ClothingOuterHardsuitSyndieMedic
+    outerClothing: ClothingOuterHardsuitSyndieMedicUnremoveable # Aurora: Fix suit stealing
     back: ClothingBackpackSyndicateMedicLootA
     pocket2: DoubleEmergencyAirTankFilled
   inhand:

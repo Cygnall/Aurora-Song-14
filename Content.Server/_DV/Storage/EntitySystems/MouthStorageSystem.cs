@@ -1,5 +1,6 @@
 using Content.Server.Nutrition;
 using Content.Server.Speech;
+using Content.Shared.Speech; // Aurora
 using Content.Server.Speech.EntitySystems;
 using Content.Shared._DV.Storage.Components;
 using Content.Shared._DV.Storage.EntitySystems;

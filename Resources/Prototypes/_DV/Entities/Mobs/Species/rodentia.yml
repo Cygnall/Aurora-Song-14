@@ -108,7 +108,7 @@
     shape:
       - 0, 0, 3, 2
       - 0, 2, 5, 4
-  - type: MouthStorage
+  - type: MouthStorage # Aurora: removed cheek storage for now (It's tied into an antiquated system that was reworked)
     mouthProto: CheekStorage
     openStorageAction: ActionOpenMouthStorage
     spitDamageThreshold: 3

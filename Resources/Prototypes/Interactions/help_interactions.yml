@@ -13,31 +13,32 @@
     max: 2
   contestDelay: true
 
-# Combines waking up, helping from stun, and forcing to stand.
-- type: Interaction
-  id: HelpUp
-  parent: [BaseHelp, BaseGlobal]
-  delay: 1.5
-  cooldown: 0.5
-  hideByRequirement: true
-  requirement:
-    !type:StandingStateRequirement
-    allowLaying: true
-    allowKnockedDown: true
-  action:
-    !type:ComplexAction
-    requireAll: false
-    actions:
-    - !type:ToggleSleepingAction
-      wakeUp: true
-    - !type:ChangeStandingStateAction
-      makeStanding: true
-    - !type:ModifyStatusEffectAction
-      effect: KnockedDown
-      timeAdded: -2.5 # TODO: probably unnecessary but some systems like slippery sometimes mention it in TODO manner
-    - !type:ModifyStatusEffectAction
-      effect: Stun
-      timeAdded: -2.5 # 2 seconds delay to remove 2.5 seconds of stun - should be good enough.
+## Combines waking up, helping from stun, and forcing to stand. Incompatible with crawling system, todo: Refactor
+#- type: Interaction
+#  id: HelpUp
+#  parent: [BaseHelp, BaseGlobal]
+#  delay: 1.5
+#  cooldown: 0.5
+#  hideByRequirement: true
+#  requirement:
+#    !type:StandingStateRequirement
+#    allowLaying: true
+#    allowKnockedDown: true
+#  action:
+#    !type:ComplexAction
+#    requireAll: false
+#    actions:
+#    - !type:ToggleSleepingAction
+#      wakeUp: true
+#    - !type:ChangeStandingStateAction
+#      makeStanding: true
+#    - !type:ModifyStatusEffectAction
+#      key: KnockedDown
+#      time: -2.25
+#      type: Remove
+#    - !type:ModifyStatusEffectAction Aurora: Comment out
+#      effect: Stun
+#      timeAdded: -2.5 # 2 seconds delay to remove 2.5 seconds of stun - should be good enough.
 
 - type: Interaction
   id: ForceDown

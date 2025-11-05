@@ -155,8 +155,8 @@
       ejectState: eject-unshaded
       denyState: deny-unshaded
       ejectDelay: 3
-    - type: Advertise # Using NanoMedAds for now, as a placeholder until custom ads are made
-      pack: NanoMedAds
+    - type: DatasetVocalizer
+      dataset: NanoMedAds
     - type: Sprite
       sprite: _AS/Structures/Machines/VendingMachines/medicgearvend.rsi
       layers:

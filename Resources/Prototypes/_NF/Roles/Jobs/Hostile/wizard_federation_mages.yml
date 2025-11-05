@@ -86,7 +86,7 @@
     shoes: ClothingShoesWizard
     belt: ClothingBeltWand
     neck: ClothingNeckScarfStripedPurple
-    outerClothing: ClothingOuterHardsuitWizard
+    outerClothing: ClothingOuterHardsuitWizardUnremoveable
   inhand:
     - WizardStaffMeleeViolet
 
@@ -108,6 +108,6 @@
     head: ClothingHeadHelmetHardsuitWizardBrick
     shoes: ClothingShoesWizard
     belt: ClothingBeltWand
-    outerClothing: ClothingOuterHardsuitWizardBrick
+    outerClothing: ClothingOuterHardsuitWizardBrickUnremoveable
   inhand:
     - WizardStaffMeleeBrick

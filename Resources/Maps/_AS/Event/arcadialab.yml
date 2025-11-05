@@ -14374,8 +14374,6 @@ entities:
     - type: Transform
       pos: 4.5,33.5
       parent: 1
-    - type: Advertise
-      nextAdvertisementTime: 21588.6789693
     - type: PointLight
       enabled: True
   - uid: 1352
@@ -14384,8 +14382,6 @@ entities:
     - type: Transform
       pos: 4.5,29.5
       parent: 1
-    - type: Advertise
-      nextAdvertisementTime: 21393.3791156
     - type: PointLight
       enabled: True
 - proto: ElectrolysisUnitMachineCircuitboard

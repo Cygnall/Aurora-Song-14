@@ -215,10 +215,6 @@
     staticPacks:
     - NFMercenaryTechfabDeprecatedStatic
     - NfsdPracticeStatic
-    dynamicPacks:
-    - ScienceExplosives
-    - AdvancedTools
-    - NFPouches
   - type: EmagLatheRecipes
     emagStaticPacks:
     - ASMercenaryEmag
@@ -292,8 +288,8 @@
   - type: LitOnPowered
   - type: ApcPowerReceiver
     powerLoad: 200
-  - type: Advertise
-    pack: CuddlyCritterAds
+  - type: DatasetVocalizer
+    dataset: CuddlyCritterAds
   - type: PointLight
     radius: 1.5
     energy: 1.6
