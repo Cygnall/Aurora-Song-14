@@ -141,6 +141,7 @@
     sprite: Clothing/Shoes/Boots/speedboots.rsi
   - type: ToggleClothing
     action: ActionToggleSpeedBoots
+  # Aurora Song: Deduplicated speed modifiers to avoid duplicate keys
   - type: ClothingSpeedModifier
     walkModifier: 1.7 # DeltaV
     sprintModifier: 1.7 # DeltaV
