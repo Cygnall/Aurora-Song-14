@@ -6,17 +6,21 @@
   name: weapon repainting station
   description: A machine that removes surplus markings and repaints firearms to their standard factory finish.
   components:
+  - type: Sprite
+    sprite: _AS/Structures/Machines/weapon_painter.rsi
+    layers:
+    - state: icon
   - type: WeaponSwap
     weaponMappings:
       # SMGs - Surplus to Standard
       ASWeaponSubMachineGunSurpWt550: NFWeaponSubMachineGunWt550
       ASWeaponSubMachineGunSurpAtreides: NFWeaponSubMachineGunAtreides
       ASWeaponSubMachineGunSurpDrozd: NFWeaponSubMachineGunDrozd
-      
+
       # Rifles - Surplus to Standard
       ASWeaponRifleAssaultSurpLecter: NFWeaponRifleAssaultLecter
       ASWeaponRifleAssaultSurpSm: NFWeaponRifleAssaultSm
-      
+
       # Shotguns - Surplus to Standard
       ASWeaponShotgunSurpFalchion: ASWeaponShotgunFalchion
       # Note: Falchion uses AS prefix for both standard and surplus versions
