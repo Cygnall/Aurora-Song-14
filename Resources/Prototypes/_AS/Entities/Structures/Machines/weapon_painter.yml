@@ -1,0 +1,23 @@
+# Weapon Painter - Removes "surplus" markings and repaints to standard factory finish
+
+- type: entity
+  parent: ASWeaponSwapMachineBase
+  id: ASWeaponPainter
+  name: weapon repainting station
+  description: A machine that removes surplus markings and repaints firearms to their standard factory finish.
+  components:
+  - type: WeaponSwap
+    weaponMappings:
+      # SMGs - Surplus to Standard
+      ASWeaponSubMachineGunSurpWt550: NFWeaponSubMachineGunWt550
+      ASWeaponSubMachineGunSurpAtreides: NFWeaponSubMachineGunAtreides
+      ASWeaponSubMachineGunSurpDrozd: NFWeaponSubMachineGunDrozd
+      
+      # Rifles - Surplus to Standard
+      ASWeaponRifleAssaultSurpLecter: NFWeaponRifleAssaultLecter
+      ASWeaponRifleAssaultSurpSm: NFWeaponRifleAssaultSm
+      
+      # Shotguns - Surplus to Standard
+      ASWeaponShotgunSurpFalchion: ASWeaponShotgunFalchion
+      # Note: Falchion uses AS prefix for both standard and surplus versions
+      # Kammerer doesn't have a surplus variant in AS namespace
