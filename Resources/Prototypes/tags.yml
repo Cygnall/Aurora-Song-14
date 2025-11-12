@@ -1538,3 +1538,11 @@
 - type: Tag
   id: XenoborgModuleStealth
 # ALPHABETICAL
+
+# Mono
+
+- type: Tag
+  id: CartridgeMachineGun
+
+- type: Tag
+  id: CartridgeShell

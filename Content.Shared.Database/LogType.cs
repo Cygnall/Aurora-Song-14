@@ -520,6 +520,14 @@ public enum LogType
     #endregion Frontier Values
     // Frontier End
 
+    // Monolith Station Specific - Ship Weapons
+    #region Monolith Values
+    /// <summary>
+    /// A ship weapon was fired.
+    /// </summary>
+    ShipgunFired = 300,
+    #endregion Monolith Values
+
     // DeltaV Station Specific
     #region DeltaV Values
     /// <summary>

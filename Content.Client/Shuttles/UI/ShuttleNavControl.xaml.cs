@@ -12,8 +12,11 @@ using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Timing;
 using Content.Client.Station; // Frontier
 using Content.Client._NF.Radar; // Frontier
+using Content.Client._Mono.Radar; // Monolith ship weapons radar
+using Content.Shared._NF.Radar;
 
 namespace Content.Client.Shuttles.UI;
 
@@ -24,6 +27,9 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     [Dependency] private readonly IUserInterfaceManager _uiManager = default!;
     private readonly SharedShuttleSystem _shuttles;
     private readonly SharedTransformSystem _transform;
+    // Note: _blipsNF from Frontier/NF partial class in _NF folder
+    // Note: Monolith blips system for ship weapons (different from NF)
+    private readonly RadarBlipsSystem _blipsMono;
 
     /// <summary>
     /// Used to transform all of the radar objects. Typically is a shuttle console parented to a grid.
@@ -61,14 +67,15 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         RobustXamlLoader.Load(this);
         _shuttles = EntManager.System<SharedShuttleSystem>();
         _transform = EntManager.System<SharedTransformSystem>();
-
-        // Frontier
+        // Frontier/NF systems (from _NF partial)
         _station = EntManager.System<StationSystem>();
         _blips = EntManager.System<RadarBlipSystem>();
+        // Monolith ship weapons blip system
+        _blipsMono = EntManager.System<RadarBlipsSystem>();
 
+        // Mouse event handlers (from _NF partial)
         OnMouseEntered += HandleMouseEntered;
         OnMouseExited += HandleMouseExited;
-        // End Frontier
     }
 
     public void SetMatrix(EntityCoordinates? coordinates, Angle? angle)
@@ -80,27 +87,6 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
     public void SetConsole(EntityUid? consoleEntity)
     {
         _consoleEntity = consoleEntity;
-    }
-
-    protected override void KeyBindUp(GUIBoundKeyEventArgs args)
-    {
-        base.KeyBindUp(args);
-
-        // Frontier: Clicking coordinates
-        if (args.Function != EngineKeyFunctions.UIClick)
-            return;
-
-        _isMouseDown = false;
-
-        if (_coordinates == null || _rotation == null || OnRadarClick == null)
-            return;
-        // End Frontier
-
-        var a = InverseScalePosition(args.RelativePosition);
-        var relativeWorldPos = a with { Y = -a.Y };
-        relativeWorldPos = _rotation.Value.RotateVec(relativeWorldPos);
-        var coords = _coordinates.Value.Offset(relativeWorldPos);
-        OnRadarClick?.Invoke(coords);
     }
 
     /// <summary>
@@ -449,6 +435,7 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         }
 
         // Frontier: radar blip system for the mass scanners and shapes
+        // Monolith: Ship weapons radar blips
         // Draw radar line
         // First, figure out which angle to draw.
         var updateRatio = _updateAccumulator / RadarUpdateInterval;
@@ -457,11 +444,11 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
         var origin = ScalePosition(-new Vector2(Offset.X, -Offset.Y));
         handle.DrawLine(origin, origin + angle.ToVec() * ScaledMinimapRadius * 1.42f, Color.Red.WithAlpha(0.1f));
 
-        // Get raw blips with grid information
-        var rawBlips = _blips.GetRawBlips();
+        // Get raw blips with grid information from Monolith system
+        var rawBlips = _blipsMono.GetRawBlips();
 
         // Prepare view bounds for culling
-        var blipViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
+        var monoViewBounds = new Box2(-3f, -3f, Size.X + 3f, Size.Y + 3f);
 
         // Draw blips using the same grid-relative transformation approach as docks
         foreach (var blip in rawBlips)
@@ -490,8 +477,9 @@ public sealed partial class ShuttleNavControl : BaseShuttleControl
             }
 
             // Check if this blip is within view bounds before drawing
-            if (blipViewBounds.Contains(blipPosInView))
+            if (monoViewBounds.Contains(blipPosInView))
             {
+                // Blip shape is now the same enum type (Content.Shared._NF.Radar.RadarBlipShape)
                 DrawBlipShape(handle, blipPosInView, blip.Scale * 3f, blip.Color.WithAlpha(0.8f), blip.Shape);
             }
         }

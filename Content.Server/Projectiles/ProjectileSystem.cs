@@ -1,3 +1,33 @@
+// SPDX-FileCopyrightText: 2020 Víctor Aguilera Puerto
+// SPDX-FileCopyrightText: 2020 chairbender
+// SPDX-FileCopyrightText: 2021 Acruid
+// SPDX-FileCopyrightText: 2021 Galactic Chimp
+// SPDX-FileCopyrightText: 2021 Moony
+// SPDX-FileCopyrightText: 2021 Paul
+// SPDX-FileCopyrightText: 2021 Pieter-Jan Briers
+// SPDX-FileCopyrightText: 2021 ShadowCommander
+// SPDX-FileCopyrightText: 2021 Silver
+// SPDX-FileCopyrightText: 2021 Vera Aguilera Puerto
+// SPDX-FileCopyrightText: 2022 wrexbe
+// SPDX-FileCopyrightText: 2023 AJCM-git
+// SPDX-FileCopyrightText: 2023 DrSmugleaf
+// SPDX-FileCopyrightText: 2023 Kara
+// SPDX-FileCopyrightText: 2023 PixelTK
+// SPDX-FileCopyrightText: 2023 Slava0135
+// SPDX-FileCopyrightText: 2024 Arendian
+// SPDX-FileCopyrightText: 2024 Leon Friedrich
+// SPDX-FileCopyrightText: 2024 LordCarve
+// SPDX-FileCopyrightText: 2024 Nemanja
+// SPDX-FileCopyrightText: 2024 Whatstone
+// SPDX-FileCopyrightText: 2024 Winkarst
+// SPDX-FileCopyrightText: 2024 metalgearsloth
+// SPDX-FileCopyrightText: 2024 nikthechampiongr
+// SPDX-FileCopyrightText: 2025 Ark
+// SPDX-FileCopyrightText: 2025 Redrover1760
+// SPDX-FileCopyrightText: 2025 SlamBamActionman
+//
+// SPDX-License-Identifier: AGPL-3.0-or-later
+
 using Content.Server.Administration.Logs;
 using Content.Server.Destructible;
 using Content.Server.Effects;
@@ -6,9 +36,18 @@ using Content.Shared.Camera;
 using Content.Shared.Damage;
 using Content.Shared.Database;
 using Content.Shared.FixedPoint;
+using Content.Shared.Physics;
 using Content.Shared.Projectiles;
+using Robust.Shared.Map;
+using Robust.Shared.Physics;
+using Robust.Shared.Physics.Components;
+using Robust.Shared.Physics.Dynamics;
 using Robust.Shared.Physics.Events;
+using Robust.Shared.Physics.Systems;
 using Robust.Shared.Player;
+using Robust.Shared.Timing;
+using System.Linq;
+using System.Numerics;
 
 namespace Content.Server.Projectiles;
 
@@ -21,11 +60,26 @@ public sealed class ProjectileSystem : SharedProjectileSystem
     [Dependency] private readonly GunSystem _guns = default!;
     [Dependency] private readonly SharedCameraRecoilSystem _sharedCameraRecoil = default!;
 
+    [Dependency] private readonly SharedPhysicsSystem _physics = default!;
+    [Dependency] private readonly SharedTransformSystem _transformSystem = default!;
+    [Dependency] private readonly IGameTiming _timing = default!;
+
+    private EntityQuery<PhysicsComponent> _physQuery;
+    private EntityQuery<FixturesComponent> _fixQuery;
+
+    /// <summary>
+    /// Minimum velocity for a projectile to be considered for raycast hit detection.
+    /// Projectiles slower than this will rely on standard StartCollideEvent.
+    /// </summary>
+    private const float MinRaycastVelocity = 75f;
 
     public override void Initialize()
     {
         base.Initialize();
         SubscribeLocalEvent<ProjectileComponent, StartCollideEvent>(OnStartCollide);
+
+        _physQuery = GetEntityQuery<PhysicsComponent>();
+        _fixQuery = GetEntityQuery<FixturesComponent>();
     }
 
     private void OnStartCollide(EntityUid uid, ProjectileComponent component, ref StartCollideEvent args)
@@ -124,6 +178,83 @@ public sealed class ProjectileSystem : SharedProjectileSystem
         if (component.ImpactEffect != null && TryComp(uid, out TransformComponent? xform))
         {
             RaiseNetworkEvent(new ImpactEffectEvent(component.ImpactEffect, GetNetCoordinates(xform.Coordinates)), Filter.Pvs(xform.Coordinates, entityMan: EntityManager));
+        }
+    }
+
+    public override void Update(float frameTime)
+    {
+        base.Update(frameTime);
+
+        var query = EntityQueryEnumerator<ProjectileComponent, PhysicsComponent, TransformComponent>();
+        while (query.MoveNext(out var uid, out var projectileComp, out var physicsComp, out var xform))
+        {
+            if (projectileComp.ProjectileSpent)
+                continue;
+
+            var currentVelocity = physicsComp.LinearVelocity;
+            if (currentVelocity.Length() < MinRaycastVelocity)
+                continue;
+
+            var lastPosition = _transformSystem.GetWorldPosition(xform);
+            var rayDirection = currentVelocity.Normalized();
+            // Ensure rayDistance is not zero to prevent issues with IntersectRay if frametime or velocity is zero.
+            var rayDistance = currentVelocity.Length() * frameTime;
+            if (rayDistance <= 0f)
+                continue;
+
+            if (!_fixQuery.TryComp(uid, out var fix) || !fix.Fixtures.TryGetValue(ProjectileFixture, out var projFix))
+                continue;
+
+            var hits = _physics.IntersectRay(xform.MapID,
+                new CollisionRay(lastPosition, rayDirection, projFix.CollisionMask),
+                rayDistance,
+                uid, // Entity to ignore (self)
+                false) // IncludeNonHard = false
+                .ToList();
+
+            hits.RemoveAll(hit =>
+            {
+                var hitEnt = hit.HitEntity;
+
+                if (!_physQuery.TryComp(hitEnt, out var otherBody) || !_fixQuery.TryComp(hitEnt, out var otherFix))
+                    return true;
+
+                Fixture? hitFix = null;
+                foreach (var kv in otherFix.Fixtures)
+                {
+                    if (kv.Value.Hard)
+                    {
+                        hitFix = kv.Value;
+                        break;
+                    }
+                }
+                if (hitFix == null)
+                    return true;
+
+                // this is cursed but necessary
+                // Raise PreventCollideEvent to check if this collision should be ignored
+                var ourEv = new PreventCollideEvent(uid, hitEnt, physicsComp, otherBody, projFix, hitFix);
+                RaiseLocalEvent(uid, ref ourEv);
+                if (ourEv.Cancelled)
+                    return true;
+
+                var otherEv = new PreventCollideEvent(hitEnt, uid, otherBody, physicsComp, hitFix, projFix);
+                RaiseLocalEvent(hitEnt, ref otherEv);
+                return otherEv.Cancelled;
+            });
+
+            if (hits.Count > 0)
+            {
+                // Process the closest hit
+                // IntersectRay results are not guaranteed to be sorted by distance, so we sort them.
+                hits.Sort((a, b) => a.Distance.CompareTo(b.Distance));
+                var closestHit = hits.First();
+
+                // teleport us so we hit it
+                // this is cursed but i don't think there's a better way to force a collision here
+                _transformSystem.SetWorldPosition(uid, _transformSystem.GetWorldPosition(closestHit.HitEntity));
+                continue;
+            }
         }
     }
 }
