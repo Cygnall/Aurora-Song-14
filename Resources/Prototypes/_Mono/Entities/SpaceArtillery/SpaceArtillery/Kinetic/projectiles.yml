@@ -184,9 +184,8 @@
   - type: Projectile
     damage:
       types:
-        Structural: 1000
-        Ion: 10000
         Structural: 3500
+        Ion: 10000
         Piercing: 4000
   - type: Sprite
     sprite: _Mono/Objects/SpaceArtillery/150_shell.rsi
@@ -313,7 +312,6 @@
     requireNoGrid: true
     shape: triangle
   - type: TimedDespawn
-    lifetime: 8.3
     lifetime: 5.15
   - type: PointLight
     color: "#fc8c03"

@@ -217,6 +217,13 @@ public sealed partial class FireControlSystem : EntitySystem
 
             if (rayCastResults.Count == 0)
             {
+                // Rotate gun to face target if it has FireControlRotate component
+                if (HasComp<FireControlRotateComponent>(localWeapon))
+                {
+                    var targetAngle = direction.ToWorldAngle();
+                    _xform.SetWorldRotation(weaponXform, targetAngle);
+                }
+
                 _gun.AttemptShoot(localWeapon, localWeapon, gun, targetCoords);
             }
         }

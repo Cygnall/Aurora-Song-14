@@ -1,5 +1,5 @@
 - type: entity
-  id: ShipMediumPlasmaProjectile
+  id: ShipSmallPlasmaProjectile
   name: plasma projectile
   parent: BaseBullet
   categories: [ HideSpawnMenu ]
