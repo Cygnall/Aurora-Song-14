@@ -187,6 +187,9 @@
       state: equipped-NECK-on
       color: "#a9b6bd"
       shader: unshaded
+  - type: NPCRangedCombat  # Aurora Song: Reduced accuracy for undisciplined troops
+    inaccuracy: 0.2  # 20% lead prediction quality
+    aimSpread: 25    # +/- 25 degree random spread
   - type: BasicEntityAmmoProvider
     proto: NFCartridgeRifle20Overpressure
     capacity: 10
@@ -332,21 +335,24 @@
       state: equipped-NECK-on
       color: "#a9b6bd"
       shader: unshaded
+  - type: NPCRangedCombat  # Aurora Song: Reduced accuracy for shock trooper behavior
+    inaccuracy: 0.2  # 20% lead prediction quality (much worse)
+    aimSpread: 25    # +/- 25 degree random spread (wider cone)
   - type: RechargeBasicEntityAmmo
-    rechargeCooldown: 2
+    rechargeCooldown: 3  # Increased delay after burst
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
   - type: BasicEntityAmmoProvider
     proto: NFShellShotgunBuckshot
-    capacity: 1
-    count: 1
+    capacity: 2  # Two shots per burst
+    count: 2
   - type: Gun
     showExamineText: false
-    fireRate: 2
-    minAngle: 10
-    maxAngle: 20
-    angleIncrease: 5
-    angleDecay: 3
+    fireRate: 1  # Slower firing during burst (1 second between shots)
+    minAngle: 15  # Reduced accuracy (was 10)
+    maxAngle: 30  # Reduced accuracy (was 20)
+    angleIncrease: 8  # Faster accuracy degradation (was 5)
+    angleDecay: 2  # Slower accuracy recovery (was 3)
     selectedMode: SemiAuto
     availableModes:
     - SemiAuto

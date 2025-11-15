@@ -165,7 +165,22 @@ public sealed partial class NPCCombatSystem
             }
 
             var mapVelocity = targetBody.LinearVelocity;
-            var targetSpot = targetPos + mapVelocity * distance / ShootSpeed;
+            
+            // Aurora Song: Configurable NPC accuracy system
+            // Apply inaccuracy to lead prediction
+            var leadPrediction = mapVelocity * distance / ShootSpeed * comp.Inaccuracy;
+            var targetSpot = targetPos + leadPrediction;
+            
+            // Add random aim spread if configured
+            if (comp.AimSpread > 0f)
+            {
+                var random = _random.NextAngle(-comp.AimSpread / 2f, comp.AimSpread / 2f);
+                var direction = (targetSpot - worldPos).ToWorldAngle();
+                var spreadDirection = direction + random;
+                var distanceToTarget = (targetSpot - worldPos).Length();
+                targetSpot = worldPos + spreadDirection.ToWorldVec() * distanceToTarget;
+            }
+            // End Aurora Song
 
             // If we have a max rotation speed then do that.
             var goalRotation = (targetSpot - worldPos).ToWorldAngle();

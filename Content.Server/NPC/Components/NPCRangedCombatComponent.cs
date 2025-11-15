@@ -61,4 +61,22 @@ public sealed partial class NPCRangedCombatComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     public SoundSpecifier? SoundTargetInLOS;
+
+    // Aurora Song: Configurable NPC accuracy system
+    /// <summary>
+    /// Inaccuracy multiplier for aiming. 1.0 = perfect aim, 0.0 = no lead prediction.
+    /// Values between 0-1 reduce lead prediction quality.
+    /// </summary>
+    [DataField("inaccuracy")]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public float Inaccuracy = 1.0f;
+
+    /// <summary>
+    /// Random angle spread added to aiming direction (in degrees).
+    /// Applied in addition to gun spread.
+    /// </summary>
+    [DataField("aimSpread")]
+    [ViewVariables(VVAccess.ReadWrite)]
+    public float AimSpread = 0f;
+    // End Aurora Song
 }
