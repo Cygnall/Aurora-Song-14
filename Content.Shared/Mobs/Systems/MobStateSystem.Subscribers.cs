@@ -34,14 +34,14 @@ public partial class MobStateSystem
         SubscribeLocalEvent<MobStateComponent, ThrowAttemptEvent>(CheckAct);
         SubscribeLocalEvent<MobStateComponent, SpeakAttemptEvent>(OnSpeakAttempt);
         SubscribeLocalEvent<MobStateComponent, IsEquippingAttemptEvent>(OnEquipAttempt);
-        SubscribeLocalEvent<MobStateComponent, EmoteAttemptEvent>(CheckAct);
+        SubscribeLocalEvent<MobStateComponent, EmoteAttemptEvent>(OnEmoteAttempt);
         SubscribeLocalEvent<MobStateComponent, IsUnequippingAttemptEvent>(OnUnequipAttempt);
         SubscribeLocalEvent<MobStateComponent, DropAttemptEvent>(CheckAct);
         SubscribeLocalEvent<MobStateComponent, PickupAttemptEvent>(CheckAct);
         SubscribeLocalEvent<MobStateComponent, StartPullAttemptEvent>(CheckAct);
         SubscribeLocalEvent<MobStateComponent, UpdateCanMoveEvent>(CheckAct);
         SubscribeLocalEvent<MobStateComponent, StandAttemptEvent>(CheckAct);
-        SubscribeLocalEvent<MobStateComponent, PointAttemptEvent>(CheckAct);
+        SubscribeLocalEvent<MobStateComponent, PointAttemptEvent>(OnPointAttempt);
         SubscribeLocalEvent<MobStateComponent, TryingToSleepEvent>(OnSleepAttempt);
         SubscribeLocalEvent<MobStateComponent, CombatModeShouldHandInteractEvent>(OnCombatModeShouldHandInteract);
         SubscribeLocalEvent<MobStateComponent, AttemptPacifiedAttackEvent>(OnAttemptPacifiedAttack);
@@ -141,13 +141,41 @@ public partial class MobStateSystem
 
     private void OnSpeakAttempt(EntityUid uid, MobStateComponent component, SpeakAttemptEvent args)
     {
-        if (HasComp<AllowNextCritSpeechComponent>(uid))
+        if (MobState.Dead == component.CurrentState) // Altered logic so criticals can still speak | Aurora Song
         {
-            RemCompDeferred<AllowNextCritSpeechComponent>(uid);
-            return;
+            args.Cancel();
         }
 
-        CheckAct(uid, component, args);
+
+    }
+
+    // Don't strictly speaking need a separate function for either of these, but we can tailor specific behavior later if needed.
+    private void OnEmoteAttempt(EntityUid uid, MobStateComponent component, EmoteAttemptEvent args) // Aurora Song
+    {
+        if (MobState.Dead == component.CurrentState)
+        {
+            args.Cancel();
+        }
+    }
+
+    private void OnPointAttempt(EntityUid uid, MobStateComponent component, PointAttemptEvent args) // Aurora Song
+    {
+        if (MobState.Dead == component.CurrentState)
+        {
+            args.Cancel();
+        }
+    }
+
+    private void OnMoveAttempt(EntityUid target , MobStateComponent component, CancellableEntityEventArgs args) // Aurora Song - Currently unused
+    {
+        switch (component.CurrentState)
+        {
+            case MobState.Dead:
+            case MobState.Critical: //This prevents movement in critical state, for now
+                args.Cancel();
+                break;
+            // TODO: Allow movement, but slowed down, in critical state
+        }
     }
 
     private void CheckAct(EntityUid target, MobStateComponent component, CancellableEntityEventArgs args)

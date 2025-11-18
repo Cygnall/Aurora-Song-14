@@ -44,8 +44,6 @@ public sealed class RandomHumanoidSystem : EntitySystem
 
         _metaData.SetEntityName(humanoid, prototype.RandomizeName ? profile.Name : name);
 
-        _humanoid.LoadProfile(humanoid, profile);
-
         if (prototype.Components != null)
         {
             foreach (var entry in prototype.Components.Values)
@@ -57,6 +55,9 @@ public sealed class RandomHumanoidSystem : EntitySystem
         }
 
         EntityManager.InitializeAndStartEntity(humanoid);
+
+        // Aurora Song: Load profile AFTER initialization to prevent it from being overwritten by OnInit's DefaultWithSpecies call
+        _humanoid.LoadProfile(humanoid, profile);
 
         return humanoid;
     }

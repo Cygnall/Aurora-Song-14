@@ -4918,3 +4918,67 @@ Entries:
   id: 8838
   time: '2025-11-15T19:48:59.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/596
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Event timers and reqs for Triage, further tweaks
+    - type: Fix
+      message: Event timers and reqs for Objective Events, further tweaks
+  id: 8839
+  time: '2025-11-16T00:05:03.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/597
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Updated engine to 267.4
+  id: 8840
+  time: '2025-11-16T19:23:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/587
+- author: GreyScaleHarlequin
+  changes:
+    - type: Add
+      message: Dying people can now speak!
+  id: 8841
+  time: '2025-11-16T22:41:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/594
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: Increased beanbag stun to 35, 3 hits to stun
+    - type: Remove
+      message: secgear from SLE officers, I don't know how that slipped in
+    - type: Fix
+      message: prisoner doors on SLEO
+    - type: Add
+      message: Prison access to access config, ID console
+    - type: Fix
+      message: Prisoner NPCs can be flashed now
+    - type: Add
+      message: new Corpsman glasses, for SLE
+    - type: Add
+      message: new Medic glasses, for Sector Medics
+    - type: Add
+      message: stinger grenades back to SLE Uplink
+    - type: Remove
+      message: more medical machines from Triage event
+    - type: Fix
+      message: patient discharge machine name
+    - type: Tweak
+      message: changed Laika's glasses from Sec -> SLE
+  id: 8842
+  time: '2025-11-17T00:19:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/598
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added the Scythe into the Syndicate shipyard
+  id: 8843
+  time: '2025-11-17T20:12:48.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/592
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: random humanoids can be many genders again
+  id: 8844
+  time: '2025-11-18T10:15:06.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/599

@@ -1,0 +1,38 @@
+# Author Info
+# GitHub: Zenixic
+# Discord: zenixic
+
+# Maintainer Info
+# GitHub: Zenixic
+# Discord: zenixic
+- type: vessel
+  id: Scythe
+  parent: BaseVesselAntag
+  name: Scythe
+  description: A Syndicate troop ship.
+  price: 91000 #33000 contra value ~43000 appraise + 15000 markup
+  category: Medium
+  group: Syndicate
+  shuttlePath: /Maps/_AS/Shuttles/Syndicate/scythe.yml
+  guidebookPage: Null
+  class:
+  - Syndicate
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Scythe
+  mapName: 'Scythe'
+  mapPath: /Maps/_AS/Shuttles/Syndicate/scythe.yml
+  minPlayers: 0
+  stations:
+    Scythe:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Scythe {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}
