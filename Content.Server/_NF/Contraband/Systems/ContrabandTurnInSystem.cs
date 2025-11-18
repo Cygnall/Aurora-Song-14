@@ -146,12 +146,36 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         return pads;
     }
 
-    private void SellPallets(EntityUid gridUid, Entity<ContrabandPalletConsoleComponent> component, EntityUid? station, out int amount)
+    private void SellPallets(EntityUid gridUid, Entity<ContrabandPalletConsoleComponent> component, EntityUid? station, out int amount, EntityUid? actor = null)
     {
         station ??= _station.GetOwningStation(gridUid);
         GetPalletGoods(gridUid, component, out var toSell, out amount , out _);
 
         Log.Debug($"{component.Comp.Faction} sold {toSell.Count} contraband items for {amount}");
+
+        // Aurora: Track sales for statistics if actor is provided
+        if (actor != null && TryComp<MobStateComponent>(actor.Value, out var mobState))
+        {
+            var characterName = MetaData(actor.Value).EntityName;
+            
+            // Collect prototype IDs before deletion
+            var itemPrototypes = toSell
+                .Select(item => MetaData(item).EntityPrototype?.ID)
+                .Where(id => !string.IsNullOrEmpty(id))
+                .ToList()!;
+
+            if (itemPrototypes.Count > 0)
+            {
+                var saleEvent = new ContrabandSaleEvent(
+                    actor.Value,
+                    characterName,
+                    itemPrototypes,
+                    amount,
+                    component.Owner
+                );
+                RaiseLocalEvent(ref saleEvent);
+            }
+        }
 
         if (station != null)
         {
@@ -252,7 +276,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
             return;
         }
 
-        SellPallets(gridUid, (uid, component), null, out var price);
+        SellPallets(gridUid, (uid, component), null, out var price, args.Actor);
 
         var stackPrototype = _protoMan.Index<StackPrototype>(component.RewardType);
         var stackUid = _stack.Spawn(price, stackPrototype, _scuOutput.ToCoordinates()); // Aurora spawn on scu output
