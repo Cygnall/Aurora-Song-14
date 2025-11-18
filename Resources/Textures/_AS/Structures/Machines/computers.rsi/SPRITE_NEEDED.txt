@@ -1,0 +1,13 @@
+# Contraband Database Computer Sprite
+# Location: Resources/Textures/_AS/Structures/Machines/computers.rsi/contraband_database.png
+#
+# This sprite should show a screen with:
+# - Green tint (to match the PointLight color #3c8c4c)
+# - Database/list interface visualization
+# - Security-themed design elements
+#
+# Dimensions: 32x32 pixels
+# Format: PNG with transparency
+#
+# For now, the system will fall back to a generic computer screen if the sprite is missing.
+# Create this sprite file to complete the visual implementation.
