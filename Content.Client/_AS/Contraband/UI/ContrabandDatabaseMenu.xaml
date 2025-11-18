@@ -5,12 +5,12 @@
                       SetSize="700 500">
     <BoxContainer Orientation="Vertical">
         <BoxContainer Orientation="Vertical" Margin="10" VerticalExpand="True">
-            <Label Text="{Loc 'contraband-database-header'}" 
-                   StyleClasses="LabelBig" 
+            <Label Text="{Loc 'contraband-database-header'}"
+                   StyleClasses="LabelBig"
                    Margin="0 0 0 10"/>
-            
+
             <ScrollContainer VerticalExpand="True">
-                <BoxContainer Name="ContentContainer" 
+                <BoxContainer Name="ContentContainer"
                              Orientation="Vertical"/>
             </ScrollContainer>
         </BoxContainer>

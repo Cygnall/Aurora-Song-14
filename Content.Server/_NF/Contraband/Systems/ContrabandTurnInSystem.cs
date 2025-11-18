@@ -157,7 +157,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         if (actor != null && TryComp<MobStateComponent>(actor.Value, out var mobState))
         {
             var characterName = MetaData(actor.Value).EntityName;
-            
+
             // Collect prototype IDs before deletion
             var itemPrototypes = toSell
                 .Select(item => MetaData(item).EntityPrototype?.ID)
