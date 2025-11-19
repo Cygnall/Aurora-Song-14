@@ -82,6 +82,31 @@ public sealed partial class SpeciesPrototype : IPrototype
     /// </summary>
     [DataField(required: true)]
     public HumanoidSkinColor SkinColoration { get; private set; }
+        // Aurora height and width sliders
+        /// <summary>
+    /// Minimum allowed height for this species.
+    /// </summary>
+    [DataField("minHeight")]
+    public float MinHeight { get; private set; } = 0.6f;
+
+    /// <summary>
+    /// Maximum allowed height for this species.
+    /// </summary>
+    [DataField("maxHeight")]
+    public float MaxHeight { get; private set; } = 1.3f;
+
+    /// <summary>
+    /// Minimum allowed width for this species.
+    /// </summary>
+    [DataField("minWidth")]
+    public float MinWidth { get; private set; } = 0.6f;
+
+    /// <summary>
+    /// Maximum allowed width for this species.
+    /// </summary>
+    [DataField("maxWidth")]
+    public float MaxWidth { get; private set; } = 1.3f;
+    // Aurora height and width sliders end
 
     [DataField]
     public ProtoId<LocalizedDatasetPrototype> MaleFirstNames { get; private set; } = "NamesFirstMale";

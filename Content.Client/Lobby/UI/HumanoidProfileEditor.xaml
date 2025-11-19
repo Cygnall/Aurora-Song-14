@@ -97,7 +97,7 @@
                                 <Label Text="{Loc 'humanoid-profile-editor-height-label'}" />
                                 <!-- <Label Name="HeightLabel" MinWidth="110" HorizontalExpand="True"/> | Need to figure out a way to derive heights from values first -->
                                 <Control HorizontalExpand="True"/>
-                                <Slider Name="HeightSlider" MinValue="0.6" MaxValue="1.3" Value="1.0" HorizontalAlignment="Right" MinSize="200 0" />
+                                <Slider Name="HeightSlider" MinValue="0.2" MaxValue="1.3" Value="1.0" HorizontalAlignment="Right" MinSize="200 0" />
                                 <Button Name="HeightResetButton" Text="{Loc 'humanoid-profile-editor-reset-button'}" HorizontalAlignment="Right" />
                             </BoxContainer>
                             <!-- Width -->
@@ -105,7 +105,7 @@
                                 <Label Text="{Loc 'humanoid-profile-editor-width-label'}" />
                                 <!-- <Label Name="WidthLabel" MinWidth="110" HorizontalExpand="True"/> | See above commented line in Height -->
                                 <Control HorizontalExpand="True"/>
-                                <Slider Name="WidthSlider" MinValue="0.6" MaxValue="1.3" Value="1.0" HorizontalAlignment="Right" MinSize="200 0" />
+                                <Slider Name="WidthSlider" MinValue="0.2" MaxValue="1.3" Value="1.0" HorizontalAlignment="Right" MinSize="200 0" />
                                 <Button Name="WidthResetButton" Text="{Loc 'humanoid-profile-editor-reset-button'}" HorizontalAlignment="Right" />
                             </BoxContainer>
                             <!-- Skin -->

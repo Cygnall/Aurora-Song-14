@@ -254,6 +254,9 @@ public sealed partial class HumanoidCharacterAppearance : ICharacterAppearance, 
 
             markingSet.EnsureSpecies(species, skinColor, markingManager);
             markingSet.EnsureSexes(sex, markingManager);
+            // Aurora: height and width slider limiters
+            appearance.Height = Math.Clamp(appearance.Height, speciesProto.MinHeight, speciesProto.MaxHeight);
+            appearance.Width = Math.Clamp(appearance.Width, speciesProto.MinWidth, speciesProto.MaxWidth);
         }
 
         return new HumanoidCharacterAppearance(

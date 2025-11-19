@@ -96,6 +96,9 @@
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
   - type: Clothing
     clothingVisuals:
       head:
@@ -110,6 +113,8 @@
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
   - type: PointLight
     color: "#ffdbad"
   - type: PressureProtection
@@ -399,6 +404,12 @@
       head-dog:
       - state: equipped-head-light-dog
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      head-harpy:
+      - state: equipped-head-light-harpy
+        shader: unshaded
   - type: Clothing
     clothingVisuals:
       head:
@@ -413,6 +424,10 @@
       - state: equipped-head-dog
       - state: equipped-head-unshaded-dog
         shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      head-harpy:
+      - state: equipped-head-harpy
   - type: PointLight
     color: "#daffad"
   - type: PressureProtection

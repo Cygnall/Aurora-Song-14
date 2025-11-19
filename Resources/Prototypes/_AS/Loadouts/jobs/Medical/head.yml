@@ -1,0 +1,12 @@
+- type: loadout
+  id: MedicalHeadBeretMedicBase
+  price: 0
+  equipment:
+    head: ClothingHeadHatBeretMedic
+
+- type: loadout
+  id: MedicalHeadBeretMedicAS
+  name: medical beret (AS)
+  price: 0
+  equipment:
+    head: ASClothingHeadHatBeretMedic

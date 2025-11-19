@@ -20,6 +20,7 @@
     - Rodentia # DeltaV
     - Feroxi # DeltaV
     - Tajaran # EE
+    - Fairy # Aurora
 
 - type: guideEntry
   id: Arachnid
@@ -71,3 +72,8 @@
   id: Tajaran
   name: species-name-tajaran
   text: "/ServerInfo/Guidebook/Mobs/Tajaran.xml"
+
+- type: guideEntry # Aurora
+  id: Fairy
+  name: species-name-fairy
+  text: "/ServerInfo/Guidebook/Mobs/_AS/Fairy.xml"

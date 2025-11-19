@@ -15,3 +15,51 @@
   price: 0
   equipment:
     jumpsuit: UniformScrubsColorPurple
+
+- type: loadout
+  id: MedicalUniformJumpsuitMedicalDoctor
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMedicalDoctor
+
+- type: loadout
+  id: MedicalUniformJumpskirtMedicalDoctor
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtMedicalDoctor
+
+- type: loadout
+  id: MedicalUniformJumpsuitParamedic
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitParamedic
+
+- type: loadout
+  id: MedicalUniformJumpskirtParamedic
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtParamedic
+
+- type: loadout
+  id: MedicalUniformJumpsuitChemistry
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChemistry
+
+- type: loadout
+  id: MedicalUniformJumpskirtChemistry
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtChemistry
+
+- type: loadout
+  id: MedicalUniformJumpsuitVirology
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitVirology
+
+- type: loadout
+  id: MedicalUniformJumpskirtVirology
+  price: 0
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtVirology

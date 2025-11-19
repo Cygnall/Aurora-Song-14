@@ -1,0 +1,27 @@
+﻿# Fairys
+- type: soundCollection
+  id: FairyScreams
+  files:
+  - /Audio/_AS/Voice/Fairy/fairy_scream_1.ogg
+  - /Audio/_AS/Voice/Fairy/fairy_scream_2.ogg
+
+- type: soundCollection
+  id: FairyLaugh
+  files:
+  - /Audio/_AS/Voice/Fairy/fairy_laugh_1.ogg
+  - /Audio/_AS/Voice/Fairy/fairy_laugh_2.ogg
+
+- type: soundCollection
+  id: FairyYawn
+  files:
+  - /Audio/_AS/Voice/Fairy/fairy_yawn.ogg
+
+- type: soundCollection
+  id: FairyGasp
+  files:
+  - /Audio/_AS/Voice/Fairy/fairy_gasp.ogg
+
+- type: soundCollection
+  id: FairyDeathgasp
+  files:
+  - /Audio/_AS/Voice/Fairy/fairy_deathgasp.ogg

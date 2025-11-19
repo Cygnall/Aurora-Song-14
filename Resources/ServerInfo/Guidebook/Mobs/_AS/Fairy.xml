@@ -1,0 +1,28 @@
+<Document>
+  # Fairies
+
+  <Box>
+    <GuideEntityEmbed Entity="MobFairyDummy" Caption=""/>
+  </Box>
+
+  Tiny, winged humanoids with a mystical aura. Fairies are delicate but agile. Their small stature makes them elusive, but also fragile. Their small bodies means that a comparitavely small amount of chems for a larger person go much further. Originally a luxury produced species, Faries have since escaped and reproduced, filling air ducts on thousands of staitons with small societies.
+
+  ## Benefits
+
+  - Their wings allow them to accelerate very fast in zero gravity environments.
+  - Extremely small size makes them harder to hit in combat.
+  - Metabolizes things much more effectively than other species.
+  - Can eat sugar to regain blood level.
+  - Takes up a very small amount of space in bags.
+  - Blood is a powerful narcotic, but be warned, those who imbibe too much are cursed.
+  - Low weight means they can propel themselves in space extremely fast.
+
+  ## Drawbacks
+
+  - Crits at 50 damage, dies at 75.
+  - Triggers mouse traps.
+  - Takes 10x damage from being flung.
+  - Struggles to drag things much if at all due to low weight.
+  - Animals will, more often than not, try to kill them as though they were a mouse.
+
+</Document>

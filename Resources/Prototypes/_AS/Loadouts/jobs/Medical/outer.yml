@@ -1,0 +1,13 @@
+- type: loadout
+  id: MedicalOuterArmorBulletproof
+  name: bulletproof vest
+  price: 600
+  equipment:
+    outerClothing: ClothingOuterArmorBulletproof
+
+- type: loadout
+  id: MedicalOuterHardsuitVoidParamed
+  name: paramedic voidsuit
+  price: 800
+  equipment:
+    outerClothing: ClothingOuterHardsuitVoidParamed

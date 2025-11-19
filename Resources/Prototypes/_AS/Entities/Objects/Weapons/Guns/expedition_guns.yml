@@ -18,3 +18,10 @@
   - ASWeaponShotgunFalchion
   categories: [ HideSpawnMenu ]
   id: ASWeaponShotgunSurpFalchionExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - ASWeaponRifleAssaultEstoc
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponRifleAssaultEstocExpedition

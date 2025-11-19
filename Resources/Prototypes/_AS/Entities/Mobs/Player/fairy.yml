@@ -1,0 +1,5 @@
+﻿- type: entity
+  id: MobFairy
+  name: Urist McFairy
+  parent: MobFairyBase
+  save: false

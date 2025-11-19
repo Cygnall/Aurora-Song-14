@@ -76,10 +76,10 @@ public sealed partial class HumanoidAppearanceComponent : Component
     public Color EyeColor = Color.Brown;
 
     [DataField, AutoNetworkedField]
-    public float Height = 1.0f;
+    public float Height { get; set; } = 1.0f; // Aurora: Sync to clients
 
     [DataField, AutoNetworkedField]
-    public float Width = 1.0f;
+    public float Width { get; set; } = 1.0f; // Aurora: Sync to clients
 
     /// <summary>
     ///     Hair color of this humanoid. Used to avoid looping through all markings

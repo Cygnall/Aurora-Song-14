@@ -1,0 +1,13 @@
+﻿- type: speechVerb
+  id: Fairy
+  name: chat-speech-verb-name-fairy
+  speechVerbStrings:
+  - chat-speech-verb-fairy-1
+  - chat-speech-verb-fairy-2
+  - chat-speech-verb-fairy-3
+  - chat-speech-verb-fairy-4
+  - chat-speech-verb-fairy-5
+  - chat-speech-verb-fairy-6
+  - chat-speech-verb-fairy-7
+  - chat-speech-verb-fairy-8
+  - chat-speech-verb-fairy-9

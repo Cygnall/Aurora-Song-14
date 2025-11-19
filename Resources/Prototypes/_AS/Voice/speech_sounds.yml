@@ -1,0 +1,9 @@
+﻿
+- type: speechSounds
+  id: Fairy
+  saySound:
+    path: /Audio/_AS/Voice/Talk/fairy_speak.ogg
+  askSound:
+    path: /Audio/_AS/Voice/Talk/fairy_ask.ogg
+  exclaimSound:
+    path: /Audio/_AS/Voice/Talk/fairy_exclaim.ogg

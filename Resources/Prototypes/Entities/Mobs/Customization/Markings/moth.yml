@@ -177,7 +177,7 @@
   id: MothWingsDefault
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: default
@@ -186,7 +186,7 @@
   id: MothWingsCharred
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: charred
@@ -195,7 +195,7 @@
   id: MothWingsDbushy
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: dbushy_primary
@@ -206,7 +206,7 @@
   id: MothWingsDeathhead
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: deathhead_primary
@@ -217,7 +217,7 @@
   id: MothWingsFan
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: fan
@@ -226,7 +226,7 @@
   id: MothWingsDfan
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: dfan
@@ -235,7 +235,7 @@
   id: MothWingsFeathery
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: feathery
@@ -244,7 +244,7 @@
   id: MothWingsFirewatch
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: firewatch_primary
@@ -255,7 +255,7 @@
   id: MothWingsGothic
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: gothic
@@ -264,7 +264,7 @@
   id: MothWingsJungle
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: jungle
@@ -273,7 +273,7 @@
   id: MothWingsLadybug
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: ladybug
@@ -282,7 +282,7 @@
   id: MothWingsMaple
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: maple_primary
@@ -293,7 +293,7 @@
   id: MothWingsMoffra
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: moffra_primary
@@ -304,7 +304,7 @@
   id: MothWingsOakworm
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: oakworm
@@ -313,7 +313,7 @@
   id: MothWingsPlasmafire
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: plasmafire_primary
@@ -324,7 +324,7 @@
   id: MothWingsPointy
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: pointy
@@ -333,7 +333,7 @@
   id: MothWingsRoyal
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: royal_primary
@@ -344,7 +344,7 @@
   id: MothWingsStellar
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: stellar
@@ -353,7 +353,7 @@
   id: MothWingsStriped
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: striped
@@ -362,7 +362,7 @@
   id: MothWingsSwirly
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: swirly
@@ -371,7 +371,7 @@
   id: MothWingsWhitefly
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: whitefly
@@ -380,7 +380,7 @@
   id: MothWingsWitchwing
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: witchwing
@@ -389,7 +389,7 @@
   id: MothWingsUnderwing
   bodyPart: Tail
   markingCategory: Tail
-  speciesRestriction: [Moth]
+  speciesRestriction: [Moth, Fairy] #Aurora
   sprites:
   - sprite: Mobs/Customization/Moth/moth_wings.rsi
     state: underwing_primary

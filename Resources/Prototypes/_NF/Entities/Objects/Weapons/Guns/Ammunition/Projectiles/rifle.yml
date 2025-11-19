@@ -116,7 +116,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 19 # damage rebalanced | Aurora
+        Piercing: 27 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle25Overpressure
@@ -127,7 +127,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 21 # damage rebalanced | Aurora
+        Piercing: 29 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle25Incendiary

@@ -39,3 +39,29 @@
       amount: 1
     - id: NFAmmunitionBoxShellShotgunBuckshot
       amount: 2
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongEstocExpeditionT5
+  suffix: Dungeon, Estoc
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: ASWeaponRifleAssaultEstocExpedition
+      amount: 1
+    - id: NFMagazineDrumRifle20
+      amount: 3
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongEstocExpeditionT4
+  suffix: Dungeon, Estoc
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: ASWeaponRifleAssaultEstocExpedition
+      amount: 1
+    - id: NFCartridgeRifle20
+      amount: 4

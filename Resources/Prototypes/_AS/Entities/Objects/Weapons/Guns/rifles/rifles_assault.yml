@@ -78,3 +78,49 @@
       map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _AS/Objects/Weapons/Guns/Rifles/tflecter.rsi
+
+- type: entity
+  name: Estoc DMR
+  parent: [NFBaseWeaponRifleAssaultChamber20, NFBaseWeaponFrameRifleAssaultCybersun] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband
+  id: ASWeaponRifleAssaultEstoc
+  description: A designated marksman rifle, favored for medium-to-long range engagements. Uses .20 rifle ammo.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Rifles/estoc.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-0
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Rifles/estoc.rsi
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/estocshot.ogg
+    minAngle: 30
+    maxAngle: 38
+    shotsPerBurst: 3
+    selectedMode: Burst
+    availableModes:
+    - Burst
+    - SemiAuto
+    burstFireRate: 10
+  - type: GunWieldBonus
+    minAngle: -28
+    maxAngle: -25
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.75
+    sprintModifier: 0.75
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 2
+    pvsIncrease: 0.2
+  - type: ContainerContainer
+    containers:
+      gun_magazine: !type:ContainerSlot
+      gun_chamber: !type:ContainerSlot
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

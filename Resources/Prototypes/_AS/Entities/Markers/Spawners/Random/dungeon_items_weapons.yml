@@ -1,0 +1,28 @@
+﻿#region guns T6
+- type: entity
+  name: random weapon
+  id: SpawnDungeonLootGunT6
+  parent: MarkerBasePlaceFree
+  suffix: "Dungeon, Gun, T6"
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+    - state: green
+      scale: 0.7, 0.7
+    - sprite: Objects/Weapons/Guns/Pistols/mk58.rsi
+      state: icon
+    - sprite: Effects/crayondecals.rsi
+      state: 5
+      color: red
+  - type: RandomSpawner
+    prototypes:
+    - WeaponCaseLongLauncherRocketExpedition
+   # - WeaponCaseLongJackdaw
+    - WeaponCaseLongLauncherChinaLake
+   # - WeaponCaseHeavyLightMachineGunL6
+   # - WeaponCaseLongEnergyGunExpedition
+   # - WeaponCaseLongLaserCannonExpedition
+    - WeaponCaseHeavyAsmgtExpeditions
+    chance: 1.0
+    offset: 0.0

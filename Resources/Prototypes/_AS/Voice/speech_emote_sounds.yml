@@ -1,0 +1,31 @@
+﻿- type: emoteSounds
+  id: FairySpeech
+  params:
+    variation: 0.125
+  sounds:
+    Scream:
+      collection: FairyScreams
+    Laugh:
+      collection: FairyLaugh
+    Sneeze:
+      collection: FemaleSneezes
+    Cough:
+      collection: FemaleCoughs
+    Yawn:
+      collection: FairyYawn
+    Snore:
+      collection: Snores
+#    Sigh:
+#      collection: FemaleSigh # Todo: Make fairy sigh
+ #   Crying:
+ #     collection: FairyCry # NEED TO MAKE A FAIRY CRY
+    Whistle:
+      collection: Whistles
+    Weh:
+      collection: Weh
+    Hew:
+      collection: Hew
+    Gasp:
+      collection: FairyGasp
+    DefaultDeathgasp:
+      collection: FairyDeathgasp

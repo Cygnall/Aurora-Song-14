@@ -287,6 +287,7 @@
     - WeaponCaseShortAntiqueLaserExpedition
     - WeaponCaseShortAdvancedLaserExpedition
     - WeaponCaseLongXrayCannonExpedition
+    - WeaponCaseLongEstocExpeditionT4
     - WeaponCaseLongHristovExpedition # Hristov to T4, this thing eats walls like candy |Aurora Song
     #- WeaponCaseLongTemperatureGunExpedition | Aurora Song - Too PVP focused, not much PVE use.
     chance: 1.0
@@ -314,15 +315,19 @@
       color: red
   - type: RandomSpawner
     prototypes:
-    - WeaponCaseLongLauncherRocketExpedition
+    #- WeaponCaseLongLauncherRocketExpedition # Aurora: Prototype destructive weapons into t6
     - WeaponCaseLongJackdaw
-    - WeaponCaseLongLauncherChinaLake
+    #- WeaponCaseLongLauncherChinaLake # Aurora: Ditto
     - WeaponCaseHeavyLightMachineGunL6
     - WeaponCaseLongEnergyGunExpedition
     - WeaponCaseLongLaserCannonExpedition
-    - WeaponCaseHeavyAsmgtExpeditions
+    - WeaponCaseLongEstocExpeditionT5
+    #- WeaponCaseHeavyAsmgtExpeditions # Aurora: Very powerful tool, area denial and an automated combatant are nothing to sneeze at
     chance: 1.0
     offset: 0.0
+    rarePrototypes: # Aurora: Add t6
+    - SpawnDungeonLootGunT6
+    rareChance: 0.05
 
 #region bombs T1
 - type: entity

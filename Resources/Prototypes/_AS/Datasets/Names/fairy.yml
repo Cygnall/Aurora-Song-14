@@ -1,0 +1,15 @@
+﻿# Used this https://www.fantasynamegenerators.com/fairy-names.php for a lot of them
+
+
+- type: localizedDataset
+  id: names_fairy_first
+  values:
+    prefix: names-fairy-first-dataset-
+    count: 153
+
+
+- type: localizedDataset
+  id: names_fairy_last
+  values:
+    prefix: names-fairy-last-dataset-
+    count: 200

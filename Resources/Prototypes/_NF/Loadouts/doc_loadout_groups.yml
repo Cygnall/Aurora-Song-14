@@ -39,6 +39,7 @@
   - DocClothingHeadBeret
   - DocClothingHeadMirror
   subgroups:
+  - MedicHead # Aurora Song
   - ContractorHead
 
 - type: loadoutGroup

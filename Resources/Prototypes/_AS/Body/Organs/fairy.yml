@@ -1,0 +1,166 @@
+﻿- type: entity
+  id: BaseFairyOrgan
+  parent: BaseItem
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Arachnid/organs.rsi
+  - type: Organ
+  - type: Food
+  - type: Extractable
+    grindableSolutionName: organ
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        maxVol: 10
+        reagents:
+        - ReagentId: Nutriment
+          Quantity: 10
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 5
+  - type: Tag
+    tags:
+      - Meat
+
+
+- type: entity
+  id: OrganFairyStomach
+  parent: OrganAnimalStomach
+  name: stomach
+  description: "Sweet, could use some salt, though."
+  components:
+    - type: Sprite
+      sprite: Mobs/Species/Arachnid/organs.rsi
+      state: stomach
+    - type: Item
+      size: Small
+      heldPrefix: stomach
+    - type: Stomach
+      digestionDelay: 30
+    - type: SolutionContainerManager
+      solutions:
+        stomach:
+          maxVol: 30
+        food:
+          maxVol: 5
+          reagents:
+            - ReagentId: Sugar
+              Quantity: 5
+    - type: Metabolizer
+      metabolizerTypes: [ Human ]
+      updateInterval: 1.5
+      groups:
+        - id: Food
+          rateModifier: 0.1
+        - id: Drink
+          rateModifier: 0.1
+
+
+- type: entity
+  id: OrganFairyLungs
+  parent: BaseArachnidOrgan
+  name: lungs
+  description: "Filters oxygen, they don't need much"
+  components:
+  - type: Sprite
+    layers:
+      - state: lung-l
+      - state: lung-r
+  - type: Lung
+  - type: Metabolizer
+    updateInterval: 1.5
+    removeEmpty: true
+    solutionOnBody: false
+    solution: "Lung"
+    metabolizerTypes: [ Human ]
+    groups:
+    - id: Gas
+      rateModifier: 50.0
+  - type: SolutionContainerManager
+    solutions:
+      organ:
+        reagents:
+        - ReagentId: Sugar
+          Quantity: 10
+      Lung:
+        maxVol: 100.0
+        canReact: false
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+
+- type: entity
+  id: OrganFairyHeart
+  parent: BaseArachnidOrgan
+  name: heart
+  description: "A disgustingly persistent little biological pump made for spiders."
+  components:
+  - type: Sprite
+    state: heart-on
+  - type: Item
+    size: Small
+    heldPrefix: heart
+  - type: Metabolizer
+    updateInterval: 1.5
+    maxReagents: 2
+    metabolizerTypes: [ Fairy ]
+    groups:
+    - id: Medicine
+    - id: Cryogenic # Frontier
+    - id: Poison
+    - id: Narcotic
+
+- type: entity
+  id: OrganFairyLiver
+  parent: BaseHumanOrgan
+  name: liver
+  description: "Pairing suggestion: chianti and fava beans."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Item
+    size: Small
+    heldPrefix: liver
+  - type: Sprite
+    state: liver
+  - type: Metabolizer # The liver metabolizes certain chemicals only, like alcohol.
+    updateInterval: 1.5
+    maxReagents: 1
+    metabolizerTypes: [Animal, Fairy]
+    groups:
+    - id: Alcohol
+      rateModifier: 0.1 # removes alcohol very slowly along with the stomach removing it as a drink
+
+- type: entity
+  id: OrganFairyKidneys
+  parent: BaseHumanOrgan
+  name: kidneys
+  description: "Filters toxins from the bloodstream."
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    layers:
+      - state: kidney-l
+      - state: kidney-r
+  # The kidneys just remove anything that doesn't currently have any metabolisms, as a stopgap.
+  - type: Item
+    size: Small
+    heldPrefix: kidneys
+  - type: Metabolizer
+    updateInterval: 1.5
+    maxReagents: 5
+    metabolizerTypes: [Animal]
+    removeEmpty: true
+    groups:
+    - id: Medicine
+      rateModifier: 0.2
+    - id: Cryogenic # Frontier
+      rateModifier: 0.2
+    - id: Poison
+      rateModifier: 0.2
+    - id: Narcotic
+      rateModifier: 0.2

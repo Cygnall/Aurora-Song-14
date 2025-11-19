@@ -7,7 +7,7 @@
   flavor: spooky
   color: "#A77C8B"
   metabolisms:
-    Medicine:
+    Narcotic:
       metabolismRate : 0.05
       effects:
       - !type:PopupMessage
@@ -143,3 +143,64 @@
           - "reagent-effect-breakdown4"
           - "reagent-effect-breakdown5"
         probability: 0.5
+
+- type: reagent
+  id: FairyBlood
+  name: reagent-name-fairy
+  group: Narcotics
+  desc: reagent-desc-fairy
+  physicalDesc: reagent-physical-desc-sparkly
+  flavor: magical
+  color: "#D05183"
+  metabolisms:
+    Narcotic:
+      metabolismRate : 0.5
+      effects:
+      - !type:MovespeedModifier
+        walkSpeedModifier: 1.1
+        sprintSpeedModifier: 1.1
+      - !type:ModifyStatusEffect
+        effectProto: StatusEffectSeeingRainbow
+        time: 16
+        type: Add
+        refresh: false
+      - !type:PopupMessage
+        type: Local
+        visualType: Medium
+        messages:
+          - "reagent-effect-fairy1"
+          - "reagent-effect-fairy2"
+          - "reagent-effect-fairy3"
+          - "reagent-effect-fairy4"
+          - "reagent-effect-fairy5"
+          - "reagent-effect-fairy6"
+          - "reagent-effect-fairy7"
+          - "reagent-effect-fairy8"
+        probability: 0.5
+      - !type:PopupMessage
+        type: Local
+        visualType: Small
+        messages:
+          - "reagent-effect-fairy-fade"
+        probability: 0.35
+        conditions:
+          - !type:ReagentThreshold
+            max: 0.5
+      - !type:Drunk
+        slurSpeech: false
+        boozePower: 20
+        conditions:
+          - !type:ReagentThreshold
+            min: 13
+      - !type:GenericStatusEffect
+        key: Stutter
+        component: ScrambledAccent
+        conditions:
+          - !type:ReagentThreshold
+            min: 13
+      - !type:GenericStatusEffect
+        key: TemporaryBlindness
+        component: TemporaryBlindness
+        conditions:
+          - !type:ReagentThreshold
+            min: 13

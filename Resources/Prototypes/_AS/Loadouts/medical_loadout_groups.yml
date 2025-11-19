@@ -1,10 +1,28 @@
 - type: loadoutGroup
+  id: MedicHead
+  name: loadout-group-medic-head
+  minLimit: 0
+  loadouts:
+  - MedicalHeadBeretMedicBase
+  - MedicalHeadBeretMedicAS
+  subgroups:
+  - ContractorHead
+
+- type: loadoutGroup
   id: MedicalJumpsuit
-  name: loadout-group-medical-jumpsuit
+  name: loadout-group-medic-jumpsuit
   loadouts:
   - MedicalUniformScrubsColorGreen
   - MedicalUniformScrubsColorBlue
   - MedicalUniformScrubsColorPurple
+  - MedicalUniformJumpsuitMedicalDoctor
+  - MedicalUniformJumpskirtMedicalDoctor
+  - MedicalUniformJumpsuitParamedic
+  - MedicalUniformJumpskirtParamedic
+  - MedicalUniformJumpsuitChemistry
+  - MedicalUniformJumpskirtChemistry
+  - MedicalUniformJumpsuitVirology
+  - MedicalUniformJumpskirtVirology
   subgroups:
   - ContractorJumpsuit
   fallbacks:
@@ -13,7 +31,7 @@
 
 - type: loadoutGroup
   id: MedEars
-  name: loadout-group-Medical-ears
+  name: loadout-group-medic-ears
   hidden: true # No point in showing this, it gets auto-selected.
   loadouts:
   - MedicalHeadsetLoadout
@@ -22,10 +40,29 @@
 
 - type: loadoutGroup
   id: MedicGlasses
-  name: loadout-group-contractor-glasses
+  name: loadout-group-medic-glasses
   minLimit: 0
   loadouts:
   - MedicClothingEyesHudMedical
   - MedicClothingEyesGlassesMedic
   subgroups:
   - ContractorGlasses
+
+- type: loadoutGroup
+  id: MedicBelt
+  name: loadout-group-medic-belt
+  minLimit: 0
+  loadouts:
+  - MedicalDoctorMedicRig
+  subgroups:
+  - ContractorBelt
+
+- type: loadoutGroup
+  id: MedicOuterClothing
+  name: loadout-group-medic-outerclothing
+  minLimit: 0
+  loadouts:
+  - MedicalOuterArmorBulletproof
+  - MedicalOuterHardsuitVoidParamed
+  subgroups:
+  - ContractorOuterClothing
