@@ -47,3 +47,16 @@
       Capacitor: 2
     stackRequirements:
       Steel: 3
+
+# Contraband Database Computer Circuitboard
+- type: entity
+  id: ContrabandDatabaseComputerCircuitboard
+  parent: BaseComputerCircuitboard
+  name: contraband database computer board
+  description: A computer board for the contraband activity database.
+  components:
+  - type: Sprite
+    sprite: Objects/Misc/module.rsi
+    state: std_mod
+  - type: ComputerBoard
+    prototype: ContrabandDatabaseComputer

@@ -1,3 +1,4 @@
+using System.Linq;
 using Content.Server._NF.Cargo.Systems;
 using Content.Server._NF.Contraband.Components;
 using Content.Server.Cargo.Components;
@@ -146,12 +147,37 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         return pads;
     }
 
-    private void SellPallets(EntityUid gridUid, Entity<ContrabandPalletConsoleComponent> component, EntityUid? station, out int amount)
+    private void SellPallets(EntityUid gridUid, Entity<ContrabandPalletConsoleComponent> component, EntityUid? station, out int amount, EntityUid? actor = null)
     {
         station ??= _station.GetOwningStation(gridUid);
         GetPalletGoods(gridUid, component, out var toSell, out amount , out _);
 
         Log.Debug($"{component.Comp.Faction} sold {toSell.Count} contraband items for {amount}");
+
+        // Aurora: Track sales for statistics if actor is provided
+        if (actor != null && TryComp<MobStateComponent>(actor.Value, out var mobState))
+        {
+            var characterName = MetaData(actor.Value).EntityName;
+
+            // Collect prototype IDs before deletion
+            var itemPrototypes = toSell
+                .Select(item => MetaData(item).EntityPrototype?.ID)
+                .Where(id => !string.IsNullOrEmpty(id))
+                .Cast<string>()
+                .ToList();
+
+            if (itemPrototypes.Count > 0)
+            {
+                var saleEvent = new ContrabandSaleEvent(
+                    actor.Value,
+                    characterName,
+                    itemPrototypes,
+                    amount,
+                    component.Owner
+                );
+                RaiseLocalEvent(ref saleEvent);
+            }
+        }
 
         if (station != null)
         {
@@ -252,7 +278,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
             return;
         }
 
-        SellPallets(gridUid, (uid, component), null, out var price);
+        SellPallets(gridUid, (uid, component), null, out var price, args.Actor);
 
         var stackPrototype = _protoMan.Index<StackPrototype>(component.RewardType);
         var stackUid = _stack.Spawn(price, stackPrototype, _scuOutput.ToCoordinates()); // Aurora spawn on scu output
@@ -282,12 +308,21 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         }
         GetPalletGoods(gridUid, ent, out _, out _ , out var toRegister);
 
+        // Aurora: Collect prototype IDs before deletion for statistics tracking
+        var itemPrototypes = toRegister
+            .Select(item => MetaData(item).EntityPrototype?.ID)
+            .Where(id => !string.IsNullOrEmpty(id))
+            .Cast<string>()
+            .ToList();
+
         // Award SCUs
         var stackPrototype = _protoMan.Index<StackPrototype>(ent.Comp.RewardType);
         // 1 SCU per registered item
-        var stackUid = _stack.Spawn(toRegister.Count, stackPrototype, _scuOutput.ToCoordinates());
-
-        _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
+        if (Exists(_scuOutput))
+        {
+            var stackUid = _stack.Spawn(toRegister.Count, stackPrototype, Transform(_scuOutput).Coordinates);
+            _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
+        }
 
         //Exchange each item for their registered counterpart
         foreach (var oldEnt in toRegister)
@@ -319,6 +354,19 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
 
             Del(oldEnt);
             Log.Debug($"{ent.Comp.Faction} registered {oldEnt} into {newEnt}");
+        }
+
+        // Aurora: Raise statistics event for registered items
+        if (itemPrototypes.Count > 0)
+        {
+            var characterName = MetaData(args.Actor).EntityName;
+            var registrationEvent = new ContrabandRegistrationEvent(
+                args.Actor,
+                characterName,
+                itemPrototypes,
+                ent.Owner
+            );
+            RaiseLocalEvent(ref registrationEvent);
         }
 
         UpdatePalletConsoleInterface(ent, ent.Comp);

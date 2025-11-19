@@ -1,0 +1,10 @@
+contraband-database-title = Contraband Activity Database
+contraband-database-header = Shift Contraband Activity Report
+contraband-database-turned-in = Items Turned In
+contraband-database-registered = Items Registered
+contraband-database-sold = Items Sold
+contraband-database-scu-earned = SCU Earned
+contraband-database-ec-earned = EC Earned
+contraband-database-turned-in-items = Turned-In Items
+contraband-database-registered-items = Registered Items
+contraband-database-sold-items = Sold Items

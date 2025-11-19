@@ -1,0 +1,18 @@
+<controls:FancyWindow xmlns="https://spacestation14.io"
+                      xmlns:controls="clr-namespace:Content.Client.UserInterface.Controls"
+                      Title="{Loc 'contraband-database-title'}"
+                      MinSize="600 400"
+                      SetSize="700 500">
+    <BoxContainer Orientation="Vertical">
+        <BoxContainer Orientation="Vertical" Margin="10" VerticalExpand="True">
+            <Label Text="{Loc 'contraband-database-header'}"
+                   StyleClasses="LabelBig"
+                   Margin="0 0 0 10"/>
+
+            <ScrollContainer VerticalExpand="True">
+                <BoxContainer Name="ContentContainer"
+                             Orientation="Vertical"/>
+            </ScrollContainer>
+        </BoxContainer>
+    </BoxContainer>
+</controls:FancyWindow>

@@ -81,3 +81,29 @@
   - type: ContainerContainer
     containers:
       board: !type:Container
+
+- type: entity
+  parent: BaseComputer
+  id: ContrabandDatabaseComputer
+  name: contraband database computer
+  description: A computer terminal for viewing contraband activity statistics.
+  components:
+  - type: Sprite
+    layers:
+    - map: ["computerLayerBody"]
+      state: computer
+    - map: ["computerLayerKeyboard"]
+      state: generic_keyboard
+    - map: ["computerLayerScreen"]
+      state: generic
+    - map: ["computerLayerKeys"]
+      state: generic_keys
+  - type: Computer
+    board: ContrabandDatabaseComputerCircuitboard
+  - type: ContrabandDatabaseConsole
+  - type: ActivatableUI
+    key: enum.ContrabandDatabaseUiKey.Key
+  - type: UserInterface
+    interfaces:
+      enum.ContrabandDatabaseUiKey.Key:
+        type: ContrabandDatabaseBoundUserInterface
