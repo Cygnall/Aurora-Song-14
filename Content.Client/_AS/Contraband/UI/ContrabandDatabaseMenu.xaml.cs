@@ -13,208 +13,243 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
 {
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
 
-    private readonly Dictionary<string, BoxContainer> _characterSections = new();
-    private readonly Dictionary<string, Button> _characterToggles = new();
+    private Dictionary<string, CharacterContrabandData> _allCharacterData = new();
+    private string? _selectedCharacter;
+    private string _searchFilter = string.Empty;
+    private bool _isPopulating;
 
     public ContrabandDatabaseMenu()
     {
         RobustXamlLoader.Load(this);
         IoCManager.InjectDependencies(this);
+
+        CharacterList.OnItemSelected += args =>
+        {
+            if (_isPopulating || CharacterList[args.ItemIndex].Metadata is not string characterName)
+                return;
+
+            _selectedCharacter = characterName;
+            UpdateDetailsPanel();
+        };
+
+        CharacterList.OnItemDeselected += _ =>
+        {
+            if (!_isPopulating)
+            {
+                _selectedCharacter = null;
+                UpdateDetailsPanel();
+            }
+        };
+
+        SearchBox.OnTextEntered += args =>
+        {
+            _searchFilter = args.Text;
+            FilterCharacterList();
+        };
+
+        SearchButton.OnPressed += _ =>
+        {
+            _searchFilter = SearchBox.Text;
+            FilterCharacterList();
+        };
+
+        ResetButton.OnPressed += _ =>
+        {
+            SearchBox.Text = string.Empty;
+            _searchFilter = string.Empty;
+            FilterCharacterList();
+        };
     }
 
     public void UpdateState(ContrabandDatabaseState state)
     {
-        ContentContainer.RemoveAllChildren();
-        _characterSections.Clear();
-        _characterToggles.Clear();
+        // Store the new data
+        _allCharacterData = state.CharacterData;
 
-        if (state.CharacterData.Count == 0)
+        // Check if the currently selected character still exists in the new data
+        if (_selectedCharacter != null && !_allCharacterData.ContainsKey(_selectedCharacter))
         {
-            var noDataLabel = new Label
-            {
-                Text = "No contraband activity recorded this shift.",
-                HorizontalAlignment = HAlignment.Center,
-                Margin = new Thickness(10)
-            };
-            ContentContainer.AddChild(noDataLabel);
+            _selectedCharacter = null;
+        }
+
+        // Update the character list
+        PopulateCharacterList();
+
+        // Update the details panel
+        UpdateDetailsPanel();
+    }
+
+    private void PopulateCharacterList()
+    {
+        _isPopulating = true;
+
+        CharacterList.Clear();
+
+        if (_allCharacterData.Count == 0)
+        {
+            CharacterListStatus.Visible = true;
+            CharacterList.Visible = false;
             return;
         }
 
+        CharacterListStatus.Visible = false;
+        CharacterList.Visible = true;
+
         // Sort characters by total activity (turn-ins + registrations + sales)
-        var sortedCharacters = state.CharacterData
+        var sortedCharacters = _allCharacterData
+            .Where(kvp => string.IsNullOrEmpty(_searchFilter) || 
+                         kvp.Key.Contains(_searchFilter, StringComparison.OrdinalIgnoreCase))
             .OrderByDescending(kvp => kvp.Value.TotalTurnedIn + kvp.Value.TotalRegistered + kvp.Value.TotalSold)
             .ToList();
 
         foreach (var (characterName, data) in sortedCharacters)
         {
-            var characterSection = new BoxContainer
-            {
-                Orientation = BoxContainer.LayoutOrientation.Vertical,
-                Margin = new Thickness(5, 5, 5, 10)
-            };
-
-            // Character header with toggle button
-            var headerContainer = new BoxContainer
-            {
-                Orientation = BoxContainer.LayoutOrientation.Horizontal
-            };
-
-            var toggleButton = new Button
-            {
-                Text = "▶",
-                MinWidth = 30,
-                MaxWidth = 30
-            };
-
-            var headerLabel = new Label
-            {
-                Text = $"{characterName}",
-                StyleClasses = { "LabelBig" },
-                Margin = new Thickness(10, 0, 0, 0)
-            };
-
-            headerContainer.AddChild(toggleButton);
-            headerContainer.AddChild(headerLabel);
-            characterSection.AddChild(headerContainer);
-
-            // Collapsible content
-            var contentContainer = new BoxContainer
-            {
-                Orientation = BoxContainer.LayoutOrientation.Vertical,
-                Visible = false,
-                Margin = new Thickness(40, 5, 0, 0)
-            };
-
-            // Statistics grid
-            var statsGrid = new GridContainer
-            {
-                Columns = 2,
-                Margin = new Thickness(0, 5, 0, 10)
-            };
-
-            AddStatRow(statsGrid, "contraband-database-turned-in", data.TotalTurnedIn.ToString());
-            AddStatRow(statsGrid, "contraband-database-registered", data.TotalRegistered.ToString());
-            AddStatRow(statsGrid, "contraband-database-sold", data.TotalSold.ToString());
-            AddStatRow(statsGrid, "contraband-database-scu-earned", data.ScuEarned.ToString());
-            AddStatRow(statsGrid, "contraband-database-ec-earned", data.EcEarned.ToString());
-
-            contentContainer.AddChild(statsGrid);
-
-            // Turned in items section
-            if (data.TurnedInItems.Count > 0)
-            {
-                var turnedInLabel = new Label
-                {
-                    Text = Loc.GetString("contraband-database-turned-in-items"),
-                    StyleClasses = { "LabelSubText" },
-                    Margin = new Thickness(0, 5, 0, 2)
-                };
-                contentContainer.AddChild(turnedInLabel);
-
-                var turnedInList = new BoxContainer
-                {
-                    Orientation = BoxContainer.LayoutOrientation.Vertical,
-                    Margin = new Thickness(10, 0, 0, 5)
-                };
-
-                foreach (var (protoId, count) in data.TurnedInItems.OrderByDescending(kvp => kvp.Value))
-                {
-                    var itemName = GetPrototypeName(protoId);
-                    var itemLabel = new Label
-                    {
-                        Text = $"• {itemName}: {count}",
-                        FontColorOverride = Color.LightGray
-                    };
-                    turnedInList.AddChild(itemLabel);
-                }
-
-                contentContainer.AddChild(turnedInList);
-            }
-
-            // Registered items section
-            if (data.RegisteredItems.Count > 0)
-            {
-                var registeredLabel = new Label
-                {
-                    Text = Loc.GetString("contraband-database-registered-items"),
-                    StyleClasses = { "LabelSubText" },
-                    Margin = new Thickness(0, 5, 0, 2)
-                };
-                contentContainer.AddChild(registeredLabel);
-
-                var registeredList = new BoxContainer
-                {
-                    Orientation = BoxContainer.LayoutOrientation.Vertical,
-                    Margin = new Thickness(10, 0, 0, 5)
-                };
-
-                foreach (var (protoId, count) in data.RegisteredItems.OrderByDescending(kvp => kvp.Value))
-                {
-                    var itemName = GetPrototypeName(protoId);
-                    var itemLabel = new Label
-                    {
-                        Text = $"• {itemName}: {count}",
-                        FontColorOverride = Color.LightGray
-                    };
-                    registeredList.AddChild(itemLabel);
-                }
-
-                contentContainer.AddChild(registeredList);
-            }
-
-            // Sold items section
-            if (data.SoldItems.Count > 0)
-            {
-                var soldLabel = new Label
-                {
-                    Text = Loc.GetString("contraband-database-sold-items"),
-                    StyleClasses = { "LabelSubText" },
-                    Margin = new Thickness(0, 5, 0, 2)
-                };
-                contentContainer.AddChild(soldLabel);
-
-                var soldList = new BoxContainer
-                {
-                    Orientation = BoxContainer.LayoutOrientation.Vertical,
-                    Margin = new Thickness(10, 0, 0, 5)
-                };
-
-                foreach (var (protoId, count) in data.SoldItems.OrderByDescending(kvp => kvp.Value))
-                {
-                    var itemName = GetPrototypeName(protoId);
-                    var itemLabel = new Label
-                    {
-                        Text = $"• {itemName}: {count}",
-                        FontColorOverride = Color.LightGray
-                    };
-                    soldList.AddChild(itemLabel);
-                }
-
-                contentContainer.AddChild(soldList);
-            }
-
-            characterSection.AddChild(contentContainer);
-
-            // Wire up toggle button
-            _characterSections[characterName] = contentContainer;
-            _characterToggles[characterName] = toggleButton;
-
-            toggleButton.OnPressed += _ => ToggleCharacterSection(characterName);
-
-            ContentContainer.AddChild(characterSection);
+            var totalActivity = data.TotalTurnedIn + data.TotalRegistered + data.TotalSold;
+            var displayText = $"{characterName} ({totalActivity})";
+            
+            var item = CharacterList.AddItem(displayText);
+            item.Metadata = characterName;
+            item.Selected = characterName == _selectedCharacter;
         }
+
+        _isPopulating = false;
     }
 
-    private void ToggleCharacterSection(string characterName)
+    private void FilterCharacterList()
     {
-        if (!_characterSections.TryGetValue(characterName, out var section))
-            return;
+        PopulateCharacterList();
+    }
 
-        if (!_characterToggles.TryGetValue(characterName, out var toggle))
+    private void UpdateDetailsPanel()
+    {
+        if (_selectedCharacter == null || !_allCharacterData.TryGetValue(_selectedCharacter, out var data))
+        {
+            DetailsPlaceholder.Visible = true;
+            DetailsScrollContainer.Visible = false;
             return;
+        }
 
-        section.Visible = !section.Visible;
-        toggle.Text = section.Visible ? "▼" : "▶";
+        DetailsPlaceholder.Visible = false;
+        DetailsScrollContainer.Visible = true;
+
+        DetailsContainer.RemoveAllChildren();
+
+        // Character name header
+        var headerLabel = new Label
+        {
+            Text = _selectedCharacter,
+            StyleClasses = { "LabelBig" },
+            Margin = new Thickness(0, 0, 0, 10)
+        };
+        DetailsContainer.AddChild(headerLabel);
+
+        // Statistics grid
+        var statsGrid = new GridContainer
+        {
+            Columns = 2,
+            Margin = new Thickness(0, 5, 0, 15)
+        };
+
+        AddStatRow(statsGrid, "contraband-database-turned-in", data.TotalTurnedIn.ToString());
+        AddStatRow(statsGrid, "contraband-database-registered", data.TotalRegistered.ToString());
+        AddStatRow(statsGrid, "contraband-database-sold", data.TotalSold.ToString());
+        AddStatRow(statsGrid, "contraband-database-scu-earned", data.ScuEarned.ToString());
+        AddStatRow(statsGrid, "contraband-database-ec-earned", data.EcEarned.ToString());
+
+        DetailsContainer.AddChild(statsGrid);
+
+        // Turned in items section
+        if (data.TurnedInItems.Count > 0)
+        {
+            var turnedInLabel = new Label
+            {
+                Text = Loc.GetString("contraband-database-turned-in-items"),
+                StyleClasses = { "LabelBig" },
+                Margin = new Thickness(0, 10, 0, 5)
+            };
+            DetailsContainer.AddChild(turnedInLabel);
+
+            var turnedInList = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical,
+                Margin = new Thickness(10, 0, 0, 10)
+            };
+
+            foreach (var (protoId, count) in data.TurnedInItems.OrderByDescending(kvp => kvp.Value))
+            {
+                var itemName = GetPrototypeName(protoId);
+                var itemLabel = new Label
+                {
+                    Text = $"• {itemName}: {count}",
+                    FontColorOverride = Color.LightGray
+                };
+                turnedInList.AddChild(itemLabel);
+            }
+
+            DetailsContainer.AddChild(turnedInList);
+        }
+
+        // Registered items section
+        if (data.RegisteredItems.Count > 0)
+        {
+            var registeredLabel = new Label
+            {
+                Text = Loc.GetString("contraband-database-registered-items"),
+                StyleClasses = { "LabelBig" },
+                Margin = new Thickness(0, 10, 0, 5)
+            };
+            DetailsContainer.AddChild(registeredLabel);
+
+            var registeredList = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical,
+                Margin = new Thickness(10, 0, 0, 10)
+            };
+
+            foreach (var (protoId, count) in data.RegisteredItems.OrderByDescending(kvp => kvp.Value))
+            {
+                var itemName = GetPrototypeName(protoId);
+                var itemLabel = new Label
+                {
+                    Text = $"• {itemName}: {count}",
+                    FontColorOverride = Color.LightGray
+                };
+                registeredList.AddChild(itemLabel);
+            }
+
+            DetailsContainer.AddChild(registeredList);
+        }
+
+        // Sold items section
+        if (data.SoldItems.Count > 0)
+        {
+            var soldLabel = new Label
+            {
+                Text = Loc.GetString("contraband-database-sold-items"),
+                StyleClasses = { "LabelBig" },
+                Margin = new Thickness(0, 10, 0, 5)
+            };
+            DetailsContainer.AddChild(soldLabel);
+
+            var soldList = new BoxContainer
+            {
+                Orientation = BoxContainer.LayoutOrientation.Vertical,
+                Margin = new Thickness(10, 0, 0, 10)
+            };
+
+            foreach (var (protoId, count) in data.SoldItems.OrderByDescending(kvp => kvp.Value))
+            {
+                var itemName = GetPrototypeName(protoId);
+                var itemLabel = new Label
+                {
+                    Text = $"• {itemName}: {count}",
+                    FontColorOverride = Color.LightGray
+                };
+                soldList.AddChild(itemLabel);
+            }
+
+            DetailsContainer.AddChild(soldList);
+        }
     }
 
     private void AddStatRow(GridContainer grid, string labelKey, string value)

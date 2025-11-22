@@ -1,5 +1,11 @@
 contraband-database-title = Contraband Activity Database
 contraband-database-header = Shift Contraband Activity Report
+contraband-database-characters = Characters
+contraband-database-search-placeholder = Search by character name...
+contraband-database-search = Search
+contraband-database-reset = Reset
+contraband-database-no-data = No contraband activity recorded this shift.
+contraband-database-select-character = Select a character from the list to view their contraband activity.
 contraband-database-turned-in = Items Turned In
 contraband-database-registered = Items Registered
 contraband-database-sold = Items Sold
