@@ -13,7 +13,7 @@
             <Button Name="SearchButton" Text="{Loc 'contraband-database-search'}"/>
             <Button Name="ResetButton" Text="{Loc 'contraband-database-reset'}"/>
         </BoxContainer>
-        
+
         <!-- Main Content Area -->
         <BoxContainer VerticalExpand="True">
             <!-- Character List (Left Side) -->
@@ -21,14 +21,14 @@
                 <Label Text="{Loc 'contraband-database-characters'}"
                        StyleClasses="LabelBig"
                        Margin="0 0 0 5"/>
-                <Label Name="CharacterListStatus" 
-                       Visible="False" 
+                <Label Name="CharacterListStatus"
+                       Visible="False"
                        Text="{Loc 'contraband-database-no-data'}"/>
                 <ScrollContainer VerticalExpand="True">
                     <ItemList Name="CharacterList"/>
                 </ScrollContainer>
             </BoxContainer>
-            
+
             <!-- Details Panel (Right Side) -->
             <BoxContainer Orientation="Vertical" Margin="5" HorizontalExpand="True">
                 <Label Name="DetailsPlaceholder"

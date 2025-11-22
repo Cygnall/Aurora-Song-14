@@ -97,7 +97,7 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
 
         // Sort characters by total activity (turn-ins + registrations + sales)
         var sortedCharacters = _allCharacterData
-            .Where(kvp => string.IsNullOrEmpty(_searchFilter) || 
+            .Where(kvp => string.IsNullOrEmpty(_searchFilter) ||
                          kvp.Key.Contains(_searchFilter, StringComparison.OrdinalIgnoreCase))
             .OrderByDescending(kvp => kvp.Value.TotalTurnedIn + kvp.Value.TotalRegistered + kvp.Value.TotalSold)
             .ToList();
@@ -106,7 +106,7 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
         {
             var totalActivity = data.TotalTurnedIn + data.TotalRegistered + data.TotalSold;
             var displayText = $"{characterName} ({totalActivity})";
-            
+
             var item = CharacterList.AddItem(displayText);
             item.Metadata = characterName;
             item.Selected = characterName == _selectedCharacter;
