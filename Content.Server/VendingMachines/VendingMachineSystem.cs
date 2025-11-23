@@ -436,7 +436,7 @@ namespace Content.Server.VendingMachines
                 }
 
                 bool paidFully = false;
-                
+
                 // Aurora Song: Track buyer for auto-registration
                 if (TryComp<Content.Shared._AS.Contraband.Components.AutoRegisterContrabandComponent>(uid, out var autoReg))
                 {

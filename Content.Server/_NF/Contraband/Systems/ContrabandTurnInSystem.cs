@@ -319,7 +319,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         var serialNumbers = new Dictionary<string, string>();
         foreach (var item in toRegister)
         {
-            if (TryComp<Content.Shared._AS.Weapons.Ranged.Components.FirearmSerialNumberComponent>(item, out var serialComp) 
+            if (TryComp<Content.Shared._AS.Weapons.Ranged.Components.FirearmSerialNumberComponent>(item, out var serialComp)
                 && !string.IsNullOrEmpty(serialComp.SerialNumber))
             {
                 var protoId = MetaData(item).EntityPrototype?.ID ?? string.Empty;
