@@ -32,4 +32,6 @@ public sealed class CharacterContrabandData
     public Dictionary<string, int> TurnedInItems { get; set; } = new();
     public Dictionary<string, int> RegisteredItems { get; set; } = new();
     public Dictionary<string, int> SoldItems { get; set; } = new();
+    // Maps serial number -> prototype ID for registered firearms
+    public Dictionary<string, string> FirearmSerialNumbers { get; set; } = new();
 }

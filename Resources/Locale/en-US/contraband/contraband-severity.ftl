@@ -14,3 +14,8 @@ contraband-examinable-verb-message = Check legality of this item.
 
 contraband-department-plural = {$department}
 contraband-job-plural = {MAKEPLURAL($job)}
+
+# Aurora Song modification
+contraband-examine-serial-number = [color=gray]Serial Number: [bold]{$serial}[/bold][/color]
+contraband-examine-serial-filed = [color=orange]There is a messy damage mark where the serial number should be.[/color]
+casing-serial-number = [color=gray]You can tell this casing was ejected from a weapon matching: [bold]{$serial}[/bold][/color]

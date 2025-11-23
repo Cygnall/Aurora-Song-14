@@ -215,6 +215,26 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
                     FontColorOverride = Color.LightGray
                 };
                 registeredList.AddChild(itemLabel);
+
+                // Show serial numbers for this firearm if any exist
+                var serialsForItem = data.FirearmSerialNumbers
+                    .Where(kvp => kvp.Value == protoId)
+                    .OrderBy(kvp => kvp.Key)
+                    .ToList();
+
+                if (serialsForItem.Count > 0)
+                {
+                    foreach (var (serial, _) in serialsForItem)
+                    {
+                        var serialLabel = new Label
+                        {
+                            Text = $"  └ SN: {serial}",
+                            FontColorOverride = Color.Orange,
+                            Margin = new Thickness(15, 0, 0, 0)
+                        };
+                        registeredList.AddChild(serialLabel);
+                    }
+                }
             }
 
             DetailsContainer.AddChild(registeredList);

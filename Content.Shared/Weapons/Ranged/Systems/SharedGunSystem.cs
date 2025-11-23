@@ -37,6 +37,7 @@ using Robust.Shared.Random;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared._AS.Weapons.Ranged.Components; // Aurora Song
 
 namespace Content.Shared.Weapons.Ranged.Systems;
 
@@ -102,6 +103,10 @@ public abstract partial class SharedGunSystem : EntitySystem
         SubscribeLocalEvent<GunComponent, CycleModeEvent>(OnCycleMode);
         SubscribeLocalEvent<GunComponent, HandSelectedEvent>(OnGunSelected);
         SubscribeLocalEvent<GunComponent, MapInitEvent>(OnMapInit);
+
+        // Aurora Song modification: Add serial number to casing examine
+        SubscribeLocalEvent<CasingSerialNumberComponent, ExaminedEvent>(OnCasingExamine);
+        // End Aurora Song modification
     }
 
     private void OnMapInit(Entity<GunComponent> gun, ref MapInitEvent args)
@@ -505,6 +510,16 @@ public abstract partial class SharedGunSystem : EntitySystem
         RemCompDeferred<CartridgeAmmoComponent>(uid);
         RemCompDeferred<AmmoComponent>(uid);
     }
+
+    // Aurora Song modification: Add serial number to casing examine
+    private void OnCasingExamine(EntityUid uid, CasingSerialNumberComponent component, ExaminedEvent args)
+    {
+        if (!string.IsNullOrEmpty(component.SerialNumber))
+        {
+            args.PushMarkup(Loc.GetString("casing-serial-number", ("serial", component.SerialNumber)));
+        }
+    }
+    // End Aurora Song modification
 
     protected void MuzzleFlash(EntityUid gun, AmmoComponent component, Angle worldAngle, EntityUid? user = null)
     {

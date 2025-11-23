@@ -38,6 +38,7 @@
   - type: Tag
     tags:
     - MercenaryUplink
+  - type: AutoRegisterContraband
   #  - type: Store
   #    balance:
   #      MercCoin: 0 # Waits for the player to put in money
@@ -148,6 +149,7 @@
   - type: Tag
     tags:
     - SecurityUplink
+  - type: AutoRegisterContraband
 #  - type: Store
 #    balance:
 #      FrontierUplinkCoin: 0

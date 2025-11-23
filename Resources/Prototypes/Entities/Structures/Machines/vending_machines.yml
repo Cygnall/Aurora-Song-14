@@ -259,6 +259,7 @@
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
   - type: MarketModifier # Frontier
     mod: 12 # Frontier
+  - type: AutoRegisterContraband # Aurora Song
 
 - type: entity
   parent: VendingMachine

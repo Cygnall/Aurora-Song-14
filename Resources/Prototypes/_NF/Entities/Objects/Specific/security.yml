@@ -71,6 +71,7 @@
   - type: Tag
     tags:
     - SecurityUplink
+  - type: AutoRegisterContraband # Aurora Song
 
 - type: entity
   parent: BaseSecurityUplinkRadio

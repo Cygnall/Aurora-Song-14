@@ -105,6 +105,14 @@ public sealed class ContrabandStatisticsSystem : EntitySystem
             }
         }
 
+        if (ev.FirearmSerialNumbers != null)
+        {
+            foreach (var (serial, protoId) in ev.FirearmSerialNumbers)
+            {
+                charStats.FirearmSerialNumbers[serial] = new EntProtoId(protoId);
+            }
+        }
+
         statsComp.CharacterStats[ev.CharacterName] = charStats;
         Dirty(station.Value, statsComp);
 
@@ -212,6 +220,12 @@ public sealed class ContrabandStatisticsSystem : EntitySystem
             foreach (var (protoId, count) in stats.SoldItems)
             {
                 data.SoldItems[protoId.Id] = count;
+            }
+
+            // Copy firearm serial numbers with their prototype IDs
+            foreach (var (serial, protoId) in stats.FirearmSerialNumbers)
+            {
+                data.FirearmSerialNumbers[serial] = protoId.Id;
             }
 
             state.CharacterData[characterName] = data;

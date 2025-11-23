@@ -34,6 +34,7 @@ using Content.Shared.Stacks; // Frontier
 using Content.Server.Stack; // Frontier
 using Robust.Shared.Containers; // Frontier
 using Content.Shared._NF.Bank.Components; // Frontier
+using Robust.Shared.Log; // Aurora Song
 
 namespace Content.Server.VendingMachines
 {
@@ -435,6 +436,16 @@ namespace Content.Server.VendingMachines
                 }
 
                 bool paidFully = false;
+                
+                // Aurora Song: Track buyer for auto-registration
+                if (TryComp<Content.Shared._AS.Contraband.Components.AutoRegisterContrabandComponent>(uid, out var autoReg))
+                {
+                    autoReg.LastBuyer = sender;
+                    autoReg.LastBuyTime = _timing.CurTime;
+                    Log.Debug($"VendingMachine: Set LastBuyer={sender} at {_timing.CurTime} for entity {ToPrettyString(uid)}");
+                }
+                // End Aurora Song
+
                 if (TryEjectVendorItem(uid, type, itemId, component.CanShoot, vendComponent: component))
                 {
                     if (cashEntity != null)

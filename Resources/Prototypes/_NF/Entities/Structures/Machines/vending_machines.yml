@@ -242,6 +242,7 @@
       ejectDelay: 3
     - type: DatasetVocalizer
       dataset: LessLethalVendAds
+    - type: AutoRegisterContraband # Aurora Song
     - type: Sprite
       sprite: _NF/Structures/Machines/VendingMachines/lesslethalvend.rsi
       layers:
@@ -283,6 +284,7 @@
       ejectDelay: 3
     - type: DatasetVocalizer
       dataset: LessLethalVendAds
+    - type: AutoRegisterContraband # Aurora Song
     - type: Sprite
       sprite: _NF/Structures/Machines/VendingMachines/nonlethalvend.rsi
       layers:
@@ -717,6 +719,7 @@
     denyState: deny-unshaded
   - type: DatasetVocalizer
     dataset: VandalizedBountyVendAds
+  - type: AutoRegisterContraband # Aurora Song
   - type: Sprite
     sprite: _NF/Structures/Machines/VendingMachines/picknpackvend.rsi
     layers:

@@ -4,6 +4,7 @@ using Content.Shared.Examine;
 using Content.Shared.Localizations;
 using Content.Shared.Roles;
 using Content.Shared.Verbs;
+using Content.Shared._AS.Weapons.Ranged.Components; // Aurora Song
 using Robust.Shared.Configuration;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
@@ -114,7 +115,22 @@ public sealed class ContrabandSystem : EntitySystem
             iconTexture = "/Textures/Interface/VerbIcons/unlock-green.svg.192dpi.png";
         }
 
-        var examineMarkup = GetContrabandExamine(Loc.GetString(severity.ExamineText), departmentExamineMessage, component.HideCarryStatus ? null : carryingMessage); // Frontier: add severity examine text, pass HideCarryStatus
+        // Aurora Song modification: Add firearm serial number to contraband examine
+        string? serialNumber = null;
+        if (TryComp<FirearmSerialNumberComponent>(ent, out var serialComp) && !string.IsNullOrEmpty(serialComp.SerialNumber))
+        {
+            if (serialComp.SerialFiled)
+            {
+                serialNumber = Loc.GetString("contraband-examine-serial-filed");
+            }
+            else
+            {
+                serialNumber = Loc.GetString("contraband-examine-serial-number", ("serial", serialComp.SerialNumber));
+            }
+        }
+        // End Aurora Song modification
+
+        var examineMarkup = GetContrabandExamine(Loc.GetString(severity.ExamineText), departmentExamineMessage, component.HideCarryStatus ? null : carryingMessage, serialNumber); // Frontier: add severity examine text, pass HideCarryStatus // Aurora Song: add serialNumber
         _examine.AddHoverExamineVerb(args,
             component,
             Loc.GetString("contraband-examinable-verb-text"),
@@ -122,7 +138,7 @@ public sealed class ContrabandSystem : EntitySystem
             iconTexture);
     }
 
-    private FormattedMessage GetContrabandExamine(String severity, String? deptMessage, String? carryMessage) // Frontier: add severity, optional deptMessage
+    private FormattedMessage GetContrabandExamine(String severity, String? deptMessage, String? carryMessage, String? serialNumber = null) // Frontier: add severity, optional deptMessage // Aurora Song: add serialNumber
     {
         var msg = new FormattedMessage();
 
@@ -139,6 +155,13 @@ public sealed class ContrabandSystem : EntitySystem
             msg.AddMarkupOrThrow(carryMessage);
         }
         // End Frontier: severity, department message, hide carry status
+        // Aurora Song modification: Add serial number to examine
+        if (!string.IsNullOrEmpty(serialNumber))
+        {
+            msg.PushNewline();
+            msg.AddMarkupOrThrow(serialNumber);
+        }
+        // End Aurora Song modification
         return msg;
     }
 

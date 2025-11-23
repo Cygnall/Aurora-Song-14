@@ -14,3 +14,4 @@ contraband-database-ec-earned = EC Earned
 contraband-database-turned-in-items = Turned-In Items
 contraband-database-registered-items = Registered Items
 contraband-database-sold-items = Sold Items
+contraband-database-firearm-serials = Registered Firearm Serial Numbers

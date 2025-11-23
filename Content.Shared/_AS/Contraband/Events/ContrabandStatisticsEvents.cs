@@ -12,7 +12,8 @@ public record struct ContrabandTurnInEvent(
     List<string> ItemPrototypeIds,
     int ScuValue,
     int EcValue,
-    EntityUid Console
+    EntityUid Console,
+    Dictionary<string, string>? FirearmSerialNumbers = null
 );
 
 /// <summary>
@@ -23,7 +24,8 @@ public record struct ContrabandRegistrationEvent(
     EntityUid Actor,
     string CharacterName,
     List<string> ItemPrototypeIds,
-    EntityUid Console
+    EntityUid Console,
+    Dictionary<string, string>? FirearmSerialNumbers = null
 );
 
 /// <summary>
@@ -35,5 +37,6 @@ public record struct ContrabandSaleEvent(
     string CharacterName,
     List<string> ItemPrototypeIds,
     int ScuValue,
-    EntityUid Console
+    EntityUid Console,
+    Dictionary<string, string>? FirearmSerialNumbers = null
 );

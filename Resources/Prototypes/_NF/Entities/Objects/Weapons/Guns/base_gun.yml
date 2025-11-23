@@ -14,6 +14,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 500
+  - type: FirearmSerialNumber # Aurora Song modification
 
 - type: entity
   id: NFBaseItemWeaponGunMagazineFed

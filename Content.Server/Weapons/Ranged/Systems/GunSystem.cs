@@ -22,9 +22,11 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Utility;
 using Robust.Shared.Containers;
+using Content.Shared.Containers;
 using Content.Shared.Interaction; // Frontier
 using Content.Shared.Examine; // Frontier
 using Content.Shared.Power; // Frontier
+using Content.Shared._AS.Weapons.Ranged.Components; // Aurora Song
 
 namespace Content.Server.Weapons.Ranged.Systems;
 
@@ -133,6 +135,15 @@ public sealed partial class GunSystem : SharedGunSystem
                         });
 
                         SetCartridgeSpent(ent.Value, cartridge, true);
+
+                        // Aurora Song modification: Add firearm serial number to spent casing
+                        if (TryComp<FirearmSerialNumberComponent>(gunUid, out var serialComp) && !string.IsNullOrEmpty(serialComp.SerialNumber))
+                        {
+                            var casingSerial = EnsureComp<CasingSerialNumberComponent>(ent.Value);
+                            casingSerial.SerialNumber = serialComp.SerialNumber;
+                            Dirty(ent.Value, casingSerial);
+                        }
+                        // End Aurora Song modification
 
                         if (cartridge.DeleteOnSpawn)
                             Del(ent.Value);

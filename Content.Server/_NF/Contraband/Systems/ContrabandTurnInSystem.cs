@@ -315,6 +315,22 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
             .Cast<string>()
             .ToList();
 
+        // Aurora Song modification: Collect firearm serial numbers with their prototype IDs
+        var serialNumbers = new Dictionary<string, string>();
+        foreach (var item in toRegister)
+        {
+            if (TryComp<Content.Shared._AS.Weapons.Ranged.Components.FirearmSerialNumberComponent>(item, out var serialComp) 
+                && !string.IsNullOrEmpty(serialComp.SerialNumber))
+            {
+                var protoId = MetaData(item).EntityPrototype?.ID ?? string.Empty;
+                if (!string.IsNullOrEmpty(protoId))
+                {
+                    serialNumbers[serialComp.SerialNumber] = protoId;
+                }
+            }
+        }
+        // End Aurora Song modification
+
         // Award SCUs
         var stackPrototype = _protoMan.Index<StackPrototype>(ent.Comp.RewardType);
         // 1 SCU per registered item
@@ -364,7 +380,8 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 args.Actor,
                 characterName,
                 itemPrototypes,
-                ent.Owner
+                ent.Owner,
+                serialNumbers // Aurora Song modification
             );
             RaiseLocalEvent(ref registrationEvent);
         }

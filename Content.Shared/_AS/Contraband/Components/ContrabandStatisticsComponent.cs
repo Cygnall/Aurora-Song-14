@@ -62,6 +62,11 @@ public record struct CharacterContrabandStats
     /// </summary>
     public Dictionary<EntProtoId, int> SoldItems;
 
+    /// <summary>
+    /// Maps firearm serial numbers to their prototype IDs for registered firearms.
+    /// </summary>
+    public Dictionary<string, EntProtoId> FirearmSerialNumbers;
+
     public CharacterContrabandStats()
     {
         TotalTurnedIn = 0;
@@ -72,5 +77,6 @@ public record struct CharacterContrabandStats
         TurnedInItems = new Dictionary<EntProtoId, int>();
         RegisteredItems = new Dictionary<EntProtoId, int>();
         SoldItems = new Dictionary<EntProtoId, int>();
+        FirearmSerialNumbers = new Dictionary<string, EntProtoId>();
     }
 }

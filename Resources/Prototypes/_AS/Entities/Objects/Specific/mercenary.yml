@@ -104,6 +104,7 @@
   - type: Tag
     tags:
     - MercenaryUplink
+  - type: AutoRegisterContraband # Aurora Song
 
 - type: entity
   parent: BaseMercenaryUplinkRadio
