@@ -81,17 +81,17 @@ public sealed class JobWhitelistManager : IPostInjectInit
             return true;
         }
 
+        // Aurora: Disabling blanket job whitelist
         // DeltaV: Blanket player whitelist allows all roles
-        if (session.ContentData()?.Whitelisted ?? false)
-            return true;
-
+        //    if (session.ContentData()?.Whitelisted ?? false)
+        //        return true;
+        // End Aurora
         return IsWhitelisted(session.UserId, job);
     }
 
     public bool IsWhitelisted(NetUserId player, ProtoId<JobPrototype> job)
     {
-        if (!_whitelists.TryGetValue(player, out var whitelists) || // Frontier: added globalWhitelist check
-        !_globalWhitelists.TryGetValue(player, out var globalWhitelist)) // Frontier
+        if (!_whitelists.TryGetValue(player, out var whitelists)) // Aurora Song: Removed global whitelist check
         {
             Log.Error("Unable to check if player {Player} is whitelisted for {Job}. Stack trace:\\n{StackTrace}",
                 player,
@@ -100,7 +100,7 @@ public sealed class JobWhitelistManager : IPostInjectInit
             return false;
         }
 
-        return globalWhitelist || whitelists.Contains(job); // Frontier: added globalWhitelist
+        return whitelists.Contains(job); // Aurora Song: Changed to only check per-job whitelists, not global server whitelist
     }
 
     public async void RemoveWhitelist(NetUserId player, ProtoId<JobPrototype> job)

@@ -12,6 +12,7 @@
     - !type:RoleTimeRequirement
       role: JobSeniorOfficer
       time: 21600 # 6 hours
+  whitelisted: true
   alternateRequirementSets:
     longerPlaytimeLessSec:
     - !type:OverallPlaytimeRequirement

@@ -101,14 +101,45 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
             return false;
         }
 
-        if (!CheckWhitelist(job, out reason))
-            return false;
-
+        // Aurora Song: Changed to show both role whitelist status and time requirements
+        var whitelistPassed = CheckWhitelist(job, out var whitelistReason);
         var player = _playerManager.LocalSession;
+        
         if (player == null)
-            return true;
+        {
+            if (!whitelistPassed)
+                reason = whitelistReason;
+            return whitelistPassed;
+        }
 
-        return CheckRoleRequirements(job, profile, out reason);
+        var requirementsPassed = CheckRoleRequirements(job, profile, out var requirementsReason);
+
+        // If both failed, combine the messages
+        if (!whitelistPassed && !requirementsPassed)
+        {
+            reason = new FormattedMessage();
+            reason.AddMarkupPermissive(whitelistReason!.ToMarkup());
+            reason.PushNewline();
+            reason.AddMarkupPermissive(requirementsReason!.ToMarkup());
+            return false;
+        }
+
+        // If only whitelist failed
+        if (!whitelistPassed)
+        {
+            reason = whitelistReason ?? FormattedMessage.FromUnformatted("Whitelist check failed");
+            return false;
+        }
+
+        // If only requirements failed
+        if (!requirementsPassed)
+        {
+            reason = requirementsReason ?? FormattedMessage.FromUnformatted("Requirements check failed");
+            return false;
+        }
+
+        return true;
+        // End Aurora Song
     }
 
     public bool CheckRoleRequirements(JobPrototype job, HumanoidCharacterProfile? profile, [NotNullWhen(false)] out FormattedMessage? reason)
@@ -171,7 +202,7 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
         //if (_whitelisted)
         //    return true;
 
-        if (job.Whitelisted && !_jobWhitelists.Contains(job.ID) && !_whitelisted) // Frontier: add _whitelisted
+        if (job.Whitelisted && !_jobWhitelists.Contains(job.ID)) // Aurora Song: Removed global whitelist bypass
         {
             reason = FormattedMessage.FromUnformatted(Loc.GetString("role-not-whitelisted"));
             return false;
