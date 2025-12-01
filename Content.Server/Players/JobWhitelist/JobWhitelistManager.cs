@@ -81,9 +81,9 @@ public sealed class JobWhitelistManager : IPostInjectInit
             return true;
         }
 
-        // DeltaV: Blanket player whitelist allows all roles
-        if (session.ContentData()?.Whitelisted ?? false)
-            return true;
+        // Aurora Song: DeltaV blanket whitelist bypass removed - server whitelist should not grant access to all whitelisted jobs
+        // if (session.ContentData()?.Whitelisted ?? false)
+        //     return true;
 
         return IsWhitelisted(session.UserId, job);
     }
@@ -100,7 +100,9 @@ public sealed class JobWhitelistManager : IPostInjectInit
             return false;
         }
 
-        return globalWhitelist || whitelists.Contains(job); // Frontier: added globalWhitelist
+        // Aurora Song: Global whitelist bypass removed - per-job whitelists should be enforced
+        // return globalWhitelist || whitelists.Contains(job); // Frontier: added globalWhitelist
+        return whitelists.Contains(job);
     }
 
     public async void RemoveWhitelist(NetUserId player, ProtoId<JobPrototype> job)
@@ -160,7 +162,9 @@ public sealed class JobWhitelistManager : IPostInjectInit
             return false;
         }
 
-        return globalWhitelist || whitelists.Contains(ghostRole);
+        // Aurora Song: Global whitelist bypass removed - per-role whitelists should be enforced
+        // return globalWhitelist || whitelists.Contains(ghostRole);
+        return whitelists.Contains(ghostRole);
     }
 
     public async void RemoveWhitelist(NetUserId player, ProtoId<GhostRolePrototype> ghostRole)

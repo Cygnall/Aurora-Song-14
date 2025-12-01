@@ -25,7 +25,8 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
 
     public Action<ProtoId<JobPrototype>, bool>? OnSetJob;
     public Action<ProtoId<GhostRolePrototype>, bool>? OnSetGhostRole; // Frontier
-    public Action<bool>? OnSetGlobal; // Frontier
+    // Aurora Song: Global whitelist allows bypass of per-job whitelists, making individual management impossible
+    // public Action<bool>? OnSetGlobal; // Frontier
 
     public JobWhitelistsWindow()
     {
@@ -35,10 +36,11 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
         PlayerName.Text = "???";
         InitializeTierButtons();
 
+        // Aurora Song: Global whitelist button causes all checkboxes to be forced on and non-toggleable
         // Frontier: global whitelist button
-        Global.Text = Loc.GetString("player-panel-global-whitelist");
-        Global.OnPressed += _ => OnSetGlobal?.Invoke(Global.Pressed);
-        Global.Modulate = Color.FromHex("#f0c65d");
+        // Global.Text = Loc.GetString("player-panel-global-whitelist");
+        // Global.OnPressed += _ => OnSetGlobal?.Invoke(Global.Pressed);
+        // Global.Modulate = Color.FromHex("#f0c65d");
         // End Frontier
     }
 
@@ -76,8 +78,9 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
     {
         PlayerName.Text = state.PlayerName;
 
+        // Aurora Song: Prevents UI from being locked when player has global whitelist
         // Frontier: global whitelist
-        Global.Pressed = state.GlobalWhitelist;
+        // Global.Pressed = state.GlobalWhitelist;
         // End Frontier
 
         Departments.RemoveAllChildren();
@@ -88,7 +91,7 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
                 continue;
             // End Frontier
 
-            var panel = new DepartmentWhitelistPanel(proto, _proto, state.Whitelists, state.GlobalWhitelist);
+            var panel = new DepartmentWhitelistPanel(proto, _proto, state.Whitelists /*, state.GlobalWhitelist*/); // Aurora Song: globalWhitelist causes checkboxes to lock on
             panel.OnSetJob += (id, whitelisting) => OnSetJob?.Invoke(id, whitelisting);
             Departments.AddChild(panel);
         }
@@ -100,7 +103,7 @@ public sealed partial class JobWhitelistsWindow : FancyWindow
             if (proto.Whitelisted)
                 ghostRoles.Add(proto.ID);
         }
-        var ghostRolePanel = new GhostRoleSetWhitelistPanel(ghostRoles, Loc.GetString("player-panel-ghost-role-whitelists"), Color.FromHex("#71f0ca"), _proto, state.GhostRoleWhitelists, state.GlobalWhitelist);
+        var ghostRolePanel = new GhostRoleSetWhitelistPanel(ghostRoles, Loc.GetString("player-panel-ghost-role-whitelists"), Color.FromHex("#71f0ca"), _proto, state.GhostRoleWhitelists /*, state.GlobalWhitelist*/); // Aurora Song: globalWhitelist parameter removed
         ghostRolePanel.OnSetGhostRole += (id, whitelisting) => OnSetGhostRole?.Invoke(id, whitelisting);
         GhostRoles.AddChild(ghostRolePanel);
         // End Frontier

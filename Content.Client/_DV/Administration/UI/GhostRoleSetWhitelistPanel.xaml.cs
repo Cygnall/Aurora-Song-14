@@ -12,7 +12,7 @@ public sealed partial class GhostRoleSetWhitelistPanel : PanelContainer
 {
     public Action<ProtoId<GhostRolePrototype>, bool>? OnSetGhostRole;
 
-    public GhostRoleSetWhitelistPanel(List<ProtoId<GhostRolePrototype>> ghostRoleList, string ghostRoleSetName, Color ghostRoleSetColor, IPrototypeManager proto, HashSet<ProtoId<GhostRolePrototype>> whitelists, bool globalWhitelist)
+    public GhostRoleSetWhitelistPanel(List<ProtoId<GhostRolePrototype>> ghostRoleList, string ghostRoleSetName, Color ghostRoleSetColor, IPrototypeManager proto, HashSet<ProtoId<GhostRolePrototype>> whitelists /*, bool globalWhitelist*/) // Aurora Song: Global whitelist forces all buttons on
     {
         RobustXamlLoader.Load(this);
 
@@ -22,8 +22,8 @@ public sealed partial class GhostRoleSetWhitelistPanel : PanelContainer
             var thisRole = id; // closure capturing funny
             var button = new CheckBox();
             button.Text = Loc.GetString(proto.Index(id).Name);
-            button.Pressed = whitelists.Contains(id) || globalWhitelist;
-            button.OnPressed += _ => OnButtonPressed(thisRole, button, globalWhitelist);
+            button.Pressed = whitelists.Contains(id) /* || globalWhitelist*/; // Aurora Song: OR with globalWhitelist makes all buttons show checked
+            button.OnPressed += _ => OnSetGhostRole?.Invoke(thisRole, button.Pressed); // Aurora Song: Calls OnSetGhostRole directly instead of OnButtonPressed which blocked changes
             RolesContainer.AddChild(button);
 
             allWhitelisted &= button.Pressed;
@@ -32,28 +32,12 @@ public sealed partial class GhostRoleSetWhitelistPanel : PanelContainer
         GhostRoleSet.Text = Loc.GetString(ghostRoleSetName);
         GhostRoleSet.Modulate = ghostRoleSetColor;
         GhostRoleSet.Pressed = allWhitelisted;
-        GhostRoleSet.OnPressed += args => OnDepartmentPressed(ghostRoleList, whitelists, globalWhitelist);
+        GhostRoleSet.OnPressed += args => OnDepartmentPressed(ghostRoleList, whitelists /*, globalWhitelist*/); // Aurora Song: globalWhitelist parameter removed
     }
 
-    // Frontier: global whitelist
-    private void OnButtonPressed(ProtoId<GhostRolePrototype> thisRole, CheckBox button, bool globalWhitelist)
+    // Aurora Song: Simplified ghost role set button handler - removed global whitelist logic
+    private void OnDepartmentPressed(List<ProtoId<GhostRolePrototype>> ghostRoleList, HashSet<ProtoId<GhostRolePrototype>> whitelists)
     {
-        if (globalWhitelist)
-            button.Pressed = true; // Force the button on.
-        else
-            OnSetGhostRole?.Invoke(thisRole, button.Pressed);
-    }
-
-    private void OnDepartmentPressed(List<ProtoId<GhostRolePrototype>> ghostRoleList, HashSet<ProtoId<GhostRolePrototype>> whitelists, bool globalWhitelist)
-    {
-        // Frontier: global override
-        if (globalWhitelist)
-        {
-            GhostRoleSet.Pressed = true;
-            return;
-        }
-        // End Frontier: global override
-
         foreach (var id in ghostRoleList)
         {
             // only request to whitelist roles that aren't already whitelisted, and vice versa
@@ -61,7 +45,6 @@ public sealed partial class GhostRoleSetWhitelistPanel : PanelContainer
                 OnSetGhostRole?.Invoke(id, GhostRoleSet.Pressed);
         }
     }
-    // End Frontier
 
 }
 // End Frontier
