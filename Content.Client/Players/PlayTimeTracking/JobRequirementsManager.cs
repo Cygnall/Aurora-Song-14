@@ -104,7 +104,7 @@ public sealed partial class JobRequirementsManager : ISharedPlaytimeManager
         // Aurora Song: Changed to show both role whitelist status and time requirements
         var whitelistPassed = CheckWhitelist(job, out var whitelistReason);
         var player = _playerManager.LocalSession;
-        
+
         if (player == null)
         {
             if (!whitelistPassed)
