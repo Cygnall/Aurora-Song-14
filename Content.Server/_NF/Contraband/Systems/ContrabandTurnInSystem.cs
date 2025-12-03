@@ -9,6 +9,7 @@ using Content.Server.Station.Systems;
 using Content.Shared._AS.Contraband.Events; // Aurora
 using Content.Shared._AS.Contraband.ScuOutput; // Aurora
 using Content.Shared._AS.License; // Aurora
+using Content.Shared._AS.Weapons.Ranged.Systems; // Aurora Song
 using Content.Shared._NF.Contraband.BUI;
 using Content.Shared._NF.Contraband.Components;
 using Content.Shared._NF.Contraband.Events;
@@ -45,6 +46,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
     [Dependency] private readonly TransformSystem _transform = default!;
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
     [Dependency] private readonly SharedContainerSystem _container = default!; // Aurora
+    [Dependency] private readonly FirearmSerialNumberSystem _serialSystem = default!; // Aurora Song
 
     private EntityQuery<MobStateComponent> _mobQuery;
     private EntityQuery<TransformComponent> _xformQuery;
@@ -348,6 +350,19 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
             ent.Comp.RegisterRecipies.TryGetValue(oldProto, out var newProto);
             var newEnt = SpawnAtPosition(newProto, Transform(oldEnt).Coordinates);
             _transform.SetLocalRotation(newEnt, Angle.Zero);
+
+            // Aurora Song: Transfer serial number for firearms
+            if (TryComp<Content.Shared._AS.Weapons.Ranged.Components.FirearmSerialNumberComponent>(oldEnt, out var oldSerial)
+                && TryComp<Content.Shared._AS.Weapons.Ranged.Components.FirearmSerialNumberComponent>(newEnt, out var newSerial))
+            {
+                if (!string.IsNullOrEmpty(oldSerial.SerialNumber))
+                {
+                    newSerial.SerialNumber = oldSerial.SerialNumber;
+                    newSerial.SerialFiled = oldSerial.SerialFiled;
+                    Dirty(newEnt, newSerial);
+                }
+            }
+            // End Aurora Song
 
             // Transfer items into new ent
             if (TryComp<ContainerManagerComponent>(oldEnt, out var oldManager)

@@ -39,6 +39,7 @@
   - type: Appearance
   - type: StaticPrice
     price: 500
+  - type: FirearmSerialNumber # Aurora Song modification
   - type: ContainerContainer
     containers:
       cell_slot: !type:ContainerSlot
