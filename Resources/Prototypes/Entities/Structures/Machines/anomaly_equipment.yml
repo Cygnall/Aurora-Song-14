@@ -100,7 +100,7 @@
     drawdepth: Mobs
   - type: SpriteFade
   - type: AnomalyVessel
-    pointMultiplier: 2 # Frontier: 2<1.25
+    pointMultiplier: 2 # Frontier: 2<1.25 Aurora Song 1.25>2
   - type: RadiationSource
     intensity: 0.75
     slope: 0.1
@@ -275,10 +275,10 @@
         - RawMaterial # Frontier
     materialWhiteList:
 #    - Plasma # Frontier
-    - Anomalite # Frontier
+    - Bananium # Aurora
     storage: # Frontier
-      Anomalite: 300 # Frontier: one free charge
-    storageLimit: 300 # Frontier: one charge
+      Bananium: 1000 # Frontier: one free charge Aurora: One free charge
+    storageLimit: 1500 # Frontier: one charge Aurora: One free
   # - type: OreSiloClient # Frontier
   - type: Fixtures
     fixtures:

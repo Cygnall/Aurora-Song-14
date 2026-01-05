@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: Cygnall
+# Discord: Vandanna
+
+# Maintainer Info
+# GitHub: Cygnall
+# Discord: Vandanna
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Petrel
+  parent: BaseVessel
+  name: CNS Petrel
+  description: A surplus military dropship outfitted for expeditions.
+  price: 46750 # ~34000 appraise, ~30% markup
+  category: Medium
+  group: Expedition
+  shuttlePath: /Maps/_AS/Shuttles/Expedition/petrel.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  - Salvage
+  engine:
+  - AME
+
+- type: gameMap
+  id: Petrel
+  mapName: 'CNS Petrel'
+  mapPath: /Maps/_AS/Shuttles/Expedition/petrel.yml
+  minPlayers: 0
+  stations:
+    Petrel:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Petrel {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

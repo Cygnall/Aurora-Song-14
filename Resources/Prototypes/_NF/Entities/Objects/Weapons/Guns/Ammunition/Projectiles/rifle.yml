@@ -45,7 +45,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 17 # Damage rebalanced | Aurora
+        Piercing: 19 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle20Overpressure
@@ -56,7 +56,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 20 # Damage rebalanced | Aurora
+        Piercing: 22 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle20Incendiary
@@ -68,7 +68,7 @@
     damage:
       types:
         Blunt: 3 # Incendiary damage rebalanced | Aurora
-        Heat: 16 # Damage rebalanced | Aurora
+        Heat: 18 # Damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle20Uranium
@@ -79,8 +79,8 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 10 # damage rebalanced | Aurora
-        Radiation: 9 # damage rebalanced | Aurora
+        Piercing: 11 # damage rebalanced | Aurora
+        Radiation: 10 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle20Practice
@@ -104,7 +104,7 @@
       types:
         Piercing: 2
   - type: StaminaDamageOnCollide
-    damage: 12 # ~9 hits to stun sounds reasonable, less effective than pistol because rifle round is smaller in size
+    damage: 14 # ~7 hits to stun (100 stamina HP)
 
 #region .25 rifle
 - type: entity
@@ -187,7 +187,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 21 # damage rebalanced | Aurora
+        Piercing: 22 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle30Overpressure
@@ -198,7 +198,7 @@
   - type: Projectile
     damage:
       types:
-        Piercing: 23 # damage rebalanced | Aurora
+        Piercing: 25 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle30Incendiary
@@ -210,7 +210,7 @@
     damage:
       types:
         Blunt: 3 # Incendiary damage rebalanced | Aurora
-        Heat: 16 # damage rebalanced | Aurora
+        Heat: 21 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle30Uranium
@@ -221,8 +221,8 @@
   - type: Projectile
     damage:
       types:
-        Radiation: 9 # damage rebalanced | Aurora
-        Piercing: 10 # damage rebalanced | Aurora
+        Radiation: 12 # damage rebalanced | Aurora
+        Piercing: 12 # damage rebalanced | Aurora
 
 - type: entity
   id: NFBulletRifle30Practice
@@ -246,7 +246,7 @@
       types:
         Piercing: 2
   - type: StaminaDamageOnCollide
-    damage: 14 # ~8 hits to stun sounds reasonable | Aurora
+    damage: 16 # ~6 hits to stun (100 stamina HP)
 
 #region .60 rifle
 - type: entity

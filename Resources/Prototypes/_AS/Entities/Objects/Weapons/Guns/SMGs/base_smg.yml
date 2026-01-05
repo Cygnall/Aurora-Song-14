@@ -64,3 +64,31 @@
     fireRate: 7
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions
+
+#region chamber
+- type: entity
+  id: ASBaseWeaponSubMachineGunChamber40
+  parent: NFBaseWeaponSubMachineGunChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-40
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ASMagazineSubMachineGun40
+        insertSound: /Audio/Weapons/Guns/MagIn/smg_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/smg_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - ASMagazineSubMachineGunPistol40
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: ASCartridgePistol40
+        priority: 1
+        whitelist:
+          tags:
+            - ASCartridgePistol40

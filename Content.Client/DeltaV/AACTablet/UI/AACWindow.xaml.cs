@@ -21,7 +21,7 @@ public sealed partial class AACWindow : FancyWindow
     public event Action? SubmitPressed;
 
     private const float SpaceWidth = 10f;
-    private const float ParentWidth = 540f;
+    private const float ParentWidth = 590f;
     private const int ColumnCount = 4;
 
     private const int ButtonWidth =

@@ -157,6 +157,7 @@
   - NFPouchMime
   - NFPouchCaptain
   - NFPouchCargo
+  - MedicalPouch
   technologyPrerequisites:
   - NFAdvancedBeltTechnology
   position: 2, 3
@@ -420,19 +421,21 @@
   - ClothingOuterHardsuitCap
   - ClothingOuterHardsuitEngineeringWhite # CE
   - ClothingOuterHardsuitLuxury
+
   technologyPrerequisites:
   - NFHardsuitsEngineering
   position: 3, 8
 
 - type: technology
-  id: NFHardsuitsExperimentalRD
-  name: nf-research-technology-hardsuits-experimental-rd
+  id: NFHardsuitsExperimentalProtection
+  name: nf-research-technology-hardsuits-experimental-protection
   entityIcon: ClothingOuterHardsuitRd
   discipline: NFScience
   tier: 1
   cost: 5000
   recipeUnlocks:
   - ClothingOuterHardsuitRd
+  - ClothingOuterHardsuitHostileEnvironment
   prerequisiteLineType: Tree
   technologyPrerequisites:
   - NFSuperParts
@@ -455,6 +458,20 @@
   position: 4, 9
 
 - type: technology
+  id: NFHardsuitsOldWar
+  name: nf-research-technology-hardsuits-old-war
+  entityIcon: ClothingOuterHardsuitSurplus
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - ClothingOuterHardsuitSurplus
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+    - NFHardsuitsArmored
+  position: 5, 10
+
+- type: technology
   id: NFHardsuitsExperimentalIndustrial
   name: nf-research-technology-hardsuits-experimental-industrial
   entityIcon: ClothingOuterHardsuitMaximPrototype
@@ -466,7 +483,7 @@
   - ClothingOuterHardsuitMaximPrototype
   prerequisiteLineType: Tree
   technologyPrerequisites:
-  - NFHardsuitsExperimentalRD
+  - NFHardsuitsExperimentalProtection
   - NFHardsuitsArmored
   position: 5, 8
 
@@ -479,6 +496,7 @@
   cost: 20000
   recipeUnlocks:
   - ClothingOuterHardsuitScaf
+  - ClothingOuterHardsuitNoble
   technologyPrerequisites:
   - NFHardsuitsArmored
   position: 5, 9
@@ -1693,8 +1711,11 @@
   recipeUnlocks:
   - NFAmmunitionBoxPistol35Overpressure
   - NFAmmunitionBoxPistol45Overpressure
+  - ASAmmunitionBoxPistol40Overpressure # Aurora Song
   - NFMagazineHighCapacityPistol35Empty
+  - ASMagazineHighCapacityPistol40Empty # Aurora Song
   - NFMagazineSubMachineGun35Empty
+  - ASMagazineSubMachineGun40Empty # Aurora Song
   - NFMagazineSubMachineGunTopMounted35Empty
   - NFMagazinePistol45Empty
   prerequisiteLineType: Diagonal
@@ -1839,6 +1860,10 @@
   - NFAmmunitionBoxBigRifle20Overpressure
   - NFAmmunitionBoxBigRifle30
   - NFAmmunitionBoxBigRifle30Overpressure
+  - ASAmmunitionBoxBigPistol35 # Aurora Song
+  - ASAmmunitionBoxBigPistol35Overpressure # Aurora Song
+  - ASAmmunitionBoxBigPistol40 # Aurora Song
+  - ASAmmunitionBoxBigPistol40Overpressure # Aurora Song
   technologyPrerequisites:
   - NFImprovedRifleAmmo
   position: 3, 44

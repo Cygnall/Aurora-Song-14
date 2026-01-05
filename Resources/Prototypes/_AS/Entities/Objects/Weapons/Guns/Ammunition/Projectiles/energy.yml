@@ -88,3 +88,26 @@
       types:
         Heat: 13
 
+#region KineticBolt gamble - Aurora
+- type: entity
+  id: ASBulletKineticGambling # Aurora
+  name: kinetic bolt
+  parent: BulletKinetic
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    impactEffect: BulletImpactEffectKinetic
+    damage:
+      types:
+        Blunt: 1
+        Structural: 30
+  - type: Ammo
+    muzzleFlash: HitscanEffect
+  - type: TimedDespawn
+    lifetime: 1.5
+  - type: PointLight
+    radius: 2.5
+    color: white
+    energy: 0.5
+  - type: MiningGatheringHard
+#endregion KineticBolt gamle - Aurora

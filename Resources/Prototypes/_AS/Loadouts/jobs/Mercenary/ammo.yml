@@ -1,0 +1,166 @@
+- type: loadoutGroup
+  id: MercenaryAmmo
+  name: loadout-group-mercenary-ammo
+  minLimit: 0
+  maxLimit: 3
+  loadouts:
+  - MercenaryAmmoPistol35
+  - MercenaryAmmoPistol35Rubber
+  - MercenaryAmmoPistol40
+  - MercenaryAmmoPistol40Rubber
+  - MercenaryAmmoPistol45
+  - MercenaryAmmoPistol45Rubber
+  - MercenaryAmmoShotgun12Buckshot
+  - MercenaryAmmoShotgun12Beanbag
+  - MercenaryAmmoRifle20
+  - MercenaryAmmoRifle20Rubber
+  - MercenaryAmmoRifle30
+  - MercenaryAmmoRifle30Rubber
+  - MercenaryAmmoMagPistol35
+  - MercenaryAmmoMagPistol35HighCap
+  - MercenaryAmmoMagPistol40
+  - MercenaryAmmoMagPistol40HighCap
+  - MercenaryAmmoSpeedLoaderPistol45
+  - MercenaryAmmoClipRifle20
+  - MercenaryAmmoMagRifle30Short
+  - MercenaryAmmoMagRifle30
+
+- type: loadout
+  id: MercenaryAmmoPistol35
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxPistol35
+
+- type: loadout
+  id: MercenaryAmmoPistol35Rubber
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxPistol35Rubber
+
+- type: loadout
+  id: MercenaryAmmoPistol40
+  price: 300
+  storage:
+    back:
+    - ASAmmunitionBoxPistol40
+
+- type: loadout
+  id: MercenaryAmmoPistol40Rubber
+  price: 300
+  storage:
+    back:
+    - ASAmmunitionBoxPistol40Rubber
+
+- type: loadout
+  id: MercenaryAmmoPistol45
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxPistol45
+
+- type: loadout
+  id: MercenaryAmmoPistol45Rubber
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxPistol45Rubber
+
+- type: loadout
+  id: MercenaryAmmoShotgun12Buckshot
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxShellShotgunBuckshot
+
+- type: loadout
+  id: MercenaryAmmoShotgun12Beanbag
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxShellShotgunBeanbag
+
+- type: loadout
+  id: MercenaryAmmoRifle20
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxRifle20
+
+- type: loadout
+  id: MercenaryAmmoRifle20Rubber
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxRifle20Rubber
+
+- type: loadout
+  id: MercenaryAmmoRifle30
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxRifle30
+
+- type: loadout
+  id: MercenaryAmmoRifle30Rubber
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxRifle30Rubber
+
+- type: loadout
+  id: MercenaryAmmoMagPistol35
+  price: 300
+  storage:
+    back:
+    - NFMagazinePistol35
+
+- type: loadout
+  id: MercenaryAmmoMagPistol35HighCap
+  price: 2000
+  storage:
+    back:
+    - NFMagazineHighCapacityPistol35
+
+- type: loadout
+  id: MercenaryAmmoMagPistol40
+  price: 300
+  storage:
+    back:
+    - ASMagazinePistol40
+
+- type: loadout
+  id: MercenaryAmmoMagPistol40HighCap
+  price: 2000
+  storage:
+    back:
+    - ASMagazineHighCapacityPistol40
+
+- type: loadout
+  id: MercenaryAmmoSpeedLoaderPistol45
+  price: 300
+  storage:
+    back:
+    - NFSpeedLoaderPistol45
+
+- type: loadout
+  id: MercenaryAmmoClipRifle20
+  price: 300
+  storage:
+    back:
+    - NFMagazineClipRifle20
+
+- type: loadout
+  id: MercenaryAmmoMagRifle30Short
+  price: 300
+  storage:
+    back:
+    - NFMagazineLowCapacityRifle30
+
+- type: loadout
+  id: MercenaryAmmoMagRifle30
+  price: 2000
+  storage:
+    back:
+    - NFMagazineRifle30

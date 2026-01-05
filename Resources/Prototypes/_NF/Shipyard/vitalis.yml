@@ -3,7 +3,7 @@
   id: Vitalis
   name: CTC Vitalis
   description: A medium medical support vessel designed for cryogenic deployment.
-  price: 75000 #62702 0.2 75242.4
+  price: 83000 #75000 #62702 0.2 75242.4 #Aurora Song
   category: Medium
   group: Medical
   access: Medical # Aurora
@@ -12,7 +12,7 @@
   class:
   - Medical
   engine:
-  - Uranium
+  - AME #Aurora Song
 
 - type: gameMap
   id: Vitalis

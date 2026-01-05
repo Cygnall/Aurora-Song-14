@@ -30,6 +30,22 @@
       - ExchangeUplink
 
 # Weapons
+- type: listing
+  id: UplinkExchangeAP4C
+  name:  uplink-exchange-ap4c-name
+  description: uplink-exchange-ap4c-desc
+  productEntity: ASWeaponSubMachineGunAP4C
+  icon: { sprite: _AS/Objects/Weapons/Guns/SMGs/ap4c.rsi, state: icon }
+  cost:
+    ExchangeCoin: 30
+  categories:
+  - UplinkExchangeWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
 #- type: listing
 #  id: UplinkMercenaryWeaponSurpLecter
 #  name:  uplink-mercenary-rifle1-name

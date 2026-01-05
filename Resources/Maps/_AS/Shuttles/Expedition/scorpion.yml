@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Grid
-  engineVersion: 261.2.1
+  engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 09/17/2025 00:26:59
-  entityCount: 894
+  time: 12/03/2025 06:00:23
+  entityCount: 896
 maps: []
 grids:
 - 1
@@ -109,6 +109,13 @@ entities:
             656: -1,-19
             657: -2,-19
             658: -3,-19
+        - node:
+            color: '#FFFFFFFF'
+            id: BotGreyscale
+          decals:
+            681: -11,-19
+            682: -12,-19
+            683: -13,-19
         - node:
             color: '#FFFFFFFF'
             id: BrickTileDarkCornerNe
@@ -1256,18 +1263,17 @@ entities:
       parent: 1
     - type: DeviceList
       devices:
-      - 483
-      - 496
-      - 495
-      - 482
-      - 486
-      - 501
-      - 485
-      - 500
+      - 326
+      - 318
+      - 317
+      - 316
+      - 321
+      - 320
+      - 319
+      - 481
+      - 497
       - 494
       - 493
-      - 502
-      - 487
   - uid: 5
     components:
     - type: Transform
@@ -1282,6 +1288,44 @@ entities:
       - 495
       - 496
       - 483
+  - uid: 606
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 4.5,-13.5
+      parent: 1
+    - type: DeviceList
+      devices:
+      - 502
+      - 487
+      - 328
+  - uid: 895
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 1.5,-20.5
+      parent: 1
+    - type: DeviceList
+      devices:
+      - 491
+      - 498
+      - 499
+      - 484
+      - 500
+      - 485
+      - 501
+      - 486
+      - 324
+      - 325
+      - 328
+      - 319
+      - 321
+      - 320
+      - 316
+      - 317
+      - 318
+      - 322
+      - 323
 - proto: AirlockAtmosphericsGlass
   entities:
   - uid: 6
@@ -3114,6 +3158,8 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 895
+      - 4
   - uid: 317
     components:
     - type: Transform
@@ -3122,6 +3168,8 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 895
+      - 4
   - uid: 318
     components:
     - type: Transform
@@ -3130,6 +3178,8 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 895
+      - 4
   - uid: 319
     components:
     - type: Transform
@@ -3138,6 +3188,8 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 895
+      - 4
   - uid: 320
     components:
     - type: Transform
@@ -3146,6 +3198,8 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 895
+      - 4
   - uid: 321
     components:
     - type: Transform
@@ -3154,6 +3208,8 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 895
+      - 4
 - proto: FirelockGlass
   entities:
   - uid: 322
@@ -3165,6 +3221,7 @@ entities:
       deviceLists:
       - 2
       - 315
+      - 895
   - uid: 323
     components:
     - type: Transform
@@ -3174,6 +3231,7 @@ entities:
       deviceLists:
       - 2
       - 315
+      - 895
   - uid: 324
     components:
     - type: Transform
@@ -3183,6 +3241,7 @@ entities:
       deviceLists:
       - 3
       - 315
+      - 895
   - uid: 325
     components:
     - type: Transform
@@ -3192,6 +3251,7 @@ entities:
       deviceLists:
       - 3
       - 315
+      - 895
   - uid: 326
     components:
     - type: Transform
@@ -3201,6 +3261,7 @@ entities:
       deviceLists:
       - 5
       - 315
+      - 4
   - uid: 327
     components:
     - type: Transform
@@ -3217,6 +3278,8 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 895
+      - 606
 - proto: FloorDrain
   entities:
   - uid: 329
@@ -4428,6 +4491,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 4
   - uid: 482
     components:
     - type: Transform
@@ -4437,7 +4501,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 5
-      - 4
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 483
@@ -4448,7 +4511,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 5
-      - 4
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 484
@@ -4457,6 +4519,9 @@ entities:
       rot: 3.141592653589793 rad
       pos: -8.5,-15.5
       parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 895
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 485
@@ -4467,7 +4532,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       deviceLists:
-      - 4
+      - 895
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 486
@@ -4478,7 +4543,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       deviceLists:
-      - 4
+      - 895
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 487
@@ -4489,7 +4554,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       deviceLists:
-      - 4
+      - 606
     - type: AtmosPipeColor
       color: '#0055CCFF'
   - uid: 488
@@ -4531,6 +4596,9 @@ entities:
       rot: 3.141592653589793 rad
       pos: 7.5,-15.5
       parent: 1
+    - type: DeviceNetwork
+      deviceLists:
+      - 895
     - type: AtmosPipeColor
       color: '#0055CCFF'
 - proto: GasVentScrubber
@@ -4576,7 +4644,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 5
-      - 4
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 496
@@ -4587,7 +4654,6 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 5
-      - 4
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 497
@@ -4599,6 +4665,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 4
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 498
@@ -4609,6 +4676,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 895
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 499
@@ -4619,6 +4687,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 315
+      - 895
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 500
@@ -4628,7 +4697,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       deviceLists:
-      - 4
+      - 895
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 501
@@ -4638,7 +4707,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       deviceLists:
-      - 4
+      - 895
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 502
@@ -4649,7 +4718,7 @@ entities:
       parent: 1
     - type: DeviceNetwork
       deviceLists:
-      - 4
+      - 606
     - type: AtmosPipeColor
       color: '#990000FF'
   - uid: 503
@@ -5070,37 +5139,37 @@ entities:
     - type: Transform
       pos: -6.5,-11.5
       parent: 1
-- proto: PottedPlantRandom
+- proto: PottedPlant21
   entities:
   - uid: 566
     components:
     - type: Transform
-      pos: 3.5,-15.5
+      pos: -4.5,-15.5
       parent: 1
   - uid: 567
     components:
     - type: Transform
-      pos: -4.5,-15.5
+      pos: 3.5,-15.5
       parent: 1
   - uid: 568
     components:
     - type: Transform
-      pos: -0.5,-13.5
+      pos: -0.5,-9.5
       parent: 1
   - uid: 569
     components:
     - type: Transform
-      pos: -0.5,-9.5
+      pos: -0.5,-13.5
       parent: 1
   - uid: 570
     components:
     - type: Transform
-      pos: -8.5,-15.5
+      pos: 7.5,-15.5
       parent: 1
   - uid: 571
     components:
     - type: Transform
-      pos: 7.5,-15.5
+      pos: -8.5,-15.5
       parent: 1
 - proto: PoweredLEDLightPostSmall
   entities:
@@ -5311,11 +5380,6 @@ entities:
     - type: Transform
       pos: -6.5,-13.5
       parent: 1
-  - uid: 606
-    components:
-    - type: Transform
-      pos: 4.5,-13.5
-      parent: 1
   - uid: 607
     components:
     - type: Transform
@@ -5355,6 +5419,12 @@ entities:
     components:
     - type: Transform
       pos: -11.5,-17.5
+      parent: 1
+  - uid: 896
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 5.5,-13.5
       parent: 1
 - proto: ReinforcedWindow
   entities:

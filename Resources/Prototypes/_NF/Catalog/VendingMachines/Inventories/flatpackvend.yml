@@ -13,13 +13,13 @@
     ScrapProcessorFlatpack: 4294967295 # Infinite
     ShuttleGunKineticFlatpack: 4294967295 # Infinite
     # Service
-    ServiceTechFabFlatpack: 4294967295 # Infinite #Aurora Restored
+    ServiceTechFabFlatpack: 4294967295 # Infinite Aurora Restored
     CutterMachineFlatpack: 4294967295 # Infinite
     ComputerWithdrawBankATMFlatpack: 4294967295 # Infinite
     TelevisionFlatpack: 4294967295 # Infinite
-    UniformPrinterFlatpack: 6 # Loadouts are a thing
+    UniformPrinterFlatpack: 6 # Loadouts are a thing Aurora Restored
     # Engineering
-    EngineeringTechFabFlatpack: 4294967295 # Infinite
+    EngineeringTechFabFlatpack: 4294967295 # Infinite Aurora Restored
     MaterialSiloFlatpack: 4294967295 # Infinite
 
     MachineFlatpackerFlatpack: 4294967295 # Infinite
@@ -36,8 +36,8 @@
     GyroscopeFlatpack: 4294967295 # Infinite
     SmallGyroscopeFlatpack: 4294967295 # Infinite
     SmallThrusterFlatpack: 4294967295 # Infinite
-    ProtolatheFlatpack: 4294967295 # Infinite
-    ComputerResearchAndDevelopmentFlatpack: 4294967295 # Infinite
+    ProtolatheFlatpack: 4294967295 # Infinite Aurora
+    ComputerResearchAndDevelopmentFlatpack: 4294967295 # Infinite Aurora
     SpaceHeaterFlatpack: 4294967295 # Infinite
     AirlockFlatpack: 4294967295 # Infinite
     AirlockGlassFlatpack: 4294967295 # Infinite

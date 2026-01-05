@@ -548,15 +548,15 @@ public sealed partial class ChatUIController : UIController
             // TODO: this logic is iffy (checking if controlling something that's NOT a ghost), is there a better way to check this?
             if (_ghost is not {IsGhost: true})
             {
-                FilterableChannels |= ChatChannel.Subtle;
-                FilterableChannels |= ChatChannel.SubtleOOC;
+                FilterableChannels |= ChatChannel.Subtle; // Den
+                FilterableChannels |= ChatChannel.SubtleOOC; // Den
 
                 CanSendChannels |= ChatSelectChannel.Local;
                 CanSendChannels |= ChatSelectChannel.Whisper;
                 CanSendChannels |= ChatSelectChannel.Radio;
                 CanSendChannels |= ChatSelectChannel.Emotes;
                 CanSendChannels |= ChatSelectChannel.Subtle; // Floofstation
-                CanSendChannels |= ChatSelectChannel.SubtleOOC;
+                CanSendChannels |= ChatSelectChannel.SubtleOOC; // Den
             }
         }
 
@@ -567,6 +567,7 @@ public sealed partial class ChatUIController : UIController
             CanSendChannels |= ChatSelectChannel.Dead;
         }
 
+        // Den, allow aghosts to see subtle conversations
         if (_admin.HasFlag(AdminFlags.Pii) && _ghost is { IsGhost: true })
         {
             FilterableChannels |= ChatChannel.Subtle;

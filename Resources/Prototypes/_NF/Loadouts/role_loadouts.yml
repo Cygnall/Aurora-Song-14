@@ -53,7 +53,7 @@
   id: JobMercenary
   groups:
   - MercenaryHead
-  - ContractorNeck
+  - MercenaryNeck # Aurora Song
   - MercenaryJumpsuit
   - MercenaryGloves
   - MercenaryBackpack
@@ -72,6 +72,9 @@
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
+  - MercenaryLongarm # Aurora's Song
+  - MercenarySidearm # Aurora's Song
+  - MercenaryAmmo # Aurora's Song
   - NFSpeciesSpecific
 
 # region Frontier

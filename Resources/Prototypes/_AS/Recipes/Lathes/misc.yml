@@ -17,3 +17,23 @@
   id: BlueFlashlight
   result: ASFlashlightBlue
   parent: FlashlightSecliteNF
+
+- type: latheRecipe
+  id: MagentaLedLightTube
+  result: MagentaLedLightTube
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  id: BlueLedLightTube
+  result: BlueLedLightTube
+  parent: NFBaseLightTubeRecipe
+
+- type: latheRecipe
+  parent: BaseLightRecipe
+  id: MagentaLedLightBulb
+  result: MagentaLedLightBulb
+
+- type: latheRecipe
+  parent: BaseLightRecipe
+  id: BlueLedLightBulb
+  result: BlueLedLightBulb

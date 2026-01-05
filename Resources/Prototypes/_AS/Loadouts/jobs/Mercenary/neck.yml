@@ -1,0 +1,6 @@
+- type: loadout
+  id: MercenaryClothingNeckMantleMercenary
+  name: elite mercenary's mantle
+  price: 1000
+  equipment:
+    neck: ASClothingNeckMantleMercenaryElite

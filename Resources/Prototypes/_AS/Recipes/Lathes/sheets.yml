@@ -1,0 +1,7 @@
+﻿- type: latheRecipe
+  id: MaterialBananiumAnomalite1
+  result: MaterialBananium1
+  applyMaterialDiscount: false
+  completetime: 0.06 # Frontier: 0<0.06 (~2/30)
+  materials:
+    Anomalite: 30

@@ -5102,3 +5102,406 @@ Entries:
   id: 8860
   time: '2025-11-21T20:45:11.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/618
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: 'Made SLE and Medic bluespace events happen on their own schedule '
+  id: 8861
+  time: '2025-11-23T20:56:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/619
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: 'Reduced Topical Self Application Time '
+  id: 8862
+  time: '2025-11-26T13:27:38.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/625
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Zombie enemy mob type
+    - type: Add
+      message: Zombie expeditions
+    - type: Add
+      message: Some biohazard-themed clothing
+  id: 8863
+  time: '2025-12-03T15:43:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/632
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: Added Elite Mercenary Mantle
+  id: 8864
+  time: '2025-12-09T19:58:11.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/638
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Removed the blood cult cat's implant
+  id: 8865
+  time: '2025-11-26T14:05:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/622
+- author: assignedgod
+  changes:
+    - type: Fix
+      message: Arachnids teeth no longer stick out of they suit
+  id: 8866
+  time: '2025-11-26T14:13:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/611
+- author: assignedgod
+  changes:
+    - type: Remove
+      message: Removed the derelict mcargo from spawning in the pool
+  id: 8867
+  time: '2025-11-26T20:12:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/621
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added a new expedition ship, the Master!
+  id: 8868
+  time: '2025-11-28T19:09:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/620
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Ported Magic Spraypainter from frontier, find this in loadout selection.
+  id: 8869
+  time: '2025-11-29T04:14:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/626
+- author: assignedgod
+  changes:
+    - type: Add
+      message: gave fairies a glow radius!
+  id: 8870
+  time: '2025-11-30T02:33:46.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/629
+- author: Vandanna
+  changes:
+    - type: Add
+      message: chain shutters
+    - type: Add
+      message: shower heads
+  id: 8871
+  time: '2025-11-30T20:51:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/624
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Buffed tranex!!!
+  id: 8872
+  time: '2025-11-30T21:10:29.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/628
+- author: Zenixic
+  changes:
+    - type: Tweak
+      message: 'Properly linked air alarms on the scorpion '
+  id: 8873
+  time: '2025-12-03T15:57:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/631
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: SLEFab accepts blueprints now
+  id: 8874
+  time: '2025-12-03T16:32:40.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/633
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Six new QuickPhrases for AAC Tablet
+  id: 8875
+  time: '2025-12-04T16:57:33.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/635
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: add zombie Vroid to scheduler
+  id: 8876
+  time: '2025-12-04T17:21:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/634
+- author: Vandanna
+  changes:
+    - type: Add
+      message: the CNS Petrel
+  id: 8877
+  time: '2025-12-07T04:34:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/636
+- author: Zenixic
+  changes:
+    - type: Add
+      message: Added a new track to exped end songs.
+  id: 8878
+  time: '2025-12-05T00:50:20.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/630
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: CNS Petrel EVA areas vacuum-marked, now
+  id: 8879
+  time: '2025-12-07T06:12:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/637
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: CNS Petrel - add some QoL, some color, and a telecomm server
+  id: 8880
+  time: '2025-12-07T19:47:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/639
+- author: Phoenix51505
+  changes:
+    - type: Add
+      message: Adds new slime sounds
+  id: 8881
+  time: '2025-12-09T04:14:15.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/640
+- author: SketchiiArtist
+  changes:
+    - type: Add
+      message: Added sausage casings
+    - type: Add
+      message: Added raw sausages
+    - type: Add
+      message: Added sausages
+    - type: Add
+      message: Added hotdogs
+  id: 8882
+  time: '2025-12-09T04:14:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/643
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Petrel, posters
+    - type: Fix
+      message: Harvester, several mapping issues
+  id: 8883
+  time: '2025-12-09T05:25:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/641
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: Changed the size of the AAC tablet menu to accomodate new tabs
+  id: 8884
+  time: '2025-12-09T18:33:38.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/644
+- author: Vandanna
+  changes:
+    - type: Tweak
+      message: buffed .20 rifle ammunition
+    - type: Tweak
+      message: buffed .30 rifle ammunition
+  id: 8885
+  time: '2025-12-09T18:55:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/645
+- author: SketchiiArtist
+  changes:
+    - type: Add
+      message: Added burrito
+    - type: Add
+      message: Added quesadilla
+    - type: Add
+      message: Added tamale
+    - type: Add
+      message: Added sour cream
+    - type: Add
+      message: Added salsa
+  id: 8886
+  time: '2025-12-09T19:55:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/642
+- author: Jakumba
+  changes:
+    - type: Tweak
+      message: Changed belts to layer on top of outerwear again.
+  id: 8887
+  time: '2025-12-10T19:57:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/646
+- author: Vandanna
+  changes:
+    - type: Add
+      message: .40cal ammo and subsystems
+    - type: Add
+      message: AP4C SMG
+    - type: Fix
+      message: Vandanna's copyright attributions
+  id: 8888
+  time: '2025-12-10T20:05:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/586
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: PDAs can no longer be sentient
+  id: 8889
+  time: '2025-12-11T15:50:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/650
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: 'Allowed AAC Tablets to whisper '
+  id: 8890
+  time: '2025-12-11T16:10:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/652
+- author: assignedgod
+  changes:
+    - type: Remove
+      message: Removed practice ammo from loot table spawns
+  id: 8891
+  time: '2025-12-11T16:10:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/647
+- author: Vandanna
+  changes:
+    - type: Add
+      message: longarm, sidearm, ammo loadout categories for Mercs
+  id: 8892
+  time: '2025-12-11T20:45:36.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/653
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: >-
+        Anomalies reverted to upstream values and bannanium is now used for
+        them. Anomalite now used for late game sci recipes. 
+  id: 8893
+  time: '2025-12-11T20:46:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/651
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added Bananium refinement from anomalite
+  id: 8894
+  time: '2025-12-11T21:09:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/654
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added magenta and blue lightbulbs and light tubes!
+  id: 8895
+  time: '2025-12-11T21:15:45.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/649
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Hard projectiles can now mine soft asteroids
+  id: 8896
+  time: '2025-12-11T21:18:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/648
+- author: GreyScaleHarlequin
+  changes:
+    - type: Tweak
+      message: CCVar limit on descriptions increased by x4
+  id: 8897
+  time: '2025-12-12T00:03:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/655
+- author: Phoenix51505
+  changes:
+    - type: Tweak
+      message: Softened colours of syndice hardsuit lights
+    - type: Tweak
+      message: Increased brightness and radius of CE hardsuit light
+  id: 8898
+  time: '2025-12-15T19:54:29.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/658
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Re-enabled the santa anomaly. Look out for dangerous presents!
+  id: 8899
+  time: '2025-12-16T18:27:54.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/660
+- author: assignedgod
+  changes:
+    - type: Add
+      message: Added wizard uiv changes from upstream
+    - type: Add
+      message: Added inflatable wall changes from upstream
+    - type: Fix
+      message: Added weightlessness fixes from upstream
+  id: 8900
+  time: '2025-12-16T18:33:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/659
+- author: Vandanna
+  changes:
+    - type: Add
+      message: port of PR 4147 from NF, add PDA timers
+  id: 8901
+  time: '2025-12-16T20:53:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/663
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Medic Hardsuit
+    - type: Fix
+      message: Medic Gear Vend uses proper suffix
+    - type: Remove
+      message: PrivSec suit from Medic Gear Vend
+  id: 8902
+  time: '2025-12-16T20:58:12.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/662
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: load-bearing inflatable-floor.png. I'm having flashbacks.
+  id: 8903
+  time: '2025-12-17T15:43:28.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/666
+- author: assignedgod
+  changes:
+    - type: Add
+      message: 'Cherry picked PR #3690 from NF, cleaning up lathe code'
+    - type: Add
+      message: 'Cherry picked PR # 4098 from NF, adding new arcadia clothes'
+    - type: Add
+      message: >-
+        Cherry picked PR # 4047 from NF, adding some filled RPEDs to admin spawn
+        lists
+    - type: Add
+      message: 'Cherry picked PR # 4015 from NF, adding cloth to material lockers '
+    - type: Add
+      message: >-
+        Cherry picked PR # 4116 from NF, adding new leg holsters and drop
+        sheathes
+    - type: Add
+      message: 'Cherry picked PR # 3048 from NF, adding portable SMES'
+    - type: Add
+      message: >-
+        Cherry picked PR # 3851 from NF, adding colored lights to the service
+        fab
+    - type: Add
+      message: 'Cherry picked PR # 4087 from NF, overhauling dungeon loot spawns'
+    - type: Add
+      message: 'Cherry picked PR # 3769 from NF, adding new hardsuits'
+    - type: Add
+      message: 'Cherry picked PR # 4028 from NF, adding a new lathe'
+    - type: Add
+      message: 'Cherry picked PR # 4029 from NF, adding a new plant the glowshroom'
+    - type: Add
+      message: 'Cherry picked PR # 3828 from NF, adding medical pouches from wizden'
+    - type: Add
+      message: 'Cherry picked PR # 4095  from NF, tweaking pouch size'
+    - type: Add
+      message: 'Cherry picked PR # 3927 from NF, making blueprints nondepartmental'
+    - type: Add
+      message: 'Cherry picked PR # 3668 from NF, making stimulants injectors less lethal'
+  id: 8904
+  time: '2025-12-18T17:08:15.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/661
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: Moved the new modified vitalis the the NF namespace
+  id: 8905
+  time: '2025-12-18T17:08:32.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/667
+- author: assignedgod
+  changes:
+    - type: Remove
+      message: Removed mines from explorer backpacks
+  id: 8906
+  time: '2025-12-19T03:55:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/668
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: NPC pathing, behaviors, and performance
+  id: 8907
+  time: '2025-12-19T19:55:57.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/664

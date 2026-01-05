@@ -4,3 +4,7 @@ loadout-group-medic-ears = ears
 loadout-group-medic-glasses = glasses
 loadout-group-medic-belt = belt
 loadout-group-medic-outerclothing = outer clothing
+
+loadout-group-mercenary-longarm = longarm
+loadout-group-mercenary-sidearm = sidearm
+loadout-group-mercenary-ammo = ammo

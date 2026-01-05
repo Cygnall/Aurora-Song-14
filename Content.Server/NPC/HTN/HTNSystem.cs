@@ -211,9 +211,6 @@ public sealed class HTNSystem : EntitySystem
                 return;
             }
 
-            if (!comp.Enabled)
-                continue;
-
             if (!IsNPCActive(uid))  // Frontier
                 continue; // Frontier
 
@@ -310,22 +307,18 @@ public sealed class HTNSystem : EntitySystem
         count = 0;
     }
 
-    // Frontier: skip handling entities on unloaded chunks
-    private bool IsNPCActive(EntityUid entity)
+    // Frontier: prevent unneded NPC activity
+    private bool IsNPCActive(EntityUid entity) // Frontier
     {
         var transform = Transform(entity);
 
-        // No map - entity is on expedition
         if (!_mapQuery.TryGetComponent(transform.MapUid, out var worldComponent))
             return true;
 
-        // No loaded chunk, can't be active.
-        if (!_world.TryGetChunk(WorldGen.WorldToChunkCoords(_transform.GetWorldPosition(transform)).Floored(), transform.MapUid.Value, out var chunk, worldComponent))
-            return false;
+        var chunk = _world.GetOrCreateChunk(WorldGen.WorldToChunkCoords(_transform.GetWorldPosition(transform)).Floored(), transform.MapUid.Value, worldComponent);
 
         return _loadedQuery.TryGetComponent(chunk, out var loaded) && loaded.Loaders is not null;
     }
-    // End Frontier: skip handling entities on unloaded chunks
 
     private void AppendDebugText(HTNTask task, StringBuilder text, List<int> planBtr, List<int> btr, ref int level)
     {

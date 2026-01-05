@@ -160,6 +160,7 @@
   # MiscellaneousItemsOrganization
   - NFPouchFirstAid
   - NFPouchFirstAidAlt
+  - MedicalPouch
   # ChemicalDispensary
   - ChemMasterMachineCircuitboard
   - ChemDispenserMachineCircuitboard
@@ -186,6 +187,8 @@
   # HardsuitsArmored
   - ClothingOuterHardsuitMercenary
   - ClothingOuterHardsuitPrivateSecurity
+  # HardsuitsOldWar
+  - ClothingOuterHardsuitSurplus
   # ArsenalStyle
   - ClothingEyesPunkInfoShades
   - ClothingOuterArmorPunkRandomized
@@ -206,6 +209,7 @@
   - ClothingOuterCoatBomberRandomized
   # HardsuitsArmoredAdvanced
   - ClothingOuterHardsuitScaf
+  - ClothingOuterHardsuitNoble
   # MiscellaneousItemsOrganization
   - NFPouchMercenary
   - NFPouchPrivateSecurity
@@ -315,8 +319,9 @@
   - DeviceDesynchronizer
   # MagnetsTechAdvanced
   - ClothingShoesBootsMagAdv
-  # HardsuitsExperimentalRD
+  # HardsuitsExperimentalProtection
   - ClothingOuterHardsuitRd
+  - ClothingOuterHardsuitHostileEnvironment
   # IndustrialEngineering
   - ProtolatheHyperConvectionMachineCircuitboard
   # AdvancedToolsTechnology
@@ -427,6 +432,7 @@
   - NFAmmunitionBoxRifle20
   - NFAmmunitionBoxRifle30
   - NFAmmunitionBoxPistol35
+  - ASAmmunitionBoxPistol40 # Aurora Song
   - NFAmmunitionBoxPistol45
   - NFSpeedLoaderPistol35Empty
   - NFSpeedLoaderPistol45Empty
@@ -450,9 +456,12 @@
   - NFForensicPad
   # ImprovedPistolAmmo
   - NFAmmunitionBoxPistol35Overpressure
+  - ASAmmunitionBoxPistol40Overpressure # Aurora Song
   - NFAmmunitionBoxPistol45Overpressure
   - NFMagazineHighCapacityPistol35Empty
+  - ASMagazineHighCapacityPistol40Empty # Aurora Song
   - NFMagazineSubMachineGun35Empty
+  - ASMagazineSubMachineGun40Empty # Aurora Song
   - NFMagazineSubMachineGunTopMounted35Empty
   - NFMagazinePistol45Empty
   # ImprovedRifleAmmo
@@ -468,6 +477,10 @@
   - NFAmmunitionBoxBigRifle20Overpressure
   - NFAmmunitionBoxBigRifle30
   - NFAmmunitionBoxBigRifle30Overpressure
+  - ASAmmunitionBoxBigPistol35 # Aurora Song
+  - ASAmmunitionBoxBigPistol35Overpressure # Aurora Song
+  - ASAmmunitionBoxBigPistol40 # Aurora Song
+  - ASAmmunitionBoxBigPistol40Overpressure # Aurora Song
   # NFAdvancedRiotControl
   - NFTelescopicShield
   # NFExplosiveTechnology

@@ -25,7 +25,9 @@
         mask:
         - FullTileMask
         layer:
-        - WallLayer
+        - MidImpassable # Aurora's Song - Change from 'WallLayer' to Mid/Low/Bullet Bullets can hit barricade, but NPCs can shoot over it
+        - LowImpassable
+        - BulletImpassable
   - type: Damageable
     damageModifierSet: Wood
     damageContainer: StructuralInorganic
@@ -108,7 +110,9 @@
         mask:
         - FullTileMask
         layer:
-        - WallLayer
+        - MidImpassable
+        - LowImpassable
+        - BulletImpassable # Aurora's Song: Bullets can hit barricade, but NPCs can shoot over it
   - type: Tag
     tags:
     - Wooden

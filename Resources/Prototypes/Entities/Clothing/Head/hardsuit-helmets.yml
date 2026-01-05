@@ -430,6 +430,8 @@
       - state: equipped-head-harpy
   - type: PointLight
     color: "#daffad"
+    radius: 8 # Aurora Song
+    energy: 3 #Aurora Song
   - type: PressureProtection
     highPressureMultiplier: 0.08
     lowPressureMultiplier: 1000
@@ -538,7 +540,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndicate.rsi
   - type: PointLight
-    color: green
+    color: "#A9E2A9" # Aurora
     radius: 6 # Aurora
   - type: PressureProtection
     highPressureMultiplier: 0.08
@@ -567,7 +569,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndiemedic.rsi
   - type: PointLight
-    color: green
+    color: "#A9E2A9" # Aurora
     radius: 6 # Aurora
   - type: PressureProtection
     highPressureMultiplier: 0.08
@@ -592,7 +594,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndieelite.rsi
   - type: PointLight
-    color: red
+    color: "#FF9999" #Aurora
     radius: 6 # Aurora
   - type: PressureProtection
     highPressureMultiplier: 0.08
@@ -626,7 +628,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndiecommander.rsi
   - type: PointLight
-    color: green
+    color: "#A9E2A9" # Aurora
     radius: 6 # Aurora
   - type: PressureProtection
     highPressureMultiplier: 0.08

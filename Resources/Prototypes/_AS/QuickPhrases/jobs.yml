@@ -74,3 +74,33 @@
   parent: BaseCommandJobPhrase
   id: JobStationRepresentative
   text: job-name-station-representative
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobCivilian
+  text: job-name-civilian
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobCitizen
+  text: job-name-citizen
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobContractor
+  text: job-name-contractor  # Uses NF locale
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobPilot
+  text: job-name-pilot  # Uses NF locale
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobMercenary
+  text: job-name-mercenary  # Uses NF locale
+
+- type: quickPhrase
+  parent: BaseEngineeringJobPhrase
+  id: JobTechnician
+  text: job-name-technician

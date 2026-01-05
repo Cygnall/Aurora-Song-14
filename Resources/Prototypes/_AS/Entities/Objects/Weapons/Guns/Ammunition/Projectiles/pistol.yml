@@ -1,0 +1,87 @@
+# Aurora Song
+#region .40 pistol
+- type: entity
+  id: ASBulletPistol40
+  name: bullet (.40 pistol)
+  parent: NFBaseBullet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 17
+        Structural: 2
+
+- type: entity
+  id: ASBulletPistol40Overpressure
+  name: bullet (.40 pistol, overpressure)
+  parent: NFBaseBulletOverpressure
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 19
+        Structural: 3
+
+- type: entity
+  id: ASBulletPistol40Incendiary
+  name: bullet (.40 pistol, incendiary)
+  parent: NFBaseBulletIncendiary
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+        Heat: 15 # 18 total damage
+
+- type: entity
+  id: ASBulletPistol40Uranium
+  parent: NFBaseBulletUranium
+  name: bullet (.40 pistol, uranium)
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 10
+        Radiation: 8 # 18 total damage
+
+- type: entity
+  id: ASBulletPistol40Practice
+  name: bullet (.40 pistol, practice)
+  parent: NFBaseBulletPractice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Piercing: 1 # Aurora - Average of .35 (0.5) and .20 (2)
+
+- type: entity
+  id: ASBulletPistol40Emp
+  name: bullet (.40 pistol, EMP)
+  parent: NFBaseBulletEmp
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Shock: 4 # Aurora - .35 and .20 don't have EMP, keeping .35 values
+        Blunt: 4
+  - type: StaminaDamageOnCollide
+    damage: 4 # Aurora - .35 value
+
+- type: entity
+  id: ASBulletPistol40Rubber
+  name: bullet (.40 pistol, rubber)
+  parent: NFBaseBulletRubber
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Blunt: 3
+  - type: StaminaDamageOnCollide
+    damage: 18 # ~6 shots to stun

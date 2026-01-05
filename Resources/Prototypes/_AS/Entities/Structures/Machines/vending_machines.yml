@@ -158,7 +158,8 @@
 - type: entity
   parent: [BaseStructureDisableAnchoring, BaseStructureDisableScrewing, VendingMachine]
   id: MedicGearVend
-  name: Medic Gear Vending Machine [POI]
+  name: Medic Gear Vending machine
+  suffix: POI
   description: A vending machine stocked with medical supplies and gear.
   components:
     - type: VendingMachine

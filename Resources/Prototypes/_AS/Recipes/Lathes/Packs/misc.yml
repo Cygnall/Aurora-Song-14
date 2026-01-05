@@ -18,3 +18,11 @@
   id: ASSmallMachines
   recipes:
     - AACTablet
+
+- type: latheRecipePack
+  id: ASBlueMagentaLights
+  recipes:
+    - MagentaLedLightBulb
+    - MagentaLedLightTube
+    - BlueLedLightBulb
+    - BlueLedLightTube

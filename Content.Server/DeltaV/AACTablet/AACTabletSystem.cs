@@ -1,6 +1,7 @@
 using Content.Server.Chat.Systems;
 using Content.Server.Radio.Components; // starcup
 using Content.Server.Speech.Components;
+using Content.Shared.Chat;
 using Content.Shared.DeltaV.AACTablet;
 using Content.Shared.IdentityManagement;
 using Robust.Server.GameObjects; // starcup
@@ -63,13 +64,23 @@ public sealed partial class AACTabletSystem : EntitySystem // starcup: made part
         EnsureComp(ent, out IntrinsicRadioTransmitterComponent transmitter);
         transmitter.Channels = GetAvailableChannels(message.Actor);
         // end starcup
-
-        _chat.TrySendInGameICMessage(ent,
+        // Aurora Song
+        if (message.Prefix == SharedChatSystem.WhisperPrefix.ToString())
+        {
+            _chat.TrySendInGameICMessage(ent,
+            string.Join(" ", _localisedPhrases), // starcup: prefix
+            InGameICChatType.Whisper,
+            hideChat: false,
+            nameOverride: speakerName);
+        }
+        else // end Aurora Song
+        {
+            _chat.TrySendInGameICMessage(ent,
             message.Prefix + string.Join(" ", _localisedPhrases), // starcup: prefix
             InGameICChatType.Speak,
             hideChat: false,
             nameOverride: speakerName);
-
+        }
         var curTime = _timing.CurTime;
         ent.Comp.NextPhrase = curTime + ent.Comp.Cooldown;
     }

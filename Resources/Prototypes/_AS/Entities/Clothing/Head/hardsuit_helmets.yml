@@ -75,15 +75,26 @@
   - type: PointLight
     color: "#00ffff"
 
-#- type: entity
-#  parent: ClothingHeadHelmetHardsuitMercenary
-#  id: ClothingHeadHelmetHardsuitMedicArmored
-#  name: medic armored hardsuit helmet
-#  description: Armored hardsuit helmet for combat medics.
-#  components:
-#  - type: Sprite
-#    sprite: _AS/Clothing/Head/Hardsuits/medic_armored.rsi
-#  - type: Clothing
-#    sprite: _AS/Clothing/Head/Hardsuits/medic_armored.rsi
-#  - type: PointLight
-#    color: "#00ffff"
+- type: entity
+  parent: ClothingHeadHelmetHardsuitMercenary
+  id: ClothingHeadHelmetHardsuitMedicArmored
+  name: medic armored hardsuit helmet
+  description: Armored hardsuit helmet for combat medics.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/medic_armored.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/medic_armored.rsi
+    clothingVisuals:
+      head:
+      - state: off-equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+  - type: PointLight
+    color: "#00ffff"
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: on-equipped-HELMET
+        shader: unshaded

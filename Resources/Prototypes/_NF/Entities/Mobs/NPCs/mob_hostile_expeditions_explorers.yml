@@ -10,18 +10,19 @@
   - MobHumanoidInvetory
   id: MobExplorerBase
   components:
+  - type: CombatMode # Aurora's Song - Enable NavSmash behavior
   - type: NpcFactionMember
     factions:
     - ExplorersExpeditionNF
   - type: MobThresholds
     thresholds:
       0: Alive
-      100: Critical
-      130: Dead
+      100: Critical # Aurora Song 80>100
+      130: Dead # Aurora Song 105>130
   - type: SlowOnDamage
     speedModifierThresholds:
-      60: 0.7
-      80: 0.5
+      60: 0.7 # Aurora Song 48>60
+      80: 0.5 # Aurora Song 64>80
   - type: DamageStateVisuals
   - type: RotationVisuals
     defaultRotation: 90
@@ -29,7 +30,7 @@
   - type: Butcherable
     butcheringType: Spike
     spawned:
-    - id: FoodMeatHuman
+    - id: FoodMeatHuman # Aurora Song FoodMeatRotten>FoodMeatHuman
       amount: 2
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 1.5
@@ -461,7 +462,7 @@
   - type: MobThresholds
     thresholds:
       0: Alive
-      180: Dead
+      180: Dead # Aurora Song 160>180
   - type: Stamina
     critThreshold: 480
   - type: Destructible
@@ -514,7 +515,7 @@
   - MobHumanoidHostileAISimpleMelee
   id: MobExplorerBoss
   description: Fearless and battle-hardened salvage team leaders, it takes years picking through the darkest corners of space and navigating the galaxy's criminal underbelly of the galaxy before you can become a captain. Not to be underestimated.
-#  categories: [ HideSpawnMenu ]
+#  categories: [ HideSpawnMenu ] # Aurora Song
   components:
   - type: Reflect # Emulating holopickaxe to a degree
     reflectProb: 0.025
@@ -552,7 +553,7 @@
     energy: 3
   - type: MobThresholds
     thresholds:
-      110: Critical
+      110: Critical # Aurora Song 100>110
       130: Dead
   - type: SlowOnDamage
     speedModifierThresholds:

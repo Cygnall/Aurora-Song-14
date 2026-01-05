@@ -16,7 +16,6 @@
     access:
     - Pirate
 
-
 - type: entity
   parent: BaseShipVoucher
   id: ShipVoucherAuroraMedic

@@ -1,0 +1,15 @@
+# Aurora Song - Elite Mercenary Mantle
+# Using recolored sprites from master branch
+
+# Elite Mercenary Mantle
+- type: entity
+  parent: ClothingNeckBase
+  id: ASClothingNeckMantleMercenaryElite
+  name: elite mercenary's mantle
+  description: A comfortable and slick mantle, denoting an experienced headhunter.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Mantles/mercelite.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Mantles/mercelite.rsi
+

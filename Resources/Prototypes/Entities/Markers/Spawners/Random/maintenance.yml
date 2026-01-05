@@ -247,7 +247,7 @@
       - id: ClothingMaskBreath
       - id: DoorElectronics
       - id: APCElectronics
-      - id: InflatableWallStack5
+      - id: NFInflatableWallStack5 # Frontier: InflatableWallStack5<NFInflatableWallStack5
       - id: CableHVStack10
       - id: CableMVStack10
       - id: CableApcStack10
@@ -395,6 +395,7 @@
     - type: RandomSpawner
       prototypes:
         - Spaceshroom
+        - NFGlowshroom # Frontier
       chance: 0.6
       offset: 0.0
 

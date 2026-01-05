@@ -1,0 +1,107 @@
+- type: latheRecipePack
+  id: NfsdPracticeStatic
+  recipes:
+  - NFAmmunitionBoxPistol35Practice
+  - NFAmmunitionBoxPistol45Practice
+  - NFAmmunitionBoxRifle20Practice
+  - NFAmmunitionBoxRifle30Practice
+  - NFAmmunitionBoxShellShotgunPractice
+  - NFAmmunitionBoxShellShotgunBuckshot # Aurora Song - Added buckshot
+  - NFWeaponEnergyPistolDisablerPractice
+  - NFWeaponEnergyRifleCarbinePractice
+
+- type: latheRecipePack
+  id: NfsdAmmoStatic
+  recipes:
+  # Ammo boxes
+  #- NFAmmunitionBoxShellShotgunOverpressure
+  - NFAmmunitionBoxShellShotgunSlug
+  - NFAmmunitionBoxShellShotgunBeanbag
+  - NFAmmunitionBoxRifle20
+  - NFAmmunitionBoxBigRifle20
+  - NFAmmunitionBoxRifle20Overpressure
+  - NFAmmunitionBoxBigRifle20Overpressure
+  - NFAmmunitionBoxRifle20Rubber
+  - NFAmmunitionBoxRifle30
+  - NFAmmunitionBoxBigRifle30
+  - NFAmmunitionBoxRifle30Overpressure
+  - NFAmmunitionBoxBigRifle30Overpressure
+  - NFAmmunitionBoxRifle30Rubber
+  - ASAmmunitionBoxBigPistol35 # Aurora Song
+  - ASAmmunitionBoxBigPistol35Overpressure # Aurora Song
+  - ASAmmunitionBoxBigPistol40 # Aurora Song
+  - ASAmmunitionBoxBigPistol40Overpressure # Aurora Song
+  - NFAmmunitionBoxPistol35
+  - NFAmmunitionBoxPistol35Overpressure
+  - NFAmmunitionBoxPistol35Rubber
+  - ASAmmunitionBoxPistol40 # Aurora Song
+  - ASAmmunitionBoxPistol40Overpressure # Aurora Song
+  - ASAmmunitionBoxPistol40Rubber # Aurora Song
+  - NFAmmunitionBoxPistol45
+  - NFAmmunitionBoxPistol45Overpressure
+  - NFAmmunitionBoxPistol45Rubber
+  # Magazines (Empty)
+  - NFMagazineHighCapacityPistol35Empty
+  - NFMagazinePistol45Empty
+  - NFMagazineSubMachineGun35Empty
+  - NFMagazineSubMachineGunTopMounted35Empty
+  - ASMagazinePistol40Empty # Aurora Song
+  - ASMagazineSubMachineGun40Empty # Aurora Song
+  - NFMagazineRifle20Empty
+  - NFMagazineRifle30Empty
+  - NFSpeedLoaderPistol35Empty
+  - NFSpeedLoaderPistol45Empty
+  - MagazineAsmgtUniversalEmpty
+
+- type: latheRecipePack
+  id: NfsdToolsStatic
+  recipes:
+  - ClothingOuterEVASuitNfsd
+  - ClothingOuterEVASuitPrisoner
+  #- ClothingHeadHelmetEVALarge
+  - ClothingEyesHudNfsd
+  - NFCombatKnife
+  - NFFlash
+  - NFForensicPad
+  - NFHandcuffs
+  - NFRiotShield
+  - NFZipties
+  - ContrabandAppraisalTool
+  - HoloprojectorNfsd
+  - NFClothingBackpackElectropack
+  - PowerCageHigh
+  - PowerCageMedium
+  - PowerCageSmall
+  - PowerCageRechargerCircuitboard
+  - NFBaseClothingNeckHolsterThighNfsd
+  - NFBaseClothingNeckSheathThighNfsd
+  - LightTube # Aurora Song
+  - LightBulb # Aurora Song
+
+- type: latheRecipePack
+  id: NfsdTargetsStatic
+  recipes:
+  - NFTargetClown
+  - NFTargetHuman
+  - NFTargetSyndicate
+
+- type: latheRecipePack
+  id: NfsdWeaponsStatic
+  recipes:
+  - NFCombatKnife
+  #- WeaponLaserSvalinn # After the changes made to windows shouldn't be that much of an issue now if it's widely available
+  - NFWeaponEnergyPistolLaser
+  - NFWeaponRevolverArgenti
+  - NFWeaponPistolMk58
+  - NFWeaponShotgunDoubleBarreled
+  - NFWeaponRifleAssaultNovaliteC1
+  - NFWeaponRifleAssaultGestio
+  - WeaponPistolPollock
+  - NFStunbaton
+  - NFWeaponEnergyPistolDisabler
+
+- type: latheRecipePack
+  id: NfsdBoardsStatic
+  recipes:
+  - GyroscopeNfsdMachineCircuitboard
+  - ThrusterNfsdMachineCircuitboard

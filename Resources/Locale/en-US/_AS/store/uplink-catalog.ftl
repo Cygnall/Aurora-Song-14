@@ -92,3 +92,7 @@ uplink-exchange-spesos-desc = A stack of 3000 spesos, hard currency.
 
 uplink-exchange-spesos2-name = 15,000 spesos
 uplink-exchange-spesos2-desc = A stack of 15,000 spesos, hard currency.
+
+uplink-exchange-ap4c-name = AP4C SMG
+uplink-exchange-ap4c-desc = A compact submachine gun chambered in .40 pistol. Battle-tested and reliable.
+

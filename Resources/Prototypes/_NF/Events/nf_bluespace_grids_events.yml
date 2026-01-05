@@ -208,7 +208,7 @@
         - type: ForceAnchor
         - type: DeletionCensusExempt
         paths:
-        - /Maps/_NF/Bluespace/wizardprobealt.yml
+        - /Maps/_NF/Bluespace/wizardtower.yml
 
 - type: entity
   id: BluespaceBloodMoon

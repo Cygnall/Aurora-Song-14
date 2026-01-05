@@ -51,6 +51,7 @@
   - type: Tag # Aurora
     tags:
     - RawMaterial
+    - Ore
 
 - type: entity
   parent: MaterialAnomalite

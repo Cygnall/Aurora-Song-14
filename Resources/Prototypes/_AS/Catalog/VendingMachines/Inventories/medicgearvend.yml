@@ -22,7 +22,7 @@
     LeftArmBorg: 4294967295 # Infinite
     BreachingCharge: 4294967295 # Infinite
   # Armor
-    ClothingOuterHardsuitPrivateSecurity: 4294967295 # Infinite - Private Security Hardsuit is placeholder until medical hardsuit is sprited
+    ClothingOuterHardsuitMedicArmored: 4294967295 # Infinite - Private Security Hardsuit replaced with Medic Armored Hardsuit
   # Weapons
     NFWeaponEnergyPistolDisabler: 4294967295 # Infinite
     ASWeaponPistolMk58SLE: 4294967295 # Infinite

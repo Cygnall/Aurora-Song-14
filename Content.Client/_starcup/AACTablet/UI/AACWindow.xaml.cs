@@ -16,7 +16,11 @@ public sealed partial class AACWindow
         var id = 0;
         RadioChannels.AddItem("Local", id);
         RadioChannels.SetItemMetadata(RadioChannels.GetIdx(id), SharedChatSystem.LocalPrefix.ToString());
-
+        // Aurora Song
+        id = 1;
+        RadioChannels.AddItem("Whisper", id);
+        RadioChannels.SetItemMetadata(RadioChannels.GetIdx(id), SharedChatSystem.WhisperPrefix.ToString());
+        // End Aurora Song
         foreach (var channel in msg.RadioChannels)
         {
             var channelProto = _prototype.Index<RadioChannelPrototype>(channel);

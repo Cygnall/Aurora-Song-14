@@ -17,21 +17,12 @@
         color: red
   - type: RandomSpawner
     prototypes:
-    - SpawnDungeonLootCircuitBoard
-    - SpawnDungeonLootToolbox
-    - SpawnDungeonLootFlatpacksEngi
-    - SpawnDungeonLootFlatpacks
-    - SpawnDungeonLootFlatpacks
-    - SpawnDungeonLootPartsEngi
-    - SpawnDungeonLootToolsBasicEngineering
-    - SpawnDungeonLootMaterialsValuableSingle
-    - SpawnDungeonLootMaterialsBasicSingle
-    - SpawnDungeonLootMaterialsBasicFull
-    - SpawnDungeonLootClothesEngi
-    - SpawnDungeonLootVendingRestocks
-    - SpawnDungeonLootFlatpacksEngi
-    - SpawnDungeonLootBureaucracy
-    - SpawnDungeonLootGunT2
+    - WeaponCaseLongWT550Expedition
+    - WeaponCaseLongM90Expedition
+    - WeaponCaseLongBulldog
+    - WeaponCaseLongVulcanExpedition
+    - ASPlasmaRifleScourer
+    - WeaponCaseLongAtreidesExpedition
     - Telecrystal1
     - Telecrystal5
     - FoodCakeSlime
@@ -44,13 +35,9 @@
     - SpaceCash10
     - SpaceCash
     - CigaretteSpent
-    - SpawnDungeonLootMeleeT3
-    - SpawnDungeonLootGunT2
-    - SpawnDungeonLootGunT3
     - Sledgehammer
     - WeaponMeleeToolboxRobust
     - ThrowingStar
-    - SpawnDungeonLootMeleeT2
     - WeaponFlareGun
     - ToySword
     - Shovel
@@ -121,9 +108,9 @@
     chance: 1
     offset: 0.0
     rarePrototypes:
-    - SweepingSongGAMBLING
+    #- SweepingSongGAMBLING
     - ASWeaponPKSLAYGambling
-    - ClothingHandsGlovesNorthStarRaiden
+    #- ClothingHandsGlovesNorthStarRaiden
     - ClothingMagbootsGamblingCursed
     - ClothingEyesHudOmni
     - Omnitool

@@ -51,3 +51,39 @@
         map: ["enum.GunVisualLayers.Mag"]
   - type: Clothing
     sprite: _AS/Objects/Weapons/Guns/SMGs/surpdrozd.rsi
+
+# Aurora's Song - B&S AP4C SMG chambered in .40 pistol
+- type: entity
+  id: ASWeaponSubMachineGunAP4C
+  parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponSubMachineGunChamber40, ASBaseWeaponFrameSubMachineGunNanotrasenWieldable ]
+  name: B&S AP4C
+  description: |-
+    A compact submachine gun originally employed by SWAT teams. Manufactured by Becker & Schulz Armorers.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/SMGs/ap4c.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/SMGs/ap4c.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: GunWieldBonus
+    minAngle: -6
+    maxAngle: -11
+  - type: Gun
+    minAngle: 4
+    maxAngle: 22
+    fireRate: 6.5
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/atreides.ogg
+      params:
+        pitch: 0.7
+        variation: 0.05
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-bsa

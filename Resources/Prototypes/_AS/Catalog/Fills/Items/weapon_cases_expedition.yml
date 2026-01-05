@@ -65,3 +65,16 @@
       amount: 1
     - id: NFMagazineRifle20
       amount: 4
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseAP4CExpeditionT4
+  suffix: Dungeon, AP4C
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: StorageFill
+    contents:
+    - id: ASWeaponSubMachineGunAP4CExpedition
+      amount: 1
+    - id: ASMagazineSubMachineGun40
+      amount: 4

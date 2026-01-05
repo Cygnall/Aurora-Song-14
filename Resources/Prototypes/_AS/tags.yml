@@ -1,4 +1,23 @@
-﻿#region .25 caseless
+﻿#region .40 pistol
+- type: Tag
+  id: ASCartridgePistol40
+
+- type: Tag
+  id: ASMagazinePistol40
+
+- type: Tag
+  id: ASMagazineHighCapacityPistol40
+
+- type: Tag
+  id: ASMagazineSubMachineGunPistol40
+
+- type: Tag
+  id: ASMagazineSubMachineGunTopMountedPistol40
+
+- type: Tag
+  id: ASSpeedLoaderPistol40
+
+#region .25 caseless
 - type: Tag
   id: ASMagazineCaselessRifle
 

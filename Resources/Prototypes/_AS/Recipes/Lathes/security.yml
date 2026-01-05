@@ -1,0 +1,135 @@
+# Aurora Song
+
+#region .40 Ammo Box
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxPistol40
+  result: ASAmmunitionBoxPistol40
+  materials:
+    Steel: 1400 # box - free, 70 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxPistol40Overpressure
+  result: ASAmmunitionBoxPistol40Overpressure
+  materials:
+    Steel: 1750 # box - free, 70 [bullets] * 25 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxPistol40Practice
+  result: ASAmmunitionBoxPistol40Practice
+  materials:
+    Steel: 560 # box - free, 70 [bullets] * 8 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxPistol40Incendiary
+  result: ASAmmunitionBoxPistol40Incendiary
+  materials:
+    Plastic: 1050 # box - free, 70 [bullets] * 15 [Plastic per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxPistol40Uranium
+  result: ASAmmunitionBoxPistol40Uranium
+  materials:
+    Plastic: 525 # box - free, 70 [bullets] * 7.5 [Plastic per bullet]
+    Uranium: 525 # box - free, 70 [bullets] * 7.5 [Uranium per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxPistol40Rubber
+  result: ASAmmunitionBoxPistol40Rubber
+  materials:
+    Plastic: 525 # box - free, 70 [bullets] * 7.5 [Plastic per bullet]
+    Steel: 525 # box - free, 70 [bullets] * 7.5 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxPistol40Emp
+  result: ASAmmunitionBoxPistol40Emp
+  materials:
+    Plasma: 700 # box - free, 70 [bullets] * 10 [Plasma per bullet]
+    Silver: 350 # box - free, 70 [bullets] * 5 [Silver per bullet]
+
+#endregion
+
+#region .40 Magazines
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazinePistol40Empty
+  result: ASMagazinePistol40Empty
+  materials:
+    Steel: 20
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineHighCapacityPistol40Empty
+  result: ASMagazineHighCapacityPistol40Empty
+  materials:
+    Steel: 25
+
+- type: latheRecipe
+  parent: BaseEmptyMagazineRecipe
+  id: ASMagazineSubMachineGun40Empty
+  result: ASMagazineSubMachineGun40Empty
+  materials:
+    Steel: 30
+
+#endregion
+
+#region .40 Filled Magazines
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: ASMagazinePistol40
+  result: ASMagazinePistol40
+  materials:
+    Steel: 220 # 20 [magazine] + 10 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: ASMagazineHighCapacityPistol40
+  result: ASMagazineHighCapacityPistol40
+  materials:
+    Steel: 345 # 25 [magazine] + 16 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseFilledMagazineRecipe
+  id: ASMagazineSubMachineGun40
+  result: ASMagazineSubMachineGun40
+  materials:
+    Steel: 630 # 30 [magazine] + 30 [bullets] * 20 [Steel per bullet]
+
+#endregion
+
+#region .35/.40 Big Ammo Box
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxBigPistol35
+  result: ASAmmunitionBoxBigPistol35
+  materials:
+    Steel: 3000 # box - free, 200 [bullets] * 15 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxBigPistol35Overpressure
+  result: ASAmmunitionBoxBigPistol35Overpressure
+  materials:
+    Steel: 4500 # box - free, 200 [bullets] * 22.5 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxBigPistol40
+  result: ASAmmunitionBoxBigPistol40
+  materials:
+    Steel: 4000 # box - free, 200 [bullets] * 20 [Steel per bullet]
+
+- type: latheRecipe
+  parent: BaseAmmoRecipe
+  id: ASAmmunitionBoxBigPistol40Overpressure
+  result: ASAmmunitionBoxBigPistol40Overpressure
+  materials:
+    Steel: 5000 # box - free, 200 [bullets] * 25 [Steel per bullet]
+
+#endregion

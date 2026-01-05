@@ -15,3 +15,8 @@ job-name-station-traffic-controller = Station Traffic Controller
 job-name-doc-short = DoC
 job-name-stc-short = STC
 job-name-ppm-short = PPM
+
+# Aurora Song: Additional job names for AAC Tablet (complement NF jobs)
+job-name-civilian = Civilian
+job-name-citizen = Citizen
+job-name-technician = Technician
