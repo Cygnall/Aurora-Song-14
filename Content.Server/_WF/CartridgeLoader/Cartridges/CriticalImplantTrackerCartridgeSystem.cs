@@ -4,30 +4,25 @@ using Content.Shared._WF.CartridgeLoader.Cartridges;
 using Content.Shared.CartridgeLoader;
 using Content.Shared.Ghost;
 using Content.Shared.Humanoid;
-using Content.Shared.Implants.Components;
 using Content.Shared.Inventory;
 using Content.Shared.Mind;
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.PDA;
-using Content.Shared.SSDIndicator;
-using Content.Shared.Trigger.Components.Conditions;
-using Content.Shared.Trigger.Components.Triggers;
-using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 
 namespace Content.Server._WF.CartridgeLoader.Cartridges;
 
 public sealed partial class CriticalImplantTrackerCartridgeSystem : EntitySystem
 {
-    [Dependency] private CartridgeLoaderSystem _cartridgeLoader = default!;
-    [Dependency] private StationSystem _stationSystem = default!;
-    [Dependency] private MobStateSystem _mobStateSystem = default!;
-    [Dependency] private InventorySystem _inventorySystem = default!;
-    [Dependency] private IGameTiming _gameTiming = default!;
-    [Dependency] private SharedMindSystem _mindSystem = default!;
-    [Dependency] private SharedContainerSystem _containerSystem = default!;
+    [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!;
+    [Dependency] private readonly StationSystem _stationSystem = default!;
+    [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
+    [Dependency] private readonly MetaDataSystem _metaData = default!;
+    [Dependency] private readonly InventorySystem _inventorySystem = default!;
+    [Dependency] private readonly IGameTiming _gameTiming = default!;
+    [Dependency] private readonly SharedMindSystem _mindSystem = default!;
 
     public override void Initialize()
     {
@@ -124,33 +119,8 @@ public sealed partial class CriticalImplantTrackerCartridgeSystem : EntitySystem
                 }
             }
 
-            // Check if the entity has a medAlert beacon that is enabled
-            var hasActiveBeacon = false;
-            if (_containerSystem.TryGetContainer(mobUid, ImplanterComponent.ImplantSlotId, out var implantContainer))
-            {
-                foreach (var implant in implantContainer.ContainedEntities)
-                {
-                    // Has a mob-state trigger AND is either not togglable or currently toggled on
-                    if (TryComp<TriggerOnMobstateChangeComponent>(implant, out _) &&
-                        (!TryComp<ToggleTriggerConditionComponent>(implant, out var toggle) || toggle.Enabled))
-                    {
-                        hasActiveBeacon = true;
-                        break;
-                    }
-                }
-            }
-
-            // Only add patients who have an active medAlert beacon
-            if (!hasActiveBeacon)
-                continue;
-
-            // Check if the character is SSD
-            var isSpaceSleepDisorder = false;
-            if (TryComp<SSDIndicatorComponent>(mobUid, out var indicator))
-                isSpaceSleepDisorder = indicator.IsSSD;
-
-            // Add all critical/dead patients with active beacons
-            patients.Add(new CriticalPatientData(name, coordinates, species, timeSinceCrit, isDead, isSpaceSleepDisorder));
+            // Add all critical/dead patients
+            patients.Add(new CriticalPatientData(name, coordinates, species, timeSinceCrit, isDead));
         }
 
         var state = new CriticalImplantTrackerUiState(patients);
