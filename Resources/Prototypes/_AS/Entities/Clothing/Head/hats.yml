@@ -1,3 +1,24 @@
+#region Generic
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ClothingHeadHatBeretBlue
+  name: blue beret
+  description: An artist's favorite headwear. It's blue.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/beret_blue.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/beret_blue.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon
+
 #region SLE campaign
 
 - type: entity
