@@ -1,0 +1,35 @@
+# Site Worker Heads
+- type: loadout
+  id: SiteWorkerHatHardhatYellow
+  equipment:
+    head: ClothingHeadHatHardhatYellow
+
+- type: loadout
+  id: SiteWorkerHatHardhatYellowDark
+  equipment:
+    head: ClothingHeadHatHardhatYellowDark
+
+- type: loadout
+  id: SiteWorkerHatHardhatBlue
+  equipment:
+    head: ClothingHeadHatHardhatBlue
+
+- type: loadout
+  id: SiteWorkerHatHardhatOrange
+  equipment:
+    head: ClothingHeadHatHardhatOrange
+
+- type: loadout
+  id: SiteWorkerHatHardhatRed
+  equipment:
+    head: ClothingHeadHatHardhatRed
+
+- type: loadout
+  id: SiteWorkerHatHardhatArmored
+  equipment:
+    head: ClothingHeadHatHardhatArmored
+
+- type: loadout
+  id: SiteWorkerHatBeretRND
+  equipment:
+    head: ClothingHeadHatBeretRND

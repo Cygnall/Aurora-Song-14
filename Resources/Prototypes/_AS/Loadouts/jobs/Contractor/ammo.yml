@@ -1,0 +1,41 @@
+- type: loadout
+  id: ContractorAmmoPistol35
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxPistol35
+
+- type: loadout
+  id: ContractorAmmoPistol35Rubber
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxPistol35Rubber
+
+- type: loadout
+  id: ContractorAmmoShotgun12Buckshot
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxShellShotgunBuckshot
+
+- type: loadout
+  id: ContractorAmmoShotgun12Beanbag
+  price: 300
+  storage:
+    back:
+    - NFAmmunitionBoxShellShotgunBeanbag
+
+- type: loadout
+  id: ContractorAmmoMagPistol35
+  price: 300
+  storage:
+    back:
+    - NFMagazinePistol35
+
+- type: loadout
+  id: ContractorAmmoMagPistol35HighCap
+  price: 2000
+  storage:
+    back:
+    - NFMagazineHighCapacityPistol35

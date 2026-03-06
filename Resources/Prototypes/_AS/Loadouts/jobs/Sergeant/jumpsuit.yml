@@ -1,0 +1,29 @@
+- type: loadout
+  id: SergeantClothingUniformJumpsuitSLEShort
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitSLEShortSergeant
+
+- type: loadout
+  id: SergeantClothingUniformJumpskirtSLEShort
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtSLEShortSergeant
+
+- type: loadout
+  id: SergeantClothingUniformJumpsuitSLE
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitSLESergeant
+
+- type: loadout
+  id: SergeantClothingUniformJumpskirtSLE
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtSLESergeant
+
+- type: loadout
+  id: SergeantClothingUniformJumpsuitSLEClassic
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitSLEClassicSergeant
+
+- type: loadout
+  id: SergeantClothingUniformJumpskirtSLEClassic
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtSLEClassicSergeant

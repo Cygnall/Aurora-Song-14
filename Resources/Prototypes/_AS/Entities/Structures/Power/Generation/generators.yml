@@ -1,0 +1,9 @@
+# Generators in use
+
+- type: entity
+  parent: GeneratorBasic15kW
+  id: GeneratorBasic29kW
+  suffix: Basic, 29kW, Anchored
+  components:
+    - type: PowerSupplier
+      supplyRate: 29000 # Set to 29kW

@@ -1,0 +1,111 @@
+- type: loadoutGroup
+  id: ColonialRepresentativeJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - ColonialRepresentativeClothingUniformJumpsuitColonialRepresentative
+  - ColonialRepresentativeClothingUniformJumpskirtColonialRepresentative
+  - ColonialRepresentativeClothingUniformJumpsuitMilitaryColonialRepresentative
+  fallbacks:
+  - ColonialRepresentativeClothingUniformJumpsuitColonialRepresentative
+  - ColonialRepresentativeClothingUniformJumpskirtColonialRepresentative
+
+- type: loadoutGroup
+  id: ColonialRepresentativeOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - ColonialRepresentativeClothingOuterArmorColonialRepresentativeCarapace
+  - ColonialRepresentativeClothingOuterJacketColonialRepresentative
+  - ContractorClothingOuterCoatExpensive #We let them drip out a little if they want
+  - ContractorClothingOuterCoatSpaceAsshole
+
+- type: loadoutGroup
+  id: ColonialRepresentativeBackpack
+  name: loadout-group-contractor-backpack
+  loadouts:
+  - ColonialRepresentativeClothingBackpackDuffelColonialRepresentative
+  - ColonialRepresentativeClothingBackpackMessengerColonialRepresentative
+  - ColonialRepresentativeClothingBackpackIan
+  subgroups:
+  - ContractorBackpack
+  fallbacks:
+  - ColonialRepresentativeClothingBackpackMessengerColonialRepresentative
+
+- type: loadoutGroup
+  id: ColonialRepresentativeHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts:
+  - ColonialRepresentativeClothingHeadHatColonialRepresentativeCap
+  - ColonialRepresentativeClothingHeadHatColonialRepresentativeBeret
+  - ColonialRepresentativeClothingHeadHatColonialRepresentativeBeretBig
+  subgroups:
+  - ContractorHead
+
+- type: loadoutGroup
+  id: ColonialRepresentativeEars
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  maxLimit: 1
+  loadouts:
+  - ColonialRepresentativeClothingHeadsetAltCentComCommon
+  subgroups:
+  - MercenaryEars
+  - PilotEars
+  - ContractorEars
+  fallbacks:
+  - ColonialRepresentativeClothingHeadsetAltCentComCommon
+
+- type: loadoutGroup
+  id: ColonialRepresentativeGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts:
+  - ColonialRepresentativeClothingHandsGlovesColonialRepresentative
+
+- type: loadoutGroup
+  id: ColonialRepresentativeNeck
+  name: loadout-group-contractor-neck
+  minLimit: 0
+  loadouts:
+  - ColonialRepresentativeClothingNeckCloakColonialRepresentative
+  - ColonialRepresentativeClothingNeckMantleColonialRepresentative
+
+- type: loadoutGroup
+  id: ColonialRepresentativePDA
+  name: loadout-group-contractor-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - ColonialRepresentativeColonialRepresentativePDA
+  fallbacks:
+  - ColonialRepresentativeColonialRepresentativePDA
+
+- type: loadoutGroup
+  id: ColonialRepresentativeBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - ColonialRepresentativeASPouchColonialRepresentative
+  subgroups:
+  - ContractorBackpackItems
+
+- type: loadoutGroup
+  id: ColonialRepresentativeGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 0
+  loadouts:
+  - ColonialRepresentativeClothingEyesHudCommand
+  - ColonialRepresentativeClothingEyesGlassesCommand
+  subgroups:
+  - ContractorGlasses
+
+- type: loadoutGroup
+  id: ColonialRepresentativeBelt
+  name: loadout-group-contractor-belt
+  minLimit: 0
+  loadouts:
+  - ColonialRepresentativeClothingBeltSheathFilledHilt
+  - ColonialRepresentativeClothingBeltSheathFilled
+  subgroups:
+  - ContractorBelt

@@ -1,0 +1,54 @@
+- type: loadoutGroup
+  id: ASDetectiveJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - ASDetectiveClothingUniformJumpsuitDetective
+  - ASDetectiveClothingUniformJumpskirtDetective
+  - ASDetectiveClothingUniformJumpsuitDetectiveGrey
+  - ASDetectiveClothingUniformJumpskirtDetectiveGrey
+  fallbacks:
+  - ASDetectiveClothingUniformJumpsuitDetective
+  - ASDetectiveClothingUniformJumpskirtDetective
+
+- type: loadoutGroup
+  id: ASDetectiveOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - ASDetectiveClothingOuterArmorBasic
+  - ASDetectiveClothingOuterCoatDetectiveLoadout
+  - ASDetectiveClothingOuterCoatDetectiveLoadoutGrey
+  - ASDetectiveClothingOuterCoatTrench
+
+- type: loadoutGroup
+  id: ASDetectiveHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts:
+  - ASDetectiveClothingHeadHatFedoraBrown
+  - ASDetectiveClothingHeadHatFedoraGrey
+
+- type: loadoutGroup
+  id: ASDetectiveGloves
+  name: loadout-group-contractor-gloves
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - ASDetectiveClothingHandsGlovesForensicAS
+  fallbacks:
+  - ASDetectiveClothingHandsGlovesForensicAS
+
+- type: loadoutGroup
+  id: ASDetectiveNeck
+  name: loadout-group-contractor-neck
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - ASDetectiveClothingNeckSLEBadgeDetective
+
+- type: loadoutGroup
+  id: ASDetectivePDA
+  name: loadout-group-contractor-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - ASDetectiveASDetectivePDA
+  fallbacks:
+  - ASDetectiveASDetectivePDA

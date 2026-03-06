@@ -1,0 +1,9 @@
+- type: entity
+  parent: DeathRattleImplant
+  id: DeathRattleImplantColcomm
+  name: colcomm death rattle implant
+  description: This implant will inform the Colcomm radio channel should the user fall into critical condition or die.
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Rattle
+    radioChannel: ColCom

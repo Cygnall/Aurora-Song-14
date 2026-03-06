@@ -1,0 +1,8 @@
+- type: loadout
+  id: CorpsmanOuterClothing
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ASClothingOuterCoatSLEBomberCorpsman

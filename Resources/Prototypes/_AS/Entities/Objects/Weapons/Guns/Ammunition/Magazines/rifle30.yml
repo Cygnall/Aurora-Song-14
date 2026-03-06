@@ -1,0 +1,166 @@
+#region base .30 marksman magazines
+
+- type: entity
+  id: ASBaseMagazineMarksmanRifle30
+  name: magazine (.30 rifle)
+  parent: NFBaseMagazineRifle30
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ASMagazineMarksmanRifle30 # TODO: make it make sense, change the tags
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - NFCartridgeRifle30
+    proto: NFCartridgeRifle30
+    capacity: 20
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/marksmanrifle30_mag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-5
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 6
+    zeroVisible: false
+  - type: Item
+    sprite: _AS/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/marksmanrifle30_mag.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+#region .30 magazines
+- type: entity
+  id: ASMagazineMarksmanRifle30Empty
+  name: marksman magazine (.30 rifle, any)
+  parent: ASBaseMagazineMarksmanRifle30
+  suffix: empty
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ASMagazineMarksmanRifle30
+  name: marksman magazine (.30 rifle)
+  parent: ASBaseMagazineMarksmanRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle30
+
+- type: entity
+  id: ASMagazineMarksmanRifle30Overpressure
+  name: marksman magazine (.30 rifle, overpressure)
+  parent: ASBaseMagazineMarksmanRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle30Overpressure
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff8d00"
+    - state: mag-5
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff8d00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff8d00"
+
+- type: entity
+  id: ASMagazineMarksmanRifle30OverpressureEmpty
+  name: marksman magazine (.30 rifle, fillable, overpressure)
+  parent: ASMagazineMarksmanRifle30Overpressure
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ASMagazineMarksmanRifle30Incendiary
+  name: marksman magazine (.30 rifle, incendiary)
+  parent: ASBaseMagazineMarksmanRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle30Incendiary
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#ff0000"
+    - state: mag-5
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"
+
+- type: entity
+  id: ASMagazineMarksmanRifle30Uranium
+  name: marksman magazine (.30 rifle, uranium)
+  parent: ASBaseMagazineMarksmanRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle30Uranium
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00ff00"
+    - state: mag-5
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00ff00"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00ff00"
+
+- type: entity
+  id: ASMagazineMarksmanRifle30Practice
+  name: marksman magazine (.30 rifle, practice)
+  parent: ASBaseMagazineMarksmanRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle30Practice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#dddddd"
+    - state: mag-5
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#dddddd"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#dddddd"

@@ -1,0 +1,15 @@
+# Site Manager Outer Clothing
+- type: loadout
+  id: SiteManagerOuterVestHazard
+  equipment:
+    outerClothing: ClothingOuterVestHazard
+
+- type: loadout
+  id: SiteManagerOuterWinterCE
+  equipment:
+    outerClothing: ClothingOuterWinterCE
+
+- type: loadout
+  id: SiteManagerOuterLabCoatRD
+  equipment:
+    outerClothing: ClothingOuterCoatRD

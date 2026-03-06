@@ -49,7 +49,7 @@ entities:
   - uid: 1
     components:
     - type: MetaData
-      name: grid
+      name: RiotSuppression
     - type: Transform
       pos: -0.44791666,-0.43224525
       parent: invalid
@@ -2397,6 +2397,8 @@ entities:
     - type: GasTileOverlay
     - type: RadiationGridResistance
     - type: NavMap
+    - type: BecomesStation
+      id: RiotSuppression
 - proto: ActionToggleLight
   entities:
   - uid: 558
@@ -4453,7 +4455,7 @@ entities:
     - type: Transform
       pos: -6.5,-23.5
       parent: 1
-- proto: ASBedsheetSLEBrigmedic
+- proto: ASBedsheetSLECorpsman
   entities:
   - uid: 678
     components:
@@ -4480,7 +4482,7 @@ entities:
     - type: Transform
       pos: -5.5,-32.5
       parent: 1
-- proto: ASBedsheetSLESheriff
+- proto: ASBedsheetSLECommissioner
   entities:
   - uid: 2508
     components:
@@ -4804,7 +4806,7 @@ entities:
     - type: Transform
       pos: 1.5,-52.5
       parent: 1
-- proto: ASBoxFolderSLEFormsBrown
+- proto: ASBoxFolderSLEForms
   entities:
   - uid: 546
     components:
@@ -24257,7 +24259,7 @@ entities:
       removedMasks: 20
     - type: PlaceableSurface
       isPlaceable: True
-- proto: ASLockerSLEBailiff
+- proto: ASLockerSLELieutenant
   entities:
   - uid: 1090
     components:
@@ -24325,7 +24327,7 @@ entities:
       removedMasks: 20
     - type: PlaceableSurface
       isPlaceable: True
-- proto: ASLockerSLEBrigmedic
+- proto: ASLockerSLECorpsman
   entities:
   - uid: 1112
     components:

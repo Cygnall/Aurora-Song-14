@@ -1,0 +1,52 @@
+- type: loadoutGroup
+  id: SergeantJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - SergeantClothingUniformJumpsuitSLE
+  - SergeantClothingUniformJumpskirtSLE
+  - SergeantClothingUniformJumpsuitSLEShort
+  - SergeantClothingUniformJumpskirtSLEShort
+  - SergeantClothingUniformJumpsuitSLEClassic
+  - SergeantClothingUniformJumpskirtSLEClassic
+
+- type: loadoutGroup
+  id: SergeantOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - SergeantOuterClothing
+
+- type: loadoutGroup
+  id: SergeantHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts:
+  - SergeantClothingHeadHatSergeant
+
+- type: loadoutGroup
+  id: SergeantNeck
+  name: loadout-group-contractor-neck
+  hidden: true
+  loadouts:
+  - SergeantClothingNeckBadgeSergeant
+  fallbacks:
+  - SergeantClothingNeckBadgeSergeant
+
+- type: loadoutGroup
+  id: SergeantPDA
+  name: loadout-group-contractor-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - SergeantSergeantPDA
+  fallbacks:
+  - SergeantSergeantPDA
+
+- type: loadoutGroup
+  id: SergeantBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - SergeantASPouchSLE
+  subgroups:
+  - ContractorBackpackItems

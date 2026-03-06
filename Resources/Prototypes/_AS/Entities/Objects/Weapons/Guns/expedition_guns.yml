@@ -25,3 +25,10 @@
   - ASWeaponRifleAssaultEstoc
   categories: [ HideSpawnMenu ]
   id: ASWeaponRifleAssaultEstocExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - ASWeaponSubMachineGunAP4C
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponSubMachineGunAP4CExpedition

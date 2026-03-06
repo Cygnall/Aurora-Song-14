@@ -1,3 +1,5 @@
+#region Service
+
 - type: latheRecipe
   parent: [ BaseGoldCircuitboardRecipe, BaseGeneralMachineRecipeCategory ]
   id: ASBluespaceReagentGrinderIndustrialMachineCircuitboard

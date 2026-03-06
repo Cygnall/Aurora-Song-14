@@ -1,0 +1,6 @@
+#region EVA Suits
+
+- type: latheRecipe
+  id: ASClothingOuterEVASuitSLE
+  parent: NFBaseEVASuitRecipe
+  result: ASClothingOuterEVASuitSLE

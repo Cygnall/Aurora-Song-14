@@ -1,0 +1,79 @@
+- type: loadoutGroup
+  id: CorpsmanJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - CorpsmanClothingUniformJumpsuitSLE
+  - CorpsmanClothingUniformJumpskirtSLE
+  - CorpsmanClothingUniformJumpsuitSLEShort
+  - CorpsmanClothingUniformJumpskirtSLEShort
+  - CorpsmanClothingUniformJumpsuitSLEClassic
+  - CorpsmanClothingUniformJumpskirtSLEClassic
+
+- type: loadoutGroup
+  id: CorpsmanOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - CorpsmanOuterClothing
+
+- type: loadoutGroup
+  id: CorpsmanHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts:
+  - CorpsmanClothingHeadHatCorpsman
+
+- type: loadoutGroup
+  id: CorpsmanGloves
+  name: loadout-group-contractor-gloves
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - NitrileGloves
+  fallbacks:
+  - NitrileGloves
+
+- type: loadoutGroup
+  id: CorpsmanNeck
+  name: loadout-group-contractor-neck
+  hidden: true
+  loadouts:
+  - CorpsmanClothingNeckSLEBadgeCorpsman
+  fallbacks:
+  - CorpsmanClothingNeckSLEBadgeCorpsman
+
+- type: loadoutGroup
+  id: CorpsmanPDA
+  name: loadout-group-contractor-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - CorpsmanCorpsmanPDA
+  fallbacks:
+  - CorpsmanCorpsmanPDA
+
+- type: loadoutGroup
+  id: CorpsmanGlasses
+  name: loadout-group-contractor-glasses
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - CorpsmanClothingEyesGlasses
+  fallbacks:
+  - CorpsmanClothingEyesGlasses
+
+- type: loadoutGroup
+  id: CorpsmanFace
+  name: loadout-group-contractor-face
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - CorpsmanClothingMaskCorpsman
+  fallbacks:
+  - CorpsmanClothingMaskCorpsman
+
+- type: loadoutGroup
+  id: CorpsmanBelt
+  minLimit: 1
+  name: loadout-group-contractor-belt
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - CorpsmanClothingBeltCorpsmanWebbing
+  fallbacks:
+  - CorpsmanClothingBeltCorpsmanWebbing

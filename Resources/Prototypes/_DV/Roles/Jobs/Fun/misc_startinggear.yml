@@ -1,0 +1,10 @@
+
+#Misc outfit startingGear definitions.
+
+# Laika sec glasses
+
+- type: startingGear
+  id: MobSecDogLaikaGear
+  equipment:
+    eyes: ASClothingEyesGlassesSLE # Aurora's Song
+    id: ASOfficerIDCard # Aurora's Song

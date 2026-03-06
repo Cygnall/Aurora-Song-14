@@ -1,0 +1,65 @@
+- type: job
+  id: Corpsman
+  name: job-name-corpsman
+  description: job-description-corpsman
+  playTimeTracker: JobBrigmedic
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 21600 # 6 hours
+#  alternateRequirementSets: # Aurora Song - Remove alt playtime reqs, you should be trained for this role as a Rookie.
+#    longerPlaytimeLessSec:
+#    - !type:OverallPlaytimeRequirement
+#      time: 360000 # 100 hours
+  startingGear: CorpsmanGear
+  icon: JobIconCorpsman
+  supervisors: job-supervisors-lieutenant
+  weight: 125
+  displayWeight: 35
+  canBeAntag: false
+  access:
+  - Corpsman
+  - Prisoner
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: CorpsmanGear
+  equipment:
+    pocket1: ASWeaponPistolMk58SLessLethal
+  storage:
+    back:
+    - EncryptionKeyMedical
+    - Flash
+    - NFMagazineHighCapacityPistol35Overpressure
+    - NFMagazineHighCapacityPistol35Rubber
+    - FrontierUplinkCoin10
+  licenses:
+  - LicenseContrabandHandling
+  encryptionKeys: # Added traffic, shipboard, and medical encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+  - EncryptionKeyMedical
+
+- type: chameleonOutfit
+  id: CorpsmanChameleonOutfit
+  job: Corpsman
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretCream
+    mask: ClothingMaskBreathMedicalSecurity
+    eyes: ClothingEyesHudNfsdMed
+    outerClothing: ASClothingOuterCoatSLEBomberCorpsman
+    neck: ASClothingNeckSLEBadgeCorpsman
+    belt: ASClothingBeltSLEWebbingCorpsmanFilled
+    gloves: ClothingHandsGlovesNitrile
+    shoes: ASClothingShoesBootsSLELightBlueFilled
+

@@ -80,16 +80,16 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         if (Transform(uid).GridUid is not EntityUid gridUid)
         {
             _uiSystem.SetUiState(uid, ContrabandPalletConsoleUiKey.Contraband,
-                new ContrabandPalletConsoleInterfaceState(0, 0, 0, false));
+                new ContrabandPalletConsoleInterfaceState(0, 0, 0, 0, false)); // AS: Allow alt reward currencies
             return;
         }
 
-        GetPalletGoods(gridUid, (uid, comp), out var toSell, out var amount, out var unregistered);
+        GetPalletGoods(gridUid, (uid, comp), out var toSell, out var amount, out var altAmount, out var unregistered); // AS: Allow alt reward currencies
 
         var totalCount = toSell;
         toSell.UnionWith(unregistered);
         _uiSystem.SetUiState(uid, ContrabandPalletConsoleUiKey.Contraband,
-            new ContrabandPalletConsoleInterfaceState((int) amount, totalCount.Count, unregistered.Count, true));
+            new ContrabandPalletConsoleInterfaceState((int) amount, (int) altAmount, totalCount.Count, unregistered.Count, true)); // AS: Allow alt reward currencies
     }
 
     private void OnPalletUIOpen(EntityUid uid, ContrabandPalletConsoleComponent component, BoundUIOpenedEvent args)
@@ -149,12 +149,12 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         return pads;
     }
 
-    private void SellPallets(EntityUid gridUid, Entity<ContrabandPalletConsoleComponent> component, EntityUid? station, out int amount, EntityUid? actor = null)
+    private void SellPallets(EntityUid gridUid, Entity<ContrabandPalletConsoleComponent> component, EntityUid? station, out int amount, out int altAmount, EntityUid? actor = null) // AS: Allow alt reward currencies, and grab EntUid of actor selling
     {
         station ??= _station.GetOwningStation(gridUid);
-        GetPalletGoods(gridUid, component, out var toSell, out amount , out _);
+        GetPalletGoods(gridUid, component, out var toSell, out amount, out altAmount, out _); // AS: Allow alt reward currencies
 
-        Log.Debug($"{component.Comp.Faction} sold {toSell.Count} contraband items for {amount}");
+        Log.Debug($"{component.Comp.Faction} sold {toSell.Count} contraband items for {amount} primary currency and {altAmount} alternate currency");
 
         // Aurora: Track sales for statistics if actor is provided
         if (actor != null && TryComp<MobStateComponent>(actor.Value, out var mobState))
@@ -193,9 +193,10 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         }
     }
 
-    private void GetPalletGoods(EntityUid gridUid, Entity<ContrabandPalletConsoleComponent> console, out HashSet<EntityUid> toSell, out int amount, out HashSet<EntityUid> unregistered)
+    private void GetPalletGoods(EntityUid gridUid, Entity<ContrabandPalletConsoleComponent> console, out HashSet<EntityUid> toSell, out int amount, out int altAmount, out HashSet<EntityUid> unregistered) // AS: Allow alt reward currencies
     {
         amount = 0;
+        altAmount = 0;
         toSell = new HashSet<EntityUid>();
         unregistered = new HashSet<EntityUid>(); // Aurora
 
@@ -220,11 +221,19 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 if (TryComp<ContrabandComponent>(ent, out var comp)
                     && !toSell.Contains(ent)
                     && comp.TurnInValues is { } turnInValues
-                    && turnInValues.ContainsKey(console.Comp.RewardType))
+                    && (console.Comp.RewardType != null && turnInValues.ContainsKey(console.Comp.RewardType) || console.Comp.RewardTypeAlternate != null && turnInValues.ContainsKey(console.Comp.RewardTypeAlternate))) // AS: Allow alt reward currencies
                 {
                     toSell.Add(ent);
-                    var value = comp.TurnInValues[console.Comp.RewardType];
-                    amount += value;
+                    if (console.Comp.RewardTypeAlternate != null && turnInValues.ContainsKey(console.Comp.RewardTypeAlternate)) // Begin AS: Allow alt reward currencies
+                    {
+                        var altValue = comp.TurnInValues[console.Comp.RewardTypeAlternate];
+                        altAmount += altValue;
+                    }
+                    if (console.Comp.RewardType != null && turnInValues.ContainsKey(console.Comp.RewardType))
+                    {
+                        var value = comp.TurnInValues[console.Comp.RewardType];
+                        amount += value;
+                    } // End AS
                 }
 
                 // Aurora
@@ -269,27 +278,54 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
 
         if (!CheckLicense(component, player)) // Aurora: add check for chl
         {
-            PlayDenyEffect((uid,component));
+            PlayDenyEffect((uid, component));
             return;
         }
 
         if (Transform(uid).GridUid is not EntityUid gridUid)
         {
             _uiSystem.SetUiState(uid, ContrabandPalletConsoleUiKey.Contraband,
-                new ContrabandPalletConsoleInterfaceState(0, 0, 0, false));
+                new ContrabandPalletConsoleInterfaceState(0, 0, 0, 0, false)); // AS: Allow alt reward currencies
             return;
         }
 
-        SellPallets(gridUid, (uid, component), null, out var price, args.Actor);
+        SellPallets(gridUid, (uid, component), null, out var reward, out var altReward, args.Actor); // AS: Allow alt reward currencies
 
-        var stackPrototype = _protoMan.Index<StackPrototype>(component.RewardType);
-        var stackUid = _stack.Spawn(price, stackPrototype, _scuOutput.ToCoordinates()); // Aurora spawn on scu output
-        _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
+        var outputQuery = EntityQueryEnumerator<ScuOutputComponent, TransformComponent>(); // Begin AS: Makes pirate contraband selling usable
+        var output = uid.ToCoordinates();
+        var outputSent = false;
+        while (outputQuery.MoveNext(out var _, out var xform)) // If theres an entity with an ScuOutputComponent, we want to try and send the primary currency to that first
+        {
+            if (xform.GridUid == gridUid)
+            {
+                output = _scuOutput.ToCoordinates();
+                outputSent = true;
+            }
+        }
 
-        var rewardPrototype = _protoMan.Index<StackPrototype>(component.RewardCashPrototype); // Aurora: need EC prototype defined in scope
-        stackUid = _stack.Spawn(price, rewardPrototype, args.Actor.ToCoordinates()); // Aurora: spawn "cash" (now EC)
-        if (!_hands.TryPickupAnyHand(args.Actor, stackUid))
-            _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
+        if (component.RewardType != null) // If we have a primary reward, spawn it
+        {
+            var rewardPrototype = _protoMan.Index<StackPrototype>(component.RewardType);
+            var stackUid = _stack.Spawn(reward, rewardPrototype, output);
+            if (outputSent == false)
+            {
+                if (!_hands.TryPickupAnyHand(args.Actor, stackUid)) // If there wasn't a a ScuOutputComponent to send these too, try to pick them up
+                    _transform.SetLocalRotation(stackUid, Angle.Zero);
+            }
+            else
+            {
+                _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
+            }
+
+        }
+
+        if (component.RewardTypeAlternate != null) // If we have an alternate currency, spawn it
+        {
+            var altRewardPrototype = _protoMan.Index<StackPrototype>(component.RewardTypeAlternate);
+            var altStackUid = _stack.Spawn(altReward, altRewardPrototype, args.Actor.ToCoordinates());
+            if (!_hands.TryPickupAnyHand(args.Actor, altStackUid))
+                _transform.SetLocalRotation(altStackUid, Angle.Zero); // Orient these to grid north instead of map north if we can't pick them up
+        } // End AS
         UpdatePalletConsoleInterface(uid, component);
     }
 
@@ -305,10 +341,10 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         if (Transform(ent).GridUid is not EntityUid gridUid)
         {
             _uiSystem.SetUiState(ent.Owner, ContrabandPalletConsoleUiKey.Contraband,
-                new ContrabandPalletConsoleInterfaceState(0, 0, 0, false));
+                new ContrabandPalletConsoleInterfaceState(0, 0, 0, 0, false)); // AS: Allow alt reward currencies
             return;
         }
-        GetPalletGoods(gridUid, ent, out _, out _ , out var toRegister);
+        GetPalletGoods(gridUid, ent, out _, out _, out _, out var toRegister); // AS: Allow alt reward currencies
 
         // Aurora: Collect prototype IDs before deletion for statistics tracking
         var itemPrototypes = toRegister
@@ -333,12 +369,14 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
         }
         // End Aurora Song modification
 
-        // Award SCUs
-        var stackPrototype = _protoMan.Index<StackPrototype>(ent.Comp.RewardType);
-        // 1 SCU per registered item
-        if (Exists(_scuOutput))
+
+        // Award Primary currency (Probably SCU's) if we have one
+        if (ent.Comp.RewardType != null)
         {
-            var stackUid = _stack.Spawn(toRegister.Count, stackPrototype, Transform(_scuOutput).Coordinates);
+            var stackPrototype = _protoMan.Index<StackPrototype>(ent.Comp.RewardType);
+            // 1 SCU per registered item
+            var stackUid = _stack.Spawn(toRegister.Count, stackPrototype, _scuOutput.ToCoordinates());
+
             _transform.SetLocalRotation(stackUid, Angle.Zero); // Orient these to grid north instead of map north
         }
 

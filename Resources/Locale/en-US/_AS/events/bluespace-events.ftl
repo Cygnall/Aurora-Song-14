@@ -2,7 +2,7 @@
 
 ## Triage Event
 as-event-bluespace-grid-start-announcement = ALERT - Medical crisis detected! Multiple Emergency Responder teams down! Sector Medics, please move to drifting vessels and begin triage immediately! Official personnel will receive bonus and hazard pay for their efforts.
-as-event-bluespace-grid-warning-announcement = Warning - Bluespace instability detected around unmanned vessels. Five minutes remain to triage wounded, before they exit they exit the sector. Please wrap up triage operations!
+as-event-bluespace-grid-warning-announcement = Warning - Bluespace instability detected around unmanned vessels. Five minutes remain to triage wounded, before they exit the sector. Please wrap up triage operations!
 as-event-bluespace-grid-end-announcement = Critical bluespace instability threshold reached. All emergency medical vessels have exited the sector.
 
 ## Prison Riot Event

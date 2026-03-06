@@ -59,6 +59,7 @@ public abstract partial class SharedGunSystem
         Audio.PlayPredicted(component.SoundInsert, uid, args.User);
         args.Handled = true;
         UpdateBallisticAppearance(uid, component);
+        UpdateAmmoCount(uid);   // Aurora's Song - lets shotguns update their in-hand UI ammo counter
         DirtyField(uid, component, nameof(BallisticAmmoProviderComponent.Entities));
     }
 

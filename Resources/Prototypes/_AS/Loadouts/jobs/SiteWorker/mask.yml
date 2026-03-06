@@ -1,0 +1,5 @@
+# Site Worker Face
+- type: loadout
+  id: SiteWorkerMaskGasAtmos
+  equipment:
+    mask: ClothingMaskGasAtmos

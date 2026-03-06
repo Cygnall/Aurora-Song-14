@@ -1,0 +1,16 @@
+- type: loadout
+  id: SLEForcedClothingOuterEVASuitSLE
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NFOuterSuitRequired
+  price: 0
+  equipment:
+    outerClothing: ASClothingOuterEVASuitSLE
+
+- type: loadout
+  id: SLEOuterClothing
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ASClothingOuterArmorSLE

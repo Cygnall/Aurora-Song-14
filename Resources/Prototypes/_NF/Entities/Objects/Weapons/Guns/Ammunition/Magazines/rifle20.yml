@@ -142,6 +142,14 @@
       - state: inhand-right-stripe
         color: "#ff8d00"
 
+- type: entity # Aurora's Song - empty mag to be filled with looted overpressure cartridges
+  id: NFMagazineRifle20OverpressureEmpty
+  name: magazine (.20 rifle, fillable, overpressure)
+  parent: NFMagazineRifle20Overpressure
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
 - type: entity
   id: NFMagazineRifle20Incendiary
   name: magazine (.20 rifle, incendiary)

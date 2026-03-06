@@ -1,0 +1,139 @@
+# Site Worker Loadout Groups
+
+- type: loadoutGroup
+  id: SiteWorkerJumpsuit
+  name: loadout-group-site-worker-jumpsuit
+  loadouts:
+  - SiteWorkerJumpsuitEngineering
+  - SiteWorkerJumpskirtEngineering
+  - SiteWorkerJumpsuitEngineeringHazard
+  - SiteWorkerJumpsuitAtmos
+  - SiteWorkerJumpskirtAtmos
+  - SiteWorkerJumpsuitAtmosCasual
+  - SiteWorkerJumpsuitMilitaryEngineering
+  - SiteWorkerJumpsuitMilitaryAtmospherics
+  - SiteWorkerJumpsuitMilitaryDamascus
+  - SiteWorkerJumpsuitMilitaryEngiSci
+  - SiteWorkerUniformJumpsuitMilitaryEngineering
+  - SiteWorkerUniformJumpsuitMilitaryScientist
+  - SiteWorkerJumpsuitScientist
+  - SiteWorkerJumpskirtScientist
+  fallbacks:
+  - SiteWorkerJumpsuitEngineering
+  - SiteWorkerJumpskirtEngineering
+
+- type: loadoutGroup
+  id: SiteWorkerHead
+  name: loadout-group-site-worker-head
+  minLimit: 0
+  loadouts:
+  - SiteWorkerHatHardhatYellow
+  - SiteWorkerHatHardhatYellowDark
+  - SiteWorkerHatHardhatBlue
+  - SiteWorkerHatHardhatOrange
+  - SiteWorkerHatHardhatRed
+  - SiteWorkerHatHardhatArmored
+  - SiteWorkerHatBeretRND
+
+- type: loadoutGroup
+  id: SiteWorkerNeck
+  name: loadout-group-site-worker-neck
+  minLimit: 0
+  loadouts:
+  - SiteWorkerNeckScarfStripedOrange
+  - SiteWorkerNeckScarfStripedPurple
+
+- type: loadoutGroup
+  id: SiteWorkerBackpack
+  name: loadout-group-site-worker-backpack
+  loadouts:
+  - SiteWorkerBackpackEngineering
+  - SiteWorkerBackpackDuffelEngineering
+  - SiteWorkerBackpackSatchelEngineering
+  - SiteWorkerBackpackMessengerEngineering
+  - SiteWorkerBackpackAtmospherics
+  - SiteWorkerBackpackDuffelAtmospherics
+  - SiteWorkerBackpackSatchelAtmospherics
+  - SiteWorkerBackpackMessengerAtmospherics
+  - SiteWorkerBackpackScience
+  - SiteWorkerBackpackDuffelScience
+  - SiteWorkerBackpackSatchelScience
+  fallbacks:
+  - SiteWorkerBackpackEngineering
+
+- type: loadoutGroup
+  id: SiteWorkerOuterClothing
+  name: loadout-group-site-worker-outerclothing
+  minLimit: 0
+  loadouts:
+  - SiteWorkerOuterVestHazard
+  - SiteWorkerOuterWinterEngi
+  - SiteWorkerOuterWinterAtmos
+  - SiteWorkerOuterLabCoatScience
+
+- type: loadoutGroup
+  id: SiteWorkerShoes
+  name: loadout-group-site-worker-shoes
+  loadouts:
+  - SiteWorkerShoesBootsWork
+  - SiteWorkerShoesColorBlack
+  - SiteWorkerShoesColorBrown
+  - SiteWorkerShoesBootsWinterEngi
+  - SiteWorkerShoesBootsWinterAtmos
+  - SiteWorkerShoesColorWhite
+  fallbacks:
+  - SiteWorkerShoesBootsWork
+
+- type: loadoutGroup
+  id: SiteWorkerEars
+  name: loadout-group-site-worker-ears
+  hidden: true
+  loadouts:
+  - SiteWorkerHeadsetEngineering
+  fallbacks:
+  - SiteWorkerHeadsetEngineering
+
+- type: loadoutGroup
+  id: SiteWorkerGlasses
+  name: loadout-group-site-worker-glasses
+  hidden: true
+  loadouts:
+  - SiteWorkerGlassesMeson
+  fallbacks:
+  - SiteWorkerGlassesMeson
+
+- type: loadoutGroup
+  id: SiteWorkerFace
+  name: loadout-group-site-worker-face
+  hidden: true
+  loadouts:
+  - SiteWorkerMaskGasAtmos
+  fallbacks:
+  - SiteWorkerMaskGasAtmos
+
+- type: loadoutGroup
+  id: SiteWorkerBelt
+  name: loadout-group-site-worker-belt
+  hidden: true
+  loadouts:
+  - SiteWorkerBeltUtilityEngineering
+  fallbacks:
+  - SiteWorkerBeltUtilityEngineering
+
+- type: loadoutGroup
+  id: SiteWorkerGloves
+  name: loadout-group-site-worker-gloves
+  hidden: true
+  loadouts:
+  - SiteWorkerGlovesColorYellow
+  fallbacks:
+  - SiteWorkerGlovesColorYellow
+
+- type: loadoutGroup
+  id: SiteWorkerPDA
+  name: loadout-group-site-worker-pda
+  hidden: true
+  loadouts:
+  - SiteWorkerPDA
+  fallbacks:
+  - SiteWorkerPDA

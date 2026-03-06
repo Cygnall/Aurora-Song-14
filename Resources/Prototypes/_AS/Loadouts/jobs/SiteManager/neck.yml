@@ -1,0 +1,20 @@
+# Site Manager Neck Items
+- type: loadout
+  id: SiteManagerNeckMantleCE
+  equipment:
+    neck: ClothingNeckMantleCE
+
+- type: loadout
+  id: SiteManagerNeckCloakCE
+  equipment:
+    neck: ClothingNeckCloakCe
+
+- type: loadout
+  id: SiteManagerNeckMantleRD
+  equipment:
+    neck: ClothingNeckMantleRD
+
+- type: loadout
+  id: SiteManagerNeckCloakRD
+  equipment:
+    neck: ClothingNeckCloakRd

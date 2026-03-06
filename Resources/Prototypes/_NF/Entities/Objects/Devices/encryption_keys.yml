@@ -1,8 +1,9 @@
 - type: entity
   parent: [EncryptionKey, RecyclableItemDeviceTiny]
   id: EncryptionKeyTraffic
-  name: traffic control encryption key
-  description: An encryption key for the space traffic control channel.
+  # Monolith - Change traffic to shortband, and description (logged by Aurora's Song)
+  name: shortband encryption key
+  description: An encryption key for the shortband channel. Limited to a 750 meters range. # CS - increase range 500 => 750
   components:
   - type: EncryptionKey
     channels:
@@ -46,6 +47,7 @@
     channels:
     - Common
     - Medical
+    - Greeting # Aurora's Song - Added Greeting, to allow medical command to help onboard
     - Command
     defaultChannel: Common
   - type: Item

@@ -1,0 +1,35 @@
+- type: entity
+  parent: ClothingEyesHudSecurity
+  id: ASClothingEyesHudSLE
+  name: SLE hud
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status and criminal records.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Eyes/Hud/sle_hud.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Eyes/Hud/sle_hud.rsi
+
+- type: entity
+  parent: [ClothingEyesHudMedical, ASClothingEyesHudSLE]
+  id: ASClothingEyesHudSLEMed
+  name: corpsman hud
+  description: An eye display that looks like a mixture of medical and SLE huds.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Eyes/Hud/sle_hud.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Eyes/Hud/sle_hud.rsi
+  - type: Construction
+    graph: HudMedSec
+    node: medsecHud
+
+- type: entity
+  parent: ClothingEyesHudSecurity
+  id: ASClothingEyesHudSLEPatch
+  name: SLE hud eyepatch
+  description: A heads-up display that scans the humanoids in view and provides accurate data about their ID status and criminal records.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Eyes/Hud/sle_patch.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Eyes/Hud/sle_patch.rsi

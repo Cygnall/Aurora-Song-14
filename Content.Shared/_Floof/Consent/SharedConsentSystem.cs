@@ -85,6 +85,13 @@ public abstract partial class SharedConsentSystem : EntitySystem
         return new();
     }
 
+    /// <summary>
+    /// Checks if the given entity has the given consent toggle enabled or not.
+    /// </summary>
+    /// <param name="ent">The entity who consent settings will be checked for the relevant flag.</param>
+    /// <param name="consentId">The protoId for the consent flag to check.</param>
+    /// <returns>State of consent flag for the player's attached to the entity consent settings.
+    /// Default state of the consent flag if consent settings not found.</returns>
     public bool HasConsent(Entity<MindContainerComponent?> ent, ProtoId<ConsentTogglePrototype> consentId)
     {
         if (!_prototypeManager.TryIndex(consentId, out var consentToggle))
@@ -94,6 +101,25 @@ public abstract partial class SharedConsentSystem : EntitySystem
             || mind.Session == null
             || !UserConsents.TryGetValue(mind.Session.UserId, out var consentSettings)
             || !consentSettings.Toggles.TryGetValue(consentId, out var toggle))
+            return consentToggle.DefaultValue;
+
+        return toggle == "on";
+    }
+
+    // Aurora
+    /// <summary>
+    /// Variant of <see cref="HasConsent"/> that can accept a pre-generated <paramref name="settings"/>
+    /// </summary>
+    /// <param name="settings">The consent settings that will be checked for the relevant flag.</param>
+    /// <param name="consentId">The protoId for the consent flag to check.</param>
+    /// <returns></returns>
+    /// <remarks>Prefer usage of this method in performance critical areas.</remarks>
+    public bool HasConsent(PlayerConsentSettings? settings, ProtoId<ConsentTogglePrototype> consentId)
+    {
+        if (!_prototypeManager.TryIndex(consentId, out var consentToggle))
+            return false;
+
+        if (settings == null || !settings.Toggles.TryGetValue(consentId, out var toggle))
             return consentToggle.DefaultValue;
 
         return toggle == "on";

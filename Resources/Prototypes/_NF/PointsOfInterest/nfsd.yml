@@ -37,19 +37,19 @@
         - type: StationNameSetup
           mapNameTemplate: 'NFSD Outpost'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Icons/Stations/nfsd-banner.png # Aurora Song
+          iconPath: /Textures/_AS/Icons/Stations/placeholder-banner.png # Aurora Song's - placeholder POI disabled
           stationSubtext: 'frontier-lobby-nfsd-subtext'
           stationDescription: 'frontier-lobby-nfsd-description'
           lobbySortOrder: 2
         - type: StationJobs
-          availableJobs:
-            Sheriff: [ 1, 1 ]
-            Bailiff: [ 1, 1 ]
-            SeniorOfficer: [ 1, 1 ]
-            Brigmedic: [ 0, 0 ]
-            NFDetective: [ 0, 0 ]
-            Deputy: [ 3, 3 ]
-            Cadet: [ 0, 0 ]
+          availableJobs: # Aurora's Song - Switched NFSD to SLE roles, as fallback
+            Commissioner: [ 1, 1 ]
+            Lieutenant: [ 1, 1 ]
+            Sergeant: [ 1, 1 ]
+            Corpsman: [ 0, 0 ]
+            ASDetective: [ 0, 0 ]
+            Officer: [ 3, 3 ]
+            Rookie: [ 0, 0 ]
             # Others:
             PublicAffairsLiaison: [ 1, 1 ]
           tags:

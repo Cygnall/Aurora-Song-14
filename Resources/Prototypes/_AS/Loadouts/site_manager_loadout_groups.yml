@@ -1,0 +1,121 @@
+# Site Manager Loadout Groups
+
+- type: loadoutGroup
+  id: SiteManagerJumpsuit
+  name: loadout-group-site-manager-jumpsuit
+  loadouts:
+  - SiteManagerJumpsuitChiefEngineer
+  - SiteManagerJumpskirtChiefEngineer
+  - SiteManagerJumpsuitChiefEngineerTurtle
+  - SiteManagerJumpskirtChiefEngineerTurtle
+  - SiteManagerJumpsuitMilitaryEngineeringChief
+  - SiteManagerJumpsuitMilitarySiteManager
+  - SiteManagerJumpsuitRD
+  - SiteManagerJumpskirtRD
+  fallbacks:
+  - SiteManagerJumpsuitChiefEngineer
+  - SiteManagerJumpskirtChiefEngineer
+
+- type: loadoutGroup
+  id: SiteManagerHead
+  name: loadout-group-site-manager-head
+  minLimit: 0
+  loadouts:
+  - SiteManagerHatHardhatWhite
+  - SiteManagerHatHardhatArmored
+  - SiteManagerHatBeretEngineering
+  - SiteManagerHatBeretRD
+
+- type: loadoutGroup
+  id: SiteManagerNeck
+  name: loadout-group-site-manager-neck
+  minLimit: 0
+  loadouts:
+  - SiteManagerNeckMantleCE
+  - SiteManagerNeckCloakCE
+  - SiteManagerNeckMantleRD
+  - SiteManagerNeckCloakRD
+
+- type: loadoutGroup
+  id: SiteManagerBackpack
+  name: loadout-group-site-manager-backpack
+  loadouts:
+  - SiteManagerBackpackEngineering
+  - SiteManagerBackpackDuffelEngineering
+  - SiteManagerBackpackSatchelEngineering
+  - SiteManagerBackpackMessengerEngineering
+  - SiteManagerBackpackAtmospherics
+  - SiteManagerBackpackDuffelAtmospherics
+  - SiteManagerBackpackSatchelAtmospherics
+  - SiteManagerBackpackMessengerAtmospherics
+  - SiteManagerBackpackScience
+  - SiteManagerBackpackDuffelScience
+  - SiteManagerBackpackSatchelScience
+  fallbacks:
+  - SiteManagerBackpackEngineering
+
+- type: loadoutGroup
+  id: SiteManagerOuterClothing
+  name: loadout-group-site-manager-outerclothing
+  minLimit: 0
+  loadouts:
+  - SiteManagerOuterVestHazard
+  - SiteManagerOuterWinterCE
+  - SiteManagerOuterLabCoatRD
+
+- type: loadoutGroup
+  id: SiteManagerShoes
+  name: loadout-group-site-manager-shoes
+  loadouts:
+  - SiteManagerShoesColorWhite
+  - SiteManagerShoesBootsLaceup
+  - SiteManagerShoesBootsWork
+  - SiteManagerShoesBootsWinterCE
+  - SiteManagerShoesBootsWinterEngi
+  fallbacks:
+  - SiteManagerShoesColorWhite
+
+- type: loadoutGroup
+  id: SiteManagerEars
+  name: loadout-group-site-manager-ears
+  hidden: true
+  loadouts:
+  - SiteManagerHeadsetAltEngineering
+  fallbacks:
+  - SiteManagerHeadsetAltEngineering
+
+- type: loadoutGroup
+  id: SiteManagerGlasses
+  name: loadout-group-site-manager-glasses
+  hidden: true
+  loadouts:
+  - SiteManagerGlassesMeson
+  fallbacks:
+  - SiteManagerGlassesMeson
+
+- type: loadoutGroup
+  id: SiteManagerBelt
+  name: loadout-group-site-manager-belt
+  hidden: true
+  loadouts:
+  - SiteManagerBeltChiefEngineerFilled
+  fallbacks:
+  - SiteManagerBeltChiefEngineerFilled
+
+- type: loadoutGroup
+  id: SiteManagerGloves
+  name: loadout-group-site-manager-gloves
+  hidden: true
+  loadouts:
+  - SiteManagerGlovesColorYellow
+  fallbacks:
+  - SiteManagerGlovesColorYellow
+
+- type: loadoutGroup
+  id: SiteManagerPDA
+  name: loadout-group-site-manager-pda
+  hidden: true
+  loadouts:
+  - SiteManagerPDA
+  fallbacks:
+  - SiteManagerPDA

@@ -6,3 +6,21 @@
 
 - type: consentToggle
   id: NSFWDescriptions
+
+# Begin Aurora - Effects
+- type: consentToggle
+  id: Aphrodisiacs
+  category: Effects
+
+- type: consentToggle
+  id: Polymorph
+  category: Effects
+
+- type: consentToggle
+  id: BodyModification
+  category: Effects
+
+- type: consentToggle
+  id: GenderModification
+  category: Effects
+# End Aurora

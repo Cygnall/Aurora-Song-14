@@ -1,0 +1,1175 @@
+#When adding new hardsuits, please try to keep the organization consistent with hardsuit.yml (if possible.)
+
+#For now, since locational damage is not a thing, all "combat" hardsuits (with the exception of the deathsquad hardsuit) have the equvilent of a helmet in terms of armor. This is so people don't need to wear both regular, on-station helmets and hardsuits to get full protection.
+#Generally, unless you're adding something like caustic damage, you should probably avoid messing with armor outside of the above scenario.
+
+#The above is copied from NF's hardsuit helmets file.
+
+# SLE Hardsuit Helmets
+
+- type: entity
+  parent: ASClothingHeadHardsuitWithLightBaseSle
+  id: ClothingHeadHelmetHardsuitSleCombat
+  categories: [ HideSpawnMenu ]
+  name: SLE combat suit helmet
+  description: Medium armored hardsuit helmet for SLE raids.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/sle_combat.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/sle_combat.rsi
+  - type: PointLight
+    color: "#ffeead"
+    radius: 7
+    energy: 3
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+#Mercenary Hardsuits
+
+- type: entity
+  parent: NFClothingHeadHardsuitWithLightBase
+  id: ClothingHeadHelmetHardsuitMercenary
+  categories: [ HideSpawnMenu ]
+  name: mercenary hardsuit helmet
+  description: Lightly armored hardsuit helmet for mercenary needs.
+  components:
+  - type: BreathMask
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/mercenary.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/mercenary.rsi
+  - type: PointLight
+    color: "#ffeead"
+    radius: 6
+    energy: 2
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitMercenary
+  id: ClothingHeadHelmetHardsuitPrivateSecurity
+  name: private security hardsuit helmet
+  description: Lightly armored hardsuit helmet for private security needs.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/private_security.rsi
+    layers:
+    - state: icon
+    - state: icon-flash
+      visible: false
+      map: [ "light" ]
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/private_security.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-head
+      - state: equipped-head-unshaded
+        shader: unshaded
+      head-vox:
+      - state: equipped-head-vox
+      - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: equipped-head-felinid
+      - state: equipped-head-unshaded-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: equipped-head-feroxi
+      - state: equipped-head-unshaded-feroxi
+        shader: unshaded
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-head-light
+        shader: unshaded
+      head-vox:
+      - state: equipped-head-light-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-light-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: equipped-head-light-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: equipped-head-light-feroxi
+        shader: unshaded
+  - type: PointLight
+    enabled: false
+    color: "#00ffff"
+    radius: 7
+    energy: 3
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitMercenary
+  id: ClothingHeadHelmetHardsuitMedicArmored
+  name: medic armored hardsuit helmet
+  description: Armored hardsuit helmet for combat medics.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/medic_armored.rsi
+    layers:
+    - state: icon
+    - state: icon-flash
+      visible: false
+      map: [ "light" ]
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/medic_armored.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-head
+      - state: equipped-head-unshaded
+        shader: unshaded
+      head-vox:
+      - state: equipped-head-vox
+      - state: equipped-head-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-vulpkanin
+      - state: equipped-head-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-reptilian
+      - state: equipped-head-unshaded-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: equipped-head-felinid
+      - state: equipped-head-unshaded-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: equipped-head-feroxi
+      - state: equipped-head-unshaded-feroxi
+        shader: unshaded
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-head-light
+        shader: unshaded
+      head-vox:
+      - state: equipped-head-light-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: equipped-head-light-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: equipped-head-light-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: equipped-head-light-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: equipped-head-light-feroxi
+        shader: unshaded
+  - type: PointLight
+    enabled: false
+    color: "#00ffff"
+    radius: 7
+    energy: 3
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+
+#region Military Surplus
+
+- type: entity
+  parent: ClothingHeadHelmetHardsuitMercenary
+  id: ClothingHeadHelmetHardsuitMilitarySurplus
+  name: military surplus hardsuit helmet
+  description: The helmet for a military surplus hardsuit. Designed for heavy combat engagements.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/military_surplus.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/military_surplus.rsi
+    clothingVisuals:
+      head:
+      - state: off-equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+      head-vox:
+      - state: off-equipped-HELMET-vox
+      - state: equipped-HELMET-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: off-equipped-HELMET-vulpkanin
+      - state: equipped-HELMET-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: off-equipped-HELMET-reptilian
+      - state: equipped-HELMET-unshaded-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: off-equipped-HELMET-felinid
+      - state: equipped-HELMET-unshaded-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: off-equipped-HELMET-feroxi
+      - state: equipped-HELMET-unshaded-feroxi
+        shader: unshaded
+  - type: PointLight
+    color: "#88ff88"
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: on-equipped-HELMET
+      - state: equipped-HELMET-unshaded
+        shader: unshaded
+      head-vox:
+      - state: on-equipped-HELMET-vox
+      - state: equipped-HELMET-unshaded-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: on-equipped-HELMET-vulpkanin
+      - state: equipped-HELMET-unshaded-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: on-equipped-HELMET-reptilian
+      - state: equipped-HELMET-unshaded-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: on-equipped-HELMET-felinid
+      - state: equipped-HELMET-unshaded-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: on-equipped-HELMET-feroxi
+      - state: equipped-HELMET-unshaded-feroxi
+        shader: unshaded
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitMilitarySurplusSWAT
+  name: SWAT hardsuit helmet
+  description: The helmet for a heavy police hardsuit, designed for intense combat engagements.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#D0D9D0"
+    - state: icon-plate
+      color: "#486875"
+    - state: icon-detail
+      color: "#8DA694"
+    - state: icon-eyes
+      color: "#11F7D9"
+      shader: unshaded
+    - state: icon-light
+      color: "#11F7D9"
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#D0D9D0"
+      - state: helmet-plate
+        color: "#486875"
+      - state: helmet-detail
+        color: "#8DA694"
+      - state: helmet-eyes
+        color: "#11F7D9"
+        shader: unshaded
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#D0D9D0"
+      - state: helmet-plate-vox
+        color: "#486875"
+      - state: helmet-detail-vox
+        color: "#8DA694"
+      - state: helmet-eyes-vox
+        color: "#11F7D9"
+        shader: unshaded
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#D0D9D0"
+      - state: helmet-plate-vulpkanin
+        color: "#486875"
+      - state: helmet-detail-vulpkanin
+        color: "#8DA694"
+      - state: helmet-eyes-vulpkanin
+        color: "#11F7D9"
+        shader: unshaded
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#D0D9D0"
+      - state: helmet-plate-reptilian
+        color: "#486875"
+      - state: helmet-detail-reptilian
+        color: "#8DA694"
+      - state: helmet-eyes-reptilian
+        color: "#11F7D9"
+        shader: unshaded
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#D0D9D0"
+      - state: helmet-plate-felinid
+        color: "#486875"
+      - state: helmet-detail-felinid
+        color: "#8DA694"
+      - state: helmet-eyes-felinid
+        color: "#11F7D9"
+        shader: unshaded
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#D0D9D0"
+      - state: helmet-plate-feroxi
+        color: "#486875"
+      - state: helmet-detail-feroxi
+        color: "#8DA694"
+      - state: helmet-eyes-feroxi
+        color: "#11F7D9"
+        shader: unshaded
+  - type: PointLight
+    color: "#11F7D9"
+    radius: 7
+    energy: 3
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#D0D9D0"
+      - state: helmet-plate
+        color: "#486875"
+      - state: helmet-detail
+        color: "#8DA694"
+      - state: helmet-eyes
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light
+        color: "#11F7D9"
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#D0D9D0"
+      - state: helmet-plate-vox
+        color: "#486875"
+      - state: helmet-detail-vox
+        color: "#8DA694"
+      - state: helmet-eyes-vox
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-vox
+        color: "#11F7D9"
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#D0D9D0"
+      - state: helmet-plate-vulpkanin
+        color: "#486875"
+      - state: helmet-detail-vulpkanin
+        color: "#8DA694"
+      - state: helmet-eyes-vulpkanin
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-vulpkanin
+        color: "#11F7D9"
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#D0D9D0"
+      - state: helmet-plate-reptilian
+        color: "#486875"
+      - state: helmet-detail-reptilian
+        color: "#8DA694"
+      - state: helmet-eyes-reptilian
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-reptilian
+        color: "#11F7D9"
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#D0D9D0"
+      - state: helmet-plate-felinid
+        color: "#486875"
+      - state: helmet-detail-felinid
+        color: "#8DA694"
+      - state: helmet-eyes-felinid
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-felinid
+        color: "#11F7D9"
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#D0D9D0"
+      - state: helmet-plate-feroxi
+        color: "#486875"
+      - state: helmet-detail-feroxi
+        color: "#8DA694"
+      - state: helmet-eyes-feroxi
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-feroxi
+        color: "#11F7D9"
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitMilitarySurplusHAZMAT
+  name: HAZMAT surplus hardsuit helmet
+  description: The helmet for a heavy hazardous materials handling hardsuit, designed for intense combat engagements in fallout zones.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#FF8C00"
+    - state: icon-plate
+      color: "#FFC400"
+    - state: icon-detail
+      color: "#010203"
+    - state: icon-eyes
+      color: "#90EE90"
+      shader: unshaded
+    - state: icon-light
+      color: "#90EE90"
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#FF8C00"
+      - state: helmet-plate
+        color: "#FFC400"
+      - state: helmet-detail
+        color: "#010203"
+      - state: helmet-eyes
+        color: "#90EE90"
+        shader: unshaded
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#FF8C00"
+      - state: helmet-plate-vox
+        color: "#FFC400"
+      - state: helmet-detail-vox
+        color: "#010203"
+      - state: helmet-eyes-vox
+        color: "#90EE90"
+        shader: unshaded
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#FF8C00"
+      - state: helmet-plate-vulpkanin
+        color: "#FFC400"
+      - state: helmet-detail-vulpkanin
+        color: "#010203"
+      - state: helmet-eyes-vulpkanin
+        color: "#90EE90"
+        shader: unshaded
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#FF8C00"
+      - state: helmet-plate-reptilian
+        color: "#FFC400"
+      - state: helmet-detail-reptilian
+        color: "#010203"
+      - state: helmet-eyes-reptilian
+        color: "#90EE90"
+        shader: unshaded
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#FF8C00"
+      - state: helmet-plate-felinid
+        color: "#FFC400"
+      - state: helmet-detail-felinid
+        color: "#010203"
+      - state: helmet-eyes-felinid
+        color: "#90EE90"
+        shader: unshaded
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#FF8C00"
+      - state: helmet-plate-feroxi
+        color: "#FFC400"
+      - state: helmet-detail-feroxi
+        color: "#010203"
+      - state: helmet-eyes-feroxi
+        color: "#90EE90"
+        shader: unshaded
+  - type: PointLight
+    color: "#90EE90"
+    radius: 7
+    energy: 3
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#FF8C00"
+      - state: helmet-plate
+        color: "#FFC400"
+      - state: helmet-detail
+        color: "#010203"
+      - state: helmet-eyes
+        color: "#90EE90"
+        shader: unshaded
+      - state: light
+        color: "#90EE90"
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#FF8C00"
+      - state: helmet-plate-vox
+        color: "#FFC400"
+      - state: helmet-detail-vox
+        color: "#010203"
+      - state: helmet-eyes-vox
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-vox
+        color: "#90EE90"
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#FF8C00"
+      - state: helmet-plate-vulpkanin
+        color: "#FFC400"
+      - state: helmet-detail-vulpkanin
+        color: "#010203"
+      - state: helmet-eyes-vulpkanin
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-vulpkanin
+        color: "#90EE90"
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#FF8C00"
+      - state: helmet-plate-reptilian
+        color: "#FFC400"
+      - state: helmet-detail-reptilian
+        color: "#010203"
+      - state: helmet-eyes-reptilian
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-reptilian
+        color: "#90EE90"
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#FF8C00"
+      - state: helmet-plate-felinid
+        color: "#FFC400"
+      - state: helmet-detail-felinid
+        color: "#010203"
+      - state: helmet-eyes-felinid
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-felinid
+        color: "#90EE90"
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#FF8C00"
+      - state: helmet-plate-feroxi
+        color: "#FFC400"
+      - state: helmet-detail-feroxi
+        color: "#010203"
+      - state: helmet-eyes-feroxi
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-feroxi
+        color: "#90EE90"
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitMilitarySurplusRiot
+  name: Riot control surplus hardsuit helmet
+  description: The helmet for a heavy riot control hardsuit, designed for intense riot control operations.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#BFC6C4"
+    - state: icon-plate
+      color: "#161A1E"
+    - state: icon-detail
+      color: "#7F393A"
+    - state: icon-eyes
+      color: "#11F7D9"
+      shader: unshaded
+    - state: icon-light
+      color: "#11F7D9"
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#BFC6C4"
+      - state: helmet-plate
+        color: "#161A1E"
+      - state: helmet-detail
+        color: "#7F393A"
+      - state: helmet-eyes
+        color: "#11F7D9"
+        shader: unshaded
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#BFC6C4"
+      - state: helmet-plate-vox
+        color: "#161A1E"
+      - state: helmet-detail-vox
+        color: "#7F393A"
+      - state: helmet-eyes-vox
+        color: "#11F7D9"
+        shader: unshaded
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#BFC6C4"
+      - state: helmet-plate-vulpkanin
+        color: "#161A1E"
+      - state: helmet-detail-vulpkanin
+        color: "#7F393A"
+      - state: helmet-eyes-vulpkanin
+        color: "#11F7D9"
+        shader: unshaded
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#BFC6C4"
+      - state: helmet-plate-reptilian
+        color: "#161A1E"
+      - state: helmet-detail-reptilian
+        color: "#7F393A"
+      - state: helmet-eyes-reptilian
+        color: "#11F7D9"
+        shader: unshaded
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#BFC6C4"
+      - state: helmet-plate-felinid
+        color: "#161A1E"
+      - state: helmet-detail-felinid
+        color: "#7F393A"
+      - state: helmet-eyes-felinid
+        color: "#11F7D9"
+        shader: unshaded
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#BFC6C4"
+      - state: helmet-plate-feroxi
+        color: "#161A1E"
+      - state: helmet-detail-feroxi
+        color: "#7F393A"
+      - state: helmet-eyes-feroxi
+        color: "#11F7D9"
+        shader: unshaded
+  - type: PointLight
+    color: "#11F7D9"
+    radius: 7
+    energy: 3
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#BFC6C4"
+      - state: helmet-plate
+        color: "#161A1E"
+      - state: helmet-detail
+        color: "#7F393A"
+      - state: helmet-eyes
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light
+        color: "#11F7D9"
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#BFC6C4"
+      - state: helmet-plate-vox
+        color: "#161A1E"
+      - state: helmet-detail-vox
+        color: "#7F393A"
+      - state: helmet-eyes-vox
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-vox
+        color: "#11F7D9"
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#BFC6C4"
+      - state: helmet-plate-vulpkanin
+        color: "#161A1E"
+      - state: helmet-detail-vulpkanin
+        color: "#7F393A"
+      - state: helmet-eyes-vulpkanin
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-vulpkanin
+        color: "#11F7D9"
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#BFC6C4"
+      - state: helmet-plate-reptilian
+        color: "#161A1E"
+      - state: helmet-detail-reptilian
+        color: "#7F393A"
+      - state: helmet-eyes-reptilian
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-reptilian
+        color: "#11F7D9"
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#BFC6C4"
+      - state: helmet-plate-felinid
+        color: "#161A1E"
+      - state: helmet-detail-felinid
+        color: "#7F393A"
+      - state: helmet-eyes-felinid
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-felinid
+        color: "#11F7D9"
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#BFC6C4"
+      - state: helmet-plate-feroxi
+        color: "#161A1E"
+      - state: helmet-detail-feroxi
+        color: "#7F393A"
+      - state: helmet-eyes-feroxi
+        color: "#11F7D9"
+        shader: unshaded
+      - state: light-feroxi
+        color: "#11F7D9"
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+#region Military
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitMilitaryDark
+  name: military dark hardsuit helmet
+  description: The helmet for an Auroran military hardsuit, equipped with advanced optics and night vision.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#CFCFCF"
+    - state: icon-plate
+      color: "#252525"
+    - state: icon-detail
+      color: "#545454"
+    - state: icon-eyes
+      shader: unshaded
+    - state: icon-light
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#CFCFCF"
+      - state: helmet-plate
+        color: "#252525"
+      - state: helmet-detail
+        color: "#545454"
+      - state: helmet-eyes
+        shader: unshaded
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#CFCFCF"
+      - state: helmet-plate-vox
+        color: "#252525"
+      - state: helmet-detail-vox
+        color: "#545454"
+      - state: helmet-eyes-vox
+        shader: unshaded
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#CFCFCF"
+      - state: helmet-plate-vulpkanin
+        color: "#252525"
+      - state: helmet-detail-vulpkanin
+        color: "#545454"
+      - state: helmet-eyes-vulpkanin
+        shader: unshaded
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#CFCFCF"
+      - state: helmet-plate-reptilian
+        color: "#252525"
+      - state: helmet-detail-reptilian
+        color: "#545454"
+      - state: helmet-eyes-reptilian
+        shader: unshaded
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#CFCFCF"
+      - state: helmet-plate-felinid
+        color: "#252525"
+      - state: helmet-detail-felinid
+        color: "#545454"
+      - state: helmet-eyes-felinid
+        shader: unshaded
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#CFCFCF"
+      - state: helmet-plate-feroxi
+        color: "#252525"
+      - state: helmet-detail-feroxi
+        color: "#545454"
+      - state: helmet-eyes-feroxi
+        shader: unshaded
+  - type: PointLight
+    radius: 7
+    energy: 3
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#CFCFCF"
+      - state: helmet-plate
+        color: "#252525"
+      - state: helmet-detail
+        color: "#545454"
+      - state: helmet-eyes
+        shader: unshaded
+      - state: light
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#CFCFCF"
+      - state: helmet-plate-vox
+        color: "#252525"
+      - state: helmet-detail-vox
+        color: "#545454"
+      - state: helmet-eyes-vox
+        shader: unshaded
+      - state: light-vox
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#CFCFCF"
+      - state: helmet-plate-vulpkanin
+        color: "#252525"
+      - state: helmet-detail-vulpkanin
+        color: "#545454"
+      - state: helmet-eyes-vulpkanin
+        shader: unshaded
+      - state: light-vulpkanin
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#CFCFCF"
+      - state: helmet-plate-reptilian
+        color: "#252525"
+      - state: helmet-detail-reptilian
+        color: "#545454"
+      - state: helmet-eyes-reptilian
+        shader: unshaded
+      - state: light-reptilian
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#CFCFCF"
+      - state: helmet-plate-felinid
+        color: "#252525"
+      - state: helmet-detail-felinid
+        color: "#545454"
+      - state: helmet-eyes-felinid
+        shader: unshaded
+      - state: light-felinid
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#CFCFCF"
+      - state: helmet-plate-feroxi
+        color: "#252525"
+      - state: helmet-detail-feroxi
+        color: "#545454"
+      - state: helmet-eyes-feroxi
+        shader: unshaded
+      - state: light-feroxi
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ ClothingHeadHardsuitBase, ClothingHeadSuitWithLightBase ]
+  id: ClothingHeadHelmetHardsuitMilitaryCAF
+  name: military CAF hardsuit helmet
+  description: The helmet for an Auroran Military hardsuit. Worn by a CAF team member. Designed for heavy combat engagements. Equipped with an advanced optics package.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#0F2854"
+    - state: icon-plate
+      color: "#4D4D4D"
+    - state: icon-detail
+      color: "#808080"
+    - state: icon-eyes
+      color: "#90EE90"
+      shader: unshaded
+    - state: icon-light
+      color: "#90EE90"
+      visible: false
+      shader: unshaded
+      map: [ "light" ]
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hardsuits/military_template.rsi
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#0F2854"
+      - state: helmet-plate
+        color: "#4D4D4D"
+      - state: helmet-detail
+        color: "#808080"
+      - state: helmet-eyes
+        color: "#90EE90"
+        shader: unshaded
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#0F2854"
+      - state: helmet-plate-vox
+        color: "#4D4D4D"
+      - state: helmet-detail-vox
+        color: "#808080"
+      - state: helmet-eyes-vox
+        color: "#90EE90"
+        shader: unshaded
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#0F2854"
+      - state: helmet-plate-vulpkanin
+        color: "#4D4D4D"
+      - state: helmet-detail-vulpkanin
+        color: "#808080"
+      - state: helmet-eyes-vulpkanin
+        color: "#90EE90"
+        shader: unshaded
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#0F2854"
+      - state: helmet-plate-reptilian
+        color: "#4D4D4D"
+      - state: helmet-detail-reptilian
+        color: "#808080"
+      - state: helmet-eyes-reptilian
+        color: "#90EE90"
+        shader: unshaded
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#0F2854"
+      - state: helmet-plate-felinid
+        color: "#4D4D4D"
+      - state: helmet-detail-felinid
+        color: "#808080"
+      - state: helmet-eyes-felinid
+        color: "#90EE90"
+        shader: unshaded
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#0F2854"
+      - state: helmet-plate-feroxi
+        color: "#4D4D4D"
+      - state: helmet-detail-feroxi
+        color: "#808080"
+      - state: helmet-eyes-feroxi
+        color: "#90EE90"
+        shader: unshaded
+  - type: PointLight
+    color: "#90EE90"
+    radius: 7
+    energy: 5
+    mask: /Textures/Effects/LightMasks/cone.png
+    autoRot: true
+    netsync: false
+  - type: HandheldLight
+    addPrefix: false
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: helmet-fabric
+        color: "#0F2854"
+      - state: helmet-plate
+        color: "#4D4D4D"
+      - state: helmet-detail
+        color: "#808080"
+      - state: helmet-eyes
+        color: "#90EE90"
+        shader: unshaded
+      - state: light
+        color: "#90EE90"
+      head-vox:
+      - state: helmet-fabric-vox
+        color: "#0F2854"
+      - state: helmet-plate-vox
+        color: "#4D4D4D"
+      - state: helmet-detail-vox
+        color: "#808080"
+      - state: helmet-eyes-vox
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-vox
+        color: "#90EE90"
+      head-vulpkanin:
+      - state: helmet-fabric-vulpkanin
+        color: "#0F2854"
+      - state: helmet-plate-vulpkanin
+        color: "#4D4D4D"
+      - state: helmet-detail-vulpkanin
+        color: "#808080"
+      - state: helmet-eyes-vulpkanin
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-vulpkanin
+        color: "#90EE90"
+      head-reptilian:
+      - state: helmet-fabric-reptilian
+        color: "#0F2854"
+      - state: helmet-plate-reptilian
+        color: "#4D4D4D"
+      - state: helmet-detail-reptilian
+        color: "#808080"
+      - state: helmet-eyes-reptilian
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-reptilian
+        color: "#90EE90"
+      head-felinid:
+      - state: helmet-fabric-felinid
+        color: "#0F2854"
+      - state: helmet-plate-felinid
+        color: "#4D4D4D"
+      - state: helmet-detail-felinid
+        color: "#808080"
+      - state: helmet-eyes-felinid
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-felinid
+        color: "#90EE90"
+      head-feroxi:
+      - state: helmet-fabric-feroxi
+        color: "#0F2854"
+      - state: helmet-plate-feroxi
+        color: "#4D4D4D"
+      - state: helmet-detail-feroxi
+        color: "#808080"
+      - state: helmet-eyes-feroxi
+        color: "#90EE90"
+        shader: unshaded
+      - state: light-feroxi
+        color: "#90EE90"
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 10000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+  - type: Tag
+    tags:
+    - WhitelistChameleon

@@ -24,8 +24,8 @@
     containers:
       board: [ DoorElectronicsPrisoner ]
 
-# Aurora Song - SLE (Security Logistics Enforcement) airlocks
-# region Standard
+# Aurora Song - SLE (Sector Law Enforcement) airlocks
+# region SLE Standard
 - type: entity
   parent: Airlock
   id: ASAirlockSLE
@@ -37,7 +37,7 @@
     layoutId: AirlockSecurity
 # endregion
 
-# region Glass
+# region SLE Glass
 - type: entity
   parent: AirlockGlass
   id: ASAirlockSLEGlass
@@ -48,3 +48,14 @@
   - type: Wires
     layoutId: AirlockSecurity
 # endregion
+
+#region Engineering
+- type: entity
+  parent: AirlockMaint
+  id: AirlockMaintBolted
+  name: Emergency Maintenance Airlock
+  description: "An emergency airlock bolted shut until needed in an emergency."
+  suffix: Bolted
+  components:
+  - type: DoorBolt
+    boltsDown: True

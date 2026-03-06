@@ -1,0 +1,101 @@
+#region chamber
+
+- type: entity
+  id: ASBaseWeaponPistolChamber40
+  parent: NFBaseWeaponPistolChamber
+  abstract: true
+  components:
+  - type: Gun
+    examineCaliber: gun-examine-caliber-40
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/mk58.ogg
+      params:
+        pitch: 0.80
+        volume: -2
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ASMagazinePistol40
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist: &whitelist40
+          tags:
+            - ASMagazinePistol40
+            - ASMagazineHighCapacityPistol40
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber: &chamber35Standard
+        name: Chamber
+        startingItem: ASCartridgePistol40
+        priority: 1
+        whitelist:
+          tags:
+            - ASCartridgePistol40
+
+- type: entity
+  id: ASBaseWeaponPistolChamber45Overpressure
+  parent: NFBaseWeaponPistolChamber45
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: NFMagazinePistol45Overpressure
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - NFMagazinePistol45
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgePistol45Overpressure
+        priority: 1
+        whitelist:
+          tags:
+            - NFCartridgePistol45
+
+- type: entity
+  id: ASBaseWeaponPistolChamber45Rubber
+  parent: NFBaseWeaponPistolChamber45
+  abstract: true
+  components:
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: NFMagazinePistol45Rubber
+        insertSound: /Audio/Weapons/Guns/MagIn/pistol_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/pistol_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - NFMagazinePistol45
+        whitelistFailPopup: gun-magazine-whitelist-fail
+      gun_chamber:
+        name: Chamber
+        startingItem: NFCartridgePistol45Rubber
+        priority: 1
+        whitelist:
+          tags:
+            - NFCartridgePistol45
+
+#region manufacturer
+- type: entity
+  id: ASBaseWeaponFramePistolHazardZone
+  parent: NFBaseWeaponFramePistol
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 1
+    maxAngle: 22
+    angleIncrease: 2.8
+    angleDecay: 3.8
+    fireRate: 3.5
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-hzi
+  - type: StaticPrice
+    price: 300

@@ -1,10 +1,11 @@
 ﻿#region WizDen
 
 - type: entity
-  id: ASWeaponPistolMk58SLEBase
+  id: ASWeaponPistolMk58SBase
   parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
   name: mk58
   description: A cheap semiauto sidearm.
+  categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
     sprite: _AS/Objects/Weapons/Guns/Pistols/mk58.rsi
@@ -13,14 +14,70 @@
   - type: NFWeaponDetails
 
 - type: entity
-  id: ASWeaponPistolMk58SLE
-  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponPistolChamber35HighCapacityOverpressure, ASWeaponPistolMk58SLEBase ]
+  id: ASWeaponPistolMk58S
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponPistolChamber35HighCapacityOverpressure, ASWeaponPistolMk58SBase ]
   name: mk58-S
   description: |-
     The Mark 58 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'
 
 - type: entity
-  id: ASWeaponPistolMk58SLELessLethal
-  parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, ASWeaponPistolMk58SLE ]
+  id: ASWeaponPistolMk58SLessLethal
+  parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, ASWeaponPistolMk58S ]
   suffix: Frontier, Less-lethal
 
+#region DeltaV
+
+- type: entity
+  id: ASWeaponPistolUniversal
+  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ] # Restored to .45 | Aurora
+  name: mk32 "Universal"
+  description: The Mark 32 Offensive Handgun.
+  components: #MK32 restored as accessible .45 pistol, status and soudns adjusted | Aurora
+  - type: Gun
+    minAngle: 1
+    maxAngle: 15
+    angleIncrease: 3
+    angleDecay: 3
+    fireRate: 3
+    soundGunshot:
+      path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Pistols/universal.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Pistols/universal.rsi
+
+- type: entity
+  id: ASWeaponPistolUniversalS
+  parent: [ BaseC2ContrabandUnredeemable, ASBaseWeaponPistolChamber45Overpressure, ASWeaponPistolUniversal ]
+  name: mk32-S "Universal" service pistol
+  description: |-
+    The Mark 32 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'
+  components: &universalComponents
+  - type: Gun
+    soundGunshot:
+      path: /Audio/_DV/Weapons/Guns/Gunshots/universal.ogg
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Pistols/universals.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Pistols/universals.rsi
+
+#region DeltaV: rubber
+- type: entity
+  id: ASWeaponPistolUniversalSLessLethal
+  parent: [ ASBaseWeaponPistolChamber45Rubber, ASWeaponPistolUniversalS ]
+  suffix: Frontier, Less-lethal
+  components: *universalComponents
+
+#region Aurora
+
+- type: entity
+  id: ASWeaponPistolHZ-1-3
+  parent: [ ASBaseWeaponPistolChamber40, ASBaseWeaponFramePistolHazardZone ]
+  name: HZ-1-3 "Thumper"
+  description: A handgun designed for law enforcement, but dropped out of popularity.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Pistols/hz-1-3.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Pistols/hz-1-3.rsi
+  - type: NFWeaponDetails

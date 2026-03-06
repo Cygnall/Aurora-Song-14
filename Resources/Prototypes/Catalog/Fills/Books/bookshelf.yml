@@ -79,7 +79,7 @@
     - id: BookScientistsGuidebook
     - id: BookSecurity
     - id: BookSpaceEncyclopedia
-    - id: NFHyperlinkBookSpaceLaw # Frontier: BookSpaceLaw<NFHyperlinkBookSpaceLaw
+    - id: ASHyperlinkBookSpaceLaw # Aurora's Song: BookSpaceLaw<ASHyperlinkBookSpaceLaw
     - id: BookTheBookOfControl
 
 - type: entityTable

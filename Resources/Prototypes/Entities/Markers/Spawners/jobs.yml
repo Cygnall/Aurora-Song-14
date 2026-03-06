@@ -527,7 +527,7 @@
   name: Corpsman # Aurora
   components:
   - type: SpawnPoint # Frontier
-    job_id: Brigmedic
+    job_id: Corpsman # Aurora's Song - switched Brigmedic to Corpsman
   - type: Sprite
     layers:
       - state: green

@@ -35,7 +35,7 @@
   name: water vapor survival box
   hideEffects:
   - !type:GroupLoadoutEffect
-    proto: ASFeroxi
+    proto: ASWaterVaporBreather
   storage:
     back:
     - ASBoxSurvivalFeroxi
@@ -93,7 +93,7 @@
     proto: ContractorT1
   hideEffects:
   - !type:GroupLoadoutEffect
-    proto: ASFeroxi
+    proto: ASWaterVaporBreather
   price: 1000
   storage:
     back:

@@ -1,6 +1,9 @@
+using Content.Server._NF.Shuttles.Components; // Frontier
 using Content.Server.Administration.Logs;
 using Content.Server.Body.Systems;
 using Content.Server.Buckle.Systems;
+using Content.Server.Doors.Systems; // Mono
+using Content.Server.GameTicking; // Mono
 using Content.Server.Parallax;
 using Content.Server.Procedural;
 using Content.Server.Shuttles.Components;
@@ -17,6 +20,7 @@ using Content.Shared.Throwing;
 using JetBrains.Annotations;
 using Robust.Server.GameObjects;
 using Robust.Server.GameStates;
+using Robust.Shared.Audio; // Mono
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Configuration;
 using Robust.Shared.EntitySerialization.Systems;
@@ -28,8 +32,6 @@ using Robust.Shared.Physics.Systems;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Robust.Shared.Timing;
-using Content.Server._NF.Shuttles.Components; // Frontier
-using Content.Server.GameTicking; // Frontier
 using Content.Shared.Maps;
 
 namespace Content.Server.Shuttles.Systems;
@@ -43,6 +45,7 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
     [Dependency] private readonly IRobustRandom _random = default!;
+    [Dependency] private readonly ITileDefinitionManager _tileDefManager = default!; // Mono
     [Dependency] private readonly BiomeSystem _biomes = default!;
     [Dependency] private readonly BodySystem _bobby = default!;
     [Dependency] private readonly BuckleSystem _buckle = default!;
@@ -50,6 +53,8 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     [Dependency] private readonly DockingSystem _dockSystem = default!;
     [Dependency] private readonly DungeonSystem _dungeon = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
+    [Dependency] private readonly IEntityManager _entityManager = default!; // Mono
+    [Dependency] private readonly FixtureSystem _fixtures = default!; // Mono
     [Dependency] private readonly MapLoaderSystem _loader = default!;
     [Dependency] private readonly MapSystem _mapSystem = default!;
     [Dependency] private readonly MetaDataSystem _metadata = default!;
@@ -72,6 +77,8 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
     private EntityQuery<PhysicsComponent> _physicsQuery;
     private EntityQuery<TransformComponent> _xformQuery;
 
+    public const float TileMassMultiplier = 0.5f; // Mono
+
     public override void Initialize()
     {
         base.Initialize();
@@ -93,13 +100,25 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         SubscribeLocalEvent<ShuttleComponent, FTLCompletedEvent>(OnFTLCompleted);
 
         SubscribeLocalEvent<GridInitializeEvent>(OnGridInit);
-        NfInitialize(); // Frontier
+
+        NfInitialize(); // Frontier Initialization for the ShuttleSystem
+
     }
 
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
         UpdateHyperspace();
+    }
+
+    // Mono
+    private void OnGridFixtureChange(EntityUid uid, FixturesComponent manager, GridFixtureChangeEvent args)
+    {
+        foreach (var fixture in args.NewFixtures)
+        {
+            _physics.SetDensity(uid, fixture.Key, fixture.Value, TileMassMultiplier, false, manager);
+            _fixtures.SetRestitution(uid, fixture.Key, fixture.Value, 0.1f, false, manager);
+        }
     }
 
     private void OnGridInit(GridInitializeEvent ev)
@@ -131,32 +150,34 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         component.DampingModifier = component.BodyModifier;
     }
 
-    public void Toggle(EntityUid uid, ShuttleComponent component)
+    public void Toggle(EntityUid uid, ShuttleComponent component,
+                       bool force = false) // Mono - add force
     {
         if (!TryComp(uid, out PhysicsComponent? physicsComponent))
             return;
 
-        if (HasComp<PreventGridAnchorChangesComponent>(uid)) // Frontier
+        if (HasComp<PreventGridAnchorChangesComponent>(uid) && !force) // Frontier // Mono
             return; // Frontier
 
         component.Enabled = !component.Enabled;
 
         if (component.Enabled)
         {
-            Enable(uid, component: physicsComponent, shuttle: component);
+            Enable(uid, component: physicsComponent, shuttle: component, force: force); // Mono - add force
         }
         else
         {
-            Disable(uid, component: physicsComponent);
+            Disable(uid, component: physicsComponent, force: force); // Mono - add force
         }
     }
 
-    public void Enable(EntityUid uid, FixturesComponent? manager = null, PhysicsComponent? component = null, ShuttleComponent? shuttle = null)
+    public void Enable(EntityUid uid, FixturesComponent? manager = null, PhysicsComponent? component = null, ShuttleComponent? shuttle = null,
+                       bool force = false) // Mono - add force
     {
         if (!Resolve(uid, ref manager, ref component, ref shuttle, false))
             return;
 
-        if (HasComp<PreventGridAnchorChangesComponent>(uid)) // Frontier
+        if (HasComp<PreventGridAnchorChangesComponent>(uid) && !force) // Frontier // Mono
             return; // Frontier
 
         _physics.SetBodyType(uid, BodyType.Dynamic, manager: manager, body: component);
@@ -164,12 +185,13 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
         _physics.SetFixedRotation(uid, false, manager: manager, body: component);
     }
 
-    public void Disable(EntityUid uid, FixturesComponent? manager = null, PhysicsComponent? component = null)
+    public void Disable(EntityUid uid, FixturesComponent? manager = null, PhysicsComponent? component = null,
+                        bool force = false) // Mono - add force
     {
         if (!Resolve(uid, ref manager, ref component, false))
             return;
 
-        if (HasComp<PreventGridAnchorChangesComponent>(uid)) // Frontier
+        if (HasComp<PreventGridAnchorChangesComponent>(uid) && !force) // Frontier // Mono
             return; // Frontier
 
         _physics.SetBodyType(uid, BodyType.Static, manager: manager, body: component);
@@ -193,11 +215,47 @@ public sealed partial class ShuttleSystem : SharedShuttleSystem
 
     private void OnFTLStarted(Entity<ShuttleComponent> ent, ref FTLStartedEvent args)
     {
+        // Begin Mono
+        var gridUid = args.Entity;
+
         ent.Comp.DampingModifier = 0f;
+
+        var dockedShuttles = new HashSet<EntityUid>();
+        GetAllDockedShuttles(gridUid, dockedShuttles);
+
+        // Process each docked ship (excluding the main ship which we already processed)
+        foreach (var dockedUid in dockedShuttles)
+        {
+            if (dockedUid == gridUid)
+                continue;
+
+            if (_entityManager.TryGetComponent<ShuttleComponent>(dockedUid, out var dockedComp))
+            {
+                dockedComp.DampingModifier = 0f;
+            }
+        } // End Mono
     }
 
     private void OnFTLCompleted(Entity<ShuttleComponent> ent, ref FTLCompletedEvent args)
     {
+        var gridUid = args.Entity; // Mono
+
         ent.Comp.DampingModifier = ent.Comp.BodyModifier;
+
+        // Todo: Account for scenarios where shuttles undock mid-FTL
+        var dockedShuttles = new HashSet<EntityUid>();
+        GetAllDockedShuttles(gridUid, dockedShuttles);
+
+        // Mono: Process each docked ship (excluding the main ship which we already processed)
+        foreach (var dockedUid in dockedShuttles)
+        {
+            if (dockedUid == gridUid)
+                continue;
+
+            if (_entityManager.TryGetComponent<ShuttleComponent>(dockedUid, out var dockedComp))
+            {
+                dockedComp.DampingModifier = dockedComp.BodyModifier;
+            }
+        }
     }
 }

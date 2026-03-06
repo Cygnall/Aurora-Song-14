@@ -3,3 +3,24 @@
 
 - type: playTimeTracker
   id: JobService
+
+- type: playTimeTracker
+  id: JobSiteManager
+
+- type: playTimeTracker
+  id: JobSiteWorker
+
+- type: playTimeTracker
+  id: JobCAFLeader
+
+- type: playTimeTracker
+  id: JobCAFTrooper
+
+- type: playTimeTracker
+  id: JobCAFEngineer
+
+- type: playTimeTracker
+  id: JobCAFMedical
+
+- type: playTimeTracker
+  id: JobColonialCommandOfficial

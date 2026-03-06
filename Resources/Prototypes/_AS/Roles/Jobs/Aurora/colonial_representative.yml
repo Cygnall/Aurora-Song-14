@@ -1,0 +1,56 @@
+- type: job
+  id: ColonialRepresentative
+  name: job-name-colonial-representative
+  description: job-description-colonial-representative
+  playTimeTracker: JobHeadOfPersonnel
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 72000 # 20 hrs
+    - !type:RoleTimeRequirement
+      role: JobSecurityGuard
+      time: 10800 # 3 hrs as security guard
+  whitelisted: true
+  startingGear: ColonialRepresentativeGear
+  alwaysUseSpawner: true
+  icon: "JobIconColonialRepresentative"
+  requireAdminNotify: true
+  supervisors: job-supervisors-colcom
+  weight: 170
+  displayWeight: 60 # Top
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+      - type: PreventShipyardTitleOverwrite
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: ColonialRepresentativeGear
+  equipment:
+    pocket1: NFWeaponEnergyPistolDisabler
+  storage:
+    back:
+    - Flash
+    - ASRubberStampColonialRepresentative
+    - DoorRemoteCommand
+    - ShipVoucherAuroraCr
+  encryptionKeys:
+  - EncryptionKeyStationMaster
+
+- type: chameleonOutfit
+  id: ColonialRepresentativeChameleonOutfit
+  job: ColonialRepresentative
+  hasMindShield: true
+  equipment:
+    head: ASClothingHeadHatColonialRepresentativeBeret
+    mask: ClothingMaskBreath
+    neck: ASClothingNeckMantleColonialRepresentative
+    outerClothing: ASClothingOuterJacketColonialRepresentative
+    gloves: ClothingHandsGlovesHop

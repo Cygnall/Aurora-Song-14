@@ -148,12 +148,13 @@
   - type: Tag
     tags:
     - Diagonal
+    - Window
   - type: Icon
     sprite: _NF/Structures/Windows/plastitanium_window_diagonal.rsi # Frontier
     state: state0
   - type: IconSmooth
+    key: walls # AS
     mode: Diagonal
-    key: walls # Frontier: windows<walls
     base: state
   - type: Fixtures
     fixtures:

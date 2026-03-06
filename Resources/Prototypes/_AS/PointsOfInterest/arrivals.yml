@@ -29,9 +29,9 @@
         - type: StationNameSetup
           mapNameTemplate: 'Arrival Relay'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Icons/Stations/medic.png
-          stationSubtext: 'frontier-lobby-arrivals-subtext'
-          stationDescription: 'frontier-lobby-arrivals-description'
+          iconPath: /Textures/_AS/Icons/Stations/bus-banner.png
+          stationSubtext: 'aurora-lobby-arrivals-subtext'
+          stationDescription: 'aurora-lobby-arrivals-description'
           lobbySortOrder: 5
         - type: StationJobs
           availableJobs:

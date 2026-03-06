@@ -1,0 +1,8 @@
+- type: consentCategory
+  id: effects
+  priority: 0
+  members:
+  - Aphrodisiacs
+  - Polymorph
+  - BodyModification
+  - GenderModification

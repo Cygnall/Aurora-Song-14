@@ -4190,7 +4190,7 @@ entities:
     - type: Transform
       pos: -2.5,-5.5
       parent: 1
-- proto: DresserStationRepresentativeFilled
+- proto: ASDresserColonialRepresentativeFilled
   entities:
   - uid: 89
     components:

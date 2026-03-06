@@ -16,7 +16,11 @@
       - EncryptionKeyCommand
       - EncryptionKeyNfsd
       - EncryptionKeyTraffic
+      - EncryptionKeyShipboard # Aurora's Song - Added Shipboard key to shuttle server, so all ships can have short-range comms
       - EncryptionKeyGreeting
+  - type: EncryptionKeyHolder
+    keysExtractionMethod: Prying
+    keySlots: 12 # Aurora's Song - Increased to 12 to fit all keys, including new Shipboard key
 
 - type: entity
   parent: TelecomServer
@@ -45,6 +49,8 @@
     containers:
       key_slots:
       - EncryptionKeyCommon
+      - EncryptionKeyTraffic # Aurora's Song - Added Traffic key to shuttle server, to grant Shortband access
+      - EncryptionKeyShipboard # Aurora's Song - Added Shipboard key to shuttle server, so all ships can have short-range comms
       - EncryptionKeyMedical
 
 - type: entity

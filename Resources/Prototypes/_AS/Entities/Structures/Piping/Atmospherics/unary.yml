@@ -1,0 +1,19 @@
+- type: entity
+  parent: GasVentScrubber
+  id: ASGasVentScrubberPanic
+  name: air scrubber
+  suffix: Panic
+  components:
+  - type: GasVentScrubber
+    enabled: true
+    pumpDirection: Siphoning
+    transferRate: 200
+    wideNet: true
+    #filterGases:
+    #- CarbonDioxide
+    #- Plasma
+    #- Tritium
+    #- WaterVapor
+    #- Ammonia
+    #- NitrousOxide
+    #- Frezon

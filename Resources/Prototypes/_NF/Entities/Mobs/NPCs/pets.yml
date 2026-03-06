@@ -368,7 +368,7 @@
     implants:
     - RedLightImplant
     - DissonantWhispersImplant
-    - MedicalTrackingImplant
+ #   - MedicalTrackingImplant # Aurora: Remove medical tracker
   - type: IntrinsicRadioTransmitter
     channels:
     - Science

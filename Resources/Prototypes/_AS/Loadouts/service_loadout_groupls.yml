@@ -1,1 +1,8 @@
-﻿
+﻿- type: loadoutGroup
+  id: ServiceWorkerPDA
+  name: loadout-group-service-worker-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - ServiceServicePDA
+  fallbacks:
+  - ServiceServicePDA

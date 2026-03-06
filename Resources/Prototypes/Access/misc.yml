@@ -27,8 +27,8 @@
   - Service
   - StationTrafficController # Frontier
   - Sergeant # Frontier
-  - Bailiff # Frontier
-  - Brigmedic # Frontier
+  - Lieutenant # Aurora's Song - Changed Bailiff to Lieutenant
+  - Corpsman # Aurora's Song - Changed Brigmedic to Corpsman
   - Maintenance
   - External
   - Janitor

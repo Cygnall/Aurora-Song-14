@@ -35,7 +35,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'The Alley'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Icons/Stations/mercenary.png
+          iconPath: /Textures/_AS/Icons/Stations/merc-banner.png
           stationSubtext: 'aurora-lobby-alley-subtext'
           stationDescription: 'aurora-lobby-alley-description'
           lobbySortOrder: 3

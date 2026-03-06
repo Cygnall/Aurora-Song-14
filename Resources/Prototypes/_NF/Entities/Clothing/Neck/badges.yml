@@ -1,7 +1,7 @@
-- type: entity # Base Badge
+﻿- type: entity # Base Badge
   parent: ClothingNeckBase
   id: ClothingNeckNfsdBadge
-  name: SLE badge
+  name: NFSD badge
   description: Respect my authority!
   abstract: true
   components:
@@ -16,25 +16,25 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurityCadet
-  name: Rookie badge
-  suffix: Bronze - Rookie
+  name: NFSD cadet badge
+  suffix: Bronze - Cadet
 
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurity
-  suffix: Silver - Officer
-  name: Officer badge
+  suffix: Silver - Deputy
+  name: NFSD deputy badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
   - type: Clothing
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
-
+    
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSecurityBrigmedic
   suffix: Silver - Brigmedic
-  name: Corpsman badge
+  name: NFSD brigmedic badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silvercross_badge.rsi
@@ -45,7 +45,7 @@
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeDetective
   suffix: Silver - Detective
-  name: detective badge
+  name: NFSD detective badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_silver_badge.rsi
@@ -56,7 +56,7 @@
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSeniorOfficer
   suffix: Gold - Sergeant
-  name: sergeant badge
+  name: NFSD sergeant badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_gold_badge.rsi
@@ -66,8 +66,8 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeWarden
-  suffix: Gold - Lieutenant
-  name: Lieutenant badge
+  suffix: Gold - Bailiff
+  name: NFSD bailiff badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_gold_badge.rsi
@@ -77,8 +77,8 @@
 - type: entity
   parent: ClothingNeckNfsdBadge
   id: ClothingNeckNfsdBadgeSheriff
-  suffix: Star - Comissioner
-  name: Comissioner badge
+  suffix: Star - Sheriff
+  name: NFSD sheriff badge
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Scarfs/nfsd_star_badge.rsi
@@ -90,7 +90,7 @@
   parent: ClothingNeckBase
   id: ClothingNeckPublicAffairsLiaisonBadge
   name: public affairs liaison badge
-  description: A badge for grade 4 paperwork wizards affiliated with the SLE.
+  description: A badge for grade 4 paperwork wizards affiliated with the NFSD.
   components:
   - type: Sprite
     sprite: _NF/Clothing/Neck/Misc/palbadge.rsi

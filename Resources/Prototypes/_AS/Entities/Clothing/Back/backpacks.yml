@@ -1,22 +1,97 @@
-# Aurora Song - SLE (Security Logistics Enforcement) backpacks
-# Prototypes for Aurora Song's SLE faction equipment
-# Original NFSD prototypes remain in _NF namespace for backward compatibility
+#region SLE
 
 - type: entity
   parent: ClothingBackpackSecurity
-  id: ASClothingBackpackSLEBrown
+  id: ASClothingBackpackSLENavy
   name: SLE backpack
-  description: A sturdy backpack used by Security Logistics Enforcement personnel.
+  description: A sturdy backpack used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Back/Backpacks/sle_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Back/Backpacks/sle_navy.rsi
 
 - type: entity
-  parent: ASClothingBackpackSLEBrown
-  id: ASClothingBackpackSLECream
+  parent: ASClothingBackpackSLENavy
+  id: ASClothingBackpackSLECorpsman
   name: SLE backpack
-  description: A sturdy backpack used by Security Logistics Enforcement personnel.
+  description: A sturdy backpack used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Back/Backpacks/sle_cream.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Back/Backpacks/sle_corpsman.rsi
 
+#region CAF
+- type: entity
+  parent: [ ClothingBackpackERTLeader, BaseCentcommContraband ] # Frontier - note: NFBackpack sets max size, fails to insert some ERT loadout items
+  id: ClothingBackpackCAFLeader
+  name: CAF leader backpack
+  description: A spacious backpack with lots of pockets, worn by the Commander of a CAF Tactical Team.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/ertleader.rsi
+  - type: Storage
+    grid:
+    - 0,0,10,3
+    maxItemSize: Huge
+
+- type: entity
+  parent: ClothingBackpackCAFLeader
+  id: ClothingBackpackCAFTrooper
+  name: CAF trooper backpack
+  description: A spacious backpack with lots of pockets, worn by Troopers of a CAF Tactical Team.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/ertsec.rsi
+
+- type: entity
+  parent: ClothingBackpackCAFLeader
+  id: ClothingBackpackCAFMedical
+  name: CAF medical backpack
+  description: A spacious backpack with lots of pockets, worn by Medical Officers of a CAF Tactical Team.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/ertmed.rsi
+
+- type: entity
+  parent: ClothingBackpackCAFLeader
+  id: ClothingBackpackCAFEngineer
+  name: CAF engineer backpack
+  description: A spacious backpack with lots of pockets, worn by Engineers of a CAF Tactical Team.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/erteng.rsi
+
+- type: entity
+  parent: ClothingBackpackCAFLeader
+  id: ClothingBackpackCAFJanitor
+  name: CAF janitor backpack
+  description: A spacious backpack with lots of pockets, worn by Janitors of a CAF Tactical Team.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/ertjanitor.rsi
+
+- type: entity
+  parent: ClothingBackpackCAFLeader
+  id: ClothingBackpackCAFClown
+  name: CAF clown backpack
+  description: A spacious backpack with lots of pockets, worn by Clowns of a CAF Tactical Team.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/ertclown.rsi
+
+- type: entity
+  parent: ClothingBackpackCAFLeader
+  id: ClothingBackpackCAFChaplain
+  name: CAF chaplain backpack
+  description: A spacious backpack with lots of pockets, worn by Chaplains of a CAF Tactical Team.
+  components:
+  - type: Sprite
+    sprite: Clothing/Back/Backpacks/ertchaplain.rsi
+
+#- type: entity
+#  parent: ClothingBackpackCAFSecurity
+#  id: ASClothingBackpackDeathSquad
+#  name: death squad backpack
+#  description: Holds the kit of CentComm's most feared agents.
+#  components:
+#    - type: Storage
+#      grid:
+#      - 0,0,7,6

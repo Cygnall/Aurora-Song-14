@@ -30,8 +30,8 @@
   - type: Gun
     minAngle: 1 # General gun rebalance | Aurora
     maxAngle: 20 # General gun rebalance | Aurora
-    angleIncrease: 3 # Recoil tweak to account for rate of fire | Aurora
-    angleDecay: 3 # Recoil tweak to account for rate of fire | Aurora
+    angleIncrease: 2.5 # Recoil tweak to account for rate of fire | Aurora
+    angleDecay: 4 # Recoil tweak to account for rate of fire | Aurora
     fireRate: 4 # General gun rebalance | Aurora
   - type: NFWeaponDetails
     manufacturer: weapon-details-manufacturer-nanotrasen-munitions

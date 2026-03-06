@@ -109,7 +109,7 @@
 #      - state: wet_floor_sign
 
 - type: entity
-  name: SLE encryption key box
+  name: NFSD encryption key box
   parent: BoxEncryptionKeySecurity
   id: BoxEncryptionKeyNfsd
   components:

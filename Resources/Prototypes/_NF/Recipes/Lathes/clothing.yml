@@ -1136,10 +1136,10 @@
   parent: NFBaseBeltRecipe
   result: NFPouchPrivateSecurity
 
-- type: latheRecipe
-  id: NFPouchNfsd
-  parent: NFBaseBeltRecipe
-  result: NFPouchNfsd
+# - type: latheRecipe # Removed in favor of SLE pouch
+#   id: NFPouchNfsd
+#   parent: NFBaseBeltRecipe
+#   result: NFPouchNfsd
 
 - type: latheRecipe
   id: NFPouchJanitor
@@ -1312,3 +1312,24 @@
   result: ClothingBackpackSatchelLeather
   materials:
     Cloth: 400
+
+# region holsters
+- type: latheRecipe
+  parent: NFBaseBootRecipe
+  id: NFBaseClothingNeckHolsterThigh
+  result: NFBaseClothingNeckHolsterThigh
+
+- type: latheRecipe
+  parent: NFBaseBootRecipe
+  id: NFBaseClothingNeckHolsterThighNfsd
+  result: NFBaseClothingNeckHolsterThighNfsd
+
+- type: latheRecipe
+  parent: NFBaseBootRecipe
+  id: NFBaseClothingNeckSheathThigh
+  result: NFBaseClothingNeckSheathThigh
+
+- type: latheRecipe
+  parent: NFBaseBootRecipe
+  id: NFBaseClothingNeckSheathThighNfsd
+  result: NFBaseClothingNeckSheathThighNfsd

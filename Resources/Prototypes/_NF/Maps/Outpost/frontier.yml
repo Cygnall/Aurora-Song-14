@@ -16,7 +16,7 @@
 #            !type:NanotrasenNameGenerator
 #            prefixCreator: '14'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Logo/icon/as-icon-256x256.png # Changeded to AS logo, used the biggest one, looks better when downscaling than upscaling
+          iconPath: /Textures/_AS/Icons/Stations/as-banner.png # Changeded to as-banner.png for parity with other AS POIs
           stationSubtext: 'frontier-lobby-frontier-subtext'
           stationDescription: 'frontier-lobby-frontier-description'
           lobbySortOrder: 1
@@ -26,7 +26,7 @@
             Pilot: [ -1, -1 ]
             Mercenary: [ -1, -1 ]
             Borg: [ -1, -1 ]
-            StationRepresentative: [ 1, 1 ]
+            ColonialRepresentative: [ 1, 1 ] # Aurora's Song - changed SR to Colonial Representative
             StationTrafficController: [ 1, 1 ]
             DirectorOfCare: [ 1, 1 ]  #Aurora
             SecurityGuard: [ 1, 1 ]

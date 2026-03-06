@@ -1,3 +1,5 @@
+#region Weapons
+
 - type: entity
   parent: [ClothingHandsButcherable, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband added ContrabandClothing as parent
   id: ClothingHandsGlovesNorthStarRaiden
@@ -29,12 +31,13 @@
   - type: StaticPrice
     price: 100000
 
-# Aurora Song - SLE (Security Logistics Enforcement) gloves
+#region SLE
+
 - type: entity
   parent: ClothingHandsGlovesCombat
   id: ASClothingHandsGlovesCombatSLEDarkBlue
   name: SLE combat gloves
-  description: Insulated gloves for Security Logistics Enforcement officers.
+  description: Insulated gloves for Sector Law Enforcement officers.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Hands/Gloves/sle_brown.rsi # Aurora Song - Using SLE-recolored sprites
@@ -47,7 +50,7 @@
   parent: ASClothingHandsGlovesCombatSLEDarkBlue
   id: ASClothingHandsGlovesCombatSLELightBlue
   name: SLE combat gloves
-  description: Insulated gloves for Security Logistics Enforcement officers.
+  description: Insulated gloves for Sector Law Enforcement officers.
   components:
   - type: Sprite
     sprite: _AS/Clothing/Hands/Gloves/sle_cream.rsi # Aurora Song - Using SLE-recolored sprites
@@ -56,3 +59,38 @@
   - type: Fiber
     fiberColor: fibers-light-blue
 
+#region Command
+
+- type: entity
+  parent: ClothingHandsGlovesCaptain
+  id: ASClothingHandsGlovesColonialRepresentative
+  name: colonial representative's gloves
+  description: Fine gloves befitting a colonial representative.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Hands/Gloves/cr_gloves.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Hands/Gloves/cr_gloves.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+  - type: FingerprintMask
+
+#region Colonial Command
+
+- type: entity
+  parent: [ ClothingHandsGlovesCaptain, BaseColcommContraband ]
+  id: ASClothingHandsGlovesColonialOfficial
+  name: colonial official's gloves
+  description: Fine gloves befitting a colonial official.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Hands/Gloves/cr_gloves.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Hands/Gloves/cr_gloves.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Slash: 0.95
+  - type: FingerprintMask

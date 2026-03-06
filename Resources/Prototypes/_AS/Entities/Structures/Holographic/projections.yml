@@ -10,9 +10,8 @@
       bodyType: Static
       canCollide: true
     - type: Sprite
-      sprite: _NF/Structures/Holo/nfsd.rsi
+      sprite: _AS/Structures/Holo/sle.rsi
       state: icon
-      color: "#4a6fa5"  # SLE blue
     - type: Fixtures
       fixtures:
         fix1:
@@ -28,6 +27,5 @@
     - type: PointLight
       enabled: true
       radius: 3
-      color: "#4a6fa5"  # SLE blue
     - type: Climbable
     - type: Clickable

@@ -1,21 +1,61 @@
+# Aurora's Song - Added noRot, Foldable, Strap, layers for folded and unfolded states, visualizer settings for layers (foldedLayer, unfoldedLayer, foldedStripe, unfoldedStripe, foldedLogo, unfoldedLogo), and corresponding settings for each towel color/ design.
+
 - type: entity
   id: BaseTowel
   name: base towel
   abstract: true
   description: If you want to survive out here, you gotta know where your towel is.
-  parent: [ UnsensoredClothingUniformBase, ClothingHeadBase, ClothingBeltBase ]
+  parent: [ BaseDeployFoldable, UnsensoredClothingUniformBase, ClothingHeadBase, ClothingBeltBase ] # Aurora's Song - added BaseDeployFoldable
   components:
   - type: Sprite
     sprite: Clothing/Multiple/towel.rsi
+    # Aurora's Song - changes start: added noRot, Foldable, Strapand visual layers
+    noRot: true
+    layers:
+    - state: icon
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      map: ["unfoldedLayer"]
+      visible: false
+  - type: Foldable
+    folded: true
+  - type: Appearance
+  - type: GenericVisualizer
+    visuals:
+      enum.FoldedVisuals.State:
+        foldedLayer:
+          True: {visible: true}
+          False: {visible: false}
+        unfoldedLayer:
+          True: {visible: false}
+          False: {visible: true}
+        foldedStripe:
+          True: {visible: true}
+          False: {visible: false}
+        unfoldedStripe:
+          True: {visible: false}
+          False: {visible: true}
+        foldedLogo:
+          True: {visible: true}
+          False: {visible: false}
+        unfoldedLogo:
+          True: {visible: false}
+          False: {visible: true}
+  - type: Strap
+    enabled: false
+    position: Down
+    rotation: -90
+    buckleOffset: "0,-0.15"
+    # Aurora's Song - changes end
   - type: Clothing
     sprite: Clothing/Multiple/towel.rsi
-    slots: 
+    slots:
     - BELT
     - INNERCLOTHING
     - HEAD
     femaleMask: UniformTop
-    equipSound: 
-    unequipSound: 
+    equipSound:
+    unequipSound:
   - type: Spillable
     solution: absorbed
     spillWhenThrown: false
@@ -40,15 +80,21 @@
   - type: Item
     size: Small
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorWhite
   name: white towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#EAE8E8"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#EAE8E8"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -71,15 +117,21 @@
   - type: Fiber
     fiberColor: fibers-white
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorPurple
   name: purple towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#9C0DE1"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#9C0DE1"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -102,15 +154,21 @@
   - type: Fiber
     fiberColor: fibers-purple
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorRed
   name: red towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#940000"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#940000"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -133,15 +191,21 @@
   - type: Fiber
     fiberColor: fibers-red
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorBlue
   name: blue towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#0089EF"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#0089EF"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -163,16 +227,22 @@
         color: "#0089EF"
   - type: Fiber
     fiberColor: fibers-blue
-    
-- type: entity
+
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorDarkBlue
   name: dark blue towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#3285ba"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#3285ba"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -195,15 +265,21 @@
   - type: Fiber
     fiberColor: fibers-blue
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorLightBlue
   name: light blue towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#58abcc"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#58abcc"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -226,15 +302,21 @@
   - type: Fiber
     fiberColor: fibers-blue
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorTeal
   name: teal towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#3CB57C"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#3CB57C"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -257,15 +339,21 @@
   - type: Fiber
     fiberColor: fibers-teal
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorBrown
   name: brown towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#723A02"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#723A02"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -288,15 +376,21 @@
   - type: Fiber
     fiberColor: fibers-light-brown
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorLightBrown
   name: light brown towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#c59431"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#c59431"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -319,15 +413,21 @@
   - type: Fiber
     fiberColor: fibers-brown
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorGray
   name: gray towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#999999"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#999999"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -350,15 +450,21 @@
   - type: Fiber
     fiberColor: fibers-grey
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorGreen
   name: green towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#5ABF2F"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#5ABF2F"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -381,15 +487,21 @@
   - type: Fiber
     fiberColor: fibers-green
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorDarkGreen
   name: dark green towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#79CC26"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#79CC26"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -412,17 +524,21 @@
   - type: Fiber
     fiberColor: fibers-green
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorGold
   name: gold towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#F7C430"
-    - state: iconstripe
-      color: "#535353"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#F7C430"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -445,15 +561,21 @@
   - type: Fiber
     fiberColor: fibers-gold
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorOrange
   name: orange towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#EF8100"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#EF8100"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -476,15 +598,21 @@
   - type: Fiber
     fiberColor: fibers-orange
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorBlack
   name: black towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#535353"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#535353"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -507,15 +635,21 @@
   - type: Fiber
     fiberColor: fibers-black
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorPink
   name: pink towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#ffa69b"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#ffa69b"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -538,15 +672,21 @@
   - type: Fiber
     fiberColor: fibers-pink
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorYellow
   name: yellow towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
-      color: "#ffe14d"
+      color: "#FFD300"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#FFD300"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -569,15 +709,21 @@
   - type: Fiber
     fiberColor: fibers-yellow
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded state
   id: TowelColorMaroon
   name: maroon towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
-      color: "#cc295f"
+      color: "#800000"
+      map: ["foldedLayer"]
+    - state: icon-unfolded
+      color: "#800000"
+      map: ["unfoldedLayer"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -600,17 +746,28 @@
   - type: Fiber
     fiberColor: fibers-maroon
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded, unfoldedStripe states
   id: TowelColorSilver
   name: silver towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#d0d0d0"
+      map: ["foldedLayer"]
     - state: iconstripe
       color: "#F7C430"
+      map: ["foldedStripe"]
+    - state: icon-unfolded
+      color: "#d0d0d0"
+      map: ["unfoldedLayer"]
+      visible: false
+    - state: stripe-unfolded
+      color: "#F7C430"
+      map: ["unfoldedStripe"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -633,17 +790,28 @@
   - type: Fiber
     fiberColor: fibers-silver
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded, unfoldedStripe states
   id: TowelColorMime
   name: silent towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#EAE8E8"
+      map: ["foldedLayer"]
     - state: iconstripe
       color: "#535353"
+      map: ["foldedStripe"]
+    - state: icon-unfolded
+      color: "#EAE8E8"
+      map: ["unfoldedLayer"]
+      visible: false
+    - state: stripe-unfolded
+      color: "#535353"
+      map: ["unfoldedStripe"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -666,19 +834,35 @@
   - type: Fiber
     fiberColor: fibers-white
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded, unfoldedStripe, unfoldedLogo states
   id: TowelColorNT
   name: NanoTrasen brand towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#004787"
+      map: ["foldedLayer"]
     - state: iconstripe
       color: "#EAE8E8"
+      map: ["foldedStripe"]
     - state: NTmono
       color: "#EAE8E8"
+      map: ["foldedLogo"]
+    - state: icon-unfolded
+      color: "#004787"
+      map: ["unfoldedLayer"]
+      visible: false
+    - state: stripe-unfolded
+      color: "#EAE8E8"
+      map: ["unfoldedStripe"]
+      visible: false
+    - state: logo-nt-unfolded
+      color: "#EAE8E8"
+      map: ["unfoldedLogo"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -701,17 +885,28 @@
   - type: Fiber
     fiberColor: fibers-regal-blue
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded, unfoldedStripe states
   id: TowelColorCentcom
   name: centcom towel
   parent: BaseTowel
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#29722e"
+      map: ["foldedLayer"]
     - state: iconstripe
       color: "#F7C430"
+      map: ["foldedStripe"]
+    - state: icon-unfolded
+      color: "#29722e"
+      map: ["unfoldedLayer"]
+      visible: false
+    - state: stripe-unfolded
+      color: "#F7C430"
+      map: ["unfoldedStripe"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -734,17 +929,28 @@
   - type: Fiber
     fiberColor: fibers-green
 
-- type: entity
+- type: entity # Aurora's Song - added towel unfolded, unfoldedStripe states
   id: TowelColorSyndicate
   name: syndicate towel
   parent: [ BaseTowel, BaseC3ContrabandNoValue ] # Frontier: BaseSyndicateContraband<BaseC3ContrabandNoValue
   components:
   - type: Sprite
+    noRot: true
     layers:
     - state: icon
       color: "#535353"
+      map: ["foldedLayer"]
     - state: iconstripe
       color: "#940000"
+      map: ["foldedStripe"]
+    - state: icon-unfolded
+      color: "#535353"
+      map: ["unfoldedLayer"]
+      visible: false
+    - state: stripe-unfolded
+      color: "#940000"
+      map: ["unfoldedStripe"]
+      visible: false
   - type: Item
     inhandVisuals:
       left:
@@ -766,4 +972,3 @@
         color: "#535353"
   - type: Fiber
     fiberColor: fibers-black
-    

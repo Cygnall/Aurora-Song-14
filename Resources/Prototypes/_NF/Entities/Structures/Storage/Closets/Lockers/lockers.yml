@@ -152,7 +152,7 @@
     stateDoorOpen: nfsd_brigmed_open
     stateDoorClosed: nfsd_brigmed_door
   - type: AccessReader
-    access: [["Brigmedic"]]
+    access: [["Corpsman"]] # Aurora's Song - Changed from Brigmedic to Corpsman
 
 # NFSD Gold - Sergeant
 - type: entity
@@ -176,7 +176,7 @@
   suffix: Bailiff
   components:
   - type: AccessReader
-    access: [["Bailiff"]]
+    access: [["Lieutenant"]] # Aurora's Song - Changed from Bailiff to Lieutenant
 
 # NFSD Sheriff
 - type: entity

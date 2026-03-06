@@ -1,0 +1,98 @@
+- type: entity
+  id: MachineDriveCTLA25Circuitboard
+  parent: BaseMachineCircuitboard
+  name: CTLA-25 bluespace drive board
+  description: A machine board for a bluespace drive.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: MachineFTLDrive
+    requirements:
+      Capacitor: 4
+      Manipulator: 2
+    componentRequirements:
+      AmeFuelContainer:
+        amount: 3
+        defaultPrototype: AmeJar
+    stackRequirements:
+      Glass: 10
+      Steel: 10
+      Uranium: 5
+
+- type: entity
+  id: MachineDriveCTLA25sCircuitboard
+  parent: BaseMachineCircuitboard
+  name: CTLA-25s bluespace drive board
+  description: A machine board for an advanced bluespace drive.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: MachineFTLDrive25S
+    requirements:
+      Capacitor: 8
+      Manipulator: 4
+    componentRequirements:
+      AmeFuelContainer:
+        amount: 3
+        defaultPrototype: AmeJar
+    stackRequirements:
+      Glass: 20
+      Steel: 20
+      Uranium: 20
+
+- type: entity
+  id: MachineDriveCTLA50Circuitboard
+  parent: BaseMachineCircuitboard
+  name: CTLA-50 bluespace drive board
+  description: A machine board for an advanced bluespace drive.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: MachineFTLDrive50
+    requirements:
+      Capacitor: 8
+      Manipulator: 4
+    componentRequirements:
+      AmeFuelContainer:
+        amount: 3
+        defaultPrototype: AmeJar
+    stackRequirements:
+      Glass: 20
+      Steel: 20
+      Uranium: 20
+
+- type: entity # Aurora's Song - added board for heavy variant
+  id: MachineDriveCTLA160Circuitboard
+  parent: BaseMachineCircuitboard
+  name: CTLA-160 bluespace core board
+  description: A machine board for a heavy bluespace drive.
+  components:
+  - type: Sprite
+    state: security
+  - type: MachineBoard
+    prototype: MachineHeavyFTLDriveCore
+    requirements:
+      Capacitor: 12
+      Manipulator: 8
+    componentRequirements:
+      AmeFuelContainer:
+        amount: 4
+        defaultPrototype: AmeJar
+    stackRequirements:
+      Glass: 30
+      Steel: 30
+      Uranium: 30
+
+- type: entity # Aurora's Song - added board for heavy variant console
+  id: ComputerDriveCTLA160ConsoleCircuitboard
+  parent: BaseComputerCircuitboard
+  name: CTLA-160 bluespace drive console board
+  description: A machine board for a heavy bluespace drive console.
+  components:
+  - type: Sprite
+    state: cpu_engineering
+  - type: ComputerBoard
+    prototype: MachineHeavyFTLDriveConsole

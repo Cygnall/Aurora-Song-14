@@ -31,7 +31,7 @@ public sealed partial class SalvageSystem
      * Handles setup / teardown of salvage expeditions.
      */
 
-    private const int MissionLimit = 6; // Frontier: 3<5 #Hardlight 5<6 :3
+    private const int MissionLimit = 6; // Frontier: 3<5 Aurora Song 5>6
 
     private readonly JobQueue _salvageQueue = new();
     private readonly List<(SpawnSalvageMissionJob Job, CancellationTokenSource CancelToken)> _salvageJobs = new();

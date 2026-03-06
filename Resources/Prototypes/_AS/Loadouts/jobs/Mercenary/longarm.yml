@@ -1,0 +1,23 @@
+- type: loadout
+  id: MercenaryLongarmNovaliteC1
+  price: 7500
+  inhand:
+  - NFWeaponRifleAssaultNovaliteC1
+
+- type: loadout
+  id: MercenaryLongarmGestio
+  price: 7500
+  inhand:
+  - NFWeaponRifleAssaultGestio
+
+- type: loadout
+  id: MercenaryLongarmRepeater
+  price: 7200
+  inhand:
+  - NFWeaponRifleRepeater
+
+- type: loadout
+  id: MercenaryLongarmKammerer
+  price: 6000
+  inhand:
+  - NFWeaponShotgunKammerer

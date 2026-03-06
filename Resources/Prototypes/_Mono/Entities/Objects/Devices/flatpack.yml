@@ -1,0 +1,90 @@
+# Aurora: add flatpacks
+- type: entity
+  parent: BaseFlatpack
+  id: FTLDriveFlatpack
+  name: CTLA-25 bluespace drive flatpack
+  description: A flatpack used for constructing a CTLA-25 bluespace drive.
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+    - state: overlay
+      color: "#DE3A3A"
+      map: ["enum.FlatpackVisualLayers.Overlay"]
+    - state: icon-default
+  - type: Flatpack
+    entity: MachineFTLDrive
+  - type: StaticPrice
+    price: 1700
+
+- type: entity
+  parent: BaseFlatpack
+  id: FTLDrive50Flatpack
+  name: CTLA-50 bluespace drive flatpack
+  description: A flatpack used for constructing a CTLA-50 bluespace drive.
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+    - state: overlay
+      color: "#DE3A3A"
+      map: ["enum.FlatpackVisualLayers.Overlay"]
+    - state: icon-default
+  - type: Flatpack
+    entity: MachineFTLDrive50
+  - type: StaticPrice
+    price: 3000
+
+- type: entity
+  parent: BaseFlatpack
+  id: FTLDrive25SFlatpack
+  name: CTLA-25s bluespace drive flatpack
+  description: A flatpack used for constructing a CTLA-25s bluespace drive.
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+    - state: overlay
+      color: "#DE3A3A"
+      map: ["enum.FlatpackVisualLayers.Overlay"]
+    - state: icon-default
+  - type: Flatpack
+    entity: MachineFTLDrive25S
+  - type: StaticPrice
+    price: 5000
+
+- type: entity
+  parent: BaseFlatpack
+  id: FTLDrive160Flatpack
+  name: CTLA-160 heavy bluespace core flatpack
+  description: A flatpack used for constructing a CTLA-160 heavy bluespace core.
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+    - state: overlay
+      color: "#DE3A3A"
+      map: ["enum.FlatpackVisualLayers.Overlay"]
+    - state: icon-default
+  - type: Flatpack
+    entity: MachineHeavyFTLDriveCore
+  - type: StaticPrice
+    price: 7500
+
+- type: entity
+  parent: BaseFlatpack
+  id: FTLDrive160ConsoleFlatpack
+  name: CTLA-160 heavy bluespace console flatpack
+  description: A flatpack used for constructing a CTLA-160 heavy bluespace console.
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+    - state: overlay
+      color: "#EFB341"
+      map: ["enum.FlatpackVisualLayers.Overlay"]
+    - state: icon-default
+  - type: Flatpack
+    entity: MachineHeavyFTLDriveConsole
+  - type: StaticPrice
+    price: 5000

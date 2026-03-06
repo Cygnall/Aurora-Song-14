@@ -7,7 +7,7 @@
   price: 135000
   category: Large
   group: Security
-  access: Bailiff
+  access: Lieutenant # Aurora's Song - Changed from Bailiff to Lieutenant
   shuttlePath: /Maps/_AS/Shuttles/Sle/wasp.yml
   guidebookPage: Null
   class:

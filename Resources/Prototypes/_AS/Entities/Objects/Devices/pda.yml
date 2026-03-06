@@ -1,0 +1,628 @@
+#region Base
+
+- type: entity
+  abstract: true
+  parent: BasePDA
+  id: ASBasePDA
+  name: PDA
+  description: Personal Data Assistant.
+  components:
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda
+  - type: Sprite
+    sprite: _AS/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: Icon
+    sprite: _AS/Objects/Devices/pda.rsi
+    state: pda
+  - type: Pda
+    paiSlot:
+      priority: -4
+      whitelist:
+        components:
+        - PAI
+    penSlot:
+      startingItem: Pen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+
+- type: entity
+  parent: BasePDA
+  id: ASBaseSecurityPDA # copy of BaseSecurityPDA from NF with different sprite directory
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Devices/pda.rsi
+  - type: Icon
+    sprite: _AS/Objects/Devices/pda.rsi
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - WantedListCartridge
+
+#region Medical
+
+- type: entity
+  parent: [ASBasePDA, BaseC2ContrabandMedicalUnredeemable]
+  id: ASMedicPDA
+  name: Medic PDA
+  description: It smells like disinfectant.
+  components:
+  - type: Pda
+    id: ASMedicIDCard
+    penSlot:
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#d7d7d0"
+    accentVColor: "#2a4b5b"
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-paramedic
+  - type: Icon
+    sprite: _AS/Objects/Devices/pda.rsi
+    state: pda-paramedic
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - MedTekCartridge
+
+#region Service
+
+- type: entity
+  parent: [ASBasePDA, BaseC2ContrabandServiceUnredeemable]
+  id: ASServiceWorkerPDA
+  name: Service Worker PDA
+  description: It smells like disinfectant.
+  components:
+  - type: Pda
+    id: ASServiceWorkerIDCard
+    penSlot:
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: PdaBorderColor
+    borderColor: "#d7d7d0"
+    accentVColor: "#2a4b5b"
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-internservice
+  - type: Icon
+    sprite: _AS/Objects/Devices/pda.rsi
+    state: pda-internservice
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+
+#region SLE
+
+- type: entity
+  parent: [ASBaseSecurityPDA, BaseCommandContraband]
+  id: ASCommissionerPDA
+  name: commissioner PDA
+  description: Whosoever bears this PDA is the law.
+  components:
+  - type: Pda
+    id: ASCommissionerIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+    penSlot:
+      startingItem: PenColcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-commissioner
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-commissioner
+  - type: CartridgeLoader # Extended with the ledger
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - WantedListCartridge
+    - LedgerCartridge
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASRookiePDA
+  name: rookie PDA
+  description: Whosoever bears this PDA could be the law.
+  components:
+  - type: Pda
+    id: ASRookieIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-rookie
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-rookie
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASOfficerPDA
+  name: officer PDA
+  description: Whosoever bears this PDA is close to being the law.
+  components:
+  - type: Pda
+    id: ASOfficerIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-officer
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-officer
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASCorpsmanPDA
+  name: corpsman PDA
+  description: Whosoever bears this PDA heals the law.
+  components:
+  - type: Pda
+    id: ASCorpsmanIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-corpsman
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-corpsman
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASSergeantPDA
+  name: sergeant PDA
+  description: Whosoever bears this PDA puts the law on their back.
+  components:
+  - type: Pda
+    id: ASSergeantIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-assergeant
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-assergeant
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASLieutenantPDA
+  name: bailiff PDA
+  description: Whosoever bears this PDA puts the law on their back.
+  components:
+  - type: Pda
+    id: ASLieutenantIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-lieutenant
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-lieutenant
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASDetectivePDA
+  name: detective PDA
+  description: Smells like rain... pouring down the rooftops...
+  components:
+  - type: Pda
+    id: ASDetectiveIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-asdetective
+  - type: PdaBorderColor
+    borderColor: "#122E50"
+  - type: Icon
+    state: pda-asdetective
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ASPublicAffairsLiaisonPDA
+  name: public affairs liaison PDA
+  description: Paperwork, paperwork, paperwork!
+  components:
+  - type: Pda
+    id: ASPublicAffairsIDCard
+    penSlot:
+      startingItem: PublicAffairsPen
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-aspal
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-aspal
+
+#region Command
+
+- type: entity
+  parent: [ASBaseSecurityPDA, BaseCommandContraband]
+  id: ASColonialRepresentativePDA
+  name: colonial representative PDA
+  description: Looks like it's been clawed on, but with a colonial flair.
+  components:
+  - type: Pda
+    id: ASColonialRepresentativeIDCard
+    penSlot:
+      startingItem: PenColcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-cr
+  - type: PdaBorderColor
+    borderColor: "#789876"
+    accentHColor: "#447987"
+  - type: Icon
+    state: pda-cr
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - LedgerCartridge
+    - MailMetricsCartridge
+
+#region Colonial Command
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: ColcomPDA
+  name: ColCom PDA
+  description: Connection to the Colonial government.
+  components:
+  - type: Pda
+    id: ColcomIDCard
+    penSlot:
+      startingItem: PenColcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-colcom
+  - type: PdaBorderColor
+    borderColor: "#1C4D8D"
+  - type: Icon
+    state: pda-colcom
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - MedTekCartridge
+      - WantedListCartridge
+      - LogProbeCartridge
+      - AstroNavCartridge
+
+- type: entity
+  parent: ASBaseSecurityPDA
+  id: CAFLeaderPDA
+  name: CAF Leader PDA
+  suffix: Leader
+  description: Blue for calm under pressure.
+  components:
+  - type: Pda
+    id: CAFLeaderIDCard
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-colcom
+  - type: PdaBorderColor
+    borderColor: "#1C4D8D"
+    accentHColor: "#A1A1A1"
+    accentVColor: "#A1A1A1"
+  - type: Icon
+    state: pda-colcom
+  - type: CartridgeLoader
+    uiKey: enum.PdaUiKey.Key
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - MedTekCartridge
+      - WantedListCartridge
+      - LogProbeCartridge
+      - AstroNavCartridge
+      - MailMetricsCartridge # Frontier
+
+#- type: entity # commenting out until CAF Chaplain role is added
+#  parent: CAFLeaderPDA
+#  id: CAFChaplainPDA
+#  name: CAF Chaplain PDA
+#  suffix: Chaplain
+#  description: Blue for calm under pressure, it's blessed.
+#  components:
+#  - type: Pda
+#    id: CAFChaplainIDCard
+
+- type: entity
+  parent: CAFLeaderPDA
+  id: CAFEngineerPDA
+  name: CAF Engineer PDA
+  suffix: Engineer
+  description: Blue for calm under pressure, it's well-worn.
+  components:
+  - type: Pda
+    id: CAFEngineerIDCard
+
+#- type: entity # commenting out until CAF Janitor role is added
+#  parent: CAFLeaderPDA
+#  id: CAFJanitorPDA
+#  name: CAF Janitor PDA
+#  suffix: Janitor
+#  description: Blue for calm under pressure, it's squeaky clean.
+#  components:
+#  - type: Pda
+#    id: CAFJanitorIDCard
+
+- type: entity
+  parent: CAFLeaderPDA
+  id: CAFMedicPDA
+  name: CAF Medic PDA
+  suffix: Medic
+  description: Blue for calm under pressure, it's shiny and sterile.
+  components:
+  - type: Pda
+    id: CAFMedicIDCard
+
+- type: entity
+  parent: CAFLeaderPDA
+  id: CAFTrooperPDA
+  name: CAF Trooper PDA
+  suffix: Trooper
+  description: Blue for calm under pressure, it has tally marks etched on the side.
+  components:
+  - type: Pda
+    id: CAFTrooperIDCard
+
+#region Engineering-Science
+
+- type: entity
+  parent: [ASBasePDA, BaseCommandContraband]
+  id: ASSiteManagerPDA
+  name: site manager PDA
+  description: Looks like it's been used to fix everything on the station.
+  components:
+  - type: Pda
+    id: ASSiteManagerIDCard
+    penSlot:
+      startingItem: PenColcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-sitemanager
+  - type: PdaBorderColor
+    borderColor: "#E88D28"
+    accentHColor: "#C69B27"
+  - type: Icon
+    state: pda-sitemanager
+  - type: CartridgeLoader
+    preinstalled:
+    - CrewManifestCartridge
+    - NotekeeperCartridge
+    - NanoTaskCartridge
+    - NewsReaderCartridge
+    - BountyContractsCartridge
+    - AstroNavCartridge
+    - LedgerCartridge
+
+- type: entity
+  parent: ASBasePDA
+  id: ASSiteWorkerPDA
+  name: site worker PDA
+  description: Smells like ozone and burnt insulation.
+  components:
+  - type: Pda
+    id: ASSiteWorkerIDCard
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-siteworker
+  - type: PdaBorderColor
+    borderColor: "#C69B27"
+    accentVColor: "#E88D28"
+  - type: Icon
+    state: pda-siteworker
+
+#region Special
+
+- type: entity
+  parent: [MusicBasePDA, AdminPDA]
+  id: ASAdminPDA
+  components:
+  - type: Pda
+    id: ASUniversalIDCard
+    penSlot:
+      startingItem: PenColcom
+      priority: -1
+      whitelist:
+        tags:
+        - Write
+  - type: Appearance
+    appearanceDataInit:
+     enum.PdaVisuals.PdaType:
+       !type:String
+       pda-colcom
+  - type: Sprite
+    sprite: _AS/Objects/Devices/pda.rsi
+    layers:
+    - map: [ "enum.PdaVisualLayers.Base" ]
+      state: "pda"
+    - state: "light_overlay"
+      map: [ "enum.PdaVisualLayers.Flashlight" ]
+      shader: "unshaded"
+      visible: false
+    - state: "id_overlay"
+      map: [ "enum.PdaVisualLayers.IdLight" ]
+      shader: "unshaded"
+      visible: false
+  - type: PdaBorderColor
+    borderColor: "#1C4D8D"
+  - type: Icon
+    sprite: _AS/Objects/Devices/pda.rsi
+    state: pda-colcom
+  - type: CartridgeLoader
+    diskSpace: 20
+    preinstalled:
+      - CrewManifestCartridge
+      - NotekeeperCartridge
+      - NanoTaskCartridge
+      - NewsReaderCartridge
+      - BountyContractsCartridge
+      - AstroNavCartridge
+      - WantedListCartridge
+      - LedgerCartridge
+      - LogProbeCartridge
+      - MailMetricsCartridge
+      - AppraisalCartridge
+      - NetProbeCartridge

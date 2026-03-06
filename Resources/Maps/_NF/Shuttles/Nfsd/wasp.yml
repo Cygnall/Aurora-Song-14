@@ -7910,7 +7910,7 @@ entities:
     - type: Transform
       pos: -0.5,10.5
       parent: 1
-- proto: HoloprojectorNfsd
+- proto: ASHoloprojectorSLE
   entities:
   - uid: 1159
     components:

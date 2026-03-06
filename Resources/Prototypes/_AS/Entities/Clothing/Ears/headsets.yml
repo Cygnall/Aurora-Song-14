@@ -1,16 +1,16 @@
-# Aurora Song - SLE (Security Logistics Enforcement) headsets
+# Aurora Song - SLE (Sector Law Enforcement) headsets
 # Prototypes for Aurora Song's SLE faction equipment
 
 - type: entity
   parent: ClothingHeadset
-  id: ASClothingHeadsetSLEBrown
+  id: ASClothingHeadsetSLENavy
   name: SLE headset
-  description: An updated headset for Security Logistics Enforcement personnel.
+  description: An updated headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_navy.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_navy.rsi # Aurora Song - Using SLE-recolored sprites
   - type: ContainerFill
     containers:
       key_slots:
@@ -18,40 +18,40 @@
       - EncryptionKeyNfsd
 
 - type: entity
-  parent: ASClothingHeadsetSLEBrown
-  id: ASClothingHeadsetSLEGreen
+  parent: ASClothingHeadsetSLENavy
+  id: ASClothingHeadsetSLEOrange
   name: SLE headset
-  description: An updated headset for Security Logistics Enforcement personnel.
+  description: An updated headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_orange.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_orange.rsi # Aurora Song - Using SLE-recolored sprites
 
 - type: entity
-  parent: ASClothingHeadsetSLEBrown
-  id: ASClothingHeadsetSLECream
+  parent: ASClothingHeadsetSLENavy
+  id: ASClothingHeadsetSLECobalt
   name: SLE headset
-  description: An updated headset for Security Logistics Enforcement personnel.
+  description: An updated headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_cobalt.rsi # Aurora Song - Using SLE-recolored sprites
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_e_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_e_cobalt.rsi # Aurora Song - Using SLE-recolored sprites
 
 # Common Versions - can be used without keys
 - type: entity
-  parent: [ClothingHeadsetCommon, ASClothingHeadsetSLEBrown]
-  id: ASClothingHeadsetSLEBrownCommon
+  parent: [ClothingHeadsetCommon, ASClothingHeadsetSLENavy]
+  id: ASClothingHeadsetSLENavyCommon
   categories: [ HideSpawnMenu ]
 
 - type: entity
-  parent: [ClothingHeadsetCommon, ASClothingHeadsetSLEGreen]
-  id: ASClothingHeadsetSLEGreenCommon
+  parent: [ClothingHeadsetCommon, ASClothingHeadsetSLEOrange]
+  id: ASClothingHeadsetSLEOrangeCommon
   categories: [ HideSpawnMenu ]
 
 - type: entity
-  parent: [ClothingHeadsetCommon, ASClothingHeadsetSLECream]
-  id: ASClothingHeadsetSLECreamCommon
+  parent: [ClothingHeadsetCommon, ASClothingHeadsetSLECobalt]
+  id: ASClothingHeadsetSLECobaltCommon
   categories: [ HideSpawnMenu ]
 

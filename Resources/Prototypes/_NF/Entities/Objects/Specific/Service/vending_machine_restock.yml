@@ -24,6 +24,7 @@
   - type: VendingMachineRestock
     canRestock:
     - AmmoVendInventory
+    - WeaponryWorksVendInventory # Aurora's Song - Liberation Station now uses WeaponryWorksVendInventory
   - type: Sprite
     layers:
     - state: base

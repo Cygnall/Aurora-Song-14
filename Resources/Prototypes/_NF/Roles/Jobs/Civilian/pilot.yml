@@ -6,6 +6,7 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 43200
+  startingGear: PilotGear # Aurora's Song - Added default gear
   icon: "JobIconPilot"
   supervisors: job-supervisors-hire
   weight: 2 # Prioritize station & department jobs
@@ -16,6 +17,12 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+
+- type: startingGear # Aurora's Song - Added to default grant Pilots encryption keys
+  id: PilotGear
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
 
 # Interview variant
 - type: job

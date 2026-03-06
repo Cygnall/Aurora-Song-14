@@ -1,0 +1,19 @@
+- type: loadout
+  id: RookieClothingUniformJumpsuitSLEShort
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitSLEShortRookie
+
+- type: loadout
+  id: RookieClothingUniformJumpskirtSLEShort
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtSLEShortRookie
+
+- type: loadout
+  id: RookieClothingUniformJumpsuitSLE
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitSLERookie
+
+- type: loadout
+  id: RookieClothingUniformJumpskirtSLE
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtSLERookie

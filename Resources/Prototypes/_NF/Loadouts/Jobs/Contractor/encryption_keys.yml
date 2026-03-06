@@ -1,14 +1,26 @@
 #T0
 - type: loadout
   id: ContractorEncryptionKeyTraffic
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ASNotStandard # Aurora's Song - Assume these roles have them by default, so it's hidden
   encryptionKeys:
   - EncryptionKeyTraffic
+
+- type: loadout # Aurora's Song - Shipboard encryption key added
+  id: ContractorEncryptionKeyShipboard
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ASNotStandard # Aurora's Song - Assume these roles have them by default, so it's hidden
+  price: 0
+  encryptionKeys:
+  - EncryptionKeyShipboard
 
 - type: loadout
   id: ContractorEncryptionKeyMedical
   hideEffects:
   - !type:GroupLoadoutEffect
-    proto: NFNotDoc
+    proto: ASNotMedical # Aurora's Song - NFNotDoc<ASNotMedical
   price: 20
   encryptionKeys:
   - EncryptionKeyMedical
@@ -31,5 +43,8 @@
 - type: loadout
   id: ContractorEncryptionKeyScience
   price: 20
+  hideEffects: # Aurora's Song - Should be in Site Workers' loadouts by default
+  - !type:GroupLoadoutEffect
+    proto: NFNotEngineering
   encryptionKeys:
   - EncryptionKeyScience

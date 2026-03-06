@@ -1,6 +1,6 @@
-# Aurora Song - Triage Shuttle: Apothecary
+# Aurora Song - Objective: Smuggler Intercept 'Bulker'
 # Modified copy of original shuttle design from New Frontier Station 14
-# Original implementation: https://github.com/new-frontiers-14/frontier-station-14
+# Original design: https://github.com/new-frontiers-14/frontier-station-14
 
 meta:
   format: 7
@@ -3478,7 +3478,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -8.5,-5.5
       parent: 1
-- proto: ReinforcedWindow
+- proto: ReinforcedWindowDungeon
   entities:
   - uid: 4
     components:

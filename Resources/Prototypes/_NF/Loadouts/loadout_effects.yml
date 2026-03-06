@@ -1,4 +1,6 @@
-# Species
+# Aurora's Song - edited region headers
+
+#region Species
 - type: loadoutEffectGroup
   id: NFNitrogenBreather
   effects:
@@ -16,6 +18,7 @@
     - Vox
     - Sheleg # Different meds
     - IPC
+    - Feroxi # Water vapor breather - Aurora Song
     inverted: true
 
 - type: loadoutEffectGroup
@@ -56,6 +59,8 @@
     species:
     - Sheleg
 
+#region Jobs
+
 - type: loadoutEffectGroup
   id: NFNotDocOrStc
   effects:
@@ -71,26 +76,19 @@
     blacklist:
     - JobDirectorOfCare
 
+# Aurora's Song - JobPlantManager and JobPlantTechnician changed to JobSiteManager and JobSiteWorker
 - type: loadoutEffectGroup
   id: NFNotEngineering
   effects:
   - !type:RoleBlacklistLoadoutEffect
     blacklist:
-    - JobPlantManager
-    - JobPlantTechnician
+    - JobSiteManager
+    - JobSiteWorker
 
 - type: loadoutEffectGroup
   id: NFNotStationRep
   effects:
   - !type:RoleBlacklistLoadoutEffect
     blacklist:
-    - JobStationRepresentative
-
-# Begin Aurora Song
-- type: loadoutEffectGroup
-  id: ASFeroxi
-  effects:
-  - !type:SpeciesLoadoutEffect
-    species:
-    - Feroxi
-# End AuroraSong
+    # - JobStationRepresentative # Aurora Song: Replaced with JobColonialRepresentative
+    - JobColonialRepresentative # Aurora Song's - Blacklist Colonial Representative from this loadout

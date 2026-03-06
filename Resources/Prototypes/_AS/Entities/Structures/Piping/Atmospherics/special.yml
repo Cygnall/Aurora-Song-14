@@ -1,0 +1,44 @@
+# Devices which are not portable but don't link up to anything
+- type: entity
+  parent: AtmosDeviceFanTiny
+  id: PoweredAtmosDeviceFanTiny
+  name: tiny fan
+  suffix: Powered
+  description: A tiny fan, releasing a thin gust of air.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Pullable
+  - type: Rotatable
+    increment: 90
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: ExtensionCableReceiver
+  - type: Anchorable
+  - type: Airtight
+    airBlocked: false
+    requiresPower: true
+
+- type: entity
+  parent: AtmosDeviceFanDirectional
+  id: PoweredAtmosDeviceFanDirectional
+  name: directional fan
+  suffix: Powered
+  description: A thin fan, stopping the movement of gases across it.
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Physics
+    bodyType: Static
+  - type: Pullable
+  - type: Rotatable
+    increment: 90
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: ExtensionCableReceiver
+  - type: Anchorable
+  - type: Airtight
+    airBlocked: false
+    requiresPower: true

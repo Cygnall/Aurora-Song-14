@@ -32,11 +32,13 @@
     gloves: ClothingHandsGlovesColorWhite
     id: ValetPDA
   storage:
-    back:
-    - EncryptionKeyService
+    back: # Aurora's Song - moved service encryption key to the appropriate section
     - ShipVoucherFrontierValet
-  encryptionKeys:
+  encryptionKeys: # Aurora's Song - Added traffic, shipboard, and service encryption keys
   - EncryptionKeyGreeting
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+  - EncryptionKeyService
 
 - type: chameleonOutfit
   id: ValetChameleonOutfit

@@ -1,0 +1,400 @@
+#region Command
+
+- type: entity
+  parent: ClothingUniformJumpsuitHoP
+  id: ASClothingUniformJumpsuitMilitaryColonialRepresentative
+  name: colonial representative's jumpsuit
+  suffix: Military
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#3e3e48"
+    - state: icon-base-top-jumpsuit
+      color: "#0F2854"
+    - state: icon-decor-department
+      color: "#1C4D8D"
+    - state: icon-decor-department-head
+      color: "#1C4D8D"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#3e3e48"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-left-decor-department
+        color: "#1C4D8D"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#3e3e48"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-right-decor-department
+        color: "#1C4D8D"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#3e3e48"
+      - state: equipped-base-top-jumpsuit
+        color: "#0F2854"
+      - state: equipped-decor-department
+        color: "#1C4D8D"
+      - state: equipped-decor-department-head
+        color: "#1C4D8D"
+
+#region Engi-Sci
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitMilitaryDamascus
+  name: damascus military jumpsuit
+  description: A military-style jumpsuit colored like damascus steel.
+  suffix: Military, Damascus
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#4A545E"
+    - state: icon-base-top-jumpsuit
+      color: "#5A6A7A"
+    - state: icon-decor-contractor
+      color: "#6E7D8F"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#4A545E"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#5A6A7A"
+      - state: inhand-left-decor-contractor
+        color: "#6E7D8F"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#4A545E"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#5A6A7A"
+      - state: inhand-right-decor-contractor
+        color: "#6E7D8F"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#4A545E"
+      - state: equipped-base-top-jumpsuit-tac
+        color: "#5A6A7A"
+      - state: equipped-decor-contractor
+        color: "#6E7D8F"
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitMilitaryEngiSci
+  name: engi-sci military jumpsuit
+  description: A military-style jumpsuit colored for the combined engineering and science departments.
+  suffix: Military, Site Worker
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#8B5A9B"
+    - state: icon-base-top-jumpsuit
+      color: "#FFC107"
+    - state: icon-decor-contractor
+      color: "#9B59B6"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#8B5A9B"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#FFC107"
+      - state: inhand-left-decor-contractor
+        color: "#9B59B6"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#8B5A9B"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#FFC107"
+      - state: inhand-right-decor-contractor
+        color: "#9B59B6"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#8B5A9B"
+      - state: equipped-base-top-jumpsuit-tac
+        color: "#FFC107"
+      - state: equipped-decor-contractor
+        color: "#9B59B6"
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpsuitMilitarySiteManager
+  name: site manager military jumpsuit
+  description: A military-style jumpsuit with damascus steel grey coloring and command markings.
+  suffix: Military, Site Manager
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#4A545E"
+    - state: icon-base-top-jumpsuit
+      color: "#5A6A7A"
+    - state: icon-decor-department
+      color: "#B8B8B8"
+    - state: icon-decor-department-head
+      color: "#C0C0C0"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#4A545E"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#5A6A7A"
+      - state: inhand-left-decor-department
+        color: "#B8B8B8"
+      - state: inhand-left-decor-department-head
+        color: "#C0C0C0"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#4A545E"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#5A6A7A"
+      - state: inhand-right-decor-department
+        color: "#B8B8B8"
+      - state: inhand-right-decor-department-head
+        color: "#C0C0C0"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#4A545E"
+      - state: equipped-base-top-jumpsuit
+        color: "#5A6A7A"
+      - state: equipped-decor-department
+        color: "#B8B8B8"
+      - state: equipped-decor-department-head
+        color: "#C0C0C0"
+
+#region Colonial Command
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMilitaryCAFLeader
+  name: CAF leader military jumpsuit
+  description: A military-style jumpsuit designed for Leaders of the Colonial Armed Forces.
+  suffix: Military, CAF Leader
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#0F2854"
+    - state: icon-base-top-jumpsuit
+      color: "#0F2854"
+    - state: icon-decor-department
+      color: "#0F2854"
+    - state: icon-decor-department-head
+      color: "#A1A1A1"
+    - state: icon-decor-epaulets
+      color: "#ffdc73"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#0F2854"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-left-decor-department
+        color: "#0F2854"
+      - state: inhand-left-decor-department-head
+        color: "#A1A1A1"
+      - state: inhand-left-decor-epaulets
+        color: "#ffdc73"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#0F2854"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-right-decor-department
+        color: "#0F2854"
+      - state: inhand-right-decor-department-head
+        color: "#A1A1A1"
+      - state: inhand-right-decor-epaulets
+        color: "#ffdc73"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#0F2854"
+      - state: equipped-base-top-jumpsuit-tac
+        color: "#0F2854"
+      - state: equipped-decor-department
+        color: "#0F2854"
+      - state: equipped-decor-department-head
+        color: "#A1A1A1"
+      - state: equipped-decor-epaulets
+        color: "#ffdc73"
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMilitaryCAFTrooper
+  name: CAF trooper military jumpsuit
+  description: A military-style jumpsuit designed for troopers of the Colonial Armed Forces.
+  suffix: Military, CAF Trooper
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#0F2854"
+    - state: icon-base-top-jumpsuit
+      color: "#0F2854"
+    - state: icon-decor-department
+      color: "#0F2854"
+    - state: icon-decor-shoulder-patch
+      color: "#ffdc73"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#0F2854"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-left-decor-department
+        color: "#0F2854"
+      - state: inhand-left-decor-shoulder-patch
+        color: "#ffdc73"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#0F2854"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-right-decor-department
+        color: "#0F2854"
+      - state: inhand-right-decor-shoulder-patch
+        color: "#ffdc73"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#0F2854"
+      - state: equipped-base-top-jumpsuit-tac
+        color: "#0F2854"
+      - state: equipped-decor-department
+        color: "#0F2854"
+      - state: equipped-decor-shoulder-patch
+        color: "#ffdc73"
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMilitaryCAFMedic
+  name: CAF medic military jumpsuit
+  description: A military-style jumpsuit designed for medics of the Colonial Armed Forces.
+  suffix: Military, CAF Medic
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#0F2854"
+    - state: icon-base-top-jumpsuit
+      color: "#0F2854"
+    - state: icon-decor-department
+      color: "#57b8f0"
+    - state: icon-decor-shoulder-patch
+      color: "#ffdc73"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#0F2854"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-left-decor-department
+        color: "#57b8f0"
+      - state: inhand-left-decor-shoulder-patch
+        color: "#ffdc73"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#0F2854"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-right-decor-department
+        color: "#57b8f0"
+      - state: inhand-right-decor-shoulder-patch
+        color: "#ffdc73"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#0F2854"
+      - state: equipped-base-top-jumpsuit-tac
+        color: "#0F2854"
+      - state: equipped-decor-department
+        color: "#57b8f0"
+      - state: equipped-decor-shoulder-patch
+        color: "#ffdc73"
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitMilitaryCAFEngineer
+  name: CAF engineer military jumpsuit
+  description: A military-style jumpsuit designed for engineers of the Colonial Armed Forces.
+  suffix: Military, CAF Engineer
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    layers:
+    - state: icon-base-bottom
+      color: "#0F2854"
+    - state: icon-base-top-jumpsuit
+      color: "#0F2854"
+    - state: icon-decor-department
+      color: "#ff733c"
+    - state: icon-decor-shoulder-patch
+      color: "#ffdc73"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base-bottom
+        color: "#0F2854"
+      - state: inhand-left-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-left-decor-department
+        color: "#ff733c"
+      - state: inhand-left-decor-shoulder-patch
+        color: "#ffdc73"
+      right:
+      - state: inhand-right-base-bottom
+        color: "#0F2854"
+      - state: inhand-right-base-top-jumpsuit
+        color: "#0F2854"
+      - state: inhand-right-decor-department
+        color: "#ff733c"
+      - state: inhand-right-decor-shoulder-patch
+        color: "#ffdc73"
+  - type: Clothing
+    sprite: _NF/Clothing/Uniforms/Jumpsuit/military.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-base-bottom
+        color: "#0F2854"
+      - state: equipped-base-top-jumpsuit-tac
+        color: "#0F2854"
+      - state: equipped-decor-department
+        color: "#ff733c"
+      - state: equipped-decor-shoulder-patch
+        color: "#ffdc73"

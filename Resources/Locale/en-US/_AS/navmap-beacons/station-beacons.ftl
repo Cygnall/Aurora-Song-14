@@ -1,4 +1,15 @@
-# Aurora Song: Station beacon/location names for Aurora Song-specific locations
+station-beacon-lockers = Lockers
+station-beacon-staff-dock = Staff Dock
+station-beacon-showers = Showers
+
+station-beacon-sle = SLE
+station-beacon-sle-brig = Brig
+station-beacon-sle-bullpen = Bullpen
+station-beacon-sle-evidence = Evidence
+station-beacon-sle-commissioner = Commissioner
+station-beacon-sle-prisoner-lockers = Prisoner's Lockers
+station-beacon-sle-interrogation = Interrogation
+station-beacon-sle-firing-range = Firing Range
 
 station-beacon-the-alley = The Alley
 station-beacon-power-plant = Power Plant

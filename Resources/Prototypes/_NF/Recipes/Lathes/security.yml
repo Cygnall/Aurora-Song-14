@@ -416,6 +416,13 @@
   materials:
     Steel: 20
 
+- type: latheRecipe # Aurora's Song - +P gestio mag empty
+  parent: BaseEmptyMagazineRecipe
+  id: MagazineLightRifleLowCapacityOverpressureEmpty
+  result: NFMagazineLowCapacityRifle30OverpressureEmpty
+  materials:
+    Steel: 20
+
 - type: latheRecipe
   parent: BaseEmptyMagazineRecipe
   id: NFSpeedLoaderPistol35Empty
@@ -437,10 +444,24 @@
   materials:
     Steel: 20
 
+- type: latheRecipe # Aurora's Song
+  parent: BaseEmptyMagazineRecipe
+  id: NFMagazinePistol35OverpressureEmpty
+  result: NFMagazinePistol35OverpressureEmpty
+  materials:
+    Steel: 20
+
 - type: latheRecipe
   parent: BaseEmptyMagazineRecipe
   id: NFMagazineHighCapacityPistol35Empty
   result: NFMagazineHighCapacityPistol35Empty
+  materials:
+    Steel: 25
+
+- type: latheRecipe # Aurora's Song
+  parent: BaseEmptyMagazineRecipe
+  id: NFMagazineHighCapacityPistol35OverpressureEmpty
+  result: NFMagazineHighCapacityPistol35OverpressureEmpty
   materials:
     Steel: 25
 
@@ -451,10 +472,24 @@
   materials:
     Steel: 30
 
+- type: latheRecipe # Aurora's Song
+  parent: BaseEmptyMagazineRecipe
+  id: NFMagazineSubMachineGun35OverpressureEmpty
+  result: NFMagazineSubMachineGun35OverpressureEmpty
+  materials:
+    Steel: 30
+
 - type: latheRecipe
   parent: BaseEmptyMagazineRecipe
   id: NFMagazineSubMachineGunTopMounted35Empty
   result: NFMagazineSubMachineGunTopMounted35Empty
+  materials:
+    Steel: 30
+
+- type: latheRecipe # Aurora's Song
+  parent: BaseEmptyMagazineRecipe
+  id: NFMagazineSubMachineGunTopMounted35OverpressureEmpty
+  result: NFMagazineSubMachineGunTopMounted35OverpressureEmpty
   materials:
     Steel: 30
 
@@ -465,6 +500,13 @@
   materials:
     Steel: 20
 
+- type: latheRecipe # Aurora's Song
+  parent: BaseEmptyMagazineRecipe
+  id: NFMagazinePistol45OverpressureEmpty
+  result: NFMagazinePistol45OverpressureEmpty
+  materials:
+    Steel: 20
+
 - type: latheRecipe
   parent: BaseEmptyMagazineRecipe
   id: NFMagazineRifle20Empty
@@ -472,10 +514,24 @@
   materials:
     Steel: 30
 
+- type: latheRecipe # Aurora's Song
+  parent: BaseEmptyMagazineRecipe
+  id: NFMagazineRifle20OverpressureEmpty
+  result: NFMagazineRifle20OverpressureEmpty
+  materials:
+    Steel: 30
+
 - type: latheRecipe
   parent: BaseEmptyMagazineRecipe
   id: NFMagazineRifle30Empty
   result: NFMagazineRifle30Empty
+  materials:
+    Steel: 30
+
+- type: latheRecipe # Aurora's Song
+  parent: BaseEmptyMagazineRecipe
+  id: NFMagazineRifle30OverpressureEmpty
+  result: NFMagazineRifle30OverpressureEmpty
   materials:
     Steel: 30
 
@@ -753,7 +809,7 @@
   result: NFMetalShield
   materials:
     Steel: 600
-    Glass: 200
+    Glass: 400
 
 # region Misc
 - type: latheRecipe

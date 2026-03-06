@@ -1,0 +1,105 @@
+# Aurora Song
+# .40 pistol, speed loader
+- type: entity
+  id: ASBaseSpeedLoaderPistol40
+  name: "speed loader (.40 pistol)"
+  parent: [ BaseC1Contraband, BaseItem, RecyclableItemSteelTiny ]
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ASSpeedLoaderPistol40
+  - type: SpeedLoader
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - ASCartridgePistol40
+    capacity: 8
+  - type: Sprite
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Pistol35/speed_loader.rsi
+    layers:
+      - state: base
+        map: [ "enum.GunVisualLayers.Base" ]
+      - state: base-6
+        map: [ "enum.GunVisualLayers.Mag" ]
+  - type: MagazineVisuals
+    magState: base
+    steps: 7
+    zeroVisible: false
+  - type: Appearance
+  - type: ContainerContainer
+    containers:
+      ballistic-ammo: !type:Container
+        ents: []
+  - type: Item
+    sprite: _NF/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Pistol35/speed_loader.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+
+- type: entity
+  id: ASSpeedLoaderPistol40Empty
+  name: "speed loader (.40 pistol, any)"
+  parent: ASBaseSpeedLoaderPistol40
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ASSpeedLoaderPistol40
+  name: "speed loader (.40 pistol)"
+  parent: ASBaseSpeedLoaderPistol40
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgePistol40
+
+- type: entity
+  id: ASSpeedLoaderPistol40Practice
+  name: "speed loader (.40 pistol, practice)"
+  parent: ASBaseSpeedLoaderPistol40
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgePistol40Practice
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+    - state: base-6
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-stripe
+      right:
+      - state: inhand-right
+      - state: inhand-right-stripe
+
+- type: entity
+  id: ASSpeedLoaderPistol40Rubber
+  name: "speed loader (.40 pistol, rubber)"
+  parent: ASBaseSpeedLoaderPistol40
+  components:
+  - type: BallisticAmmoProvider
+    proto: ASCartridgePistol40Rubber
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: decal-01
+      color: "#00b0ff"
+    - state: base-6
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right
+      - state: inhand-right-stripe
+        color: "#00b0ff"

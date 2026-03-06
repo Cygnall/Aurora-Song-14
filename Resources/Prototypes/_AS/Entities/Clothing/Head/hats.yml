@@ -1,6 +1,121 @@
+#region SLE campaign
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLECampaign
+  name: SLE campaign hat
+  description: A Campaign hat bearing SLE's colors.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_campaign.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_campaign.rsi
+  - type: Tag
+    tags:
+    - ClothMade
+    - WhitelistChameleon
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLESmallCampaign
+  name: SLE campaign cap
+  description: All yee, no haw.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_campaign_small.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_campaign_small.rsi
+  - type: CatWearable
+  - type: PirateBountyItem
+    id: CampaignHat
+
 - type: entity
   parent: ClothingHeadHatNfsdCampaignFilled
-  id: ClothingHeadHatBeretCommissioner
+  id: ASClothingHeadHatSLECampaignFilled
+  name: SLE campaign hat
+  suffix: Filled
+  description: A blue beret with a golden rank emblem.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_campaign.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_campaign.rsi
+  - type: HamsterWearable
+
+#region SLE Berets
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLEBeretOrange
+  name: orange SLE beret
+  description: A stylish orange beret for Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_beret_orange.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_beret_orange.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLEBeretBigOrange
+  name: orange SLE beret
+  description: A stylish orange beret for Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_orange.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_orange.rsi
+  - type: HamsterWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLEBeretNavy
+  name: navy SLE beret
+  description: A stylish navy beret for Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_beret_navy.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_beret_navy.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLEBeretBigNavy
+  name: navy SLE beret
+  description: A stylish navy beret for Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_navy.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_navy.rsi
+  - type: HamsterWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLEBeretCobalt
+  name: cobalt SLE beret
+  description: A stylish cobalt beret for Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_beret_cobalt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_beret_cobalt.rsi
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatSLEBeretBigCobalt
+  name: cobalt SLE beret
+  description: A stylish cobalt beret for Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_cobalt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/sle_beret_big_cobalt.rsi
+  - type: HamsterWearable
+
+- type: entity
+  parent: ASClothingHeadHatSLECampaignFilled
+  id: ASClothingHeadHatBeretCommissioner
   name: Commissioner's beret
   description: A blue beret with a golden rank emblem.
   components:
@@ -9,6 +124,58 @@
   - type: Clothing
     sprite: _AS/Clothing/Head/Hats/beret_commissioner.rsi
   - type: HamsterWearable
+
+#region Command
+
+- type: entity
+  parent: ClothingHeadHatHopcap
+  id: ASClothingHeadHatColonialRepresentativeCap
+  name: colonial representative's cap
+  description: A cap issued to the frontier's colonial representative. Try not to lose it.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/cr_cap.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/cr_cap.rsi
+  - type: HamsterWearable
+
+- type: entity
+  parent: ClothingHeadBase
+  id: ASClothingHeadHatColonialRepresentativeBeretBig
+  name: colonial representative's big beret
+  description: Stylish beret given to the Colonial Representative. To help them stand out.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/cr_beret_big.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/cr_beret_big.rsi
+  - type: HamsterWearable
+
+- type: entity
+  parent: ClothingHeadHatHopcap
+  id: ASClothingHeadHatColonialRepresentativeBeret
+  name: colonial representative's beret
+  description: A simple beret given to the Colonial Representative.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/cr_beret.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/cr_beret.rsi
+  - type: HamsterWearable
+
+- type: entity
+  parent: [ ASClothingHeadHatColonialRepresentativeBeretBig, BaseColcommContraband ]
+  id: ASClothingHeadHatColonialOfficialBeretBig
+  name: colonial official's big beret
+  description: Stylish beret given to Colonial Officials. To help them stand out.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Hats/cr_beret_big.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Hats/cr_beret_big.rsi
+  - type: HamsterWearable
+
+#region Syndicate
 
 - type: entity
   parent: [ClothingHeadBase, BaseC3SyndicateContraband, ContrabandClothing]
@@ -20,6 +187,8 @@
     sprite: _AS/Clothing/Head/Hats/beret_syndicate.rsi
   - type: Clothing
     sprite: _AS/Clothing/Head/Hats/beret_syndicate.rsi
+
+#region Medical
 
 - type: entity
   parent: ClothingHeadBase

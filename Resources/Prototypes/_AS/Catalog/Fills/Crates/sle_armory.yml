@@ -104,8 +104,8 @@
     contents:
     - id: NFWeaponEnergyPistolDisabler
       amount: 5
-    - id: NFWeaponPistolUniversalNfsdLessLethal
-      amount: 4
+    # - id: NFWeaponPistolUniversalNfsdLessLethal # Aurora's Song - mk32-M is .35 chambered, .45 variant in uplink for direct purchase
+    #   amount: 4
     - id: NFWeaponEnergySubMachineGunDisabler
       amount: 5
     - id: NFWeaponRifleAssaultLecterLessLethal

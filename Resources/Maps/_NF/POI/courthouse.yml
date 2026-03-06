@@ -8759,7 +8759,7 @@ entities:
     - type: Transform
       pos: 11.5,-2.5
       parent: 1
-- proto: HyperlinkBookNfsdSop
+- proto: HyperlinkBookSLESop
   entities:
   - uid: 1654
     components:
@@ -8771,7 +8771,7 @@ entities:
     - type: Transform
       pos: 0.49461645,11.558951
       parent: 1
-- proto: NFHyperlinkBookSpaceLaw
+- proto: ASHyperlinkBookSpaceLaw
   entities:
   - uid: 1655
     components:

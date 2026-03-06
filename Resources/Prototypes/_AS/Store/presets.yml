@@ -26,6 +26,7 @@
     name: store-preset-name-exchange-uplink
     categories:
     - UplinkExchangeHardsuits
+    - UplinkExchangeArmor
     - UplinkExchangeWeapons
     - UplinkExchangeAmmo
     - UplinkExchangeUtility

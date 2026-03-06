@@ -1,6 +1,6 @@
 using Content.Shared._starcup.AACTablet;
 
-namespace Content.Client.DeltaV.AACTablet.UI;
+namespace Content.Client._DV.AACTablet.UI; // Aurora's Song - Change namespace from DeltaV -> _DV
 
 public sealed partial class AACBoundUserInterface
 {

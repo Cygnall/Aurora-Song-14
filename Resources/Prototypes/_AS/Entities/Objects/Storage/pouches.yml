@@ -1,0 +1,107 @@
+#region SLE
+
+- type: entity
+  id: ASPouchSLE
+  parent: NFPouchUtility
+  name: SLE pouch
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#2A4F63"
+    - state: closed
+      map: ["closeLayer"]
+      color: "#E37B40"
+    - state: open
+      color: "#E37B40"
+      map: ["openLayer"]
+      visible: false
+    - state: inside
+      map: ["insideLayer"]
+      visible: false
+    - state: fill-util4-1
+      map: [ "pouchFill4" ]
+      visible: false
+    - state: fill-util3-1
+      map: [ "pouchFill3" ]
+      visible: false
+    - state: fill-util2-1
+      map: [ "pouchFill2" ]
+      visible: false
+    - state: fill-util1-1
+      map: [ "pouchFill1" ]
+      visible: false
+    - state: decal-shield
+      map: [ "decal1" ]
+      color: "#f2b833"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#E37B40"
+      right:
+      - state: inhand-right
+        color: "#E37B40"
+  - type: Clothing
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+        color: "#E37B40"
+      pocket:
+      - state: equipped-BELT
+        color: "#E37B40"
+
+#region Command
+
+- type: entity
+  parent: NFPouchSr
+  id: ASPouchCR
+  name: colonial representative pouch
+  description: A handy pouch for carrying colonial administrative items.
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      color: "#1C4D8D"
+    - state: closed
+      map: ["closeLayer"]
+      color: "#1C4D8D"
+    - state: open
+      color: "#1C4D8D"
+      map: ["openLayer"]
+      visible: false
+    - state: inside
+      color: "#fff4e2"
+      map: ["insideLayer"]
+      visible: false
+    - state: fill-util4-1
+      map: [ "pouchFill4" ]
+      visible: false
+    - state: fill-util3-1
+      map: [ "pouchFill3" ]
+      visible: false
+    - state: fill-util2-1
+      map: [ "pouchFill2" ]
+      visible: false
+    - state: fill-util1-1
+      map: [ "pouchFill1" ]
+      visible: false
+    - state: decal-line-01
+      map: [ "decal1" ]
+      color: "#A1A1A1"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+        color: "#1C4D8D"
+      right:
+      - state: inhand-right
+        color: "#1C4D8D"
+  - type: Clothing
+    clothingVisuals:
+      belt:
+      - state: equipped-BELT
+        color: "#1C4D8D"
+      pocket:
+      - state: equipped-BELT
+        color: "#1C4D8D"

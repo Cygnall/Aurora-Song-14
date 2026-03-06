@@ -1,0 +1,15 @@
+- type: loadout
+  id: ASDetectiveClothingHeadHatFedoraBrown
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ClothingHeadHatFedoraBrown
+
+- type: loadout
+  id: ASDetectiveClothingHeadHatFedoraGrey
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ClothingHeadHatFedoraGrey

@@ -1,0 +1,47 @@
+#region Service
+- type: entityTable
+  id: ASStorageFillGearKitchenware
+  table: !type:AllSelector
+    children:
+    - id: KitchenKnife
+    - id: Beaker
+    - id: FoodPlateTin
+      amount: 4
+    - id: ButchCleaver
+    - id: FoodPlate
+      amount: 2
+    - id: FoodBowlBig
+      amount: 2
+
+- type: entityTable
+  id: ASStorageFillGearChefDrip
+  table: !type:AllSelector
+    children:
+    - id: ClothingHeadHatStrawHat
+    - id: ClothingOuterWinterChef
+    - id: ClothingHandsGlovesColorRed
+    - id: ClothingShoesBootsWinterChef
+
+- type: entityTable
+  id: ASStorageFillGearBarJars
+  table: !type:AllSelector
+    children:
+    - id: DrinkJar
+      amount: 6
+
+- type: entityTable
+  id: ASStorageFillGearBarChampagne
+  table: !type:AllSelector
+    children:
+    - id: DrinkGlass
+      amount: 6
+    - id: DrinkChampagneBottleFull
+      amount: 3
+
+- type: entityTable
+  id: ASStorageFillGearFreezerGlassware
+  table: !type:AllSelector
+    children:
+    - id: DrinkGlass
+      amount: 6
+# endregion Service

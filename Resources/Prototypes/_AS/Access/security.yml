@@ -1,3 +1,11 @@
 - type: accessLevel
   id: Prisoner
   name: id-card-access-level-prisoner
+
+- type: accessLevel
+  id: Lieutenant
+  name: id-card-access-level-lieutenant
+
+- type: accessLevel
+  id: Corpsman
+  name: id-card-access-level-corpsman

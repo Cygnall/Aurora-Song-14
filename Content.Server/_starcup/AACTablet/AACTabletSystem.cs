@@ -1,8 +1,8 @@
 using Content.Server.Radio.Components;
-using Content.Shared.DeltaV.AACTablet;
+using Content.Shared._DV.AACTablet; // Aurora's Song - Change namespace from DeltaV -> _DV
 using Content.Shared._starcup.AACTablet;
 
-namespace Content.Server.DeltaV.AACTablet;
+namespace Content.Server._DV.AACTablet; // Aurora's Song - Change namespace from DeltaV -> _DV
 
 public sealed partial class AACTabletSystem
 {

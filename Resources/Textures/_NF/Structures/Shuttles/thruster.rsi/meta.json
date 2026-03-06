@@ -6,7 +6,8 @@
     },
     "copyright": "base taken from https://github.com/Baystation12/Baystation12/tree/7274e5654c3cf82d4104dbf818ef00fdc0082aa8",
     "extra_copyright": [
-        "base_nfsd edited by Ghost Prince for use on Frontier Station."
+        "base_nfsd edited by Ghost Prince for use on Frontier Station.",
+		"base edited to sle version by Vandanna/ Cygnall (discord/ github) for use on Aurora's Song."
     ],
     "license": "CC-BY-SA-4.0",
     "states": [
@@ -24,6 +25,10 @@
         },
         {
             "name": "AS_base_medic",
+            "directions": 4
+        },
+        {
+            "name": "base_sle",
             "directions": 4
         },
         {

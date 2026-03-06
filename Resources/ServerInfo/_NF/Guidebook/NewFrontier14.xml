@@ -29,6 +29,24 @@ To make money, why not:
 
 Be sure to stock up at the Trade Depot if going out on an extended voyage, and take advantage of the [color=#33bbff]medical insurance tracker[/color] in your loadout, or from the NanoMed vendor in medbay.
 
-Shifts on the Frontier typically last for [color=#33bbff]twelve hourse[/color].
-If you need to end your shift early or take a break, use the [color=#33bbff]cryo sleep chambers[/color] in the medbay on Frontier Outpost.
+<!-- Coyote and Aurora's Song start -->
+
+Shifts in the Sector can last for anywhere from [color=#33bbff]six[/color] to [color=#33bbff]seventy-two[/color] hours.
+If you need to end your shift early or take a break, use the [color=#33bbff]cryo sleep chambers[/color] in the clinic on the central station.
+
+  <Box>
+    <GuideEntityEmbed Entity="PottedPlant0"/>
+  </Box>
+
+  Fun fact: Sleeping in your ship overnight can make you suffer from CO2 buildup. This is usually due to the power in your ship dying, which leads to your scrubber dying, which leads to you dying too.
+
+  What can you do about this?
+
+  Two options: bolt your doors open to let the CO2 diffuse over a larger area, OR use a potted plant! Potted plants can scrub the CO2 out of the air, slowly, but more than fast enough to keep you alive overnight.
+
+  To make a plant scrub the air, simply wrench it to the ground by your bed. It'll do the rest! You might expect it to make oxygen, but it doesn't. It just removes CO2.
+
+  This works with any potted plant with the Label on it (you'll know it when you see it), even if its a plastic plant or something that wouldn't really make sense to process CO2. Generally, if its even vaguely potted plant like, it'll work. Unless it doesn't.
+
+<!-- Coyote and Aurora's Song end -->
 </Document>

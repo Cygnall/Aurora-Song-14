@@ -94,11 +94,11 @@
     endAnnouncement: station-event-bluespace-prison-riot-end  # "Prison ship has departed"
     earliestStart: 120 # 2 hours after shift start minimum before event can trigger
     weight: 1
-    duration: 1500  # 25 minutes after grid spawns
-    maxDuration: 2100
+    duration: 2100  # 35 minutes after grid spawns
+    maxDuration: 2300
     reoccurrenceDelay: 240 # 4 hours
     requiredJobs:
-      SeniorOfficer: 1
+      Sergeant: 1
   - type: BluespaceErrorBountyRule
     includeGridValue: false
     announcementChannels:
@@ -171,7 +171,7 @@
     maxDuration: 2400
     reoccurrenceDelay: 120 # 2 hours
     requiredJobs:
-      SeniorOfficer: 1
+      Sergeant: 1
   - type: BluespaceErrorBountyRule
     includeGridValue: false
     announcementChannels:

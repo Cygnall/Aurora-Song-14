@@ -1,0 +1,4 @@
+- files: ["slime_laugh_f1.ogg, slime_laugh_m1.ogg, slime_laugh_m2.ogg", slime_scream_f1.ogg, slime_scream_f2.ogg, slime_scream_m1.ogg, slime_scream_m2.ogg"]
+  license: "CC-BY-SA-3.0"
+  copyright: "taken from https://github.com/Simple-Station/Parkstation/commit/01455eea465b0f399cd13d0fa76363c859980ac7"
+  source: "https://github.com/Simple-Station/ParkstationS"

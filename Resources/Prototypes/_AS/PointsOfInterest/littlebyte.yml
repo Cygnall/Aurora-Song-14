@@ -1,0 +1,38 @@
+# Author Info
+# GitHub: emergency-ketchup (https://github.com/emergency-ketchup)
+# Discord: skeeporenu
+
+# Maintainer Info
+# GitHub: emergency-ketchup (https://github.com/emergency-ketchup)
+# Discord: skeeporenu
+
+# Notes:
+# The Kudzu is gone, but the sand remains.
+- type: pointOfInterest
+  id: LittleByte
+  parent: BasePOI
+  name: "Little-Byte Key"
+  minimumDistance: 1200
+  maximumDistance: 2900
+  spawnGamePreset: [ NFAdventure, NFPirate ]
+  spawnGroup: RestStop
+  gridPath: /Maps/_AS/POI/littlebyte.yml
+  addComponents:
+  - type: StationTransit
+    routes:
+      MinorPointsOfInterest: 10
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
+
+- type: gameMap
+  id: LittleByte
+  mapName: "Little-Byte Key"
+  mapPath: /Maps/_AS/POI/littlebyte.yml
+  minPlayers: 0
+  stations:
+    LittleByte:
+      stationProto: DeadDropFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "Little-Byte Key"

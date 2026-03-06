@@ -33,6 +33,10 @@
   name: store-category-exchangehardsuits
 
 - type: storeCategory
+  id: UplinkExchangeArmor
+  name: store-category-exchangearmor
+
+- type: storeCategory
   id: UplinkExchangeWeapons
   name: store-category-exchangeweapons
 

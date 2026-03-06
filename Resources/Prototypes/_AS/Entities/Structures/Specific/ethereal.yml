@@ -1,0 +1,10 @@
+- type: entity
+  id: EtherealGlowingFloor
+  name: ethereal glowing floor
+  parent: BaseRune
+  components:
+    - type: Sprite
+      sprite: _AS/Structures/Specific/Ethereal/glowingfloor.rsi
+      layers:
+      - state: floorglowblue
+        shader: unshaded

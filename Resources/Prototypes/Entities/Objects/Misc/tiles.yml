@@ -1600,7 +1600,7 @@
     - Plating
     - FloorAstroAsteroidSandBorderless
   - type: Stack
-    stackType: FloorTileAstroAsteroidSand
+    stackType: FloorTileAstroAsteroidSandBorderless # Aurora Song - Make tile drop correct tile item
 
 - type: entity
   name: large wood floor

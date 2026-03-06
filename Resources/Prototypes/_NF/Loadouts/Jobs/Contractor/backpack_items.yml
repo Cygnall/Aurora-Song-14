@@ -39,6 +39,16 @@
     back:
     - CigarCase
 
+- type: loadout # Aurora's Song
+  id: ContractorHolocigar
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT1
+  price: 500
+  storage:
+    back:
+    - holocigar
+
 - type: loadout
   id: ContractorNFAshtray
   effects:
@@ -468,6 +478,16 @@
   storage:
     back:
     - CrayonMagic
+
+- type: loadout
+  id: ContractorSprayPainterMagic
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 30000
+  storage:
+    back:
+    - SprayPainterMagic
 
 #bureaucracy
 #T0

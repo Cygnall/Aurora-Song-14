@@ -50,6 +50,7 @@
   - SlimePerson
   - Tajaran
   - Vox
+  - Fairy
   components:
   - type: ASMedicalBounty
     bountyId: ASSLEOfficerInjured  # Specific light bounty for SLE officers
@@ -57,10 +58,10 @@
 - type: startingGear
   id: ASSLEOfficerCorpseGear
   equipment:
-    head: ASClothingHeadHatSLEBeretBrown
+    head: ASClothingHeadHatSLEBeretBigNavy
     mask: ASClothingMaskGasSLE
     eyes: ASClothingEyesGlassesSLE
     jumpsuit: ASClothingUniformJumpsuitSLE
     shoes: ASClothingShoesBootsSLEDarkBlueFilled
     gloves: ASClothingHandsGlovesCombatSLEDarkBlue
-    neck: ASClothingNeckSLEBadgeSecurity
+    neck: ASClothingNeckSLEBadgeOfficer

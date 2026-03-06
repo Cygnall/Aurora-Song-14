@@ -1,4 +1,4 @@
-﻿- type: reagent #Aurora Polymorph Chem
+- type: reagent #Aurora Polymorph Chem
   id: Mothrazine
   name: reagent-name-mothrazine
   group: Toxins
@@ -15,15 +15,22 @@
           showInChat: true
           force: true
           probability: 0.18
+          conditions:
+            - !type:Consent # Aurora Song
+              effectTypes:
+                - Polymorph
         - !type:Polymorph
           prototype: ChemicalMothroach
           conditions:
             - !type:NFIsHumanoid
             - !type:ReagentThreshold
               min: 10
+            - !type:Consent # Aurora Song
+              effectTypes:
+                - Polymorph
         - !type:AdjustReagent
           reagent: Mothrazine
-          amount: -3
+          amount: -5
           conditions:
             - !type:ReagentThreshold
               min: 10
@@ -45,18 +52,28 @@
           showInChat: true
           force: true
           probability: 0.09
+          conditions:
+            - !type:Consent # Aurora Song
+              effectTypes:
+                - Polymorph
         - !type:Polymorph
           prototype: ChemicalFelinid
           conditions:
             - !type:NFIsHumanoid
             - !type:ReagentThreshold
               min: 15
+            - !type:Consent # Aurora Song
+              effectTypes:
+                - Polymorph
         - !type:AdjustReagent
           reagent: Catgirlium
-          amount: -2
+          amount: -5
           conditions:
             - !type:ReagentThreshold
               min: 15
+#            - !type:Consent # Aurora Song
+#              effectTypes:
+#                - Polymorph
         - !type:GenericStatusEffect
           key: Stutter
           component: ScrambledAccent
@@ -76,6 +93,9 @@
         conditions:
         - !type:ReagentThreshold
           min: 15
+        - !type:Consent # Aurora Song
+          effectTypes:
+            - Polymorph
         damage:
           types:
             Asphyxiation: 2
@@ -98,12 +118,18 @@
             - !type:NFIsHumanoid
             - !type:ReagentThreshold
               min: 20
+            - !type:Consent # Aurora Song
+              effectTypes:
+                - Polymorph
         - !type:AdjustReagent
           reagent: Davisicium
-          amount: -3
+          amount: -10
           conditions:
             - !type:ReagentThreshold
               min: 20
+            - !type:Consent # Aurora Song
+              effectTypes:
+                - Polymorph
 
 - type: reagent
   id: Purge

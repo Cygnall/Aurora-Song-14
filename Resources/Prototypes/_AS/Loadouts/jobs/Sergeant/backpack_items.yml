@@ -1,0 +1,7 @@
+#T0
+- type: loadout
+  id: SergeantASPouchSLE
+  price: 0
+  storage:
+    back:
+    - ASPouchSLE

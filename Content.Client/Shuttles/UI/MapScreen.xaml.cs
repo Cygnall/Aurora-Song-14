@@ -119,7 +119,7 @@ public sealed partial class MapScreen : BoxContainer
         //frontier - we only allow pre-approved vessels to FTL
         if (!_entManager.HasComponent<ShuttleFTLComponent>(_shuttleEntity))
         {
-            MapFTLButton.Visible = false;
+            MapFTLButton.Visible = true; // Mono
         }
         else
         {
@@ -183,6 +183,7 @@ public sealed partial class MapScreen : BoxContainer
             // Unselect FTL
             MapFTLButton.Pressed = false;
             MapRadar.FtlMode = false;
+            MapRadar.ShowFTLRangeOnly = false;
             MapFTLButton.Disabled = true;
         }
     }
@@ -190,11 +191,18 @@ public sealed partial class MapScreen : BoxContainer
     private void FtlPreviewToggled(BaseButton.ButtonToggledEventArgs obj)
     {
         MapRadar.FtlMode = obj.Pressed;
+
+        // Mono: When FTL button is toggled, disable the ShowFTLRangeOnly mode
+        if (obj.Pressed)
+        {
+            MapRadar.ShowFTLRangeOnly = false;
+        }
     }
 
     public void SetConsole(EntityUid? console)
     {
         _console = console;
+        MapRadar.SetConsole(console); // Mono
     }
 
     public void SetShuttle(EntityUid? shuttle)
@@ -227,7 +235,13 @@ public sealed partial class MapScreen : BoxContainer
         }
 
         RebuildMapObjects();
-        BumpMapDequeue();
+
+        // Mono: Immediately add all objects to the map instead of queueing them
+        foreach (var mapObj in _pendingMapObjects)
+        {
+            AddMapObject(mapObj.mapId, mapObj.mapobj);
+        }
+        _pendingMapObjects.Clear();
 
         _nextPing = _timing.CurTime + _pingCooldown;
         MapRebuildButton.Disabled = true;
@@ -240,7 +254,11 @@ public sealed partial class MapScreen : BoxContainer
 
     private void MapRebuildPressed(BaseButton.ButtonEventArgs obj)
     {
+        MapRadar.ShowFTLRangeOnly = true; // Mono
         PingMap();
+
+        // Mono: Reset range back after map pinging is complete.
+        MapRadar.ShowFTLRangeOnly = !MapFTLButton.Pressed;
     }
 
     /// <summary>

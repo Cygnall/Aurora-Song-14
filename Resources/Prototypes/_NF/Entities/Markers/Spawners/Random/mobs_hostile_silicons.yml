@@ -98,7 +98,7 @@
     - MobRogueSiliconServo
     - MobRogueSiliconHerder
     - MobRogueSiliconHunter
-    #- MobRogueSiliconCatcher, crashes the game
+    #- MobRogueSiliconCatcher Aurora Song commented out, crashes the game
     chance: 1
     offset: 0.0
     rarePrototypes:

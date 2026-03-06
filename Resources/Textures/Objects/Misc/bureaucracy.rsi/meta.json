@@ -2,6 +2,9 @@
   "version": 1,
   "license": "CC-BY-SA-3.0",
   "copyright": "Taken from tgstation at https://github.com/tgstation/tgstation/commit/e1142f20f5e4661cb6845cfcf2dd69f864d67432. paper_stamp-syndicate by Veritius. paper_receipt, paper_receipt_horizontal by eoineoineoin. paper_stamp-greytide by ubaser. paper_stamp-psychologist by clinux. syndicate_card by Aserovich. paper_stamp_wizard by brassicaprime69 (Discord), acquisition_form acquisition_form_words and acquisition_form_header by sowelipililimute (GitHub)",
+  "extra_copyright": [
+        "Resprites and recolors for Aurora's Song by Vandanna/ Cygnall (discord/ github)"
+    ],
   "size": {
     "x": 32,
     "y": 32
@@ -229,6 +232,9 @@
       "name": "paper_stamp-nf-bailiff"
     },
     {
+      "name": "paper_stamp-as-lieutenant"
+    },
+    {
       "name": "paper_stamp-nf-doctor"
     },
     {
@@ -236,6 +242,9 @@
     },
     {
       "name": "paper_stamp-nf-pal"
+    },
+    {
+      "name": "paper_stamp-as-pal"
     },
     {
       "name": "paper_stamp-nf-pirate"
@@ -250,10 +259,22 @@
       "name": "paper_stamp-nf-sheriff"
     },
     {
+      "name": "paper_stamp-as-commissioner"
+    },
+    {
       "name": "paper_stamp-nf-signature"
     },
     {
       "name": "paper_stamp-nf-stc"
+    },
+    {
+      "name": "paper_stamp-as-colonial-representative"
+    },
+    {
+      "name": "paper_stamp-as-site-manager"
+    },
+    {
+      "name": "paper_stamp-as-site-worker"
     }
   ]
 }

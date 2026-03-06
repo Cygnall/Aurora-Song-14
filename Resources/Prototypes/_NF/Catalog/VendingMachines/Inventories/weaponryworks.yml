@@ -14,8 +14,11 @@
     NFSpeedLoaderPistol45Empty: 1
   # Ammo boxes
     NFAmmunitionBoxPistol35: 2
+    ASAmmunitionBoxPistol40: 2 # Aurora's Song
     NFAmmunitionBoxPistol45: 2
     NFAmmunitionBoxRifle20: 2
+    NFAmmunitionBoxShellShotgunBuckshot: 2
+    NFAmmunitionBoxShellShotgunBeanbag: 2
   emaggedInventory:
     NFWeaponPistolViper: 1
 
@@ -35,6 +38,7 @@
     NFSpeedLoaderPistol45Empty: 4294967295
   # Ammo boxes
     NFAmmunitionBoxPistol35: 4294967295
+    ASAmmunitionBoxPistol40: 4294967295 # Aurora's Song
     NFAmmunitionBoxPistol45: 4294967295
     NFAmmunitionBoxRifle20: 4294967295
     NFAmmunitionBoxShellShotgunBuckshot: 4294967295

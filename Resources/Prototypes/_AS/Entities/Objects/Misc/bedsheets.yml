@@ -6,32 +6,28 @@
   name: SLE bedsheet
   components:
   - type: Sprite
-    sprite: _NF/Objects/Misc/bedsheets.rsi
-    state: sheetnfsd
-    color: "#4a6fa5"  # SLE blue
+    sprite: _AS/Objects/Misc/bedsheets.rsi
+    state: sheetsle
   - type: Clothing
-    sprite: _NF/Clothing/Neck/Bedsheets/Nfsd/nfsd.rsi
-
+    sprite: _AS/Clothing/Neck/Bedsheets/sle/sle.rsi
 - type: entity
-  id: ASBedsheetSLEBrigmedic
+  id: ASBedsheetSLECorpsman
   parent: BedsheetBase
-  name: brigmedic bedsheet
+  name: corpsman bedsheet
   components:
   - type: Sprite
-    sprite: _NF/Objects/Misc/bedsheets.rsi
-    state: sheetnfsdbrigmed
-    color: "#5a8fc5"  # SLE light blue
+    sprite: _AS/Objects/Misc/bedsheets.rsi
+    state: sheetslecorpsman
   - type: Clothing
-    sprite: _NF/Clothing/Neck/Bedsheets/Nfsd/nfsd_brigmed.rsi
+    sprite: _AS/Clothing/Neck/Bedsheets/sle/sle_corpsman.rsi
 
 - type: entity
-  id: ASBedsheetSLESheriff
+  id: ASBedsheetSLECommissioner
   parent: BedsheetBase
-  name: sheriff bedsheet
+  name: commissioner bedsheet
   components:
   - type: Sprite
-    sprite: _NF/Objects/Misc/bedsheets.rsi
-    state: sheetnfsdsheriff
-    color: "#2a4a7c"  # SLE dark blue
+    sprite: _AS/Objects/Misc/bedsheets.rsi
+    state: sheetslecommissioner
   - type: Clothing
-    sprite: _NF/Clothing/Neck/Bedsheets/Nfsd/nfsd_sheriff.rsi
+    sprite: _AS/Clothing/Neck/Bedsheets/sle/sle_commissioner.rsi

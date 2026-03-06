@@ -68,13 +68,50 @@ uplink-mercenary-30Rifle-OP-mags-desc = A quartet of .30 Rifle magazines, stacke
 
 # region Security Uplink
 uplink-sle-hardsuit-combat-name = SLE Combat Suit
-uplink-sle-hardsuit-combat-desc = A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+uplink-sle-hardsuit-combat-desc = A heavily armored SLE suit. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-rookie-name = SLE Rookie Combat Suit
+uplink-sle-hardsuit-combat-rookie-desc = A heavily armored SLE suit. Marked for Rookies. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-officer-name = SLE Officer Combat Suit
+uplink-sle-hardsuit-combat-officer-desc = A heavily armored SLE suit. Marked for Officers. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-sergeant-name = SLE Sergeant Combat Suit
+uplink-sle-hardsuit-combat-sergeant-desc = A heavily armored SLE suit. Marked for Sergeants. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-lieutenant-name = SLE Lieutenant Combat Suit
+uplink-sle-hardsuit-combat-lieutenant-desc = A heavily armored SLE suit. Marked for Lieutenants. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-corpsman-name = SLE Corpsman Combat Suit
+uplink-sle-hardsuit-combat-corpsman-desc = A heavily armored SLE suit. Marked for Corpsmen. Space proof, with thick armor plating.
+
+uplink-sle-hardsuit-combat-commissioner-name = SLE Commissioner Combat Suit
+uplink-sle-hardsuit-combat-commissioner-desc = A heavily armored SLE suit. Marked for the Commissioner. Space proof, with thick armor plating.
 
 uplink-sle-softsuit-patrol-name = SLE Patrol Softsuit
 uplink-sle-softsuit-patrol-desc = The standard-issue SLE space proof suit for patrol duty.
 
+uplink-sle-softsuit-patrol-rookie-name = SLE Rookie Patrol Softsuit
+uplink-sle-softsuit-patrol-rookie-desc = The standard-issue SLE space proof suit for patrol duty. Marked for Rookies.
+
+uplink-sle-softsuit-patrol-officer-name = SLE Officer Patrol Softsuit
+uplink-sle-softsuit-patrol-officer-desc = The standard-issue SLE space proof suit for patrol duty. Marked for Officers.
+
+uplink-sle-softsuit-patrol-sergeant-name = SLE Sergeant Patrol Softsuit
+uplink-sle-softsuit-patrol-sergeant-desc = The standard-issue SLE space proof suit for patrol duty. Marked for Sergeants.
+
+uplink-sle-softsuit-patrol-lieutenant-name = SLE Lieutenant Patrol Softsuit
+uplink-sle-softsuit-patrol-lieutenant-desc = The standard-issue SLE space proof suit for patrol duty. Marked for Lieutenants.
+
+uplink-sle-softsuit-patrol-corpsman-name = SLE Corpsman Patrol Softsuit
+uplink-sle-softsuit-patrol-corpsman-desc = The standard-issue SLE space proof suit for patrol duty. Marked for Corpsmen.
+
+uplink-sle-softsuit-patrol-commissioner-name = SLE Commissioner Patrol Softsuit
+uplink-sle-softsuit-patrol-commissioner-desc = The standard-issue SLE space proof suit for patrol duty. Marked for the Commissioner.
+
 # region ExchangeVend - Aurora
 store-category-exchangehardsuits = EVA Suits
+store-category-exchangearmor = Armor
 store-category-exchangeweapons = Weapons
 store-category-exchangeutility = Utility
 store-category-exchangeammo = Ammunition
@@ -87,8 +124,32 @@ uplink-exchange-debranded-hardsuit-desc = A Cybersun hardsuit with the paint str
 uplink-exchange-debranded-elite-hardsuit-name = Debranded Elite Armored Hardsuit
 uplink-exchange-debranded-elite-hardsuit-desc = An Elite Cybersun hardsuit with the paint stripped and trackers removed.
 
+uplink-exchange-fort-armor-name = Fort Armor
+uplink-exchange-fort-armor-desc = A bulky set of thick tactical armor.
+
+uplink-exchange-fort-helmet-name = Fort Helmet
+uplink-exchange-fort-helmet-desc = A sturdy tactical helmet and face mask.
+
+uplink-exchange-military-surplus-hardsuit-name = Military Surplus Hardsuit
+uplink-exchange-military-surplus-hardsuit-desc = Auroran MilSurp hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
+
+uplink-exchange-swat-surplus-hardsuit-name = SWAT Surplus Hardsuit
+uplink-exchange-swat-surplus-hardsuit-desc = Auroran SWAT Surplus hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
+
+uplink-exchange-hazmat-surplus-hardsuit-name = HAZMAT Surplus Hardsuit
+uplink-exchange-hazmat-surplus-hardsuit-desc = Auroran HAZMAT surplus hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
+
+uplink-exchange-riot-surplus-hardsuit-name = Riot Control Surplus Hardsuit
+uplink-exchange-riot-surplus-hardsuit-desc = Auroran Riot control surplus hardsuit. Designed for most types of engagement. Armor adjusted to match protection of other surplus offerings in its tier.
+
 uplink-exchange-spesos-name = 3000 spesos
 uplink-exchange-spesos-desc = A stack of 3000 spesos, hard currency.
 
 uplink-exchange-spesos2-name = 15,000 spesos
 uplink-exchange-spesos2-desc = A stack of 15,000 spesos, hard currency.
+
+uplink-exchange-ap4c-name = AP4C SMG
+uplink-exchange-ap4c-desc = A compact submachine gun chambered in .40 pistol. Battle-tested and reliable.
+
+uplink-exchange-mk32-name = Mk32 Universal
+uplink-exchange-mk32-desc = The Mark 32 Offensive Handgun. Has an OD-Green grip. Chambered in .45.

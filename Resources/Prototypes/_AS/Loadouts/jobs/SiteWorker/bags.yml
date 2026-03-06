@@ -1,0 +1,55 @@
+# Site Worker Backpacks
+- type: loadout
+  id: SiteWorkerBackpackEngineering
+  equipment:
+    back: ClothingBackpackEngineering
+
+- type: loadout
+  id: SiteWorkerBackpackDuffelEngineering
+  equipment:
+    back: ClothingBackpackDuffelEngineering
+
+- type: loadout
+  id: SiteWorkerBackpackSatchelEngineering
+  equipment:
+    back: ClothingBackpackSatchelEngineering
+
+- type: loadout
+  id: SiteWorkerBackpackMessengerEngineering
+  equipment:
+    back: ClothingBackpackMessengerEngineering
+
+- type: loadout
+  id: SiteWorkerBackpackAtmospherics
+  equipment:
+    back: ClothingBackpackAtmospherics
+
+- type: loadout
+  id: SiteWorkerBackpackDuffelAtmospherics
+  equipment:
+    back: ClothingBackpackDuffelAtmospherics
+
+- type: loadout
+  id: SiteWorkerBackpackSatchelAtmospherics
+  equipment:
+    back: ClothingBackpackSatchelAtmospherics
+
+- type: loadout
+  id: SiteWorkerBackpackMessengerAtmospherics
+  equipment:
+    back: ClothingBackpackMessengerAtmospherics
+
+- type: loadout
+  id: SiteWorkerBackpackScience
+  equipment:
+    back: ClothingBackpackScience
+
+- type: loadout
+  id: SiteWorkerBackpackDuffelScience
+  equipment:
+    back: ClothingBackpackDuffelScience
+
+- type: loadout
+  id: SiteWorkerBackpackSatchelScience
+  equipment:
+    back: ClothingBackpackSatchelScience

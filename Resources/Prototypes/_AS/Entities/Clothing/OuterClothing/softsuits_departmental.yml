@@ -1,0 +1,139 @@
+#region Base
+
+- type: entity
+  abstract: true
+  parent: NFDepartmentalEVASuit
+  id: ASDepartmentalEVASuit
+  components:
+  - type: MonkeyWearable
+  - type: Sprite
+    sprite: _NF/Clothing/OuterClothing/Suits/eva_color.rsi
+  - type: Clothing
+    sprite: _NF/Clothing/OuterClothing/Suits/eva_color.rsi
+
+#region SLE
+
+- type: entity
+  parent: NFDepartmentalEVASuitShoulderLight
+  id: ASClothingOuterEVASuitSLE
+  name: SLE EVA suit
+  description: An EVA suit with a built-in helmet commonly issued to Sector Law Enforcement personnel.
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/OuterClothing/Suits/eva_color.rsi
+    layers:
+    - state: icon-base
+      color: "#5a8fc5"  # SLE standard blue
+    - state: icon-decals-01
+      color: "#2a4a7c"  # SLE dark blue
+    - state: icon-reinforced-points
+      color: "#7aa5d5"  # SLE bright blue
+    - state: icon-shoulder-light
+      color: "#2a4a7c"  # SLE dark blue
+    - state: icon-breathing-gear
+    - state: icon-unshaded
+      shader: unshaded
+    - state: icon-shoulder-light-overlay-unshaded
+      shader: unshaded
+      visible: false
+      map: [ "light" ]
+  - type: Item
+    sprite: _NF/Clothing/OuterClothing/Suits/eva_color.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#5a8fc5"  # SLE standard blue
+      - state: inhand-left-decals-01
+        color: "#2a4a7c"  # SLE dark blue
+      - state: inhand-left-reinforced-points
+        color: "#7aa5d5"  # SLE bright blue
+      - state: inhand-left-breathing-gear
+      - state: inhand-left-unshaded
+        shader: unshaded
+      right:
+      - state: inhand-right-base
+        color: "#5a8fc5"  # SLE standard blue
+      - state: inhand-right-decals-01
+        color: "#2a4a7c"  # SLE dark blue
+      - state: inhand-right-reinforced-points
+        color: "#7aa5d5"  # SLE bright blue
+      - state: inhand-right-breathing-gear
+      - state: inhand-right-unshaded
+        shader: unshaded
+  - type: Clothing
+    sprite: _NF/Clothing/OuterClothing/Suits/eva_color.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-base
+        color: "#5a8fc5"  # SLE standard blue
+      - state: equipped-decals-01
+        color: "#2a4a7c"  # SLE dark blue
+      - state: equipped-reinforced-points
+        color: "#7aa5d5"  # SLE bright blue
+      - state: equipped-shoulder-light
+        color: "#2a4a7c"  # SLE dark blue
+      - state: equipped-breathing-gear
+      - state: equipped-unshaded
+        shader: unshaded
+      - state: equipped-shoulder-light-overlay-unshaded
+        shader: unshaded
+        visible: false
+        map: [ "light" ]
+  - type: ToggleableClothing
+    clothingPrototype: ASClothingHeadEVAHelmetSLE # Aurora Song - SLE EVA helmet
+
+#region Command
+
+- type: entity
+  parent: ASDepartmentalEVASuit
+  id: ASClothingOuterEVASuitColonialRepresentative
+  name: colonial representative EVA suit
+  description: A special EVA suit for the colonial representative to conduct spacewalks in style.
+  components:
+  - type: Sprite
+    layers:
+    - state: icon-base
+      color: "#1C4D8D"
+    - state: icon-decals-01
+      color: "#A1A1A1"
+    - state: icon-reinforced-points
+      color: "#3e3e48"
+    - state: icon-breathing-gear
+    - state: icon-unshaded
+      shader: unshaded
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#1C4D8D"
+      - state: inhand-left-decals-01
+        color: "#A1A1A1"
+      - state: inhand-left-reinforced-points
+        color: "#3e3e48"
+      - state: inhand-left-breathing-gear
+      - state: inhand-left-unshaded
+        shader: unshaded
+      right:
+      - state: inhand-right-base
+        color: "#1C4D8D"
+      - state: inhand-right-decals-01
+        color: "#A1A1A1"
+      - state: inhand-right-reinforced-points
+        color: "#3e3e48"
+      - state: inhand-right-breathing-gear
+      - state: inhand-right-unshaded
+        shader: unshaded
+  - type: Clothing
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-base
+        color: "#1C4D8D"
+      - state: equipped-decals-01
+        color: "#A1A1A1"
+      - state: equipped-reinforced-points
+        color: "#3e3e48"
+      - state: equipped-breathing-gear
+      - state: equipped-unshaded
+        shader: unshaded
+  - type: ToggleableClothing
+    clothingPrototype: ASClothingHeadEVAHelmetColonialRepresentative

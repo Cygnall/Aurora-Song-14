@@ -1,0 +1,16 @@
+- type: loadout
+  id: SLEClothingShoesBootsSLEDarkBlue
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ASClothingShoesBootsSLEDarkBlueFilled
+
+- type: loadout
+  id: SLEClothingShoesBootsSLELightBlue
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ShoesCapableNF
+  equipment:
+    shoes: ASClothingShoesBootsSLELightBlueFilled
+

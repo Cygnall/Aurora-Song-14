@@ -113,6 +113,14 @@
       - state: inhand-right-stripe
         color: "#ff8d00"
 
+- type: entity # Aurora's Song - empty mag to be filled with looted overpressure cartridges
+  id: NFMagazinePistol45OverpressureEmpty
+  name: pistol magazine (.45 pistol, fillable, overpressure)
+  parent: NFMagazinePistol45Overpressure
+  components:
+    - type: BallisticAmmoProvider
+      proto: null
+
 - type: entity
   id: NFMagazinePistol45Incendiary
   name: pistol magazine (.45 pistol, incendiary)
@@ -269,6 +277,14 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#ff8d00"
+
+- type: entity # Aurora's Song - empty mag to be filled with looted overpressure cartridges
+  id: NFMagazineSubMachineGun45OverpressureEmpty
+  name: SMG magazine (.45 pistol, fillable, overpressure)
+  parent: NFMagazineSubMachineGun45Overpressure
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
 
 - type: entity
   id: NFMagazineSubMachineGun45Rubber

@@ -1,0 +1,70 @@
+# Site Worker Jumpsuits
+- type: loadout
+  id: SiteWorkerJumpsuitEngineering
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineering
+
+- type: loadout
+  id: SiteWorkerJumpskirtEngineering
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtEngineering
+
+- type: loadout
+  id: SiteWorkerJumpsuitEngineeringHazard
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitEngineeringHazard
+
+- type: loadout
+  id: SiteWorkerJumpsuitAtmos
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAtmos
+
+- type: loadout
+  id: SiteWorkerJumpskirtAtmos
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtAtmos
+
+- type: loadout
+  id: SiteWorkerJumpsuitAtmosCasual
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitAtmosCasual
+
+- type: loadout
+  id: SiteWorkerJumpsuitMilitaryEngineering
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryEngineering
+
+- type: loadout
+  id: SiteWorkerJumpsuitMilitaryAtmospherics
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryAtmospherics
+
+- type: loadout
+  id: SiteWorkerJumpsuitScientist
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitScientist
+
+- type: loadout
+  id: SiteWorkerJumpskirtScientist
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtScientist
+
+- type: loadout
+  id: SiteWorkerJumpsuitMilitaryDamascus
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitMilitaryDamascus
+
+- type: loadout
+  id: SiteWorkerJumpsuitMilitaryEngiSci
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitMilitaryEngiSci
+
+- type: loadout
+  id: SiteWorkerUniformJumpsuitMilitaryEngineering
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryEngineering
+
+- type: loadout
+  id: SiteWorkerUniformJumpsuitMilitaryScientist
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryScientist

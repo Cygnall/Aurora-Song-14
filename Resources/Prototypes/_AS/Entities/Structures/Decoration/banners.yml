@@ -12,6 +12,71 @@
     node: BannerSecurityNode
 
 - type: entity
+  id: ASBannerAS
+  parent: BannerBase
+  name: Aurora Sector banner
+  description: A banner proudly representing the Aurora Sector.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Decoration/banner.rsi
+    state: as-banner
+  - type: Construction
+    graph: BannersGraph
+    node: BannerSecurityNode
+
+- type: entity
+  id: ASBannerAS2
+  parent: BannerBase
+  name: Aurora Sector banner
+  description: A banner proudly representing the Aurora Sector.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Decoration/banner.rsi
+    state: as-banner-2
+  - type: Construction
+    graph: BannersGraph
+    node: BannerSecurityNode
+
+- type: entity
+  id: ASBannerBus
+  parent: BannerBase
+  name: Bus banner
+  description: A banner marking transit hubs.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Decoration/banner.rsi
+    state: bus-banner
+  - type: Construction
+    graph: BannersGraph
+    node: BannerSecurityNode
+
+- type: entity
+  id: ASBannerMerc
+  parent: BannerBase
+  name: Mercenary banner
+  description: A banner marking mercenary areas.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Decoration/banner.rsi
+    state: merc-banner
+  - type: Construction
+    graph: BannersGraph
+    node: BannerSecurityNode
+
+- type: entity
+  id: ASBannerEngiSci
+  parent: BannerBase
+  name: Engineering and Science banner
+  description: A banner displaying the combined colors of the Engineering and Science departments.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Decoration/banner.rsi
+    state: engisci-banner
+  - type: Construction
+    graph: BannersGraph
+    node: BannerSecurityNode
+
+- type: entity
   id: ASFlagSLE
   parent: BannerBase
   name: SLE flag

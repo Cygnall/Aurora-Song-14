@@ -1,0 +1,368 @@
+#region Leader
+- type: job
+  id: CAFLeader
+  name: job-name-cafleader
+  description: job-description-cafleader
+  playTimeTracker: JobCAFLeader
+  setPreference: false
+  startingGear: CAFLeaderGearEVAJackhammer
+  icon: "JobIconColonialArmedForces"
+  supervisors: job-supervisors-colcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  - ColonialCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantColcomm ]
+  whitelisted: true
+
+#- type: startingGear # TODO: add later
+#  id: CAFLeaderGear
+#  equipment:
+#    jumpsuit: ClothingUniformJumpsuitERTLeader
+#    back: ClothingBackpackERTLeader
+#    shoes: ClothingShoesBootsCombatFilled
+#    head: ClothingHeadHelmetERTLeader
+#    eyes: ClothingEyesGlassesSecurity
+#    gloves: ClothingHandsGlovesCombat
+#    outerClothing: ClothingOuterArmorBasicSlim
+#    id: ERTLeaderPDA
+#    ears: ClothingHeadsetAltCentCom
+#    belt: ClothingBeltSecurityFilled
+#    pocket1: NFWeaponPistolN1984 # Frontier
+#    pocket2: FlashlightSeclite
+#  storage:
+#    back:
+#    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
+#    - MedicatedSuture
+#    - RegenerativeMesh
+#    - BoxZiptie
+#    - CrowbarRed
+#    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
+
+- type: startingGear
+  id: CAFLeaderGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryCAFLeader
+    back: ClothingBackpackCAFLeaderFilled # Given backpack filled sincce storage doesn't work on debug-set gear
+    shoes: ClothingShoesBootsMagAdv
+    mask: ClothingMaskGasCAF
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitMilitaryCAFLeader
+    id: CAFLeaderPDA
+    ears: ClothingHeadsetAltColCom
+    belt: ClothingBeltMilitaryWebbingSecurityFilled
+    pocket1: NFWeaponPistolN1984 # Frontier
+    pocket2: FlashlightSeclite
+#  storage: # Commented out backpack filled sincce storage doesn't work on debug-set gear
+#    back:
+#    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
+#    - MedicatedSuture
+#    - RegenerativeMesh
+#    - BoxZiptie
+#    - CrowbarRed
+#    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
+
+- type: startingGear
+  id: CAFLeaderGearEVAJackhammer
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryCAFLeader
+    back: ClothingBackpackCAFLeaderFilled # Given backpack filled sincce storage doesn't work on debug-set gear
+    shoes: ClothingShoesBootsMagAdv
+    mask: ClothingMaskGasCAF
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitMilitaryCAFLeader
+    id: CAFLeaderPDA
+    ears: ClothingHeadsetAltColCom
+    belt: ClothingBeltMilitaryWebbingSecurityFilled
+    pocket1: ASMagazineMarksmanRifle30Overpressure
+    pocket2: ASMagazineMarksmanRifle30Overpressure
+  inhand:
+  - ASWeaponRifleMarksmanHZ-3-3-MOverpressure
+#  storage: # Commented out backpack filled sincce storage doesn't work on debug-set gear
+#    back:
+#    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
+#    - MedicatedSuture
+#    - RegenerativeMesh
+#    - BoxZiptie
+#    - CrowbarRed
+#    - NFMagazinePistol45 # Frontier: MagazineMagnum<NFMagazinePistol45
+
+#- type: chameleonOutfit # TODO: add later
+#  id: CAFLeaderChameleonOutfit
+#  job: CAFLeader
+#  hasMindShield: true
+#  equipment:
+#    head: ClothingHeadHelmetHardsuitERTLeader
+#    neck: ClothingNeckBronzeheart
+
+#region Trooper
+- type: job
+  id: CAFTrooper
+  name: job-name-caftrooper
+  description: job-description-caftrooper
+  playTimeTracker: JobCAFTrooper
+  setPreference: false
+  startingGear: CAFTrooperGearEVAJackhammer
+  icon: "JobIconColonialArmedForces"
+  supervisors: job-supervisors-colcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  - ColonialCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+  whitelisted: true # Frontier
+
+#- type: startingGear # Add later
+#  id: ERTSecurityGear
+#  equipment:
+#    jumpsuit: ClothingUniformJumpsuitERTSecurity
+#    back: ClothingBackpackERTSecurity
+#    shoes: ClothingShoesBootsCombatFilled
+#    head: ClothingHeadHelmetERTSecurity
+#    eyes: ClothingEyesGlassesSecurity
+#    gloves: ClothingHandsGlovesCombat
+#    outerClothing: ClothingOuterArmorBasicSlim
+#    id: ERTSecurityPDA
+#    ears: ClothingHeadsetAltCentCom
+#    belt: ClothingBeltSecurityFilled
+#    pocket1: NFWeaponPistolMk58 # Frontier
+#    pocket2: FlashlightSeclite
+#  storage:
+#    back:
+#    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
+#    - MedicatedSuture
+#    - RegenerativeMesh
+#    - BoxZiptie
+#    - CrowbarRed
+#    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+
+- type: startingGear
+  id: CAFTrooperGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryCAFTrooper
+    back: ClothingBackpackCAFTrooperFilled # Given backpack filled sincce storage doesn't work on debug-set gear
+    shoes: ClothingShoesBootsMag
+    mask: ClothingMaskGasCAF
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitMilitaryCAFTrooper
+    id: CAFTrooperPDA
+    ears: ClothingHeadsetAltColCom
+    belt: ClothingBeltMilitaryWebbingSecurityFilled
+    pocket1: NFWeaponPistolMk58 # Frontier: use NF variant
+    pocket2: FlashlightSeclite
+#  storage:
+#    back:
+#    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
+#    - MedicatedSuture
+#    - RegenerativeMesh
+#    - BoxZiptie
+#    - CrowbarRed
+#    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+
+- type: startingGear
+  id: CAFTrooperGearEVAJackhammer
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryCAFTrooper
+    back: ClothingBackpackCAFTrooperFilled
+    shoes: ClothingShoesBootsMag
+    mask: ClothingMaskGasCAF
+    eyes: ClothingEyesGlassesSecurity
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitMilitaryCAFTrooper
+    id: CAFTrooperPDA
+    ears: ClothingHeadsetAltColCom
+    belt: ClothingBeltMilitaryWebbingSecurityFilled
+    pocket1: ASMagazineMarksmanRifle30Overpressure
+    pocket2: ASMagazineMarksmanRifle30Overpressure
+  inhand:
+    - ASWeaponRifleMarksmanHZ-3-3-MOverpressure
+#  storage: # Commented out backpack filled sincce storage doesn't work on debug-set gear
+#    back:
+#    - NFWeaponEnergyPistolDisabler # Frontier: WeaponDisabler<NFWeaponEnergyPistolDisabler
+#    - MedicatedSuture
+#    - RegenerativeMesh
+#    - BoxZiptie
+#    - CrowbarRed
+#    - NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+
+#- type: chameleonOutfit # Add later
+#  id: ERTSecurityChameleonOutfit
+#  job: ERTSecurity
+#  hasMindShield: true
+#  equipment:
+#    head: ClothingHeadHelmetHardsuitERTSecurity
+#    neck: ClothingNeckSecuritymedal
+
+#region Medical
+- type: job
+  id: CAFMedical
+  name: job-name-cafmedical
+  description: job-description-cafmedical
+  playTimeTracker: JobCAFMedical
+  setPreference: false
+  startingGear: CAFMedicalGearEVA
+  icon: "JobIconColonialArmedForces"
+  supervisors: job-supervisors-colcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  - ColonialCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+  whitelisted: true # Frontier
+
+#- type: startingGear # Add later
+#  id: CAFMedicalGear
+#  equipment:
+#    jumpsuit: ClothingUniformJumpsuitERTMedic
+#    back: ClothingBackpackERTMedical
+#    shoes: ClothingShoesBootsCombatFilled
+#    head: ClothingHeadHelmetERTMedic
+#    eyes: ClothingEyesHudMedical
+#    gloves: ClothingHandsGlovesNitrile
+#    outerClothing: ClothingOuterArmorBasicSlim
+#    id: ERTMedicPDA
+#    ears: ClothingHeadsetAltCentCom
+#    belt: ClothingBeltMedicalFilled
+#    pocket1: Flare
+#  storage:
+#    back:
+#    - Hypospray
+#    - MedkitCombatFilled
+#    - MedkitCombatFilled
+#    - CrowbarRed
+#    - ChemistryBottleOmnizine
+#    - ChemistryBottleEpinephrine
+#    - ChemistryBottleEpinephrine
+
+- type: startingGear
+  id: CAFMedicalGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryCAFMedic
+    back: ClothingBackpackCAFMedicalFilled
+    shoes: ClothingShoesBootsMag
+    mask: ClothingMaskGasCAF
+    eyes: ClothingEyesHudMedical
+    gloves: ClothingHandsGlovesNitrile
+    outerClothing: ClothingOuterHardsuitMilitaryCAFMedical
+    id: CAFMedicPDA
+    ears: ClothingHeadsetAltColCom
+    belt: ClothingBeltMedicalFilled
+    pocket1: NFWeaponEnergyPistolDisabler
+    pocket2: Flare
+#  storage: # Commented out backpack filled sincce storage doesn't work on debug-set gear
+#    back:
+#    - Hypospray
+#    - MedkitCombatFilled
+#    - MedkitCombatFilled
+#    - CrowbarRed
+#    - ChemistryBottleOmnizine
+#    - ChemistryBottleEpinephrine
+#    - ChemistryBottleEpinephrine
+
+#- type: chameleonOutfit # Add later
+#  id: ERTMedicalChameleonOutfit
+#  job: ERTMedical
+#  hasMindShield: true
+#  equipment:
+#    head: ClothingHeadHelmetHardsuitERTMedical
+#    neck: ClothingNeckStethoscope
+
+#region Engineer
+- type: job
+  id: CAFEngineer
+  name: job-name-cafengineer
+  description: job-description-cafengineer
+  playTimeTracker: JobCAFEngineer
+  setPreference: false
+  startingGear: CAFEngineerGearEVA
+  icon: "JobIconColonialArmedForces"
+  supervisors: job-supervisors-colcom
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - CentralCommand
+  - ColonialCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantCentcomm ]
+  whitelisted: true # Frontier
+
+#- type: startingGear # Add later
+#  id: ERTEngineerGear
+#  equipment:
+#    jumpsuit: ClothingUniformJumpsuitERTEngineer
+#    back: ClothingBackpackERTEngineer
+#    shoes: ClothingShoesBootsWork
+#    head: ClothingHeadHelmetERTEngineer
+#    eyes: ClothingEyesGlassesMeson
+#    gloves: ClothingHandsGlovesCombat
+#    outerClothing: ClothingOuterArmorBasicSlim
+#    id: ERTEngineerPDA
+#    ears: ClothingHeadsetAltCentCom
+#    belt: ClothingBeltChiefEngineerFilled
+#    pocket1: Flare
+#    pocket2: GasAnalyzer
+#  storage:
+#    back:
+#    - trayScanner
+#    - RCD
+#    - RCDAmmo
+#    - RCDAmmo
+#    - CableMVStack
+#    - CableHVStack
+#    - CableApcStack
+#    - SheetPlasteel
+#    - SheetSteel
+#    - SheetGlass
+
+- type: startingGear
+  id: CAFEngineerGearEVA
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryCAFEngineer
+    back: ClothingBackpackCAFEngineerFilled
+    shoes: ClothingShoesBootsMagAdv
+    mask: ClothingMaskGasCAF
+    eyes: ClothingEyesGlassesMeson
+    gloves: ClothingHandsGlovesCombat
+    outerClothing: ClothingOuterHardsuitMilitaryCAFEngineer
+    id: CAFEngineerPDA
+    ears: ClothingHeadsetAltColCom
+    belt: ClothingBeltChiefEngineerFilled
+    pocket1: Flare
+    pocket2: GasAnalyzer
+#  storage: # Commented out backpack filled sincce storage doesn't work on debug-set gear
+#    back:
+#    - trayScanner
+#    - RCD
+#    - RCDAmmo
+#    - RCDAmmo
+#    - CableMVStack
+#    - CableHVStack
+#    - CableApcStack
+#    - SheetPlasteel
+#    - SheetSteel
+#    - SheetGlass
+
+#- type: chameleonOutfit # Add later
+#  id: ERTEngineerChameleonOutfit
+#  job: ERTEngineer
+#  hasMindShield: true
+#  equipment:
+#    head: ClothingHeadHelmetHardsuitERTEngineer
+#    neck: ClothingNeckEngineermedal

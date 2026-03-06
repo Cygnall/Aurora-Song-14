@@ -1,0 +1,13 @@
+- type: entity
+  id: ASDresserColonialRepresentativeFilled
+  parent: Dresser
+  suffix: Filled, Colonial Representative
+  components:
+  - type: StorageFill
+    contents:
+      - id: ASClothingNeckMantleColonialRepresentative
+      - id: ASClothingHeadHatColonialRepresentativeCap
+      - id: ASClothingOuterJacketColonialRepresentative
+      - id: ASClothingUniformJumpsuitColonialRepresentative
+      - id: ASClothingUniformJumpskirtColonialRepresentative
+      - id: ClothingShoesLeather

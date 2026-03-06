@@ -1,0 +1,10 @@
+- type: entity
+  parent: BaseSubstation
+  id: ASSubstationBasicHighPrio
+  suffix: Basic, High Prio, 2.5MJ
+  components:
+  - type: Battery
+    maxCharge: 2500000
+    startingCharge: 2500000
+  - type: PowerNetworkBattery
+    maxChargeRate: 150000  # Default charge rate shown in UI

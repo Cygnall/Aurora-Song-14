@@ -1,4 +1,7 @@
 # Aurora - With the refactor from .25 caseless to .25 rifle, we need to update the magazine prototypes accordingly.
+# Also Aurora - Fixed magazine rendering issues: corrected rubber sprite paths from _NF to base Objects path, added proper layered sprite
+# system with base/mag/stripe for visual consistency, updated color to cyan (#00b0ff), added weapon compatibility tags,
+# fixed in-hand visuals with proper left/right stripe overlays, and updated pistol mag state to mag-5 for better capacity visualization.
 #region .25 Rifle mags | Aurora
 - type: entity
   id: ASMagazinePistolCaselessRifle
@@ -14,16 +17,27 @@
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi
     layers:
-    - state: stripe
+    - state: base
       map: ["enum.GunVisualLayers.Base"]
-      color: "#ff0000"
-    - state: mag-1
+    - state: mag-5
       map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#ff0000"
   - type: MagazineVisuals
     magState: mag
     steps: 6
     zeroVisible: false
   - type: Appearance
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"
 
 - type: entity
   id: ASMagazineCaselessRifle
@@ -38,11 +52,27 @@
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag.rsi
     layers:
-    - state: stripe
+    - state: base
       map: ["enum.GunVisualLayers.Base"]
-      color: "#ff0000"
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#ff0000"
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"
 
 - type: entity
   id: ASMagazineCaselessRifleShort
@@ -58,27 +88,48 @@
   - type: Sprite
     sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag_short.rsi
     layers:
-    - state: stripe
+    - state: base
       map: ["enum.GunVisualLayers.Base"]
-      color: "#ff0000"
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#ff0000"
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#ff0000"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#ff0000"
 #endregion .25 Rifle mags | Aurora
 - type: entity
   id: MagazinePistolCaselessRifleRubber
   name: pistol magazine (.25 rifle, rubber) # updated name to be consistent | Aurora
   parent: BaseMagazinePistolCaselessRifle
   components:
+  - type: Tag
+    tags:
+      - ASMagazinePistolCaselessRifle
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25Rubber
     capacity: 10
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_pistol_mag.rsi
     layers:
-    - state: rubber
+    - state: base
       map: ["enum.GunVisualLayers.Base"]
-    - state: mag-1
+    - state: mag-5
       map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#00b0ff"
   - type: MagazineVisuals
     magState: mag
     steps: 6
@@ -90,39 +141,81 @@
       left:
       - state: inhand-left-mag
       - state: inhand-left-stripe
-        color: "#0000ff"
+        color: "#00b0ff"
       right:
       - state: inhand-right-mag
-      - state: inhand-left-stripe
-        color: "#0000ff"
+      - state: inhand-right-stripe
+        color: "#00b0ff"
 
 - type: entity
   id: MagazineCaselessRifleRubber
   name: magazine (.25 rifle, rubber) # updated name to be consistent | Aurora
   parent: BaseMagazineCaselessRifle
   components:
+  - type: Tag
+    tags:
+      - ASMagazineCaselessRifle
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25Rubber
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag.rsi
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag.rsi
     layers:
-    - state: rubber
+    - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#00b0ff"
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: Item
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"
 
 - type: entity
   id: MagazineCaselessRifleShortRubber
   name: short magazine (.25 rifle, rubber) # updated name to be consistent | Aurora
   parent: BaseMagazineCaselessRifle
   components:
+  - type: Tag
+    tags:
+      - ASMagazineCaselessRifle
   - type: BallisticAmmoProvider
     proto: NFCartridgeRifle25Rubber
     capacity: 20
   - type: Sprite
-    sprite: _NF/Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag_short.rsi
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag_short.rsi
     layers:
-    - state: rubber
+    - state: base
       map: ["enum.GunVisualLayers.Base"]
     - state: mag-1
       map: ["enum.GunVisualLayers.Mag"]
+    - state: stripe
+      color: "#00b0ff"
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: Appearance
+  - type: Item
+    sprite: Objects/Weapons/Guns/Ammunition/Magazine/CaselessRifle/caseless_rifle_mag_short.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      - state: inhand-left-stripe
+        color: "#00b0ff"
+      right:
+      - state: inhand-right-mag
+      - state: inhand-right-stripe
+        color: "#00b0ff"

@@ -1,5 +1,18 @@
 # region Moderate
 - type: salvageFaction
+  id: NFZombies
+  desc: nf-salvage-faction-zombies
+  entries:
+    - proto: NFSpawnMobZombie
+      cost: 2
+    - proto: NFSpawnMobZombieSpecial
+      cost: 4
+  configs:
+    DefenseStructure: NFZombiePile
+    Megafauna: NFMobZombieOdysseus
+    Difficulties: NFModerate
+
+- type: salvageFaction
   id: NFXenos
   desc: nf-salvage-faction-xenos
   entries:
@@ -284,7 +297,7 @@
       cost: 3
     - proto: MobRogueSiliconHunter
       cost: 4
-   # - proto: MobRogueSiliconCatcher
+   # - proto: MobRogueSiliconCatcher Aurora Song commented out
    #   cost: 3
    #   prob: 0.3
     - proto: MobRogueSiliconTesla

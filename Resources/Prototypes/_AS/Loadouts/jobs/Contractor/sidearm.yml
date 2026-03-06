@@ -1,0 +1,20 @@
+- type: loadout
+  id: ContractorSidearmMK58
+  price: 3800
+  storage:
+    back:
+    - NFWeaponPistolMk58
+
+- type: loadout
+  id: ContractorSidearmLaserPistol
+  price: 4500
+  storage:
+    back:
+    - NFWeaponEnergyPistolLaser
+
+- type: loadout
+  id: ContractorSidearmDisabler
+  price: 3800
+  storage:
+    back:
+    - NFWeaponEnergyPistolDisabler

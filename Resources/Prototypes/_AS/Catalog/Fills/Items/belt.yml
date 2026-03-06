@@ -14,6 +14,7 @@
 - type: entity
   id: ChestRigTools
   parent: ClothingBeltMilitaryWebbing
+  name: chest rig (tools)
   suffix: Mercenary, Filled
   components:
   - type: StorageFill
@@ -28,6 +29,7 @@
 - type: entity
   id: MercWebTools
   parent: ClothingBeltMercenaryWebbing
+  name: mercenary webbing (tools)
   suffix: Mercenary, Filled
   components:
   - type: StorageFill
@@ -42,6 +44,7 @@
 - type: entity
   id: MedicRigTools
   parent: ClothingBeltMilitaryWebbingMed
+  name: medical chest rig (tools)
   suffix: Mercenary, Filled
   components:
   - type: StorageFill
@@ -56,6 +59,7 @@
 - type: entity
   id: MedicRigMedical
   parent: ClothingBeltMilitaryWebbingMed
+  name: medical chest rig (medicine)
   suffix: Mercenary, Filled, Medical
   components:
   - type: StorageFill
@@ -66,3 +70,13 @@
       - id: Gauze
       - id: EmergencyMedipen #You never know what people are going to latejoin into
         amount: 3
+
+- type: entity
+  id: ClothingBeltMilitaryWebbingSecurityFilled
+  parent: ClothingBeltMilitaryWebbing
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: BeltSecurityEntityTable

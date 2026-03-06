@@ -1,17 +1,41 @@
+using Content.Server.Power.EntitySystems; // Mono
 using Content.Server.Shuttles.Components;
 using Content.Server.Shuttles.Events;
+using Content.Shared._Mono.Ships; // Mono
+using Content.Shared.Popups; // Mono
 using Content.Shared.Shuttles.BUIStates;
-using Content.Shared.Shuttles.Components;
+using Content.Shared.Shuttles.Components; // AS
 using Content.Shared.Shuttles.Events;
+using Content.Shared.Shuttles.Systems; // Mono
 using Content.Shared.Shuttles.UI.MapObjects;
+using Content.Shared.Station.Components; // Mono
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Audio; // AS
+using Robust.Shared.Audio.Components; // AS
+using Robust.Shared.Audio.Systems; // AS
 
 namespace Content.Server.Shuttles.Systems;
 
 public sealed partial class ShuttleConsoleSystem
 {
+    // Begin Mono
+    [Dependency] private readonly IMapManager _mapManager = default!;
+    [Dependency] private readonly SharedShuttleSystem _sharedShuttle = default!;
+    [Dependency] private readonly SharedAudioSystem _audio = default!;
+
+    private readonly SoundSpecifier _errorSound = new SoundPathSpecifier("/Audio/Effects/Cargo/buzz_sigh.ogg")
+    {
+        Params = AudioParams.Default.WithVolume(-5f),
+    }; // AS: Error sounds
+
+    private const float ShuttleFTLRange = 512f;
+    private const float ShuttleFTLMassThreshold = 100f; // Mono: now a soft limit, ships under the limit just stop you from shorter distance
+
+    private const float MassConstant = 50f; // Arbitrary, at this value massMultiplier = 0.65
+    private const float MassMultiplierMin = 0.5f;
+    private const float MassMultiplierMax = 5f; // End Mono
     private void InitializeFTL()
     {
         SubscribeLocalEvent<FTLBeaconComponent, ComponentStartup>(OnBeaconStartup);
@@ -119,9 +143,9 @@ public sealed partial class ShuttleConsoleSystem
         if (consoleUid == null)
             return;
 
-        var shuttleUid = _xformQuery.GetComponent(consoleUid.Value).GridUid;
+        var shuttleUid = _xformQuery.GetComponent(consoleUid.Value).GridUid; // Mono
 
-        if (!TryComp(shuttleUid, out ShuttleComponent? shuttleComp))
+        if (shuttleUid == null || !TryComp(shuttleUid.Value, out ShuttleComponent? shuttleComp))
             return;
 
         if (shuttleComp.Enabled == false)
@@ -130,7 +154,8 @@ public sealed partial class ShuttleConsoleSystem
         // Check shuttle can even FTL
         if (!_shuttle.CanFTL(shuttleUid.Value, out var reason))
         {
-            // TODO: Session popup
+            _popup.PopupEntity(reason, ent.Owner, PopupType.Medium); // AS: Pop up and sounds
+            _audio.PlayPvs(_errorSound, ent.Owner);
             return;
         }
 
@@ -140,16 +165,95 @@ public sealed partial class ShuttleConsoleSystem
             return;
         }
 
+        targetCoordinates = _shuttle.ClampCoordinatesToFTLRange(shuttleUid.Value, targetCoordinates); // Mono
+
         List<ShuttleExclusionObject>? exclusions = null;
         GetExclusions(ref exclusions);
 
         if (!_shuttle.FTLFree(shuttleUid.Value, targetCoordinates, targetAngle, exclusions))
         {
+            if (!_sharedShuttle.TryGetFTLDrive(shuttleUid.Value, out _, out _)) // AS: Pop up and sounds
+            {
+                _popup.PopupEntity(Loc.GetString("shuttle-no-ftl"), ent.Owner, PopupType.Medium);
+                _audio.PlayPvs(_errorSound, ent.Owner);
+            }
             return;
         }
 
         if (!TryComp(shuttleUid.Value, out PhysicsComponent? shuttlePhysics))
         {
+            return;
+        }
+
+        // Mono: Check for nearby grids that are above the mass threshold
+        var xform = Transform(shuttleUid.Value);
+        var bounds = xform.WorldMatrix.TransformBox(Comp<MapGridComponent>(shuttleUid.Value).LocalAABB).Enlarged(ShuttleFTLRange);
+        var bodyQuery = GetEntityQuery<PhysicsComponent>();
+        // Keep track of docked grids to exclude them from the proximity check
+        var dockedGrids = new HashSet<EntityUid>();
+
+        // Find all docked grids by looking for DockingComponents on the shuttle
+        var dockQuery = EntityQueryEnumerator<DockingComponent, TransformComponent>();
+        while (dockQuery.MoveNext(out var dockUid, out var dock, out var dockXform))
+        {
+            // Only consider docks on our shuttle
+            if (dockXform.GridUid != shuttleUid.Value || !dock.Docked || dock.DockedWith == null)
+                continue;
+
+            // If we have a docked entity, get its grid
+            if (TryComp<TransformComponent>(dock.DockedWith.Value, out var dockedXform) && dockedXform.GridUid != null)
+            {
+                if (TryComp<FTLLockComponent>(dockedXform.GridUid.Value, out var ftlLock) && ftlLock.Enabled) // AS
+                {
+                    dockedGrids.Add(dockedXform.GridUid.Value);
+                }
+
+                // Check if we're docked to another grid
+                var parentGridUid = dockedXform.GridUid.Value;
+
+                // Find all other grids docked to this parent grid
+                // These should also be excluded from the proximity check so we can
+                // still FTL even when other ships are docked to the same station/grid
+                var parentDockQuery = EntityQueryEnumerator<DockingComponent, TransformComponent>();
+                while (parentDockQuery.MoveNext(out var parentDockUid, out var parentDock, out var parentDockXform))
+                {
+                    // Only consider docks on the parent grid
+                    if (parentDockXform.GridUid != parentGridUid || !parentDock.Docked || parentDock.DockedWith == null)
+                        continue;
+
+                    // If we have a docked entity and it's not our ship, add its grid to the exclusion list
+                    if (TryComp<TransformComponent>(parentDock.DockedWith.Value, out var siblingDockedXform) &&
+                        siblingDockedXform.GridUid != null &&
+                        siblingDockedXform.GridUid != shuttleUid.Value) // AS
+                    {
+                        if (TryComp<FTLLockComponent>(siblingDockedXform.GridUid.Value, out var childLock) && childLock.Enabled)
+                        {
+                            dockedGrids.Add(siblingDockedXform.GridUid.Value);
+                        }
+                    }
+                }
+            }
+        }
+
+        // Mono
+        foreach (var (console, consoleComp) in _lookup.GetEntitiesInRange<ShuttleConsoleComponent>(_transform.GetMapCoordinates(xform), ShuttleFTLRange))
+        {
+            var consoleXform = Transform(console);
+            var consGrid = consoleXform.GridUid;
+            if (consGrid == null ||
+                consGrid == shuttleUid ||
+                dockedGrids.Contains(consGrid.Value) || // Skip grids that are docked to us or to the same parent grid
+                !bodyQuery.TryGetComponent(consGrid, out var body) ||
+                body.Mass < ShuttleFTLMassThreshold
+                    && (_transform.GetWorldPosition(consGrid.Value) - _transform.GetWorldPosition(consoleXform)).Length() > ShuttleFTLRange * body.Mass / ShuttleFTLMassThreshold ||
+                !this.IsPowered(console, EntityManager))
+            {
+                continue;
+            }
+
+            _popup.PopupEntity(Loc.GetString("shuttle-ftl-proximity"), ent.Owner, PopupType.Medium);
+            _audio.PlayPvs(_errorSound, ent.Owner); // AS
+            UpdateConsoles(shuttleUid.Value);
             return;
         }
 
@@ -161,7 +265,50 @@ public sealed partial class ShuttleConsoleSystem
 
         var ev = new ShuttleConsoleFTLTravelStartEvent(ent.Owner);
         RaiseLocalEvent(ref ev);
+        if (_sharedShuttle.TryGetFTLDrive(shuttleUid.Value, out _, out var drive)) // Mono Begin
+        {
+            MassAdjustFTLStart(shuttlePhysics,
+                drive,
+                out var massAdjustedStartupTime,
+                out var massAdjustedHyperSpaceTime);
+            _shuttle.FTLToCoordinates(shuttleUid.Value, shuttleComp, adjustedCoordinates, targetAngle, massAdjustedStartupTime, massAdjustedHyperSpaceTime);
+        }
+    }
 
-        _shuttle.FTLToCoordinates(shuttleUid.Value, shuttleComp, adjustedCoordinates, targetAngle);
+    private void MassAdjustFTLStart(PhysicsComponent shuttlePhysics, FTLDriveComponent drive, out float massAdjustedStartupTime, out float massAdjustedHyperSpaceTime)
+    {
+        if (drive.MassAffectedDrive == false)
+        {
+            massAdjustedHyperSpaceTime = drive.HyperSpaceTime;
+            massAdjustedStartupTime = drive.StartupTime;
+            return;
+        }
+        var adjustedMass = shuttlePhysics.Mass * drive.DriveMassMultiplier;
+        var massMultiplier = float.Log(float.Sqrt(adjustedMass / MassConstant + float.E));
+        massMultiplier = float.Clamp(massMultiplier, MassMultiplierMin, MassMultiplierMax);
+        massAdjustedStartupTime = drive.StartupTime * massMultiplier;
+        massAdjustedHyperSpaceTime = drive.HyperSpaceTime * massMultiplier;
+    }
+    private void UpdateConsoles(EntityUid uid, ShuttleComponent? component = null)
+    {
+        if (!Resolve(uid, ref component))
+            return;
+
+        // Update pilot consoles
+        var query = EntityQueryEnumerator<ShuttleConsoleComponent, TransformComponent>();
+
+        while (query.MoveNext(out var consoleUid, out var console, out var xform))
+        {
+            if (xform.GridUid != uid)
+                continue;
+
+            UpdateConsoleState(consoleUid, console);
+        }
+    }
+    // Mono End
+    private void UpdateConsoleState(EntityUid uid, ShuttleConsoleComponent component)
+    {
+        DockingInterfaceState? dockState = null;
+        UpdateState(uid, ref dockState);
     }
 }

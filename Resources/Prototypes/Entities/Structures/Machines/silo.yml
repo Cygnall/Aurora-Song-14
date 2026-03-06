@@ -66,3 +66,5 @@
     price: 300 # Frontier: 1500<300
   - type: MaterialStorageMagnetPickup # Frontier
     range: 0.3 # Frontier
+  - type: PlaceableSurface # Aurora's Song - Allow ore/ construction bags to dump into it directly
+    isPlaceable: false # but not place on it if you just click it with a random item

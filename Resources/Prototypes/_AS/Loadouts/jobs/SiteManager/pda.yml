@@ -1,0 +1,5 @@
+# Site Manager PDA
+- type: loadout
+  id: SiteManagerPDA
+  equipment:
+    id: ASSiteManagerPDA

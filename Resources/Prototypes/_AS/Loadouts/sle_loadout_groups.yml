@@ -1,0 +1,186 @@
+- type: loadoutGroup
+  id: SLEBackpackBrown
+  name: loadout-group-contractor-backpack
+  minLimit: 1
+  loadouts:
+  - SLEClothingBackpackSLENavy
+  - SLEClothingBackpackSatchelSLENavy
+  - SLEClothingBackpackDuffelSLENavy
+  - SLEClothingBackpackMessengerSLENavy
+  - SLEClothingBackpackSLECorpsman
+  - SLEClothingBackpackSatchelSLECobalt
+  - SLEClothingBackpackDuffelSLECorpsman
+  - SLEClothingBackpackMessengerSLECobalt
+  fallbacks:
+  - SLEClothingBackpackSLENavy
+
+- type: loadoutGroup
+  id: SLEBackpackCream
+  name: loadout-group-contractor-backpack
+  minLimit: 1
+  loadouts:
+  - SLEClothingBackpackSLECorpsman
+  - SLEClothingBackpackSatchelSLECobalt
+  - SLEClothingBackpackDuffelSLECorpsman
+  - SLEClothingBackpackMessengerSLECobalt
+  - SLEClothingBackpackSLENavy
+  - SLEClothingBackpackSatchelSLENavy
+  - SLEClothingBackpackDuffelSLENavy
+  - SLEClothingBackpackMessengerSLENavy
+  fallbacks:
+  - SLEClothingBackpackSLECorpsman
+
+- type: loadoutGroup
+  id: SLEShoesBrown
+  name: loadout-group-contractor-shoes
+  minLimit: 1
+  loadouts:
+  - SLEClothingShoesBootsSLEDarkBlue
+  - SLEClothingShoesBootsSLELightBlue
+  fallbacks:
+  - SLEClothingShoesBootsSLEDarkBlue
+
+- type: loadoutGroup
+  id: SLEShoesCream
+  name: loadout-group-contractor-shoes
+  minLimit: 1
+  loadouts:
+  - SLEClothingShoesBootsSLELightBlue
+  - SLEClothingShoesBootsSLEDarkBlue
+  fallbacks:
+  - SLEClothingShoesBootsSLELightBlue
+
+- type: loadoutGroup
+  id: SLEGlovesBrown
+  name: loadout-group-contractor-gloves
+  minLimit: 1
+  loadouts:
+  - SLEClothingHandsGlovesCombatSLEDarkBlue
+  - SLEClothingHandsGlovesCombatSLELightBlue
+  fallbacks:
+  - SLEClothingHandsGlovesCombatSLEDarkBlue
+
+- type: loadoutGroup
+  id: SLEGlovesCream
+  name: loadout-group-contractor-gloves
+  minLimit: 1
+  loadouts:
+  - SLEClothingHandsGlovesCombatSLELightBlue
+  - SLEClothingHandsGlovesCombatSLEDarkBlue
+  fallbacks:
+  - SLEClothingHandsGlovesCombatSLELightBlue
+
+- type: loadoutGroup
+  id: SLEBelt
+  name: loadout-group-contractor-belt
+  minLimit: 1
+  loadouts:
+  - SLEWebbing
+  - SLEBelt
+  fallbacks:
+  - SLEWebbing
+
+- type: loadoutGroup
+  id: SLEBoxSurvival
+  name: loadout-group-contractor-survival-box
+  hidden: true
+  minLimit: 1
+  loadouts:
+  - SLEBoxSurvivalSLEOxygen
+  - SLEBoxSurvivalSLENitrogen
+  - SLEBoxSurvivalSLESheleg
+  - EmergencyIPCBox
+  - SLEBoxSurvivalSLEFeroxi
+  fallbacks:
+  - SLEBoxSurvivalSLEOxygen
+  - SLEBoxSurvivalSLENitrogen
+  - SLEBoxSurvivalSLESheleg
+  - SLEBoxSurvivalSLEFeroxi
+
+- type: loadoutGroup
+  id: SLEFace
+  name: loadout-group-contractor-face
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - SLEClothingMaskGasSLE
+  - SLEVoxClothingMaskGasSLE
+  fallbacks:
+  - SLEClothingMaskGasSLE
+
+- type: loadoutGroup
+  id: SLEGlasses
+  name: loadout-group-contractor-glasses
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - SLEClothingEyesGlasses
+  fallbacks:
+  - SLEClothingEyesGlasses
+
+# Grunt headsets
+- type: loadoutGroup
+  id: SLEEarsBrown
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  loadouts:
+  - SLEClothingHeadsetSLENavy
+  - SLEClothingHeadsetSLECobalt
+  - SLEClothingHeadsetSLEOrange
+  fallbacks:
+  - SLEClothingHeadsetSLENavy
+
+- type: loadoutGroup
+  id: SLEEarsCream
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  loadouts:
+  - SLEClothingHeadsetSLENavy
+  - SLEClothingHeadsetSLECobalt
+  - SLEClothingHeadsetSLEOrange
+  fallbacks:
+  - SLEClothingHeadsetSLECobalt
+
+- type: loadoutGroup
+  id: SLEEarsGreen
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  loadouts:
+  - SLEClothingHeadsetSLENavy
+  - SLEClothingHeadsetSLECobalt
+  - SLEClothingHeadsetSLEOrange
+  fallbacks:
+  - SLEClothingHeadsetSLEOrange
+
+# Senior officer headsets
+- type: loadoutGroup
+  id: SLEEarsAltBrown
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  loadouts:
+  - SLEClothingHeadsetAltSLENavy
+  - SLEClothingHeadsetAltSLECobalt
+  - SLEClothingHeadsetAltSLEOrange
+  fallbacks:
+  - SLEClothingHeadsetAltSLENavy
+
+- type: loadoutGroup
+  id: SLEEarsAltCream
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  loadouts:
+  - SLEClothingHeadsetAltSLENavy
+  - SLEClothingHeadsetAltSLECobalt
+  - SLEClothingHeadsetAltSLEOrange
+  fallbacks:
+  - SLEClothingHeadsetAltSLECobalt
+
+- type: loadoutGroup
+  id: SLEEarsAltGreen
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  loadouts:
+  - SLEClothingHeadsetAltSLENavy
+  - SLEClothingHeadsetAltSLECobalt
+  - SLEClothingHeadsetAltSLEOrange
+  fallbacks:
+  - SLEClothingHeadsetAltSLEOrange
+

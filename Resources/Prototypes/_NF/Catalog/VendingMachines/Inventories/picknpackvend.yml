@@ -3,16 +3,21 @@
   startingInventory:
   # Weapons
     NFWeaponPistolMk58: 6
+    ASWeaponPistolHZ-1-3: 6 # Aurora's Song - Add HZ-1-3 to Pick N Pack inventory
     NFWeaponPistolPollock: 6
     NFWeaponRifleAssaultGestio: 6
     NFWeaponRifleAssaultNovaliteC1: 6
     NFWeaponShotgunKammerer: 6
   # Magazines
     NFMagazinePistol35Empty: 6
+    NFMagazineSubMachineGun35Empty: 6 # Aurora's Song
+    ASMagazinePistol40Empty: 6 # Aurora's Song
     NFMagazineLowCapacityRifle30Empty: 6
     NFMagazineClipRifle20Empty: 6
+    NFMagazineRifle20Empty: 6 # Aurora's Song
   # Ammo boxes
     NFAmmunitionBoxPistol35: 6
+    ASAmmunitionBoxPistol40: 6 # Aurora's Song
     NFAmmunitionBoxRifle20: 6
     NFAmmunitionBoxRifle30: 6
     NFAmmunitionBoxShellShotgunBuckshot: 6
@@ -23,16 +28,21 @@
   startingInventory:
   # Weapons
     NFWeaponPistolMk58: 4294967295
+    ASWeaponPistolHZ-1-3: 4294967295 # Aurora's Song - Add HZ-1-3 to Pick N Pack inventory
     NFWeaponPistolPollock: 4294967295
     NFWeaponRifleAssaultNovaliteC1: 4294967295
     NFWeaponRifleAssaultGestio: 4294967295
     NFWeaponShotgunKammerer: 4294967295
   # Magazines
     NFMagazinePistol35Empty: 4294967295
+    NFMagazineSubMachineGun35Empty: 4294967295 # Aurora's Song
+    ASMagazinePistol40Empty: 4294967295 # Aurora's Song
     NFMagazineClipRifle20Empty: 4294967295
     NFMagazineLowCapacityRifle30Empty: 4294967295
+    NFMagazineRifle20Empty: 4294967295 # Aurora's Song
   # Ammo boxes
     NFAmmunitionBoxPistol35: 4294967295
+    ASAmmunitionBoxPistol40: 4294967295 # Aurora's Song
     NFAmmunitionBoxRifle20: 4294967295
     NFAmmunitionBoxRifle30: 4294967295
     NFAmmunitionBoxShellShotgunBuckshot: 4294967295

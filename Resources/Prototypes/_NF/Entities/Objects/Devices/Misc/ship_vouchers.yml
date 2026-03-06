@@ -57,7 +57,7 @@
     access:
     - Armory
     - Sergeant # Frontier
-    - Bailiff # Frontier
+    - Lieutenant # Aurora's Song - Changed from Bailiff to Lieutenant
     accessGroups: # Frontier
     - GeneralNfsdAccess # Frontier
 
@@ -70,7 +70,8 @@
   components:
   - type: Sprite
     layers:
-    - state: blue
+    - sprite: _AS/Objects/Misc/shipyard_voucher.rsi # Aurora's Song - redirected base layer to AS directory
+      state: blue
     - state: voucherjanitor
   - type: Item
     heldPrefix: blue
@@ -88,7 +89,8 @@
   components:
   - type: Sprite
     layers:
-    - state: blue
+    - sprite: _AS/Objects/Misc/shipyard_voucher.rsi # Aurora's Song - redirected base layer to AS directory
+      state: blue
     - state: vouchervalet
   - type: ShipyardVoucher
     access:
@@ -102,7 +104,8 @@
   components:
   - type: Sprite
     layers:
-    - state: blue
+    - sprite: _AS/Objects/Misc/shipyard_voucher.rsi # Aurora's Song - redirected base layer to AS directory
+      state: blue
     - state: vouchermailcarrier
   - type: ShipyardVoucher
     access:
@@ -116,7 +119,8 @@
   components:
   - type: Sprite
     layers:
-    - state: blue
+    - sprite: _AS/Objects/Misc/shipyard_voucher.rsi # Aurora's Song - redirected base layer to AS directory
+      state: blue
     - state: voucherstationguard
   - type: ShipyardVoucher
     access:
@@ -130,7 +134,8 @@
   components:
   - type: Sprite
     layers:
-    - state: blue
+    - sprite: _AS/Objects/Misc/shipyard_voucher.rsi # Aurora's Song - redirected base layer to AS directory
+      state: blue
     - state: voucherstationtrafficcontroller
   - type: ShipyardVoucher
     access:

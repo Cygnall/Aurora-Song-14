@@ -22,13 +22,13 @@
 
 - type: quickPhrase
   parent: BaseEngineeringJobPhrase
-  id: JobPlantTechnician
-  text: job-name-plant-technician  # Uses NF locale
+  id: JobSiteWorker
+  text: job-name-site-worker
 
 - type: quickPhrase
   parent: BaseEngineeringJobPhrase
-  id: JobPlantManager
-  text: job-name-plant-manager  # Uses NF locale
+  id: JobSiteManager
+  text: job-name-site-manager
 
 - type: quickPhrase
   parent: BaseEngineeringJobPhrase
@@ -72,5 +72,35 @@
 
 - type: quickPhrase
   parent: BaseCommandJobPhrase
-  id: JobStationRepresentative
-  text: job-name-station-representative
+  id: JobColonialRepresentative
+  text: job-name-colonial-representative
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobCivilian
+  text: job-name-civilian
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobCitizen
+  text: job-name-citizen
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobContractor
+  text: job-name-contractor  # Uses NF locale
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobPilot
+  text: job-name-pilot  # Uses NF locale
+
+- type: quickPhrase
+  parent: BaseCivilianJobPhrase
+  id: JobMercenary
+  text: job-name-mercenary  # Uses NF locale
+
+- type: quickPhrase
+  parent: BaseEngineeringJobPhrase
+  id: JobTechnician
+  text: job-name-technician

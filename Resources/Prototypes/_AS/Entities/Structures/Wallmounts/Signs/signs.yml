@@ -20,10 +20,19 @@
   parent: ASBaseSignDirectional
   id: ASSignDirectionalSLE
   name: SLE outpost sign
-  description: A direction sign, pointing out which way an SLE outpost is.
+  description: A directional sign, pointing out which way to go to get to the front SLE desk.
   components:
   - type: Sprite
-    state: direction_nfsd
+    state: direction_sle
+
+- type: entity
+  parent: ASBaseSignDirectional
+  id: ASSignDirectionalCR
+  name: Colonial Representative sign
+  description: A direction sign, pointing out which way the Colonial Representative's office is.
+  components:
+  - type: Sprite
+    state: direction_cr
 
 # Room Signs
 - type: entity
@@ -33,7 +42,7 @@
   description: A sign that marks the area beyond as an SLE area.
   components:
   - type: Sprite
-    state: nfsd
+    state: sle
 
 - type: entity
   parent: ASBaseSign

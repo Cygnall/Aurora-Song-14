@@ -20,6 +20,7 @@
       #I go further indepth on this in my PR, https://github.com/space-wizards/space-station-14/pull/37869
   - type: Clothing
     sprite: Clothing/OuterClothing/Vests/hazard.rsi
+    # Aurora's Song: sprite states explicitly defined to prevent transformation errors
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
@@ -28,6 +29,12 @@
       - state: equipped-OUTERCLOTHING-unshaded
         shader: shaded
         #same trick here
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-unshaded-vox
+        shader: unshaded
+      - state: equipped-OUTERCLOTHING-unshaded-vox
+        shader: shaded
   - type: Reflect
     reflectProb: 0.02
     reflects:

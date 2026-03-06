@@ -2052,7 +2052,7 @@
   baseTurf: Plating
   isSubfloor: false
   deconstructTools: [ Prying ]
-  itemDrop: FloorTileItemAstroAsteroidSand
+  itemDrop: FloorTileItemAstroAsteroidSandBorderless # Aurora Song - Make tile drop correct tile item
   weather: false
 
 - type: tile

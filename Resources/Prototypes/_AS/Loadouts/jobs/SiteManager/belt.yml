@@ -1,0 +1,5 @@
+# Site Manager Belt
+- type: loadout
+  id: SiteManagerBeltChiefEngineerFilled
+  equipment:
+    belt: ClothingBeltChiefEngineerFilled

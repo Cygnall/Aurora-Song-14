@@ -1,6 +1,7 @@
 using Content.Server.Atmos.Components;
 using Content.Server.Explosion.EntitySystems;
 using Content.Shared.Atmos;
+using Content.Shared.Power;
 using JetBrains.Annotations;
 using Robust.Shared.Map.Components;
 
@@ -21,6 +22,7 @@ namespace Content.Server.Atmos.EntitySystems
             SubscribeLocalEvent<AirtightComponent, AnchorStateChangedEvent>(OnAirtightPositionChanged);
             SubscribeLocalEvent<AirtightComponent, ReAnchorEvent>(OnAirtightReAnchor);
             SubscribeLocalEvent<AirtightComponent, MoveEvent>(OnAirtightMoved);
+            SubscribeLocalEvent<AirtightComponent, PowerChangedEvent>(OnPowerChanged);
         }
 
         private void OnAirtightInit(Entity<AirtightComponent> airtight, ref ComponentInit args)
@@ -146,6 +148,17 @@ namespace Content.Server.Atmos.EntitySystems
             }
 
             return newAirBlockedDirs;
+        }
+
+        /// <summary>
+        /// Aurora's Song - Sets airtight state based on power state
+        /// </summary>
+        private void OnPowerChanged(EntityUid uid, AirtightComponent component, ref PowerChangedEvent args)
+        {
+            if (component.RequiresPower)
+            {
+                SetAirblocked((uid, component), args.Powered);
+            }
         }
     }
 

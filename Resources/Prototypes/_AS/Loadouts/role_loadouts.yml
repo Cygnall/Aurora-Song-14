@@ -1,4 +1,6 @@
-﻿- type: roleLoadout
+#region Medical
+
+- type: roleLoadout
   id: JobMedic
   groups:
   - MedicHead
@@ -15,13 +17,15 @@
   - MedEars
   - ContractorEncryptionKey
   - ContractorBoxSurvival
-  - ContractorPDA
+  - MedicPDA
   - ContractorWallet
-  - ContractorCartridge
+  - MedicCartridge
   - ContractorImplanter
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+
+#region Service
 
 - type: roleLoadout
   id: JobService
@@ -40,11 +44,312 @@
   - ContractorEars
   - ContractorEncryptionKey
   - ContractorBoxSurvival
-  - ContractorPDA
+  - ServiceWorkerPDA
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
   - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific
+
+#region SLE
+
+- type: roleLoadout
+  id: JobRookie
+  groups:
+  - RookieHead
+  - RookieNeck
+  - RookieJumpsuit
+  - SLEGlovesBrown
+  - SLEBackpackBrown
+  - RookieOuterClothing
+  - SLEForcedOuterClothing
+  - SLEShoesBrown
+  - SLEFace
+  - SLEGlasses
+  - SLEBelt
+  - SLEEarsBrown
+  - SLEBoxSurvival
+  - RookiePDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - SLESpeciesSpecific
+
+- type: roleLoadout
+  id: JobOfficer
+  groups:
+  - OfficerHead
+  - OfficerNeck
+  - OfficerJumpsuit
+  - SLEGlovesBrown
+  - SLEBackpackBrown
+  - OfficerOuterClothing
+  - SLEForcedOuterClothing
+  - SLEShoesBrown
+  - SLEFace
+  - SLEGlasses
+  - SLEBelt
+  - SLEEarsBrown
+  - SLEBoxSurvival
+  - OfficerPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - SLESpeciesSpecific
+
+- type: roleLoadout
+  id: JobCorpsman
+  groups:
+  - CorpsmanHead
+  - CorpsmanNeck
+  - CorpsmanJumpsuit
+  - CorpsmanGloves
+  - SLEBackpackCream
+  - CorpsmanOuterClothing
+  - SLEForcedOuterClothing
+  - SLEShoesCream
+  - CorpsmanFace
+  - CorpsmanGlasses
+  - CorpsmanBelt
+  - SLEEarsCream
+  - SLEBoxSurvival
+  - CorpsmanPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - SLESpeciesSpecific
+
+- type: roleLoadout
+  id: JobASDetective
+  groups:
+  - ASDetectiveHead
+  - ASDetectiveNeck
+  - ASDetectiveJumpsuit
+  - ASDetectiveGloves
+  - SLEBackpackBrown
+  - ASDetectiveOuterClothing
+  - SLEForcedOuterClothing
+  - SLEShoesBrown
+  - SLEFace
+  - SLEGlasses
+  - SLEBelt
+  - SLEEarsCream
+  - SLEBoxSurvival
+  - ASDetectivePDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - SLESpeciesSpecific
+
+- type: roleLoadout
+  id: JobPublicAffairsLiaison
+  groups:
+  - ContractorHead
+  - PalNeck
+  - PalJumpsuit
+  - PalGloves
+  - SLEBackpackBrown
+  - SLEForcedOuterClothing
+  - SLEShoesBrown
+  - ContractorFace
+  - SLEGlasses
+  - ContractorBelt
+  - SLEEarsBrown
+  - SLEBoxSurvival
+  - PalPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - ContractorBackpackItems
+  - ContractorHandItems
+  - NFSpeciesSpecific # Explicitly civilian variant
+
+# - type: roleLoadout # Fix when this is actully used
+  # id: JobPrisonGuard
+  # groups:
+  # - PrisonGuardHead
+  # - PrisonGuardNeck
+  # - PrisonGuardJumpsuit
+  # - SLEGlovesBrown
+  # - SLEBackpackBrown
+  # - PrisonGuardOuterClothing
+  # - SLEForcedOuterClothing
+  # - SLEShoesBrown
+  # - SLEFace
+  # - SLEGlasses
+  # - SLEBelt
+  # - SLEEarsGreen
+  # - SLEBoxSurvival
+  # - PrisonGuardPDA
+  # - ContractorWallet
+  # - ContractorCartridge
+  # - ContractorImplanter
+  # - ContractorEncryptionKey
+  # - ContractorBackpackItems
+  # - ContractorHandItems
+  # - SLESpeciesSpecific
+
+- type: roleLoadout
+  id: JobLieutenant
+  groups:
+  - LieutenantHead
+  - LieutenantNeck
+  - LieutenantJumpsuit
+  - SLEGlovesCream
+  - SLEBackpackBrown
+  - LieutenantOuterClothing
+  - SLEForcedOuterClothing
+  - SLEShoesCream
+  - SLEFace
+  - SLEGlasses
+  - SLEBelt
+  - SLEEarsAltGreen
+  - SLEBoxSurvival
+  - LieutenantPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - SergeantBackpackItems
+  - ContractorHandItems
+  - SLESpeciesSpecific
+
+- type: roleLoadout
+  id: JobSergeant
+  groups:
+  - SergeantHead
+  - SergeantNeck
+  - SergeantJumpsuit
+  - SLEGlovesCream
+  - SLEBackpackBrown
+  - SergeantOuterClothing
+  - SLEForcedOuterClothing
+  - SLEShoesBrown
+  - SLEFace
+  - SLEGlasses
+  - SLEBelt
+  - SLEEarsAltBrown
+  - SLEBoxSurvival
+  - SergeantPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - SergeantBackpackItems
+  - ContractorHandItems
+  - SLESpeciesSpecific
+
+- type: roleLoadout
+  id: JobCommissioner
+  groups:
+  - CommissionerHead
+  - CommissionerNeck
+  - CommissionerJumpsuit
+  - SLEGlovesCream
+  - SLEBackpackBrown
+  - CommissionerOuterClothing
+  - SLEForcedOuterClothing
+  - SLEShoesBrown
+  - CommissionerFace
+  - SLEGlasses
+  - SLEBelt
+  - CommissionerEars
+  - SLEBoxSurvival
+  - CommissionerPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - SergeantBackpackItems
+  - ContractorHandItems
+  - SLESpeciesSpecific
+
+#region Command
+
+- type: roleLoadout
+  id: JobColonialRepresentative
+  groups:
+  - ColonialRepresentativeHead
+  - ColonialRepresentativeNeck
+  - ColonialRepresentativeJumpsuit
+  - ColonialRepresentativeGloves
+  - ColonialRepresentativeBackpack
+  - ColonialRepresentativeOuterClothing
+  - ColonialRepresentativeBelt
+  - ColonialRepresentativeEars
+  - ContractorShoes
+  - ContractorFace
+  - ColonialRepresentativeGlasses
+  - ColonialRepresentativePDA
+  - ColonialRepresentativeBackpackItems
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+#  - ContractorEncryptionKey # The CR has all comms
+  - ContractorHandItems
+  - NFSpeciesSpecific
+
+#region Engineering
+
+- type: roleLoadout
+  id: JobSiteManager
+  groups:
+  - SiteManagerHead
+  - SiteManagerNeck
+  - SiteManagerJumpsuit
+  - SiteManagerGloves
+  - SiteManagerBackpack
+  - SiteManagerOuterClothing
+  - SiteManagerShoes
+  - SiteManagerBelt
+  - SiteManagerEars
+  - ContractorFace
+  - SiteManagerGlasses
+  - SiteManagerPDA
+  - ContractorBackpackItems
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - ContractorHandItems
+  - NFSpeciesSpecific
+
+- type: roleLoadout
+  id: JobSiteWorker
+  groups:
+  - SiteWorkerHead
+  - SiteWorkerNeck
+  - SiteWorkerJumpsuit
+  - SiteWorkerGloves
+  - SiteWorkerBackpack
+  - SiteWorkerOuterClothing
+  - SiteWorkerShoes
+  - SiteWorkerFace
+  - SiteWorkerBelt
+  - SiteWorkerEars
+  - SiteWorkerGlasses
+  - SiteWorkerPDA
+  - ContractorBackpackItems
+  - ContractorBoxSurvival
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
   - ContractorHandItems
   - NFSpeciesSpecific
 

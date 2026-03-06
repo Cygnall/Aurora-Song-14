@@ -1,0 +1,20 @@
+# Site Worker Outer Clothing
+- type: loadout
+  id: SiteWorkerOuterVestHazard
+  equipment:
+    outerClothing: ClothingOuterVestHazard
+
+- type: loadout
+  id: SiteWorkerOuterWinterEngi
+  equipment:
+    outerClothing: ClothingOuterWinterEngi
+
+- type: loadout
+  id: SiteWorkerOuterWinterAtmos
+  equipment:
+    outerClothing: ClothingOuterWinterAtmos
+
+- type: loadout
+  id: SiteWorkerOuterLabCoatScience
+  equipment:
+    outerClothing: ClothingOuterCoatLab

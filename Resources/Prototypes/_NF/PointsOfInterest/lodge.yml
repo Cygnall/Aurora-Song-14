@@ -35,7 +35,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Expeditionary Lodge'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Icons/Stations/mercenary.png # Aurora Song
+          iconPath: /Textures/_AS/Icons/Stations/placeholder-banner.png # Aurora Song's - placeholder POI disabled
           stationSubtext: 'frontier-lobby-exped-subtext'
           stationDescription: 'frontier-lobby-exped-description'
           lobbySortOrder: 3

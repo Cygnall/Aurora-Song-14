@@ -15,20 +15,27 @@
     LogProbeCartridge: 3
     ContrabandAppraisalTool: 10
     ClothingOuterArmorBasic: 3
+    ClothingOuterArmorBasicSlim: 3 # Aurora's Song - Added for variety
     NFMetalShield: 3
     NFShieldBallistic: 3
     NFClothingOuterArmorReflective: 3
     NFShieldReflective: 3
+    NFBaseClothingNeckHolsterThigh: 3
+    NFBaseClothingNeckSheathThigh: 3
+    ClothingBeltBandolier: 3 # Aurora's Song
 # Mercenary
     ClothingHeadBandMercenary: 3
     ClothingHeadHatBeretMercenary: 3
     ClothingEyesGlassesMercenary: 3
     ClothingUniformJumpsuitMercenary: 3
     ClothingUniformJumpskirtMercenary: 3
+    ASClothingNeckMantleMercenaryElite: 3
     ClothingOuterVestWebMercenary: 3
     ClothingOuterEVASuitMercenary: 4
     ClothingBeltMercenaryWebbing: 3
     ClothingShoesBootsMercenary: 3
+    ClothingOuterBioArmoredMercenary: 3
+    ClothingHeadHatHoodBioArmoredMercenray: 3
     ClothingBackpackMercenary: 3
     ClothingBackpackDuffelMercenary: 3
     ClothingBackpackSatchelMercenary: 3
@@ -82,10 +89,14 @@
     LogProbeCartridge: 4294967295 # Infinite
     ContrabandAppraisalTool: 4294967295 # Infinite
     ClothingOuterArmorBasic: 4294967295 # Infinite
+    ClothingOuterArmorBasicSlim: 4294967295 # Infinite | Aurora's Song - Added for variety
     NFMetalShield: 4294967295 # Infinite
     NFShieldBallistic: 4294967295 # Infinite
     NFClothingOuterArmorReflective: 4294967295 # Infinite
     NFShieldReflective: 4294967295 # Infinite
+    NFBaseClothingNeckHolsterThigh: 4294967295 # Infinite
+    NFBaseClothingNeckSheathThigh: 4294967295 # Infinite
+    ClothingBeltBandolier: 4294967295 # Infinite | Aurora's Song
 # Mercenary
     ClothingHeadBandMercenary: 4294967295 # Infinite
     ClothingHeadHatBeretMercenary: 4294967295 # Infinite
@@ -93,9 +104,12 @@
     ClothingUniformJumpsuitMercenary: 4294967295 # Infinite
     ClothingUniformJumpskirtMercenary: 4294967295 # Infinite
     ClothingOuterVestWebMercenary: 3
+    ASClothingNeckMantleMercenaryElite: 4294967295 # Infinite
     ClothingOuterEVASuitMercenary: 4294967295 # Infinite
     ClothingBeltMercenaryWebbing: 4294967295 # Infinite
     ClothingShoesBootsMercenary: 4294967295 # Infinite
+    ClothingOuterBioArmoredMercenary: 4294967295 # Infinite
+    ClothingHeadHatHoodBioArmoredMercenray: 4294967295 # Infinite
     ClothingBackpackMercenary: 3
     ClothingBackpackDuffelMercenary: 3
     ClothingBackpackSatchelMercenary: 3

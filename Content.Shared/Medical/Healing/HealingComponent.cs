@@ -43,13 +43,13 @@ public sealed partial class HealingComponent : Component
     /// How long it takes to apply the damage.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float Delay = 3f;
+    public float Delay = 2f; // Aurora change: 3>2
 
     /// <summary>
     /// Delay multiplier when healing yourself.
     /// </summary>
     [DataField, AutoNetworkedField]
-    public float SelfHealPenaltyMultiplier = 3f;
+    public float SelfHealPenaltyMultiplier = 2f; // Aurora change 3>2
 
     /// <summary>
     /// Sound played on healing begin.

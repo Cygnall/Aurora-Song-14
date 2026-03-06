@@ -81,8 +81,8 @@
 - type: entity
   id: ComputerShipyardNfsd
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, ComputerShipyardBase]
-  name: SLE shipyard console
-  description: Used to buy SLE patrol vessels.
+  name: NFSD shipyard console
+  description: Used to buy NFSD patrol vessels.
   components:
   - type: Sprite
     sprite: _NF/Structures/Machines/computers.rsi
@@ -102,7 +102,7 @@
       enum.ShipyardConsoleUiKey.Security:
         type: ShipyardConsoleBoundUserInterface
   - type: ShipyardConsole
-    shipyardChannel: Sle # Aurora Song - Changed from Nfsd to Sle (Sector Law Enforcement)
+    shipyardChannel: Sle
     newAccessLevels: [Captain, Security, Brig]
 
 - type: entity

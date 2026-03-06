@@ -1,0 +1,42 @@
+- type: entity
+  id: ASWeaponRifleMarksmanHZ-3-3-M
+  parent: [ ASBaseWeaponRifleMarksmanChamber30, ASBaseWeaponFrameRifleMarksmanAuroraGunsmith ]
+  name: HZ-3-3-M "Jackhammer"
+  description: |-
+    This rifle rehashes an old design, a battle-tested workhorse with many scars. Marked for the Colonial Armed Forces.
+  components: &jackhammerComponents
+  - type: Gun
+    minAngle: 2
+    maxAngle: 7
+    angleDecay: 6
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Rifles/mjackhammer.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Rifles/mjackhammer.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 3
+    zeroVisible: true
+  - type: NFWeaponDetails
+    class: weapon-details-manufacturer-hzi
+
+- type: entity
+  id: ASWeaponRifleMarksmanHZ-3-3-C
+  parent: ASWeaponRifleMarksmanHZ-3-3-M
+  name: HZ-3-3-C "Jackhammer"
+  description: |-
+    This rifle rehashes an old design, a battle-tested workhorse with many scars. Marked for the SLE Commissioner.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Rifles/cjackhammer.rsi
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Rifles/cjackhammer.rsi
+
+- type: entity
+  id: ASWeaponRifleMarksmanHZ-3-3-MOverpressure
+  parent: [ ASBaseWeaponRifleMarksmanChamber30Overpressure, ASBaseWeaponFrameRifleMarksmanAuroraGunsmith ]
+  name: HZ-3-3-M "Jackhammer"
+  description: |-
+    This rifle rehashes an old design, a battle-tested workhorse with many scars. Marked for the Colonial Armed Forces.
+  suffix: Overpressure
+  components: *jackhammerComponents

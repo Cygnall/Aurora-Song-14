@@ -1,0 +1,59 @@
+- type: job
+  id: Rookie
+  name: job-name-rookie
+  description: job-description-rookie
+  playTimeTracker: JobSecurityCadet
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 21600 # 6 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 64800 # 18 hours
+      inverted: true # Leave slots open for newer, less confident players.
+  startingGear: RookieGear
+  icon: JobIconRookie
+  supervisors: job-supervisors-rookie
+  weight: 70
+  displayWeight: 10
+  canBeAntag: false
+  accessGroups:
+  - CadetNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: RookieGear
+  equipment:
+    pocket1: ASWeaponPistolMk58SLessLethal
+    pocket2: BookSecurity
+  storage:
+    back:
+    - Flash
+    - NFMagazineHighCapacityPistol35
+    - NFMagazineHighCapacityPistol35Rubber
+    - FrontierUplinkCoin10
+  licenses:
+  - LicenseContrabandHandling
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+
+- type: chameleonOutfit
+  id: RookieChameleonOutfit
+  job: Rookie
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretBrown
+    mask: ASClothingMaskGasSLE
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterArmorSLE
+    neck: ASClothingNeckSLEBadgeRookie
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLEDarkBlue
+    shoes: ASClothingShoesBootsSLEDarkBlueFilled
+
+

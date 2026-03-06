@@ -1,0 +1,48 @@
+- type: vendingMachineInventory
+  id: ASPTechSLEInventory
+  startingInventory:
+    ASRookiePDA: 10
+    ASOfficerPDA: 10
+    ASCorpsmanPDA: 10
+    ASDetectivePDA: 10
+    ASSergeantPDA: 10
+    ASLieutenantPDA: 10
+    ASClothingHeadsetSLENavyCommon: 4294967295 #infinite
+    ASClothingHeadsetSLECobaltCommon: 4294967295 #infinite
+    ASClothingHeadsetSLEOrangeCommon: 4294967295 #infinite
+    NFPrisonerPDA: 4294967295 #infinite
+    NFPrisonerIDCard: 4294967295 #infinite
+    ClothingHeadsetPrison: 4294967295 #infinite
+    ASRubberStampPal: 3
+    RubberStampApproved: 4294967295 #Infinite
+    RubberStampDenied: 4294967295 #Infinite
+    Pen: 4294967295 #Infinite
+    BoxPaper: 4
+    BoxPaperOffice: 4
+    BoxPaperCaptainsThoughts: 4
+    BoxEnvelope: 4
+    ASBoxFolderSLEForms: 3
+    ASBoxFolderSLEFormsNavy: 3
+    BoxFolderGreen: 3
+    BoxFolderRed: 3
+    HandLabeler: 4294967295 #Infinite
+    EncryptionKeyNfsd: 4294967295 #Infinite
+    EncryptionKeyCommand: 5
+    ASClothingOuterCoatSLEFormal: 3
+    ASClothingOuterCoatSLEFormalCommissioner: 3
+    ASClothingOuterCoatSLELongCoat: 3
+    ASClothingNeckCloakCommissioner: 3
+    ASClothingNeckMantleCommissioner: 3
+    ASClothingNeckPublicAffairsLiaisonBadge: 10
+    ASClothingNeckSLEBadgeRookie: 10
+    ASClothingNeckSLEBadgeOfficer: 10
+    ASClothingNeckSLEBadgeCorpsman: 10
+    ASClothingNeckSLEBadgeDetective: 10
+    ASClothingNeckSLEBadgeSergeant: 10
+    ASClothingNeckSLEBadgeLieutenant: 10
+    ASClothingNeckSLEBadgeCommissioner: 3
+    ASClothingMaskGasSLECommissioner: 3
+    AccessConfigurator: 2
+  contrabandInventory:
+    BalloonNT: 2
+    LuxuryPen: 1

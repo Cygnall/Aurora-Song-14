@@ -55,7 +55,7 @@
   components:
   - type: Sprite
     layers:
-    - state: dispenser_sr
+    - state: dispenser_cr
   - type: DepartmentBonusDispensationMachine
     targetDepartment: Aurora # Aurora Song - Changed from Frontier to Aurora
     allocationRate: 0.1

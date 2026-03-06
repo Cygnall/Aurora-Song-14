@@ -27,16 +27,16 @@
   - LoadoutSpeciesVoxNitrogen
 
 # Forced EVA
-- type: loadoutGroup
+- type: loadoutGroup # Aurora's Song - prototype switched SLE as fallback, unused
   id: NfsdForcedOuterClothing
   name: loadout-group-contractor-outerclothing
   minLimit: 1
   maxLimit: 1
   hidden: true
   loadouts:
-  - NfsdForcedClothingOuterEVASuitNfsd
+  - SLEForcedClothingOuterEVASuitSLE
   fallbacks:
-  - NfsdForcedClothingOuterEVASuitNfsd
+  - SLEForcedClothingOuterEVASuitSLE
 
 - type: loadoutGroup
   id: NFPirateForcedOuterClothing

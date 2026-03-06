@@ -55,6 +55,7 @@
         whitelist:
           tags:
           - Sidearm
+          - Knife # Aurora's Song - added knife to whitelist
         insertOnInteract: true
   - type: Appearance
   - type: ItemMapper # DeltaV - adjust for DeltaV sprites.
@@ -71,6 +72,10 @@
         whitelist:
           tags:
           - Sidearm
+      knife: # Aurora's Song - add knife sprite mapping
+        whitelist:
+          tags:
+          - Knife
     sprite: _DV/Clothing/Belt/belt_overlay.rsi
   - type: ContainerContainer
     containers:
@@ -89,13 +94,15 @@
     slots:
       holster:
         name: clothing-belt-sidearm
-        priority: -1 # always the first thing out
+        priority: 4 # higher number is higher priority
         whitelist:
           tags:
           - Sidearm
+          - Knife # Aurora's Song - added knife to whitelist
         insertOnInteract: true
       medkit:
         name: clothing-belt-medkit
+        priority: 3
         whitelist:
           tags:
           - Medkit
@@ -119,6 +126,10 @@
         whitelist:
           tags:
           - Medkit
+      knife: # Aurora's Song - add knife sprite mapping
+        whitelist:
+          tags:
+          - Knife
     sprite: _DV/Clothing/Belt/belt_overlay.rsi
   - type: ContainerContainer
     containers:

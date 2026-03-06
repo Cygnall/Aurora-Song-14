@@ -3,6 +3,7 @@
   name: job-name-contractor
   description: job-description-contractor
   playTimeTracker: JobPassenger
+  startingGear: ContractorGear # Aurora's Song - Added default gear
   icon: "JobIconContractor"
   supervisors: job-supervisors-hire
   displayWeight: 40 # Top
@@ -12,6 +13,12 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+
+- type: startingGear # Aurora's Song - Added to default grant Contractors encryption keys
+  id: ContractorGear
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
 
 # Interview variant
 - type: job

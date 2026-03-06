@@ -1,0 +1,10 @@
+- type: entity
+  id: ASCrateWoodenGraveBagFill
+  parent: CrateWoodenGrave
+  name: grave
+  suffix: Filled, Ring Bag
+  description: Someone died here...
+  components:
+  - type: StorageFill
+    contents:
+      - id: ASClothingBackpackSatchelSmugglerUnanchoredGraveFill

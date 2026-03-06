@@ -1,0 +1,16 @@
+- type: entity
+  id: BaseColcommContraband
+  parent: BaseC2ContrabandUnredeemable
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ ColonialCommand ]
+
+# multiple departments restricted contraband
+- type: entity
+  id: BaseColcommCommandContraband
+  parent: BaseC2ContrabandUnredeemable
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ ColonialCommand, Command ]

@@ -5,8 +5,9 @@
   description: Cold pillow, guaranteed.
   components:
   - type: Sprite
+    noRot: true # Aurora's Song - Make the sprites like the upstream cryosleep pod
     sprite: _NF/Structures/Machines/cryopod.rsi
-    snapCardinals: true # Frontier
+    # snapCardinals: true # Frontier -> Aurora's Song - Comment out for sprite change
     layers:
     - state: closed
   - type: Physics
@@ -29,6 +30,11 @@
   - type: ContainerContainer
     containers:
       body_container: !type:ContainerSlot
+  # Start Aurora's Song - Make the sprites like the upstream cryosleep pod
+  - type: Rotatable
+  - type: Transform
+    noRot: false
+  # End Aurora's Song
 
 # If cryopods get deleted, this one is considered as a safe fallback.
 - type: entity

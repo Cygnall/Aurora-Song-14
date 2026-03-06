@@ -1,5 +1,4 @@
-# Aurora Song - SLE EVA Locker Fills
-
+#region Locker
 - type: entity
   parent: [ASLockerBaseSecure, LockerEvacRepair]
   id: ASLockerEVASLE
@@ -9,7 +8,10 @@
     stateBaseClosed: sle
     stateDoorOpen: sle_open
     stateDoorClosed: sle_door
+  - type: AccessReader
+    access: [ [ "Security" ] ]
 
+#region Fills
 - type: entity
   parent: ASLockerEVASLE
   id: ASLockerEVASLEFilled
@@ -26,7 +28,6 @@
       - id: GasAnalyzer
       - id: HolofanProjector
 
-# Aurora Song - SLE Wall EVA Locker Filled
 - type: entity
   parent: ASLockerWallEVAColorSLE
   id: ASLockerWallEVAColorSLEFilled
@@ -38,8 +39,3 @@
     - id: ASJetpackSLEFilled
     - id: ClothingShoesBootsMag
     - id: DoubleEmergencyTankO2N2EqualFilled
-
-# Alias for backward compatibility with maps
-- type: entity
-  parent: ASLockerWallEVAColorSLEFilled
-  id: ASLockerWallEVASLEFilled

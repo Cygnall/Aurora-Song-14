@@ -1,0 +1,23 @@
+#region SLE
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterSLEPinpointer
+  name: "Leave your pinpointers!"
+  description: The SLE Department reminds Officers to leave their pinpointers here, along the side of this hallway! Remember to pinpointer your ID! A tracked Officer is a safe Officer!
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_sle_pinpointer
+
+#region Aurora
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterAuroraSector
+  name: "Come to Aurora"
+  description: Out on the fringes of space, you can make a name for yourself. Be part of the settlement of untamed worlds, and stake your claim on your own little piece of the universe. Come to Aurora.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_aurora

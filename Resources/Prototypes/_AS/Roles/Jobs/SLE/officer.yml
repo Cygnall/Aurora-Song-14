@@ -1,0 +1,60 @@
+- type: job
+  id: Officer
+  name: job-name-officer
+  description: job-description-officer
+  playTimeTracker: JobSecurityOfficer
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 hours
+    - !type:RoleTimeRequirement # Aurora Song
+      role: JobSecurityCadet
+      time: 10800 # 3 hours
+#  alternateRequirementSets: # Aurora Song - Remove alt playtime reqs, you should be trained for this role as a Rookie.
+#    longerPlaytimeLessSec:
+#    - !type:OverallPlaytimeRequirement
+#      time: 360000 # 100 hours
+  startingGear: OfficerGear
+  icon: JobIconOfficer
+  supervisors: job-supervisors-sergeant
+  weight: 130
+  displayWeight: 40
+  canBeAntag: false
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: OfficerGear
+  equipment:
+    pocket1: ASWeaponPistolMk58SLessLethal
+  storage:
+    back:
+    - Flash
+    - NFMagazineHighCapacityPistol35Overpressure
+    - NFMagazineHighCapacityPistol35Rubber
+    - FrontierUplinkCoin10
+  licenses:
+  - LicenseContrabandHandling
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+
+- type: chameleonOutfit
+  id: OfficerChameleonOutfit
+  job: Officer
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretBrown
+    mask: ASClothingMaskGasSLE
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterArmorSLE
+    neck: ASClothingNeckSLEBadgeOfficer
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLEDarkBlue
+    shoes: ASClothingShoesBootsSLEDarkBlueFilled
+

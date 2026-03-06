@@ -12,16 +12,16 @@
       - state: pacified_zone
   - type: PacifiedZoneGenerator
     radius: 10
-    immuneRoles:
-      - Bailiff
-      - Brigmedic
-      - Cadet
-      - Deputy
-      - NFDetective
-      - SeniorOfficer
-      - Sheriff
+    immuneRoles: # Aurora's Song - Switched NFSD to SLE roles
+      - Lieutenant
+      - Corpsman
+      - Rookie
+      - Officer
+      - ASDetective
+      - Sergeant
+      - Commissioner
       - SecurityGuard
-      - StationRepresentative
+      - ColonialRepresentative # Aurora's Song - switched StationRepresentative to ColonialRepresentative
       - StationTrafficController
 
 - type: entity

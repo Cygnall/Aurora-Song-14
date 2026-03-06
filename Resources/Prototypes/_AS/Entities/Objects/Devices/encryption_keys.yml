@@ -1,0 +1,59 @@
+- type: entity
+  parent: [EncryptionKey, RecyclableItemDeviceTiny]
+  id: EncryptionKeyShipboard
+  name: shipboard encryption key
+  description: An encryption key for the shipboard channel. Limited to a 60 meters range.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Shipboard
+    defaultChannel: Shipboard
+  - type: Item
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gray
+    - state: ship_label
+
+- type: entity
+  parent: [EncryptionKey, BaseColcommCommandContraband]
+  id: EncryptionKeyColCom
+  name: colonial command encryption key
+  categories: [ DoNotMap ]
+  description: An encryption key used by ColComm employees.
+  components:
+  - type: EncryptionKey
+    channels:
+    - ColCom
+    defaultChannel: ColCom
+  - type: Item
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_gold
+    - state: as_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeySiteManager
+  name: site manager encryption key
+  categories: [ DoNotMap ]
+  description: An encryption key for coordinating site management.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Common
+    - Engineering
+    - Science
+    - Greeting
+    - Command
+    defaultChannel: Common
+  - type: Item
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: site_manager_label

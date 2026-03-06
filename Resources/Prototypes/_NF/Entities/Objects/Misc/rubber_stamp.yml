@@ -1,4 +1,4 @@
-- type: entity
+﻿- type: entity
   name: station representative's rubber stamp
   parent: [RubberStampHop, BaseCommandContraband]
   id: RubberStampSr
@@ -26,7 +26,7 @@
     state: stamp-stc
 
 - type: entity
-  name: Commissioner's rubber stamp
+  name: sheriff's rubber stamp
   parent: [RubberStampBase, BaseCommandContraband]
   id: RubberStampSheriff
   categories: [ DoNotMap ]
@@ -95,7 +95,7 @@
     state: stamp-doc
 
 - type: entity
-  name: Lieutenant's rubber stamp
+  name: bailiff's rubber stamp
   parent: RubberStampBase
   id: RubberStampBailiff
   categories: [ DoNotMap ]

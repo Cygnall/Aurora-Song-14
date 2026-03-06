@@ -61,7 +61,7 @@
 - type: entity
   parent: ClothingBackpackDuffelNfsdBrown
   id: ClothingBackpackDuffelNfsdEmpBundle
-  name: SLE Lake EMP bundle
+  name: NFSD Lake EMP bundle
   description: "An old repainted China-Lake grenade launcher bundled with 10 rounds of EMP."
   components:
   - type: StorageFill
@@ -225,7 +225,7 @@
 - type: entity
   parent: [ ClothingBackpackDuffelNfsdBrown, StorageFillEVASuitNfsd ]
   id: ClothingBackpackDuffelEVABundleNfsd
-  name: SLE EVA bundle
+  name: NFSD EVA bundle
   suffix: Filled
 
 - type: entity

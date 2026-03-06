@@ -1,14 +1,14 @@
 - type: entity
   id: HolosignNfsd
   parent: HolosignWetFloor
-  name: SLE holographic barrier
+  name: NFSD holographic barrier
   description: A barrier of hard light that blocks movement, but pretty weak.
   components:
     - type: Physics
       bodyType: Static
       canCollide: true
     - type: Sprite
-      sprite: _NF/Structures/Holo/nfsd.rsi
+      sprite: _AS/Structures/Holo/sle.rsi
       state: icon
     - type: Fixtures
       fixtures:

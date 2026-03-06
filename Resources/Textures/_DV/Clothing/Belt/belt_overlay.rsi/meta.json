@@ -2,6 +2,9 @@
     "version": 1,
     "license": "CC0-1.0",
     "copyright": "Original work by TJohnson.",
+	"extra_copyright": [
+    "Resprites and recolors for NFSD to SLE by Vandanna/ Cygnall (discord/ github)"
+    ],
     "size": {
         "x": 32,
         "y": 32
@@ -30,6 +33,27 @@
         },
         {
             "name": "medkit"
+        },
+        {
+            "name": "knife"
+        },
+        {
+            "name": "slp_rig"
+        },
+        {
+            "name": "baton_rig"
+        },
+        {
+            "name": "medkit_rig"
+        },
+        {
+            "name": "knife_rig"
+        },
+        {
+            "name": "slp_beltalt"
+        },
+        {
+            "name": "baton_beltalt"
         }
     ]
 }

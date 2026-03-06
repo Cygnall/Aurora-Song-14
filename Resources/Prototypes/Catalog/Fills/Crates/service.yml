@@ -214,7 +214,7 @@
       - id: BookMedicalReferenceBook
       - id: BookHowToSurvive
       - id: BookChemicalCompendium
-      - id: NFHyperlinkBookSpaceLaw # Frontier: BookSpaceLaw<NFHyperlinkBookSpaceLaw
+      - id: ASHyperlinkBookSpaceLaw # Aurora's Song: BookSpaceLaw<ASHyperlinkBookSpaceLaw
 
 - type: entity
   id: CrateServiceSodaDispenser

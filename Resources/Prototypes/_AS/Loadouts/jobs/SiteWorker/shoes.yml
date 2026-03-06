@@ -1,0 +1,30 @@
+# Site Worker Shoes
+- type: loadout
+  id: SiteWorkerShoesBootsWork
+  equipment:
+    shoes: ClothingShoesBootsWork
+
+- type: loadout
+  id: SiteWorkerShoesColorBlack
+  equipment:
+    shoes: ClothingShoesColorBlack
+
+- type: loadout
+  id: SiteWorkerShoesColorBrown
+  equipment:
+    shoes: ClothingShoesColorBrown
+
+- type: loadout
+  id: SiteWorkerShoesBootsWinterEngi
+  equipment:
+    shoes: ClothingShoesBootsWinterEngi
+
+- type: loadout
+  id: SiteWorkerShoesBootsWinterAtmos
+  equipment:
+    shoes: ClothingShoesBootsWinterAtmos
+
+- type: loadout
+  id: SiteWorkerShoesColorWhite
+  equipment:
+    shoes: ClothingShoesColorWhite

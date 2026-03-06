@@ -1,0 +1,18 @@
+- type: loadout
+  id: SLEWebbing
+  name: SLE webbing (filled)
+  equipment:
+    belt: ASClothingBeltSLEWebbingFilled
+
+- type: loadout
+  id: SLEBelt
+  name: SLE belt (filled)
+  equipment:
+    belt: ASClothingBeltSLEFilled
+
+# Corpsman
+- type: loadout
+  id: CorpsmanClothingBeltCorpsmanWebbing
+  name: corpsman webbing (filled)
+  equipment:
+    belt: ASClothingBeltSLEWebbingCorpsmanFilled

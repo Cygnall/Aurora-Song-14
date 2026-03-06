@@ -29,7 +29,133 @@
       tags:
       - ExchangeUplink
 
+- type: listing
+  id: UplinkMilitarySurplusHardsuit
+  name: uplink-exchange-military-surplus-hardsuit-name
+  description: uplink-exchange-military-surplus-hardsuit-desc
+  productEntity: ClothingOuterHardsuitMilitarySurplus
+  cost:
+    ExchangeCoin: 30
+  categories:
+  - UplinkExchangeHardsuits
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
+- type: listing
+  id: UplinkSWATSurplusHardsuit
+  name: uplink-exchange-swat-surplus-hardsuit-name
+  description: uplink-exchange-swat-surplus-hardsuit-desc
+  productEntity: ClothingOuterHardsuitMilitarySurplusSWAT
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi, state: icon-swat }
+  cost:
+    ExchangeCoin: 30
+  categories:
+  - UplinkExchangeHardsuits
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
+- type: listing
+  id: UplinkHAZMATSurplusHardsuit
+  name: uplink-exchange-hazmat-surplus-hardsuit-name
+  description: uplink-exchange-hazmat-surplus-hardsuit-desc
+  productEntity: ClothingOuterHardsuitMilitarySurplusHAZMAT
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi, state: icon-hazmat }
+  cost:
+    ExchangeCoin: 30
+  categories:
+  - UplinkExchangeHardsuits
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
+- type: listing
+  id: UplinkRiotSurplusHardsuit
+  name: uplink-exchange-riot-surplus-hardsuit-name
+  description: uplink-exchange-riot-surplus-hardsuit-desc
+  productEntity: ClothingOuterHardsuitMilitarySurplusRiot
+  icon: { sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi, state: icon-riot }
+  cost:
+    ExchangeCoin: 30
+  categories:
+  - UplinkExchangeHardsuits
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
+# Armor
+- type: listing
+  id: UplinkFortArmor
+  name:  uplink-exchange-fort-armor-name
+  description: uplink-exchange-fort-armor-desc
+  productEntity: ASClothingOuterArmorFort
+  cost:
+    ExchangeCoin: 10
+  categories:
+  - UplinkExchangeArmor
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
+- type: listing
+  id: UplinkFortHelmet
+  name:  uplink-exchange-fort-helmet-name
+  description: uplink-exchange-fort-helmet-desc
+  productEntity: ASClothingHeadHelmetFort
+  cost:
+    ExchangeCoin: 5
+  categories:
+  - UplinkExchangeArmor
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
 # Weapons
+- type: listing
+  id: UplinkExchangeAP4C
+  name:  uplink-exchange-ap4c-name
+  description: uplink-exchange-ap4c-desc
+  productEntity: ASWeaponSubMachineGunAP4C
+  icon: { sprite: _AS/Objects/Weapons/Guns/SMGs/ap4c.rsi, state: icon }
+  cost:
+    ExchangeCoin: 15
+  categories:
+  - UplinkExchangeWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
+- type: listing
+  id: UplinkExchangeMk32
+  name:  uplink-exchange-mk32-name
+  description: uplink-exchange-mk32-desc
+  productEntity: ASWeaponPistolUniversal
+  icon: { sprite: _AS/Objects/Weapons/Guns/Pistols/universal.rsi, state: icon }
+  cost:
+    ExchangeCoin: 10
+  categories:
+  - UplinkExchangeWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - ExchangeUplink
+
 #- type: listing
 #  id: UplinkMercenaryWeaponSurpLecter
 #  name:  uplink-mercenary-rifle1-name

@@ -1,0 +1,15 @@
+- type: loadout
+  id: CommissionerClothingOuterCommissioner
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ASClothingOuterCoatSLEFormalCommissioner
+
+- type: loadout
+  id: CommissionerClothingOuterArmorBulletproof
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ClothingOuterArmorBulletproof

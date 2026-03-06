@@ -1,0 +1,20 @@
+# Site Manager Heads
+- type: loadout
+  id: SiteManagerHatHardhatWhite
+  equipment:
+    head: ClothingHeadHatHardhatWhite
+
+- type: loadout
+  id: SiteManagerHatHardhatArmored
+  equipment:
+    head: ClothingHeadHatHardhatArmored
+
+- type: loadout
+  id: SiteManagerHatBeretEngineering
+  equipment:
+    head: ClothingHeadHatBeretEngineering
+
+- type: loadout
+  id: SiteManagerHatBeretRD
+  equipment:
+    head: ClothingHeadHatBeretRND

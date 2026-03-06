@@ -1,0 +1,26 @@
+- type: loadout
+  id: ColonialRepresentativeClothingHeadHatColonialRepresentativeCap
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 0
+  equipment:
+    head: ASClothingHeadHatColonialRepresentativeCap
+
+- type: loadout
+  id: ColonialRepresentativeClothingHeadHatColonialRepresentativeBeret
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 0
+  equipment:
+    head: ASClothingHeadHatColonialRepresentativeBeret
+
+- type: loadout
+  id: ColonialRepresentativeClothingHeadHatColonialRepresentativeBeretBig
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 0
+  equipment:
+    head: ASClothingHeadHatColonialRepresentativeBeretBig

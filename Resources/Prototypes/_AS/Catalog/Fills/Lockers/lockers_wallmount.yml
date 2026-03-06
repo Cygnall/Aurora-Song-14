@@ -1,4 +1,62 @@
-﻿- type: entityTable
+﻿#region Service
+- type: entity
+  id: ShelfKitchenKitchenware
+  parent: ShelfKitchen
+  name: kitchen shelf
+  suffix: Utensils, Aurora
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: ASStorageFillGearKitchenware
+
+- type: entity
+  id: ShelfRWoodChefDrip
+  parent: ShelfRWood
+  name: sturdy wood shelf
+  suffix: Drip, Aurora
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: ASStorageFillGearChefDrip
+
+- type: entity
+  id: ShelfBarJars
+  parent: ShelfBar
+  name: bar shelf
+  suffix: Jars, Aurora
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: ASStorageFillGearBarJars
+
+- type: entity
+  id: ShelfBarChampagne
+  parent: ShelfBar
+  name: bar shelf
+  suffix: Champagne, Aurora
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: ASStorageFillGearBarChampagne
+
+- type: entity
+  id: ShelfWallFreezerWhiteGlassware
+  parent: ShelfWallFreezerWhite
+  name: wall freezer
+  suffix: Glassware, Aurora
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: ASStorageFillGearFreezerGlassware
+#endregion Service
+
+#region Chemistry
+- type: entityTable
   id: ASWallLockerFillChemistry
   table: !type:AllSelector
     children:
@@ -9,3 +67,4 @@
     - id: PlasmaChemistryVial
     - id: HandLabeler
     - id: ClothingEyesGlassesChemical
+#endregion Chemistry

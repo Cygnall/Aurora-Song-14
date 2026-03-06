@@ -40,6 +40,12 @@
       uiWindowPos: 1,2
       strippingWindowPos: 1,1
       displayName: Mask
+    - name: neckalt # Aurora's Song - second neck slot
+      slotTexture: neck
+      slotFlags: NECK
+      uiWindowPos: 2,2
+      strippingWindowPos: 2,1
+      displayName: Neck 2
     - name: eyes
       slotTexture: glasses
       slotFlags: EYES

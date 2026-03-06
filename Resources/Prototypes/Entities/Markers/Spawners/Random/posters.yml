@@ -192,4 +192,7 @@
       - NFPosterLegitHaveYouSeenThisEgg
       - NFPosterLegitGunTurnIn
         # End Frontier
+        # Aurora's Song
+      - ASPosterAuroraSector
+        # End Aurora's Song
     chance: 1

@@ -1,0 +1,79 @@
+- type: job
+  id: Commissioner
+  name: job-name-commissioner
+  description: job-description-commissioner
+  playTimeTracker: JobHeadOfSecurity
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 129600 # 36 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 86400 # 24 hours
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 21600 # 6 hours
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 43200 # 12 hours
+  alternateRequirementSets:
+    longerPlaytimeLessSec:
+    - !type:OverallPlaytimeRequirement
+      time: 1080000 # 300 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 64800 # 18 hours
+    - !type:RoleTimeRequirement
+      role: JobWarden
+      time: 21600 # 6 hours
+  whitelisted: true
+  startingGear: CommissionerGear
+  alwaysUseSpawner: true
+  icon: JobIconCommissioner
+  requireAdminNotify: true
+  supervisors: job-supervisors-colcom
+  weight: 180
+  displayWeight: 70
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+      - type: PreventShipyardTitleOverwrite
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: CommissionerGear
+  equipment:
+    pocket1: ASWeaponPistolMk58SLessLethal
+    pocket2: NFWeaponEnergyPistolLaserX01Multiphase
+  storage:
+    back:
+    - ASTechFabSLEFlatpack
+    - Multitool
+    - ASHoloprojectorSLE # Aurora Song - Changed from HoloprojectorNfsd to use SLE prototype
+    - DoorRemoteNfsd
+    - BaseSecurityUplinkRadioSheriff
+    - ASRubberStampCommissioner # Aurora Song - Changed from RubberStampSheriff to use SLE prototype
+  licenses:
+  - LicenseContrabandHandling
+
+- type: chameleonOutfit
+  id: CommissionerChameleonOutfit
+  job: Commissioner
+  hasMindShield: true
+  equipment:
+    head: ASClothingHeadHatSLECampaign
+    mask: ASClothingMaskGasSLECommissioner
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterCoatSLEFormalCommissioner
+    neck: ASClothingNeckSLEBadgeCommissioner
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLELightBlue
+    shoes: ASClothingShoesBootsSLEDarkBlue
+

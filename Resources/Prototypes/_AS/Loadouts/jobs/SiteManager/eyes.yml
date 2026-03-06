@@ -1,0 +1,5 @@
+# Site Manager Glasses
+- type: loadout
+  id: SiteManagerGlassesMeson
+  equipment:
+    eyes: ClothingEyesGlassesMeson

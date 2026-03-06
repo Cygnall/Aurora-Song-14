@@ -1,0 +1,9 @@
+- type: entity
+  parent: AirAlarm
+  id: ASAirAlarmPanic
+  name: air alarm
+  suffix: Panic
+  components:
+  - type: AirAlarm
+    currentMode: Panic
+    autoMode: false

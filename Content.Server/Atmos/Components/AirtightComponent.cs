@@ -58,5 +58,11 @@ namespace Content.Server.Atmos.Components
         /// <inheritdoc cref="CurrentAirBlockedDirection"/>
         [Access(Other = AccessPermissions.ReadWriteExecute)]
         public AtmosDirection AirBlockedDirection => (AtmosDirection)CurrentAirBlockedDirection;
+
+        /// <summary>
+        /// Aurora's Song - If true, the airtight component requires power to function
+        /// </summary>
+        [DataField]
+        public bool RequiresPower { get; set; } = false;
     }
 }

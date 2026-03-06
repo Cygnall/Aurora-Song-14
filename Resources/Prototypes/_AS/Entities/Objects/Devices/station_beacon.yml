@@ -1,0 +1,111 @@
+#region Utilities
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraLockers
+  suffix: Lockers
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-lockers
+    color: "#0077C1"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraStaffDock
+  suffix: Staff Dock
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-staff-dock
+    color: "#0077C1"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraShowers
+  suffix: Showers
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-showers
+    color: "#0077C1"
+
+#region SLE
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraSLE
+  suffix: SLE
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-sle
+    color: "#687ea6"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraSLEBrig
+  suffix: SLE, Brig
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-sle-brig
+    color: "#687ea6"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraSLEGenPop
+  suffix: SLE, GenPop
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-genpop
+    color: "#687ea6"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraSLEBullpen
+  suffix: SLE, Bullpen
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-sle-bullpen
+    color: "#687ea6"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraSLEEvidence
+  suffix: SLE, Evidence
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-sle-evidence
+    color: "#687ea6"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraSLECommissioner
+  suffix: SLE, Commissioner
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-sle-commissioner
+    color: "#687ea6"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraSLEPrisonerLockers
+  suffix: SLE, Prisoner's Lockers
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-sle-prisoner-lockers
+    color: "#687ea6"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraSLEInterrogation
+  suffix: SLE, Interrogation
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-sle-interrogation
+    color: "#687ea6"
+
+- type: entity
+  parent: DefaultStationBeacon
+  id: DefaultStationBeaconAuroraSLEFiringRange
+  suffix: SLE, Firing Range
+  components:
+  - type: NavMapBeacon
+    defaultText: station-beacon-sle-firing-range
+    color: "#687ea6"

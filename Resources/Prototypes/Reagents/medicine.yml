@@ -781,7 +781,7 @@
       # Medium-large quantities can hurt you instead,
       # but still technically stop your bleeding.
       - !type:ModifyBleedAmount
-        amount: -1.5
+        amount: -3 # Aurora: Buff tranex
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold

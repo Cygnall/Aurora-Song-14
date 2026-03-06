@@ -14,7 +14,7 @@
       - EncryptionKeyCommon
   - type: Headset
   - type: EncryptionKeyHolder
-    keySlots: 10 # Frontier 4<10
+    keySlots: 12 # Frontier 4<10; Aurora's Song - 10<12
   - type: Sprite
     state: icon
   - type: Item

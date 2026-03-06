@@ -1,0 +1,5 @@
+# Site Manager Ears
+- type: loadout
+  id: SiteManagerHeadsetAltEngineering
+  equipment:
+    ears: ClothingHeadsetAltEngineering

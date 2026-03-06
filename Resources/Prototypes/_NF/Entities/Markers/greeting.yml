@@ -1,5 +1,5 @@
 # A bogus entity to ensure we have something that can send off radio messages
 - type: entity
   id: GreetingRadioSource
-  name: NT Onboarding
+  name: Col. Onboarding # Aurora's Song - changed NT Onboarding to AS
   categories: [HideSpawnMenu]

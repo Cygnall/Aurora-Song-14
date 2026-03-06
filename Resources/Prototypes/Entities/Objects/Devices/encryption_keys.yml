@@ -17,8 +17,9 @@
 - type: entity
   parent: [EncryptionKey, RecyclableItemDeviceTiny] # Frontier: added RecyclableItemDeviceTiny
   id: EncryptionKeyCommon
-  name: common encryption key
-  description: An encryption key used by anyone.
+  # Monolith - Change common to broadband, and description (logged by Aurora's Song)
+  name: broadband encryption key
+  description: An encryption key for the broadband channel. # Limited to a 10,000 meters range. # CS - increase range 3000 => 10000
   components:
   - type: EncryptionKey
     channels:
@@ -88,6 +89,7 @@
     - Supply
     - Traffic # Frontier
     - Greeting # Frontier
+    - Shipboard # Aurora's Song - Shipboard channel, incredibly short range
     defaultChannel: Command
   - type: Sprite
     layers:

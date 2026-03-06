@@ -1,0 +1,5 @@
+# Site Worker PDA
+- type: loadout
+  id: SiteWorkerPDA
+  equipment:
+    id: ASSiteWorkerPDA

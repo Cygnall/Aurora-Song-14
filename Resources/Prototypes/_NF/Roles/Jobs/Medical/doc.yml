@@ -11,7 +11,7 @@
   alwaysUseSpawner: true
   icon: "JobIconDoc"
   requireAdminNotify: true
-  supervisors: job-supervisors-centcom
+  supervisors: job-supervisors-colcom # Aurora's Song - Switched to ColCom from CentCom
   weight: 170
   displayWeight: 55 # Second from the top
   canBeAntag: false
@@ -42,9 +42,12 @@
     - BoxFolderMedicalDoctor
     - RubberStampDoc
     - ShipVoucherAuroraMedic # Aurora - Medic voucher for free ship
-    - ASWeaponPistolMk58SLELessLethal # Aurora - LTL sidearm for DoC
+    - ASWeaponPistolMk58SLessLethal # Aurora - LTL sidearm for DoC
   licenses:
   - LicenseContrabandHandling
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
 
 - type: chameleonOutfit
   id: DirectorOfCareChameleonOutfit

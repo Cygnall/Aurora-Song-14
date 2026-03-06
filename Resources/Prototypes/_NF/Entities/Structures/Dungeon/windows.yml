@@ -67,6 +67,21 @@
   - type: Icon
     sprite: _NF/Structures/Windows/reinforced_window.rsi
 
+# Shuttle window
+- type: entity
+  id: ShuttleWindowDungeon
+  parent:
+  - WindowMurkyDungeon
+  - ShuttleWindow
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: Sprite
+      drawdepth: WallTops
+      sprite: Structures/Windows/shuttle_window.rsi
+      color: "#ffd38c"
+    - type: Icon
+      sprite: Structures/Windows/shuttle_window.rsi
+
 # Mining window
 - type: entity
   id: MiningWindowDungeon

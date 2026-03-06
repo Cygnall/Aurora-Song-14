@@ -1,0 +1,58 @@
+- type: job
+  id: PublicAffairsLiaison
+  name: job-name-pal
+  description: job-description-public-affairs-liaison
+  playTimeTracker: JobPublicAffairsLiaison
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 21600 # 6 hours
+#  alternateRequirementSets: # Aurora Song - Remove alt playtime reqs, you should be trained for this role as a Rookie.
+#    longerPlaytimeLessSec:
+#    - !type:OverallPlaytimeRequirement
+#      time: 360000 # 100 hours
+  startingGear: PublicAffairGear
+  icon: "JobIconPublicAffairsLiaison"
+  supervisors: job-supervisors-rookie
+  canBeAntag: false
+  weight: 105
+  displayWeight: 16
+  accessGroups:
+  - CadetNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: PublicAffairGear
+  equipment:
+    pocket1: ASHyperlinkBookSpaceLaw # Aurora's Song - Changed to AS version
+    pocket2: BoxFolderClipboardPal
+  storage:
+    back:
+    - Flash
+    - BoxFolderPalNavy # Aurora's Song - Changed to AS version
+    - ASBoxFolderSLEForms # Aurora's Song - Changed to AS version
+    - ASRubberStampPal # Aurora's Song - Changed to AS version
+  licenses:
+  - LicenseContrabandHandling
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+
+- type: chameleonOutfit
+  id: PublicAffairsLiaisonChameleonOutfit
+  job: PublicAffairsLiaison
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBowlerHat
+    eyes: ClothingEyesGlassesCheapSunglasses
+    mask: ClothingMaskBreath
+    neck: ClothingNeckLawyerbadge
+    outerClothing: ClothingOuterWinterColorBlack
+    gloves: ClothingHandsGlovesColorBlack

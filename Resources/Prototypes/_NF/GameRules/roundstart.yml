@@ -29,9 +29,6 @@
     - id: BluespaceWizardFederationScout
     - id: BluespaceBloodMoon
     - id: BluespaceMercenaryFTLCrash # Aurora
-    - id: ASBluespaceTriageEvent # Aurora Song - Ambulances spawn full of patients needing healing
-    - id: ASBluespacePrisonRiot  # Aurora Song - Capture mission: Quell prison riot (cuff and secure prisoners aboard)
-    - id: ASBluespaceSmugglerInterception  # Aurora Song - Confiscation mission: Smuggler ship interception (eliminate crew, remove contraband)
 
 - type: entity
   id: BluespaceDungeonEventScheduler
@@ -53,6 +50,7 @@
     - id: BluespaceDungeonChromite
     - id: BluespaceDungeonSnow
     - id: BluespaceDungeonCave
+    - id: BluespaceDungeonCaveZombie
 
 - type: entity
   id: BluespaceSalvageEventScheduler

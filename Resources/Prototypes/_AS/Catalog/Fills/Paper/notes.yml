@@ -1,0 +1,58 @@
+- type: entity # Creator: turtleofmen (Jesper)
+  id: PaperOfficeCAVInstructions
+  name: CAV room lever instructions
+  parent: PaperOffice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2
+      [bold]COLD-AIR-VOX (CAV) ROOM LEVER INSTRUCTION[/bold]
+
+      [bold]Left:[/bold] COLD ATMOSPHERE - The rooms' air will be replaced with air at a sub-zero temperature. (The longer this one is enabled the longer it will take to heat the room back up afterwards - to a point)
+
+      [bold]Middle:[/bold] REGULAR ATMOSPHERE - Regular air mix will replace whatever mix is in the room gradually.
+
+      [bold]Right:[/bold] VOX ATMOSPHERE- Oxygen will be drained, replaced gradually with nitrogen.
+
+      This room has been outfitted with a robust, adjustable HVAC system suited for any race. Each change will take at least a minute to fully complete the transition - with varying times depending on certain conditions.
+
+      Signed,
+      JH, Atmospheric Consultant
+
+- type: entity # Creator: vandanna
+  id: PaperOfficeEmergencyDoorNote
+  name: Emergency Notice
+  parent: PaperOffice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |
+      [bold]EMERGENCY DOOR[/bold]
+
+      In case of an emergency, hit the [bold]bolt toggle button[/bold] next to this door, and exit through into the port-side corridor.
+
+      This is to provide safe egress if the beach area becomes depressurized.
+
+      - Auroran Colonial Safety Commission
+
+- type: entity # Creator: turtleofmen (Jesper)
+  id: PaperOfficeScrubbingSystemGuide
+  name: Scrubbing System Guide
+  parent: PaperOffice
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2
+      [bold]SCRUBBING SYSTEM GUIDE[/bold]
+
+      This system is designed to replace the standard method of spacing for scientific research, as it encouraged not to waste any gases when they cannot be easily replaced.
+
+      [bold]System function:[/bold]
+      It may look complicated, but it is simple: Any gas that enters the chamber will be indiscriminately removed, cooled, and sent to this station's waste system.
+
+      At this point these gases are filtered into their respective storage containers, assuming the resident atmospheric technicians have set up waste.
+
+      It does, naturally, require power to operate, though it should be operational from the start. Should you wish, for whatever reason, to change the scrubber settings, you can do so at the air alarm in the airlock entrance to the chamber.
+
+      Signed,
+      JH, Atmospheric Consultant

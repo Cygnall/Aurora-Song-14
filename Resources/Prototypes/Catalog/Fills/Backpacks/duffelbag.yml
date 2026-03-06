@@ -91,7 +91,7 @@
   - type: StorageFill
     contents:
       - id: NFWeaponLightMachineGunL6 # Frontier: WeaponLightMachineGunL6<NFWeaponLightMachineGunL6
-      - id: NFMagazineBoxRifle30 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20
+      - id: NFMagazineBoxRifle30 # Frontier: MagazineLightRifleBox<NFMagazineBoxRifle20 Aurora Song: NFMagazineBoxRifle30>NFMagazineBoxRifle20
 
 - type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
@@ -115,7 +115,7 @@
   components:
   - type: StorageFill
     contents:
-      - id: NFWeaponRifleAssaultM90 # Aurora: NFWeaponRifleAssaultM90GrenadeLauncher<NFWeaponRifleAssaultM90
+      - id: NFWeaponRifleAssaultM90 # Aurora: NFWeaponRifleAssaultM90GrenadeLauncher>NFWeaponRifleAssaultM90
       - id: NFMagazineRifle20 # Frontier: MagazineRifle<NFMagazineRifle20
         amount: 4
       - id: NFMagazineRifle20Overpressure

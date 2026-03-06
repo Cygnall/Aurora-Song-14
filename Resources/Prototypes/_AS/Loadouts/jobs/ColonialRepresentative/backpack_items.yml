@@ -1,0 +1,7 @@
+#T0
+- type: loadout
+  id: ColonialRepresentativeASPouchColonialRepresentative
+  price: 0
+  storage:
+    back:
+    - ASPouchCR

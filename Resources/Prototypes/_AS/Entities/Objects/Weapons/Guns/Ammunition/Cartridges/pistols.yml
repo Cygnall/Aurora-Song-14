@@ -4,7 +4,7 @@
   parent: NFBaseCartridgePistol35
   components:
   - type: CartridgeAmmo
-    proto: ASCartridgePistol35Funny
+    proto: ASBulletPistol35Funny
   - type: Sprite
     layers:
       - state: base

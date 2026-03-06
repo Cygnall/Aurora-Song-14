@@ -1,0 +1,10 @@
+- type: entity
+  name: ColComm pen
+  parent: [BaseAdvancedPen, BaseCentcommCommandContraband] # Frontier: Added BaseCentcommCommandContraband, removed BaseCentcommContraband.
+  id: PenColcom
+  description: This pen is instilled with the trust of the Auroran Government.
+  components:
+  - type: Sprite
+    state: pen_colcom
+  - type: Item
+    heldPrefix: pen_colcom

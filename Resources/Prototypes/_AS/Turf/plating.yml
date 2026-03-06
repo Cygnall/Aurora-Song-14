@@ -1,0 +1,13 @@
+- type: tile
+  id: LatticeRadarInvisble
+  parent: Lattice
+  name: radar invisible lattice
+  sprite: /Textures/Tiles/lattice.png
+  invisible: true
+
+- type: tile
+  id: InvisibleTile
+  parent: Lattice
+  name: true invisible tile
+  sprite: /Textures/_AS/Tiles/invisible.png
+  invisible: true

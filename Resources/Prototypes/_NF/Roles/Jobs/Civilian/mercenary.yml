@@ -6,7 +6,7 @@
   requirements:
     - !type:OverallPlaytimeRequirement
       time: 108000
-  startingGear: MercenaryGear
+  startingGear: MercenaryGear # Aurora's Song - Added default gear
   icon: "JobIconMercenary"
   supervisors: job-supervisors-hire
   weight: 3 # Prioritize station & department jobs
@@ -19,6 +19,16 @@
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
+
+- type: startingGear # Aurora's Song - Added to grant Mercenaries MercCoins, their CHL, and encryption keys by default
+  id: MercenaryGear
+  equipment:
+    pocket1: MercCoin15
+  licenses:
+  - LicenseContrabandHandling
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
 
 # Interview variant
 - type: job
@@ -45,13 +55,6 @@
   equipment:
     jumpsuit: ClothingUniformJumpsuitMercenary
     shoes: ClothingShoesBootsMercenary
-
-- type: startingGear
-  id: MercenaryGear
-  equipment:
-    pocket1: MercCoin15
-  licenses:
-  - LicenseContrabandHandling
 
 - type: chameleonOutfit
   id: MercenaryChameleonOutfit

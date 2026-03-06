@@ -39,12 +39,12 @@ public sealed class PiratePalletConsoleBoundUserInterface : BoundUserInterface
 
     private void OnAppraisal()
     {
-        SendMessage(new PiratePalletAppraiseMessage());
+        SendMessage(new ContrabandPalletAppraiseMessage()); // AS: Fix pirate console
     }
 
     private void OnSell()
     {
-        SendMessage(new PiratePalletSellMessage());
+        SendMessage(new ContrabandPalletSellMessage()); // AS: Fix pirate console
     }
 
     protected override void UpdateState(BoundUserInterfaceState state)

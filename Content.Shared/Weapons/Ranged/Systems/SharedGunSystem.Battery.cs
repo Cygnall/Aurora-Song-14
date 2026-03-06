@@ -1,6 +1,11 @@
 using Content.Shared.Examine;
+using Content.Shared.Projectiles;
+using Content.Shared.Weapons.Hitscan.Components;
+using Content.Shared.Damage.Events;
+using Content.Shared.Damage;
 using Content.Shared.Weapons.Ranged.Components;
 using Content.Shared.Weapons.Ranged.Events;
+using Robust.Shared.Prototypes;
 using Robust.Shared.GameStates;
 using Robust.Shared.Map;
 using Robust.Shared.Serialization;
@@ -51,6 +56,53 @@ public abstract partial class SharedGunSystem
     private void OnBatteryExamine(EntityUid uid, BatteryAmmoProviderComponent component, ExaminedEvent args)
     {
         args.PushMarkup(Loc.GetString("gun-battery-examine", ("color", AmmoExamineColor), ("count", component.Shots)));
+    }
+
+    private void OnBatteryDamageExamine<T>(Entity<T> entity, ref DamageExamineEvent args) where T : BatteryAmmoProviderComponent
+    {
+        var damageSpec = GetDamage(entity.Comp);
+
+        if (damageSpec == null)
+            return;
+
+        var damageType = entity.Comp switch
+        {
+            HitscanBatteryAmmoProviderComponent => Loc.GetString("damage-hitscan"),
+            ProjectileBatteryAmmoProviderComponent => Loc.GetString("damage-projectile"),
+            _ => throw new ArgumentOutOfRangeException(),
+        };
+
+        _damageExamine.AddDamageExamine(args.Message, Damageable.ApplyUniversalAllModifiers(damageSpec), damageType);
+    }
+
+    private DamageSpecifier? GetDamage(BatteryAmmoProviderComponent component)
+    {
+        if (component is ProjectileBatteryAmmoProviderComponent battery)
+        {
+            if (ProtoManager.Index<EntityPrototype>(battery.Prototype).Components
+                .TryGetValue(Factory.GetComponentName<ProjectileComponent>(), out var projectile))
+            {
+                var p = (ProjectileComponent) projectile.Component;
+
+                if (!p.Damage.Empty)
+                {
+                    return p.Damage * Damageable.UniversalProjectileDamageModifier;
+                }
+            }
+
+            return null;
+        }
+
+        if (component is HitscanBatteryAmmoProviderComponent hitscan)
+        {
+            var dmg = ProtoManager.Index(hitscan.HitscanEntityProto);
+            if (!dmg.TryGetComponent<HitscanBasicDamageComponent>(out var basicDamageComp, Factory))
+                return null;
+
+            return basicDamageComp.Damage * Damageable.UniversalHitscanDamageModifier;
+        }
+
+        return null;
     }
 
     private void OnBatteryTakeAmmo(EntityUid uid, BatteryAmmoProviderComponent component, TakeAmmoEvent args)
@@ -104,7 +156,8 @@ public abstract partial class SharedGunSystem
                 var ent = Spawn(proj.Prototype, coordinates);
                 return (ent, EnsureShootable(ent));
             case HitscanBatteryAmmoProviderComponent hitscan:
-                return (null, ProtoManager.Index<HitscanPrototype>(hitscan.Prototype));
+                var hitscanEnt = Spawn(hitscan.HitscanEntityProto);
+                return (hitscanEnt, EnsureShootable(hitscanEnt));
             default:
                 throw new ArgumentOutOfRangeException();
         }

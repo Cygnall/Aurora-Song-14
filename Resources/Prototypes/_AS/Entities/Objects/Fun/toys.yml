@@ -1,0 +1,11 @@
+- type: entity
+  parent: BasePlushieCat
+  id: ShanaPlushie
+  name: familiar white cat plushie
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Fun/staffplushie.rsi
+    state: shanamctavish
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: PlushieCatWhite

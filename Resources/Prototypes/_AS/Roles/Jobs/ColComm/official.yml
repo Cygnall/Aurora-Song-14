@@ -1,0 +1,43 @@
+- type: job
+  id: ColonialCommandOfficial
+  name: job-name-colcomoff
+  description: job-description-colcomoff
+  playTimeTracker: JobColonialCommandOfficial
+  setPreference: false
+  startingGear: ColcomGear
+  icon: "JobIconColonialCommandOfficial"
+  supervisors: job-supervisors-hos
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  access:
+  - ColonialCommand
+  - CentralCommand
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, DeathRattleImplantColcomm ]
+
+- type: startingGear # Need to give custom beret, gloves, and carapace current ones are just parented to CR variants
+  id: ColcomGear
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitColcommFormal
+    shoes: ClothingShoesBootsCombatFilled
+    head: ASClothingHeadHatColonialOfficialBeretBig
+    eyes: ClothingEyesGlassesCommand
+    gloves: ASClothingHandsGlovesColonialOfficial
+    outerClothing: ASClothingOuterArmorColonialOfficialCarapace
+    id: ColcomPDA
+    ears: ClothingHeadsetAltColCom
+    belt: NFWeaponPistolN1984 # Frontier
+    pocket1: BoxFolderBlack
+    pocket2: PenColcom
+
+
+# Add later
+#- type: chameleonOutfit
+#  id: CentralCommandOfficialOutfit
+#  job: CentralCommandOfficial
+#  hasMindShield: true
+#  equipment:
+#    neck: ClothingNeckScarfStripedCentcom
+#    mask: ClothingMaskGasCentcom

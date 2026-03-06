@@ -10,6 +10,7 @@
     NFSpeedLoaderPistol45Rubber: 5
   # Ammo boxes
     NFAmmunitionBoxPistol35Rubber: 10
+    ASAmmunitionBoxPistol40Rubber: 10 # Aurora's Song
     NFAmmunitionBoxPistol45Rubber: 10
     NFAmmunitionBoxShellShotgunBeanbag: 8
     NFAmmunitionBoxRifle20Rubber: 8
@@ -33,6 +34,7 @@
     NFSpeedLoaderPistol45Rubber: 4294967295
   # Ammo boxes
     NFAmmunitionBoxPistol35Rubber: 4294967295
+    ASAmmunitionBoxPistol40Rubber: 4294967295 # Aurora's Song
     NFAmmunitionBoxPistol45Rubber: 4294967295
     NFAmmunitionBoxRifle20Rubber: 4294967295
     NFAmmunitionBoxRifle30Rubber: 4294967295

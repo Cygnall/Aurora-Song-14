@@ -14,6 +14,7 @@
     - BluespaceSalvageEventScheduler
     - SmugglingEventScheduler
     - NFRoundstartVariation
+    - BluespaceMedicalEventScheduler # Aurora
 
 - type: gamePreset
   id: NFPirate
@@ -31,6 +32,7 @@
     - BluespaceSalvageEventScheduler
     - SmugglingEventScheduler
     - NFRoundstartVariation
+    - BluespaceMedicalEventScheduler # Aurors
 
 # Test preset: intended to be close enough to upstream stuff but should be
 #              quicker to setup and teardown than adventure/pirate

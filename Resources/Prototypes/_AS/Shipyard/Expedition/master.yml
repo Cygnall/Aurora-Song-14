@@ -1,0 +1,44 @@
+﻿# Author Info
+# GitHub: AssignedGod
+# Discord: AssignedGod
+
+# Maintainer Info
+# GitHub: ???
+# Discord: ???
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Master
+  parent: BaseVessel
+  name: CS Master
+  description: A combination salvage/engineering shuttle designed with the capability to jump planetside to scrap surface settlements.
+  price: 110000 #Appraises for 58k, scale this BEAST up to 110k I'm INSANE
+  category: Large
+  group: Expedition
+  shuttlePath: /Maps/_AS/Shuttles/Expedition/master.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  engine:
+  - AME
+
+- type: gameMap
+  id: Master
+  mapName: 'CS Master'
+  mapPath: /Maps/_AS/Shuttles/Expedition/master.yml
+  minPlayers: 0
+  stations:
+    Master:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Master {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

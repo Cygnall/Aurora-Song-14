@@ -1,4 +1,4 @@
-#SLE Hardsuits
+#region SLE Hardsuits
 - type: entity
   parent: ASClothingOuterHardsuitBaseSle
   id: ClothingOuterHardsuitSleCombat
@@ -18,15 +18,166 @@
       coefficients:
         Blunt: 0.5
         Slash: 0.6
-        Piercing: 0.6
+        Piercing: 0.55 #buff 40% to 45% piercing resist
         Heat: 0.60
         Radiation: 0.50
         Caustic: 0.7
   - type: ClothingSpeedModifier
     walkModifier: 0.85
-    sprintModifier: 0.75
+    sprintModifier: 0.85 #increased speed from .75 to .85, this suit can be painful to wear because of the speed
 
-#Mercenary Hardsuit - Aurora - Moved from NF namespace to AS, as it is so substantially changed it is effectively a new item
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatRookie
+  name: SLE combat suit
+  suffix: Rookie
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-rke
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-rke
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-rke-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-rke-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatOfficer
+  name: SLE combat suit
+  suffix: Officer
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-off
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-off
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-off-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-off-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatSergeant
+  name: SLE combat suit
+  suffix: Sergeant
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-sgt
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-sgt
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-sgt-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-sgt-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatLieutenant
+  name: SLE combat suit
+  suffix: Lieutenant
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-lt
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-lt
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-lt-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-lt-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatCorpsman
+  name: SLE combat suit
+  suffix: Corpsman
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-crp
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-crp
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-crp-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-crp-vox
+
+- type: entity
+  parent: ClothingOuterHardsuitSleCombat
+  id: ClothingOuterHardsuitSleCombatCommissioner
+  name: SLE combat suit
+  suffix: Commissioner
+  description: A heavily armored SLE suit. Space proof, with thick armor plating at the expense of mobility.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    layers:
+    - state: icon
+    - state: icon-com
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/sle_combat.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-com
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-com-harpy
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-com-vox
+
+#region Mercenary
+#Aurora - Moved from NF namespace to AS, as it is so substantially changed it is effectively a new item
 - type: entity
   parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
   id: ClothingOuterHardsuitMercenary # Aurora: stats were of luxury mining hardsuit, adjusted to be more effective as a rare find or mid-game tool, with even a late-game usage-case. Available from mercennary vendors, and as rare loot.
@@ -68,21 +219,51 @@
     sprite: _AS/Clothing/OuterClothing/Hardsuits/private_security.rsi
   - type: Clothing
     sprite: _AS/Clothing/OuterClothing/Hardsuits/private_security.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-unshaded-vox
+        shader: unshaded
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-unshaded-harpy
+        shader: unshaded
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitPrivateSecurity
 
-#- type: entity # Commented out for now, no sprites yet made
-#  parent: ClothingOuterHardsuitMercenary
-#  id: ClothingOuterHardsuitMedicArmored # stats are of merc hardsuit, but for Outpost medic use, with different appearance
-#  name: medic armored hardsuit
-#  description: An armored vacuum suit employed by outpost medics, for protection during S&R operations.
-#  components:
-#  - type: Sprite
-#    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
-#  - type: Clothing
-#    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
-#  - type: ToggleableClothing
-#    clothingPrototype: ClothingHeadHelmetHardsuitMedicArmored
+#region Medical
+
+- type: entity
+  parent: ClothingOuterHardsuitMercenary
+  id: ClothingOuterHardsuitMedicArmored # stats are of merc hardsuit, but for Outpost medic use, with different appearance
+  name: medic armored hardsuit
+  description: An armored vacuum suit employed by outpost medics, for protection during S&R operations.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/medic_armored.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-unshaded-vox
+        shader: unshaded
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-unshaded-harpy
+        shader: unshaded
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMedicArmored
+
+#region Syndicate
 
 - type: entity
   parent:
@@ -98,6 +279,7 @@
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/syndiemedic.rsi
 
+#region Wizard
 
 - type: entity
   parent:
@@ -126,3 +308,831 @@
     sprite: Clothing/OuterClothing/Hardsuits/wizard.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/wizard.rsi
+
+# region Military Surplus
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMilitarySurplus
+  name: military surplus hardsuit
+  description: Auroran MilSurp hardsuit, with advanced features removed. Designed for heavy combat engagements.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_surplus.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_surplus.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: equipped-OUTERCLOTHING
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: Item
+    size: Huge
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplus
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMilitarySurplusSWAT
+  name: SWAT surplus hardsuit
+  description: Auroran heavy police hardsuit. Worn by the Police on the Colony Aurora. Designed for heavy combat engagements.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#D0D9D0"
+    - state: icon-plate
+      color: "#486875"
+    - state: icon-detail
+      color: "#8DA694"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#D0D9D0"
+      - state: inhand-left-plate
+        color: "#486875"
+      - state: inhand-left-detail
+        color: "#8DA694"
+      right:
+      - state: inhand-right-fabric
+        color: "#D0D9D0"
+      - state: inhand-right-plate
+        color: "#486875"
+      - state: inhand-right-detail
+        color: "#8DA694"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#D0D9D0"
+      - state: plate
+        color: "#486875"
+      - state: detail
+        color: "#8DA694"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#D0D9D0"
+      - state: plate-harpy
+        color: "#486875"
+      - state: detail-harpy
+        color: "#8DA694"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#D0D9D0"
+      - state: plate-vox
+        color: "#486875"
+      - state: detail-vox
+        color: "#8DA694"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplusSWAT
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMilitarySurplusHAZMAT
+  name: HAZMAT surplus hardsuit
+  description: Auroran heavy hazardous materials hardsuit. Worn by the security for hazardous material handling units on the Colony Aurora. Designed for heavy combat engagements.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#FF8C00"
+    - state: icon-plate
+      color: "#FFD400"
+    - state: icon-detail
+      color: "#010203"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#FF8C00"
+      - state: inhand-left-plate
+        color: "#FFD400"
+      - state: inhand-left-detail
+        color: "#010203"
+      right:
+      - state: inhand-right-fabric
+        color: "#FF8C00"
+      - state: inhand-right-plate
+        color: "#FFD400"
+      - state: inhand-right-detail
+        color: "#010203"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#FF8C00"
+      - state: plate
+        color: "#FFD400"
+      - state: detail
+        color: "#010203"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#FF8C00"
+      - state: plate-harpy
+        color: "#FFD400"
+      - state: detail-harpy
+        color: "#010203"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#FF8C00"
+      - state: plate-vox
+        color: "#FFD400"
+      - state: detail-vox
+        color: "#010203"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplusHAZMAT
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMilitarySurplusRiot
+  name: Riot control surplus hardsuit
+  description: Auroran heavy riot control hardsuit. Worn by the police for riot control operations on the Colony Aurora. Designed for heavy combat engagements.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#BFC6C4"
+    - state: icon-plate
+      color: "#161A1E"
+    - state: icon-detail
+      color: "#7F393A"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#BFC6C4"
+      - state: inhand-left-plate
+        color: "#161A1E"
+      - state: inhand-left-detail
+        color: "#7F393A"
+      right:
+      - state: inhand-right-fabric
+        color: "#BFC6C4"
+      - state: inhand-right-plate
+        color: "#161A1E"
+      - state: inhand-right-detail
+        color: "#7F393A"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#BFC6C4"
+      - state: plate
+        color: "#161A1E"
+      - state: detail
+        color: "#7F393A"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#BFC6C4"
+      - state: plate-harpy
+        color: "#161A1E"
+      - state: detail-harpy
+        color: "#7F393A"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#BFC6C4"
+      - state: plate-vox
+        color: "#161A1E"
+      - state: detail-vox
+        color: "#7F393A"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplusRiot
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+#region Military
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMilitaryDark
+  name: military dark hardsuit
+  description: Auroran military hardsuit. Worn by the Colonial Armed Forces. Designed for heavy combat engagements.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#CFCFCF"
+    - state: icon-plate
+      color: "#252525"
+    - state: icon-detail
+      color: "#545454"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#CFCFCF"
+      - state: inhand-left-plate
+        color: "#252525"
+      - state: inhand-left-detail
+        color: "#545454"
+      right:
+      - state: inhand-right-fabric
+        color: "#CFCFCF"
+      - state: inhand-right-plate
+        color: "#252525"
+      - state: inhand-right-detail
+        color: "#545454"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#CFCFCF"
+      - state: plate
+        color: "#252525"
+      - state: detail
+        color: "#545454"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#CFCFCF"
+      - state: plate-harpy
+        color: "#252525"
+      - state: detail-harpy
+        color: "#545454"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#CFCFCF"
+      - state: plate-vox
+        color: "#252525"
+      - state: detail-vox
+        color: "#545454"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitaryDark
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseC2Contraband]
+  id: ClothingOuterHardsuitMilitaryRGB
+  name: military rgb hardsuit
+  description: Auroran Military hardsuit. Worn by the Colonial Armed Forces. Designed for heavy combat engagements. Taste the rainbow.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#FF0000"
+    - state: icon-plate
+      color: "#00FF00"
+    - state: icon-detail
+      color: "#0000FF"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#FF0000"
+      - state: inhand-left-plate
+        color: "#00FF00"
+      - state: inhand-left-detail
+        color: "#0000FF"
+      right:
+      - state: inhand-right-fabric
+        color: "#FF0000"
+      - state: inhand-right-plate
+        color: "#00FF00"
+      - state: inhand-right-detail
+        color: "#0000FF"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#FF0000"
+      - state: plate
+        color: "#00FF00"
+      - state: detail
+        color: "#0000FF"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#FF0000"
+      - state: plate-harpy
+        color: "#00FF00"
+      - state: detail-harpy
+        color: "#0000FF"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#FF0000"
+      - state: plate-vox
+        color: "#00FF00"
+      - state: detail-vox
+        color: "#0000FF"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
+        Heat: 0.5
+        Radiation: 0.5
+        Caustic: 0.5
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitarySurplus
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseColcommContraband]
+  id: ClothingOuterHardsuitMilitaryCAFLeader
+  name: CAF leader hardsuit
+  description: Auroran Military hardsuit. Worn by a CAF team leader. Designed for heavy combat engagements. Reinforced for durability and mobility. Leader colors.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#0F2854"
+    - state: icon-plate
+      color: "#4D4D4D"
+    - state: icon-detail
+      color: "#808080"
+    - state: icon-armband-right
+      color: "#ffbf00"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#0F2854"
+      - state: inhand-left-plate
+        color: "#4D4D4D"
+      - state: inhand-left-detail
+        color: "#808080"
+      right:
+      - state: inhand-right-fabric
+        color: "#0F2854"
+      - state: inhand-right-plate
+        color: "#4D4D4D"
+      - state: inhand-right-detail
+        color: "#808080"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#0F2854"
+      - state: plate
+        color: "#4D4D4D"
+      - state: detail
+        color: "#808080"
+      - state: armband-right
+        color: "#ffbf00"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#0F2854"
+      - state: plate-harpy
+        color: "#4D4D4D"
+      - state: detail-harpy
+        color: "#808080"
+      - state: icon-armband-right-harpy
+        color: "#ffbf00"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#0F2854"
+      - state: plate-vox
+        color: "#4D4D4D"
+      - state: detail-vox
+        color: "#808080"
+      - state: icon-armband-right-vox
+        color: "#ffbf00"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.35
+        Radiation: 0.35
+        Caustic: 0.35
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitaryCAF
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseColcommContraband]
+  id: ClothingOuterHardsuitMilitaryCAFTrooper
+  name: CAF trooper hardsuit
+  description: Auroran Military hardsuit. Worn by a CAF trooper. Designed for heavy combat engagements. Reinforced for durability and mobility. Trooper colors.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#0F2854"
+    - state: icon-plate
+      color: "#4D4D4D"
+    - state: icon-detail
+      color: "#808080"
+    - state: icon-armband-right
+      color: "#A1A1A1"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#0F2854"
+      - state: inhand-left-plate
+        color: "#4D4D4D"
+      - state: inhand-left-detail
+        color: "#808080"
+      right:
+      - state: inhand-right-fabric
+        color: "#0F2854"
+      - state: inhand-right-plate
+        color: "#4D4D4D"
+      - state: inhand-right-detail
+        color: "#808080"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#0F2854"
+      - state: plate
+        color: "#4D4D4D"
+      - state: detail
+        color: "#808080"
+      - state: armband-right
+        color: "#A1A1A1"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#0F2854"
+      - state: plate-harpy
+        color: "#4D4D4D"
+      - state: detail-harpy
+        color: "#808080"
+      - state: icon-armband-right-harpy
+        color: "#A1A1A1"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#0F2854"
+      - state: plate-vox
+        color: "#4D4D4D"
+      - state: detail-vox
+        color: "#808080"
+      - state: icon-armband-right-vox
+        color: "#A1A1A1"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.35
+        Radiation: 0.35
+        Caustic: 0.35
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitaryCAF
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseColcommContraband]
+  id: ClothingOuterHardsuitMilitaryCAFMedical
+  name: CAF medical hardsuit
+  description: Auroran Military hardsuit. Worn by a CAF team medic. Designed for heavy combat engagements. Reinforced for durability and mobility. Medical colors.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#0F2854"
+    - state: icon-plate
+      color: "#4D4D4D"
+    - state: icon-detail
+      color: "#808080"
+    - state: icon-armband-right
+      color: "#57b8f0"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#0F2854"
+      - state: inhand-left-plate
+        color: "#4D4D4D"
+      - state: inhand-left-detail
+        color: "#808080"
+      right:
+      - state: inhand-right-fabric
+        color: "#0F2854"
+      - state: inhand-right-plate
+        color: "#4D4D4D"
+      - state: inhand-right-detail
+        color: "#808080"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#0F2854"
+      - state: plate
+        color: "#4D4D4D"
+      - state: detail
+        color: "#808080"
+      - state: armband-right
+        color: "#57b8f0"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#0F2854"
+      - state: plate-harpy
+        color: "#4D4D4D"
+      - state: detail-harpy
+        color: "#808080"
+      - state: icon-armband-right-harpy
+        color: "#57b8f0"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#0F2854"
+      - state: plate-vox
+        color: "#4D4D4D"
+      - state: detail-vox
+        color: "#808080"
+      - state: icon-armband-right-vox
+        color: "#57b8f0"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.35
+        Radiation: 0.35
+        Caustic: 0.35
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitaryCAF
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon
+
+- type: entity
+  parent: [ClothingOuterHardsuitBaseNF, BaseColcommContraband]
+  id: ClothingOuterHardsuitMilitaryCAFEngineer
+  name: CAF engineer hardsuit
+  description: Auroran Military hardsuit. Worn by a CAF team engineer. Designed for heavy combat engagements. Reinforced for durability and mobility. Engineer colors.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    layers:
+    - state: icon-fabric
+      color: "#0F2854"
+    - state: icon-plate
+      color: "#4D4D4D"
+    - state: icon-detail
+      color: "#808080"
+    - state: icon-armband-right
+      color: "#ff733c"
+  - type: Item
+    size: Huge
+    inhandVisuals:
+      left:
+      - state: inhand-left-fabric
+        color: "#0F2854"
+      - state: inhand-left-plate
+        color: "#4D4D4D"
+      - state: inhand-left-detail
+        color: "#808080"
+      right:
+      - state: inhand-right-fabric
+        color: "#0F2854"
+      - state: inhand-right-plate
+        color: "#4D4D4D"
+      - state: inhand-right-detail
+        color: "#808080"
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Hardsuits/military_template.rsi
+    clothingVisuals:
+      outerClothing:
+      - state: fabric
+        color: "#0F2854"
+      - state: plate
+        color: "#4D4D4D"
+      - state: detail
+        color: "#808080"
+      - state: armband-right
+        color: "#ff733c"
+      outerClothing-harpy:
+      - state: fabric-harpy
+        color: "#0F2854"
+      - state: plate-harpy
+        color: "#4D4D4D"
+      - state: detail-harpy
+        color: "#808080"
+      - state: icon-armband-right-harpy
+        color: "#ff733c"
+      outerClothing-vox:
+      - state: fabric-vox
+        color: "#0F2854"
+      - state: plate-vox
+        color: "#4D4D4D"
+      - state: detail-vox
+        color: "#808080"
+      - state: icon-armband-right-vox
+        color: "#ff733c"
+  - type: PressureProtection
+    highPressureMultiplier: 0.05
+    lowPressureMultiplier: 1000
+  - type: ExplosionResistance
+    damageCoefficient: 0.5
+  - type: StaminaResistance
+    damageCoefficient: 0.75
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.35
+        Slash: 0.35
+        Piercing: 0.35
+        Heat: 0.35
+        Radiation: 0.35
+        Caustic: 0.35
+  - type: ClothingSpeedModifier
+    walkModifier: 0.9
+    sprintModifier: 0.9
+  - type: HeldSpeedModifier
+  - type: ToggleableClothing
+    clothingPrototype: ClothingHeadHelmetHardsuitMilitaryCAF
+  - type: Tag
+    tags:
+    - Hardsuit
+    - WhitelistChameleon

@@ -1,0 +1,34 @@
+- type: loadout
+  id: CommissionerClothingUniformJumpsuitCommissioner
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitSLETacGray
+
+- type: loadout
+  id: CommissionerClothingUniformJumpsuitSLEShort
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitSLEShortCommissioner
+
+- type: loadout
+  id: CommissionerClothingUniformJumpskirtSLEShort
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtSLEShortCommissioner
+
+- type: loadout
+  id: CommissionerClothingUniformJumpsuitSLE
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitSLECommissioner
+
+- type: loadout
+  id: CommissionerClothingUniformJumpskirtSLE
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtSLECommissioner
+
+- type: loadout
+  id: CommissionerClothingUniformJumpsuitSLEClassic
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitSLEClassicCommissioner
+
+- type: loadout
+  id: CommissionerClothingUniformJumpskirtSLEClassic
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtSLEClassicCommissioner

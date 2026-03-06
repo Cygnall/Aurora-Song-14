@@ -1,0 +1,10 @@
+- type: loadout
+  id: SLEClothingEyesGlasses
+  equipment:
+    eyes: ASClothingEyesGlassesSLE
+
+# Corpsman
+- type: loadout
+  id: CorpsmanClothingEyesGlasses
+  equipment:
+    eyes: ASClothingEyesGlassesSLECorpsman

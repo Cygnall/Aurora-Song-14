@@ -154,11 +154,11 @@
   components:
   - type: Mail
     contents:
-    - id: ClothingOuterWizard
-    - id: ClothingHeadHatWizard
+    - id: ClothingOuterFakeWizard
+    - id: ClothingHeadHatFakeWizard
     - id: ClothingShoesWizard
     - id: RubberStampWizard
-    - id: WizardStaffMeleeBase
+    - id: FakeWizardStaff
       orGroup: Staff
       prob: 0.6
     - id: PonderingOrb
@@ -727,8 +727,8 @@
   components:
   - type: Mail
     contents:
-    - id: NFHyperlinkBookSpaceLaw
-    - id: HyperlinkBookNfsdSop
+    - id: ASHyperlinkBookSpaceLaw # Aurora's Song - Changed to AS version
+    - id: HyperlinkBookSLESop # Aurora's Song - Changed to AS version
     - id: PaperMailNFSpaceLaw
 
 # Frontier Mail (Pony Express?)

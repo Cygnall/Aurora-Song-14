@@ -32,6 +32,7 @@ public abstract class SharedSubdermalImplantSystem : EntitySystem
         SubscribeLocalEvent<ImplantedComponent, MobStateChangedEvent>(RelayToImplantEvent);
         SubscribeLocalEvent<ImplantedComponent, AfterInteractUsingEvent>(RelayToImplantEvent);
         SubscribeLocalEvent<ImplantedComponent, SuicideEvent>(RelayToImplantEvent);
+        SubscribeLocalEvent<ImplantedComponent, ReTriggerRattleImplantEvent>(RelayToImplantEvent); // Coyote
     }
 
     private void OnInsert(EntityUid uid, SubdermalImplantComponent component, EntGotInsertedIntoContainerMessage args)
@@ -218,4 +219,17 @@ public readonly struct ImplantImplantedEvent
         Implant = implant;
         Implanted = implanted;
     }
+}
+
+// Coyote
+/// <summary>
+/// Event used to re-trigger implant events, if needed.
+/// Raised on the implanted entity.
+/// </summary>
+public sealed class ReTriggerRattleImplantEvent(
+    EntityUid implanted,
+    MobState currentState) : EventArgs
+{
+    public readonly EntityUid Implanted = implanted;
+    public readonly MobState CurrentState = currentState;
 }

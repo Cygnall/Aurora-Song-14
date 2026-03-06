@@ -8113,7 +8113,7 @@ entities:
       rot: 3.141592653589793 rad
       pos: -1.9738367,12.096232
       parent: 1
-- proto: ASLockerSLEBrigmedic
+- proto: ASLockerSLECorpsman
   entities:
   - uid: 1195
     components:

@@ -1,0 +1,50 @@
+- type: entity # Aurora's Song - Not functionally a cigar, but used as such in practice
+  name: holocigar
+  parent: BaseItem
+  id: holocigar
+  description: "A small device using holodeck technology to emulate a cigar. Makes time fly by. "
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Consumable/Smokeables/Cigars/holocigar.rsi
+    layers:
+    - state: icon
+    - state: flame
+      visible: false
+      shader: unshaded
+      map: ["enum.ToggleableVisuals.Layer"]
+  - type: Clothing
+    sprite: _AS/Objects/Consumable/Smokeables/Cigars/holocigar.rsi
+    slots: [ mask ]
+  - type: GenericVisualizer
+    visuals:
+      enum.ToggleableVisuals.Enabled:
+        enum.ToggleableVisuals.Layer:
+         True: { visible: true }
+         False: { visible: false }
+  - type: Item
+    size: Tiny
+    sprite: _AS/Objects/Consumable/Smokeables/Cigars/holocigar.rsi
+  - type: ItemToggle
+    predictable: false
+    soundActivate:
+      path: /Audio/Items/match_strike.ogg
+      params:
+        variation: 0.125
+        volume: -5
+  - type: ItemToggleHot
+  - type: ToggleableVisuals
+    spriteLayer: flame_hand
+    clothingVisuals:
+      mask:
+      - state: "equipped-flame-MASK"
+        shader: unshaded
+    inhandVisuals:
+      left:
+      - state: "inhand-flame-left"
+        shader: unshaded
+      right:
+      - state: "inhand-flame-right"
+        shader: unshaded
+  - type: IgnitionSource
+    temperature: 700
+  - type: Appearance

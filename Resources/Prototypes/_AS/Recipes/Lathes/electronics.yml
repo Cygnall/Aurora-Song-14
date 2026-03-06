@@ -1,0 +1,16 @@
+#region Gyroscopes
+- type: latheRecipe
+  id: GyroscopeSLEMachineCircuitboard
+  parent: GyroscopeNfsdMachineCircuitboard
+  result: GyroscopeSLEMachineCircuitboard
+
+- type: latheRecipe
+  id: SmallGyroscopeSLEMachineCircuitboard
+  parent: SmallGyroscopeNfsdMachineCircuitboard
+  result: SmallGyroscopeSLEMachineCircuitboard
+
+#region Thrusters
+- type: latheRecipe
+  id: ThrusterSLEMachineCircuitboard
+  parent: ThrusterNfsdMachineCircuitboard
+  result: ThrusterSLEMachineCircuitboard

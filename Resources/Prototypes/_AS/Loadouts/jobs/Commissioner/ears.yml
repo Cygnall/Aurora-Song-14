@@ -1,0 +1,14 @@
+- type: loadout
+  id: CommissionerClothingHeadsetAltSLENavyCentcom
+  equipment:
+    ears: ASClothingHeadsetAltSLENavyCentcom
+
+- type: loadout
+  id: CommissionerClothingHeadsetAltSLECobaltCentcom
+  equipment:
+    ears: ASClothingHeadsetAltSLECobaltCentcom
+
+- type: loadout
+  id: CommissionerClothingHeadsetAltSLEOrangeCentcom
+  equipment:
+    ears: ASClothingHeadsetAltSLEOrangeCentcom

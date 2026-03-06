@@ -5,6 +5,9 @@
     "y": 32
   },
   "copyright": "Taken from tgstation, mercenary and pilot lockers are resprited armory locker by erhardsteinhauer (discord), janitor is by SungYandy, O2N2 locker by Tych0theSynth, FSB by dustylens(github), NFSD to SLE recolors done by chamomileteatime",
+  "extra_copyright": [
+        "Resprites and recolors for Aurora's Song by Vandanna/ Cygnall (discord/ github)"
+    ],
   "license": "CC-BY-SA-3.0",
   "states": [
     {
@@ -149,13 +152,13 @@
       "name": "sparking"
     },
     {
-      "name": "sr"
+      "name": "cr"
     },
     {
-      "name": "sr_open"
+      "name": "cr_open"
     },
     {
-      "name": "sr_door"
+      "name": "cr_door"
     },
     {
       "name": "o2n2"

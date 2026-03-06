@@ -88,3 +88,25 @@
     contents:
       - id: NFMagazineHighCapacityPistol35Overpressure
         amount: 4
+
+- type: entity # Aurora's Song - added for uplink
+  name: box of top-mounted smg (.35 pistol, rubber) magazines
+  parent: BoxMagazine
+  id: NFBoxMagazineSubMachineGunTopMounted35Rubber
+  description: A box full of top-mounted smg (.35 pistol, rubber) magazines.
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFMagazineSubMachineGunTopMounted35Rubber
+        amount: 4
+
+- type: entity # Aurora's Song - added for uplink
+  name: box of top-mounted smg (.35 pistol, overpressure) magazines
+  parent: BoxMagazine
+  id: NFBoxMagazineSubMachineGunTopMounted35Overpressure
+  description: A box full of top-mounted smg (.35 pistol, overpressure) magazines.
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFMagazineSubMachineGunTopMounted35Overpressure
+        amount: 4

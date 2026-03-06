@@ -1,0 +1,26 @@
+- type: loadout
+  id: ColonialRepresentativeForcedClothingOuterEVASuitColonialRepresentative
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: NFOuterSuitRequired
+  price: 0
+  equipment:
+    outerClothing: ASClothingOuterEVASuitColonialRepresentative
+
+- type: loadout
+  id: ColonialRepresentativeClothingOuterArmorColonialRepresentativeCarapace
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ASClothingOuterArmorColonialRepresentativeCarapace
+
+- type: loadout
+  id: ColonialRepresentativeClothingOuterJacketColonialRepresentative
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 0
+  equipment:
+    outerClothing: ASClothingOuterJacketColonialRepresentative

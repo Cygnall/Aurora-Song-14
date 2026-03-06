@@ -1,0 +1,19 @@
+- type: loadout
+  id: ASDetectiveClothingUniformJumpsuitDetective
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDetective
+
+- type: loadout
+  id: ASDetectiveClothingUniformJumpskirtDetective
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtDetective
+
+- type: loadout
+  id: ASDetectiveClothingUniformJumpsuitDetectiveGrey
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDetectiveGrey
+
+- type: loadout
+  id: ASDetectiveClothingUniformJumpskirtDetectiveGrey
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtDetectiveGrey

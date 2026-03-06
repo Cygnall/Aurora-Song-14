@@ -1,0 +1,42 @@
+#T1
+- type: loadout
+  id: SLEBoxSurvivalSLEOxygen
+  name: extended-oxygen survival box
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFOxygenBreather
+  storage:
+    back:
+    - NFBoxSurvivalExtended
+
+- type: loadout
+  id: SLEBoxSurvivalSLENitrogen
+  name: extended-nitrogen survival box
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFNitrogenBreather
+  storage:
+    back:
+    - NFBoxSurvivalExtendedNitrogen
+
+- type: loadout
+  id: SLEBoxSurvivalSLESheleg
+  name: extended-oxygen survival box
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFSheleg
+  storage:
+    back:
+    - NFBoxSurvivalExtendedSheleg
+
+# Begin Aurora Song
+- type: loadout
+  id: SLEBoxSurvivalSLEFeroxi
+  name: extended-water-vapor survival box
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: ASWaterVaporBreather
+  storage:
+    back:
+    - ASBoxSurvivalExtendedFeroxi
+# End Aurora Song

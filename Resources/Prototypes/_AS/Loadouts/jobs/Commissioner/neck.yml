@@ -1,0 +1,15 @@
+#T0
+- type: loadout
+  id: CommissionerClothingNeckMantleCommissioner
+  equipment:
+    neck: ASClothingNeckMantleCommissioner
+
+- type: loadout
+  id: CommissionerClothingNeckCloakCommissioner
+  equipment:
+    neck: ASClothingNeckCloakCommissioner
+
+- type: loadout
+  id: CommissionerClothingNeckSLEBadgeCommissioner
+  equipment:
+    neck: ASClothingNeckSLEBadgeCommissioner

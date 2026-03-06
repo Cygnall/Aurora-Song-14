@@ -1,1 +1,11 @@
 job-supervisors-doc = You answer to the Director of Care
+job-supervisors-lieutenant = the Lieutenant
+job-supervisors-rookie = all higher ranking SLE personnel
+job-supervisors-officer = the Sergeant and Lieutenant
+job-supervisors-asdetective = the Lieutenant
+job-supervisors-corpsman = the Lieutenant
+job-supervisors-commissioner = the Commissioner
+job-supervisors-colonial-representative = the Colonial Representative
+job-supervisors-site-manager = the Site Manager
+job-supervisors-site-worker = the Site Manager
+job-supervisors-colcom = Colonial Command

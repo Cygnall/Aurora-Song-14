@@ -1,0 +1,183 @@
+﻿
+- type: entity
+  parent: BaseLightbulb
+  name: blue led light bulb
+  id: BlueLedLightBulb
+  description: A power efficient light bulb.
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#0000FFFF"
+    lightEnergy: 1
+    lightRadius: 8
+    lightSoftness: 1
+    BurningTemperature: 350 #LEDs are colder than incandescent bulbs
+    PowerUse: 6 #LEDs are more power efficient than incandescent bulbs
+  - type: Tag
+    tags:
+    - LightBulb
+    - Trash
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 25
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors: #excess damage (nuke?). avoid computational cost of spawning entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Breakage" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseLightTube
+  name: blue led light tube
+  description: A high power high energy bulb.
+  id: BlueLedLightTube
+  components:
+  - type: LightBulb
+    color: "#0000FFFF"
+    lightEnergy: 1
+    lightRadius: 15
+    lightSoftness: 0.9
+    BurningTemperature: 350
+    PowerUse: 12
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 25
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors: #excess damage (nuke?). avoid computational cost of spawning entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Breakage" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+
+- type: entity
+  parent: BaseLightbulb
+  name: magenta led light bulb
+  id: MagentaLedLightBulb
+  description: A power efficient light bulb.
+  components:
+  - type: LightBulb
+    bulb: Bulb
+    color: "#FF00FF"
+    lightEnergy: 1
+    lightRadius: 8
+    lightSoftness: 1
+    BurningTemperature: 350 #LEDs are colder than incandescent bulbs
+    PowerUse: 6 #LEDs are more power efficient than incandescent bulbs
+  - type: Tag
+    tags:
+    - LightBulb
+    - Trash
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 25
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors: #excess damage (nuke?). avoid computational cost of spawning entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Breakage" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: BaseLightTube
+  name: magenta led light tube
+  description: A high power high energy bulb.
+  id: MagentaLedLightTube
+  components:
+  - type: LightBulb
+    color: "#FF00FF"
+    lightEnergy: 1
+    lightRadius: 15
+    lightSoftness: 0.9
+    BurningTemperature: 350
+    PowerUse: 12
+  - type: PhysicalComposition
+    materialComposition:
+      Glass: 25
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors: #excess damage (nuke?). avoid computational cost of spawning entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 5
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Breakage" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]

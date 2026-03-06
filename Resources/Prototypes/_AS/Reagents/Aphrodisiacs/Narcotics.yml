@@ -1,7 +1,7 @@
 - type: reagent
   id: ForceFemDrugs
   name: reagent-name-forcefem
-  group: Narcotics
+  group: Aphrodisiacs
   desc: reagent-desc-forcefem
   physicalDesc: reagent-physical-desc-girly
   flavor: cinnamon
@@ -26,6 +26,9 @@
         conditions:
           - !type:ReagentThreshold
             max: 30
+          - !type:Consent # Aurora Song
+            effectTypes:
+              - Aphrodisiacs
       - !type:PopupMessage # Overdose causes nausea and vomiting
         type: Local
         visualType: LargeCaution
@@ -39,14 +42,23 @@
         conditions:
           - !type:ReagentThreshold
             min: 30
+          - !type:Consent # Aurora Song
+            effectTypes:
+              - Aphrodisiacs
       - !type:Drunk
         conditions:
         - !type:ReagentThreshold
           min: 50
+        - !type:Consent # Aurora Song
+          effectTypes:
+            - Aphrodisiacs
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
           min: 35
+        - !type:Consent # Aurora Song
+          effectTypes:
+            - Aphrodisiacs
         damage:
           types:
             Poison: 0.01
@@ -54,6 +66,9 @@
         conditions:
         - !type:ReagentThreshold
           min: 50
+        - !type:Consent # Aurora Song
+          effectTypes:
+            - Aphrodisiacs
         probability: 0.05
       - !type:PopupMessage
         type: Local
@@ -64,11 +79,14 @@
         conditions:
           - !type:ReagentThreshold
             max: 0.1
+          - !type:Consent # Aurora Song
+            effectTypes:
+              - Aphrodisiacs
 
 - type: reagent
   id: MilkingDrugs
   name: reagent-name-milkdrug
-  group: Narcotics
+  group: Aphrodisiacs
   desc: reagent-desc-milkdrug
   physicalDesc: reagent-physical-desc-creamy
   flavor: milk
@@ -87,3 +105,7 @@
           - "reagent-effect-lactation4"
           - "reagent-effect-lactation5"
         probability: 0.04
+        conditions:
+          - !type:Consent # Aurora Song
+            effectTypes:
+              - Aphrodisiacs

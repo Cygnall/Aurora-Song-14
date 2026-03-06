@@ -1,0 +1,41 @@
+- type: loadout
+  id: MercenarySidearmMK58
+  price: 3800
+  storage:
+    back:
+    - NFWeaponPistolMk58
+
+- type: loadout
+  id: MercenarySidearmHZ13
+  price: 4500
+  storage:
+    back:
+    - ASWeaponPistolHZ-1-3
+
+- type: loadout
+  id: MercenarySidearmPollock
+  price: 7500
+  storage:
+    back:
+    - NFWeaponPistolPollock
+
+- type: loadout
+  id: MercenarySidearmFitz
+  price: 3600
+  storage:
+    back:
+    - NFWeaponRevolverFitz
+
+- type: loadout
+  id: MercenarySidearmLaserPistol
+  price: 4500
+  storage:
+    back:
+    - NFWeaponEnergyPistolLaser
+
+- type: loadout
+  id: MercenarySidearmDisabler
+  price: 3800
+  storage:
+    back:
+    - NFWeaponEnergyPistolDisabler

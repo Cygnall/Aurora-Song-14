@@ -5,7 +5,7 @@ meta:
   forkId: ""
   forkVersion: ""
   time: 04/09/2025 07:56:21
-  entityCount: 1814
+  entityCount: 31743
 maps:
 - 1814
 grids:
@@ -4661,7 +4661,7 @@ entities:
     - type: Transform
       pos: -1.5,-11.5
       parent: 179
-- proto: ComputerShipyardNfsd
+- proto: ComputerShipyardSLE
   entities:
   - uid: 284
     components:
@@ -4676,7 +4676,7 @@ entities:
       rot: -1.5707963267948966 rad
       pos: 5.5,-13.5
       parent: 179
-- proto: ComputerShipyardSr
+- proto: ASComputerShipyardCR
   entities:
   - uid: 492
     components:
@@ -8108,6 +8108,20 @@ entities:
     - type: Transform
       pos: -3.5,2.5
       parent: 179
+- proto: SpawnPointMedic
+  entities:
+  - uid: 31740
+    components:
+    - type: Transform
+      pos: -3.5,2.5
+      parent: 179
+- proto: SpawnPointService
+  entities:
+  - uid: 31741
+    components:
+    - type: Transform
+      pos: -3.5,2.5
+      parent: 179
 - proto: SpawnPointDeputy
   entities:
   - uid: 1486
@@ -8255,7 +8269,7 @@ entities:
     - type: Transform
       pos: -3.5,2.5
       parent: 179
-- proto: SpawnPointStationRepresentative
+- proto: SpawnPointColonialRepresentative
   entities:
   - uid: 1454
     components:
@@ -8265,6 +8279,20 @@ entities:
 - proto: SpawnPointStc
   entities:
   - uid: 486
+    components:
+    - type: Transform
+      pos: -3.5,2.5
+      parent: 179
+- proto: SpawnPointSiteManager
+  entities:
+  - uid: 31742
+    components:
+    - type: Transform
+      pos: -3.5,2.5
+      parent: 179
+- proto: SpawnPointSiteWorker
+  entities:
+  - uid: 31743
     components:
     - type: Transform
       pos: -3.5,2.5

@@ -8,7 +8,8 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
-    - state: default
+    - sprite: _AS/Objects/Misc/id_cards.rsi # Aurora's Song - redirected base layer to AS directory
+      state: default
     - state: idmercenary
   - type: Clothing
     sprite: _NF/Objects/Misc/id_cards.rsi
@@ -23,7 +24,8 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
-    - state: default
+    - sprite: _AS/Objects/Misc/id_cards.rsi # Aurora's Song - redirected base layer to AS directory
+      state: default
     - state: idpilot
   - type: Clothing
     sprite: _NF/Objects/Misc/id_cards.rsi
@@ -38,7 +40,8 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
-    - state: silver
+    - sprite: _AS/Objects/Misc/id_cards.rsi # Aurora's Song - redirected base layer to AS directory
+      state: silver
     - state: idstationtrafficcontroller
   - type: Clothing
     sprite: _NF/Objects/Misc/id_cards.rsi
@@ -61,10 +64,10 @@
 - type: entity
   parent: IDCardStandard
   id: CadetIDCard
-  name: Rookie ID card
+  name: NFSD cadet ID card
   components:
   - type: PresetIdCard
-    job: Cadet
+    job: Rookie
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -78,10 +81,10 @@
 - type: entity
   parent: CadetIDCard
   id: DeputyIDCard
-  name: Officer ID card
+  name: NFSD deputy ID card
   components:
   - type: PresetIdCard
-    job: Deputy
+    job: Officer
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -91,10 +94,10 @@
 - type: entity
   parent: CadetIDCard
   id: BrigmedicNFIDCard
-  name: Corpsman ID card
+  name: NFSD brigmedic ID card
   components:
   - type: PresetIdCard
-    job: Brigmedic
+    job: Corpsman
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -104,10 +107,10 @@
 - type: entity
   parent: CadetIDCard
   id: SergeantIDCard
-  name: NFSDsergeant ID card
+  name: NFSD sergeant ID card
   components:
   - type: PresetIdCard
-    job: SeniorOfficer
+    job: Sergeant
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -117,10 +120,10 @@
 - type: entity
   parent: CadetIDCard
   id: BailiffIDCard
-  name: Lieutenant ID card
+  name: NFSD bailiff ID card
   components:
   - type: PresetIdCard
-    job: Bailiff
+    job: Lieutenant
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -130,10 +133,10 @@
 - type: entity
   parent: [CadetIDCard, BaseCommandContraband]
   id: ShriffIDCard
-  name: Commissioner ID card
+  name: NFSD sheriff ID card
   components:
   - type: PresetIdCard
-    job: Sheriff
+    job: Commissioner
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -148,7 +151,7 @@
   name: NFSD detective ID card
   components:
   - type: PresetIdCard
-    job: NFDetective
+    job: ASDetective
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
@@ -182,7 +185,7 @@
   name: station representative ID card
   components:
   - type: PresetIdCard
-    job: StationRepresentative
+    job: ColonialRepresentative # Aurora Song's - changed from StationRepresentative to ColonialRepresentative
 
 - type: entity
   parent: ValetIDCard
@@ -194,7 +197,8 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
-    - state: default
+    - sprite: _AS/Objects/Misc/id_cards.rsi # Aurora's Song - redirected base layer to AS directory
+      state: default
     - state: idvalet
 
 - type: entity
@@ -214,7 +218,8 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
-    - state: default
+    - sprite: _AS/Objects/Misc/id_cards.rsi # Aurora's Song - redirected base layer to AS directory
+      state: default
     - state: idcontractor
 
 - type: entity
@@ -279,44 +284,45 @@
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:
-    - state: silver
+    - sprite: _AS/Objects/Misc/id_cards.rsi # Aurora's Song - redirected base layer to AS directory
+      state: silver
     - state: idmedicdoc
   - type: Clothing
     sprite: _NF/Objects/Misc/id_cards.rsi
   - type: Item
     heldPrefix: silver
 
-- type: entity
-  parent: IDCardStandard
-  id: PlantTechnicianIDCard
-  name: plant technician ID card
-  components:
-  - type: PresetIdCard
-    job: PlantTechnician
-  - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
-    layers:
-    - state: default
-    - state: idplanttechnician
-  - type: Clothing
-    sprite: _NF/Objects/Misc/id_cards.rsi
+#- type: entity
+#  parent: IDCardStandard
+#  id: PlantTechnicianIDCard
+#  name: plant technician ID card
+#  components:
+#  - type: PresetIdCard
+#    job: PlantTechnician
+#  - type: Sprite
+#    sprite: _NF/Objects/Misc/id_cards.rsi
+#    layers:
+#    - state: default
+#    - state: idplanttechnician
+#  - type: Clothing
+#    sprite: _NF/Objects/Misc/id_cards.rsi
 
-- type: entity
-  parent: [IDCardStandard, BaseCommandContraband]
-  id: PlantManagerIDCard
-  name: plant manager ID card
-  components:
-  - type: PresetIdCard
-    job: PlantManager
-  - type: Sprite
-    sprite: _NF/Objects/Misc/id_cards.rsi
-    layers:
-    - state: silver
-    - state: idplantmanager
-  - type: Clothing
-    sprite: _NF/Objects/Misc/id_cards.rsi
-  - type: Item
-    heldPrefix: silver
+#- type: entity
+#  parent: [IDCardStandard, BaseCommandContraband]
+#  id: PlantManagerIDCard
+#  name: plant manager ID card
+#  components:
+#  - type: PresetIdCard
+#    job: PlantManager
+#  - type: Sprite
+#    sprite: _NF/Objects/Misc/id_cards.rsi
+#    layers:
+#    - state: silver
+#    - state: idplantmanager
+#  - type: Clothing
+#    sprite: _NF/Objects/Misc/id_cards.rsi
+#  - type: Item
+#    heldPrefix: silver
 
 # Cats
 - type: entity
@@ -328,12 +334,18 @@
     name: Clippy
 
 - type: entity
-  parent: PlantTechnicianIDCard
+  parent: IDCardStandard
   id: CurieIDCard
   name: curie ID card
   components:
   - type: PresetIdCard
     name: Curie
+  - type: Sprite
+    sprite: _NF/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+  - type: Clothing
+    sprite: _NF/Objects/Misc/id_cards.rsi
 
 - type: entity
   parent: NFPirateFirstMateIDCard

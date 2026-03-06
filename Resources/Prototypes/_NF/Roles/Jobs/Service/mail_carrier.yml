@@ -35,11 +35,15 @@
 #    ears: ClothingHeadsetService # Frontier - ClothingHeadsetCargo<ClothingHeadsetService
     belt: NFMailBag
   storage:
-    back:
-    - EncryptionKeyService # Frontier
+    back: # Aurora's Song - moved service encryption key to the appropriate section
     - HandheldCrewMonitor # Frontier
     - ShipVoucherFrontierMailCarrier # Frontier
     - MailMetricsCartridge # Frontier
+    - CrayonBox # Aurora's Song - for labeling mail areas
+  encryptionKeys: # Aurora's Song - Added traffic, shipboard, and service encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+  - EncryptionKeyService
 
 - type: chameleonOutfit
   id: MailCarrierChameleonOutfit

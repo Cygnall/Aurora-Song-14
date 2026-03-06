@@ -8,9 +8,22 @@
     sprite: Clothing/OuterClothing/Hardsuits/engineering-base.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/engineering-base.rsi
+    # Aurora's Song: sprite states explicitly defined to prevent transformation errors
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-unshaded-harpy
+        shader: unshaded
+      outerClothing-lamia:
+      - state: equipped-OUTERCLOTHING-lamia
       - state: equipped-OUTERCLOTHING-unshaded
         shader: unshaded
   - type: ToggleableClothing
@@ -26,10 +39,23 @@
     sprite: Clothing/OuterClothing/Hardsuits/syndicate-base.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/syndicate-base.rsi
+    # Aurora's Song: sprite states explicitly defined to prevent transformation errors
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
       - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-unshaded-vox
+        shader: unshaded
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-unshaded-harpy
+        shader: unshaded
+      outerClothing-lamia:
+      - state: equipped-OUTERCLOTHING-lamia
+      - state: equipped-OUTERCLOTHING-unshaded-lamia
         shader: unshaded
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitShanlinUnpainted
@@ -48,10 +74,23 @@
     sprite: Clothing/OuterClothing/Hardsuits/syndicate-elite-base.rsi
   - type: Clothing
     sprite: Clothing/OuterClothing/Hardsuits/syndicate-elite-base.rsi
+    # Aurora's Song: sprite states explicitly defined to prevent transformation errors
     clothingVisuals:
       outerClothing:
       - state: equipped-OUTERCLOTHING
       - state: equipped-OUTERCLOTHING-unshaded
+        shader: unshaded
+      outerClothing-vox:
+      - state: equipped-OUTERCLOTHING-vox
+      - state: equipped-OUTERCLOTHING-unshaded-vox
+        shader: unshaded
+      outerClothing-harpy:
+      - state: equipped-OUTERCLOTHING-harpy
+      - state: equipped-OUTERCLOTHING-unshaded-harpy
+        shader: unshaded
+      outerClothing-lamia:
+      - state: equipped-OUTERCLOTHING-lamia
+      - state: equipped-OUTERCLOTHING-unshaded-lamia
         shader: unshaded
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitShiweiUnpainted

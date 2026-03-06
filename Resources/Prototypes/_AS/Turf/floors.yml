@@ -1,0 +1,16 @@
+- type: tile
+  id: FloorGlassRadarInvisible
+  name: radar invisible glass floor
+  sprite: /Textures/Tiles/glass.png
+  baseTurf: Plating
+  isSubfloor: false
+  variants: 4
+  placementVariants:
+  - 1.0
+  - 1.0
+  - 1.0
+  - 1.0
+  footstepSounds:
+    collection: FootstepTile
+  invisible: true
+

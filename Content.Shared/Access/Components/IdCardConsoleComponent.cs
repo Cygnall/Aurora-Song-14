@@ -43,41 +43,41 @@ public sealed partial class IdCardConsoleComponent : Component
     public List<ProtoId<AccessLevelPrototype>> AccessLevels = new()
     {
         "Armory",
-        //"Atmospherics",
-        "Bailiff", // Frontier
+        "Aurora", // Aurora's Song - Changed from Frontier to Aurora and moved up
+        "Atmospherics",
         //"Bar",
         "Brig",
-        "Brigmedic", // Frontier
         "Captain",
+        "HeadOfPersonnel", // Aurora's Song - moved up, alphabetic w.r.t. "Colonial Representative"
         //"Cargo",
         //"Chapel",
         //"Chemistry",
         //"ChiefMedicalOfficer",
         "Command",
+        "Corpsman", // Frontier and Aurora's Song, changed to Corpsman and moved down
         //"Cryogenics",
         "Detective", // Frontier: moved into alphabetical order
         "Engineering",
         "External",
-        "Aurora", // Aurora Song - Changed from Frontier to Aurora
         //"Hydroponics",
         "Janitor",
         //"Kitchen",
         //"Lawyer",
+        "Lieutenant", // Aurora's Song - Changed from Bailiff to Lieutenant and moved down
         "Mail", // Frontier
         "Maintenance",
         "Medical",
         "Mercenary", // Frontier
         "ChiefEngineer", // Frontier: moved down, alphabetic w.r.t. "Plant Manager"
-        "Prisoner", // Aurora Song
+        "Prisoner", // Aurora's Song
         //"Quartermaster",
-        //"Research",
-        //"ResearchDirector",
+        "Research",
+        "ResearchDirector",
         //"Salvage",
         "Security",
         "Sergeant", // Frontier
         "Service",
         "HeadOfSecurity", // Frontier: moved down, alphabetic w.r.t. "Sheriff"
-        "HeadOfPersonnel", // Frontier: moved down, alphabetic w.r.t. "Station Representative"
         "StationTrafficController", // Frontier
         //"Theatre",
     };

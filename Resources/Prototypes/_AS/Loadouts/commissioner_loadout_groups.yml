@@ -1,0 +1,64 @@
+- type: loadoutGroup
+  id: CommissionerJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - CommissionerClothingUniformJumpsuitCommissioner
+  - CommissionerClothingUniformJumpsuitSLE
+  - CommissionerClothingUniformJumpskirtSLE
+  - CommissionerClothingUniformJumpsuitSLEShort
+  - CommissionerClothingUniformJumpskirtSLEShort
+  - CommissionerClothingUniformJumpsuitSLEClassic
+  - CommissionerClothingUniformJumpskirtSLEClassic
+
+
+- type: loadoutGroup
+  id: CommissionerOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - CommissionerClothingOuterCommissioner
+  - CommissionerClothingOuterArmorBulletproof
+
+- type: loadoutGroup
+  id: CommissionerHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts:
+  - CommissionerClothingHeadHatCommissioner
+  - CommissionerClothingHeadAltHatCommissioner
+
+- type: loadoutGroup
+  id: CommissionerNeck
+  name: loadout-group-contractor-neck
+  loadouts:
+  - CommissionerClothingNeckSLEBadgeCommissioner
+  - CommissionerClothingNeckMantleCommissioner
+  - CommissionerClothingNeckCloakCommissioner
+  fallbacks:
+  - CommissionerClothingNeckSLEBadgeCommissioner
+
+- type: loadoutGroup
+  id: CommissionerPDA
+  name: loadout-group-contractor-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - CommissionerCommissionerPDA
+  fallbacks:
+  - CommissionerCommissionerPDA
+
+- type: loadoutGroup
+  id: CommissionerFace
+  name: loadout-group-contractor-face
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - CommissionerClothingMaskCommissioner
+
+- type: loadoutGroup
+  id: CommissionerEars
+  name: loadout-group-contractor-ears
+  loadouts:
+  - CommissionerClothingHeadsetAltSLENavyCentcom
+  - CommissionerClothingHeadsetAltSLECobaltCentcom
+  - CommissionerClothingHeadsetAltSLEOrangeCentcom
+  fallbacks:
+  - CommissionerClothingHeadsetAltSLECobaltCentcom

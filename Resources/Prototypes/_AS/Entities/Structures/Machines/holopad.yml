@@ -1,0 +1,64 @@
+
+# Mapping Prototypes
+
+#region Damascus Engineering
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadDamascusEngineeringReception
+  suffix: Damascus Engineering Reception, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-damascus-engineering-reception
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadDamascusEngineeringPower
+  suffix: Damascus Engineering Power, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-damascus-engineering-power
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadDamascusEngineeringPa
+  suffix: Damascus Engineering PA, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-damascus-engineering-pa
+
+#region Damascus General
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadDamascusBreakRoom
+  suffix: Damascus Break Room, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-damascus-break-room
+
+#region Damascus Science
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadDamascusScienceReception
+  suffix: Damascus Science Reception, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-damascus-science-reception
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadDamascusScienceMain
+  suffix: Damascus Science Main , POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-damascus-science-main
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadDamascusScienceArtifact
+  suffix: Damascus Science Artifacts, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-damascus-science-artifact

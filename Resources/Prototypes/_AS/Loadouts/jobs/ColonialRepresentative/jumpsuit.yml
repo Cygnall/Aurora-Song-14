@@ -1,0 +1,20 @@
+- type: loadout
+  id: ColonialRepresentativeClothingUniformJumpsuitColonialRepresentative
+  price: 0
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitColonialRepresentative
+
+- type: loadout
+  id: ColonialRepresentativeClothingUniformJumpskirtColonialRepresentative
+  price: 0
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtColonialRepresentative
+
+- type: loadout
+  id: ColonialRepresentativeClothingUniformJumpsuitMilitaryColonialRepresentative
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT3
+  price: 0
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitMilitaryColonialRepresentative

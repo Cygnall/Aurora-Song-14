@@ -1,3 +1,5 @@
+#region DoC
+
 # No hardsuit table
 - type: entityTable
   id: LockerFillDirectorOfCareNoHardsuit
@@ -43,3 +45,23 @@
           tableId: LockerFillDirectorOfCareNoHardsuit
         - !type:NestedSelector
           tableId: FillChiefMedicalOfficerHardsuit
+
+#region Colonial Representative
+
+- type: entity
+  id: ASLockerColonialRepresentativeFilled
+  suffix: Filled
+  parent: ASLockerColonialRepresentative
+  components:
+    - type: StorageFill
+      contents:
+        - id: ASClothingHeadHatColonialRepresentativeBeret
+        - id: ASClothingHeadHatColonialRepresentativeBeretBig
+        - id: ASClothingOuterJacketColonialRepresentative
+        - id: ASClothingHandsGlovesColonialRepresentative
+        - id: ASClothingNeckMantleColonialRepresentative
+        - id: ASClothingNeckCloakColonialRepresentative
+        - id: CutterMachineFlatpack
+        - id: ASColonialRepresentativeIDCard
+        - id: Flash
+        - id: DoorRemoteCommand

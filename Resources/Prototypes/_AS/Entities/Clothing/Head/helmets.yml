@@ -1,0 +1,40 @@
+#region Merc
+
+- type: entity
+  parent: [ ClothingHeadHelmetBase, BaseC2ContrabandUnredeemable ]
+  id: ASClothingHeadHelmetFort
+  name: fort helmet
+  description: A thick tactical helmet with a face mask.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Helmets/fort_helmet.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Helmets/fort_helmet.rsi
+  - type: IngestionBlocker
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.8
+        Slash: 0.8
+        Piercing: 0.8
+        Heat: 0.8
+        Radiation: 0.8
+        Caustic: 0.8
+  - type: ExplosionResistance
+    damageCoefficient: 0.9
+  - type: HideLayerClothing
+    layers:
+      Hair: HEAD
+
+#region SLE
+
+- type: entity
+  parent: ClothingHeadHelmetBasic
+  id: ASClothingHeadHelmetSLE
+  name: SLE helmet
+  description: An SLE issued helmet to protect your head.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Helmets/sle.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Helmets/sle.rsi

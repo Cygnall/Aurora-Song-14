@@ -61,6 +61,12 @@
         Piercing: 1
   - type: Speech
     speechSounds: Alto
+    allowedEmotes: # Aurora's Song - allow Tajarans to do the cat emotes
+    - Hiss
+    - Meow
+    - Mew
+    - Growl
+    - Purr
   - type: DamageOnHighSpeedImpact # Landing on all fours!
     damage:
       types:

@@ -2,7 +2,7 @@
   id: UnderwearDefault
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -16,7 +16,7 @@
   id: UnderwearBriefs
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -30,7 +30,7 @@
   id: UnderwearLowriders
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -40,25 +40,25 @@
   - sprite: _Impstation/Mobs/Customization/underwear.rsi
     state: lowriders
 
-- type: marking
-  id: UnderwearSatin
-  bodyPart: UndergarmentBottom
-  markingCategory: UndergarmentBottom
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
-  sprites:
-  - sprite: _Impstation/Mobs/Customization/underwear.rsi
-    state: satin
+#- type: marking # Aurora's Song - removed duplicate
+#  id: UnderwearSatin
+#  bodyPart: UndergarmentBottom
+#  markingCategory: UndergarmentBottom
+#  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
+#  coloring:
+#    default:
+#      type:
+#        !type:SimpleColoring
+#          color: "#FFFFFF"
+#  sprites:
+#  - sprite: _Impstation/Mobs/Customization/underwear.rsi
+#    state: satin
 
 - type: marking
   id: UnderwearTanga
   bodyPart: UndergarmentBottom
   markingCategory: UndergarmentBottom
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
+  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:

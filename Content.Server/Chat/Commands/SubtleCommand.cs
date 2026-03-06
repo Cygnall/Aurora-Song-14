@@ -13,7 +13,7 @@ namespace Content.Server.Chat.Commands
         public string Description => "Perform a subtle action.";
         public string Help => "subtle <text>";
 
-        private const string SubtleColor = "#d3d3ff";
+        private const string SubtleColor = "#d3d3ff"; // Den
 
         public void Execute(IConsoleShell shell, string argStr, string[] args)
         {

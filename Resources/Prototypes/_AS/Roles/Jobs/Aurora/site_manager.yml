@@ -1,0 +1,60 @@
+- type: job
+  id: SiteManager
+  name: job-name-site-manager
+  description: job-description-site-manager
+  playTimeTracker: JobSiteManager
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 72000 # 20 hrs
+    - !type:RoleTimeRequirement
+      role: JobSiteWorker
+      time: 10800 # 3 hrs as site worker
+  whitelisted: true
+  startingGear: SiteManagerGear
+  alwaysUseSpawner: true
+  icon: "JobIconSiteManager"
+  requireAdminNotify: true
+  supervisors: job-supervisors-colcom
+  weight: 160
+  displayWeight: 10
+  canBeAntag: false
+  accessGroups:
+  - AllAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: CommandStaff
+      - type: PreventShipyardTitleOverwrite
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: SiteManagerGear
+  equipment:
+    pocket1: NFWeaponEnergyPistolDisabler
+    pocket2: HolofanProjector
+  storage:
+    back:
+    - ASRubberStampSiteManager
+    - HandheldSecurityMonitor
+    - Flash
+    - DoorRemoteCommand
+  encryptionKeys:
+  - EncryptionKeySiteManager
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+
+- type: chameleonOutfit
+  id: SiteManagerChameleonOutfit
+  job: SiteManager
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatBeretEngineering
+    mask: ClothingMaskBreath
+    neck: ClothingNeckCloakCe
+    outerClothing: ClothingOuterWinterCE
+    gloves: ClothingHandsGlovesColorYellow
+    shoes: ClothingShoesBootsMagAdv

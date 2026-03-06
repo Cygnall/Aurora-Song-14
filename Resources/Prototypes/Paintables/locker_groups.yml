@@ -32,13 +32,15 @@
     mercenary: LockerMercenary # Frontier
     janitor: LockerJanitor # Frontier
     pilot: LockerPilot # Frontier
-    nfsd: LockerNfsdEvidence # Frontier
-    nfsd-copper: LockerNfsdCopper # Frontier
-    nfsd-silver: LockerNfsdSilver # Frontier
-    nfsd-brigmedic: LockerNfsdBrigmedic # Frontier
-    nfsd-gold: LockerNfsdSergeant # Frontier
-    nfsd-sheriff: LockerNfsdSheriff # Frontier
-    station-representative: LockerStationRepresentative # Frontier
+    # Aurora's Song - disabled NFSD locker styles
+    # nfsd: LockerNfsdEvidence # Frontier
+    # nfsd-copper: LockerNfsdCopper # Frontier
+    # nfsd-silver: LockerNfsdSilver # Frontier
+    # nfsd-brigmedic: LockerNfsdBrigmedic # Frontier
+    # nfsd-gold: LockerNfsdSergeant # Frontier
+    # nfsd-sheriff: LockerNfsdSheriff # Frontier
+    # station-representative: LockerStationRepresentative # Frontier - Aurora Song: moved to Colonial Representative
+    colonial-representative: ASLockerColonialRepresentativeFilled # Aurora's Song - changed from Station Representative to Colonial Representative
     fsb: ClosetFsbEva # Frontier
     sle: ASLockerSLEBlank # Aurora
     sle-evidence: ASLockerSLEEvidence # Aurora
@@ -46,10 +48,10 @@
     sle-copper: ASLockerSLECopper # Aurora
     sle-silver: ASLockerSLESilver # Aurora
     sle-detective: ASLockerSLEDetective # Aurora
-    sle-brigmedic: ASLockerSLEBrigmedic # Aurora
+    sle-corpsman: ASLockerSLECorpsman # Aurora
     sle-gold: ASLockerSLESergeant # Aurora
-    sle-bailiff: ASLockerSLEBailiff # Aurora
-    sle-sheriff: ASLockerSLESheriff # Aurora
+    sle-lieutenant: ASLockerSLELieutenant # Aurora
+    sle-commissioner: ASLockerSLECommissioner # Aurora
 
 - type: paintableGroup
   id: Closet

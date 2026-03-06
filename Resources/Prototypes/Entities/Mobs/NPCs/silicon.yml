@@ -121,7 +121,6 @@
   - type: ProtectedFromStepTriggers
   - type: NoSlip
   - type: Insulated
-  - type: LeashAnchor # Floofstation
 
 - type: entity
   parent: MobSiliconBase
@@ -365,6 +364,7 @@
     interactSuccessSound:
       path: /Audio/Ambience/Objects/periodic_beep.ogg
   - type: Vocalizer
+    hideChat: true
   - type: DatasetVocalizer
     dataset: MedibotAds
   - type: Inventory

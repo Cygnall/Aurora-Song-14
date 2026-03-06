@@ -1,4 +1,6 @@
-﻿- type: latheRecipe
+﻿#region Jumpsuits
+
+- type: latheRecipe
   parent: BaseJumpsuitRecipe
   id: ClothingUniformSuitGRN
   result: ClothingUniformSuitGRN
@@ -12,3 +14,10 @@
   parent: BaseJumpsuitRecipe
   id: ClothingUniformSuitCYN
   result: ClothingUniformSuitCYN
+
+#region Pouches
+
+- type: latheRecipe
+  id: ASPouchSLE
+  parent: NFBaseBeltRecipe
+  result: ASPouchSLE

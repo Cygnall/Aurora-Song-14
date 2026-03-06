@@ -1,0 +1,14 @@
+- type: startingGear
+  id: ASMobAghostGear
+  equipment:
+    back: ClothingBackpackSatchelHolding
+    id: ASAdminPDA
+  storage:
+    back:
+    - GasAnalyzer
+    - trayScanner
+    - AccessConfiguratorUniversal
+    - Multitool
+    - PowerDrill
+    - JawsOfLife
+    - WelderIndustrialAdvanced

@@ -1,0 +1,57 @@
+- type: entity
+  id: PoweredOrangeLightPostSmall
+  name: post light
+  description: "A light fixture. Draws power and produces light when equipped with a light tube."
+  suffix: Orange
+  parent: PoweredLightPostSmallEmpty
+  components:
+  - type: Sprite
+    state: base
+  - type: PointLight
+    enabled: true
+    radius: 15
+    energy: 1
+    softness: 0.9
+    color: "#ff8227"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeCrystalOrange
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -15
+    range: 3
+    sound:
+      path: /Audio/Ambience/Objects/light_hum.ogg
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 1
+    popupText: powered-light-component-burn-hand
+
+- type: entity
+  id: PoweredOldFluorescentLightPostSmall
+  name: post light
+  description: "A light fixture. Draws power and produces light when equipped with a light tube."
+  suffix: Old Fluorescent
+  parent: PoweredLightPostSmallEmpty
+  components:
+  - type: Sprite
+    state: base
+  - type: PointLight
+    enabled: true
+    radius: 15
+    energy: 1
+    softness: 0.9
+    color: "#FFDABB"
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeOld
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -15
+    range: 3
+    sound:
+      path: /Audio/Ambience/Objects/light_hum.ogg
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 1
+    popupText: powered-light-component-burn-hand

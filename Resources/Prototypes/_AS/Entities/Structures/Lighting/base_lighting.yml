@@ -1,0 +1,57 @@
+#region On
+- type: entity
+  id: PoweredlightOldFluorescent
+  suffix: Old Fluorescent
+  parent: Poweredlight
+  components:
+  - type: PoweredLight
+    hasLampOnSpawn: LightTubeOld
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#FFDABB"
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 2
+    popupText: powered-light-component-burn-hand
+
+#region Off
+- type: entity
+  id: PoweredlightRedOff
+  suffix: Red, Off
+  parent: Poweredlight
+  components:
+  - type: PoweredLight
+    on: false
+    hasLampOnSpawn: LightTubeCrystalRed
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#fb4747"
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 2
+    popupText: powered-light-component-burn-hand
+
+- type: entity
+  id: PoweredlightBlueOff
+  suffix: Blue, Off
+  parent: Poweredlight
+  components:
+  - type: PoweredLight
+    on: false
+    hasLampOnSpawn: LightTubeCrystalBlue
+  - type: PointLight
+    radius: 8
+    energy: 3
+    softness: 0.5
+    color: "#39a1ff"
+  - type: DamageOnInteract
+    damage:
+      types:
+        Heat: 2
+    popupText: powered-light-component-burn-hand

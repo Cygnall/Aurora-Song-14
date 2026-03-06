@@ -24,8 +24,27 @@
     idleState: icon
     runningState: icon
     staticPacks:
-    - NFNfsdTechfabDeprecatedStatic
-    - NfsdPracticeStatic
-    - NfsdAmmoStatic
-    - ReportingStatic
-    # Inherits SecurityEquipmentStatic and SecurityWeaponsStatic from SecurityTechFab parent
+    - NFLightsStatic
+    - NFBasicToolsStatic
+    - NFBasicStorageStatic
+    - NFBasicPartsStatic
+    - NFBasicElectronicsStatic
+    - NFBasicEvaStatic
+    - NFBasicEVAToolsStatic
+    - NFMaterialElectronicsStatic
+    - ReportingStatic # DeltaV
+    - SLEWeaponsStatic
+    - SLEPracticeStatic
+    - SLEAmmoStatic
+    - NFMercenaryMagazineStatic
+    - NFMercenaryStorageStatic
+    - SLEToolsStatic
+    - SLETargetsStatic
+    - SLEBoardsStatic
+    - NFPaperAndPaperAccessories
+  - type: BlueprintReceiver
+    whitelist:
+      tags:
+      - NFBlueprintNfsdTechfab
+      - NFBlueprintAdvanced
+  - type: OreSiloClient

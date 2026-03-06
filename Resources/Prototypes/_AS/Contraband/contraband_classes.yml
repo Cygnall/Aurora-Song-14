@@ -13,3 +13,41 @@
     severity: Class2Unregistered
     turnInValues: &twoFUC
       FrontierUplinkCoin: 2
+      ExchangeCoin: 2
+
+# For Van to fill out later
+# - type: entity 
+#  id: SLEContrabandReturnable1
+#  abstract: true
+#  components:
+#  - type: Contraband
+#    severity: {Fill this out Van}
+#    turnInValues: 
+#      FrontierUplinkCoin: 1
+
+# - type: entity 
+#  id: SLEContrabandReturnable3
+#  abstract: true
+#  components:
+#  - type: Contraband
+#    severity: {Fill this out Van}
+#    turnInValues: 
+#      FrontierUplinkCoin: 3
+
+# - type: entity 
+#  id: SLEContrabandReturnable5
+#  abstract: true
+#  components:
+#  - type: Contraband
+#    severity: {Fill this out Van}
+#    turnInValues: 
+#      FrontierUplinkCoin: 5
+
+# - type: entity 
+#  id: SLEContrabandReturnable10
+#  abstract: true
+#  components:
+#  - type: Contraband
+#    severity: {Fill this out Van}
+#    turnInValues: 
+#      FrontierUplinkCoin: 10

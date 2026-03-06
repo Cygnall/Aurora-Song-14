@@ -1,0 +1,55 @@
+# Site Manager Backpacks
+- type: loadout
+  id: SiteManagerBackpackEngineering
+  equipment:
+    back: ClothingBackpackEngineering
+
+- type: loadout
+  id: SiteManagerBackpackDuffelEngineering
+  equipment:
+    back: ClothingBackpackDuffelEngineering
+
+- type: loadout
+  id: SiteManagerBackpackSatchelEngineering
+  equipment:
+    back: ClothingBackpackSatchelEngineering
+
+- type: loadout
+  id: SiteManagerBackpackMessengerEngineering
+  equipment:
+    back: ClothingBackpackMessengerEngineering
+
+- type: loadout
+  id: SiteManagerBackpackAtmospherics
+  equipment:
+    back: ClothingBackpackAtmospherics
+
+- type: loadout
+  id: SiteManagerBackpackDuffelAtmospherics
+  equipment:
+    back: ClothingBackpackDuffelAtmospherics
+
+- type: loadout
+  id: SiteManagerBackpackSatchelAtmospherics
+  equipment:
+    back: ClothingBackpackSatchelAtmospherics
+
+- type: loadout
+  id: SiteManagerBackpackMessengerAtmospherics
+  equipment:
+    back: ClothingBackpackMessengerAtmospherics
+
+- type: loadout
+  id: SiteManagerBackpackScience
+  equipment:
+    back: ClothingBackpackScience
+
+- type: loadout
+  id: SiteManagerBackpackDuffelScience
+  equipment:
+    back: ClothingBackpackDuffelScience
+
+- type: loadout
+  id: SiteManagerBackpackSatchelScience
+  equipment:
+    back: ClothingBackpackSatchelScience

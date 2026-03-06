@@ -1,21 +1,72 @@
-# Aurora Song - SLE (Security Logistics Enforcement) duffel bags
-# Prototypes for Aurora Song's SLE faction equipment
-
 - type: entity
   parent: ClothingBackpackDuffelSecurity
-  id: ASClothingBackpackDuffelSLEBrown
+  id: ASClothingBackpackDuffelSLENavy
   name: SLE duffel
-  description: A large duffel bag used by Security Logistics Enforcement personnel.
+  description: A large duffel bag used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Back/Duffels/sle_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Back/Duffels/sle_navy.rsi
 
 - type: entity
-  parent: ASClothingBackpackDuffelSLEBrown
-  id: ASClothingBackpackDuffelSLECream
-  name: SLE duffel
-  description: A large duffel bag used by Security Logistics Enforcement personnel.
+  parent: ASClothingBackpackDuffelSLENavy
+  id: ASClothingBackpackDuffelSLECorpsman
+  name: SLE corpsman duffel
+  description: A large duffel bag used by Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Back/Duffels/sle_cream.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Back/Duffels/sle_corpsman.rsi
 
+#region Command
+
+- type: entity
+  parent: ClothingBackpackDuffel
+  id: ASClothingBackpackDuffelColonialRepresentative
+  name: colonial representative duffel bag
+  description: A large duffel bag for holding extra colonial administrative supplies.
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Back/Duffels/color.rsi
+    layers:
+    - state: icon-base
+      color: "#0F2854"
+    - state: icon-sling
+      color: "#4988C4"
+    - state: icon-decal-straps
+      color: "#f2b833"
+    - state: icon-handle
+      color: "#fbe6b8"
+    - state: icon-zipper
+  - type: Clothing
+    sprite: _NF/Clothing/Back/Duffels/color.rsi
+    clothingVisuals:
+      back:
+      - state: equipped-BACKPACK-base
+        color: "#0F2854"
+      - state: equipped-BACKPACK-sling
+        color: "#4988C4"
+      - state: equipped-BACKPACK-decal-straps
+        color: "#f2b833"
+      - state: equipped-BACKPACK-handle
+        color: "#fbe6b8"
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left-base
+        color: "#0F2854"
+      - state: inhand-left-sling
+        color: "#4988C4"
+      - state: inhand-left-decal-straps
+        color: "#f2b833"
+      - state: inhand-left-handle
+        color: "#fbe6b8"
+      - state: inhand-left-zipper
+      right:
+      - state: inhand-right-base
+        color: "#0F2854"
+      - state: inhand-right-sling
+        color: "#4988C4"
+      - state: inhand-right-decal-straps
+        color: "#f2b833"
+      - state: inhand-right-handle
+        color: "#fbe6b8"
+      - state: inhand-right-zipper

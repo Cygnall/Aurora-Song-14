@@ -1,0 +1,25 @@
+- type: loadoutGroup
+  id: SLESpeciesSpecific
+  name: loadout-group-breath-tool # if visible, rename
+  minLimit: 2
+  maxLimit: 2 # Aurora Song - Reduced from 3 to 2 (removed gas mask to prevent duplicates)
+  hidden: true
+  loadouts:
+  - LoadoutTankHarness
+  - LoadoutSpeciesVoxNitrogen
+  fallbacks:
+  - LoadoutTankHarness
+  - LoadoutSpeciesVoxNitrogen
+
+#region Forced EVA
+
+- type: loadoutGroup
+  id: SLEForcedOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 1
+  maxLimit: 1
+  hidden: true
+  loadouts:
+  - SLEForcedClothingOuterEVASuitSLE
+  fallbacks:
+  - SLEForcedClothingOuterEVASuitSLE

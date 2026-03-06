@@ -1,4 +1,6 @@
-﻿- type: technology
+﻿#region Kitchen
+
+- type: technology
   id: ASUnrealFoodService
   name: as-unreal-processing
   entityIcon: ASReagentGrinderIndustrialBluespace
@@ -11,16 +13,75 @@
   - NFAdvancedFoodService
   position: 3, 24
 
+#region Space
+
+- type: technology
+  id: ASFasterThanLight
+  name: as-research-technology-faster-than-light
+  entityIcon: MachineFTLDrive
+  discipline: NFEngineering
+  tier: 1
+  cost: 5000
+  recipeUnlocks:
+  - MachineDriveCTLA25Circuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - NFShuttlecraftThrust
+  position: 2, 33
+
+- type: technology
+  id: ASFasterThanLight25S
+  name: as-research-technology-faster-than-light-25s
+  entityIcon: MachineFTLDrive25S
+  discipline: NFEngineering
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - MachineDriveCTLA25sCircuitboard
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+  - ASFasterThanLight
+  position: 3, 34
+
+- type: technology
+  id: ASFasterThanLight50
+  name: as-research-technology-faster-than-light-50
+  entityIcon: MachineFTLDrive50
+  discipline: NFEngineering
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - MachineDriveCTLA50Circuitboard
+  technologyPrerequisites:
+  - ASFasterThanLight
+  position: 3, 33
+
+- type: technology
+  id: ASFasterThanLight160
+  name: as-research-technology-faster-than-light-160
+  entityIcon: MachineHeavyFTLDriveCore
+  discipline: NFEngineering
+  tier: 1
+  cost: 15000
+  recipeUnlocks:
+  - MachineDriveCTLA160Circuitboard
+  - ComputerDriveCTLA160ConsoleCircuitboard
+  technologyPrerequisites:
+  - ASFasterThanLight50
+  position: 4, 33
+
+#region Munitions
+
 - type: technology
   id: ASLaserFieldEndurance
   name: as-research-technology-laser-field-endurance
   entityIcon: ASWeaponBasinLasPistol
   discipline: NFArsenalMercenary
-  tier: 2
+  tier: 1
   cost: 12500
   recipeUnlocks:
   - ASWeaponBasinLasPistol
   - ASWeaponKasyreLasRifle
   technologyPrerequisites:
   - NFDeterrenceTechnologies
-  position: 4, 42
+  position: 4, 43

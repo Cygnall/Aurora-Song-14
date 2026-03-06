@@ -1,0 +1,5 @@
+﻿- type: stack
+  id: FloorTileAstroAsteroidSandBorderless
+  name: stack-asteroid-astro-sand-floor-borderless
+  spawn: FloorTileItemAstroAsteroidSandBorderless
+  maxCount: 30

@@ -70,9 +70,9 @@
   - type: Tag
     tags:
     - Diagonal
+    - Window # AS: Brought in line with standard window
   - type: IconSmooth
     mode: Diagonal
-    key: walls # Frontier: windows<walls
     base: state
   - type: Icon
     sprite: Structures/Windows/shuttle_window_diagonal.rsi

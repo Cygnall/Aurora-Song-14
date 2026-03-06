@@ -1,0 +1,8 @@
+- type: entity
+  id: WoodDoorSecure
+  name: wooden door
+  suffix: Secure
+  parent: WoodDoor
+  description: A door, where will it lead?
+  components:
+  - type: Lock

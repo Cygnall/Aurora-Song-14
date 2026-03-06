@@ -3,7 +3,8 @@ id-card-access-level-captain = Captain
 id-card-access-level-cryogenics = Cryogenics
 id-card-access-level-emergency-shuttle-repeal = E.Shuttle Repeal All
 
-id-card-access-level-head-of-personnel = Station Representative
+#Aurora's Song: HoP/ HoS edited to Colonial Rep/ Commissioner
+id-card-access-level-head-of-personnel = Colonial Representative
 id-card-access-level-head-of-security = Commissioner
 id-card-access-level-security = Security
 id-card-access-level-armory = Armory
@@ -44,8 +45,7 @@ id-card-access-level-external = External
 id-card-access-level-nuclear-operative = Nuclear Operative
 id-card-access-level-syndicate-agent = Syndicate Agent
 
-# id-card-access-level-central-command = Central Command
-id-card-access-level-central-command = Colonial Command
+id-card-access-level-central-command = Central Command
 
 id-card-access-level-wizard = Wizard
 

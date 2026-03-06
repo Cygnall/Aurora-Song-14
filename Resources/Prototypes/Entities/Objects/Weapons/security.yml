@@ -219,6 +219,7 @@
           layer:
           - MachineLayer
           density: 380
+    - type: Climbable # Aurora's Song - Allow vaulting over flasher
     - type: Appearance
     - type: AnimationPlayer
     - type: PointLight

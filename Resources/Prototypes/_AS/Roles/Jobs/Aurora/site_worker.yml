@@ -1,0 +1,56 @@
+- type: job
+  id: SiteWorker
+  name: job-name-site-worker
+  description: job-description-site-worker
+  playTimeTracker: JobSiteWorker
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 43200 # 12 hrs
+ #   - !type:RoleTimeRequirement
+ #     role: JobStationEngineer
+ #     time: 3600 # 1 hr as station engineer
+  startingGear: SiteWorkerGear
+  alwaysUseSpawner: true
+  icon: "JobIconSiteWorker"
+  supervisors: job-supervisors-site-manager
+  weight: 80
+  displayWeight: 0
+  access:
+  - Engineering
+  - Atmospherics
+  - Research
+  accessGroups:
+  - GeneralAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:AddComponentSpecial
+    components:
+      - type: PreventShipyardTitleOverwrite
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: SiteWorkerGear
+  equipment:
+    pocket2: HolofanProjector
+  storage:
+    back:
+    - Flash
+  encryptionKeys: # Added traffic, shipboard, and science encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+  - EncryptionKeyScience
+
+- type: chameleonOutfit
+  id: SiteWorkerChameleonOutfit
+  job: SiteWorker
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatHardhatYellow
+    mask: ClothingMaskBreath
+    neck: ClothingNeckScarfStripedOrange
+    outerClothing: ClothingOuterWinterEngi
+    gloves: ClothingHandsGlovesColorYellow
+    shoes: ClothingShoesBootsMag

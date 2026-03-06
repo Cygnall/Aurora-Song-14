@@ -1,0 +1,5 @@
+# Site Worker Ears
+- type: loadout
+  id: SiteWorkerHeadsetEngineering
+  equipment:
+    ears: ClothingHeadsetEngineering

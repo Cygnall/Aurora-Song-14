@@ -1,0 +1,46 @@
+# Author Info
+# GitHub: turtleofmen
+# Discord: turtleofmen
+
+# Maintainer Info
+# GitHub: turtleofmen
+# Discord: turtleofmen
+
+# Notes:
+#
+- type: pointOfInterest
+  id: Damascus
+  parent: BasePOI
+  name: 'Damascus Manufactory'
+  minimumDistance: 410
+  maximumDistance: 460
+  minimumClearance: 100
+  spawnGroup: Required
+  gridPath: /Maps/_AS/POI/damascus.yml
+  addComponents:
+  - type: IFF
+    color: "#3737F8"
+  - type: SolarPoweredGrid
+    trackOnInit: true
+    doNotCull: true
+
+- type: gameMap
+  id: Damascus
+  mapName: 'Damascus Manufactory'
+  mapPath: /Maps/_AS/POI/damascus.yml
+  minPlayers: 0
+  stations:
+    Damascus:
+      stationProto: RecordsFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Damascus Manufactory'
+        - type: ExtraStationInformation
+          iconPath: /Textures/_AS/Icons/Stations/engisci-banner.png # Aurora Song
+          stationSubtext: aurora-lobby-damascus-subtext
+          stationDescription: aurora-lobby-damascus-description
+          lobbySortOrder: 5
+        - type: StationJobs
+          availableJobs:
+            SiteManager: [ 1, 1 ]
+            SiteWorker: [ 4, 4 ]

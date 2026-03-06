@@ -35,10 +35,7 @@
       collection: FootstepJester
 
 - type: entity
-  parent:
-  - BaseC3CultContraband
-  - ClothingNeckBase
-  - ContrabandClothing
+  parent: [ BaseC3CultContraband, ClothingNeckBase, ContrabandClothing ]
   id: ClothingNeckAmuletBloodCult
   name: ascended cultist amulet
   description: "Every time you gaze upon it, you feel as if it is gazing back at you. Summons a drained one that follows the user for a brief period of time. Has a cooldown."
@@ -90,6 +87,11 @@
       - state: equipped-NECK-on
         color: "#a9b6bd"
         shader: unshaded
+      neckalt: # Aurora's Song - second neck slot
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#a9b6bd"
+        shader: unshaded
 
 - type: entity
   parent: ClothingNeckIFFNeutral
@@ -107,6 +109,11 @@
     sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
     clothingVisuals:
       neck:
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#33cc00"
+        shader: unshaded
+      neckalt: # Aurora's Song - second neck slot
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#33cc00"
@@ -132,6 +139,11 @@
       - state: equipped-NECK-on
         color: "#990000"
         shader: unshaded
+      neckalt: # Aurora's Song - second neck slot
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#990000"
+        shader: unshaded
 
 - type: entity
   parent: ClothingNeckIFFNeutral
@@ -149,6 +161,11 @@
     sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
     clothingVisuals:
       neck:
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#0055cc"
+        shader: unshaded
+      neckalt: # Aurora's Song - second neck slot
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#0055cc"
@@ -174,6 +191,11 @@
       - state: equipped-NECK-on
         color: "#47f8ff"
         shader: unshaded
+      neckalt: # Aurora's Song - second neck slot
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#47f8ff"
+        shader: unshaded
 
 - type: entity
   parent: ClothingNeckIFFNeutral
@@ -195,6 +217,11 @@
       - state: equipped-NECK-on
         color: "#ff8227"
         shader: unshaded
+      neckalt: # Aurora's Song - second neck slot
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#ff8227"
+        shader: unshaded
 
 - type: entity
   parent: ClothingNeckIFFNeutral
@@ -212,6 +239,11 @@
     sprite: _NF/Clothing/Neck/Misc/mercenary_iff.rsi
     clothingVisuals:
       neck:
+      - state: equipped-NECK-off
+      - state: equipped-NECK-on
+        color: "#9c0de1"
+        shader: unshaded
+      neckalt: # Aurora's Song - second neck slot
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#9c0de1"

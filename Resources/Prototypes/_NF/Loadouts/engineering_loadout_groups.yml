@@ -165,23 +165,24 @@
   - PlantManagerClothingNeckMantleCE
   - PlantManagerClothingNeckCloakCe
 
-- type: loadoutGroup
-  id: PlantManagerPDA
-  name: loadout-group-contractor-pda
-  hidden: true
-  loadouts:
-  - PlantManagerPlantManagerPDA
-  fallbacks:
-  - PlantManagerPlantManagerPDA
-
-- type: loadoutGroup
-  id: PlantTechnicianPDA
-  name: loadout-group-contractor-pda
-  hidden: true
-  loadouts:
-  - PlantTechnicianPlantTechnicianPDA
-  fallbacks:
-  - PlantTechnicianPlantTechnicianPDA
+# Aurora's Song - PlantManager and PlantTechnician roles are disabled
+#- type: loadoutGroup
+#  id: PlantManagerPDA
+#  name: loadout-group-contractor-pda
+#  hidden: true
+#  loadouts:
+#  - PlantManagerPlantManagerPDA
+#  fallbacks:
+#  - PlantManagerPlantManagerPDA
+#
+#- type: loadoutGroup
+#  id: PlantTechnicianPDA
+#  name: loadout-group-contractor-pda
+#  hidden: true
+#  loadouts:
+#  - PlantTechnicianPlantTechnicianPDA
+#  fallbacks:
+#  - PlantTechnicianPlantTechnicianPDA
 
 - type: loadoutGroup
   id: PlantManagerGlasses

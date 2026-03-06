@@ -333,6 +333,14 @@
       # Weapon
       - sprite: Objects/Weapons/Melee/baseball_bat.rsi
         state: wielded-inhand-right
+      neckalt: # Aurora's Song - second neck slot
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Melee/baseball_bat.rsi
+        state: wielded-inhand-right
   - type: RandomSprite
     available:
       - gloves_decor:
@@ -346,6 +354,14 @@
   - type: Clothing
     clothingVisuals:
       neck:
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Melee/fireaxe.rsi
+        state: wielded-inhand-right
+      neckalt: # Aurora's Song - second neck slot
       # Gloves
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND
@@ -369,6 +385,14 @@
       # Weapon
       - sprite: Objects/Weapons/Melee/sledgehammer.rsi
         state: wielded-inhand-right
+      neckalt: # Aurora's Song - second neck slot
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Melee/sledgehammer.rsi
+        state: wielded-inhand-right
 
 - type: entity
   id: PunkHandsGlovesShotgun
@@ -378,6 +402,14 @@
   - type: Clothing
     clothingVisuals:
       neck:
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi
+        state: wielded-inhand-right
+      neckalt: # Aurora's Song - second neck slot
       # Gloves
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND
@@ -401,6 +433,14 @@
       # Weapon
       - sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
         state: wielded-inhand-right
+      neckalt: # Aurora's Song - second neck slot
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
+        state: wielded-inhand-right
 
 - type: entity
   id: PunkHandsGlovesLaserGun
@@ -410,6 +450,14 @@
   - type: Clothing
     clothingVisuals:
       neck:
+      # Gloves
+      - sprite: Clothing/Hands/Gloves/Color/color.rsi
+        state: equipped-HAND
+        map: [ "gloves_decor" ]
+      # Weapon
+      - sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
+        state: wielded-inhand-right
+      neckalt: # Aurora's Song - second neck slot
       # Gloves
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND

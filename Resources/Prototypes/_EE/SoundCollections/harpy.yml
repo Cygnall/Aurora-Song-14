@@ -33,6 +33,10 @@
     - /Audio/_NF/Voice/Goblin/goblin_scream_2.ogg # Frontier
     - /Audio/_NF/Voice/Goblin/goblin_scream_3.ogg # Frontier
     - /Audio/_NF/Voice/Goblin/goblin_scream_4.ogg # Frontier
+    - /Audio/_SimpleStation14/Voice/Slime/slime_scream_f1.ogg # Aurora Song
+    - /Audio/_SimpleStation14/Voice/Slime/slime_scream_f2.ogg # Aurora Song
+    - /Audio/_SimpleStation14/Voice/Slime/slime_scream_m1.ogg # Aurora Song
+    - /Audio/_SimpleStation14/Voice/Slime/slime_scream_m2.ogg # Aurora Song
 
 - type: soundCollection
   id: HarpyLaugh
@@ -51,6 +55,9 @@
     - /Audio/_NF/Voice/Sheleg/sheleg_laugh_2.ogg # Frontier
     - /Audio/_NF/Voice/Goblin/goblin_cackle_1.ogg # Frontier
     - /Audio/_NF/Voice/Goblin/goblin_cackle_2.ogg # Frontier
+    - /Audio/_SimpleStation14/Voice/Slime/slime_laugh_f1.ogg # Aurora Song
+    - /Audio/_SimpleStation14/Voice/Slime/slime_laugh_m1.ogg # Aurora Song
+    - /Audio/_SimpleStation14/Voice/Slime/slime_laugh_m2.ogg # Aurora Song
 
 - type: soundCollection
   id: HarpyHisses

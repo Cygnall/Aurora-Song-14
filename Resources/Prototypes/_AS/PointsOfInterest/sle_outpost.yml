@@ -37,19 +37,19 @@
         - type: StationNameSetup
           mapNameTemplate: 'SLE Outpost'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Icons/Stations/nfsd-banner.png
+          iconPath: /Textures/_AS/Icons/Stations/sle-banner.png
           stationSubtext: 'aurora-lobby-sle-subtext'
           stationDescription: 'aurora-lobby-sle-description'
           lobbySortOrder: 2
         - type: StationJobs
           availableJobs:
-            Sheriff: [ 1, 1 ]
-            Bailiff: [ 1, 1 ]
-            SeniorOfficer: [ 1, 1 ]
-            Brigmedic: [ 1, 1 ]
-            NFDetective: [ 1, 1 ]
-            Deputy: [ 3, 3 ]
-            Cadet: [ 0, 0 ]
+            Commissioner: [ 1, 1 ]
+            Lieutenant: [ 1, 1 ]
+            Sergeant: [ 1, 1 ]
+            Corpsman: [ 1, 1 ]
+            ASDetective: [ 1, 1 ]
+            Officer: [ 3, 3 ]
+            Rookie: [ 0, 0 ]
             # Others:
             PublicAffairsLiaison: [ 1, 1 ]
           tags:

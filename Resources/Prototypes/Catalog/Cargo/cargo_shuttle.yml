@@ -18,6 +18,50 @@
   category: cargoproduct-category-name-shuttle
   group: market
 
+# Aurora: FTL Drives
+- type: cargoProduct
+  id: ShuttleFTLDrive25
+  icon:
+    sprite: _Mono/Structures/ShuttleComponents/drive.rsi
+    state: control
+  product: CrateEngineeringFTLDrive25
+  cost: 30000
+  category: cargoproduct-category-name-shuttle
+  group: market
+
+- type: cargoProduct
+  id: ShuttleFTLDrive50
+  icon:
+    sprite: _Mono/Structures/ShuttleComponents/drive.rsi
+    state: control
+  product: CrateEngineeringFTLDrive50
+  cost: 60000
+  category: cargoproduct-category-name-shuttle
+  group: market
+
+# Commenting out the 25S and the 160 to move them to researchable techs
+#- type: cargoProduct
+#  id: ShuttleFTLDrive25S
+#  icon:
+#    sprite: _Mono/Structures/ShuttleComponents/drive.rsi
+#    state: control
+#  product: CrateEngineeringFTLDrive25S
+#  cost: 45000
+#  category: cargoproduct-category-name-shuttle
+#  group: market
+#
+#- type: cargoProduct
+#  id: ShuttleFTLDrive160
+#  icon:
+#    sprite: _Mono/Structures/ShuttleComponents/drive_heavy_core.rsi
+#    state: control
+#  product: CrateEngineeringFTLDrive160
+#  cost: 100000
+#  category: cargoproduct-category-name-shuttle
+#  group: market
+
+# End Aurora: FTL Drives
+
 # - type: cargoProduct
   # id: ShuttlePowerKit
   # icon:

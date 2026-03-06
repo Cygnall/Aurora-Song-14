@@ -1,0 +1,40 @@
+# Site Manager Jumpsuits
+- type: loadout
+  id: SiteManagerJumpsuitChiefEngineer
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChiefEngineer
+
+- type: loadout
+  id: SiteManagerJumpskirtChiefEngineer
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtChiefEngineer
+
+- type: loadout
+  id: SiteManagerJumpsuitChiefEngineerTurtle
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitChiefEngineerTurtle
+
+- type: loadout
+  id: SiteManagerJumpskirtChiefEngineerTurtle
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtChiefEngineerTurtle
+
+- type: loadout
+  id: SiteManagerJumpsuitMilitaryEngineeringChief
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitMilitaryEngineeringChief
+
+- type: loadout
+  id: SiteManagerJumpsuitMilitarySiteManager
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitMilitarySiteManager
+
+- type: loadout
+  id: SiteManagerJumpsuitRD
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitResearchDirector
+
+- type: loadout
+  id: SiteManagerJumpskirtRD
+  equipment:
+    jumpsuit: ClothingUniformJumpskirtResearchDirector

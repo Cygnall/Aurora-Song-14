@@ -22,7 +22,7 @@
     slots:
     - belt
   - type: Item
-    size: Ginormous
+    size: Normal # Aurora
   - type: Storage
     maxItemSize: Normal
     grid:

@@ -75,7 +75,9 @@
   id: MedicalBounty
   randomizeName: true # Patients should have names (easier to remember)
   speciesBlacklist:
-  - IPC # Aurora Song - IPCs don't work well with medical damage mechanics
+  - IPC # Aurora's Song - IPCs don't work well with medical damage mechanics
+  - Fairy # Aurora's Song - incredibly annoying if rotted
+  - Sheleg # Aurora's Song - can't guarantee spawns with suit
   components:
   - type: StinkyTrait
   - type: Carriable # Carrying system from nyanotrasen.

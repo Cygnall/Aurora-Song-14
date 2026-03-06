@@ -1,0 +1,7 @@
+- type: loadout
+  id: CorpsmanClothingHeadHatCorpsman
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ASClothingHeadHatSLEBeretBigCobalt

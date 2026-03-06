@@ -1,0 +1,39 @@
+# Author Info
+# GitHub: Zenixic
+# Discord: zenixic
+#
+- type: vessel
+  id: Drone
+  parent: BaseVessel
+  name: XED Drone
+  description: A compact research shuttle utilizing experimental Xenomorph materials
+  price: 64000 #Appraises at ~58k
+  category: Small
+  group: Scrap
+  shuttlePath: /Maps/_AS/Shuttles/Scrap/drone.yml
+  guidebookPage: Null
+  class:
+  - Scrapyard
+  - Science
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Drone
+  mapName: 'XED Drone'
+  mapPath: /Maps/_AS/Shuttles/Scrap/drone.yml
+  minPlayers: 0
+  stations:
+    Drone:
+      stationProto: StandardFrontierVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Drone {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs:
+            ContractorInterview: [ 0, 0 ]
+            PilotInterview: [ 0, 0 ]
+            MercenaryInterview: [ 0, 0 ]

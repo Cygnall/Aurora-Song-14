@@ -1,132 +1,180 @@
 # Pistols / SMGs
-- type: hitscan
+- type: entity
   id: NFRedLightLaser
-  damage:
-    types:
-      Heat: 14 #Damage Rebalanced | Aurora
-  muzzleFlash: &lightMuzzleFlash
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_laser
-  travelFlash: &lightTravelFlash
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam
-  impactFlash: &lightImpactFlash
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_laser
-  maxLength: 21
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 14 #Damage Rebalanced | Aurora
+  - type: HitscanBasicVisuals
+    muzzleFlash: &lightMuzzleFlash
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_laser
+    travelFlash: &lightTravelFlash
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam
+    impactFlash: &lightImpactFlash
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_laser
+  - type: HitscanBasicRaycast
+    maxDistance: 21
 
 # Assault Rifles / Carbines
-- type: hitscan
+- type: entity
   id: NFRedMediumLaser
-  damage:
-    types:
-      Heat: 17 #Damage Rebalanced | Aurora
-  muzzleFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_beam_heavy
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam_heavy
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_beam_heavy
-  maxLength: 21
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 17 #Damage Rebalanced | Aurora
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_beam_heavy
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam_heavy
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_beam_heavy
+  - type: HitscanBasicRaycast
+    maxDistance: 21
 
 # Rifles
-- type: hitscan
+- type: entity
   id: NFRedHeavyLaser
-  damage:
-    types:
-      Heat: 22 #Damage Rebalanced | Aurora
-  muzzleFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_beam_heavy
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam_heavy
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_beam_heavy
-  maxLength: 21
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 22 #Damage Rebalanced | Aurora
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_beam_heavy
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam_heavy
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_beam_heavy
+  - type: HitscanBasicRaycast
+    maxDistance: 21
 
 # Sniper Rifles
-- type: hitscan
+- type: entity
   id: NFRedSpecialLaser
-  damage:
-    types:
-      Heat: 25 #Damage Rebalanced | Aurora
-  muzzleFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_beam_heavy2
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam_heavy2
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_beam_heavy2
-  maxLength: 21
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 25 #Damage Rebalanced | Aurora
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_beam_heavy2
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam_heavy2
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_beam_heavy2
+  - type: HitscanBasicRaycast
+    maxDistance: 21
 
 # XRay
-- type: hitscan
+- type: entity
   id: NFXrayLaser
-  damage:
-    types:
-      Heat: 10
-      Radiation: 10
-  muzzleFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_xray
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: xray
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_xray
-  maxLength: 21
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 10
+        Radiation: 10
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_xray
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: xray
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_xray
+  - type: HitscanBasicRaycast
+    maxDistance: 21
 
 # Pulse
-- type: hitscan
+- type: entity
   id: NFPulse
-  damage:
-    types:
-      Heat: 25 #Damage Rebalanced | Aurora
-  muzzleFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_blue
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam_blue
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_blue
-  maxLength: 21
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 25 #Damage Rebalanced | Aurora
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_blue
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam_blue
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_blue
+  - type: HitscanBasicRaycast
+    maxDistance: 21
 
 #region ShuttleLaser - Aurora
 # Shuttle
-- type: hitscan
+- type: entity
   id: NFRedShuttleLaser
-  damage:
-    types:
-      heat: 50
-  muzzleFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: muzzle_beam_heavy2
-  travelFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: beam_heavy2
-  impactFlash:
-    sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
-    state: impact_beam_heavy2
-  maxLength: 21
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        heat: 50
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: muzzle_beam_heavy2
+    travelFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: beam_heavy2
+    impactFlash:
+      sprite: Objects/Weapons/Guns/Projectiles/projectiles.rsi
+      state: impact_beam_heavy2
+  - type: HitscanBasicRaycast
+    maxDistance: 21
 #endregion ShuttleLaser - Aurora
 
 # Mobs
-- type: hitscan
+- type: entity
   id: NFRedLaserPractice
-  damage:
-    types:
-      Heat: 1
-  muzzleFlash: *lightMuzzleFlash
-  travelFlash: *lightTravelFlash
-  impactFlash: *lightImpactFlash
-  maxLength: 21
+  parent: BasicHitscan
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 1
+  - type: HitscanBasicVisuals
+    muzzleFlash: *lightMuzzleFlash
+    travelFlash: *lightTravelFlash
+    impactFlash: *lightImpactFlash
+  - type: HitscanBasicRaycast
+    maxDistance: 21

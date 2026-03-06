@@ -1,0 +1,15 @@
+- type: loadout
+  id: OfficerClothingHeadHatCampaignOfficer
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ASClothingHeadHatSLECampaign
+
+- type: loadout
+  id: OfficerClothingHeadHatBeretOfficer
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  equipment:
+    head: ASClothingHeadHatSLEBeretNavy

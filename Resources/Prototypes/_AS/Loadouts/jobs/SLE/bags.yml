@@ -1,0 +1,41 @@
+#region Navy
+- type: loadout
+  id: SLEClothingBackpackSLENavy
+  equipment:
+    back: ASClothingBackpackSLENavy
+
+- type: loadout
+  id: SLEClothingBackpackSatchelSLENavy
+  equipment:
+    back: ASClothingBackpackSatchelSLENavy
+
+- type: loadout
+  id: SLEClothingBackpackDuffelSLENavy
+  equipment:
+    back: ASClothingBackpackDuffelSLENavy
+
+- type: loadout
+  id: SLEClothingBackpackMessengerSLENavy
+  equipment:
+    back: ASClothingBackpackMessengerSLENavy
+
+#region Cobalt/ Corpsman
+- type: loadout
+  id: SLEClothingBackpackSLECorpsman
+  equipment:
+    back: ASClothingBackpackSLECorpsman
+
+- type: loadout
+  id: SLEClothingBackpackSatchelSLECobalt
+  equipment:
+    back: ASClothingBackpackSatchelSLECobalt
+
+- type: loadout
+  id: SLEClothingBackpackDuffelSLECorpsman
+  equipment:
+    back: ASClothingBackpackDuffelSLECorpsman
+
+- type: loadout
+  id: SLEClothingBackpackMessengerSLECobalt
+  equipment:
+    back: ASClothingBackpackMessengerSLECobalt

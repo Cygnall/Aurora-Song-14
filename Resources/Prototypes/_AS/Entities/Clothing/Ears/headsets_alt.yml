@@ -1,11 +1,9 @@
-# Aurora Song - SLE (Security Logistics Enforcement) alt headsets
-# Prototypes for Aurora Song's SLE faction equipment - over-ear variants
-
+#region SLE
 - type: entity
   parent: ClothingHeadsetAlt
-  id: ASClothingHeadsetAltSLEBrown
+  id: ASClothingHeadsetAltSLENavy
   name: SLE over-ear headset
-  description: An updated over-ear headset for Security Logistics Enforcement personnel.
+  description: An updated over-ear headset for Sector Law Enforcement personnel.
   components:
   - type: ContainerFill
     containers:
@@ -14,37 +12,37 @@
       - EncryptionKeyNfsd
       - EncryptionKeyCommand
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_navy.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_navy.rsi
 
 - type: entity
-  parent: ASClothingHeadsetAltSLEBrown
-  id: ASClothingHeadsetAltSLEGreen
+  parent: ASClothingHeadsetAltSLENavy
+  id: ASClothingHeadsetAltSLEOrange
   name: SLE over-ear headset
-  description: An updated over-ear headset for Security Logistics Enforcement personnel.
+  description: An updated over-ear headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_orange.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_orange.rsi
 
 - type: entity
-  parent: ASClothingHeadsetAltSLEBrown
-  id: ASClothingHeadsetAltSLECreamandBrown
+  parent: ASClothingHeadsetAltSLENavy
+  id: ASClothingHeadsetAltSLECobalt
   name: SLE over-ear headset
-  description: An updated over-ear headset for Security Logistics Enforcement personnel.
+  description: An updated over-ear headset for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_cobalt.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_cobalt.rsi
 
 # Centcom/Sheriff variants with station master encryption
 - type: entity
   parent: [ClothingHeadsetAlt, BaseCommandContraband]
-  id: ASClothingHeadsetAltSLEBrownCentcom
-  name: sheriff's over-ear headset
+  id: ASClothingHeadsetAltSLENavyCentcom
+  name: Commissioner's over-ear headset
   categories: [ HideSpawnMenu ]
   components:
   - type: ContainerFill
@@ -52,29 +50,45 @@
       key_slots:
       - EncryptionKeyStationMaster
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_navy.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_brown.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_navy.rsi
 
 - type: entity
-  parent: ASClothingHeadsetAltSLEBrownCentcom
-  id: ASClothingHeadsetAltSLEGreenCentcom
-  name: sheriff's over-ear headset
+  parent: ASClothingHeadsetAltSLENavyCentcom
+  id: ASClothingHeadsetAltSLEOrangeCentcom
+  name: Commissioner's over-ear headset
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_orange.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_green.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_orange.rsi
 
 - type: entity
-  parent: ASClothingHeadsetAltSLEBrownCentcom
-  id: ASClothingHeadsetAltSLECreamandBrownCentcom
-  name: sheriff's over-ear headset
+  parent: ASClothingHeadsetAltSLENavyCentcom
+  id: ASClothingHeadsetAltSLECobaltCentcom
+  name: Commissioner's over-ear headset
   categories: [ HideSpawnMenu ]
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_cobalt.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Ears/Headsets/sle_h_cb.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Ears/Headsets/sle_h_cobalt.rsi
 
+#region Colonial Command
+
+- type: entity
+  parent: [ClothingHeadsetAlt, BaseColcommCommandContraband]
+  id: ClothingHeadsetAltColCom
+  name: ColComm over-ear headset
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyColCom
+      - EncryptionKeyStationMaster
+  - type: Sprite
+    sprite: _AS/Clothing/Ears/Headsets/colcom.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Ears/Headsets/colcom.rsi

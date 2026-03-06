@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "contraband by gentlebutter, animated by whatston3; cargo_market, shuttle_records, solar_screen, station_atm by whatston3; computer_expedition, computer_scrap, scrap_keyboard, scrap_key by erhardsteinhauer",
+    "copyright": "contraband by gentlebutter, animated by whatston3; cargo_market, shuttle_records, solar_screen, station_atm by whatston3; computer_expedition, computer_scrap, scrap_keyboard, scrap_key by erhardsteinhauer, sle and cr recolor by Vandanna/ Cygnall (discord/ github)",
     "size": {
         "x": 32,
         "y": 32
@@ -274,6 +274,36 @@
             ]
         },
         {
+            "name": "shipyard_cr",
+            "directions": 4,
+            "delays": [
+                [
+                    2,
+                    0.3,
+                    2,
+                    0.3
+                ],
+                [
+                    2,
+                    0.3,
+                    2,
+                    0.3
+                ],
+                [
+                    2,
+                    0.3,
+                    2,
+                    0.3
+                ],
+                [
+                    2,
+                    0.3,
+                    2,
+                    0.3
+                ]
+            ]
+        },
+        {
             "name": "shipyard_scrap",
             "directions": 4,
             "delays": [
@@ -468,6 +498,36 @@
                     0.4,
                     0.4,
                     0.6
+                ]
+            ]
+        },
+		{
+		    "name": "shipyard_sle",
+            "directions": 4,
+            "delays": [
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
+                ],
+                [
+                    1,
+                    0.3,
+                    1,
+                    0.3
                 ]
             ]
         }

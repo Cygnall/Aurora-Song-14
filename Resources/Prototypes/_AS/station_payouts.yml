@@ -11,9 +11,9 @@
   job: Borg
 
 - type: stationPay
-  id: srPay
+  id: colonialRepPay
   payPerHour: 30000
-  job: StationRepresentative
+  job: ColonialRepresentative
 
 - type: stationPay
   id: stcPay
@@ -60,27 +60,27 @@
 - type: stationPay
   id: sheriffPay
   payPerHour: 30000
-  job: Sheriff
+  job: Commissioner
 
 - type: stationPay
   id: bailiffPay
   payPerHour: 25000
-  job: Bailiff
+  job: Lieutenant
 
 - type: stationPay
   id: sergeantPay
   payPerHour: 20000
-  job: SeniorOfficer
+  job: Sergeant
 
 - type: stationPay
   id: brigmedPay
   payPerHour: 20000
-  job: Brigmedic
+  job: Corpsman
 
 - type: stationPay
   id: nfdetectivePay
   payPerHour: 20000
-  job: NFDetective
+  job: ASDetective
 
 - type: stationPay
   id: palPay
@@ -90,20 +90,20 @@
 - type: stationPay
   id: deputyPay
   payPerHour: 15000
-  job: Deputy
+  job: Officer
 
 - type: stationPay
   id: cadetPay
   payPerHour: 15000
-  job: Cadet
+  job: Rookie
 
-#Edison
+#Damascus
 - type: stationPay
   id: TechnicianPay
   payPerHour: 15000
-  job: PlantTechnician
+  job: SiteWorker
 
 - type: stationPay
   id: managerPay
   payPerHour: 30000
-  job: PlantManager
+  job: SiteManager

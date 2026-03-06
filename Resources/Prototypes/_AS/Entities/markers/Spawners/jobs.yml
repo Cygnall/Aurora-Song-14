@@ -1,4 +1,6 @@
-﻿- type: entity
+﻿#region Medical
+
+- type: entity
   id: SpawnPointMedic
   parent: SpawnPointJobBase
   name: Medic
@@ -10,6 +12,8 @@
     layers:
       - state: green
       - state: medic
+
+#region Service
 
 - type: entity
   id: SpawnPointService
@@ -24,4 +28,46 @@
       - state: green
       - state: serviceworker
 
+#region Command
+
+- type: entity
+  parent: SpawnPointHeadOfPersonnel
+  id: SpawnPointColonialRepresentative
+  name: colonial representative
+  components:
+  - type: SpawnPoint
+    job_id: ColonialRepresentative
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: cr
+
+#region Engineering
+
+- type: entity
+  parent: SpawnPointChiefEngineer
+  id: SpawnPointSiteManager
+  name: site manager
+  components:
+  - type: SpawnPoint
+    job_id: SiteManager
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: site-manager
+
+- type: entity
+  parent: SpawnPointStationEngineer
+  id: SpawnPointSiteWorker
+  name: site worker
+  components:
+  - type: SpawnPoint
+    job_id: SiteWorker
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: site-worker
 

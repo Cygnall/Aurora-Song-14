@@ -1,0 +1,104 @@
+#region SLE
+
+- type: entity
+  parent: ASClothingHeadHardsuitWithLightBaseSle # TODO: Make function like EVA helmet
+  id: ClothingHeadHelmetSoftsuitSlePatrol
+  categories: [ HideSpawnMenu ]
+  name: SLE patrol suit helmet
+  description: Lightly armored softsuit helmet for beat-cop needs.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Head/Softsuits/sle_patrol.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Head/Softsuits/sle_patrol.rsi
+  - type: PointLight
+    color: "#ffeead"
+    radius: 5
+    energy: 2
+  - type: PressureProtection
+    highPressureMultiplier: 0.525
+    lowPressureMultiplier: 1000
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.9
+        Slash: 0.9
+        Piercing: 0.9
+        Heat: 0.9
+
+- type: entity
+  parent: ClothingHeadEVAHelmetWithLightBase
+  id: ASClothingHeadEVAHelmetSLE
+  name: SLE EVA helmet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Head/Helmets/eva_color.rsi # Aurora Song - Using color layers from NF
+    layers:
+    - state: icon-base
+      color: "#5a8fc5"  # SLE standard blue
+    - state: icon-reinforced-points
+      color: "#2a4a7c"  # SLE dark blue
+    - state: icon-visor
+      color: "#7aa5d5"  # SLE bright blue
+  - type: ToggleableVisuals
+    spriteLayer: light
+    clothingVisuals:
+      head:
+      - state: equipped-head-light-siren
+        color: red
+        shader: unshaded
+  - type: Clothing
+    sprite: _NF/Clothing/Head/Helmets/eva_color.rsi # Aurora Song - Using color layers from NF
+    clothingVisuals:
+      head:
+      - state: equipped-head-base
+        color: "#5a8fc5"  # SLE standard blue
+      - state: equipped-head-reinforced-points
+        color: "#2a4a7c"  # SLE dark blue
+      - state: equipped-head-visor
+        color: "#7aa5d5"  # SLE bright blue
+  - type: ItemTogglePointLight
+  - type: PointLight
+    enabled: false
+    radius: 2
+    energy: 2
+    color: red
+    mask: /Textures/Effects/LightMasks/double_cone.png
+  - type: RotatingLight
+    speed: 360
+
+#region Command
+
+- type: entity
+  parent: ClothingHeadEVAHelmetWithLightBase
+  id: ASClothingHeadEVAHelmetColonialRepresentative
+  name: station representative EVA helmet
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
+    layers:
+    - state: icon-base
+      color: "#1C4D8D"
+    - state: icon-reinforced-points
+      color: "#3e3e48"
+    - state: icon-decals-02
+      color: "#A1A1A1"
+    - state: icon-visor
+      color: "#fbe6b8"
+  - type: Clothing
+    sprite: _NF/Clothing/Head/Helmets/eva_color.rsi
+    clothingVisuals:
+      head:
+      - state: equipped-head-base
+        color: "#1C4D8D"
+      - state: equipped-head-reinforced-points
+        color: "#3e3e48"
+      - state: equipped-head-decals-02
+        color: "#A1A1A1"
+      - state: equipped-head-visor
+        color: "#fbe6b8"
+  - type: PointLight
+    radius: 5
+    energy: 2

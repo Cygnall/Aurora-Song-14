@@ -1,4 +1,5 @@
-﻿- type: entity
+﻿#region Medic
+- type: entity
   id: ThrusterMedic
   parent: ThrusterSecurity
   suffix: MEDIC
@@ -20,37 +21,8 @@
   - type: Machine
     board: ThrusterMedicMachineCircuitboard
 
-# Aurora Song - SLE Gyroscope
-# Using NFSD sprite with color-shifting to SLE blue
-- type: entity
-  id: ASGyroscopeSLE
-  parent: GyroscopeSecurity
-  suffix: SLE
-  components:
-  - type: Sprite
-    sprite: _NF/Structures/Shuttles/gyroscope.rsi
-    color: "#4a6fa5"  # SLE blue
-    layers: &slegyrolayers
-    - state: base_nfsd
-      map: ["enum.ThrusterVisualLayers.Base"]
-      color: "#4a6fa5"  # SLE blue
-    - state: thrust
-      map: ["enum.ThrusterVisualLayers.ThrustOn"]
-      shader: unshaded
-      visible: false
-    - state: thrust_burn_nfsd
-      map: [ "enum.ThrusterVisualLayers.Thrusting" ]
-      visible: false
-      color: "#5a8fc5"  # SLE light blue for thrust
-    - state: thrust_burn_unshaded
-      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
-      shader: unshaded
-      visible: false
-      color: "#7aa5d5"  # SLE bright blue for unshaded thrust
-  - type: Machine
-    board: GyroscopeSLEMachineCircuitboard
+#region SLE
 
-# Aurora Song - SLE Thruster
 - type: entity
   id: ASThrusterSLE
   parent: ThrusterSecurity
@@ -59,9 +31,8 @@
   - type: Sprite
     sprite: _NF/Structures/Shuttles/thruster.rsi
     layers:
-    - state: base_nfsd
+    - state: base_sle
       map: ["enum.ThrusterVisualLayers.Base"]
-      color: "#4a6fa5"  # SLE blue
     - state: thrust
       map: ["enum.ThrusterVisualLayers.ThrustOn"]
       shader: unshaded
@@ -74,7 +45,30 @@
   - type: Machine
     board: ThrusterSLEMachineCircuitboard
 
-# Aurora Song - Small SLE Gyroscope
+- type: entity
+  id: ASGyroscopeSLE
+  parent: GyroscopeSecurity
+  suffix: SLE
+  components:
+  - type: Sprite
+    sprite: _NF/Structures/Shuttles/gyroscope.rsi
+    layers: &slegyrolayers
+    - state: base_sle
+      map: ["enum.ThrusterVisualLayers.Base"]
+    - state: thrust
+      map: ["enum.ThrusterVisualLayers.ThrustOn"]
+      shader: unshaded
+      visible: false
+    - state: thrust_burn_sle
+      map: [ "enum.ThrusterVisualLayers.Thrusting" ]
+      visible: false
+    - state: thrust_burn_unshaded
+      map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
+      shader: unshaded
+      visible: false
+  - type: Machine
+    board: GyroscopeSLEMachineCircuitboard
+
 - type: entity
   id: ASSmallGyroscopeSLE
   parent: SmallGyroscopeSecurity
@@ -84,26 +78,18 @@
   - type: Sprite
     sprite: _NF/Structures/Shuttles/gyroscope.rsi
     layers:
-    - state: base_small_nfsd
+    - state: base_small_sle
       map: ["enum.ThrusterVisualLayers.Base"]
-      color: "#4a6fa5"  # SLE blue
     - state: thrust
       map: ["enum.ThrusterVisualLayers.ThrustOn"]
       shader: unshaded
       visible: false
-    - state: thrust_burn_small_nfsd
+    - state: thrust_burn_small_sle
       map: [ "enum.ThrusterVisualLayers.Thrusting" ]
       visible: false
-      color: "#5a8fc5"  # SLE light blue for thrust
     - state: thrust_burn_unshaded
       map: ["enum.ThrusterVisualLayers.ThrustingUnshaded"]
       shader: unshaded
       visible: false
   - type: Machine
     board: SmallGyroscopeSLEMachineCircuitboard
-
-# Legacy alias
-- type: entity
-  id: SmallASGyroscopeSLE
-  parent: ASSmallGyroscopeSLE
-

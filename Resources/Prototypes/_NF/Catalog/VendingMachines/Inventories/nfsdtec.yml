@@ -1,8 +1,8 @@
 - type: vendingMachineInventory
   id: NfsdTechInventory
   startingInventory:
-    NFHyperlinkBookSpaceLaw: 20
-    HyperlinkBookNfsdSop: 20
+    ASHyperlinkBookSpaceLaw: 20 # Aurora's Song - changed to AS version
+    HyperlinkBookSLESop: 20 # Aurora's Song - changed to AS version
     Handcuffs: 10
     Zipties: 10
     GrenadeFlashBang: 10
@@ -31,6 +31,8 @@
     BoxForensicPad: 3 # Frontier
     LogProbeCartridge: 3 # Frontier
     TrackingImplanter: 5 # Frontier
+    NFBaseClothingNeckHolsterThighNfsd: 6
+    NFBaseClothingNeckSheathThighNfsd: 6
 #    MindShieldImplanter: 5 # Frontier
   # security officers need to follow a diet regimen!
 #  contrabandInventory:

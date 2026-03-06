@@ -9,6 +9,7 @@
     - !type:DepartmentTimeRequirement
       department: Security
       time: 10800 # 3 hrs
+  whitelisted: true # AS
   startingGear: NFPirateGear
   alwaysUseSpawner: true
   hideConsoleVisibility: true

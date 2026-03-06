@@ -1,7 +1,7 @@
 - type: reagent
   id: Libidozenithizine
   name: reagent-name-libidozenithizine
-  group: Narcotics
+  group: Aphrodisiacs # DEN
   desc: reagent-desc-libidozenithizine
   physicalDesc: reagent-physical-desc-milky
   flavor: spooky
@@ -21,6 +21,9 @@
         conditions:
         - !type:ReagentThreshold
           max: 10.0
+        - !type:Consent # Aurora Song
+          effectTypes:
+          - Aphrodisiacs
       - !type:HealthChange
         conditions:
         - !type:ReagentThreshold
@@ -40,6 +43,9 @@
         conditions:
         - !type:ReagentThreshold
           min: 10.0
+        - !type:Consent # Aurora Song
+          effectTypes:
+          - Aphrodisiacs
       - !type:PopupMessage
         type: Local
         visualType: Small
@@ -49,3 +55,6 @@
         conditions:
           - !type:ReagentThreshold
             max: 0.1
+          - !type:Consent # Aurora Song
+            effectTypes:
+            - Aphrodisiacs

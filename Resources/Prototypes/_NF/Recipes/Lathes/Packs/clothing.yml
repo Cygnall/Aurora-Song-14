@@ -190,7 +190,8 @@
   - ClothingHandsGlovesCombatNfsdCream
   - ClothingShoesBootsNfsdBrown
   - ClothingShoesBootsNfsdCream
-  - NFPouchNfsd
+ # - NFPouchNfsd # Removed in favour of ASPouchSLE
+  - ASPouchSLE
   # Other
   - ClothingWalletLeatherMail
   - ClothingHeadHatStcCap

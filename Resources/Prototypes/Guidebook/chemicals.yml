@@ -13,6 +13,7 @@
   - Biological
   - Special
   - Others
+  - Lewd
   filterEnabled: True
 
 - type: guideEntry
@@ -68,3 +69,11 @@
   name: guide-entry-others
   text: "/ServerInfo/Guidebook/ChemicalTabs/Other.xml"
   filterEnabled: True
+
+  # DEN - Lewd Stuff
+- type: guideEntry
+  id: Lewd
+  name: guide-entry-lewd-chems
+  text: "/ServerInfo/Guidebook/ChemicalTabs/Lewd.xml"
+  filterEnabled: True
+  # END DEN

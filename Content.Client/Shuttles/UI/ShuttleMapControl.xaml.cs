@@ -14,6 +14,7 @@ using Robust.Shared.Input;
 using Robust.Shared.Map;
 using Robust.Shared.Map.Components;
 using Robust.Shared.Physics.Components;
+using Robust.Shared.Prototypes; // Mono
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
 
@@ -24,6 +25,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 {
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly IInputManager _inputs = default!;
+    [Dependency] private readonly IMapManager _mapManager = default!; // Mono
     [Dependency] private readonly IEntityManager _entManager = default!; // Frontier
 
     private readonly SharedMapSystem _mapSystem;
@@ -35,6 +37,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
     public bool ShowBeacons = true;
     public MapId ViewingMap = MapId.Nullspace;
 
+    private EntityUid? _console; // Mono
     private EntityUid? _shuttleEntity;
 
     private readonly Font _font;
@@ -45,6 +48,12 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
     /// Toggles FTL mode on. This shows a pre-vis for FTLing a grid.
     /// </summary>
     public bool FtlMode;
+
+    // Mono
+    /// <summary>
+    /// Shows only the FTL range circle without cursor targeting elements.
+    /// </summary>
+    public bool ShowFTLRangeOnly;
 
     private Angle _ftlAngle;
 
@@ -72,7 +81,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
     private readonly Dictionary<Color, List<(Vector2, string)>> _strings = new();
     private readonly List<ShuttleExclusionObject> _viewportExclusions = new();
 
-    public ShuttleMapControl() : base(256f, 512f, 512f)
+    public ShuttleMapControl() : base(256f, 4096f, 512f) // Mono 512 to 4096
     {
         RobustXamlLoader.Load(this);
         _mapSystem = EntManager.System<SharedMapSystem>();
@@ -92,6 +101,12 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         Recentering = recentering;
     }
 
+    // Mono
+    public void SetConsole(EntityUid? console)
+    {
+        _console = console;
+    }
+
     public void SetShuttle(EntityUid? entity)
     {
         _shuttleEntity = entity;
@@ -99,10 +114,6 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
     protected override void MouseMove(GUIMouseMoveEventArgs args)
     {
-        // No move for you.
-        if (FtlMode)
-            return;
-
         base.MouseMove(args);
     }
 
@@ -112,21 +123,22 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         {
             if (args.Function == EngineKeyFunctions.UIClick)
             {
-                var mapUid = _mapSystem.GetMapOrInvalid(ViewingMap);
+                var mapUid = _mapManager.GetMapEntityId(ViewingMap); // Mono: GetMapOrInvalid -> GetMapEntityId
 
                 var beaconsOnly = EntManager.TryGetComponent(mapUid, out FTLDestinationComponent? destComp) &&
                                   destComp.BeaconsOnly;
 
                 var mapTransform = Matrix3Helpers.CreateInverseTransform(Offset, Angle.Zero);
 
-                if (beaconsOnly && TryGetBeacon(_beacons, mapTransform, args.RelativePixelPosition, PixelRect, out var foundBeacon, out _))
+                if (beaconsOnly && TryGetBeacon(_beacons, mapTransform, args.RelativePixelPosition, PixelRect, out var foundBeacon, out _)) // Mono: Use pixels
                 {
                     RequestBeaconFTL?.Invoke(foundBeacon.Entity, _ftlAngle);
                 }
                 else
                 {
                     // We'll send the "adjusted" position and server will adjust it back when relevant.
-                    var mapCoords = new MapCoordinates(InverseMapPosition(args.RelativePosition), ViewingMap);
+                    var mapCoords = new MapCoordinates(InverseMapPosition(args.RelativePixelPosition), ViewingMap);
+
                     RequestFTL?.Invoke(mapCoords, _ftlAngle);
                 }
             }
@@ -140,7 +152,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         // Scroll handles FTL rotation if you're in FTL mode.
         if (FtlMode)
         {
-            _ftlAngle += Angle.FromDegrees(15f) * args.Delta.Y;
+            _ftlAngle -= Angle.FromDegrees(15f) * args.Delta.Y; // Mono Edit: Subtract instead of add to preserve clockwise rotation when scrolling up. (positive angles are actually counter-clockwise)
             _ftlAngle = _ftlAngle.Reduced();
             return;
         }
@@ -182,7 +194,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
         // Remove offset so we can floor.
         var botLeft = new Vector2(0f, 0f);
-        var topRight = botLeft + Size;
+        var topRight = botLeft + PixelSize; // Mono: Pixels
 
         var flooredBL = botLeft - originBL;
 
@@ -252,7 +264,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
         DrawParallax(handle);
 
-        var viewedMapUid = _mapSystem.GetMapOrInvalid(ViewingMap);
+        var viewedMapUid = _mapManager.GetMapEntityId(ViewingMap); // Mono: GetMapOrInvalid -> GetMapEntityId
         var matty = Matrix3Helpers.CreateInverseTransform(Offset, Angle.Zero);
         var realTime = _timing.RealTime;
         var viewBox = new Box2(Offset - WorldRangeVector, Offset + WorldRangeVector);
@@ -261,7 +273,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
         // Draw our FTL range + no FTL zones
         // Do it up here because we want this layered below most things.
-        if (FtlMode)
+        if (FtlMode || ShowFTLRangeOnly) // Mono
         {
             if (EntManager.TryGetComponent<TransformComponent>(_shuttleEntity, out var shuttleXform))
             {
@@ -300,7 +312,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
             }
 
             var adjustedPos = Vector2.Transform(mapCoords.Position, matty);
-            var localPos = ScalePosition(adjustedPos with { Y = -adjustedPos.Y});
+            var localPos = ScalePosition(adjustedPos with { Y = -adjustedPos.Y });
             handle.DrawCircle(localPos, exclusion.Range * MinimapScale, exclusionColor.WithAlpha(0.05f));
             handle.DrawCircle(localPos, exclusion.Range * MinimapScale, exclusionColor, filled: false);
 
@@ -370,6 +382,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
             var mapObject = GetMapObject(gridRelativePos, Angle.Zero, scalePosition: true);
             AddMapObject(existingEdges, existingVerts, mapObject);
 
+            // Mono - now always has label
             // Text
             if (iffComp != null && (iffComp.Flags & IFFFlags.HideLabel) != 0x0)
                 continue;
@@ -411,7 +424,7 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         var mouseLocalPos = GetLocalPosition(mousePos);
 
         // Draw dotted line from our own shuttle entity to mouse.
-        if (FtlMode)
+        if (FtlMode && !ShowFTLRangeOnly) // Mono
         {
             if (mousePos.Window != WindowId.Invalid)
             {
@@ -454,17 +467,17 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
 
                     // Draw line from our shuttle to target
                     // Might need to clip the line if it's too far? But my brain wasn't working so F.
-                    handle.DrawDottedLine(gridUiPos, mouseLocalPos, color, (float) realTime.TotalSeconds * 30f);
+                    handle.DrawDottedLine(gridUiPos, mouseLocalPos, color, (float)realTime.TotalSeconds * 30f);
 
                     // Draw shuttle pre-vis
-                    var mouseVerts = GetMapObject(mouseLocalPos, _ftlAngle, scale: MinimapScale);
+                    var mouseVerts = GetMapObject(mouseLocalPos, -_ftlAngle, scale: MinimapScale); // Mono Edit: UI controls and the map are in different coordinate orientations, so the angle has to be negated. (shuttle Y is UI control -Y)
 
                     handle.DrawPrimitives(DrawPrimitiveTopology.TriangleFan, mouseVerts.Span, color.WithAlpha(0.05f));
                     handle.DrawPrimitives(DrawPrimitiveTopology.LineLoop, mouseVerts.Span, color);
 
                     // Draw a notch indicating direction.
                     var ftlLength = GetMapObjectRadius() + 16f;
-                    var ftlEnd = mouseLocalPos + _ftlAngle.RotateVec(new Vector2(0f, -ftlLength));
+                    var ftlEnd = mouseLocalPos + (-_ftlAngle).RotateVec(new Vector2(0f, -ftlLength)); // Mono Edit: UI controls and the map are in different coordinate orientations, so the angle has to be negated. (shuttle Y is UI control -Y)
 
                     handle.DrawLine(mouseLocalPos, ftlEnd, color);
                 }
@@ -616,5 +629,18 @@ public sealed partial class ShuttleMapControl : BaseShuttleControl
         {
             _mapObjects.AddRange(obbies);
         }
+    }
+
+    // Mono
+    /// <summary>
+    /// Draw the coordinate data with a custom color.
+    /// </summary>
+    protected void DrawData(DrawingHandleScreen handle, string text, Color color)
+    {
+        var margin = 5f;
+        var font = _font;
+        var dimensions = handle.GetDimensions(font, text, 1f);
+        var position = new Vector2(margin, PixelHeight - dimensions.Y - margin);
+        handle.DrawString(font, position, text, color);
     }
 }

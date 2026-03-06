@@ -1,0 +1,29 @@
+- type: entity
+  parent: ClothingBackpackMessengerHydroponics
+  id: ASClothingBackpackMessengerHydroponicsTrashFill
+  name: green bag
+  description: "The bag kinda rattles when you move it."
+  components:
+  - type: StorageFill
+    contents:
+      - id: PillCanisterCharcoal
+      - id: FoodCondimentPacketKetchup
+      - id: FoodTinPeachesMaintTrash
+        amount: 2
+      - id: FoodTinBeansTrash
+        amount: 2
+      - id: FoodPSBTrash
+        amount: 2
+      - id: PoppySeeds
+      - id: FoodCondimentPacketKetchup
+      - id: FoodTinMRETrash
+        amount: 2
+      - id: MatchstickSpent
+        amount: 2
+      - id: FoodPSBTrash
+      - id: MysteryFigureBoxTrash
+      - id: MatchstickSpent
+      - id: DrinkBottleBeer
+        amount: 2
+      - id: DrinkWaterBottleFull
+      - id: DrinkColaCanEmpty

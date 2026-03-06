@@ -1,0 +1,11 @@
+- type: loadout
+  id: ColonialRepresentativeClothingEyesHudCommand
+  price: 0
+  equipment:
+    eyes: ClothingEyesHudCommand
+
+- type: loadout
+  id: ColonialRepresentativeClothingEyesGlassesCommand
+  price: 500
+  equipment:
+    eyes: ClothingEyesGlassesCommand

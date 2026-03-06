@@ -1,15 +1,14 @@
-# Aurora Song - Triage Shuttle: Apothecary
-# Modified copy of original shuttle design from New Frontier Station 14
-# Original implementation: https://github.com/new-frontiers-14/frontier-station-14
+# Aurora Song - Objective: Smuggler Intercept 'Mule'
+# Modified copy of original shuttle design from by Zenixic
 
 meta:
   format: 7
   category: Grid
-  engineVersion: 267.3.0
+  engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 11/14/2025 03:11:59
-  entityCount: 617
+  time: 01/27/2026 13:48:39
+  entityCount: 615
 maps: []
 grids:
 - 1
@@ -669,7 +668,7 @@ entities:
     - type: Transform
       pos: 5.5,3.5
       parent: 1
-- proto: AirlockGlassShuttle
+- proto: AirlockShuttle
   entities:
   - uid: 5
     components:
@@ -802,6 +801,13 @@ entities:
     components:
     - type: Transform
       pos: 4.5,0.5
+      parent: 1
+- proto: ASMercenarySpawnerCaptain
+  entities:
+  - uid: 607
+    components:
+    - type: Transform
+      pos: -3.5,2.5
       parent: 1
 - proto: ASMercenarySpawnerMedic
   entities:
@@ -3679,7 +3685,7 @@ entities:
     - type: Transform
       pos: -6.5,4.5
       parent: 1
-- proto: ReinforcedWindow
+- proto: ReinforcedWindowDungeon
   entities:
   - uid: 410
     components:
@@ -3885,13 +3891,6 @@ entities:
     components:
     - type: Transform
       pos: 9.5,-2.5
-      parent: 1
-- proto: SpawnMobMercenaryCaptain
-  entities:
-  - uid: 617
-    components:
-    - type: Transform
-      pos: -3.5,2.5
       parent: 1
 - proto: SpawnPointLatejoin
   entities:

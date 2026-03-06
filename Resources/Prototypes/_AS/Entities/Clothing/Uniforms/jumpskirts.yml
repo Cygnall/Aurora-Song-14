@@ -1,34 +1,358 @@
+#region SLE Base
+
 - type: entity
   parent: ClothingUniformBase
-  id: ClothingUniformJumpskirtSle
-  name: SLE jumpskirt
-  description: A long sleeved jumpskirt produced for deputy sheriffs. Designed to reduce chaffing between the legs for the comfort of skin, slime, scales, fluff, and wood.
-  components:
-  - type: Sprite
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_jumpskirt.rsi
-  - type: Clothing
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_jumpskirt.rsi
-
-# Aurora Song - Additional SLE jumpskirt variants using NFSD sprites
-- type: entity
-  parent: ClothingUniformSkirtBase
   id: ASClothingUniformJumpskirtSLE
   name: SLE jumpskirt
-  description: A long sleeved jumpskirt produced for Security Logistics Enforcement officers.
+  description: A long-sleeved jumpskirt for SLE Officers.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
 
 - type: entity
   parent: ClothingUniformSkirtBase
   id: ASClothingUniformJumpskirtSLEShort
-  name: SLE jumpskirt (short)
-  description: A short sleeved jumpskirt produced for Security Logistics Enforcement officers.
+  name: SLE short-sleeve jumpskirt
+  description: A short-sleeved jumpskirt for SLE Officers.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
 
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEClassic
+  name: SLE classic jumpskirt
+  description: A classic jumpsuit for SLE Officers. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtPublicAffairsLiaison
+  name: public affairs liaison jumpskirt
+  description: A starched and pressed skirt suit for the public affairs liaison.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/public_affairs.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/public_affairs.rsi
+
+#region SLE Rookie
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpskirtSLERookie
+  name: SLE jumpskirt
+  suffix: Rookie
+  description: A long-sleeved jumpskirt for SLE Rookies.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-rke
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEShortRookie
+  name: SLE short-sleeve jumpskirt
+  suffix: Rookie
+  description: A short-sleeved jumpskirt for SLE Rookies.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-rke
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEClassicRookie
+  name: SLE classic jumpskirt
+  suffix: Rookie
+  description: A classic jumpsuit for SLE Rookies. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-rke
+
+#region SLE Officer
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpskirtSLEOfficer
+  name: SLE jumpskirt
+  suffix: Officer
+  description: A long-sleeved jumpskirt for SLE Officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-off
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEShortOfficer
+  name: SLE short-sleeve jumpskirt
+  suffix: Officer
+  description: A short-sleeved jumpskirt for SLE Officers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-off
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEClassicOfficer
+  name: SLE classic jumpskirt
+  suffix: Officer
+  description: A classic jumpsuit for SLE Officers. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-off
+
+#region SLE Sergeant
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpskirtSLESergeant
+  name: SLE jumpskirt
+  suffix: Sergeant
+  description: A long-sleeved jumpskirt for SLE Sergeants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-sgt
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEShortSergeant
+  name: SLE short-sleeve jumpskirt
+  suffix: Sergeant
+  description: A short-sleeved jumpskirt for SLE Sergeants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-sgt
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEClassicSergeant
+  name: SLE classic jumpskirt
+  suffix: Sergeant
+  description: A classic jumpsuit for SLE Sergeants. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-sgt
+
+#region SLE Lieutenant
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpskirtSLELieutenant
+  name: SLE jumpskirt
+  suffix: Lieutenant
+  description: A long-sleeved jumpskirt for SLE Lieutenant.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-lt
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEShortLieutenant
+  name: SLE short-sleeve jumpskirt
+  suffix: Lieutenant
+  description: A short-sleeved jumpskirt for SLE Lieutenants.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-lt
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEClassicLieutenant
+  name: SLE classic jumpskirt
+  suffix: Lieutenant
+  description: A classic jumpsuit for SLE Lieutenants. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-lt
+
+#region SLE Corpsman
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpskirtSLECorpsman
+  name: SLE jumpskirt
+  suffix: Corpsman
+  description: A long-sleeved jumpskirt for SLE Corpsmen.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-crp
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEShortCorpsman
+  name: SLE short-sleeve jumpskirt
+  suffix: Corpsmen
+  description: A short-sleeved jumpskirt for SLE Corpsmen.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-crp
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEClassicCorpsman
+  name: SLE classic jumpskirt
+  suffix: Corpsman
+  description: A classic jumpsuit for SLE Corpsmen. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-crp
+
+#region SLE Commissioner
+
+- type: entity
+  parent: ClothingUniformBase
+  id: ASClothingUniformJumpskirtSLECommissioner
+  name: SLE jumpskirt
+  suffix: Commissioner
+  description: A long-sleeved jumpskirt for SLE Commissioners.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-com
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEShortCommissioner
+  name: SLE short-sleeve jumpskirt
+  suffix: Commissioner
+  description: A short-sleeved jumpskirt for SLE Commissioners.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_short.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-com
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtSLEClassicCommissioner
+  name: SLE classic jumpskirt
+  suffix: Commissioner
+  description: A classic jumpsuit for SLE Commissioners. Smells like scientists trying to get you in trouble.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/sle_skirt_classic.rsi
+    clothingVisuals:
+      jumpsuit:
+      - state: equipped-INNERCLOTHING
+      - state: equipped-INNERCLOTHING-com
+
+#region Command
+
+- type: entity
+  parent: ClothingUniformSkirtBase
+  id: ASClothingUniformJumpskirtColonialRepresentative
+  name: colonial representative's jumpskirt
+  description: A distinguished skirt-suit for the frontier's colonial representative. Every detail speaks of authority and colonial administration.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/cr.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpskirt/cr.rsi

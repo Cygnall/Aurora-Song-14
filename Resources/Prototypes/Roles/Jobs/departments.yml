@@ -39,7 +39,7 @@
   id: CentralCommand
   name: department-CentralCommand
   description: department-NFCentralCommand-description # Frontier
-  color: "#0c344d"
+  color: "#000080" # AS 0c344d -> 000080
   roles:
   - CentralCommandOfficial
 #  - CBURN # Frontier
@@ -76,9 +76,10 @@
   # - ERTSecurity # Frontier
   # - ERTEngineer # Frontier
   # - DeathSquad # Frontier
-  - StationRepresentative # Frontier
-  - Sheriff # Frontier
-  - PlantManager # Frontier
+  # - StationRepresentative # Frontier - Aurora Song: moved to _AS as ColonialRepresentative
+  - ColonialRepresentative # Aurora's Song - Colonial Representative
+  - Commissioner # Aurora's Song - switched Sheriff to Commissioner
+  - SiteManager # Aurora's Song - switched PlantManager to SiteManager
   - StationTrafficController # Frontier
   primary: false
   weight: 100
@@ -96,8 +97,8 @@
   # - ChiefEngineer # Frontier
   # - StationEngineer # Frontier
   # - TechnicalAssistant # Frontier
-  - PlantManager # Frontier
-  - PlantTechnician # Frontier
+  - SiteManager # Aurora's Song - switched PlantManager to SiteManager
+  - SiteWorker # Aurora's Song - switched PlantTechnician to SiteWorker
 
 - type: department
   id: Medical
@@ -112,23 +113,23 @@
   id: Security
   name: department-Security
   description: department-NFSecurity-description # Frontier
-  color: "#5C7D4D" # Frontier: DE3A3A<5C7D4D
+  color: "#687EA6" # AS: 5C7D4D -> 687EA6
   weight: 1 # Frontier: 20<1 - accounted for in jobs
-  roles:
+  roles: # Aurora's Song - switched NFSD to SLE roles
 #  - Detective # Frontier
 #  - HeadOfSecurity # Frontier
 #  - SecurityCadet # Frontier
 #  - SecurityOfficer # Frontier
 #  - Warden # Frontier
   - PrisonGuard ##nyano
-  - Brigmedic # Frontier
+  - Corpsman # Frontier
 #  - SecurityGuard # Frontier
-  - NFDetective # Frontier
-  - Cadet # Frontier
-  - Deputy # Frontier
-  - Bailiff # Frontier
-  - Sheriff # Frontier
-  - SeniorOfficer # Frontier
+  - ASDetective # Frontier
+  - Rookie # Frontier
+  - Officer # Frontier
+  - Lieutenant # Frontier
+  - Commissioner # Frontier
+  - Sergeant # Frontier
   - PublicAffairsLiaison # Frontier
 
 - type: department

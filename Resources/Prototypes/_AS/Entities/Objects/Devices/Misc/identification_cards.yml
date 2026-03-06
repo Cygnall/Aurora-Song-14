@@ -1,6 +1,22 @@
-﻿- type: entity
+﻿#region Base
+
+- type: entity
   parent: IDCardStandard
-  id: MedicIDCard
+  id: ASIDCardStandard
+  name: identification card
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+  - type: Clothing
+    slots:
+    - idcard
+    sprite: _AS/Objects/Misc/id_cards.rsi
+
+#region Medical
+- type: entity
+  parent: ASIDCardStandard
+  id: ASMedicIDCard
   name: Medic ID Card
   components:
   - type: PresetIdCard
@@ -8,6 +24,317 @@
   - type: Sprite
     layers:
     - state: default
-    - state: idmedicaldoctor
+    - state: idparamedic
   - type: Item
     heldPrefix: medic #temporary to OBSERVE
+
+#region Service
+- type: entity
+  parent: ASIDCardStandard
+  id: ASServiceWorkerIDCard
+  name: Service Worker ID Card
+  components:
+  - type: PresetIdCard
+    job: ServiceWorker
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idintern-service
+  - type: Item
+    heldPrefix: service #temporary to OBSERVE
+
+#region SLE
+- type: entity
+  parent: ASIDCardStandard
+  id: ASPublicAffairsIDCard
+  name: public affairs liaison ID card
+  components:
+  - type: PresetIdCard
+    job: PublicAffairsLiaison
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idaspublicaffairsliaison
+
+- type: entity
+  parent: ASIDCardStandard
+  id: ASRookieIDCard
+  name: Rookie ID card
+  components:
+  - type: PresetIdCard
+    job: Rookie
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idslerookie
+  - type: Clothing
+    sprite: _AS/Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: sle
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASOfficerIDCard
+  name: Officer ID card
+  components:
+  - type: PresetIdCard
+    job: Officer
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idsleofficer
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASCorpsmanIDCard
+  name: Corpsman ID card
+  components:
+  - type: PresetIdCard
+    job: Corpsman
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idslecorpsman
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASSergeantIDCard
+  name: Sergeant ID card
+  components:
+  - type: PresetIdCard
+    job: Sergeant
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idslesergeant
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASLieutenantIDCard
+  name: Lieutenant ID card
+  components:
+  - type: PresetIdCard
+    job: Lieutenant
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idslelieutenant
+
+- type: entity
+  parent: [ASRookieIDCard, BaseCommandContraband]
+  id: ASCommissionerIDCard
+  name: Commissioner ID card
+  components:
+  - type: PresetIdCard
+    job: Commissioner
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: idslecommissioner
+  - type: Item
+    heldPrefix: silver
+
+- type: entity
+  parent: ASRookieIDCard
+  id: ASDetectiveIDCard
+  name: Detective ID card
+  components:
+  - type: PresetIdCard
+    job: ASDetective
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: sle
+    - state: idsledetective
+
+#region Command
+
+- type: entity
+  parent: [HoPIDCard, BaseCommandContraband]
+  id: ASColonialRepresentativeIDCard
+  name: colonial representative ID card
+  components:
+  - type: PresetIdCard
+    job: ColonialRepresentative
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: idcolonialrepresentative
+  - type: Item
+    heldPrefix: silver
+
+#region Colonial Command
+
+- type: entity
+  parent: ASIDCardStandard
+  id: ColcomIDCard
+  name: command officer ID card
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: as_blue
+    - state: idcolcom
+  - type: Item
+    heldPrefix: as_blue
+  - type: PresetIdCard
+    job: ColonialCommandOfficial
+
+- type: entity
+  parent: ASIDCardStandard
+  id: CAFLeaderIDCard
+  name: CAF leader ID card
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: gold
+    - state: idmil
+  - type: PresetIdCard
+    job: CAFLeader
+  - type: Item
+    heldPrefix: gold
+
+#- type: entity # commenting out until CAF Chaplain role is added
+#  parent: ASIDCardStandard
+#  id: CAFChaplainIDCard
+#  name: CAF chaplain ID card
+#  components:
+#  - type: Sprite
+#    layers:
+#    - state: gold
+#    - state: idmil # Maybe later make a unique one for chaplains
+#  - type: PresetIdCard
+#    job: CAFChaplain
+#  - type: Item
+#    heldPrefix: gold
+
+- type: entity
+  parent: ASIDCardStandard
+  id: CAFEngineerIDCard
+  name: CAF engineer ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idmil # Maybe later make a unique one for engineers
+  - type: PresetIdCard
+    job: CAFEngineer
+
+#- type: entity # commenting out until CAF Janitor role is added
+#  parent: ASIDCardStandard
+#  id: CAFJanitorIDCard
+#  name: CAF janitor ID card
+#  components:
+#  - type: Sprite
+#    layers:
+#    - state: gold
+#    - state: idmil # Maybe later make a unique one for janitors
+#  - type: PresetIdCard
+#    job: CAFJanitor
+
+- type: entity
+  parent: ASIDCardStandard
+  id: CAFMedicIDCard
+  name: CAF medic ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idmil # Maybe later make a unique one for medics
+  - type: PresetIdCard
+    job: CAFMedical
+
+- type: entity
+  parent: ASIDCardStandard
+  id: CAFTrooperIDCard
+  name: CAF trooper ID card
+  components:
+  - type: Sprite
+    layers:
+    - state: gold
+    - state: idmil # Maybe later make a unique one for trooper
+  - type: PresetIdCard
+    job: CAFTrooper
+
+#region Engineering
+
+- type: entity
+  parent: [CEIDCard, BaseCommandContraband]
+  id: ASSiteManagerIDCard
+  name: site manager ID card
+  components:
+  - type: PresetIdCard
+    job: SiteManager
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: silver
+    - state: idsitemanager
+
+- type: entity
+  parent: EngineeringIDCard
+  id: ASSiteWorkerIDCard
+  name: site worker ID card
+  components:
+  - type: PresetIdCard
+    job: SiteWorker
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: default
+    - state: idsiteworker
+
+#region Special
+
+- type: entity
+  parent: UniversalIDCard
+  id: ASUniversalIDCard
+  name: universal ID card
+  suffix: Admin
+  description: An ID card that gives you access beyond your wildest dreams.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Misc/id_cards.rsi
+    layers:
+    - state: admin
+    - state: idadmin
+  - type: Clothing
+    sprite: _AS/Objects/Misc/id_cards.rsi
+  - type: Item
+    heldPrefix: as_blue
+  - type: IdCard
+    jobTitle: job-title-universal
+    jobIcon: JobIconAdmin
+  - type: Access
+    groups:
+    - AllAccess
+    - Silicon
+    tags:
+    - CentralCommand
+    - ColonialCommand
+    - NuclearOperative
+    - SyndicateAgent
+    - Wizard
+    - Xenoborg
+    - Pirate # Frontier
+  - type: Tag #  Ignore Chameleon tags
+    tags:
+    - DoorBumpOpener
+  - type: AgentIDCard
+  - type: ActivatableUI
+    key: enum.AgentIDCardUiKey.Key
+    inHandsOnly: true
+  - type: UserInterface
+    interfaces:
+      enum.AgentIDCardUiKey.Key:
+        type: AgentIDCardBoundUserInterface

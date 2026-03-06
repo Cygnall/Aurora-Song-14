@@ -4,3 +4,4 @@
   - /Audio/Expedition/tension_session.ogg
   - /Audio/Expedition/deadline.ogg
   - /Audio/Expedition/chip_nightmare.ogg #AS, duplicating this into AS namespace causes errors
+  - /Audio/Expedition/runner.ogg #AS

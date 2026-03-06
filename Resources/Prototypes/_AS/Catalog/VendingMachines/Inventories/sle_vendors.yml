@@ -1,19 +1,22 @@
-# Aurora Song - SLE (Security Logistics Enforcement) vending machine inventories
+# Aurora Song - SLE (Sector Law Enforcement) vending machine inventories
 
 - type: vendingMachineInventory
   id: ASSLEDrobeInventory
   startingInventory:
-    ASClothingBackpackSLEBrown: 6
-    ASClothingBackpackSatchelSLEBrown: 6
-    ASClothingBackpackDuffelSLEBrown: 6
-    ASClothingBackpackMessengerSLEBrown: 6
-    ASClothingBackpackSLECream: 2
-    ASClothingBackpackSatchelSLECream: 2
-    ASClothingBackpackDuffelSLECream: 2
-    ASClothingBackpackMessengerSLECream: 2
-    ASClothingHeadHatSLEBeretGreen: 6
-    ASClothingHeadHatSLEBeretBrown: 6
-    ASClothingHeadHatSLEBeretCream: 6
+    ASClothingBackpackSLENavy: 6
+    ASClothingBackpackSatchelSLENavy: 6
+    ASClothingBackpackDuffelSLENavy: 6
+    ASClothingBackpackMessengerSLENavy: 6
+    ASClothingBackpackSLECorpsman: 2
+    ASClothingBackpackSatchelSLECobalt: 2
+    ASClothingBackpackDuffelSLECorpsman: 2
+    ASClothingBackpackMessengerSLECobalt: 2
+    ASClothingHeadHatSLEBeretOrange: 6
+    ASClothingHeadHatSLEBeretNavy: 6
+    ASClothingHeadHatSLEBeretCobalt: 6
+    ASClothingHeadHatSLEBeretBigOrange: 6
+    ASClothingHeadHatSLEBeretBigNavy: 6
+    ASClothingHeadHatSLEBeretBigCobalt: 6
     ASClothingHeadHatSLECampaign: 6
     ASClothingHeadHatSLESmallCampaign: 6
     ASClothingHandsGlovesCombatSLEDarkBlue: 6
@@ -26,11 +29,12 @@
     ASClothingUniformJumpsuitSLETacGray: 6
     ASClothingUniformJumpsuitSLETacCamo: 6
     ASClothingUniformJumpsuitSLETacCream: 6
-    ASClothingHeadsetSLEGreenCommon: 6
-    ASClothingHeadsetSLEBrownCommon: 6
-    ASClothingHeadsetSLECreamCommon: 6
+    ASClothingHeadsetSLEOrangeCommon: 6
+    ASClothingHeadsetSLENavyCommon: 6
+    ASClothingHeadsetSLECobaltCommon: 6
     ASClothingHeadHelmetSLE: 6
     ASClothingOuterArmorSLE: 6
+    ClothingOuterArmorBulletproof: 2
     ASClothingOuterCoatSLEBomber: 6
     ASClothingOuterCoatSLELongCoat: 6
     ASClothingOuterCoatSLEFormal: 6
@@ -49,12 +53,13 @@
   id: ASSLETechInventory
   startingInventory:
     Flash: 5
-    Handcuffs: 8
+    Handcuffs: 24
     Zipties: 10
     ForensicPad: 4
     Flare: 6
     Stunbaton: 4
     WeaponDisabler: 2
+    PowerCellHigh: 2
     ClothingEyesGlassesSecurity: 2
     ASClothingEyesGlassesSLE: 2
     EncryptionKeySecurity: 4
@@ -62,9 +67,12 @@
     ClothingBeltSecurityFilled: 3
     ASClothingBeltSLEFilled: 3
     ASClothingBeltSLEWebbingFilled: 2
+    NFBaseClothingNeckHolsterThigh: 6
+    NFBaseClothingNeckSheathThigh: 6
     RiotShield: 2
     RiotLaserShield: 2
     RiotBulletShield: 2
+    TelescopicShield: 2
     Bola: 4
     Crowbar: 4
     GasAnalyzer: 2
@@ -77,4 +85,4 @@
     CableHVStack: 1
     CableMVStack: 1
     CableApcStack: 2
-
+    FlashlightSeclite: 8

@@ -1,0 +1,5 @@
+# Site Worker Belt
+- type: loadout
+  id: SiteWorkerBeltUtilityEngineering
+  equipment:
+    belt: ClothingBeltUtilityEngineering

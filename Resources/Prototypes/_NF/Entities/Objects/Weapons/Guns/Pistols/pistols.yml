@@ -44,11 +44,12 @@
 
 #region DeltaV
 - type: entity
-  id: NFWeaponPistolUniversal
-  parent: [ NFBaseWeaponPistolChamber45, NFBaseWeaponFramePistolNanotrasen ] # Restored to .45 | Aurora
+  id: NFWeaponPistolUniversal # Aurora's Song - .45 version moved to AS namespace, NF .35 version left for legacy purposes
+  parent: [ NFBaseWeaponPistolChamber35, NFBaseWeaponFramePistolNanotrasen ]
   name: mk32 "Universal"
   description: The Mark 32 Offensive Handgun.
-  components: #MK32 restored as accessible .45 pistol, status and soudns adjusted | Aurora
+  categories: [ HideSpawnMenu ]
+  components:
   - type: Gun
     minAngle: 1
     maxAngle: 15
@@ -66,8 +67,9 @@
   id: NFWeaponPistolUniversalNfsd
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponPistolChamber35HighCapacityOverpressure, NFWeaponPistolUniversal ]
   name: mk32-M "Universal" service pistol
-  description: |-
-    The Mark 32 Offensive Service Pistol. On the handle is a label that says 'for authorized use only.'
+  description: |- # Aurora's Song - Adjusted description regarding .35 chambering
+    The Mark 32 Offensive Service Pistol. Down-chambered to .35. On the handle is a label that says 'for authorized use only.'
+  categories: [ HideSpawnMenu ]
   components: &universalComponents
   - type: Gun
     soundGunshot:
@@ -78,4 +80,5 @@
   id: NFWeaponPistolUniversalNfsdLessLethal
   parent: [ NFBaseWeaponPistolChamber35HighCapacityRubber, NFWeaponPistolUniversalNfsd ]
   suffix: Frontier, Less-lethal
+  categories: [ HideSpawnMenu ]
   components: *universalComponents

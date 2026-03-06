@@ -144,13 +144,13 @@
       - state: green
       - state: medic
 
-- type: entity
-  id: SpawnPointStationRepresentative
-  parent: SpawnPointHeadOfPersonnel
-  name: station representative
-  components:
-  - type: SpawnPoint
-    job_id: StationRepresentative
+#- type: entity # Aurora's Song - Commented out pending deletion
+#  id: SpawnPointStationRepresentative
+#  parent: SpawnPointHeadOfPersonnel
+#  name: station representative
+#  components:
+#  - type: SpawnPoint
+#    job_id: StationRepresentative
 
 - type: entity
   id: SpawnPointSheriff
@@ -158,7 +158,7 @@
   name: Comissioner
   components:
   - type: SpawnPoint
-    job_id: Sheriff
+    job_id: Commissioner # Aurora's Song - switched Sheriff to Commissioner
 
 - type: entity
   id: SpawnPointBailiff
@@ -166,7 +166,7 @@
   name: Lieutenant
   components:
   - type: SpawnPoint
-    job_id: Bailiff
+    job_id: Lieutenant # Aurora's Song - switched Bailiff to Lieutenant
 
 - type: entity
   id: NFSpawnPointSeniorOfficer
@@ -174,7 +174,7 @@
   name: sergeant
   components:
   - type: SpawnPoint
-    job_id: SeniorOfficer
+    job_id: Sergeant # Aurora's Song - switched SeniorOfficer to Sergeant
 
 - type: entity
   id: SpawnPointDeputy
@@ -182,7 +182,7 @@
   name: Officer
   components:
   - type: SpawnPoint
-    job_id: Deputy
+    job_id: Officer # Aurora's Song - switched Deputy to Officer
 
 - type: entity
   id: SpawnPointCadet
@@ -190,7 +190,7 @@
   name: Rookie
   components:
   - type: SpawnPoint
-    job_id: Cadet
+    job_id: Rookie # Aurora's Song - switched Cadet to Rookie
 
 - type: entity
   id: NFSpawnPointDetective
@@ -199,7 +199,7 @@
   suffix: Frontier
   components:
   - type: SpawnPoint
-    job_id: NFDetective
+    job_id: ASDetective # Aurora's Song - switched NFDetective to ASDetective
 
 - type: entity
   id: SpawnPointPublicAffairsLiaison
@@ -217,28 +217,28 @@
   - type: SpawnPoint
     job_id: NFJanitor
 
-- type: entity
-  id: SpawnPointPlantManager
-  parent: SpawnPointJobBase
-  name: plant manager
-  components:
-  - type: SpawnPoint
-    job_id: PlantManager
-  - type: Sprite
-    sprite: _NF/Markers/jobs.rsi
-    layers:
-      - state: green
-      - state: plantmanager
+#- type: entity
+#  id: SpawnPointPlantManager
+#  parent: SpawnPointJobBase
+#  name: plant manager
+#  components:
+#  - type: SpawnPoint
+#    job_id: PlantManager
+#  - type: Sprite
+#    sprite: _NF/Markers/jobs.rsi
+#    layers:
+#      - state: green
+#      - state: plantmanager
 
-- type: entity
-  id: SpawnPointPlantTechnician
-  parent: SpawnPointJobBase
-  name: plant technician
-  components:
-  - type: SpawnPoint
-    job_id: PlantTechnician
-  - type: Sprite
-    sprite: _NF/Markers/jobs.rsi
-    layers:
-      - state: green
-      - state: planttechnician
+#- type: entity
+#  id: SpawnPointPlantTechnician
+#  parent: SpawnPointJobBase
+#  name: plant technician
+#  components:
+#  - type: SpawnPoint
+#    job_id: PlantTechnician
+#  - type: Sprite
+#    sprite: _NF/Markers/jobs.rsi
+#    layers:
+#      - state: green
+#      - state: planttechnician

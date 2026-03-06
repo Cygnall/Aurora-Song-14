@@ -1,3 +1,4 @@
 chat-radio-greeting = Greeting
-chat-radio-traffic = Traffic
 chat-radio-nfsd = SLE
+#Monolith - change Traffic to Shortband, logged by AS
+chat-radio-traffic = Shortband

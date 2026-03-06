@@ -3,8 +3,8 @@
   name: loadout-group-medic-head
   minLimit: 0
   loadouts:
-  - MedicalHeadBeretMedicBase
-  - MedicalHeadBeretMedicAS
+  - MedicalHeadBeretBaseMedic
+  - MedicalHeadBeretASMedic
   subgroups:
   - ContractorHead
 
@@ -66,3 +66,22 @@
   - MedicalOuterHardsuitVoidParamed
   subgroups:
   - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: MedicPDA
+  name: loadout-group-medic-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - MedicMedicPDA
+  fallbacks:
+  - MedicMedicPDA
+
+- type: loadoutGroup
+  id: MedicCartridge
+  name: loadout-group-medic-cartridge
+  minLimit: 0
+  maxLimit: 5
+  loadouts:
+  - ContractorAppraisalCartridge
+  - ContractorNetProbeCartridge
+  - ContractorLogProbeCartridge

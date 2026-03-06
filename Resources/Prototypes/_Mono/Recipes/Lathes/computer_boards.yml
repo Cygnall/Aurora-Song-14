@@ -1,0 +1,8 @@
+# Aurora's Song - Boards for Monolith Computers
+
+#region Shuttle
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseEngineeringComputerRecipeCategory ]
+  id: ComputerDriveCTLA160ConsoleCircuitboard
+  result: ComputerDriveCTLA160ConsoleCircuitboard

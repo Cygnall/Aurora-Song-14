@@ -1,5 +1,5 @@
-frontier-lobby-arrivals-subtext = A safe spawn point, far away from danger.
-frontier-lobby-arrivals-description = A guaranteed backup location for arrivals to the sector. When all else is burnt, this will remain.
+aurora-lobby-arrivals-subtext = A safe spawn point, far away from danger.
+aurora-lobby-arrivals-description = A guaranteed backup location for arrivals to the sector. When all else is burnt, this will remain.
 
 aurora-lobby-alley-subtext = A station in a hollowed-out rock for people of all kinds to gather.
 aurora-lobby-alley-description = This is a place to acquire equipment and make deals. Here you can:
@@ -15,3 +15,11 @@ aurora-lobby-sle-description = The SLEO is the center of operations for the sect
    - Apply for a various licenses
    - Do contraband trade-ins or registrations
    - Report crimes
+
+aurora-lobby-damascus-subtext = Where the the hammer meets the anvil.
+aurora-lobby-damascus-description = The Aurora Sector's manufacturing plant. Here you can:
+   - Work on engineering and atmospheric projects
+   - Generate, use, and sell massive amounts of power
+   - Pursue Research and Development projects
+   - Produce useful goods, at-scale
+   - Socialize with other engineers and scientists

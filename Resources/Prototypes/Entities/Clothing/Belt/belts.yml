@@ -528,7 +528,7 @@
 # Belts without visualizers
 
 - type: entity
-  parent: [ClothingBeltAmmoProviderBase, BaseC1Contraband] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband
+  parent: [ClothingBeltStorageBase, BaseC1Contraband] # Frontier: BaseSecurityBartenderContraband<BaseC1Contraband Aurora's Song: ClothingBeltAmmoProviderBase < ClothingBeltStorageBase
   id: ClothingBeltBandolier
   name: bandolier
   description: A bandolier for holding shotgun ammunition.
@@ -539,11 +539,13 @@
     sprite: Clothing/Belt/bandolier.rsi
   #- type: Item # Frontier
     #size: Huge # Frontier
-  - type: BallisticAmmoProvider
+  - type: Storage # Aurora's Song - Changed to 2 x 10 Storage that can hold any bullet
+    grid:
+    - 0,0,9,1
     whitelist:
       tags:
-        - ShellShotgun
-    capacity: 14
+        - Cartridge
+
 
 - type: entity
   parent: ClothingBeltBase
@@ -610,7 +612,7 @@
     sprite: _DV/Clothing/Belt/securitywebbing.rsi # DeltaV - resprite
 
 - type: entity
-  parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, remove BaseSecurityCargoContraband
+  parent: [ASClothingRigStorageHolsterBase] # Frontier and Aurora's Song: ClothingBeltStorageBase<ASClothingRigStorageHolsterBase, remove BaseSecurityCargoContraband
   id: ClothingBeltMercenaryWebbing # Frontier: Merc to Mercenary
   name: mercenary webbing
   description: Ideal for storing everything from ammo to weapons and combat essentials.
@@ -619,6 +621,9 @@
     sprite: Clothing/Belt/mercwebbing.rsi
   - type: Clothing
     sprite: Clothing/Belt/mercwebbing.rsi
+  - type: StaticPrice
+    price: 500
+    vendPrice: 500 # Aurora's Song - vend price set statically to avoid multipliers
 
 - type: entity
   parent: [NFClothingBeltStorageHolsterBase] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase
@@ -632,7 +637,7 @@
     sprite: Clothing/Belt/salvagewebbing.rsi
 
 - type: entity
-  parent: [NFClothingBeltStorageHolsterBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier: ClothingBeltStorageBase<NFClothingBeltStorageBase, BaseSyndicateContraband<BaseC1Contraband
+  parent: [ASClothingRigStorageHolsterBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier and Aurora's Song: ClothingBeltStorageBase<ASClothingRigStorageHolsterBase, BaseSyndicateContraband<BaseC1Contraband
   id: ClothingBeltMilitaryWebbing
   name: chest rig
   description: A set of tactical webbing worn by boarding parties. # Frontier
@@ -645,9 +650,10 @@
     damageCoefficient: 0.1
   - type: StaticPrice
     price: 500
+    vendPrice: 500 # Aurora's Song - vend price set statically to avoid multipliers
 
 - type: entity
-  parent: [NFClothingSBeltStorageHolsterMedkitBase, ContentsExplosionResistanceBase, BaseC1Contraband]
+  parent: [ASClothingSRigStorageHolsterMedkitBase, ContentsExplosionResistanceBase, BaseC1Contraband] # Frontier and Aurora's Song: ClothingBeltStorageBase<ASClothingSRigStorageHolsterMedkitBase, BaseSyndicateContraband<BaseC1Contraband
   id: ClothingBeltMilitaryWebbingMed
   name: medical chest rig
   description: A set of tactical webbing worn by medic operatives. # Frontier

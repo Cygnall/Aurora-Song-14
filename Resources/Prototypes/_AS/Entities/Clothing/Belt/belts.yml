@@ -1,28 +1,45 @@
-# Aurora Song - SLE (Security Logistics Enforcement) belts
-# Prototypes for Aurora Song's SLE faction equipment
+#region SLE
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, ClothingBeltAssault ]
+  parent: [ ASClothingBeltStorageHolsterBase, ContentsExplosionResistanceBase, BaseC2ContrabandUnredeemable ]
   id: ASClothingBeltSLE
   name: SLE belt
-  description: A tactical assault belt for Security Logistics Enforcement personnel.
+  description: A tactical assault belt for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Belt/sle_belt.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Belt/sle_belt.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Belt/sle_belt.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Belt/sle_belt.rsi
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
 
 - type: entity
-  parent: [ BaseC2ContrabandUnredeemable, ClothingBeltSecurityWebbing ]
+  parent: [ ASClothingRigStorageHolsterBase, ContentsExplosionResistanceBase, BaseC2ContrabandUnredeemable ]
   id: ASClothingBeltSLEWebbing
   name: SLE webbing
-  description: A tactical assault webbing for Security Logistics Enforcement personnel.
+  description: A tactical assault webbing for Sector Law Enforcement personnel.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Belt/sle_webbing.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Belt/sle_webbing.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Belt/sle_webbing.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Belt/sle_webbing.rsi
   - type: CatWearable
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
+
+- type: entity
+  parent: [ ASClothingSRigStorageHolsterMedkitBase, ContentsExplosionResistanceBase, BaseC2ContrabandUnredeemable, ASClothingBeltSLEWebbing ]
+  id: ASClothingBeltSLEWebbingCorpsman
+  name: SLE webbing
+  description: A tactical assault webbing for Sector Law Enforcement personnel. Corpsman variant.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Belt/sle_corps_webbing.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Belt/sle_corps_webbing.rsi
+  - type: CatWearable
+  - type: ExplosionResistance
+    damageCoefficient: 0.1
 
 # Filled variants
 - type: entity
@@ -49,9 +66,9 @@
       - id: Handcuffs
 
 - type: entity
-  id: ASClothingBeltSLEWebbingFilledBrigmedic
-  parent: ASClothingBeltSLEWebbing
-  suffix: Filled, Brigmedic
+  id: ASClothingBeltSLEWebbingCorpsmanFilled
+  parent: ASClothingBeltSLEWebbingCorpsman
+  suffix: Filled, Corpsman
   components:
   - type: StorageFill
     contents:

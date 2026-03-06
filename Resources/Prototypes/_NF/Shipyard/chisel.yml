@@ -13,7 +13,7 @@
   parent: BaseVessel
   name: ICR Chisel
   description: "Standard small-size vessel, originally meant to aid in ship scrapping, now modified to function as a multipurpose salvage/mining/cargo-hauling shuttle."
-  price: 33800 # 30619 0.05 32149.95 | Updated to 33800 (min: 33749.35)
+  price: 34000 # Aurora's Song - 31936.58 0.05 33533.41 | Rounded up to 34000, due to varying price of fills
   category: Small
   group: Shipyard
   shuttlePath: /Maps/_NF/Shuttles/chisel.yml

@@ -1,0 +1,15 @@
+- type: radioChannel
+  id: Shipboard
+  name: chat-radio-shipboard
+  keycode: 'l'
+  frequency: 1124
+  color: "#ede8d0"
+  maxRange: 60
+
+- type: radioChannel
+  id: ColCom
+  name: chat-radio-colcom
+  keycode: 'o'
+  frequency: 4269
+  color: "#1C4D8D"
+  longRange: true

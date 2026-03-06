@@ -341,7 +341,7 @@
   table: !type:AllSelector
     children:
 #    - id: WeaponEnergyShotgun # Frontier
-    - id: NFHyperlinkBookSpaceLaw # Frontier: BookSpaceLaw<NFHyperlinkBookSpaceLaw
+    - id: ASHyperlinkBookSpaceLaw # Aurora's Song: BookSpaceLaw<ASHyperlinkBookSpaceLaw
 #    - id: BoxEncryptionKeySecurity # Frontier
 #    - id: CigarGoldCase # Frontier
 #      prob: 0.50 # Frontier

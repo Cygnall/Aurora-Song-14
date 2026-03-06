@@ -1,3 +1,4 @@
+#region Medical
 #medical gun safe Fill
 - type: entity
   parent: GunSafe
@@ -41,3 +42,30 @@
     - id: NFAmmunitionBoxShellShotgunBuckshot
     - id: NFAmmunitionBoxShellShotgunBeanbag
     - id: NFAmmunitionBoxShellShotgunBeanbag
+
+#region SLE
+
+#SLE mk58-S gun safe Fill
+- type: entity
+  parent: [GunSafeBaseSecure, BaseC2ContrabandUnredeemable ]
+  id: ASGunSafePistolMk58S
+  name: mk58-S safe
+  suffix: Filled, mk58-S
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      entity_storage: !type:NestedSelector
+        tableId: ASFillGunSafePistolMk58S
+
+- type: entityTable
+  id: ASFillGunSafePistolMk58S
+  table: !type:AllSelector
+    children:
+    - id: ASWeaponPistolMk58S
+      amount: 4
+    - id: ASWeaponPistolMk58SLessLethal
+      amount: 4
+    - id: NFMagazinePistol35
+      amount: 8
+    - id: NFMagazinePistol35Rubber
+      amount: 8

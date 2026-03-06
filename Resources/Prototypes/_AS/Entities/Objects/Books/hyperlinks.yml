@@ -1,0 +1,33 @@
+- type: entity
+  parent: BaseHyperlinkBook
+  id: ASHyperlinkBookSpaceLaw
+  name: space law
+  description: A big book of laws for space courts.
+  components:
+  - type: Sprite
+    sprite: _NF/Objects/Misc/books.rsi
+    layers:
+    - state: law_space
+  - type: HyperlinkBook
+    url: https://wiki.aurorasong.net/index.php?title=Space_Law # Changed to Aurora Space Law page, pending full SLE refactor
+  - type: Tag
+    tags:
+    - Book
+    - BookSpaceLaw
+
+- type: entity
+  parent: BaseHyperlinkBook
+  id: HyperlinkBookSLESop
+  name: SLE SOP manual
+  description: A book defining SLE standard operating procedures.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Misc/books.rsi
+    layers:
+    - state: sle_sop
+  - type: HyperlinkBook
+    url: https://wiki.aurorasong.net/index.php?title=SLESOP # Changed to Aurora SLE SOP page, pending full SLE refactor
+  - type: Tag
+    tags:
+    - Book
+    - BookNfsdSop

@@ -1,0 +1,14 @@
+{
+  "version": 1,
+  "license": "CC-BY-SA-4.0",
+  "copyright": "shanamctavish plushie made by Karlm4x",
+  "size": {
+    "x": 32,
+    "y": 32
+  },
+    "states": [
+        {
+            "name": "shanamctavish"
+        }
+    ]
+}

@@ -4,8 +4,10 @@
   keycode: 'd'
   frequency: 1022
   color: "#CC6633"
+  # Monolith - maxrange added by Monolith, logged by Aurora's Song
+  maxRange: 750 # CS - increase range 500 => 750
 
-# Aurora Song - Changed id from "Nfsd" to "Sle" (Station Law Enforcement)
+# Aurora Song - Changed id from "Nfsd" to "Sle" (Sector Law Enforcment)
 - type: radioChannel
   id: Sle
   name: chat-radio-nfsd

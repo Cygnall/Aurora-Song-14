@@ -26,13 +26,16 @@
 - type: startingGear
   id: MedicGear
   equipment:
-    pocket1: ASWeaponPistolMk58SLELessLethal
+    pocket1: ASWeaponPistolMk58SLessLethal
     pocket2: MedicalAppraisalTool
   storage:
     back:
     - ShipVoucherAuroraMedic
   licenses:
   - LicenseContrabandHandling
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
 
 - type: chameleonOutfit
   id: MedicChameleonOutfit

@@ -16,6 +16,7 @@
       map: [ "light" ]
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/engineering-base.rsi
+    # Aurora's Song: sprite states explicitly defined to prevent transformation errors
     clothingVisuals:
       head:
       - state: equipped-head
@@ -45,6 +46,7 @@
       map: [ "light" ]
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndicate-base.rsi
+    # Aurora's Song: sprite states explicitly defined to prevent transformation errors
     clothingVisuals:
       head:
       - state: equipped-head
@@ -74,6 +76,7 @@
       map: [ "light" ]
   - type: Clothing
     sprite: Clothing/Head/Hardsuits/syndicate-elite-base.rsi
+    # Aurora's Song: sprite states explicitly defined to prevent transformation errors
     clothingVisuals:
       head:
       - state: equipped-head

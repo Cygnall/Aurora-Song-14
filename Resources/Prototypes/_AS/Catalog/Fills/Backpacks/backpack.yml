@@ -1,0 +1,72 @@
+#region Colonial Command
+
+- type: entity
+  parent: ClothingBackpackCAFLeader
+  id: ClothingBackpackCAFLeaderFilled
+  name: CAF leader backpack
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFWeaponEnergyPistolDisabler
+      - id: NFWeaponPistolN1984
+      - id: MedicatedSuture
+      - id: RegenerativeMesh
+      - id: BoxZiptie
+      - id: CrowbarRed
+      - id: NFMagazinePistol45
+
+- type: entity
+  parent: ClothingBackpackCAFTrooper
+  id: ClothingBackpackCAFTrooperFilled
+  name: CAF trooper backpack
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFWeaponEnergyPistolDisabler
+      - id: NFWeaponPistolMk58
+      - id: MedicatedSuture
+      - id: RegenerativeMesh
+      - id: BoxZiptie
+      - id: CrowbarRed
+      - id: NFMagazinePistol35
+
+- type: entity
+  parent: ClothingBackpackCAFMedical
+  id: ClothingBackpackCAFMedicalFilled
+  name: CAF medical backpack
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFWeaponPistolMk58
+      - id: Hypospray
+      - id: MedkitCombatFilled
+      - id: MedkitCombatFilled
+      - id: CrowbarRed
+      - id: ChemistryBottleOmnizine
+      - id: ChemistryBottleEpinephrine
+      - id: ChemistryBottleEpinephrine
+      - id: NFMagazinePistol35
+
+- type: entity
+  parent: ClothingBackpackCAFEngineer
+  id: ClothingBackpackCAFEngineerFilled
+  name: CAF engineer backpack
+  suffix: Filled
+  components:
+  - type: StorageFill
+    contents:
+      - id: NFWeaponEnergyPistolDisabler
+      - id: NFWeaponPistolMk58
+      - id: trayScanner
+      - id: RCD
+      - id: RCDAmmo
+      - id: RCDAmmo
+      - id: CableMVStack
+      - id: CableHVStack
+      - id: CableApcStack
+      - id: SheetPlasteel
+      - id: SheetSteel
+      - id: SheetGlass

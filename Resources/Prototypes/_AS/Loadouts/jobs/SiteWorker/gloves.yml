@@ -1,0 +1,5 @@
+# Site Worker Gloves
+- type: loadout
+  id: SiteWorkerGlovesColorYellow
+  equipment:
+    gloves: ClothingHandsGlovesColorYellow

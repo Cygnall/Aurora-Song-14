@@ -318,7 +318,7 @@ entities:
     - type: Transform
       pos: 3.5,-5.5
       parent: 1
-- proto: ASBedsheetSLEBrigmedic
+- proto: ASBedsheetSLECorpsman
   entities:
   - uid: 176
     components:

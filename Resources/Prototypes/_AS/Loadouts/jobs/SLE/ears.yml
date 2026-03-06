@@ -1,0 +1,30 @@
+- type: loadout
+  id: SLEClothingHeadsetSLENavy
+  equipment:
+    ears: ASClothingHeadsetSLENavy
+
+- type: loadout
+  id: SLEClothingHeadsetSLECobalt
+  equipment:
+    ears: ASClothingHeadsetSLECobalt
+
+- type: loadout
+  id: SLEClothingHeadsetSLEOrange
+  equipment:
+    ears: ASClothingHeadsetSLEOrange
+
+- type: loadout
+  id: SLEClothingHeadsetAltSLENavy
+  equipment:
+    ears: ASClothingHeadsetAltSLENavy
+
+- type: loadout
+  id: SLEClothingHeadsetAltSLECobalt
+  equipment:
+    ears: ASClothingHeadsetAltSLECobalt
+
+- type: loadout
+  id: SLEClothingHeadsetAltSLEOrange
+  equipment:
+    ears: ASClothingHeadsetAltSLEOrange
+

@@ -3,9 +3,9 @@
   id: NFBaseSoftOreVein
   components:
   - type: OreVein
-    gatherDestructionWhitelist:
-      components:
-      - MiningGatheringHard
+    #gatherDestructionWhitelist: Aurora Song: Hard projectiles can mine soft rock
+    #  components:
+    #  - MiningGatheringHard
 
 - type: entity
   parent: [NFBaseSoftOreVein, AsteroidRock]

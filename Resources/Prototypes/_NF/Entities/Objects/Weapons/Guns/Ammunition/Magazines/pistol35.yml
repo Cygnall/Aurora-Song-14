@@ -165,6 +165,14 @@
       - state: inhand-right-stripe
         color: "#ff8d00"
 
+- type: entity # Aurora's Song - empty mag to be filled with looted overpressure cartridges
+  id: NFMagazinePistol35OverpressureEmpty
+  name: pistol magazine (.35 pistol, fillable, overpressure)
+  parent: NFMagazinePistol35Overpressure
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
 - type: entity
   id: NFMagazinePistol35Incendiary
   name: pistol magazine (.35 pistol, incendiary)
@@ -340,6 +348,14 @@
       - state: inhand-right-stripe
         color: "#ff8d00"
 
+- type: entity # Aurora's Song - empty mag to be filled with looted overpressure cartridges
+  id: NFMagazineHighCapacityPistol35OverpressureEmpty
+  name: high capacity pistol magazine (.35 pistol, fillable, overpressure)
+  parent: NFMagazineHighCapacityPistol35Overpressure
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
 - type: entity
   id: NFMagazineHighCapacityPistol35Incendiary
   name: high capacity pistol magazine (.35 pistol, incendiary)
@@ -512,6 +528,14 @@
       - state: inhand-right-stripe
         color: "#ff8d00"
 
+- type: entity # Aurora's Song - empty mag to be filled with looted overpressure cartridges
+  id: NFMagazineSubMachineGun35OverpressureEmpty
+  name: smg magazine (.35 pistol, fillable, overpressure)
+  parent: NFMagazineSubMachineGun35Overpressure
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
 - type: entity
   id: NFMagazineSubMachineGun35Incendiary
   name: smg magazine (.35 pistol, incendiary)
@@ -643,6 +667,14 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#ff8d00"
+
+- type: entity # Aurora's Song - empty mag to be filled with looted overpressure cartridges
+  id: NFMagazineSubMachineGunTopMounted35OverpressureEmpty
+  name: top mounted smg magazine (.35 pistol, overpressure, fillable)
+  parent: NFMagazineSubMachineGunTopMounted35Overpressure
+  components:
+    - type: BallisticAmmoProvider
+      proto: null
 
 - type: entity
   id: NFMagazineSubMachineGunTopMounted35Incendiary

@@ -1,58 +1,46 @@
+# SPDX-FileCopyrightText: 2022 Kara
+# SPDX-FileCopyrightText: 2022 metalgearsloth
+# SPDX-FileCopyrightText: 2023 Leon Friedrich
+# SPDX-FileCopyrightText: 2023 Nemanja
+# SPDX-FileCopyrightText: 2023 Nim
+# SPDX-FileCopyrightText: 2023 coolmankid12345
+# SPDX-FileCopyrightText: 2024 AverageNotDoingAnythingEnjoyer
+# SPDX-FileCopyrightText: 2024 CaptainMaru
+# SPDX-FileCopyrightText: 2024 Dvir
+# SPDX-FileCopyrightText: 2024 ErhardSteinhauer
+# SPDX-FileCopyrightText: 2024 GreaseMonk
+# SPDX-FileCopyrightText: 2024 Whatstone
+# SPDX-FileCopyrightText: 2025 ActiveMammmoth
+# SPDX-FileCopyrightText: 2025 Blu
+# SPDX-FileCopyrightText: 2025 BoskiYourk
+# SPDX-FileCopyrightText: 2025 NazrinNya
+# SPDX-FileCopyrightText: 2025 starch
+#
+# SPDX-License-Identifier: AGPL-3.0-or-later
+
+# Mono edit start - Faction system improvements
+
 - type: npcFaction
   id: Dragon
-  hostile:
-    - NanoTrasen
-    - Syndicate
-    - Xeno
-    - PetsNT
-    - Zombie
-    - Revolutionary
-    - AllHostile
-    - WizFedFaction # Frontier
-    - BloodCultNF # Frontier
-    - NFSyndicate # Frontier
-    - NFPirate # Frontier
-    - ExplorersExpeditionNF # Frontier
-    - ArtifactConstruct # Frontier
-    - StreetGangNF # Frontier
-    - DinosaursNF # Frontier
-    - MercenariesExpeditionNF # Frontier
-    - SiliconsExpeditionNF # Frontier
-    - AberrantFleshExpeditionNF # Frontier
-    - ContrabandClothing # Frontier
-    - ContrabandDetection # Frontier
+  neutral:
+  - SimpleHostile
+  - Passive
+  defaultHostile: true
 
 - type: npcFaction
   id: NanoTrasen
-  hostile:
-  - SimpleHostile
-  - Syndicate
-  - Xeno
-  - Zombie
-  - Revolutionary
-  - Dragon
-  - AllHostile
-  - Wizard
-  - Xenoborg
-  - WizFedFaction # Frontier
-  - BloodCultNF # Frontier
-  - NFSyndicate # Frontier
-  - NFPirate # Frontier
-  - ExplorersExpeditionNF # Frontier
-  - ArtifactConstruct # Frontier
-  - StreetGangNF # Frontier
-  - DinosaursNF # Frontier
-  - MercenariesExpeditionNF # Frontier
-  - SiliconsExpeditionNF # Frontier
-  - AberrantFleshExpeditionNF # Frontier
-  - ContrabandClothing # Frontier
+  neutral:
+  - SimpleNeutral
+  - PetsNT
+  - TSFMC
+  - Passive
+  defaultHostile: true
 
 - type: npcFaction
   id: Mouse
   hostile:
   - PetsNT
-  # - AllHostile # Frontier
-  - HostileUniversally # Frontier
+  - AllHostile
   - Wizard
 
 - type: npcFaction
@@ -67,35 +55,13 @@
   # - Xeno # Frontier
   # - AllHostile # Frontier
   # - Wizard # Frontier
-  # - Dragon # Frontier
 
 - type: npcFaction
   id: SimpleHostile
-  hostile:
-  - NanoTrasen
-  - Syndicate
-  - Passive
-  - PetsNT
-  - Zombie
-  - Revolutionary
+  neutral:
   - Dragon
-  - Xeno
-  - AllHostile
-  - Wizard
-  - Xenoborg
-  - WizFedFaction # Frontier
-  - BloodCultNF # Frontier
-  - NFSyndicate # Frontier
-  - NFPirate # Frontier
-  - ExplorersExpeditionNF # Frontier
-  - ArtifactConstruct # Frontier
-  - StreetGangNF # Frontier
-  - DinosaursNF # Frontier
-  - MercenariesExpeditionNF # Frontier
-  - SiliconsExpeditionNF # Frontier
-  - AberrantFleshExpeditionNF # Frontier
-  - ContrabandClothing # Frontier
-  - ContrabandDetection # Frontier
+  - Passive
+  defaultHostile: true
 
 - type: npcFaction
   id: SimpleNeutral
@@ -103,179 +69,53 @@
 - type: npcFaction
   id: Syndicate
   friendly: # Frontier
-  - NFSyndicate # Frontier
-  hostile:
-  - NanoTrasen
-  - SimpleHostile
-  - Xeno
-  - PetsNT
-  - Zombie
-  - Dragon
-  - AllHostile
-  - Wizard
-  - Xenoborg
-  - WizFedFaction # Frontier
-  - BloodCultNF # Frontier
-  - NFPirate # Frontier
-  - ExplorersExpeditionNF # Frontier
-  - ArtifactConstruct # Frontier
-  - StreetGangNF # Frontier
-  - DinosaursNF # Frontier
-  - MercenariesExpeditionNF # Frontier
-  - SiliconsExpeditionNF # Frontier
-  - AberrantFleshExpeditionNF # Frontier
-  - ContrabandClothing # Frontier
-  - ContrabandDetection # Frontier
+  # Aurora's Song: Changed from SyndicateNF to NFSyndicate - all Syndicate entities use NFSyndicate.
+  # This fixes turrets with Syndicate faction targeting naval mobs with NFSyndicate faction.
+  - NFSyndicate
+  - Passive
+  defaultHostile: true
 
 - type: npcFaction
   id: Xeno
-  hostile:
-  - NanoTrasen
-  - Syndicate
-  - Passive
-  - PetsNT
-  - Zombie
-  - Revolutionary
-  - AllHostile
-  - Wizard
-  - Dragon
-  - Xenoborg
-  - WizFedFaction # Frontier
-  - BloodCultNF # Frontier
-  - NFSyndicate # Frontier
-  - NFPirate # Frontier
-  - ExplorersExpeditionNF # Frontier
-  - ArtifactConstruct # Frontier
-  - StreetGangNF # Frontier
-  - DinosaursNF # Frontier
-  - MercenariesExpeditionNF # Frontier
-  - SiliconsExpeditionNF # Frontier
-  - AberrantFleshExpeditionNF # Frontier
-  - ContrabandClothing # Frontier
-  - ContrabandDetection # Frontier
+  defaultHostile: true
 
 - type: npcFaction
   id: Zombie
-  hostile:
-  - NanoTrasen
-  - SimpleNeutral
-  - SimpleHostile
-  - Syndicate
-  - Passive
-  - PetsNT
-  - Revolutionary
-  - AllHostile
-  - Wizard
-  - Dragon
-  - Xenoborg
-  - WizFedFaction # Frontier
-  - BloodCultNF # Frontier
-  - NFSyndicate # Frontier
-  - NFPirate # Frontier
-  - ExplorersExpeditionNF # Frontier
-  - ArtifactConstruct # Frontier
-  - StreetGangNF # Frontier
-  - DinosaursNF # Frontier
-  - MercenariesExpeditionNF # Frontier
-  - SiliconsExpeditionNF # Frontier
-  - AberrantFleshExpeditionNF # Frontier
-  - ContrabandClothing # Frontier
-  - ContrabandDetection # Frontier
+  defaultHostile: true
 
 - type: npcFaction
   id: Revolutionary
-  hostile:
-  - NanoTrasen
-  - Zombie
-  - SimpleHostile
-  - Dragon
-  - AllHostile
-  - Wizard
-  - Xenoborg
-  - WizFedFaction # Frontier
-  - BloodCultNF # Frontier
-  - NFPirate # Frontier
-  - ExplorersExpeditionNF # Frontier
-  - ArtifactConstruct # Frontier
-  #- StreetGangNF # Frontier
-  - DinosaursNF # Frontier
-  - MercenariesExpeditionNF # Frontier
-  - SiliconsExpeditionNF # Frontier
-  - AberrantFleshExpeditionNF # Frontier
-  - ContrabandClothing # Frontier
-  - ContrabandDetection # Frontier
+  neutral:
+  - Syndicate
+  # Aurora's Song: Changed from SyndicateNF to NFSyndicate to match actual faction usage
+  - NFSyndicate
+  defaultHostile: true
 
 - type: npcFaction
   id: AllHostile # Frontier: use HostileUniversally
-  hostile:
-  - NanoTrasen
-  - Dragon
-  - Mouse
-  - Passive
-  - PetsNT
-  - SimpleHostile
-  - SimpleNeutral
-  - Syndicate
-  - Xeno
-  - Zombie
-  - Revolutionary
-  - Wizard
-  - Xenoborg
+  defaultHostile: true
 
 - type: npcFaction
   id: Wizard
-  hostile:
-  - NanoTrasen
-  - Dragon
-  - Mouse
-  - Passive
-  - PetsNT
-  - SimpleHostile
-  - SimpleNeutral
-  - Syndicate
-  - Xeno
-  - Zombie
-  - Revolutionary
-  - AllHostile
-  - Xenoborg
-  # - WizFedFaction # Frontier
-  - BloodCultNF # Frontier
-  - NFSyndicate # Frontier
-  - NFPirate # Frontier
-  - ExplorersExpeditionNF # Frontier
-  - ArtifactConstruct # Frontier
-  - StreetGangNF # Frontier
-  - DinosaursNF # Frontier
-  - MercenariesExpeditionNF # Frontier
-  - SiliconsExpeditionNF # Frontier
-  - AberrantFleshExpeditionNF # Frontier
-  - ContrabandClothing # Frontier
-  - ContrabandDetection # Frontier
+  defaultHostile: true
 
+# Aurora: Add missing TSFMC faction
+- type: npcFaction
+  id: TSFMC
+  neutral:
+  - NanoTrasen
+  - Passive
+
+# Aurora: Add missing Xenoborg faction
 - type: npcFaction
   id: Xenoborg
-  hostile:
-  # they have brains
-  - NanoTrasen
-  - Syndicate
-  - Zombie
-  - Revolutionary
-  - Wizard
+  defaultHostile: true
 
-  - Xeno # rivalry
+# Aurora: Add missing Chimera faction
+- type: npcFaction
+  id: Chimera
+  friendly:
+  - AberrantFleshExpeditionNF
+  defaultHostile: true
 
-  # cause they are hostile to them
-  - SimpleHostile 
-  - AllHostile
-  - WizFedFaction # Frontier
-  - BloodCultNF # Frontier
-  - NFPirate # Frontier
-  - ExplorersExpeditionNF # Frontier
-  - ArtifactConstruct # Frontier
-  - StreetGangNF # Frontier
-  - DinosaursNF # Frontier
-  - MercenariesExpeditionNF # Frontier
-  - SiliconsExpeditionNF # Frontier
-  - AberrantFleshExpeditionNF # Frontier
-  - ContrabandClothing # Frontier
-  - ContrabandDetection # Frontier
+# Mono edit end.

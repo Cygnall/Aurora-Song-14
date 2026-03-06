@@ -43,7 +43,7 @@
   parent: PosterBase
   id: NFPosterLegitWantedClarpy
   name: "Wanted: Clarpy"
-  description: Wanted for piracy and assault. If you can help end this biting spree, please contact the SLE.
+  description: Wanted for piracy and assault. If you can help end this biting spree, please contact the SLE. # Aurora's Song - Modified to SLE mention and taste
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
@@ -63,7 +63,7 @@
   parent: PosterBase
   id: NFPosterLegitHaveYouSeenThisEgg
   name: "Have You Seen This Egg?"
-  description: Please inform SLE personnel of any strange sightings like roaming space monsters, gigantic purple eggs, and strange notes left behind posters or vending machines.
+  description: Please inform SLE personnel of any strange sightings like roaming space monsters, gigantic purple eggs, and strange notes left behind posters or vending machines. # Aurora's Song - Modified to SLE mention and taste
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi
@@ -73,7 +73,7 @@
   parent: PosterBase
   id: NFPosterLegitGunTurnIn
   name: "Turn In Your Guns!"
-  description: The SLE reminds you to give in your unregistered guns found planetside. The FUCs these are worth help keep the department running. Do your duty!
+  description: The SLE reminds you to turn in or register your unregistered guns. The SCU these are worth help keep the department running. Do your duty! # Aurora's Song - Modified to SLE mention and taste
   components:
   - type: Sprite
     sprite: _NF/Structures/Wallmounts/posters.rsi

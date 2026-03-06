@@ -1,0 +1,122 @@
+# region SLE
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconRookie
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slerookie
+  jobName: job-name-rookie
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconOfficer
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: sleofficer
+  jobName: job-name-officer
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconPublicAffairsLiaison
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: aspublicaffairsliaison
+  jobName: job-name-pal
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconASDetective
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: sledetective
+  jobName: job-name-as-detective
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCorpsman
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slecorpsman
+  jobName: job-name-corpsman
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconSergeant
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slesergeant
+  jobName: job-name-sergeant
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconLieutenant
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slelieutenant
+  jobName: job-name-lieutenant
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconCommissioner
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: slecommissioner
+  jobName: job-name-commissioner
+  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+
+- type: jobIcon
+  parent: JobIconHeadOfPersonnel
+  id: JobIconColonialRepresentative
+  jobName: job-name-colonial-representative
+  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+
+#region Colonial Command
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconColonialCommandOfficial
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: colcom
+  jobName: job-name-colcom
+  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconColonialArmedForces
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: mil
+  jobName: job-name-caf
+  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+
+#region Engineering
+
+- type: jobIcon
+  parent: JobIconChiefEngineer
+  id: JobIconSiteManager
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: sitemanager
+  jobName: job-name-site-manager
+  allowSelection: false # Frontier: no impersonating command staff, literally 1984
+
+- type: jobIcon
+  parent: JobIconStationEngineer
+  id: JobIconSiteWorker
+  icon:
+    sprite: /Textures/_AS/Interface/Misc/job_icons.rsi
+    state: siteworker
+  jobName: job-name-site-worker
+
+#region Other
+
+- type: jobIcon
+  parent: JobIcon
+  id: JobIconPrisonGuard
+  icon:
+    sprite: /Textures/_DV/Interface/Misc/job_icons.rsi
+    state: nyanoPrisonGuard
+  jobName: job-name-guard
+  allowSelection: false # Frontier: don't display, no job

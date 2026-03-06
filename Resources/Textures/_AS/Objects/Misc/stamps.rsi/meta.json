@@ -1,38 +1,32 @@
 {
   "version": 1,
   "license": "CC-BY-SA-4.0",
-  "copyright": "stamp-sheriff by GhostPrince (Discord). stamp-doctor/engineer/pal/plant-manager by whatston3 (GitHub), stamp-bailiff/doc by dustylens (GitHub)",
+  "copyright": "stamp-sheriff by GhostPrince (Discord). stamp-pal/doctor by whatston3 (GitHub), stamp-bailiff by dustylens (GitHub)",
+  "extra_copyright": [
+    "Resprites and recolors for NFSD to SLE by Vandanna/ Cygnall (discord/ github)"
+    ],
   "size": {
     "x": 32,
     "y": 32
   },
   "states": [
     {
-      "name": "stamp-doctor"
-    },
-    {
-      "name": "stamp-engineer"
-    },
-    {
-      "name": "stamp-doc"
-    },
-    {
       "name": "stamp-pal"
     },
     {
-      "name": "stamp-plant-manager"
+      "name": "stamp-commissioner"
     },
     {
-      "name": "stamp-psychologist"
+      "name": "stamp-lieutenant"
     },
     {
-      "name": "stamp-sheriff"
+      "name": "stamp-cr"
     },
     {
-      "name": "stamp-stc"
+      "name": "stamp-site-manager"
     },
     {
-      "name": "stamp-bailiff"
+      "name": "stamp-site-worker"
     }
   ]
 }

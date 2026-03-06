@@ -12,6 +12,7 @@
   - MobHumanoidHostileAISimpleRanged
   id: MobSyndicateNavalBase
   components:
+  - type: CombatMode # Aurora's Song - Enable NavSmash behavior
   - type: Body
     prototype: HumanSyntheticOrgans # New set of synthetic organs grants faster removal of toxins from bloodstream
     requiredLegs: 2

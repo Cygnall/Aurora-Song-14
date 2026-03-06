@@ -1,0 +1,5 @@
+- type: loadout
+  id: ColonialRepresentativeClothingHeadsetAltCentComCommon
+  price: 0
+  equipment:
+    ears: ClothingHeadsetAltCentComCommon

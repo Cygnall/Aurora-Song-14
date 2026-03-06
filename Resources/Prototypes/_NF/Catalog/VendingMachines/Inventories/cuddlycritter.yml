@@ -57,6 +57,8 @@
     MysterySpaceBladeBox: 10
   contrabandInventory:
     PlushieLamp: 3
+    PlushieExperiment: 3 # Aurora's Song
+    PlushieCatWhite: 3 # Aurora's Song
     CrazyGlue: 1
   emaggedInventory:
     PlushieJester: 3

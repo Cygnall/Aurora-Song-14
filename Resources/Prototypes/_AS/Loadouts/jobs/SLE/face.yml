@@ -1,0 +1,26 @@
+- type: loadout
+  id: CommissionerClothingMaskCommissioner
+  storage:
+    back:
+    - ASClothingMaskGasSLECommissioner
+
+- type: loadout
+  id: CorpsmanClothingMaskCorpsman
+  storage:
+    back:
+    - ClothingMaskBreathMedicalSecurity
+
+- type: loadout
+  id: SLEClothingMaskGasSLE
+  storage:
+    back:
+    - ASClothingMaskGasSLE
+
+- type: loadout
+  id: SLEVoxClothingMaskGasSLE
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: EffectSpeciesVox
+  equipment:
+    mask: ASClothingMaskGasSLE
+

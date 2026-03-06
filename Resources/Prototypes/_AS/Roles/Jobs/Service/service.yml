@@ -1,4 +1,4 @@
-﻿- type: job
+- type: job
   id: Service
   name: job-name-service-worker
   description: job-description-Service
@@ -30,7 +30,11 @@
   id: ServiceGear
   storage:
     back:
-    - EncryptionKeyService # Frontier
+    - EncryptionKeyService
+    - ShipVoucherAuroraService
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
 
 - type: chameleonOutfit
   id: ServiceChameleonOutfit

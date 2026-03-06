@@ -35,7 +35,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Medical Dispatch'
         - type: ExtraStationInformation
-          iconPath: /Textures/_AS/Icons/Stations/medic.png # Aurora Song
+          iconPath: /Textures/_AS/Icons/Stations/placeholder-banner.png # Aurora Song's - placeholder POI disabled
           stationSubtext: 'frontier-lobby-medical-subtext'
           stationDescription: 'frontier-lobby-medical-description'
           lobbySortOrder: 4

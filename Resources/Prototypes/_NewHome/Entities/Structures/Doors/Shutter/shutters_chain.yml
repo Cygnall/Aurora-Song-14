@@ -1,0 +1,49 @@
+- type: entity
+  id: ShuttersChain
+  parent: BaseShutter
+  name: chain shutters
+  description: Let me in! Let me IIIIIINNN!
+  components:
+  - type: Sprite
+    sprite: _NewHome/Structures/Doors/Shutters/shutters_chain.rsi
+    layers:
+    - state: closed
+      map: ["enum.DoorVisualLayers.Base"]
+    - state: welded
+      map: ["enum.WeldableLayers.BaseWelded"]
+  - type: Door
+    changeAirtight: false
+  - type: Airtight
+    airBlocked: false
+  - type: Construction
+    graph: ShuttersChain
+    node: ShuttersChain
+    containers:
+    - board
+
+- type: entity
+  id: ShuttersChainOpen
+  parent: ShuttersChain
+  suffix: Open
+  components:
+  - type: Door
+    state: Open
+  - type: Physics
+    canCollide: false
+  - type: RadiationBlocker
+    enabled: false
+
+- type: entity
+  id: ShutterChainFrame
+  parent: ShuttersFrame
+  name: chain shutter frame
+  description: A frame for constructing a chain shutter.
+  components:
+  - type: Sprite
+    sprite: _NewHome/Structures/Doors/Shutters/shutters_chain.rsi
+    state: frame
+  - type: Construction
+    graph: ShuttersChain
+    node: frame1
+    containers:
+    - board

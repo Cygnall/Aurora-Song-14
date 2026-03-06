@@ -75,6 +75,8 @@
   randomizeName: true # Patients should have names
   speciesBlacklist:
   - IPC # IPCs don't work well with medical damage mechanics
+  - Fairy # incredibly annoying if rotted
+  - Sheleg # can't guarantee spawns with suit
   components:
 #  - type: StinkyTrait # Aurora Song: Disabled for now, may re-enable later
   - type: Carriable # Carrying system

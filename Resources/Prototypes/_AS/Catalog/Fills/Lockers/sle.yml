@@ -60,26 +60,37 @@
     - id: Multitool
 
 - type: entity
-  id: ASLockerSLESheriffFilled
-  suffix: Sheriff, Filled
-  parent: ASLockerSLESheriff
+  id: ASLockerSLECommissionerFilled
+  suffix: Commissioner, Filled
+  parent: ASLockerSLECommissioner
   components:
   - type: EntityTableContainerFill
     containers:
       entity_storage: !type:NestedSelector
-        tableId: FillASLockerSLESheriff
+        tableId: FillASLockerSLECommissioner
 
 - type: entityTable
-  id: FillASLockerSLESheriff
+  id: FillASLockerSLECommissioner
   table: !type:AllSelector
     children:
-    - id: ClothingHeadHatBeretCommissioner # Using existing commissioner beret until SLE sheriff beret is created
-    - id: ASClothingOuterCoatSLEFormalSheriff
-    - id: ASClothingHeadsetSLEGreenCommon # Using green common headset until gold command headset is created
-    - id: ASClothingNeckSLEBadgeSheriff
-    - id: ShriffIDCard
+    - id: ASClothingHeadHatBeretCommissioner
+    - id: ASClothingOuterCoatSLEFormalCommissioner
+    - id: ASClothingHeadsetSLEOrangeCommon
+    - id: ASClothingNeckSLEBadgeCommissioner
+    - id: ASCommissionerIDCard
     - id: BoxHandcuff
     - id: CommsComputerCircuitboard
     - id: MedalCaseNfsd
     - id: Demag
     - id: ASWeaponShotgunBailiff
+    - id: NFAmmunitionBoxShellShotgunBuckshot
+      amount: 2
+    - id: NFAmmunitionBoxShellShotgunBeanbag
+      amount: 2
+    - id: ASWeaponRifleMarksmanHZ-3-3-C
+    - id: ASMagazineMarksmanRifle30
+      amount: 2
+    - id: ClothingOuterHardsuitSleCombatCommissioner
+    - id: ClothingOuterSoftsuitSlePatrolCommissioner
+    - id: ASJetpackSLEFilled
+    - id: ASClothingShoesBootsMagSLEFilled

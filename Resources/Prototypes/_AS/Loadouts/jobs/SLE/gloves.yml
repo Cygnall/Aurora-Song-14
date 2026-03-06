@@ -1,0 +1,10 @@
+#T0
+- type: loadout
+  id: SLEClothingHandsGlovesCombatSLEDarkBlue
+  equipment:
+    gloves: ASClothingHandsGlovesCombatSLEDarkBlue
+
+- type: loadout
+  id: SLEClothingHandsGlovesCombatSLELightBlue
+  equipment:
+    gloves: ASClothingHandsGlovesCombatSLELightBlue

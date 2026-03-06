@@ -157,6 +157,7 @@
   - NFPouchMime
   - NFPouchCaptain
   - NFPouchCargo
+  - MedicalPouch
   technologyPrerequisites:
   - NFAdvancedBeltTechnology
   position: 2, 3
@@ -420,19 +421,21 @@
   - ClothingOuterHardsuitCap
   - ClothingOuterHardsuitEngineeringWhite # CE
   - ClothingOuterHardsuitLuxury
+
   technologyPrerequisites:
   - NFHardsuitsEngineering
   position: 3, 8
 
 - type: technology
-  id: NFHardsuitsExperimentalRD
-  name: nf-research-technology-hardsuits-experimental-rd
+  id: NFHardsuitsExperimentalProtection
+  name: nf-research-technology-hardsuits-experimental-protection
   entityIcon: ClothingOuterHardsuitRd
   discipline: NFScience
   tier: 1
   cost: 5000
   recipeUnlocks:
   - ClothingOuterHardsuitRd
+  - ClothingOuterHardsuitHostileEnvironment
   prerequisiteLineType: Tree
   technologyPrerequisites:
   - NFSuperParts
@@ -455,6 +458,20 @@
   position: 4, 9
 
 - type: technology
+  id: NFHardsuitsOldWar
+  name: nf-research-technology-hardsuits-old-war
+  entityIcon: ClothingOuterHardsuitSurplus
+  discipline: NFArsenalMercenary
+  tier: 1
+  cost: 10000
+  recipeUnlocks:
+  - ClothingOuterHardsuitSurplus
+  prerequisiteLineType: Diagonal
+  technologyPrerequisites:
+    - NFHardsuitsArmored
+  position: 5, 10
+
+- type: technology
   id: NFHardsuitsExperimentalIndustrial
   name: nf-research-technology-hardsuits-experimental-industrial
   entityIcon: ClothingOuterHardsuitMaximPrototype
@@ -466,7 +483,7 @@
   - ClothingOuterHardsuitMaximPrototype
   prerequisiteLineType: Tree
   technologyPrerequisites:
-  - NFHardsuitsExperimentalRD
+  - NFHardsuitsExperimentalProtection
   - NFHardsuitsArmored
   position: 5, 8
 
@@ -479,6 +496,7 @@
   cost: 20000
   recipeUnlocks:
   - ClothingOuterHardsuitScaf
+  - ClothingOuterHardsuitNoble
   technologyPrerequisites:
   - NFHardsuitsArmored
   position: 5, 9
@@ -1393,7 +1411,7 @@
 #  - FireExtinguisherBluespace # DeltaV
   technologyPrerequisites:
   - NFAtmosphericTech
-  position: 0, 33
+  position: 0, 34
 
 - type: technology
   id: NFAtmosphericTech
@@ -1405,7 +1423,7 @@
   recipeUnlocks:
   - ThermomachineFreezerMachineCircuitBoard
   - GasRecyclerMachineCircuitboard
-  position: 0, 34
+  position: 0, 35
 
 - type: technology
   id: NFAtmosphericDrilling
@@ -1420,7 +1438,7 @@
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFAtmosphericTech
-  position: 1, 35
+  position: 1, 36
 
 - type: technology
   id: NFAdvancedAtmosphericsPortable
@@ -1434,7 +1452,7 @@
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFAtmosphericTech
-  position: 1, 33
+  position: 1, 34
 
 - type: technology
   id: NFAdvancedAtmospherics
@@ -1447,7 +1465,7 @@
   - HellfireFreezerMachineCircuitBoard
   technologyPrerequisites:
   - NFAtmosphericTech
-  position: 1, 34
+  position: 1, 35
 
 # region Jetpack
 
@@ -1461,7 +1479,7 @@
   cost: 2500
   recipeUnlocks:
   - JetpackBlue
-  position: 0, 36
+  position: 0, 37
 
 - type: technology
   id: NFArsenalMercenaryPropulsion
@@ -1474,7 +1492,7 @@
   - JetpackSecurity
   technologyPrerequisites:
   - NFBasicPersonalPropulsion
-  position: 0, 37
+  position: 0, 38
 
 - type: technology
   id: NFPersonalPropulsion
@@ -1488,20 +1506,20 @@
   - JetpackCaptain
   technologyPrerequisites:
   - NFAdvancedPersonalPropulsion  #Aurora: Make this high tier research
-  position: 2, 36
+  position: 2, 37
 
-- type: technology
-  id: NFArsenalNfsdPropulsion
-  name: nf-research-technology-security-personal-propulsion
-  entityIcon: JetpackNfsd
-  discipline: NFArsenalNfsd
-  tier: 1
-  cost: 1000
-  recipeUnlocks:
-  - JetpackNfsd
-  technologyPrerequisites:
-  - NFArsenalMercenaryPropulsion
-  position: 1, 37
+#- type: technology # Aurora's Song - deprecated, commenting out
+#  id: NFArsenalNfsdPropulsion
+#  name: nf-research-technology-security-personal-propulsion
+#  entityIcon: JetpackNfsd
+#  discipline: NFArsenalNfsd
+#  tier: 1
+#  cost: 1000
+#  recipeUnlocks:
+#  - JetpackNfsd
+#  technologyPrerequisites:
+#  - NFArsenalMercenaryPropulsion
+#  position: 1, 38
 
 - type: technology
   id: NFAdvancedPersonalPropulsion
@@ -1515,7 +1533,7 @@
   - JetpackVoid
   technologyPrerequisites:
   - NFBasicPersonalPropulsion #Aurora This research is useless in comparison to the captains pack, make it a prereq
-  position: 1, 36
+  position: 1, 37
 
 # region Salvage
 
@@ -1528,7 +1546,7 @@
   cost: 2500
   recipeUnlocks:
   - OreProcessorIndustrialMachineCircuitboard
-  position: 0, 38
+  position: 0, 39
 
 - type: technology
   id: NFSalvageGrapplingEquipment
@@ -1541,7 +1559,7 @@
   - WeaponGrapplingGun
   technologyPrerequisites:
   - NFIndustrialOreProcessor
-  position: 0, 39
+  position: 0, 40
 
 - type: technology
   id: NFExcavation
@@ -1555,7 +1573,7 @@
   - MineralScannerEmpty
   technologyPrerequisites:
   - NFIndustrialOreProcessor
-  position: 1, 38
+  position: 1, 39
 
 - type: technology
   id: NFSalvageWeapons
@@ -1571,7 +1589,7 @@
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFIndustrialOreProcessor
-  position: 1, 39
+  position: 1, 40
 
 - type: technology
   id: NFMassExcavation
@@ -1585,7 +1603,7 @@
   - AdvancedMineralScannerEmpty
   technologyPrerequisites:
   - NFExcavation
-  position: 2, 38
+  position: 2, 39
 
 - type: technology
   id: NFAdvancedSalvageWeapons
@@ -1598,7 +1616,7 @@
   - WeaponCrusherGlaive
   technologyPrerequisites:
   - NFSalvageWeapons
-  position: 2, 39
+  position: 2, 40
 
 - type: technology
   id: NFBluespaceOreStorage
@@ -1612,7 +1630,7 @@
   - BorgModuleAdvancedMining
   technologyPrerequisites:
   - NFMassExcavation
-  position: 3, 38
+  position: 3, 39
 
 - type: technology
   id: NFImprovedSalvageWeapons
@@ -1625,7 +1643,7 @@
   - NFWeaponPkaCannon
   technologyPrerequisites:
   - NFAdvancedSalvageWeapons
-  position: 3, 39
+  position: 3, 40
 
 - type: technology
   id: NFAdvancedSalvageCyborg
@@ -1638,7 +1656,7 @@
   - BorgModuleAdvancedMining
   technologyPrerequisites:
   - NFBluespaceOreStorage
-  position: 4, 38
+  position: 4, 39
 
 # region Munitions
 
@@ -1661,7 +1679,7 @@
   - NFMagazineClipRifle20Empty
   - MagazineLightRifleLowCapacityEmpty
   - NFMagazinePistol35Empty
-  position: 0, 43
+  position: 0, 44
 
 - type: technology
   id: NFBountyHunting
@@ -1681,7 +1699,7 @@
   - FlashlightSecliteNF
   technologyPrerequisites:
   - NFBasicAmmunitionProduction
-  position: 1, 42
+  position: 1, 43
 
 - type: technology
   id: NFImprovedPistolAmmo
@@ -1693,14 +1711,19 @@
   recipeUnlocks:
   - NFAmmunitionBoxPistol35Overpressure
   - NFAmmunitionBoxPistol45Overpressure
+  - ASAmmunitionBoxPistol40Overpressure # Aurora's Song
   - NFMagazineHighCapacityPistol35Empty
+  - NFMagazineHighCapacityPistol35OverpressureEmpty # Aurora's Song
+  - ASMagazineHighCapacityPistol40Empty # Aurora's Song
+  - ASMagazineHighCapacityPistol40OverpressureEmpty # Aurora's Song
   - NFMagazineSubMachineGun35Empty
+  - ASMagazineSubMachineGun40Empty # Aurora's Song
   - NFMagazineSubMachineGunTopMounted35Empty
   - NFMagazinePistol45Empty
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFBasicAmmunitionProduction
-  position: 1, 44
+  position: 1, 45
 
 - type: technology
   id: NFNonlethalAmmunition
@@ -1718,7 +1741,7 @@
   - NFAmmunitionBoxShellShotgunTranquilizer
   technologyPrerequisites:
   - NFBasicAmmunitionProduction
-  position: 1, 45
+  position: 1, 46
 
 - type: technology
   id: NFAdvancedRiotControl
@@ -1731,7 +1754,7 @@
   - NFTelescopicShield
   technologyPrerequisites:
   - NFBountyHunting
-  position: 2, 42
+  position: 2, 43
 
 - type: technology
   id: NFArsenalStyle
@@ -1761,7 +1784,7 @@
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFBountyHunting
-  position: 2, 43
+  position: 2, 44
 
 - type: technology
   id: NFImprovedRifleAmmo
@@ -1776,11 +1799,11 @@
   #- NFAmmunitionBoxShellShotgunOverpressure
   - NFMagazineRifle20Empty
   - NFMagazineRifle30Empty
-  - NFMagazineDrumRifle20Empty
+  #- NFMagazineDrumRifle20Empty # Aurora's Song - Removed from research, added to loot pools
   - MagazineAsmgtUniversalEmpty
   technologyPrerequisites:
   - NFImprovedPistolAmmo
-  position: 2, 44
+  position: 2, 45
 
 - type: technology
   id: NFExplosiveTechnology
@@ -1798,7 +1821,7 @@
   - ExplosivePayload # Added back | Aurora Song
   technologyPrerequisites:
   - NFAdvancedRiotControl
-  position: 3, 41
+  position: 3, 42
 
 - type: technology
   id: NFDeterrenceTechnologies
@@ -1811,7 +1834,7 @@
   - HoloprojectorField
   technologyPrerequisites:
   - NFAdvancedRiotControl
-  position: 3, 42
+  position: 3, 43
 
 - type: technology
   id: NFSpecialMeans
@@ -1825,7 +1848,7 @@
   prerequisiteLineType: Diagonal
   technologyPrerequisites:
   - NFAdvancedRiotControl
-  position: 3, 43
+  position: 3, 44
 
 - type: technology
   id: NFBulkRifleAmmo
@@ -1839,9 +1862,13 @@
   - NFAmmunitionBoxBigRifle20Overpressure
   - NFAmmunitionBoxBigRifle30
   - NFAmmunitionBoxBigRifle30Overpressure
+  - ASAmmunitionBoxBigPistol35 # Aurora Song
+  - ASAmmunitionBoxBigPistol35Overpressure # Aurora Song
+  - ASAmmunitionBoxBigPistol40 # Aurora Song
+  - ASAmmunitionBoxBigPistol40Overpressure # Aurora Song
   technologyPrerequisites:
   - NFImprovedRifleAmmo
-  position: 3, 44
+  position: 3, 45
 
 - type: technology
   id: NFBasicShuttleArmament
@@ -1862,4 +1889,4 @@
   technologyPrerequisites:
   - NFImprovedSalvageWeapons
   - NFExplosiveTechnology
-  position: 4, 40
+  position: 4, 41

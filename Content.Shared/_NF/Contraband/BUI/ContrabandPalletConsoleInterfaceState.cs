@@ -9,6 +9,12 @@ public sealed class ContrabandPalletConsoleInterfaceState : BoundUserInterfaceSt
     /// estimated appraised value of all the contraband on top of pallets on the same grid as the console
     /// </summary>
     public int Appraisal;
+    
+    // AS: Allow alt reward currencies
+    /// <summary>
+    /// estimated appraised value of all the contraband on top of pallets on the same grid as the console, in alternate currency
+    /// </summary>
+    public int AltAppraisal;
 
     /// <summary>
     /// number of contraband entities on top of pallets on the same grid as the console
@@ -26,9 +32,10 @@ public sealed class ContrabandPalletConsoleInterfaceState : BoundUserInterfaceSt
     public bool Enabled;
 
     // Aurora - added unregistered
-    public ContrabandPalletConsoleInterfaceState(int appraisal, int count, int unregistered, bool enabled)
+    public ContrabandPalletConsoleInterfaceState(int appraisal, int altAppraisal, int count, int unregistered, bool enabled)
     {
         Appraisal = appraisal;
+        AltAppraisal = altAppraisal;
         Count = count;
         Unregistered = unregistered;
         Enabled = enabled;

@@ -1,0 +1,23 @@
+# Aurora's Song - Boards for Monolith Machines
+
+#region Shuttle
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
+  id: MachineDriveCTLA25Circuitboard
+  result: MachineDriveCTLA25Circuitboard
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
+  id: MachineDriveCTLA25sCircuitboard
+  result: MachineDriveCTLA25sCircuitboard
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
+  id: MachineDriveCTLA50Circuitboard
+  result: MachineDriveCTLA50Circuitboard
+
+- type: latheRecipe
+  parent: [ BaseGoldCircuitboardRecipe, BaseEngineeringMachineRecipeCategory ]
+  id: MachineDriveCTLA160Circuitboard
+  result: MachineDriveCTLA160Circuitboard

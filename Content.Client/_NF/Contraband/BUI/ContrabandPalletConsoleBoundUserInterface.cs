@@ -66,7 +66,7 @@ public sealed class ContrabandPalletConsoleBoundUserInterface : BoundUserInterfa
             return;
 
         _menu?.SetEnabled(palletState.Enabled);
-        _menu?.SetAppraisal(palletState.Appraisal);
+        _menu?.SetAppraisal(palletState.Appraisal, palletState.AltAppraisal); // AS: Allow alt reward currencies
         _menu?.SetCount(palletState.Count);
         _menu?.SetUnregistered(palletState.Unregistered);
     }

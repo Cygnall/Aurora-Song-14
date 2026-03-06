@@ -40,7 +40,7 @@
         - Write
     # Frontier: space law slot
     bookSlot:
-      startingItem: NFHyperlinkBookSpaceLaw
+      startingItem: ASHyperlinkBookSpaceLaw # Aurora's Song - changed to AS version
       priority: -3
       whitelist:
         tags:
@@ -137,9 +137,9 @@
     - WhitelistChameleonPDA
   - type: Input
     context: "human"
-  - type: SentienceTarget # sentient PDA = pAI lite
-    flavorKind: station-event-random-sentience-flavor-mechanical
-    weight: 0.001 # 1,000 PDAs = as likely to be picked as 1 regular animal
+  #- type: SentienceTarget # sentient PDA = pAI lite
+  #  flavorKind: station-event-random-sentience-flavor-mechanical
+  #  weight: 0.001 # 1,000 PDAs = as likely to be picked as 1 regular animal
   - type: BlockMovement
     blockInteraction: false # lets the PDA toggle its own flashlight
   - type: TypingIndicator
@@ -452,7 +452,7 @@
       insertSound: null
     # Frontier: silent book slot
     bookSlot:
-      startingItem: NFHyperlinkBookSpaceLaw
+      startingItem: ASHyperlinkBookSpaceLaw # Aurora's Song - changed to AS version
       priority: -2
       whitelist:
         tags:

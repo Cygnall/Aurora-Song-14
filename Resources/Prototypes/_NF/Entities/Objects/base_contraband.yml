@@ -44,6 +44,21 @@
   - type: Contraband
     allowedDepartments: [ Engineering ]
 
+- type: entity # Aurora's Song - added for Medical
+  parent: BaseC2ContrabandUnredeemable
+  id: BaseC2ContrabandMedicalUnredeemable
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ Medical ]
+
+- type: entity # Aurora's Song - added for Service
+  parent: BaseC2ContrabandUnredeemable
+  id: BaseC2ContrabandServiceUnredeemable
+  abstract: true
+  components:
+  - type: Contraband
+    allowedDepartments: [ Aurora ]
 
 - type: entity
   parent: BaseC2ContrabandUnredeemable
@@ -52,8 +67,9 @@
   components:
   - type: Contraband
     severity: Class2Expedition
-    turnInValues: &oneFUC
+    turnInValues: 
       FrontierUplinkCoin: 1
+      ExchangeCoin: 1 # AS
       Doubloon: 1
 
 - type: entity
@@ -85,6 +101,7 @@
     severity: Class3Expedition
     turnInValues:
       FrontierUplinkCoin: 2
+      ExchangeCoin: 2 # AS
       Doubloon: 2
 
 - type: entity
@@ -93,7 +110,10 @@
   abstract: true
   components:
   - type: Contraband
-    turnInValues: *oneFUC
+    turnInValues: 
+      FrontierUplinkCoin: 1
+      ExchangeCoin: 1 # AS
+      Doubloon: 1
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -117,7 +137,10 @@
   abstract: true
   components:
   - type: Contraband
-    turnInValues: *oneFUC
+    turnInValues:
+      FrontierUplinkCoin: 1
+      ExchangeCoin: 1 # AS
+      Doubloon: 1
 
 - type: entity
   parent: BaseC3CultContraband
@@ -144,6 +167,7 @@
   - type: Contraband
     turnInValues:
       FrontierUplinkCoin: 1
+      ExchangeCoin: 1 # AS
       Doubloon: 0
 
 - type: entity
@@ -168,7 +192,10 @@
   abstract: true
   components:
   - type: Contraband
-    turnInValues: *oneFUC
+    turnInValues: 
+      FrontierUplinkCoin: 1
+      ExchangeCoin: 1 # AS
+      Doubloon: 1
 
 - type: entity
   parent: BaseC3ContrabandUnredeemable
@@ -185,7 +212,10 @@
   components:
   - type: Contraband
     severity: Class3Wizard
-    turnInValues: *oneFUC
+    turnInValues: 
+      FrontierUplinkCoin: 1
+      ExchangeCoin: 1 # AS
+      Doubloon: 1
 # endregion
 
 # region Class 3 Mobs

@@ -1,0 +1,12 @@
+#T0
+- type: loadout
+  id: ColonialRepresentativeClothingNeckCloakColonialRepresentative
+  price: 0
+  equipment:
+    neck: ASClothingNeckCloakColonialRepresentative
+
+- type: loadout
+  id: ColonialRepresentativeClothingNeckMantleColonialRepresentative
+  price: 0
+  equipment:
+    neck: ASClothingNeckMantleColonialRepresentative

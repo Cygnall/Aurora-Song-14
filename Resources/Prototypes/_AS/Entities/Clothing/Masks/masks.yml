@@ -1,26 +1,76 @@
-# Aurora Song - SLE (Security Logistics Enforcement) masks
-# Prototypes for Aurora Song's SLE faction equipment
-
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSecurity ]
   id: ASClothingMaskGasSLE
   name: SLE gas mask
-  description: A standard issue Security Logistics Enforcement gas mask.
+  description: A standard issue Sector Law Enforcement gas mask.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Mask/sle.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Mask/sle.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Mask/sle.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Mask/sle.rsi
   - type: CatWearable
 
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable, ClothingMaskGasSwat ]
-  id: ASClothingMaskGasSLESheriff
-  name: SLE sheriff gas mask
-  description: A gas mask worthy of an SLE sheriff.
+  id: ASClothingMaskGasSLECommissioner
+  name: SLE commissioner gas mask
+  description: A gas mask worthy of an SLE Commissioner.
   components:
   - type: Sprite
-    sprite: _AS/Clothing/Mask/sle_sheriff.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Mask/sle_commissioner.rsi
   - type: Clothing
-    sprite: _AS/Clothing/Mask/sle_sheriff.rsi # Aurora Song - Using SLE-recolored sprites
+    sprite: _AS/Clothing/Mask/sle_commissioner.rsi
 
+#region Colonial Command
+
+- type: entity
+  parent: [ ClothingMaskGasERT, BaseCentcommContraband ]
+  id: ClothingMaskGasCAF
+  name: caf gas mask
+  description: The gas mask of the elite squad of the CAF.
+  components:
+  - type: Sprite
+    sprite: Clothing/Mask/ert.rsi
+  - type: Clothing
+    sprite: Clothing/Mask/ert.rsi
+  - type: Tag
+    tags:
+    - WhitelistChameleon
+  - type: HideLayerClothing
+    slots:
+    - Hair
+    - Snout
+    hideOnToggle: true
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.95
+        Slash: 0.95
+        Piercing: 0.95
+        Heat: 0.95
+  - type: IngestionBlocker # Goobstation
+
+#- type: entity
+#  parent: ClothingMaskGasCAF
+#  id: ASClothingMaskGasDeathSquad
+#  name: death squad gas mask
+#  description: A unique gas mask for the CAF's most elite squad.
+#  components:
+#  - type: Sprite
+#    sprite: Clothing/Mask/squadron.rsi
+#  - type: Clothing
+#    sprite: Clothing/Mask/squadron.rsi
+#  - type: HideLayerClothing
+#    slots:
+#    - Hair
+#    - HeadTop
+#    - HeadSide
+#  - type: Armor
+#    modifiers:
+#      coefficients:
+#        Blunt: 0.80
+#        Slash: 0.80
+#        Piercing: 0.90
+#        Heat: 0.90

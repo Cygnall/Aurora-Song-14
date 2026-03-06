@@ -12,7 +12,7 @@ public sealed partial class GhostRoleSetWhitelistPanel : PanelContainer
 {
     public Action<ProtoId<GhostRolePrototype>, bool>? OnSetGhostRole;
 
-    public GhostRoleSetWhitelistPanel(List<ProtoId<GhostRolePrototype>> ghostRoleList, string ghostRoleSetName, Color ghostRoleSetColor, IPrototypeManager proto, HashSet<ProtoId<GhostRolePrototype>> whitelists, bool globalWhitelist)
+    public GhostRoleSetWhitelistPanel(List<ProtoId<GhostRolePrototype>> ghostRoleList, string ghostRoleSetName, Color ghostRoleSetColor, IPrototypeManager proto, HashSet<ProtoId<GhostRolePrototype>> whitelists) // AS: Removing global whitelists from role whitelist checks
     {
         RobustXamlLoader.Load(this);
 
@@ -22,8 +22,8 @@ public sealed partial class GhostRoleSetWhitelistPanel : PanelContainer
             var thisRole = id; // closure capturing funny
             var button = new CheckBox();
             button.Text = Loc.GetString(proto.Index(id).Name);
-            button.Pressed = whitelists.Contains(id) || globalWhitelist;
-            button.OnPressed += _ => OnButtonPressed(thisRole, button, globalWhitelist);
+            button.Pressed = whitelists.Contains(id); // AS: Removing global whitelists from role whitelist checks
+            button.OnPressed += _ => OnButtonPressed(thisRole, button); // AS: Removing global whitelists from role whitelist checks
             RolesContainer.AddChild(button);
 
             allWhitelisted &= button.Pressed;
@@ -32,28 +32,18 @@ public sealed partial class GhostRoleSetWhitelistPanel : PanelContainer
         GhostRoleSet.Text = Loc.GetString(ghostRoleSetName);
         GhostRoleSet.Modulate = ghostRoleSetColor;
         GhostRoleSet.Pressed = allWhitelisted;
-        GhostRoleSet.OnPressed += args => OnDepartmentPressed(ghostRoleList, whitelists, globalWhitelist);
+        GhostRoleSet.OnPressed += args => OnDepartmentPressed(ghostRoleList, whitelists); // AS: Removing global whitelists from role whitelist checks
     }
 
     // Frontier: global whitelist
-    private void OnButtonPressed(ProtoId<GhostRolePrototype> thisRole, CheckBox button, bool globalWhitelist)
+    private void OnButtonPressed(ProtoId<GhostRolePrototype> thisRole, CheckBox button) // AS: Removing global whitelists from role whitelist checks
     {
-        if (globalWhitelist)
-            button.Pressed = true; // Force the button on.
-        else
-            OnSetGhostRole?.Invoke(thisRole, button.Pressed);
+        OnSetGhostRole?.Invoke(thisRole, button.Pressed); // AS: Removing global whitelists from role whitelist checks
     }
 
-    private void OnDepartmentPressed(List<ProtoId<GhostRolePrototype>> ghostRoleList, HashSet<ProtoId<GhostRolePrototype>> whitelists, bool globalWhitelist)
+    private void OnDepartmentPressed(List<ProtoId<GhostRolePrototype>> ghostRoleList, HashSet<ProtoId<GhostRolePrototype>> whitelists) // AS: Removing global whitelists from role whitelist checks
     {
-        // Frontier: global override
-        if (globalWhitelist)
-        {
-            GhostRoleSet.Pressed = true;
-            return;
-        }
-        // End Frontier: global override
-
+        // AS: Removing global whitelists from role whitelist checks
         foreach (var id in ghostRoleList)
         {
             // only request to whitelist roles that aren't already whitelisted, and vice versa

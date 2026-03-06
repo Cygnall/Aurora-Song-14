@@ -1,0 +1,9 @@
+- type: loadout
+  id: PalClothingUniformJumpsuitPublicAffairsLiaison
+  equipment:
+    jumpsuit: ASClothingUniformJumpsuitPublicAffairsLiaison
+
+- type: loadout
+  id: PalClothingUniformJumpskirtPublicAffairsLiaison
+  equipment:
+    jumpsuit: ASClothingUniformJumpskirtPublicAffairsLiaison

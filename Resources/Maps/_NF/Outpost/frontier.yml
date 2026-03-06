@@ -1,11 +1,11 @@
 meta:
   format: 7
   category: Map
-  engineVersion: 267.3.0
+  engineVersion: 267.4.0
   forkId: ""
   forkVersion: ""
-  time: 11/14/2025 06:53:05
-  entityCount: 9115
+  time: 03/02/2026 10:26:11
+  entityCount: 9116
 maps:
 - 1
 grids:
@@ -7747,6 +7747,28 @@ entities:
       rot: 1.5707963267948966 rad
       pos: -25.5,47.5
       parent: 2
+- proto: ASBoxFolderCR
+  entities:
+  - uid: 487
+    components:
+    - type: Transform
+      rot: 3.141592653589793 rad
+      pos: 8.009785,21.581205
+      parent: 2
+- proto: ASComputerShipyardCR
+  entities:
+  - uid: 2864
+    components:
+    - type: Transform
+      pos: 4.5,28.5
+      parent: 2
+- proto: ASDresserColonialRepresentativeFilled
+  entities:
+  - uid: 3475
+    components:
+    - type: Transform
+      pos: 26.5,11.5
+      parent: 2
 - proto: AsimovCircuitBoard
   entities:
   - uid: 9008
@@ -7755,6 +7777,31 @@ entities:
       parent: 9003
     - type: Physics
       canCollide: False
+- proto: ASLockerColonialRepresentativeFilled
+  entities:
+  - uid: 5608
+    components:
+    - type: Transform
+      pos: 8.50093,23.502323
+      parent: 2
+    - type: EntityStorage
+      air:
+        volume: 200
+        immutable: False
+        temperature: 293.14923
+        moles:
+        - 1.7459903
+        - 6.568249
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
+        - 0
 - proto: ASMachineMedicalBountyRedemption
   entities:
   - uid: 9114
@@ -9315,14 +9362,6 @@ entities:
     components:
     - type: Transform
       pos: 12.810785,16.716284
-      parent: 2
-- proto: BoxFolderSr
-  entities:
-  - uid: 487
-    components:
-    - type: Transform
-      rot: 3.141592653589793 rad
-      pos: 8.009785,21.581205
       parent: 2
 - proto: BoxFolderWhite
   entities:
@@ -22859,13 +22898,6 @@ entities:
       rot: 3.141592653589793 rad
       pos: -0.5,15.5
       parent: 2
-- proto: ComputerShipyardSr
-  entities:
-  - uid: 2864
-    components:
-    - type: Transform
-      pos: 4.5,28.5
-      parent: 2
 - proto: ComputerShuttleRecords
   entities:
   - uid: 2865
@@ -26856,13 +26888,6 @@ entities:
     components:
     - type: Transform
       pos: 50.5,10.5
-      parent: 2
-- proto: DresserStationRepresentativeFilled
-  entities:
-  - uid: 3475
-    components:
-    - type: Transform
-      pos: 26.5,11.5
       parent: 2
 - proto: DrinkDriestMartiniGlass
   entities:
@@ -46202,31 +46227,6 @@ entities:
     - type: Transform
       pos: 40.502724,18.50681
       parent: 2
-- proto: LockerStationRepresentativeFilled
-  entities:
-  - uid: 5608
-    components:
-    - type: Transform
-      pos: 8.50093,23.502323
-      parent: 2
-    - type: EntityStorage
-      air:
-        volume: 200
-        immutable: False
-        temperature: 293.14923
-        moles:
-        - 1.7459903
-        - 6.568249
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
-        - 0
 - proto: LockerWallColorCaptain
   entities:
   - uid: 9003
@@ -52878,6 +52878,13 @@ entities:
     - type: Transform
       pos: 51.5,15.5
       parent: 2
+- proto: SpawnPointColonialRepresentative
+  entities:
+  - uid: 6599
+    components:
+    - type: Transform
+      pos: 14.5,15.5
+      parent: 2
 - proto: SpawnPointContractor
   entities:
   - uid: 6563
@@ -53082,13 +53089,6 @@ entities:
     components:
     - type: Transform
       pos: 38.5,5.5
-      parent: 2
-- proto: SpawnPointStationRepresentative
-  entities:
-  - uid: 6599
-    components:
-    - type: Transform
-      pos: 14.5,15.5
       parent: 2
 - proto: SpawnPointStc
   entities:
@@ -55291,6 +55291,13 @@ entities:
     components:
     - type: Transform
       pos: -43.5,8.5
+      parent: 2
+- proto: VendingMachinePottedPlantVendPOI
+  entities:
+  - uid: 9116
+    components:
+    - type: Transform
+      pos: -36.5,26.5
       parent: 2
 - proto: VendingMachineSalvagePOI
   entities:

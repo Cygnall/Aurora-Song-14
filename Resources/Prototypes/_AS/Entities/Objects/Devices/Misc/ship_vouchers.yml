@@ -1,4 +1,18 @@
-﻿- type: entity
+#region Base
+
+- type: entity
+  abstract: true
+  parent: BaseShipVoucher
+  id: ASBaseShipVoucher
+  name: ship voucher
+  description: Used for free shuttle rentals from a shipyard.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Misc/shipyard_voucher.rsi
+
+#region Pirate
+
+- type: entity
   parent: BaseShipVoucher
   id: ShipVoucherPirate #Aurora
   name: Pirate Captain Voucher
@@ -16,12 +30,13 @@
     access:
     - Pirate
 
+#region Medic
 
 - type: entity
-  parent: BaseShipVoucher
+  parent: ASBaseShipVoucher
   id: ShipVoucherAuroraMedic
   name: medic ship voucher
-  description: Allows for one free valet ship purchase from the medical Shipyard. Destroyed on sale.
+  description: Allows for one free medical ship purchase from the medical Shipyard. Destroyed on sale.
   components:
   - type: Sprite
     layers:
@@ -32,3 +47,83 @@
     destroyOnEmpty: true
     access:
     - Medical
+
+#region Aurora Staff
+
+- type: entity
+  parent: ASBaseShipVoucher
+  id: ShipVoucherAuroraCr
+  name: Col. Rep. ship voucher
+  description: Allows for one free ship purchase from the Staff Shipyard. Destroyed on sale.
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: vouchercr
+  - type: ShipyardVoucher
+    consoleType: Sr
+    destroyOnEmpty: true
+    access:
+    - Aurora
+    - Service
+    - Mail
+    - Janitor
+    accessGroups:
+    - AllAccess
+
+- type: entity
+  parent: ASBaseShipVoucher
+  id: ShipVoucherAuroraService
+  name: service ship voucher
+  description: Allows for one free ship purchase from the Staff Shipyard. Destroyed on sale.
+  components:
+  - type: Sprite
+    layers:
+    - state: blue
+    - state: voucherservice
+  - type: ShipyardVoucher
+    consoleType: Sr
+    destroyOnEmpty: true
+    access:
+    - Aurora
+    - Service
+
+#region SLE
+
+- type: entity
+  parent: ASBaseShipVoucher
+  id: ASShipVoucherSLESergeant
+  name: SLE sergeant ship voucher
+  description: Allows for one free small to medium SLE ship purchase. Destroyed on sale.
+  components:
+  - type: Sprite
+    layers:
+    - state: sle
+    - state: vouchersergeant
+  - type: Item
+    heldPrefix: sle
+  - type: ShipyardVoucher
+    destroyOnEmpty: true
+    consoleType: Security
+    access:
+    - Sergeant
+    accessGroups:
+    - GeneralNfsdAccess
+
+- type: entity
+  parent: ASShipVoucherSLESergeant
+  id: ASShipVoucherSLELieutenant
+  name: SLE Lieutenant ship voucher
+  description: Allows for one free small to capital ship purchase. Destroyed on sale.
+  components:
+  - type: Sprite
+    layers:
+    - state: sle
+    - state: voucherlieutenant
+  - type: ShipyardVoucher
+    access:
+    - Armory
+    - Sergeant
+    - Lieutenant
+    accessGroups:
+    - GeneralNfsdAccess

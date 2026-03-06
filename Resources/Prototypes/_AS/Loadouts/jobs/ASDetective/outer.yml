@@ -1,0 +1,31 @@
+- type: loadout
+  id: ASDetectiveClothingOuterArmorBasic
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ClothingOuterArmorBasic
+
+- type: loadout
+  id: ASDetectiveClothingOuterCoatDetectiveLoadout
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ClothingOuterCoatDetectiveLoadout
+
+- type: loadout
+  id: ASDetectiveClothingOuterCoatDetectiveLoadoutGrey
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ClothingOuterCoatDetectiveLoadoutGrey
+
+- type: loadout
+  id: ASDetectiveClothingOuterCoatTrench
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  equipment:
+    outerClothing: ClothingOuterCoatTrench

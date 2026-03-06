@@ -33,15 +33,17 @@
   equipment:
     id: StcPDA
   storage:
-    back:
+    back: # Aurora's Song - moved encryption keys to the appropriate section and the folder into back storage
     - Flash
     - RubberStampStc
-    - EncryptionKeySecurity
-    - EncryptionKeyTraffic
     - ShipVoucherFrontierStc
-    - EncryptionKeyService
-  encryptionKeys:
-  - BoxFolderStc
+    - BoxFolderStc
+  encryptionKeys: # Aurora's Song - Added traffic, shipboard, security, greeting, and service encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+  - EncryptionKeySecurity
+  - EncryptionKeyGreeting
+  - EncryptionKeyService
 
 - type: chameleonOutfit
   id: StationTrafficControllerChameleonOutfit

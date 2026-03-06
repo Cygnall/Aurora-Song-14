@@ -1,0 +1,25 @@
+# Site Manager Shoes
+- type: loadout
+  id: SiteManagerShoesColorWhite
+  equipment:
+    shoes: ClothingShoesColorWhite
+
+- type: loadout
+  id: SiteManagerShoesBootsLaceup
+  equipment:
+    shoes: ClothingShoesBootsLaceup
+
+- type: loadout
+  id: SiteManagerShoesBootsWork
+  equipment:
+    shoes: ClothingShoesBootsWork
+
+- type: loadout
+  id: SiteManagerShoesBootsWinterCE
+  equipment:
+    shoes: ClothingShoesBootsWinterChiefEngineer
+
+- type: loadout
+  id: SiteManagerShoesBootsWinterEngi
+  equipment:
+    shoes: ClothingShoesBootsWinterEngi

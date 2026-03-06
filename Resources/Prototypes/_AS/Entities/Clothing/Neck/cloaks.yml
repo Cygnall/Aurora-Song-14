@@ -1,0 +1,24 @@
+#region SLE
+- type: entity
+  parent: ClothingNeckBase
+  id: ASClothingNeckCloakCommissioner
+  name: commissioner's cloak
+  description: The cloak of the SLE commissioner. Projects authority.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Cloaks/slecommissioner.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Cloaks/slecommissioner.rsi
+
+#region Command
+
+- type: entity
+  parent: ClothingNeckBase
+  id: ASClothingNeckCloakColonialRepresentative
+  name: colonial representative's cloak
+  description: A stylish cloak denoting the wearer's position as Colonial Representative.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Neck/Cloaks/cr.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Neck/Cloaks/cr.rsi

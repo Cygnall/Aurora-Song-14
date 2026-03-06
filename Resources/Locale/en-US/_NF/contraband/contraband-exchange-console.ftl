@@ -3,6 +3,8 @@
 contraband-pallet-console-menu-title = Contraband Exchange
 # Aurora - FUC > SCU
 contraband-console-menu-points-amount = {$amount} SCU
+# AS: Allow alt reward currencies
+contraband-console-menu-points-amount-alt = {$altAmount} EC
 contraband-pallet-menu-no-goods-text = No contraband detected
 contraband-pallet-menu-appraisal-label = Estimated Value:{" "}
 contraband-pallet-menu-count-label = Number of items:{" "}

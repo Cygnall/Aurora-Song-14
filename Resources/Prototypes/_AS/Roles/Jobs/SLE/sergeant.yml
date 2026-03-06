@@ -1,0 +1,70 @@
+- type: job
+  id: Sergeant
+  name: job-name-sergeant
+  description: job-description-sergeant
+  playTimeTracker: JobSeniorOfficer
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 108000 # 30 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 64800 # 18 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 43200 # 12 hours
+  alternateRequirementSets:
+    longerPlaytimeLessSec:
+    - !type:OverallPlaytimeRequirement
+      time: 540000 # 150 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 21600 # 6 hours
+  startingGear: SergeantGear
+  icon: JobIconSergeant
+  supervisors: job-supervisors-lieutenant
+  weight: 140
+  displayWeight: 50
+  canBeAntag: false
+  access:
+  - Sergeant
+  - Prisoner
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: SergeantGear
+  equipment:
+    pocket1: ASWeaponPistolMk58SLessLethal
+  storage:
+    back:
+    - Flash
+    - NFMagazineHighCapacityPistol35Overpressure
+    - NFMagazineHighCapacityPistol35Rubber
+    - BaseSecurityUplinkRadioOfficer
+    - ASShipVoucherSLESergeant
+  licenses:
+  - LicenseContrabandHandling
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+
+- type: chameleonOutfit
+  id: SergeantChameleonOutfit
+  job: Sergeant
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretBrown
+    mask: ASClothingMaskGasSLE
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterArmorSLE
+    neck: ASClothingNeckSLEBadgeSergeant
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLEDarkBlue
+    shoes: ASClothingShoesBootsSLEDarkBlueFilled
+

@@ -95,7 +95,7 @@
 
 # SLE Brigmedic
 - type: entity
-  id: ASLockerSLEBrigmedic
+  id: ASLockerSLECorpsman
   parent: ASLockerBaseSecure
   name: SLE locker
   suffix: Brigmedic
@@ -105,7 +105,7 @@
     stateDoorOpen: sle_brigmed_open
     stateDoorClosed: sle_brigmed_door
   - type: AccessReader
-    access: [["Brigmedic"]]
+    access: [["Corpsman"]] # Aurora's Song - Changed from Brigmedic to Corpsman
 
 # SLE Gold - Sergeant
 - type: entity
@@ -123,17 +123,17 @@
 
 # SLE Gold - Bailiff/Lieutenant
 - type: entity
-  id: ASLockerSLEBailiff
+  id: ASLockerSLELieutenant
   parent: ASLockerSLESergeant
   name: SLE locker
-  suffix: Bailiff
+  suffix: Lieutenant
   components:
   - type: AccessReader
-    access: [["Bailiff"]]
+    access: [["Lieutenant"]] # Aurora's Song - Changed from Bailiff to Lieutenant
 
 # SLE Sheriff/Commissioner
 - type: entity
-  id: ASLockerSLESheriff
+  id: ASLockerSLECommissioner
   parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, ASLockerBaseSecure, LockerHeadOfSecurity]
   name: SLE locker
   suffix: Sheriff
@@ -178,3 +178,14 @@
   - type: StorageFillVisualizer
     maxFillLevels: 6
     fillBaseName: fillEva
+
+# CR
+- type: entity
+  id: ASLockerColonialRepresentative
+  parent: [BaseStructureIndestructible, BaseStructureLockImmuneToEmag, BaseStructureAccessReaderImmuneToEmag, ASLockerBaseSecure, LockerHeadOfPersonnel]
+  name: Colonial representative's locker
+  components:
+  - type: EntityStorageVisuals
+    stateBaseClosed: cr
+    stateDoorOpen: cr_open
+    stateDoorClosed: cr_door

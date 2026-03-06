@@ -1,0 +1,79 @@
+- type: job
+  id: Lieutenant
+  name: job-name-lieutenant
+  description: job-description-lieutenant
+  playTimeTracker: JobWarden
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 108000 # 30 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 64800 # 18 hours
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 21600 # 6 hours
+  alternateRequirementSets:
+    longerPlaytimeLessSec:
+    - !type:OverallPlaytimeRequirement
+      time: 720000 # 200 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 43200 # 12 hours
+    - !type:RoleTimeRequirement
+      role: JobSeniorOfficer
+      time: 21600 # 6 hours
+  whitelisted: true
+  startingGear: LieutenantGear
+  icon: JobIconLieutenant
+  supervisors: job-supervisors-commissioner
+  weight: 150
+  displayWeight: 60
+  canBeAntag: false
+  access:
+  - Armory
+  - Sergeant
+  - Lieutenant
+  - Corpsman
+  - Prisoner
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: LieutenantGear
+  equipment:
+    pocket1: ASWeaponPistolMk58SLessLethal
+    pocket2: ASHoloprojectorSLE # Aurora Song - Changed from HoloprojectorNfsd to use SLE prototype
+  storage:
+    back:
+    - Flash
+    - NFMagazineHighCapacityPistol35Overpressure
+    - NFMagazineHighCapacityPistol35Rubber
+    - BaseSecurityUplinkRadioOfficer
+    - ASShipVoucherSLELieutenant
+    - ASRubberStampLieutenant
+  licenses:
+  - LicenseContrabandHandling
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+
+- type: chameleonOutfit
+  id: LieutenantChameleonOutfit
+  job: Lieutenant
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretBrown
+    mask: ASClothingMaskGasSLE
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterCoatSLEFormal
+    neck: ASClothingNeckSLEBadgeLieutenant
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLELightBlue
+    shoes: ASClothingShoesBootsSLELightBlueFilled
+

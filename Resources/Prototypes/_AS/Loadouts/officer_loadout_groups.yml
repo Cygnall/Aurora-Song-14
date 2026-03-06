@@ -1,0 +1,43 @@
+- type: loadoutGroup
+  id: OfficerJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts:
+  - OfficerClothingUniformJumpsuitSLE
+  - OfficerClothingUniformJumpskirtSLE
+  - OfficerClothingUniformJumpsuitSLEShort
+  - OfficerClothingUniformJumpskirtSLEShort
+  - OfficerClothingUniformJumpsuitSLEClassic
+  - OfficerClothingUniformJumpskirtSLEClassic
+
+- type: loadoutGroup
+  id: OfficerOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts:
+  - SLEOuterClothing
+
+- type: loadoutGroup
+  id: OfficerHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts:
+  - OfficerClothingHeadHatCampaignOfficer
+  - OfficerClothingHeadHatBeretOfficer
+
+- type: loadoutGroup
+  id: OfficerNeck
+  name: loadout-group-contractor-neck
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - OfficerClothingNeckSLEBadgeOfficer
+  fallbacks:
+  - OfficerClothingNeckSLEBadgeOfficer
+
+- type: loadoutGroup
+  id: OfficerPDA
+  name: loadout-group-contractor-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - OfficerOfficerPDA
+  fallbacks:
+  - OfficerOfficerPDA

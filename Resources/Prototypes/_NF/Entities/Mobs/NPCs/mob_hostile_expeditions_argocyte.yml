@@ -596,8 +596,8 @@
     rootTask:
        task: KillerTomatoCompound
     blackboard:
-      NavClimb: !type:Bool
-        false
+      NavClimb: !type:Bool # Aurora's Song - Enable climbing
+        true
       NavInteract: !type:Bool
         true
       NavPry: !type:Bool

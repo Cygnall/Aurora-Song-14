@@ -111,7 +111,7 @@
 - type: entity
   parent:
   - BaseExpeditionWeaponTier1
-  - NFWeaponPistolUniversal
+  - ASWeaponPistolUniversal
   categories: [ HideSpawnMenu ]
   id: NFWeaponPistolUniversalExpedition
 

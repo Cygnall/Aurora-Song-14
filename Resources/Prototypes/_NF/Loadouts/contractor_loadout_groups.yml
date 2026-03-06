@@ -81,9 +81,9 @@
   - ContractorClothingUniformJumpskirtBH
   - ContractorClothingUniformJumpsuitBHGrey
   - ContractorClothingUniformJumpskirtBHGrey
-  #- ContractorUniformScrubsColorGreen
-  #- ContractorUniformScrubsColorBlue
-  #- ContractorUniformScrubsColorPurple
+  #- ContractorUniformScrubsColorGreen Aurora Song
+  #- ContractorUniformScrubsColorBlue Aurora Song
+  #- ContractorUniformScrubsColorPurple Aurora Song
   - ContractorClothingUniformJumpsuitParamedic
   - ContractorClothingUniformJumpskirtParamedic
   - ContractorClothingUniformJumpsuitVirology
@@ -776,6 +776,7 @@
   - ContractorCigPackBlack
   - ContractorCigPackGreen
   - ContractorCigarCase
+  - ContractorHolocigar # Aurora's Song
   - ContractorNFAshtray
   - ContractorTapeRecorder
   - ContractorSmokingPipeFilledTobacco
@@ -817,6 +818,7 @@
   - ContractorMysterySpaceBladeBox
   - ContractorHoloGraffitiProjector # Punkish (might be annoying)
   - ContractorCrayonMagic
+  - ContractorSprayPainterMagic
     # Bureaucracy
   - ContractorBoxFolderMedicalDoctor
   - ContractorBrbSign
@@ -865,7 +867,6 @@
   - ContractorHandheldCrewMonitor
   - ContractorHypoMini
   - ContractorBible
-  - LeashBasic # Floofstation
 
 - type: loadoutGroup
   id: ContractorFace
@@ -912,9 +913,10 @@
   id: ContractorEncryptionKey
   name: loadout-group-contractor-encryption-key
   minLimit: 0
-  maxLimit: 5
+  maxLimit: 6 # Aurora's Song - Increased to 6 to match total possible keys
   loadouts:
   - ContractorEncryptionKeyTraffic
+  - ContractorEncryptionKeyShipboard # Aurora's Song - Shipboard encryption key added
   - ContractorEncryptionKeyMedical
   - ContractorEncryptionKeyCargo
   - ContractorEncryptionKeyEngineering
@@ -956,3 +958,28 @@
   - ContractorBibleUserImplanter
   fallbacks:
   - ContractorMedicalTrackingImplanter
+
+# Aurora's Song Start - Below are the weapon groups for round-start C1 weaponry
+
+- type: loadoutGroup # Aurora's Song - Sidearms group for Contractor
+  id: ContractorSidearm
+  name: loadout-group-mercenary-sidearm
+  minLimit: 0
+  maxLimit: 2
+  loadouts:
+  - ContractorSidearmMK58
+  - ContractorSidearmLaserPistol
+  - ContractorSidearmDisabler
+
+- type: loadoutGroup # Aurora's Song - Ammo group for Contractor
+  id: ContractorAmmo
+  name: loadout-group-mercenary-ammo
+  minLimit: 0
+  maxLimit: 3
+  loadouts:
+  - ContractorAmmoPistol35
+  - ContractorAmmoPistol35Rubber
+  - ContractorAmmoShotgun12Buckshot
+  - ContractorAmmoShotgun12Beanbag
+  - ContractorAmmoMagPistol35
+  - ContractorAmmoMagPistol35HighCap
