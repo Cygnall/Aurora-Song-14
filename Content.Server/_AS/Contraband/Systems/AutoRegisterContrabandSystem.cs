@@ -89,6 +89,8 @@ public sealed class AutoRegisterContrabandSystem : EntitySystem
         // Get prototype ID
         var protoId = MetaData(ent).EntityPrototype?.ID ?? string.Empty;
 
+
+
         // Collect serial numbers if it's a firearm (map serial -> prototype ID)
         var serialNumbers = new Dictionary<string, string>();
         if (TryComp<FirearmSerialNumberComponent>(ent, out var serialComp) && !string.IsNullOrEmpty(serialComp.SerialNumber))
@@ -101,6 +103,7 @@ public sealed class AutoRegisterContrabandSystem : EntitySystem
             Actor: buyer.Value,
             CharacterName: characterName,
             ItemPrototypeIds: new List<string> { protoId },
+            ScuValue: 0, //When purchased from a vend, the SCU is always zero. Since it's a pre-registered weapon.
             Console: sourceEntity.Value,
             FirearmSerialNumbers: serialNumbers
         );

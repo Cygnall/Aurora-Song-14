@@ -25,6 +25,7 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
 
         CharacterList.OnItemSelected += args =>
         {
+            // Check if list is currently being populated to avoid selection logic running during setup, and ensure the metadata is a string (character name)
             if (_isPopulating || CharacterList[args.ItemIndex].Metadata is not string characterName)
                 return;
 
@@ -34,6 +35,7 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
 
         CharacterList.OnItemDeselected += _ =>
         {
+            // If not currently populating, clear the selected character and update the details panel to show the placeholder
             if (!_isPopulating)
             {
                 _selectedCharacter = null;
@@ -43,18 +45,21 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
 
         SearchBox.OnTextEntered += args =>
         {
+            // Update the search filter with the text being entered, ready to be submitted as arguments to the search button handler
             _searchFilter = args.Text;
-            FilterCharacterList();
+            FilterCharacterList(); //This is here so they can hit the enter key to search without having to click the button
         };
 
         SearchButton.OnPressed += _ =>
         {
+            // Exists so that the button can be clicked, in case the user's keyboard is acting up. Not strictly necessary, but good redundancy to have both options.
             _searchFilter = SearchBox.Text;
             FilterCharacterList();
         };
 
         ResetButton.OnPressed += _ =>
         {
+            // Clear the search filter and repopulate the character list to show all characters again
             SearchBox.Text = string.Empty;
             _searchFilter = string.Empty;
             FilterCharacterList();
@@ -87,6 +92,7 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
 
         if (_allCharacterData.Count == 0)
         {
+            // If there's no character entries, don't render the list and leave the placeholder stuff in place
             CharacterListStatus.Visible = true;
             CharacterList.Visible = false;
             return;
@@ -99,12 +105,15 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
         var sortedCharacters = _allCharacterData
             .Where(kvp => string.IsNullOrEmpty(_searchFilter) ||
                          kvp.Key.Contains(_searchFilter, StringComparison.OrdinalIgnoreCase))
-            .OrderByDescending(kvp => kvp.Value.TotalTurnedIn + kvp.Value.TotalRegistered + kvp.Value.TotalSold)
+            .OrderByDescending(kvp => kvp.Value.TotalRegistered + kvp.Value.TotalSold)
             .ToList();
 
+        // For each matching tuple of character name and their contraband data,
+        // create a list item with the character's name and total activity count,
+        // and store the character name in the metadata for selection purposes
         foreach (var (characterName, data) in sortedCharacters)
         {
-            var totalActivity = data.TotalTurnedIn + data.TotalRegistered + data.TotalSold;
+            var totalActivity = data.TotalRegistered + data.TotalSold;
             var displayText = $"{characterName} ({totalActivity})";
 
             var item = CharacterList.AddItem(displayText);
@@ -150,44 +159,12 @@ public sealed partial class ContrabandDatabaseMenu : FancyWindow
             Margin = new Thickness(0, 5, 0, 15)
         };
 
-        AddStatRow(statsGrid, "contraband-database-turned-in", data.TotalTurnedIn.ToString());
         AddStatRow(statsGrid, "contraband-database-registered", data.TotalRegistered.ToString());
         AddStatRow(statsGrid, "contraband-database-sold", data.TotalSold.ToString());
         AddStatRow(statsGrid, "contraband-database-scu-earned", data.ScuEarned.ToString());
         AddStatRow(statsGrid, "contraband-database-ec-earned", data.EcEarned.ToString());
 
         DetailsContainer.AddChild(statsGrid);
-
-        // Turned in items section
-        if (data.TurnedInItems.Count > 0)
-        {
-            var turnedInLabel = new Label
-            {
-                Text = Loc.GetString("contraband-database-turned-in-items"),
-                StyleClasses = { "LabelBig" },
-                Margin = new Thickness(0, 10, 0, 5)
-            };
-            DetailsContainer.AddChild(turnedInLabel);
-
-            var turnedInList = new BoxContainer
-            {
-                Orientation = BoxContainer.LayoutOrientation.Vertical,
-                Margin = new Thickness(10, 0, 0, 10)
-            };
-
-            foreach (var (protoId, count) in data.TurnedInItems.OrderByDescending(kvp => kvp.Value))
-            {
-                var itemName = GetPrototypeName(protoId);
-                var itemLabel = new Label
-                {
-                    Text = $"• {itemName}: {count}",
-                    FontColorOverride = Color.LightGray
-                };
-                turnedInList.AddChild(itemLabel);
-            }
-
-            DetailsContainer.AddChild(turnedInList);
-        }
 
         // Registered items section
         if (data.RegisteredItems.Count > 0)

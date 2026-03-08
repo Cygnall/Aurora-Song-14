@@ -24,7 +24,6 @@ public sealed class ContrabandDatabaseState : BoundUserInterfaceState
 [Serializable, NetSerializable]
 public sealed class CharacterContrabandData
 {
-    public int TotalTurnedIn { get; set; }
     public int TotalRegistered { get; set; }
     public int TotalSold { get; set; }
     public int ScuEarned { get; set; }

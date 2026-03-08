@@ -175,6 +175,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                     characterName,
                     itemPrototypes,
                     amount,
+                    altAmount, // AS: Allow alt reward currencies, and track them for statistics
                     component.Owner
                 );
                 RaiseLocalEvent(ref saleEvent);
@@ -425,6 +426,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
             Log.Debug($"{ent.Comp.Faction} registered {oldEnt} into {newEnt}");
         }
 
+        var scuVal = toRegister.Count; // Assuming 1 SCU per item, because it says that above when we spawn the reward. If this changes, we will need to change this too.
         // Aurora: Raise statistics event for registered items
         if (itemPrototypes.Count > 0)
         {
@@ -433,6 +435,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 args.Actor,
                 characterName,
                 itemPrototypes,
+                scuVal, //Trying to track how much SCU the player earned from registering for statistics purposes
                 ent.Owner,
                 serialNumbers // Aurora Song modification
             );

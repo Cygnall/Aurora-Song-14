@@ -20,7 +20,6 @@ public sealed class ContrabandStatisticsSystem : EntitySystem
         base.Initialize();
 
         SubscribeLocalEvent<StationInitializedEvent>(OnStationInitialized);
-        SubscribeLocalEvent<ContrabandTurnInEvent>(OnContrabandTurnIn);
         SubscribeLocalEvent<ContrabandRegistrationEvent>(OnContrabandRegistration);
         SubscribeLocalEvent<ContrabandSaleEvent>(OnContrabandSale);
         SubscribeLocalEvent<ContrabandDatabaseConsoleComponent, BoundUIOpenedEvent>(OnDatabaseUiOpened);
@@ -30,48 +29,6 @@ public sealed class ContrabandStatisticsSystem : EntitySystem
     {
         // Add the statistics component to the station entity
         EnsureComp<ContrabandStatisticsComponent>(ev.Station);
-    }
-
-    private void OnContrabandTurnIn(ref ContrabandTurnInEvent ev)
-    {
-        // Find the station for this console
-        var station = _stationSystem.GetOwningStation(ev.Console);
-        if (station == null)
-            return;
-
-        if (!TryComp<ContrabandStatisticsComponent>(station.Value, out var statsComp))
-            return;
-
-        // Get or create character stats
-        if (!statsComp.CharacterStats.TryGetValue(ev.CharacterName, out var charStats))
-        {
-            charStats = new CharacterContrabandStats();
-            statsComp.CharacterStats[ev.CharacterName] = charStats;
-        }
-
-        // Update statistics
-        charStats.TotalTurnedIn += ev.ItemPrototypeIds.Count;
-        charStats.ScuEarned += ev.ScuValue;
-        charStats.EcEarned += ev.EcValue;
-
-        // Track individual items
-        foreach (var protoId in ev.ItemPrototypeIds)
-        {
-            if (!string.IsNullOrEmpty(protoId))
-            {
-                var entProtoId = new EntProtoId(protoId);
-                charStats.TurnedInItems.TryGetValue(entProtoId, out var count);
-                charStats.TurnedInItems[entProtoId] = count + 1;
-            }
-        }
-
-        statsComp.CharacterStats[ev.CharacterName] = charStats;
-        Dirty(station.Value, statsComp);
-
-        Log.Info($"Contraband turn-in tracked: {ev.CharacterName} turned in {ev.ItemPrototypeIds.Count} items for {ev.ScuValue} SCU and {ev.EcValue} EC");
-
-        // Update any open database UIs
-        UpdateDatabaseTerminalUis(station.Value, statsComp);
     }
 
     private void OnContrabandRegistration(ref ContrabandRegistrationEvent ev)
@@ -102,8 +59,11 @@ public sealed class ContrabandStatisticsSystem : EntitySystem
                 var entProtoId = new EntProtoId(protoId);
                 charStats.RegisteredItems.TryGetValue(entProtoId, out var count);
                 charStats.RegisteredItems[entProtoId] = count + 1;
+
             }
         }
+        var scuVal = ev.ScuValue;
+        charStats.ScuEarned += scuVal;
 
         if (ev.FirearmSerialNumbers != null)
         {
@@ -112,6 +72,8 @@ public sealed class ContrabandStatisticsSystem : EntitySystem
                 charStats.FirearmSerialNumbers[serial] = new EntProtoId(protoId);
             }
         }
+
+
 
         statsComp.CharacterStats[ev.CharacterName] = charStats;
         Dirty(station.Value, statsComp);
@@ -150,13 +112,19 @@ public sealed class ContrabandStatisticsSystem : EntitySystem
                 var entProtoId = new EntProtoId(protoId);
                 charStats.SoldItems.TryGetValue(entProtoId, out var count);
                 charStats.SoldItems[entProtoId] = count + 1;
+
+
             }
         }
+        var scuVal = ev.ScuValue;
+        charStats.ScuEarned += scuVal;
+        var ecVal = ev.EcValue;
+        charStats.EcEarned += ecVal;
 
         statsComp.CharacterStats[ev.CharacterName] = charStats;
-        Dirty(station.Value, statsComp);
-
         Log.Info($"Contraband sale tracked: {ev.CharacterName} sold {ev.ItemPrototypeIds.Count} items for {ev.ScuValue} SCU");
+
+        Dirty(station.Value, statsComp);
 
         // Update any open database UIs
         UpdateDatabaseTerminalUis(station.Value, statsComp);
@@ -199,7 +167,6 @@ public sealed class ContrabandStatisticsSystem : EntitySystem
         {
             var data = new CharacterContrabandData
             {
-                TotalTurnedIn = stats.TotalTurnedIn,
                 TotalRegistered = stats.TotalRegistered,
                 TotalSold = stats.TotalSold,
                 ScuEarned = stats.ScuEarned,
@@ -207,11 +174,6 @@ public sealed class ContrabandStatisticsSystem : EntitySystem
             };
 
             // Convert EntProtoId dictionaries to string dictionaries for network transmission
-            foreach (var (protoId, count) in stats.TurnedInItems)
-            {
-                data.TurnedInItems[protoId.Id] = count;
-            }
-
             foreach (var (protoId, count) in stats.RegisteredItems)
             {
                 data.RegisteredItems[protoId.Id] = count;

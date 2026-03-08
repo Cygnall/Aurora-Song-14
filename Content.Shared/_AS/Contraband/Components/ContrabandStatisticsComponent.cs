@@ -22,10 +22,6 @@ public sealed partial class ContrabandStatisticsComponent : Component
 [DataRecord]
 public record struct CharacterContrabandStats
 {
-    /// <summary>
-    /// Total number of contraband items turned in by this character.
-    /// </summary>
-    public int TotalTurnedIn;
 
     /// <summary>
     /// Total number of contraband items registered (legalized) by this character.
@@ -48,11 +44,6 @@ public record struct CharacterContrabandStats
     public int EcEarned;
 
     /// <summary>
-    /// Dictionary of contraband item prototype IDs turned in and their counts.
-    /// </summary>
-    public Dictionary<EntProtoId, int> TurnedInItems;
-
-    /// <summary>
     /// Dictionary of contraband item prototype IDs registered and their counts.
     /// </summary>
     public Dictionary<EntProtoId, int> RegisteredItems;
@@ -69,12 +60,10 @@ public record struct CharacterContrabandStats
 
     public CharacterContrabandStats()
     {
-        TotalTurnedIn = 0;
         TotalRegistered = 0;
         TotalSold = 0;
         ScuEarned = 0;
         EcEarned = 0;
-        TurnedInItems = new Dictionary<EntProtoId, int>();
         RegisteredItems = new Dictionary<EntProtoId, int>();
         SoldItems = new Dictionary<EntProtoId, int>();
         FirearmSerialNumbers = new Dictionary<string, EntProtoId>();
