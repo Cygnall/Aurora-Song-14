@@ -30,6 +30,7 @@ using Content.Shared.FixedPoint; // Frontier
 using Content.Shared.Stacks; // Frontier
 using Content.Shared.Radio; // Frontier
 using Robust.Shared.Configuration; // Frontier
+using Content.Shared._AS.Weapons.Ranged.Components; // Aurora's Song
 // todo: remove this stinky LINQy
 
 namespace Content.Server.Forensics
@@ -152,6 +153,7 @@ namespace Content.Server.Forensics
                 component.TouchDNAs,
                 component.SolutionDNAs,
                 component.Residues,
+                component.CasingSerials, // Aurora's Song
                 component.LastScannedName,
                 component.PrintCooldown,
                 component.PrintReadyAt);
@@ -235,6 +237,18 @@ namespace Content.Server.Forensics
                 }
 
                 scanner.LastScannedName = MetaData(args.Args.Target.Value).EntityName;
+
+                // Aurora Song Start - casing serial number scanning
+                if (TryComp<CasingSerialNumberComponent>(args.Args.Target.Value, out var casingSerial)
+                    && !string.IsNullOrEmpty(casingSerial.SerialNumber))
+                {
+                    scanner.CasingSerials = new List<string> { casingSerial.SerialNumber };
+                }
+                else
+                {
+                    scanner.CasingSerials = new();
+                }
+                // Aurora's Song End
             }
 
             OpenUserInterface(args.Args.User, (uid, scanner));
@@ -350,6 +364,12 @@ namespace Content.Server.Forensics
             foreach (var fingerprint in component.Fingerprints)
             {
                 text.AppendLine(fingerprint);
+            }
+            text.AppendLine();
+            text.AppendLine(Loc.GetString("forensic-scanner-interface-casing-serials"));
+            foreach (var casingSerials in component.CasingSerials)
+            {
+                text.AppendLine(casingSerials);
             }
             text.AppendLine();
             text.AppendLine(Loc.GetString("forensic-scanner-interface-fibers"));

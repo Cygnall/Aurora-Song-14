@@ -70,6 +70,15 @@ namespace Content.Client.Forensics
             {
                 text.AppendLine(residue);
             }
+            text.AppendLine();
+            // Aurora's Song Start
+            text.AppendLine(Loc.GetString("forensic-scanner-interface-casing-serials"));
+            foreach (var serial in msg.CasingSerials)
+            {
+                text.AppendLine(serial);
+            }
+            text.AppendLine();
+            // Aurora's Song End
             Diagnostics.Text = text.ToString();
         }
     }

@@ -3,6 +3,8 @@ forensic-scanner-interface-fingerprints = Fingerprints
 forensic-scanner-interface-fibers = Fibers
 forensic-scanner-interface-dnas = DNAs
 forensic-scanner-interface-residues = Residues
+# Aurora's Song - added Casing Serials to forensic scanner
+forensic-scanner-interface-casing-serials = Weapon Serial Number
 forensic-scanner-interface-no-data = No scan data available
 forensic-scanner-interface-print = Print
 forensic-scanner-interface-clear = Clear

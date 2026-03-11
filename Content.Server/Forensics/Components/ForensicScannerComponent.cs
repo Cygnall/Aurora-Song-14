@@ -93,5 +93,13 @@ namespace Content.Server.Forensics
         [DataField("machineOutput", customTypeSerializer: typeof(PrototypeIdSerializer<EntityPrototype>))]
         public string MachineOutput = "ForensicReportPaper";
 
+        // Aurora's Song Start
+        /// <sumary>
+        /// Serial number details from shell casings
+        /// </summary>
+        [ViewVariables(VVAccess.ReadOnly), DataField("casings")]
+        public List<string> CasingSerials = new();
+        // Aurora's Song End
+
     }
 }
