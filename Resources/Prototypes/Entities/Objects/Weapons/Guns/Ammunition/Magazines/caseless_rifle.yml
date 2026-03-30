@@ -1,7 +1,7 @@
 - type: entity
   id: BaseMagazineCaselessRifle
   name: "magazine (.25 caseless)"
-  parent: [ BaseCartridge, BaseC3SyndicateContrabandNoValue, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband, added RecyclableItemSteelTiny
+  parent: [ BaseItem, BaseC3SyndicateContrabandNoValue, RecyclableItemSteelTiny ] # Frontier: BaseSecurityContraband<BaseC3SyndicateContraband, added RecyclableItemSteelTiny | Aurora's Song: BaseCartridge changed to BaseItem
   abstract: true
   components:
   - type: Tag
@@ -31,8 +31,6 @@
     steps: 2
     zeroVisible: false
   - type: Appearance
-  - type: Destructible # Aurora's Song - Prevents the .25 magazines from being blown up by explosions, which is annoying for how rare we've made them
-    thresholds: []
 
 - type: entity
   categories: [ HideSpawnMenu ] # Frontier
