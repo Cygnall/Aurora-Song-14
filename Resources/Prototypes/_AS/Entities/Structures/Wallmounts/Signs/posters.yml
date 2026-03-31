@@ -22,7 +22,7 @@
     sprite: _AS/Structures/Wallmounts/posters.rsi
     state: as_poster_aurora
 
-#region Independent Astronautics Cooperative
+#region Colonial Naval Surplus
 
 - type: entity
   parent: PosterBase
@@ -50,10 +50,90 @@
 
 - type: entity
   parent: PosterBase
-  id: ASPosterContrabandIACLogo
+  id: ASPosterContrabandIACLogo1
   name: "Independent Astronautics Cooperative"
   description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
   components:
   - type: Sprite
     sprite: _AS/Structures/Wallmounts/posters.rsi
-    state: as_poster_iac_logo
+    state: as_poster_iac_logo1
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandIACLogo2
+  name: "Independent Astronautics Cooperative"
+  description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_iac_logo2
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandIACLogo3
+  name: "Independent Astronautics Cooperative"
+  description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_iac_logo3
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandIACLogo4
+  name: "Independent Astronautics Cooperative"
+  description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_iac_logo4
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandIACLogo5
+  name: "Independent Astronautics Cooperative"
+  description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_iac_logo5
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandIACLogo6
+  name: "Independent Astronautics Cooperative"
+  description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_iac_logo6
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandIACLogo7
+  name: "Independent Astronautics Cooperative"
+  description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_iac_logo7
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandIACLogo8
+  name: "Independent Astronautics Cooperative"
+  description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_iac_logo8
+
+- type: entity
+  parent: PosterBase
+  id: ASPosterContrabandIACLogo9
+  name: "Independent Astronautics Cooperative"
+  description: "Here at IAC, it's believed that standards exist for a reason - and our standard is the only one that matters."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_iac_logo9

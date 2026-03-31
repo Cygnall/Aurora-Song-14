@@ -9,7 +9,15 @@
   id: TableRandomPosterContrabandIAC
   table: !type:GroupSelector
     children:
-    - id: ASPosterContrabandIACLogo
+    - id: ASPosterContrabandIACLogo1
+    - id: ASPosterContrabandIACLogo2
+    - id: ASPosterContrabandIACLogo3
+    - id: ASPosterContrabandIACLogo4
+    - id: ASPosterContrabandIACLogo5
+    - id: ASPosterContrabandIACLogo6
+    - id: ASPosterContrabandIACLogo7
+    - id: ASPosterContrabandIACLogo8
+    - id: ASPosterContrabandIACLogo9
 
 - type: entityTable
   id: TableRandomPosterContrabandCNS
@@ -36,10 +44,10 @@
     - sprite: Structures/Wallmounts/posters.rsi
       state: random_anything
     - sprite: Effects/crayondecals.rsi
-      state: n
+      state: a
       offset: -0.2,0
     - sprite: Effects/crayondecals.rsi
-      state: f
+      state: s
       offset: 0.2,0
   - type: EntityTableSpawner
     offset: 0
@@ -66,10 +74,10 @@
     - sprite: Structures/Wallmounts/posters.rsi
       state: random_anything
     - sprite: Effects/crayondecals.rsi
-      state: l
+      state: b
       offset: -0.2,0
     - sprite: Effects/crayondecals.rsi
-      state: v
+      state: h
       offset: 0.2,0
   - type: EntityTableSpawner
     offset: 0
@@ -88,10 +96,10 @@
     - sprite: Structures/Wallmounts/posters.rsi
       state: random_anything
     - sprite: Effects/crayondecals.rsi
-      state: l
+      state: i
       offset: -0.2,0
     - sprite: Effects/crayondecals.rsi
-      state: v
+      state: a
       offset: 0.2,0
   - type: EntityTableSpawner
     offset: 0
@@ -110,10 +118,10 @@
     - sprite: Structures/Wallmounts/posters.rsi
       state: random_anything
     - sprite: Effects/crayondecals.rsi
-      state: l
+      state: c
       offset: -0.2,0
     - sprite: Effects/crayondecals.rsi
-      state: v
+      state: n
       offset: 0.2,0
   - type: EntityTableSpawner
     offset: 0
