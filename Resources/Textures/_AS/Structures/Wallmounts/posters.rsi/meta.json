@@ -2,6 +2,9 @@
     "version": 1,
     "license": "CC-BY-NC-SA-4.0",
     "copyright": "Posters designed by Vandanna/ Cygnall (discord/ github) for Aurora's Song",
+	"extra_copyright": [
+	"as_poster_iac_logo2-9 designed by Doner4037/ Doner19 (Discord/ Patreon)",
+	]
     "size": {
         "x": 32,
         "y": 32
