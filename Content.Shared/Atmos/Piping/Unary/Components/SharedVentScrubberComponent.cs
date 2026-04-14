@@ -24,7 +24,7 @@ namespace Content.Shared.Atmos.Piping.Unary.Components
             Gas.Ammonia,
             Gas.NitrousOxide,
             Gas.Frezon,
-            Gas.Helium //AS - Scrub helium by default
+            Gas.Helium // Aurora's Song - Scrub helium by default
         };
 
         // Presets for 'dumb' air alarm modes
