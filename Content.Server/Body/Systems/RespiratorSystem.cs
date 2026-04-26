@@ -21,6 +21,7 @@ using Content.Shared.EntityEffects.Effects.Body;
 using Content.Shared.EntityEffects.Effects.Damage;
 using Content.Shared.Metabolism;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.SSDIndicator; // Wayfarer, needed to check if something has the component.
 using JetBrains.Annotations;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
@@ -86,6 +87,9 @@ public sealed partial class RespiratorSystem : EntitySystem
             respirator.NextUpdate += respirator.AdjustedUpdateInterval;
 
             if (_mobState.IsDead(uid))
+                continue;
+
+            if (TryComp<SSDIndicatorComponent>(uid, out var ssd) && ssd.IsSSD) // Wayfarer: Prevents SSD clients from breathing to prevent offline asphyx deaths.
                 continue;
 
             UpdateSaturation(uid, -(float)respirator.UpdateInterval.TotalSeconds, respirator);
