@@ -25,7 +25,7 @@ Examples:
 
 If you make a change to an upstream C# or YAML file, **you must add comments on or around the changed lines**.
 The comments should clarify what changed, to make conflict resolution simpler when a file is changed upstream.
-If you make changes to values, to be consistent, leave a comment in the form `Aurora Song: OLD<NEW`.
+If you make changes to values, to be consistent, leave a comment in the form `Aurora's Song - OLD<NEW`.
 
 For YAML specifically, if you add a component or add a list of contiguous fields, use block comments, but if you make limited edits to a component's fields, comment the fields individually.
 
