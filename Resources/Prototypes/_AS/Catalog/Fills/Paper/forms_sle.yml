@@ -324,7 +324,7 @@
   components:
   - type: Paper
     content: |2 # When updating this, update ASPaperWrittenAuroraAuthorization
-      [bold]Aurora[/bold] [bold]Sector Law Enforcement[/bold][/color]
+      [color=#33578a][bold]Aurora[/bold] [bold]Sector Law Enforcement[/bold][/color]
       [color=#33578a]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
       [head=2]Authorization for Bluespace Threats[/head]
 
