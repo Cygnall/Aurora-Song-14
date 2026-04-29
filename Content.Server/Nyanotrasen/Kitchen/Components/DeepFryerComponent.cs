@@ -172,8 +172,9 @@ namespace Content.Server.Nyanotrasen.Kitchen.Components
         [DataField]
         public FixedPoint2 SafeOilVolume { get; set; } = 10f;
 
-        [DataField]
-        public List<EntityEffect> UnsafeOilVolumeEffects = new(); // Frontier: ReagentEffect<EntityEffect
+        // Aurora's Song - Unused and stripped from EntitySystem
+        // [DataField]
+        // public List<EntityEffect> UnsafeOilVolumeEffects = new(); // Frontier: ReagentEffect<EntityEffect
 
         /// <summary>
         /// What is the temperature of the vat when the deep fryer is powered?

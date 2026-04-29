@@ -49,9 +49,9 @@
       # gained by doing special handling for Stacks, especially since most
       # of the items that use Stack aren't even remotely edible.
       - Stack
-      - SpaceCash # Frontier - Cash
+#      - SpaceCash # Frontier - Cash # Aurora's Song - Removed at some point
       - IdCard # Frontier - ID
-      - WebCocoon # Frontier
+#      - WebCocoon # Frontier # Aurora's Song - Removed at some point
       - Pda # Frontier - ID by proxy
     whitelist:
       components:
@@ -60,7 +60,7 @@
       # Some clothes, shoes, uniforms.
       - Butcherable
       # It's already food.
-      - Food
+      - Edible # Aurora's Song Food>Edible
       - Seed
       # A good source of fiber.
       - Paper
@@ -132,7 +132,8 @@
     solution: vat_oil
   - type: RefillableSolution
     solution: vat_oil
-  - type: Drink
+  - type: Edible # Aurora's Song - Convert to edible
+    edible: Drink
     solution: vat_oil
   - type: Appearance
   - type: ActivatableUI

@@ -9075,8 +9075,6 @@ entities:
       pos: 19.5,5.5
       parent: 2
     - type: DeviceNetwork
-      configurators:
-      - invalid
       deviceLists:
       - 50
 - proto: AltarConvertRed

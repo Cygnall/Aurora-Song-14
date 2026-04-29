@@ -6,10 +6,11 @@
   components:
   - type: Item
     size: Normal
-  - type: StorageFill
-    contents:
-    - id: EncryptionKeyArcadia
-      amount: 4
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: EncryptionKeyArcadia
+        amount: 4
   - type: Storage
 
 - type: entity
@@ -20,8 +21,9 @@
   components:
   - type: Item
     size: Normal
-  - type: StorageFill
-    contents:
-    - id: EncryptionKeyNanotrasen
-      amount: 4
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: EncryptionKeyNanotrasen
+        amount: 4
   - type: Storage
