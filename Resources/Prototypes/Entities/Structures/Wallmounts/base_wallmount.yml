@@ -57,3 +57,4 @@
   - type: ExtensionCableReceiver
   - type: LightningTarget
     priority: 1
+  - type: TooShortForUiBlacklist # MACRO

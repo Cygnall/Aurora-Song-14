@@ -283,6 +283,10 @@
       path: /Audio/Effects/Gasp/vox_DeathGasp.ogg
     Belch: # Frontier
       collection: Belch # Frontier
+    # Macrocosm start
+    Hiss:
+      path: /Audio/_MACRO/Voice/Vox/voxhiss.ogg
+    # Macrocosm end
   params:
     variation: 0.125
     # TODO: We need vox sounds for the other emotes
@@ -342,6 +346,22 @@
       collection: DeathGasp
     Belch: # Frontier
       collection: Belch # Frontier
+    # Macrocosm start
+    Hiss:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_hiss.ogg
+    Sneeze:
+      collection: UnisexSneezes #placeholder
+    Cough:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_cough.ogg
+    Yawn:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_yawn.ogg
+    Sigh:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_sigh.ogg
+    Crying:
+      path: /Audio/_MACRO/Voice/Arachnid/arachnid_cry.ogg
+    Whistle:
+      collection: Whistles
+    # Macrocosm end
 
 - type: emoteSounds
   id: UnisexDwarf

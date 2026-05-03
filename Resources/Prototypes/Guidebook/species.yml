@@ -1,8 +1,9 @@
 - type: guideEntry
   id: Species
   name: guide-entry-species
-  text: "/ServerInfo/Guidebook/Mobs/Species.xml"
+  text: "/ServerInfo/_MACRO/Guidebook/Mobs/Species.xml" #macro - redirected to our directory
   children:
+  - Allulalo
   - Arachnid
   - Diona # Note: Frontier changes inside
   - Dwarf # Note: Frontier changes inside
