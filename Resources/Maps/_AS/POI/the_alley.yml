@@ -18471,7 +18471,6 @@ entities:
       pos: 17.5,-11.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
       - 3284
@@ -18481,7 +18480,6 @@ entities:
       pos: 16.5,-11.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
       - 3284
@@ -18491,7 +18489,6 @@ entities:
       pos: 15.5,-9.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
       - 3284
@@ -18501,7 +18498,6 @@ entities:
       pos: 20.5,-9.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
   - uid: 2663
@@ -18510,7 +18506,6 @@ entities:
       pos: 19.5,0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 10
       - 11
@@ -18520,7 +18515,6 @@ entities:
       pos: 21.5,0.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 10
       - 11
@@ -18530,7 +18524,6 @@ entities:
       pos: 17.5,4.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 10
       - 11
@@ -18540,7 +18533,6 @@ entities:
       pos: 17.5,3.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 10
       - 11
@@ -27626,7 +27618,6 @@ entities:
       pos: 22.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -28062,7 +28053,6 @@ entities:
       pos: 19.5,-8.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -28074,7 +28064,6 @@ entities:
       pos: 20.5,1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -28086,7 +28075,6 @@ entities:
       pos: 16.5,-5.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
     - type: AtmosPipeColor
@@ -28439,7 +28427,6 @@ entities:
       pos: 21.5,-5.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
     - type: AtmosPipeLayers
@@ -28453,7 +28440,6 @@ entities:
       pos: 16.5,-1.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
     - type: AtmosPipeLayers
@@ -29033,7 +29019,6 @@ entities:
       pos: 16.5,-8.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
     - type: AtmosPipeLayers
@@ -29047,7 +29032,6 @@ entities:
       pos: 20.5,3.5
       parent: 1
     - type: DeviceNetwork
-      configurators:
       deviceLists:
       - 11
     - type: AtmosPipeLayers
