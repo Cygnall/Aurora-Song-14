@@ -1,0 +1,7 @@
+# Sort all tags in alphabetical order and document their purpose here
+
+- type: Tag
+  id: SGD # SpeechRequiresEquipment whitelist on MobDecapoid.
+
+- type: Tag
+  id: Vaporizer # SpeechRequiresEquipment whitelist on MobDecapoid.

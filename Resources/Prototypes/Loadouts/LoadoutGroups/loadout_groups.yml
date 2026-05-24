@@ -76,6 +76,8 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVapor # DeltaV
+  - EmergencyAquatic # MACRO: Decapoids
+  - LoadoutSpeciesAquaticFullTank # MACRO: Decapoids
 
 # nitrogen or oxygen tank, depending on what your species needs
 - type: loadoutGroup
@@ -562,6 +564,8 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporClown # DeltaV
+  - EmergencyAquaticClown # MACRO: Decapoids
+  - LoadoutSpeciesAquaticFullTank # MACRO: Decapoids
 
 - type: loadoutGroup
   id: ClownJobTrinkets
@@ -628,6 +632,8 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporMime # DeltaV
+  - EmergencyAquaticMime # MACRO: Decapoids
+  - LoadoutSpeciesAquaticFullTank # MACRO: Decapoids
 
 #- type: loadoutGroup
 #  id: MimeJobTrinkets
@@ -976,6 +982,8 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporExtended # DeltaV
+  - EmergencyAquaticExtended # MACRO: Decapoids
+  - LoadoutSpeciesAquaticFullTank # MACRO: Decapoids
 
 # Science
 - type: loadoutGroup
@@ -1312,6 +1320,8 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporSecurity # DeltaV
+  - EmergencyAquaticSecurity # MACRO: Decapoids
+  - LoadoutSpeciesAquaticFullTank # MACRO: Decapoids
 
 # Wildcards
 - type: loadoutGroup
@@ -1366,6 +1376,8 @@
   - LoadoutSpeciesVoxNitrogen
   - EmergencyIPCBox # DeltaV
   - EmergencyWaterVaporSyndicate # DeltaV
+  - EmergencyAquaticSyndicate # MACRO: Decapoids
+  - LoadoutSpeciesAquaticFullTank # MACRO: Decapoids
 
 - type: loadoutGroup
   id: SurvivalMilitaryDouble
@@ -1375,6 +1387,7 @@
   loadouts:
   - EmergencyNitrogenMilitaryDouble
   - EmergencyOxygenMilitaryDouble
+  - LoadoutSpeciesAquaticFullTank # MACRO: Decapoids
 
 - type: loadoutGroup
   id: GroupSpeciesBreathTool

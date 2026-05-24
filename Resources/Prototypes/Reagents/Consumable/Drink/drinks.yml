@@ -455,6 +455,19 @@
           types:
             Heat: 3
       - !type:Oxygenate
+        #MACROCOSM START
+      - !type:Oxygenate # for decapoids.
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Decapoid ]
+      - !type:ModifyLungGas
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Decapoid ]
+        ratios:
+          Ammonia: 1.0
+          WaterVapor: -1.0
+      - !type:PopupMessage # for apids. they're bees, they get calm if you smoke 'em
         conditions:
         - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
           type: [ Feroxi ]
