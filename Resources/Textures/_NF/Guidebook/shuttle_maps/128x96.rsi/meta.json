@@ -9,7 +9,8 @@
         "apothecary, charon, caladrius, crescent, druid, pulsar, retort, stasis, surveyor by dustylens (discord/github).",
         "barge, eagle, hauler, phoenix, placebo, skipper, sparrow by Mygnol (discord/github)",
         "izakaya by AF-Buyrcsp2 (discord/github)",
-        "nook by Chervjakys (discord/github)"
+        "nook by Chervjakys (discord/github)",
+        "balena by boolean_9386/booleandata (discord/github)"
     ],
     "metaAtlas": false,
     "size": {
@@ -25,6 +26,9 @@
         },
         {
             "name": "apothecary"
+        },
+        {
+            "name": "balena"
         },
         {
             "name": "barge"
