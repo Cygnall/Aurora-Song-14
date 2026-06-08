@@ -8,6 +8,7 @@
   - type: Edible  # Aurora's Song - Convert to edible from Drink
     edible: Drink
     solution: food
+    destroyOnEmpty: false # Aurora's Song: DO NOT EAT IT
   - type: SolutionContainerManager
     solutions:
       food:

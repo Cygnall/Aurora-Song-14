@@ -6,7 +6,7 @@
   sprites: MobVulpkaninSprites
   defaultSkinTone: "#985629"
   markingLimits: MobVulpkaninMarkingLimits
-  dollPrototype: MobVulpkaninDummy
+  dollPrototype: AppearanceVulpkanin # Aurora's Song - Nubody
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   maleFirstNames: NamesVulpkaninMale
   femaleFirstNames: NamesVulpkaninFemale

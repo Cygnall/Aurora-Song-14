@@ -36,6 +36,118 @@
     outerClothing: ClothingOuterWinterCoatMantisMu
 # Mantis drip merge end
 
+# Aurora Song - Chaplain drip start
+- type: loadout
+  id: ContractorClothingOuterMoon
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterMoon
+
+- type: loadout
+  id: ContractorClothingOuterSilent
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterSilent
+# Aurora Song - Chaplain drip end
+
+# Aurora Song - Departmental bombers start
+- type: loadout
+  id: ContractorClothingOuterCoatBomberBlack
+  groupBy: departmentalBombers
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatBomberBlack
+
+- type: loadout
+  id: ContractorClothingOuterCoatBomberWhite
+  groupBy: departmentalBombers
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatBomberWhite
+
+- type: loadout
+  id: ContractorClothingOuterCoatBomberCargo
+  groupBy: departmentalBombers
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatBomberCargo
+
+- type: loadout
+  id: ContractorClothingOuterCoatBomberEngineer
+  groupBy: departmentalBombers
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatBomberEngineer
+
+- type: loadout
+  id: ContractorClothingOuterCoatBomberAtmos
+  groupBy: departmentalBombers
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatBomberAtmos
+
+- type: loadout
+  id: ContractorClothingOuterCoatBomberAtmosHolo
+  groupBy: departmentalBombers
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatBomberAtmosHolo
+
+- type: loadout
+  id: ContractorClothingOuterCoatBomberMedical
+  groupBy: departmentalBombers
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatBomberMedical
+
+- type: loadout
+  id: ContractorClothingOuterCoatBomberScience
+  groupBy: departmentalBombers
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 750
+  equipment:
+    outerClothing: ClothingOuterCoatBomberScience
+
+- type: loadout
+  id: ContractorClothingOuterCoatBomberSecurity
+  groupBy: departmentalBombers
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFCoatCapable
+  price: 1000
+  equipment:
+    outerClothing: ClothingOuterCoatBomberSecurity
+# Aurora Song - Departmental bombers end
+
 - type: loadout
   id: ContractorClothingOuterHardsuitVoidParamed
   effects:

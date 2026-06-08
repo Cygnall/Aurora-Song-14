@@ -1,13 +1,16 @@
 using System.Linq;
 using System.Numerics;
 using Content.Shared.EntityTable;
+using Content.Shared.Humanoid.Components; // Aurora's Song - Make humanoid spawners work
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
+using Robust.Shared.Network; // Aurora's Song - Make humanoid spawners work
 
 namespace Content.Shared.Containers;
 
 public sealed class ContainerFillSystem : EntitySystem
 {
+    [Dependency] private readonly INetManager _net = default!; // Aurora's Song - Make humanoid spawners work
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
     [Dependency] private readonly EntityTableSystem _entityTable = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;
@@ -72,6 +75,14 @@ public sealed class ContainerFillSystem : EntitySystem
             foreach (var proto in spawns)
             {
                 var spawn = Spawn(proto, coords);
+                // Frontier: handle humanoid spawner cases
+                if (TryComp<RandomHumanoidSpawnerComponent>(spawn, out var spawner))
+                {
+                    spawn = spawner.SpawnedId;
+                    if (!_net.IsServer) // Aurora's Song - Make humanoid spawners work, these don't need to be predicted
+                        continue;
+                }
+                // End Frontier
                 if (!_containerSystem.Insert(spawn, container, containerXform: xform))
                 {
                     var alreadyContained = container.ContainedEntities.Count > 0 ? string.Join("\n", container.ContainedEntities.Select(e => $"\t - {ToPrettyString(e)}")) : "< empty >";

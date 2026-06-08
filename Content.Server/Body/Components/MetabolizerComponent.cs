@@ -95,6 +95,9 @@ namespace Content.Server.Body.Components
         [DataField("rateModifier")]
         public FixedPoint2 MetabolismRateModifier = 1.0;
 
+        [DataField] // Aurora Song: control the scale of the effect
+        public float ScaleModifier = 1.0f;
+
         // Frontier: skip metabolizing effects
         [DataField]
         public bool SkipEffects = false;

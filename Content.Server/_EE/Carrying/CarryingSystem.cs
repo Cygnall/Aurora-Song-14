@@ -64,7 +64,7 @@ namespace Content.Server.Carrying
             SubscribeLocalEvent<CarryingComponent, GetVerbsEvent<InnateVerb>>(AddInsertCarriedVerb);
             SubscribeLocalEvent<CarryingComponent, VirtualItemDeletedEvent>(OnVirtualItemDeleted);
             SubscribeLocalEvent<CarryingComponent, BeforeThrowEvent>(OnThrow);
-            SubscribeLocalEvent<CarryingComponent, EntParentChangedMessage>(OnParentChanged);
+            // SubscribeLocalEvent<CarryingComponent, EntParentChangedMessage>(OnParentChanged); # Aurora's Song - Disable drop when grid change
             SubscribeLocalEvent<CarryingComponent, MobStateChangedEvent>(OnMobStateChanged);
             SubscribeLocalEvent<BeingCarriedComponent, InteractionAttemptEvent>(OnInteractionAttempt);
             SubscribeLocalEvent<BeingCarriedComponent, MoveInputEvent>(OnMoveInput);

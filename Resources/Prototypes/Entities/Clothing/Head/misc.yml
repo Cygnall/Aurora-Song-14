@@ -266,7 +266,7 @@
   - type: Clothing
     sprite: Clothing/Head/Hats/dogears.rsi
   - type: AddAccentClothing
-    accent: BarkAccent
+    accent: OwOAccent # Aurora's Song - BarkAccent>OwOAccent
 
 - type: entity
   parent: ClothingHeadBase

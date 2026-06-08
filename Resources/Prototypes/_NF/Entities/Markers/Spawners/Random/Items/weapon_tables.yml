@@ -235,6 +235,7 @@
       - id: WeaponCaseLongMusketExpedition # Musket to T2 | Aurora Song
       - id: WeaponCaseLongLaserCarbineExpedition # Laser Carbine to T2 | Aurora Song
       - id: WeaponCaseShortPython45Expedition # Aurora: Pyhton to T2
+      - id: WeaponCaseLongTypewriterExpedition # Aurora's Song Typewriter to T2
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier3
@@ -254,7 +255,7 @@
       - id: WeaponCaseLongM90Expedition
       - id: WeaponCaseLongLecterExpedition
       - id: WeaponCaseShortSvalinnExpedition
-      # - id: WeaponCaseLongHristovExpedition #Aurora: To t2
+      # - id: WeaponCaseLongHristovExpedition #Aurora: To t4
       # - id: WeaponCaseLongMusketExpedition  Aurora: to T3
       - id: WeaponCaseLongFalchionExpedition # Aurora Weapon
       - id: WeaponCaseShortBasinExpedition # Aurora Weapon
@@ -285,6 +286,8 @@
       - id: WeaponCaseLongC20r # C20r to T4 | Aurora Song
       - id: WeaponCaseAP4CExpeditionT4 # Aurora
       - id: WeaponCaseLongEstocExpeditionT4 # Aurora
+      - id: WeaponCaseLongHristovExpedition # Aurora's Song Hristov to T4
+      - id: WeaponCaseLongHushpupExpeditionT4 # Aurora's Song
     - !type:NestedSelector
       weight: 0.05
       tableId: TableDungeonLootWeaponsRangedTier5

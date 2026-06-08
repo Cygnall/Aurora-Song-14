@@ -2,7 +2,7 @@
   # Moth People
 
   <Box>
-    <GuideEntityEmbed Entity="MobMoth" Caption=""/>
+    <GuideEntityEmbed Entity="AppearanceMoth" Caption=""/>
   </Box>
 
   <!-- Frontier: moth diet

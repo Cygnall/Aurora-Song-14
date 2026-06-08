@@ -21,5 +21,6 @@
   - type: GibOnTrigger
     deleteItems: true
     deleteOrgans: true
-    gib: false
-    useArgumentEntity: true
+  # Aurora's Song - Remove old NF trigger
+  #   gib: false
+  #   useArgumentEntity: true

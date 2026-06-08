@@ -5,7 +5,7 @@
   prototype: MobHarpy
   sprites: MobHarpySprites
   markingLimits: MobHarpyMarkingLimits
-  dollPrototype: MobHarpyDummy
+  dollPrototype: AppearanceHarpy
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
 
 - type: speciesBaseSprites

@@ -30,11 +30,38 @@
     ClothingNeckScarfChaplainStole: 3 # Frontier
     ClothingNeckStoleChaplain: 3
     ClothingBeltChaplainSash: 3 # Frontier
-#    ClothingHeadsetService: 4 # Frontier
+    # Imp edit start -- Aurora's Song edit - All instances of 1 -> 2
+    ClothingBeltChaplainDragon: 2
+    ClothingEyesChaplainBlindfold: 2
+    ClothingHeadHatDruid: 2
+    ClothingHeadHatMoon: 2
+    ClothingHeadHatShrineMaidenWig: 2
+    ClothingHeadHatSun: 2
+    ClothingHeadHatTidal: 2
+    ClothingHeadHatVeil: 2
+    ClothingMaskClayshaper: 2
+    ClothingMaskFire: 2
+    ClothingNeckChaplainDragon: 2
+    ClothingNeckClayshaper: 2
+    ClothingNeckDruid: 2
+    ClothingNeckDruidMantle: 2
+    ClothingNeckSun: 2
+    ClothingNeckTidal: 2
+    ClothingOuterMoon: 2
+    ClothingOuterSuitShrineMaiden: 2
+    ClothingUniformSkirtClayshaper: 2
+    ClothingUniformSkirtDruid: 2
+    ClothingUniformSkirtMoon: 2
+    ClothingUniformSkirtTidal: 2
+    ClothingUniformSun: 2
+    ClothingUniformTech: 2
+    # Imp edit end
+    # ClothingHeadsetService: 4 # Frontier
     RubberStampChaplain: 3
     Bible: 3 # Frontier: 1<3
     BoxCandle: 2
     BoxCandleSmall: 2
+    Gohei: 2 # imp
     Urn: 5
     UrnMortuary: 4 # Frontier
     Censer: 2 # Frontier
@@ -47,8 +74,12 @@
     DrinkWineBottleFull: 1
     ToyFigurineChaplain: 1
     ClothingNeckScarfStripedBlack: 3
+    # Imp edit start -- Aurora's Song edit - All instances of 1 -> 2
+    ClothingOuterClownPriest: 2
+    ClothingMaskSilent: 2
+    ClothingOuterSilent: 2
+    # Imp edit end
   emaggedInventory:
-    
     WoodenStake: 6 # Frontier
     ClothingOuterRobesCult: 3
     ClothingHeadHatHoodCulthood: 3

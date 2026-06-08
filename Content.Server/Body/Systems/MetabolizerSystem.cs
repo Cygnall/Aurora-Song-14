@@ -1,7 +1,7 @@
 using System.Linq;
 using Content.Server.Body.Components;
+using Content.Shared.Body;
 using Content.Shared.Body.Events;
-using Content.Shared.Body.Organ;
 using Content.Shared.Body.Prototypes;
 using Content.Shared.Body.Systems;
 using Content.Shared.Chemistry.Components;
@@ -47,7 +47,7 @@ public sealed class MetabolizerSystem : SharedMetabolizerSystem
 
         SubscribeLocalEvent<MetabolizerComponent, ComponentInit>(OnMetabolizerInit);
         SubscribeLocalEvent<MetabolizerComponent, MapInitEvent>(OnMapInit);
-        SubscribeLocalEvent<MetabolizerComponent, ApplyMetabolicMultiplierEvent>(OnApplyMetabolicMultiplier);
+        SubscribeLocalEvent<MetabolizerComponent, BodyRelayedEvent<ApplyMetabolicMultiplierEvent>>(OnApplyMetabolicMultiplier);
     }
 
     private void OnMapInit(Entity<MetabolizerComponent> ent, ref MapInitEvent args)
@@ -67,9 +67,9 @@ public sealed class MetabolizerSystem : SharedMetabolizerSystem
         }
     }
 
-    private void OnApplyMetabolicMultiplier(Entity<MetabolizerComponent> ent, ref ApplyMetabolicMultiplierEvent args)
+    private void OnApplyMetabolicMultiplier(Entity<MetabolizerComponent> ent, ref BodyRelayedEvent<ApplyMetabolicMultiplierEvent> args)
     {
-        ent.Comp.UpdateIntervalMultiplier = args.Multiplier;
+        ent.Comp.UpdateIntervalMultiplier = args.Args.Multiplier;
     }
 
     public override void Update(float frameTime)
@@ -194,6 +194,7 @@ public sealed class MetabolizerSystem : SharedMetabolizerSystem
                 // End Frontier
 
                 var scale = (float) mostToRemove;
+                scale *= group.ScaleModifier; // Aurora's Song - control the scale of the effect
 
                 // TODO: This is a very stupid workaround to lungs heavily relying on scale = reagent quantity. Needs lung and metabolism refactors to remove.
                 // TODO: Lungs just need to have their scale be equal to the mols consumed, scale needs to be not hardcoded either and configurable per metabolizer...

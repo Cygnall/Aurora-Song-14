@@ -143,6 +143,7 @@
     solution: beaker
     delay: 1.5
     forceFeedDelay: 5
+    destroyOnEmpty: false # Aurora's Song: DO NOT EAT IT
   - type: Appearance
   - type: SolutionContainerVisuals
     maxFillLevels: 5

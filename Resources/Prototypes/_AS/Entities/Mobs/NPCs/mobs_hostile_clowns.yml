@@ -235,15 +235,14 @@
   - MobNonHumanHostileBase
   - MobHumanoidInvetory
   - NFBaseMobRestrictions
+  - NFMobNoEquipmentOnGib # Aurora's Song - Make sure clowns don't drop stuff
+  - BaseMobHumanSynthetic # Aurora's Song - Nubody
   id: MobClownBase
   description: A joyous, terrible thing, twisted and warped in The Honkmother's light.
   components:
   - type: NpcFactionMember
     factions:
     - SimpleHostile
-  - type: Body
-    prototype: HumanSyntheticOrgans # Took this from the syndicate NPCs to give these clowns posin resist
-    requiredLegs: 2
   - type: Flammable
     fireSpread: true
     canResistFire: true
@@ -261,12 +260,13 @@
     defaultRotation: 90
     horizontalRotation: 90
   - type: AutoWakeUp
-  - type: TriggerOnBeingGibbed
-  - type: GibOnTrigger
-    deleteItems: true
-    deleteOrgans: true
-    gib: false
-    useArgumentEntity: true
+  # Aurora's Song - Remove old NF trigger, this has the side effect of corpses dropping items on forced gib
+  # - type: TriggerOnBeingGibbed
+  # - type: GibOnTrigger
+  #   deleteItems: true
+  #   deleteOrgans: true
+  #   gib: false
+  #   useArgumentEntity: true
   - type: MovementSpeedModifier
     baseWalkSpeed : 4.5
     baseSprintSpeed : 4.5

@@ -1,0 +1,215 @@
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceTajaran
+  name: tajaran appearance
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganTajaranTorso
+        - id: OrganTajaranHead
+        - id: OrganTajaranArmLeft
+        - id: OrganTajaranArmRight
+        - id: OrganTajaranHandRight
+        - id: OrganTajaranHandLeft
+        - id: OrganTajaranLegLeft
+        - id: OrganTajaranLegRight
+        - id: OrganTajaranFootLeft
+        - id: OrganTajaranFootRight
+        - id: OrganHumanBrain
+        - id: OrganHumanEyes
+        - id: OrganHumanTongue
+        - id: OrganHumanAppendix
+        - id: OrganHumanEars
+        - id: OrganHumanLungs
+        - id: OrganAnimalHeart
+        - id: OrganVulpkaninStomach
+        - id: OrganAnimalLiver
+        - id: OrganHumanKidneys
+  - type: HumanoidAppearance
+    species: Tajaran
+    hideLayersOnEquip:
+    - Snout
+    - SnoutCover
+    - HeadTop
+    - HeadSide
+    - FacialHair
+    - Hair
+
+- type: entity
+  name: Urist McTajaran
+  parent:
+  - AppearanceTajaran
+  - BaseSpeciesMobOrganic
+  id: MobTajaran
+  components:
+  - type: Hunger
+    baseDecayRate: 0.02083333332 # 25% more than default
+# Aurora's Song - Remove densities
+ # - type: Fixtures
+   # fixtures: # TODO: This needs a second fixture just for mob collisions. Aurora's Song - Removed this as mob collision isn't even used and the density negatively affected drag speed
+     # fix1:
+       # shape:
+         # !type:PhysShapeCircle
+         # radius: 0.28
+       # density: 185
+       # restitution: 0.0
+       # mask:
+       # - MobMask
+       # layer:
+       # - MobLayer
+  - type: Damageable
+    damageModifierSet: Tajaran
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.85  # 0.7 is base speed.
+      80: 0.75  # 0.5 is base speed.
+  - type: Carriable # Carrying system from nyanotrasen.
+  #- type: TemperatureProtection # fur is a good insulator, actually Aurora song: So, I know we
+  #  heatingCoefficient: 0.7 # Aurora Song 0.1>0.7,
+  #  coolingCoefficient: 0.7 # Aurora Song 0.1>0.7, Tajaran couldnt be cooled down before
+  # - type: Flammable Aurora's Song commented out
+  #   fireStackIncreaseMultiplier: 1.35 # until you light it up, cuz it's oily too
+  # - type: NightVision
+  #   color: "#808080"
+  #   activateSound: null
+  #   deactivateSound: null
+  # - type: Flashable
+  #   eyeDamageChance: 0.3
+  #   eyeDamage: 1
+  #   durationMultiplier: 1.5
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw # Aurora's Song - Made the sound from punch to claw
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Slash: 4
+        Piercing: 1
+  - type: Speech
+    speechSounds: Alto
+    allowedEmotes: # Aurora's Song - allow Tajarans to do the cat emotes
+    - Hiss
+    - Meow
+    - Mew
+    - Growl
+    - Purr
+  - type: DamageOnHighSpeedImpact # Landing on all fours!
+    damage:
+      types:
+        Blunt: 1
+  - type: Stamina
+    baseCritThreshold: 85 # Aurora's Song - critThreshold>baseCritThreshold
+    decay: 2.55 # 3 base decay multiplied by 0.85 = 2.55
+  - type: TypingIndicator
+    proto: felinid
+  # - type: PseudoItem # Aurora's Song - Tajaran are now bigger, can no longer be stuffed in duffels
+    # storedOffset: 0,17
+    # shape:
+      # - 0,0,1,4
+      # - 0,2,3,4
+      # - 4,0,5,4
+  - type: Vocal
+    wilhelm: "/Audio/Nyanotrasen/Voice/Felinid/cat_wilhelm.ogg"
+    sounds:
+      Male: MaleFelinid
+      Female: FemaleFelinid
+      Unsexed: MaleFelinid
+  - type: Felinid # real
+  - type: NoShoesSilentFootsteps
+  # - type: StepTriggerImmune Aurora's Song
+  #   whitelist:
+  #     types:
+  #       - Shard
+  #       - Landmine
+  #       - Mousetrap
+  #       - SlipEntity
+  # - type: LanguageKnowledge
+  #   speaks:
+  #   - TauCetiBasic
+  #   - SiikMaas
+  #   understands:
+  #   - TauCetiBasic
+  #   - SiikMaas
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+  # - FelinidEmotes Aurora's Song
+  # - type: FootPrints Aurora's Song
+  - type: Temperature # Aurora's Song - Move out currentTemperature
+    currentTemperature: 311.76  # Body temperature of cat
+  - type: TemperatureDamage # Aurora's Song - Temperature>TemperatureDamage
+    coldDamageThreshold:  248.15 # -25 degrees centigrade, like 12 degrees below normal
+    heatDamage:
+      types:
+        Heat: 2 # Aurora's Song - Switched Heat and Cold around since someone put them in backwards
+    coldDamage:
+      types:
+        Cold: 0.5 # Aurora's Song - Switched Heat and Cold around since someone put them in backwards
+  - type: ThermalRegulator
+    normalBodyTemperature: 311.76
+  - type: Wagging # Aurora's Song - Add wagging
+
+- type: entity
+  parent: OrganBase
+  id: OrganTajaran
+  abstract: true
+  suffix: Tajaran
+
+- type: entity
+  parent: OrganTajaran
+  id: OrganTajaranExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _EE/Mobs/Species/Tajaran/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganTajaranExternal ]
+  id: OrganTajaranTorso
+
+- type: entity
+  parent: [ OrganBaseHead, OrganTajaranExternal ]
+  id: OrganTajaranHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganTajaranExternal ]
+  id: OrganTajaranArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganTajaranExternal ]
+  id: OrganTajaranArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganTajaranExternal ]
+  id: OrganTajaranHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganTajaranExternal ]
+  id: OrganTajaranHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganTajaranExternal ]
+  id: OrganTajaranLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganTajaranExternal ]
+  id: OrganTajaranLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganTajaranExternal ]
+  id: OrganTajaranFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganTajaranExternal ]
+  id: OrganTajaranFootRight

@@ -15,11 +15,11 @@
       storagebase: !type:GroupSelector
         children:
         - id: MysteryFigureBox
-          prob: 0.80
+          weight: 0.80
         - id: ClothingHeadHatMcCrown
-          prob: 0.15
+          weight: 0.15
         - id: SpaceBladeMc
-          prob: 0.05
+          weight: 0.05
   - type: StaticPrice
     price: 1
     vendPrice: 200 # Need this to not bug out the cardbox worth...
@@ -37,143 +37,143 @@
         - !type:GroupSelector
           children:
           - id: FoodBurgerPlain
-            prob: 0.40
+            weight: 0.40
           - id: FoodBurgerMcrib
-            prob: 0.10
+            weight: 0.10
           - id: FoodBurgerBacon
-            prob: 0.10
+            weight: 0.10
           - id: FoodBurgerCheese
-            prob: 0.10
+            weight: 0.10
           - id: FoodBurgerMcguffin
-            prob: 0.10
+            weight: 0.10
           - id: FoodBurgerDuck
-            prob: 0.10
+            weight: 0.10
           - id: FoodBurgerChicken
-            prob: 0.10
+            weight: 0.10
         # Fries
         - !type:GroupSelector
           children:
           - id: FoodMealFries
-            prob: 0.60
+            weight: 0.60
           - id: FoodMealFriesCheesy
-            prob: 0.20
+            weight: 0.20
           - id: FoodMealFriesCarrot
-            prob: 0.15
+            weight: 0.15
           - id: FoodOnionRings
-            prob: 0.05
+            weight: 0.05
             amount: 2
         # Drinks
         - !type:GroupSelector
           children:
           - id: DrinkColaCan
-            prob: 0.10
+            weight: 0.10
           - id: DrinkGrapeCan
-            prob: 0.10
+            weight: 0.10
           - id: DrinkPwrGameCan
-            prob: 0.10
+            weight: 0.10
           - id: DrinkEnergyDrinkCan
-            prob: 0.10
+            weight: 0.10
           - id: DrinkSpaceMountainWindCan
-            prob: 0.10
+            weight: 0.10
           - id: DrinkStarkistCan
-            prob: 0.10
+            weight: 0.10
           - id: DrinkSpaceUpCan
-            prob: 0.10
+            weight: 0.10
           - id: DrinkLemonLimeCan
-            prob: 0.10
+            weight: 0.10
           - id: DrinkDrGibbCan
-            prob: 0.10
+            weight: 0.10
           - id: DrinkSolDryCan
-            prob: 0.10
+            weight: 0.10
         # Cake
         - !type:GroupSelector
           children:
           - id: FoodCakeLemonSlice
-            prob: 0.10
+            weight: 0.10
           - id: FoodCakeLimeSlice
-            prob: 0.10
+            weight: 0.10
           - id: FoodCakeChocolateSlice
-            prob: 0.10
+            weight: 0.10
           - id: FoodCakeCheeseSlice
-            prob: 0.10
+            weight: 0.10
           - id: FoodCakeOrangeSlice
-            prob: 0.10
+            weight: 0.10
           - id: FoodCakeLemoonSlice
-            prob: 0.10
+            weight: 0.10
           - id: FoodCakeBlueberrySlice
-            prob: 0.10
+            weight: 0.10
           - id: FoodCakeCarrotSlice
-            prob: 0.10
+            weight: 0.10
           - id: FoodCakeBirthdaySlice
-            prob: 0.10
+            weight: 0.10
           - id: FoodCakeAppleSlice
-            prob: 0.10
+            weight: 0.10
         # Frozen
         - !type:GroupSelector
           children:
           - id: FoodFrozenPopsicleOrange
-            prob: 0.2
+            weight: 0.2
           - id: FoodFrozenPopsicleJumbo
-            prob: 0.2
+            weight: 0.2
           - id: FoodFrozenPopsicleBerry
-            prob: 0.2
+            weight: 0.2
           - id: FoodFrozenSandwichStrawberry
-            prob: 0.2
+            weight: 0.2
           - id: FoodFrozenSandwich
-            prob: 0.2
+            weight: 0.2
         # Gifts
         - !type:GroupSelector
           children:
           - id: MysteryFigureBox
-            prob: 0.80
+            weight: 0.80
           - id: ClothingHeadHatMcCrown
-            prob: 0.15
+            weight: 0.15
           - id: SpaceBladeMc
-            prob: 0.05
+            weight: 0.05
         # Smokes
         - !type:GroupSelector
           children:
           - id: CigPackRed
-            prob: 0.20
+            weight: 0.20
           - id: CigPackBlue
-            prob: 0.20
+            weight: 0.20
           - id: CigPackBlack
-            prob: 0.20
+            weight: 0.20
           - id: CigPackGreen
-            prob: 0.20
+            weight: 0.20
           - id: Cigar
-            prob: 0.10
+            weight: 0.10
             amount: 2
           - id: CigarGold
-            prob: 0.05
+            weight: 0.05
             amount: 2
           - id: CigarPlatinum
-            prob: 0.03
+            weight: 0.03
             amount: 2
           - id: CigPackSyndicate
-            prob: 0.02
+            weight: 0.02
         # Lighter
         - !type:GroupSelector
           children:
           - id: CheapLighter
-            prob: 0.40
+            weight: 0.40
           - id: Lighter
-            prob: 0.30
+            weight: 0.30
           - id: FlippoLighter
-            prob: 0.20
+            weight: 0.20
           - id: FlippoEngravedLighter
-            prob: 0.10
+            weight: 0.10
         # Condiment
         - !type:GroupSelector
           children:
           - id: FoodCondimentPacketBbq
-            prob: 0.25
+            weight: 0.25
           - id: FoodCondimentPacketMustard
-            prob: 0.25
+            weight: 0.25
           - id: FoodCondimentPacketHotsauce
-            prob: 0.25
+            weight: 0.25
           - id: FoodCondimentPacketKetchup
-            prob: 0.25
+            weight: 0.25
         # Extra
 #        - id: FoodCondimentPacketPepper
         - id: FoodCondimentPacketSalt

@@ -1,3 +1,4 @@
+/* Aurora's Song - Disable Bark Accent
 using Content.Shared.StatusEffectNew;
 using Content.Server.Speech.Components;
 using Content.Shared.Speech;
@@ -49,3 +50,4 @@ namespace Content.Server.Speech.EntitySystems
         }
     }
 }
+*/

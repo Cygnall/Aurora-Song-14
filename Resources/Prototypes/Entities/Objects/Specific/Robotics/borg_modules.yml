@@ -720,7 +720,8 @@
     - state: icon-construction
   - type: ItemBorgModule # Aurora's Song - Made it like Frontier's DroppableBorgModule but left the upstream tiles in
     hands:
-    - hand: # Aurora's Song - Make it like NF
+    - item: ConstructionBag # Aurora's Song - Make it like NF
+      hand:
         emptyRepresentative: ConstructionBag
         # emptyLabel: borg-slot-construction-empty
         whitelist:

@@ -43,6 +43,14 @@
     eyes: ClothingEyesGlassesEpistemicsMantisVeil
 # Aurora Song- Mantis drip merge end
 
+# Aurora Song - Chaplain drip start
+- type: loadout
+  id: ContractorClothingEyesChaplainBlindfold
+  price: 500
+  equipment:
+    eyes: ClothingEyesChaplainBlindfold
+# Aurora Song - Chaplain drip end
+
 #T1
 - type: loadout
   id: ContractorClothingEyesGlassesJamjar

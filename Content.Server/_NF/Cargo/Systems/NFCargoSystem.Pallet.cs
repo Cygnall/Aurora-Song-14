@@ -11,6 +11,8 @@ using Robust.Shared.Map;
 using System.Numerics;
 using Content.Shared.Coordinates;
 using Robust.Shared.Random;
+using Content.Shared._NF.Trade; // Aurora's Song: Contraband crates no longer give TC at the wrong depot
+using Content.Server._NF.Trade; // Aurora's Song: Contraband crates no longer give TC at the wrong depot
 
 namespace Content.Server._NF.Cargo.Systems;
 
@@ -201,6 +203,19 @@ public sealed partial class NFCargoSystem
                 // Check for any additional currency payouts
                 if (TryComp(ent, out AdditionalPalletCurrencyComponent? currencyComponent))
                 {
+                    // Aurora's Song: Contraband crates no longer give TC at the wrong depot
+                    if (TryComp<TradeCrateComponent>(ent, out var expressComp))
+                    {
+                        // Copied from NFCargoSystem.TradeeCrates.cs. Ideally we'd calculate the extra payout at the same time as Spesos, but that would involve a lot of reconfiguration.
+                        var owningStation = _station.GetOwningStation(ent);
+                        var atDestination = expressComp.DestinationStation != EntityUid.Invalid
+                           && owningStation == expressComp.DestinationStation
+                           || HasComp<TradeCrateWildcardDestinationComponent>(owningStation);
+
+                        if (!atDestination) // If we aren't at the right depot, don't give TC.
+                            continue;
+                    }
+
                     if (_random.Prob(currencyComponent.SpawnProbability))
                     {
                         if (!additionalCurrency.ContainsKey(currencyComponent.Currency))

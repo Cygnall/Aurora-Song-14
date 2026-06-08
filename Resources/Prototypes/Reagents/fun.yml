@@ -514,7 +514,7 @@
         - !type:ReagentCondition
           reagent: Caninase
           min: 10
-        effectProto: StatusEffectBark
+        effectProto: StatusEffectOwO # Aurora's Song - StatusEffectBark>StatusEffectOwO
         time: 12.5
         type: Add
       - !type:Emote

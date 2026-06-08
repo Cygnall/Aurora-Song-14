@@ -66,6 +66,7 @@
   bodyPart: Head
   markingCategory: Overlay
   speciesRestriction: [SlimePerson]
+  forcedColoring: true # Aurora's Song
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -106,6 +107,7 @@
   bodyPart: Head
   markingCategory: Overlay
   speciesRestriction: [SlimePerson] # Aurora's Song - moved slime's marking to overlay
+  forcedColoring: true # Aurora's Song
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi
@@ -126,6 +128,7 @@
   bodyPart: Head
   markingCategory: Overlay
   speciesRestriction: [SlimePerson]
+  forcedColoring: true # Aurora's Song
   followSkinColor: true
   sprites:
   - sprite: Mobs/Customization/scars.rsi

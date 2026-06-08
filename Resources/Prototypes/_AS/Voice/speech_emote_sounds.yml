@@ -15,10 +15,10 @@
       collection: FairyYawn
     Snore:
       collection: Snores
-#    Sigh:
-#      collection: FemaleSigh # Todo: Make fairy sigh
- #   Crying:
- #     collection: FairyCry # NEED TO MAKE A FAIRY CRY
+    Sigh:
+      collection: FairySigh
+    Crying:
+      collection: FairyCry
     Whistle:
       collection: Whistles
     Weh:
@@ -29,3 +29,7 @@
       collection: FairyGasp
     DefaultDeathgasp:
       collection: FairyDeathgasp
+    FairyGlimmer:
+      collection: FairyGlimmer
+    FairyFlutter:
+      collection: FairyFlutter

@@ -39,8 +39,12 @@ public sealed class InternalsSystem : SharedInternalsSystem
         if (component.GasTankEntity != null)
             return; // already connected
 
+        // Aurora's Song - Make sure that the entity actually breathes
+        if (!TryComp<RespiratorComponent>(uid, out var respiratorComp))
+            return;
+
         // Can the entity breathe the air it is currently exposed to?
-        if (_respirator.CanMetabolizeInhaledAir(uid))
+        if (_respirator.CanMetabolizeInhaledAir((uid, respiratorComp))) // Aurora's Song - Add respirator to reduce re-resolving
             return;
 
         var tank = FindBestGasTank(uid);
@@ -48,7 +52,7 @@ public sealed class InternalsSystem : SharedInternalsSystem
             return;
 
         // Could the entity metabolise the air in the linked gas tank?
-        if (!_respirator.CanMetabolizeInhaledAir(uid, tank.Value.Comp.Air))
+        if (!_respirator.CanMetabolizeInhaledAir((uid, respiratorComp), tank.Value.Comp.Air)) // Aurora's Song - Add respirator to reduce re-resolving
             return;
 
         ToggleInternals(uid, uid, force: false, component, ToggleMode.On);

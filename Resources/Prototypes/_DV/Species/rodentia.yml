@@ -6,7 +6,7 @@
   sprites: MobRodentiaSprites
   defaultSkinTone: "#747474"
   markingLimits: MobRodentiaMarkingLimits
-  dollPrototype: MobRodentiaDummy
+  dollPrototype: AppearanceRodentia
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   maleFirstNames: names_rodentia_male
   femaleFirstNames: names_rodentia_female
@@ -67,6 +67,14 @@
     HeadSide:
       points: 1
       required: false
+    # begin starcup
+    UndergarmentTop:
+      points: 1
+      required: false
+    UndergarmentBottom:
+      points: 1
+      required: false
+    # end starcup
     Chest:
       points: 2
       required: false

@@ -5,7 +5,7 @@
   prototype: MobGingerbread
   sprites: MobGingerbreadSprites
   markingLimits: MobHumanMarkingLimits
-  dollPrototype: MobGingerbreadDummy
+  dollPrototype: AppearanceGingerbread
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   defaultSkinTone: "#9a7c5a"
 
@@ -16,6 +16,10 @@
     Hair: MobHumanoidAnyMarking # Aurora's Song - Hair just so they can have a lil more customization
     HeadTop: MobHumanoidAnyMarking
     HeadSide: MobHumanoidAnyMarking
+    # Aurora's Song - Add underwear marking layer
+    UndergarmentTop: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
+    # Aurora's Song end
     Chest: MobGingerbreadTorso
     Eyes: MobGingerbreadEyes
     LArm: MobGingerbreadLArm

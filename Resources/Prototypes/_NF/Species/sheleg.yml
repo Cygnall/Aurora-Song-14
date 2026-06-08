@@ -3,7 +3,7 @@
   name: species-name-sheleg
   roundStart: true
   prototype: MobSheleg
-  dollPrototype: MobShelegDummy
+  dollPrototype: AppearanceSheleg
   markingLimits: MobShelegMarkingLimits
   sprites: MobShelegSprites
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal

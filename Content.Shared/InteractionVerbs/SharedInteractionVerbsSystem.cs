@@ -11,6 +11,7 @@ using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared.IdentityManagement; // Aurora's Song: Interact verbs use Identity
 using static Content.Shared.InteractionVerbs.InteractionPopupPrototype.Prefix;
 using static Content.Shared.InteractionVerbs.InteractionVerbPrototype.ContestType;
 using static Content.Shared.InteractionVerbs.InteractionVerbPrototype.EffectTargetSpecifier;
@@ -336,8 +337,8 @@ public abstract class SharedInteractionVerbsSystem : EntitySystem
 
             (string, object)[] localeArgs =
             [
-                ("user", user),
-                ("target", target),
+                ("user", Identity.Entity(user, EntityManager)), // Aurora's Song: Interact verbs use Identity
+                ("target", Identity.Entity(target, EntityManager)), // Aurora's Song: Interact verbs use Identity
                 ("used", used ?? EntityUid.Invalid),
                 ("selfTarget", user == target),
                 ("hasUsed", used != null)

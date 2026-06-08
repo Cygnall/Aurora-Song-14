@@ -24,7 +24,28 @@ public sealed partial class RattleOnTriggerComponent : BaseXOnTriggerComponent
     [DataField]
     public Dictionary<MobState, LocId> Messages = new()
     {
-        {MobState.Critical, "rattle-on-trigger-critical-message"},
-        {MobState.Dead, "rattle-on-trigger-dead-message"}
+        {MobState.Critical, "deathrattle-implant-critical-message"},
+        {MobState.Dead, "deathrattle-implant-dead-message"} // Aurora's Song: Reverted these to the older, more informative locale
     };
+
+    // Aurora's Song.
+    /// <summary>
+    /// What time the user died, so Medics know how long they have been neglected for.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField]
+    public TimeSpan DeathTime = TimeSpan.Zero;
+
+    // Aurora's Song.
+    /// <summary>
+    /// What time the implant should next be retriggered automatically.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField]
+    public TimeSpan NextTrigger = TimeSpan.Zero;
+    
+    // Aurora's Song.
+    /// <summary>
+    /// The delay between implant retriggers.
+    /// </summary>
+    [ViewVariables(VVAccess.ReadWrite), DataField]
+    public TimeSpan RetriggerDelay = TimeSpan.FromMinutes(5);
 }

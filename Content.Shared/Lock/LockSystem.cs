@@ -17,8 +17,6 @@ using JetBrains.Annotations;
 using Robust.Shared.Audio.Systems;
 using Robust.Shared.Serialization;
 using Robust.Shared.Utility;
-using Content.Shared.Emag.Components;
-using Robust.Shared.Audio; // Frontier - DEMAG
 
 namespace Content.Shared.Lock;
 
@@ -139,12 +137,12 @@ public sealed class LockSystem : EntitySystem
     /// <param name="lockComp"></param>
     /// <param name="skipDoAfter">If true, skip the required do-after if one is configured.</param>
     /// <returns>If locking was successful</returns>
-    public bool TryLock(EntityUid uid, EntityUid user, LockComponent? lockComp = null, bool skipDoAfter = false)
+    public bool TryLock(EntityUid uid, EntityUid user, LockComponent? lockComp = null, bool skipDoAfter = false, bool quiet = false) // Aurora's Song - Silence popup on doAfter
     {
         if (!Resolve(uid, ref lockComp))
             return false;
 
-        if (!CanToggleLock(uid, user, quiet: false))
+        if (!CanToggleLock(uid, user, quiet)) // Aurora's Song - Silence popup on doAfter
             return false;
 
         if (lockComp.UseAccess && !HasUserAccess(uid, user, false))
@@ -238,12 +236,12 @@ public sealed class LockSystem : EntitySystem
     /// <param name="lockComp"></param>
     /// <param name="skipDoAfter">If true, skip the required do-after if one is configured.</param>
     /// <returns>If locking was successful</returns>
-    public bool TryUnlock(EntityUid uid, EntityUid user, LockComponent? lockComp = null, bool skipDoAfter = false)
+    public bool TryUnlock(EntityUid uid, EntityUid user, LockComponent? lockComp = null, bool skipDoAfter = false, bool quiet = false) // Aurora's Song - Silence popup on doAfter
     {
         if (!Resolve(uid, ref lockComp))
             return false;
 
-        if (!CanToggleLock(uid, user, quiet: false))
+        if (!CanToggleLock(uid, user, quiet)) // Aurora's Song - Silence popup on doAfter
             return false;
 
         if (lockComp.UseAccess && !HasUserAccess(uid, user, false))
@@ -428,7 +426,7 @@ public sealed class LockSystem : EntitySystem
         if (args.Cancelled)
             return;
 
-        TryLock(uid, args.User, skipDoAfter: true);
+        TryLock(uid, args.User, skipDoAfter: true, quiet: true); // Aurora's Song - Silence popup on doAfter
     }
 
     private void OnDoAfterUnlock(EntityUid uid, LockComponent component, UnlockDoAfter args)
@@ -436,7 +434,7 @@ public sealed class LockSystem : EntitySystem
         if (args.Cancelled)
             return;
 
-        TryUnlock(uid, args.User, skipDoAfter: true);
+        TryUnlock(uid, args.User, skipDoAfter: true, quiet: true); // Aurora's Song - Silence popup on doAfter
     }
 
     private void OnStorageInteractAttempt(Entity<LockedStorageComponent> ent, ref StorageInteractAttemptEvent args)

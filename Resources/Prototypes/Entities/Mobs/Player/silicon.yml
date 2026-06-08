@@ -507,6 +507,7 @@
     - state: ai_camera
       shader: unshaded
       map: ["base"]
+  - type: DeletionCensusExempt # Aurora's Song
 
 # The holographic representation of the AI that is projected from a holopad.
 - type: entity

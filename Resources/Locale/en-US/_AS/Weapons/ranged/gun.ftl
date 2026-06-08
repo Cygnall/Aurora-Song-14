@@ -1,0 +1,1 @@
+gun-firing-in-container = You can't shoot while contained!

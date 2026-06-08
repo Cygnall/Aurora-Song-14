@@ -31,7 +31,7 @@
   # accents
   - Accentless
   - BackwardsAccent
-  - BarkAccent
+#  - BarkAccent # Aurora's Song - Disable bark accent
   - BleatingAccent
   - DamagedSiliconAccent
   - FrenchAccent

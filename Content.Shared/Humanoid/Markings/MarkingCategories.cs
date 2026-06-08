@@ -15,8 +15,6 @@ namespace Content.Shared.Humanoid.Markings
         Snout,
         SnoutCover,
         Chest,
-        Genitals,
-        Nipples,
         NeckFluff, // TheDen - Ovinia, for fluff on necks
         UndergarmentTop,
         UndergarmentBottom,
@@ -41,8 +39,6 @@ namespace Content.Shared.Humanoid.Markings
                 HumanoidVisualLayers.Eyes => MarkingCategories.Eyes, // DeltaV - Add Eyes Category for IPCs
                 HumanoidVisualLayers.Snout => MarkingCategories.Snout,
                 HumanoidVisualLayers.Chest => MarkingCategories.Chest,
-                HumanoidVisualLayers.Genitals => MarkingCategories.Genitals,
-                HumanoidVisualLayers.Nipples => MarkingCategories.Nipples,
                 HumanoidVisualLayers.NeckFluff => MarkingCategories.NeckFluff, // TheDen - Ovinia, for fluff on necks
                 HumanoidVisualLayers.UndergarmentTop => MarkingCategories.UndergarmentTop,
                 HumanoidVisualLayers.UndergarmentBottom => MarkingCategories.UndergarmentBottom,

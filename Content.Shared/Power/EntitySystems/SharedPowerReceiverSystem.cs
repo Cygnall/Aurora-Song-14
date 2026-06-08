@@ -122,4 +122,13 @@ public abstract class SharedPowerReceiverSystem : EntitySystem
                                     ? "power-receiver-component-on-examine-powered"
                                     : "power-receiver-component-on-examine-unpowered")));
     }
+
+    // Frontier: Upstream - #28984
+    public bool TryTogglePower(EntityUid uid, bool playSwitchSound = true, SharedApcPowerReceiverComponent? receiver = null, EntityUid? user = null)
+    {
+        if (HasComp<EmpDisabledComponent>(uid))
+            return false;
+
+        return TogglePower(uid, playSwitchSound, receiver, user);
+    }
 }

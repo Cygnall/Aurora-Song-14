@@ -1,3 +1,4 @@
+/* Aurora's Song - Disable Bark Accent
 namespace Content.Server.Speech.Components
 {
     [RegisterComponent]
@@ -5,3 +6,4 @@ namespace Content.Server.Speech.Components
     {
     }
 }
+*/

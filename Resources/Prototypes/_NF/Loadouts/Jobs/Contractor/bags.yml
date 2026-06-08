@@ -33,13 +33,13 @@
   id: ContractorClothingBackpackMantis
   price: 500
   equipment:
-    back: ClothingBackpackMantis
+    back: ClothingBackpackMantisFlipped
 
 - type: loadout
   id: ContractorClothingBackpackDuffelMantis
   price: 500
   equipment:
-    back: ClothingBackpackDuffelMantis
+    back: ClothingBackpackDuffelMantisFlipped
 
 - type: loadout
   id: ContractorClothingBackpackSatchelMantis
@@ -51,7 +51,7 @@
   id: ContractorClothingBackpackMantisPurse
   price: 500
   equipment:
-    back: ClothingBackpackSatchelMantisPurse
+    back: ClothingBackpackSatchelMantisPurseFlipped
 # Aurora Song - Mantis drip merge end
 
 #T1

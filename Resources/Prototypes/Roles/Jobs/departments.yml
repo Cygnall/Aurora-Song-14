@@ -96,6 +96,7 @@
   weight: -94
   primary: false
   roles: []
+  editorHidden: true # AS
   # - AtmosphericTechnician # Frontier
   # - ChiefEngineer # Frontier
   # - StationEngineer # Frontier

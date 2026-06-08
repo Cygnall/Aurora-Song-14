@@ -1,0 +1,12 @@
+#Head
+
+- type: marking
+  id: SlimeEyebags
+  bodyPart: Head
+  markingCategory: Overlay
+  speciesRestriction: [ SlimePerson ]
+  forcedColoring: true
+  followSkinColor: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle2.rsi
+    state: eyebags

@@ -15,8 +15,9 @@
     - Write
     - Crayon
   - type: Crayon
-  - type: LimitedCharges # Aurora's Song - Replace infinite charges with infinite charges
-    lastCharges: -1
+    deleteEmpty: false # Aurora's Song - Makes sure it won't delete itself
+  - type: AutoRecharge # Aurora's Song - Make auto recharge quite short
+    rechargeDuration: 0.25
   - type: FlavorProfile
     flavors:
     - chewy

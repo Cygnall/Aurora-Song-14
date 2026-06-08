@@ -34,6 +34,7 @@
   - type: Edible  # Aurora's Song - Convert to edible from Drink
     edible: Drink
     solution: drink
+    destroyOnEmpty: false # Aurora's Song: DO NOT EAT IT
   - type: DrawableSolution
     solution: drink
   - type: RefillableSolution

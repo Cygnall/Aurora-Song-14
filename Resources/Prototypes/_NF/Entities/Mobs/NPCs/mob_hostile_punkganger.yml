@@ -17,6 +17,7 @@
   name: punk
   abstract: true
   parent:
+  - BaseMobHumanNoHands # Aurora's Song - Nubody
   - NFMobNoEquipmentOnGib
   - MobStaminaFodder
   - MobMovementSpeedModifierMelee
@@ -31,9 +32,6 @@
   - type: NpcFactionMember
     factions:
     - StreetGangNF
-  - type: Body
-    prototype: NFHumanNoHands
-    requiredLegs: 2
   - type: RechargeBasicEntityAmmo
     rechargeCooldown: 1.5
     rechargeSound:

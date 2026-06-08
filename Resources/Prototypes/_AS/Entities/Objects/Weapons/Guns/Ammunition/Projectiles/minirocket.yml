@@ -1,0 +1,19 @@
+﻿- type: entity
+  parent: BaseBulletTrigger
+  id: ASBulletFlashBang
+  name: flash bang
+  description: Think fast Chucklenuts!
+  categories: [ HideSpawnMenu]
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Grenades/flashbang.rsi
+    layers:
+    - state: primed
+  - type: FlashOnTrigger
+    range: 4.0
+  - type: SpawnOnTrigger
+    proto: GrenadeFlashEffect
+  - type: EmitSoundOnTrigger
+    sound:
+      path: "/Audio/Effects/flash_bang.ogg"
+    positional: true

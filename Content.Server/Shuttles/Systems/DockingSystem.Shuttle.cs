@@ -133,12 +133,20 @@ public sealed partial class DockingSystem
         EntityCoordinates coordinates,
         Angle angle,
         bool fallback = true,
-        DockType dockType = DockType.Airlock) // Frontier
+        DockType dockType = DockType.Airlock, // Frontier
+        string? priorityTag = null) // Aurora's Song: Add prioty discrimination
     {
         var gridDocks = GetDocks(targetGrid);
         var shuttleDocks = GetDocks(shuttleUid);
 
-        var configs = GetDockingConfigs(shuttleUid, targetGrid, shuttleDocks, gridDocks, dockType); // Frontier: add dockType
+        // Aurora's Song: Calculating dock configs scales quadratically(?) based on the number of docks involved
+        // So to avoid the server struggling to handle busses, we avoid calculating configs for docks that dont share our priority tag (if we have one)...
+        var configs = GetDockingConfigs(shuttleUid, targetGrid, shuttleDocks, gridDocks, dockType, priorityTag); // Frontier: add dockType
+
+        // Aurora's Song: ... But if we can't find one while discriminating, we still need to try and find a place to go.
+        if (configs.Count <= 0 && priorityTag != null)
+            configs = GetDockingConfigs(shuttleUid, targetGrid, shuttleDocks, gridDocks, dockType);
+
 
         foreach (var config in configs)
         {
@@ -164,7 +172,8 @@ public sealed partial class DockingSystem
         EntityUid targetGrid,
         List<Entity<DockingComponent>> shuttleDocks,
         List<Entity<DockingComponent>> gridDocks,
-        DockType dockType) // Frontier: add dockType
+        DockType dockType, // Frontier: add dockType
+        string? priorityTag = null) // Aurora's Song: Add priority discrimination
     {
         var validDockConfigs = new List<DockingConfig>();
 
@@ -194,6 +203,14 @@ public sealed partial class DockingSystem
 
                 foreach (var (gridDockUid, gridDock) in gridDocks)
                 {
+                    // Aurora's Song: Running CanDock() several hundred times is computationally expensive.
+                    if (priorityTag != null &&
+                        !(TryComp<PriorityDockComponent>(gridDockUid, out var priority) &&
+                        priority.Tag?.Equals(priorityTag) == true))
+                    {
+                        continue;
+                    }
+
                     var gridXform = _xformQuery.GetComponent(gridDockUid);
 
                     // Frontier: skip docks that don't match type
@@ -255,6 +272,14 @@ public sealed partial class DockingSystem
 
                         foreach (var (otherGridUid, otherGrid) in gridDocks)
                         {
+                            // Aurora's Song: Running CanDock() several hundred times is computationally expensive.
+                            if (priorityTag != null &&
+                                !(TryComp<PriorityDockComponent>(otherGridUid, out var otherPriority) &&
+                                otherPriority.Tag?.Equals(priorityTag) == true))
+                            {
+                                continue;
+                            }
+
                             if (otherGrid == gridDock)
                                 continue;
 
@@ -315,7 +340,13 @@ public sealed partial class DockingSystem
         string? priorityTag = null,
         DockType dockType = DockType.Airlock) // Frontier
     {
-        var validDockConfigs = GetDockingConfigs(shuttleUid, targetGrid, shuttleDocks, gridDocks, dockType); // Frontier: add dockType
+        // Aurora's Song: Calculating dock configs scales quadratically(?) based on the number of docks involved
+        // So to avoid the server struggling to handle busses, we avoid calculating configs for docks that dont share our priority tag (if we have one)...
+        var validDockConfigs = GetDockingConfigs(shuttleUid, targetGrid, shuttleDocks, gridDocks, dockType, priorityTag); // Frontier: add dockType
+
+        // Aurora's Song: ... But if we can't find one while discriminating, we still need to try and find a place to go.
+        if (validDockConfigs.Count <= 0 && priorityTag != null)
+            validDockConfigs = GetDockingConfigs(shuttleUid, targetGrid, shuttleDocks, gridDocks, dockType);
 
         if (validDockConfigs.Count <= 0)
             return null;

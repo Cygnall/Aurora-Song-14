@@ -128,7 +128,9 @@ namespace Content.Server.Speech.EntitySystems
                     var firstLoc = _loc.GetString(first);
                     var replaceLoc = _loc.GetString(replace);
 
-                    var regex = new Regex($@"(?<![\w']){firstLoc}(?![\w'])", RegexOptions.IgnoreCase);
+                    // Aurora's Song | regex adjusted to allow for manual stutter typing to no longer trigger word sanitisation
+                    // Accomplished by adding a hyphen to the negative lookbehind and negative lookahead. 
+                    var regex = new Regex($@"(?<![\w'-]){firstLoc}(?![\w'-])", RegexOptions.IgnoreCase);
 
                     return (regex, replaceLoc);
 

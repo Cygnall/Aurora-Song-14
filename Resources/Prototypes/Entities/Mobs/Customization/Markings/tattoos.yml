@@ -83,7 +83,7 @@
   bodyPart: Eyes
   markingCategory: Overlay
   id: TattooSlimeEyeRight
-  speciesRestriction: [Slimeperson]
+  speciesRestriction: [SlimePerson]
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_r

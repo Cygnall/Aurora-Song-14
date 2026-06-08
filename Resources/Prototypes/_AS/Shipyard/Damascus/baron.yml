@@ -1,0 +1,45 @@
+# Author Info
+# GitHub: turtleofmen
+# Discord: turtle.obj
+
+# Maintainer Info
+# GitHub: turtleofmen
+# Discord: turtle.obj
+
+# Shuttle Notes: pain and suffering
+#
+- type: vessel
+  id: Baron
+  parent: BaseVessel
+  name: IAC Baron
+  description: A large, specialized line tanker for the express purpose of gathering and moving large amounts of gas.
+  price: 78000
+  category: Large
+  group: Damascus
+  shuttlePath: /Maps/_AS/Shuttles/Damascus/baron.yml
+  guidebookPage: Null
+  class:
+  - Expedition
+  - Atmospherics
+  engine:
+  - AME
+
+- type: gameMap
+  id: Baron
+  mapName: 'KC Baron'
+  mapPath: /Maps/_AS/Shuttles/Damascus/baron.yml
+  minPlayers: 0
+  stations:
+    Baron:
+      stationProto: StandardFrontierExpeditionVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Baron {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

@@ -357,7 +357,7 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
                 }
             }
 
-            Del(oldEnt);
+            QueueDel(oldEnt); // Aurora's Song - Replace Del with QueueDel as a potential fix for registration duplication
             Log.Debug($"{ent.Comp.Faction} registered {oldEnt} into {newEnt}");
         }
 

@@ -200,7 +200,7 @@
   parent: BenchBaseMiddle
   components:
   - type: Sprite
-    sprite: _EE/Structures/Furniture/Benches/sofa.rsi
+    sprite: _AS/Structures/Furniture/Benches/sofa.rsi # AS Edit
   - type: Construction # Frontier
     graph: SofasGraph # Frontier
     node: BenchSofaMiddleNode # Frontier
@@ -241,7 +241,7 @@
     anchored: true
   - type: Rotatable
   - type: Sprite
-    sprite: _EE/Structures/Furniture/Benches/sofa.rsi
+    sprite: _AS/Structures/Furniture/Benches/sofa.rsi # AS Edit
     state: corner
   - type: Clickable
   - type: InteractionOutline

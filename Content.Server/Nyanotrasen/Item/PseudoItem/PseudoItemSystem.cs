@@ -54,6 +54,10 @@ public sealed class PseudoItemSystem : SharedPseudoItemSystem
 
     protected override void OnGettingPickedUpAttempt(EntityUid uid, PseudoItemComponent component, GettingPickedUpAttemptEvent args)
     {
+        // Aurora's Song - only block when actually using the pseudo-item system
+        if (!component.Active)
+            return;
+
         // Try to pick the entity up instead first
         if (args.User != args.Item && _carrying.TryCarry(args.User, uid))
         {

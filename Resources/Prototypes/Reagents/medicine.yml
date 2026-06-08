@@ -1330,7 +1330,7 @@
   color: "#0cbfe9"
   worksOnTheDead: true
   metabolisms:
-    Medicine:
+    Cryogenic: # Aurora's Song - Medicine>Cryogenic
       effects:
       - !type:EvenHealthChange
         conditions:

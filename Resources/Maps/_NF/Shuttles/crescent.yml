@@ -5947,13 +5947,13 @@ entities:
     - type: Transform
       pos: 30.385286,-30.344078
       parent: 1
-#- proto: BoxPaperColored
-#  entities:
-#  - uid: 3453
-#    components:
-#    - type: Transform
-#      pos: -8.497896,-2.3860898
-#      parent: 1
+- proto: BoxPaperColored
+  entities:
+  - uid: 3453
+    components:
+    - type: Transform
+      pos: -8.497896,-2.3860898
+      parent: 1
 - proto: Bucket
   entities:
   - uid: 490

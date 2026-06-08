@@ -18,6 +18,7 @@
     EncryptionKeyEngineering: 10
     ClothingMaskGas: 3
     ClothingOuterWinterEngi: 2
+    ClothingOuterCoatBomberEngineer: 2  # Imp
     ClothingNeckScarfStripedOrange: 3
     ClothingShoesBootsWinterEngi: 2
     # Frontier

@@ -30,6 +30,7 @@
   table: !type:GroupSelector
     children:
     - id: ASPosterLegitAuroraSector
+    - id: ASPosterLegitIHSLogo
 
 #regions spawners
 - type: entity

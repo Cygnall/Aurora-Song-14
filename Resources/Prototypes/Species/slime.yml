@@ -6,9 +6,8 @@
   sprites: MobSlimeSprites
   defaultSkinTone: "#b8b8b8"
   markingLimits: MobSlimeMarkingLimits
-  dollPrototype: MobSlimePersonDummy
+  dollPrototype: AppearanceSlimePerson
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
-#  customName: true
 
 - type: speciesBaseSprites
   id: MobSlimeSprites
@@ -16,12 +15,12 @@
     Head: MobSlimeHead
     Hair: MobSlimeMarkingFollowSkin
     FacialHair: MobSlimeMarkingFollowSkin
-    Snout: MobSlimeMarkingFollowSkin
-    UndergarmentBottom: MobHumanoidAnyMarking
+    Snout: MobSlimeMarkingFollowSkin # Aurora's Song
     UndergarmentTop: MobHumanoidAnyMarking
+    UndergarmentBottom: MobHumanoidAnyMarking
     Chest: MobSlimeTorso
     HeadTop: MobSlimeMarkingFollowSkinNoAlpha # Aurora's Song | Matches alpha with base to make animal ears seemless.
-    HeadSide: MobSlimeMarkingFollowSkin
+    HeadSide: MobHumanoidAnyMarking # Aurora's Song -- Changed from MobSlimeMarkingFollowSkin > MobHumanoidAnyMarking for jewelery
     Tail: MobSlimeMarkingFollowSkinNoAlpha # Aurora's Song | Matches alpha with base to make animal tails seemless.
 #    Wings: MobSlimeMarkingFollowSkin //Need to work on this, Den has a different visual layer composition
     Eyes: MobHumanoidEyes
@@ -43,6 +42,7 @@
     FacialHair:
       points: 1
       required: false
+    # Aurora's Song Start - Buncha new stuff
     Tail:
       points: 1
       required: false
@@ -65,22 +65,17 @@
     Chest:
       points: 4 # imp 1<4
       required: false
-    Genitals:
-      points: 1
-      required: false
-    Nipples:
-      points: 2
-      required: false
     UndergarmentBottom:
       points: 1
       required: false
     UndergarmentTop:
       points: 1
       required: false
-    Arms:
+    # Aurora's Song End
+    Legs:
       points: 8 # Aurora: 4>8
       required: false
-    Legs:
+    Arms:
       points: 8 # Aurora: 4>8
       required: false
 

@@ -4,7 +4,7 @@
     children:
 #    - id: BoxEncryptionKeyCargo # Frontier
 #    - id: BoxFolderQmClipboard # Frontier
-#    - id: BoxQMCircuitboards
+#    - id: BoxQMCircuitboards # Aurora's Song -Upmerge
     - id: BoxQMStamps
 #    - id: CigPackGreen # Frontier
 #      prob: 0.50 # Frontier
@@ -46,10 +46,10 @@
     # - id: SpaceCash1000 # Frontier
     # - id: WeaponDisabler # Frontier
     # - id: ClothingEyesGlassesCommand # Frontier
-    # - id: HeadSkeleton # A skull to accompany your skeleton crew # Frontier
-    #   conditions: # Frontier
-    #   - !type:PlayerCountCondition # Frontier
-    #     max: 15 # Frontier
+    # - id: OrganSkeletonPersonHead # A skull to accompany your skeleton crew # Frontier
+    #   conditions:
+    #   - !type:PlayerCountCondition
+    #     max: 15
 
 # No laser table + Laser table
 - type: entityTable

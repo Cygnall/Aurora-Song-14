@@ -58,8 +58,6 @@
       types:
         Blunt: 5
         Structural: 20
-  - type: Body
-    prototype: Animal
   - type: TypingIndicator
     proto: alien
   - type: ReplacementAccent

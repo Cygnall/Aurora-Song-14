@@ -1,0 +1,65 @@
+- type: entity
+  parent: PlushieLizard
+  id: PlushieCustomEix #Wehening!
+  name: frilled lizard plushie
+  description: Produced by Muta-Gro™ LLC. Ketchup stains not included.
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Ketchup
+        Quantity: 10
+      - ReagentId: Uranium # Added to cause an EMP reaction when grinded with a specific plushie 1/2
+        Quantity: 5
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+        - ReagentId: JuiceThatMakesYouWeh
+          Quantity: 10
+  - type: Speech
+    speechVerb: Reptilian # for pais (In the secret stash)
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: LizardPlushie
+  - type: Tag
+    tags:
+    - Payload
+    - ClothMade
+    - PlushieLizard
+
+- type: entity
+  parent: PlushieLizard
+  id: PlushieCustomNeem #Wehening!
+  name: green kobold plushie
+  description: Small but shockingly dense plu-. Did the lights just flicker?
+  components:
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: Iron # Added to cause an EMP reaction when grinded with a specific plushie
+        Quantity: 5
+      - ReagentId: Aluminium # Added to cause an EMP reaction when grinded with a specific plushie
+        Quantity: 5
+  - type: SolutionContainerManager
+    solutions:
+      food:
+        maxVol: 20
+        reagents:
+        - ReagentId: Fiber
+          Quantity: 10
+        - ReagentId: JuiceThatMakesYouWeh
+          Quantity: 10
+  - type: Speech
+    speechVerb: Reptilian # for pais (In the secret stash)
+  - type: FoodSequenceElement
+    entries:
+      CottonBurger: LizardPlushie
+  - type: Tag
+    tags:
+    - Payload
+    - ClothMade
+    - PlushieLizard

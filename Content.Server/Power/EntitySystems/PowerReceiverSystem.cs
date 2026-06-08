@@ -9,6 +9,7 @@ using Content.Shared.Power.EntitySystems;
 using Content.Shared.Verbs;
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;
+using Content.Shared.Emp; // Frontier: Upstream - #28984
 
 namespace Content.Server.Power.EntitySystems
 {
@@ -34,6 +35,9 @@ namespace Content.Server.Power.EntitySystems
             SubscribeLocalEvent<PowerSwitchComponent, GetVerbsEvent<AlternativeVerb>>(AddSwitchPowerVerb);
 
             SubscribeLocalEvent<ApcPowerReceiverComponent, ComponentGetState>(OnGetState);
+
+            SubscribeLocalEvent<ApcPowerReceiverComponent, EmpPulseEvent>(OnEmpPulse); // Frontier: Upstream - #28984
+            SubscribeLocalEvent<ApcPowerReceiverComponent, EmpDisabledRemovedEvent>(OnEmpEnd); // Frontier: Upstream - #28984
 
             _recQuery = GetEntityQuery<ApcPowerReceiverComponent>();
             _provQuery = GetEntityQuery<ApcPowerProviderComponent>();
@@ -125,7 +129,7 @@ namespace Content.Server.Power.EntitySystems
             {
                 Act = () =>
                 {
-                    TogglePower(uid, user: args.User);
+                    TryTogglePower(uid, user: args.User); // Frontier: Upstream - #28984
                 },
                 Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/Spare/poweronoff.svg.192dpi.png")),
                 Text = Loc.GetString("power-switch-component-toggle-verb"),
@@ -171,6 +175,26 @@ namespace Content.Server.Power.EntitySystems
 
             component = receiver;
             return true;
+        }
+
+        // Frontier: Upstream - #28984
+        private void OnEmpPulse(EntityUid uid, ApcPowerReceiverComponent component, ref EmpPulseEvent args)
+        {
+            if (!component.PowerDisabled)
+            {
+                args.Affected = true;
+                args.Disabled = true;
+                TogglePower(uid, false);
+            }
+        }
+
+        // Frontier: Upstream - #28984
+        private void OnEmpEnd(EntityUid uid, ApcPowerReceiverComponent component, ref EmpDisabledRemovedEvent args)
+        {
+            if (component.PowerDisabled)
+            {
+                TogglePower(uid, false);
+            }
         }
     }
 }

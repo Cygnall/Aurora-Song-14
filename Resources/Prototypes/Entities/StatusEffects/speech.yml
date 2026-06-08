@@ -43,9 +43,10 @@
   - type: OwOAccent
 
 # Causes you to tark rike a dog. Woof!
-- type: entity
-  parent: SpeechStatusEffectBase
-  id: StatusEffectBark
-  name: barkaccent
-  components:
-  - type: BarkAccent
+# Aurora's Song - Disable bark accent
+# - type: entity
+#   parent: SpeechStatusEffectBase
+#   id: StatusEffectBark
+#   name: barkaccent
+#   components:
+#   - type: BarkAccent

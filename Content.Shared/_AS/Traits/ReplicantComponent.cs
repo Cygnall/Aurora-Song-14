@@ -1,3 +1,5 @@
+
+using Content.Shared.Chemistry.Components; // VDS
 using Robust.Shared.GameStates;
 
 namespace Content.Shared._AS.Traits;
@@ -9,4 +11,9 @@ namespace Content.Shared._AS.Traits;
 [RegisterComponent, NetworkedComponent, Access(typeof(ReplicantSystem))]
 public sealed partial class ReplicantComponent : Component
 {
+    /// <summary>
+    /// VDS - The reagent that replaces the synth's blood
+    /// </summary>
+    [DataField]
+    public Solution OxidantReagent = new([new("Oxidant", 300)]);
 }

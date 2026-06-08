@@ -110,3 +110,11 @@
   id: BaseSpeciesVox
   speciesRestriction: [Vox]
   preferredSpecies: [Vox]
+
+- type: marking
+  abstract: true
+  id: BaseSpeciesUndergarmentStandard
+  invertSpeciesRestriction: true
+  speciesRestriction:
+  - Vox
+  - Reptilian

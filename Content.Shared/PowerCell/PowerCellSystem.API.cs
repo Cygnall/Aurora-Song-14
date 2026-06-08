@@ -139,8 +139,7 @@ public sealed partial class PowerCellSystem
     {
         // Frontier start - Mixed Power Recievers
         if (HasComp<MixedPowerReceiverComponent>(ent.Owner) &&
-            TryComp<SharedApcPowerReceiverComponent>(ent.Owner, out var apcPowerComp) &&
-            _powerSystem.IsPowered((ent.Owner, apcPowerComp)))
+            _powerSystem.IsPowered(ent.Owner)) // Aurora's Song - Use power system directly
         {
             return true;
         }
@@ -187,8 +186,7 @@ public sealed partial class PowerCellSystem
     {
         // Frontier start - Mixed Power Recievers
         if (HasComp<MixedPowerReceiverComponent>(ent.Owner) &&
-            TryComp<SharedApcPowerReceiverComponent>(ent.Owner, out var apcPowerComp) &&
-            _powerSystem.IsPowered((ent.Owner, apcPowerComp)))
+            _powerSystem.IsPowered(ent.Owner)) // Aurora's Song - Use power system directly
         {
             return true;
         }

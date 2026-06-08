@@ -1,27 +1,34 @@
 # Tier 1 generic playtime. 12 hours, 2 full shifts.
 - type: loadoutEffectGroup
   id: ContractorT1
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:OverallPlaytimeRequirement
-      time: 43200 # 12 hrs
+  # Start Aurora Song: Remove playtime requirement
+  effects: []
+  # - !type:JobRequirementLoadoutEffect
+  #   requirement:
+  #     !type:OverallPlaytimeRequirement
+  #     time: 43200 # 12 hrs
+  # End Aurora Song
 
 # Tier 2 generic playtime. 30 hours, 5 full shifts.
 - type: loadoutEffectGroup
   id: ContractorT2
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:OverallPlaytimeRequirement
-      time: 108000 # 30 hrs
-      
+  # Start Aurora Song: Remove playtime requirement
+  effects: []
+  # - !type:JobRequirementLoadoutEffect
+  #   requirement:
+  #     !type:OverallPlaytimeRequirement
+  #     time: 108000 # 30 hrs
+  # End Aurora Song
+
 # Tier 3 generic playtime. 50 hours, 8+ full shifts. Premium toy rewards.
 - type: loadoutEffectGroup
   id: ContractorT3
-  effects:
-  - !type:JobRequirementLoadoutEffect
-    requirement:
-      !type:OverallPlaytimeRequirement
-      time: 180000 # 50 hrs
+  # Start Aurora Song: Remove playtime requirement
+  effects: []
+  # - !type:JobRequirementLoadoutEffect
+  #   requirement:
+  #     !type:OverallPlaytimeRequirement
+  #     time: 180000 # 50 hrs
+  # End Aurora Song
 
+# Aurora Song comment: yo mama luigi

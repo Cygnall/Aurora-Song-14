@@ -1414,6 +1414,11 @@
   flavorType: Complex
   description: flavor-complex-compressed-meat
 
+- type: flavor # imp
+  id: street-food
+  flavorType: Complex
+  description: flavor-complex-street-food
+
 - type: flavor
   id: caipirinha
   flavorType: Complex

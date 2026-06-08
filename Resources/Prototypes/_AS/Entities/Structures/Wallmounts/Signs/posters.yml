@@ -137,3 +137,14 @@
   - type: Sprite
     sprite: _AS/Structures/Wallmounts/posters.rsi
     state: as_poster_iac_logo9
+
+#region Iverian Heavy Shipyards
+- type: entity
+  parent: PosterBase
+  id: ASPosterLegitIHSLogo
+  name: "Iverian Heavy Shipyards"
+  description: "For you. For us. For all."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/posters.rsi
+    state: as_poster_ihs_logo

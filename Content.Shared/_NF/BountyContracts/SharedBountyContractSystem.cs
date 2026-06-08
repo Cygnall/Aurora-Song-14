@@ -1,3 +1,4 @@
+using Content.Shared._AS.BountyContracts.Prototypes; // Aurora Song
 using Content.Shared.CartridgeLoader;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -5,6 +6,7 @@ using Robust.Shared.Serialization;
 namespace Content.Shared._NF.BountyContracts;
 
 [Serializable, NetSerializable]
+[Obsolete("Use BountyContractCategoryPrototype instead.")] // Aurora Song
 public enum BountyContractCategory : byte
 {
     Criminal,
@@ -15,6 +17,7 @@ public enum BountyContractCategory : byte
 }
 
 [Serializable, NetSerializable]
+[Obsolete("Use BountyContractCategoryPrototype instead.")] // Aurora Song
 public struct BountyContractCategoryMeta
 {
     public string Name;
@@ -48,7 +51,8 @@ public struct BountyContractTargetInfo
 public struct BountyContractRequest
 {
     public ProtoId<BountyContractCollectionPrototype> Collection;
-    public BountyContractCategory Category;
+    // public BountyContractCategory Category; // Aurora Song - commented out
+    public ProtoId<BountyContractCategoryPrototype> Category; // Aurora Song
     public string Name;
     public string? DNA;
     public string Vessel;
@@ -60,7 +64,8 @@ public struct BountyContractRequest
 public sealed class BountyContract
 {
     public readonly uint ContractId;
-    public readonly BountyContractCategory Category;
+    // public readonly BountyContractCategory Category; // Aurora Song - commented out
+    public ProtoId<BountyContractCategoryPrototype> Category; // Aurora Song
     public readonly string Name;
     public readonly int Reward;
     public readonly NetEntity AuthorUid;
@@ -69,8 +74,18 @@ public sealed class BountyContract
     public readonly string? Description;
     public readonly string? Author;
 
-    public BountyContract(uint contractId, BountyContractCategory category, string name,
-        int reward, NetEntity authorUid, string? dna, string? vessel, string? description, string? author)
+    // start Aurora Song: collapse this into separate lines
+    public BountyContract(uint contractId,
+        // BountyContractCategory category, // Aurora Song - commented out
+        ProtoId<BountyContractCategoryPrototype> category, // Aurora Song
+        string name,
+        int reward,
+        NetEntity authorUid,
+        string? dna,
+        string? vessel,
+        string? description,
+        string? author)
+    // end Aurora Song
     {
         ContractId = contractId;
         Category = category;
@@ -153,8 +168,10 @@ public abstract class SharedBountyContractSystem : EntitySystem
     public const int MaxVesselLength = 32;
     public const int MaxDescriptionLength = 256;
     public const int DefaultReward = 5000;
+    public static readonly ProtoId<BountyContractCategoryPrototype> FallbackCategory = "Other"; // Aurora Song
 
     // TODO: move this to prototypes?
+    [Obsolete("Use BountyContractCategoryPrototype instead.")] // Aurora Song
     public static readonly Dictionary<BountyContractCategory, BountyContractCategoryMeta> CategoriesMeta = new()
     {
         [BountyContractCategory.Criminal] = new BountyContractCategoryMeta

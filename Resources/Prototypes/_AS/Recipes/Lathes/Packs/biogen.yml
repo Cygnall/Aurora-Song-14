@@ -1,0 +1,15 @@
+- type: latheRecipePack
+  id: ASBioGenMaterialsStatic
+  recipes:
+  - ASBioGenMeatSheet
+
+- type: latheRecipePack
+  id: ASBioGenAnimalCubesStatic
+  recipes:
+  - ASBioGenTreeCube
+  - ASBioGenTreeSnowyCube
+  - ASBioGenTreeConiferCube
+  - ASBioGenTreeLargeCube
+  - ASBioGenTreeShadowCube
+  - ASBioGenTreeLightCube
+  - ASBioGenPompomCube

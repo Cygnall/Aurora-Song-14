@@ -20,14 +20,11 @@ public sealed partial class TriggerSystem
     [Dependency] private readonly GibbingSystem _gibbing = default!;
     [Dependency] private readonly SharedStationSystem _station = default!;
     [Dependency] private readonly InventorySystem _inventory = default!;
-    [Dependency] private readonly SharedBodySystem _body = default!;
 
 
     private void NFInitialize()
     {
-        SubscribeLocalEvent<GibOnTriggerComponent, TriggerEvent>(HandleGibTrigger);
-        SubscribeLocalEvent<TriggerOnBeingGibbedComponent, BeingGibbedEvent>(OnBeingGibbed);
-        SubscribeLocalEvent<TriggerOnBeingGibbedComponent, ImplantRelayEvent<BeingGibbedEvent>>(OnBeingGibbedRelay);
+        SubscribeLocalEvent<TriggerOnBeingGibbedComponent, BeingGibbedEvent>(OnBeingGibbed); // Aurora's Song - No longer triggers
         SubscribeLocalEvent<TriggerOnInteractionPopupUseComponent, InteractionPopupOnUseFailureEvent>(OnPopupInteractionFailure);
         SubscribeLocalEvent<TriggerOnInteractionPopupUseComponent, InteractionPopupOnUseSuccessEvent>(OnPopupInteractionSuccess);
 
@@ -35,46 +32,25 @@ public sealed partial class TriggerSystem
         SubscribeLocalEvent<TriggerOnProjectileHitComponent, ProjectileHitEvent>(OnProjectileHitEvent);
     }
 
-    private void HandleGibTrigger(EntityUid uid, GibOnTriggerComponent component, TriggerEvent args)
+    // Aurora's Song - Allow GibOnTrigger to overwrite subsequent gibbing
+    private void OnBeingGibbed(EntityUid uid, TriggerOnBeingGibbedComponent component,  ref BeingGibbedEvent args)
     {
-        EntityUid ent;
-        if (component.UseArgumentEntity)
-        {
-            ent = uid;
-        }
-        else
-        {
-            if (!TryComp(uid, out TransformComponent? xform))
-                return;
-            ent = xform.ParentUid;
-        }
+        if (!TryComp<GibOnTriggerComponent>(uid, out var comp))
+            return;
 
-        if (component.DeleteItems)
+        if (comp.DeleteItems)
         {
-            var items = _inventory.GetHandOrInventoryEntities(ent);
+            var items = _inventory.GetHandOrInventoryEntities(uid);
             foreach (var item in items)
             {
                 PredictedQueueDel(item);
             }
         }
 
-        if (component.Gib)
-            _gibbing.Gib(ent);
-        args.Handled = true;
-    }
-
-    private void OnBeingGibbed(EntityUid uid, TriggerOnBeingGibbedComponent component,  ref BeingGibbedEvent args)
-    {
-        // Aurora's Song - This *sucks* but seems to be the only reliable way to not cause testing errors
-        if (TryComp<GibOnTriggerComponent>(uid, out var comp))
+        if (args.dropGiblets) // Make sure we don't drop giblets when we're not supposed to from the original gib
+        {
             args.dropGiblets = !comp.DeleteOrgans;
-
-        Trigger(uid);
-    }
-
-    private void OnBeingGibbedRelay(EntityUid uid, TriggerOnBeingGibbedComponent component, ref ImplantRelayEvent<BeingGibbedEvent> args)
-    {
-        Trigger(uid);
+        }
     }
 
     private void OnPopupInteractionFailure(EntityUid uid, TriggerOnInteractionPopupUseComponent component, InteractionPopupOnUseFailureEvent args)

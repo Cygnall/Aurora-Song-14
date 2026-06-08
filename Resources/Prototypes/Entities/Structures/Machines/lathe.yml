@@ -154,6 +154,7 @@
     - ASBlueMagentaColorFlashlights # Aurora
     - SexAS # Aurora
     - ASBlueMagentaLights # Aurora
+    - ConsentProjectors # Aurora
   - type: EmagLatheRecipes
     emagStaticPacks:
     - NfsdAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic
@@ -675,6 +676,8 @@
     - NFBioGenSeedsMedicalStatic # Frontier
     - NFBioGenSoil # Frontier
     - NFBioGenAnimalCubesStatic #Frontier
+    - ASBioGenMaterialsStatic # Aurora's Song
+    - ASBioGenAnimalCubesStatic # Aurora's Song
   - type: EmagLatheRecipes
     emagStaticPacks:
     - BioGenEmagStatic
@@ -819,6 +822,7 @@
     - NFFloorsMiscStatic # Frontier
     - NFFloorTiles # Frontier
     - NFFloorTilesCarpet # Frontier
+    - CorvaxWoodTiles # Aurora's Song
     dynamicPacks:
     - FauxTiles
   - type: EmagLatheRecipes # Frontier

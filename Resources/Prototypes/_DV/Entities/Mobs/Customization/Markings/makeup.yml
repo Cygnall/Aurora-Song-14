@@ -17,6 +17,7 @@
   bodyPart: Head
   markingCategory: Overlay
   speciesRestriction: [SlimePerson]
+  forcedColoring: true # Aurora's Song
   coloring:
     default:
       type:
@@ -45,6 +46,7 @@
   bodyPart: Head
   markingCategory: Overlay
   speciesRestriction: [SlimePerson]
+  forcedColoring: true # Aurora's Song
   coloring:
     default:
       type:

@@ -6,7 +6,7 @@
   sprites: MobReptilianSprites
   defaultSkinTone: "#34a223"
   markingLimits: MobReptilianMarkingLimits
-  dollPrototype: MobReptilianDummy
+  dollPrototype: AppearanceReptilian
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   maleFirstNames: NamesReptilianMale
   femaleFirstNames: NamesReptilianFemale
@@ -16,6 +16,7 @@
   id: MobReptilianSprites
   sprites:
     Head: MobReptilianHead
+    Hair: MobHumanoidAnyMarking # Aurora's Song - Hair just so they can have a lil more customization
     Snout: MobHumanoidAnyMarking
     UndergarmentTop: MobHumanoidAnyMarking
     UndergarmentBottom: MobHumanoidAnyMarking
@@ -35,13 +36,13 @@
 
 - type: markingPoints
   id: MobReptilianMarkingLimits
-  onlyWhitelisted: true
+  onlyWhitelisted: false # Aurora's Song - Hair just so they can have a lil more customization
   points:
     Hair:
-      points: 0
+      points: 1 # Aurora's Song - Hair just so they can have a lil more customization
       required: false
     FacialHair:
-      points: 0
+      points: 1 # Aurora's Song - Hair just so they can have a lil more customization
       required: false
     Tail:
       points: 1

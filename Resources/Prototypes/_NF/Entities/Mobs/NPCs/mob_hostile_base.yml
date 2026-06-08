@@ -437,7 +437,8 @@
   - MobBloodstream
   - MobFlammable
   - MobEnhancedMovement
-  - BaseMobSpecies
+  - AppearanceHuman # Aurora's Song
+  - BaseSpeciesMob # Aurora's Song - BaseMobSpecies>BaseSpeciesMob
   - MobHumanoidHostileAIComplex
   - BaseC3MobHuman
   - NFBaseMobRestrictions
@@ -623,5 +624,6 @@
   - type: GibOnTrigger
     deleteItems: true
     deleteOrgans: true
-    gib: false
-    useArgumentEntity: true
+  # Aurora's Song - Remove old NF trigger
+  #   gib: false
+  #   useArgumentEntity: true

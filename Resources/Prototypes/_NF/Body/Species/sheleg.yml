@@ -1,0 +1,316 @@
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceSheleg
+  name: sheleg appearance
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganShelegTorso
+        - id: OrganShelegHead
+        - id: OrganShelegArmLeft
+        - id: OrganShelegArmRight
+        - id: OrganShelegHandRight
+        - id: OrganShelegHandLeft
+        - id: OrganShelegLegLeft
+        - id: OrganShelegLegRight
+        - id: OrganShelegFootLeft
+        - id: OrganShelegFootRight
+        - id: OrganShelegBrain
+        - id: OrganShelegEyes
+        - id: OrganShelegTongue
+        - id: OrganShelegAppendix
+        - id: OrganShelegEars
+        - id: OrganShelegLungs
+        - id: OrganShelegHeart
+        - id: OrganShelegStomach
+        - id: OrganShelegLiver
+        - id: OrganShelegKidneys
+  - type: Sprite
+    scale: 1.15, 1.2 # tall but dont make it too thin or its going to look bad
+  - type: HumanoidAppearance
+    species: Sheleg
+    hideLayersOnEquip:
+    - Hair
+    - HeadTop
+    - Snout # Nose, tusks
+
+- type: entity
+  save: false
+  name: Urist McIce
+  parent:
+  - AppearanceSheleg
+  - BaseSpeciesMobOrganic
+  id: MobSheleg
+  components:
+  - type: Hunger
+    baseDecayRate: 0.0165 # Baseline 0.0200;
+  - type: Thirst
+    baseDecayRate: 0.15
+  - type: Damageable
+    damageModifierSet: Sheleg
+  - type: Speech
+    speechSounds: Sheleg
+    speechVerb: Sheleg
+#    allowedEmotes: [ 'Belch' ]
+  - type: TypingIndicator
+    proto: sheleg
+  - type: Butcherable
+    butcheringType: Spike
+    spawned:
+    - id: FoodMeatSheleg
+      amount: 5
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Cryoxadone
+        Quantity: 300
+  - type: MeleeWeapon
+    soundHit:
+      collection: Punch
+    animation: WeaponArcPunch
+    damage:
+      types:
+        Blunt: 3
+        Cold: 2
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 1
+  - type: ScandinavianAccent
+  - type: Vocal
+    sounds:
+      Male: UnisexSheleg
+      Female: UnisexSheleg
+      Unsexed: UnisexSheleg
+  - type: DamageVisuals
+    thresholds: [ 10, 20, 30, 50, 70, 100 ]
+    targetLayers:
+    - "enum.HumanoidVisualLayers.Chest"
+    - "enum.HumanoidVisualLayers.Head"
+    - "enum.HumanoidVisualLayers.LArm"
+    - "enum.HumanoidVisualLayers.LLeg"
+    - "enum.HumanoidVisualLayers.RArm"
+    - "enum.HumanoidVisualLayers.RLeg"
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#16297e"
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+  - type: SlowOnDamage # The pain resist is high but not gone
+    speedModifierThresholds:
+      60: 0.9
+      80: 0.7
+  - type: Reactive
+    groups:
+      Flammable: [ Touch ]
+      Extinguish: [ Touch ]
+    reactions:
+    - reagents: [ Water, SpaceCleaner, SoapReagent ]
+      methods: [ Touch ]
+      effects:
+      - !type:WashCreamPie # Aurora's Song - WashCreamPieReaction>WashCreamPie
+    - reagents: [ Potassium ]
+      methods: [ Touch ]
+      effects:
+      - !type:Emote
+        emote: Scream
+        probability: 0.2
+      - !type:PopupMessage
+        type: Local
+        visualType: Large
+        messages: [ "barozine-effect-skin-burning" ]
+        probability: 0.33
+      - !type:Jitter
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.40
+        density: 180
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Flammable # Ice skin, we cannot lower the firestacks as it will make them too powerfull to lava and other fires, but we should make it fade faster
+    firestackFade: -0.2 # 2 times faster fade
+  - type: Temperature # Aurora's Song - Move temp out of TemperatureDamage
+    currentTemperature: 100 # Opporozidone is 150
+    specificHeat: 42
+  - type: TemperatureDamage # TODO: Balance # Aurora's Song - Temperature>TemperatureDamage
+    heatDamageThreshold: 273.15
+    coldDamageThreshold: 0
+    heatDamage:
+      types:
+        Heat : 10 #per second, scales with temperature & other constants
+  - type: ThermalRegulator
+    metabolismHeat: 800
+    radiatedHeat: 100
+    implicitHeatRegulation: 500
+    sweatHeatRegulation: 2000
+    shiveringHeatRegulation: 0
+    normalBodyTemperature: 100.00 # Opporozidone is 150
+    thermalRegulationTemperatureThreshold: 2
+  - type: TemperatureSpeed
+    thresholds: # What did you think they will go slower?
+      293: 1.0
+      280: 1.0
+  - type: PassiveDamage
+    allowedStates:
+    - Alive
+    damageCap: 100
+    damage:
+      types:
+        Heat: -0.025
+  - type: BlockInjection
+    blockHypospray: true
+    blockInjectOnProjectile: true
+  - type: InventorySlotFriction
+  - type: AutoToggleableOuterClothing
+
+- type: entity
+  parent: OrganBase
+  id: OrganSheleg
+  abstract: true
+  suffix: Sheleg
+
+- type: entity
+  id: OrganShelegMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Sheleg ]
+
+- type: entity
+  parent: OrganSheleg
+  id: OrganShelegInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _NF/Mobs/Species/Sheleg/organs.rsi
+
+- type: entity
+  parent: OrganSheleg
+  id: OrganShelegExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _NF/Mobs/Species/Sheleg/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganShelegExternal ]
+  id: OrganShelegTorso
+
+- type: entity
+  parent: [ OrganBaseHead, OrganShelegExternal ]
+  id: OrganShelegHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganShelegExternal ]
+  id: OrganShelegArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganShelegExternal ]
+  id: OrganShelegArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganShelegExternal ]
+  id: OrganShelegHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganShelegExternal ]
+  id: OrganShelegHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganShelegExternal ]
+  id: OrganShelegLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganShelegExternal ]
+  id: OrganShelegLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganShelegExternal ]
+  id: OrganShelegFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganShelegExternal ]
+  id: OrganShelegFootRight
+
+- type: entity
+  parent: [ OrganBaseBrain, OrganShelegInternal ]
+  id: OrganShelegBrain
+
+- type: entity
+  parent: [ OrganBaseEyes, OrganShelegInternal ]
+  id: OrganShelegEyes
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganShelegInternal ]
+  id: OrganShelegTongue
+
+- type: entity
+  parent: [ OrganBaseAppendix, OrganShelegInternal ]
+  id: OrganShelegAppendix
+
+- type: entity
+  parent: [ OrganBaseEars, OrganShelegInternal ]
+  id: OrganShelegEars
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganShelegInternal, OrganShelegMetabolizer ]
+  id: OrganShelegLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganShelegInternal, OrganShelegMetabolizer ]
+  id: OrganShelegHeart
+  components:
+  - type: Metabolizer
+    groups:
+    - id: Sheleg
+      rateModifier: 0.20
+      scaleModifier: 5 # Aurora: Fix sheleg chems
+    - id: Cryogenic
+      rateModifier: 0.20
+      scaleModifier: 5 # Aurora: Fix sheleg chems
+    - id: Poison
+      rateModifier: 0.20
+      scaleModifier: 5 # Aurora: Fix sheleg chems
+    - id: Narcotic
+      rateModifier: 0.20
+      scaleModifier: 5 # Aurora: Fix sheleg chems
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganShelegInternal, OrganShelegMetabolizer ]
+  id: OrganShelegStomach
+  components:
+  - type: Metabolizer
+    groups:
+    - id: Food
+      rateModifier: 0.25
+    - id: Drink
+      rateModifier: 1.50
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganShelegInternal, OrganShelegMetabolizer ]
+  id: OrganShelegLiver
+  components:
+  - type: Metabolizer
+    groups:
+    - id: Alcohol
+      rateModifier: 0.1 # removes alcohol very slowly along with the stomach removing it as a drink
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganShelegInternal, OrganShelegMetabolizer ]
+  id: OrganShelegKidneys

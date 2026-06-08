@@ -80,22 +80,29 @@ public abstract partial class SharedPseudoItemSystem : EntitySystem
         if (!CheckItemFits((toInsert, component), (storageUid, storage)))
             return false;
 
-        var itemComp = new ItemComponent
-        {
-            Size = component.Size,
-            Shape = component.Shape,
-            StoredOffset = component.StoredOffset,
-            StoredRotation = component.StoredRotation
-        }; // Frontier: added StoredRotation
-        AddComp(toInsert, itemComp);
-        _item.VisualsChanged(toInsert);
+        // Aurora's Song - only add the temporary item component if there isn't one already
+        var hasItemComponent = TryComp<ItemComponent>(toInsert, out var itemComp);
+        if (!hasItemComponent) {
+            itemComp = new ItemComponent
+            {
+                Size = component.Size,
+                Shape = component.Shape,
+                StoredOffset = component.StoredOffset,
+                StoredRotation = component.StoredRotation
+            }; // Frontier: added StoredRotation
+            component.AddedItemComponent = true; // Aurora's Song - keep track of whether the temporary item component was used
+            AddComp(toInsert, itemComp);
+        }
 
+        _item.VisualsChanged(toInsert);
         _tag.TryAddTag(toInsert, _preventTag);
 
         if (!_storage.Insert(storageUid, toInsert, out _, null, storage))
         {
             component.Active = false;
-            RemComp<ItemComponent>(toInsert);
+            if (component.AddedItemComponent) // Aurora's Song - we only remove the ItemComponent if we added one
+                RemComp<ItemComponent>(toInsert);
+            component.AddedItemComponent = false;
             return false;
         }
 
@@ -112,16 +119,19 @@ public abstract partial class SharedPseudoItemSystem : EntitySystem
         if (!component.Active)
             return;
 
-        RemComp<ItemComponent>(uid);
-        component.Active = false;
+        // Aurora's Song - only remove the item component if a temporary one was added
+        if (component.AddedItemComponent)
+            RemComp<ItemComponent>(uid);
 
+        component.AddedItemComponent = false;
+        component.Active = false;
         _actions.RemoveAction(uid, component.SleepAction); // Remove sleep action if it was added
     }
 
     protected virtual void OnGettingPickedUpAttempt(EntityUid uid, PseudoItemComponent component,
         GettingPickedUpAttemptEvent args)
     {
-        if (args.User == args.Item)
+        if (args.User == args.Item || !component.Active) // Aurora's Song - only block when actually using the pseudo-item system
             return;
 
         _transform.AttachToGridOrMap(uid);

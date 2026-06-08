@@ -16,14 +16,14 @@
 
 # Ingots
 - type: stack
-  parent: BaseMediumStack
+  parent: BaseVeryLargeStack # Aurora's Song BaseMediumStack>BaseVeryLargeStack
   id: Gold
   name: stack-gold
   icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: gold }
   spawn: IngotGold1
 
 - type: stack
-  parent: BaseMediumStack
+  parent: BaseVeryLargeStack # Aurora's Song BaseMediumStack>BaseVeryLargeStack
   id: Silver
   name: stack-silver
   icon: { sprite: "/Textures/Objects/Materials/ingots.rsi", state: silver }

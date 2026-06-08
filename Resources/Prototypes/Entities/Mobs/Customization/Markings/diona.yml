@@ -1,58 +1,42 @@
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaThornsHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: thorns_head
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaThornsBody
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: thorns_body
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaFlowersHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: flowers_head
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: Split "flowers_head" in two
+    state: flowers_head_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: flowers_head_secondary
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaFlowersBody
   bodyPart: Chest
   markingCategory: Chest
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: flowers_body
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: Split "flowers_body" in two
+    state: flowers_body_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: flowers_body_secondary
 
 - type: marking
   id: DionaLeafCover
@@ -64,22 +48,19 @@
       type:
         !type:SkinColoring
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: leaf_cover
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaBloomHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: bloom
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: Split "bloom" in two
+    state: bloom_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: bloom_secondary
 
 - type: marking
   id: DionaBracketHead
@@ -89,10 +70,9 @@
   coloring:
     default:
       type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+        !type:EyeColoring # Imp: "!type:SimpleColoring" < "!type:EyeColoring"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: bracket
 
 - type: marking
@@ -105,299 +85,260 @@
       type:
         !type:SkinColoring
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: brush
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaCornflowerHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "cornflower" into three
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: cornflower
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: cornflower_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: cornflower_secondary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: cornflower_flowers
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaFicusHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: ficus
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaGarlandHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "garland" into five
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: garland
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: garland_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: garland_secondary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: garland_flowers1
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: garland_flowers2
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: garland_flowers3
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaKingHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: king
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "garland" into five
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: king_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: king_secondary
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaLaurelHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: laurel
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaLeafyHeadTop
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: leafy
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaLotusHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "lotus" into two
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: lotus
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: lotus_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: lotus_secondary
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaMeadowHeadTop
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: meadow
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaOakHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: oak
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaPalmHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: palm
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaRootHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: root
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaRoseHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "rose" into two
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: rose
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: rose_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: rose_secondary
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaRoseyHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "rosey" into three
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: rosey
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: rosey_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: rosey_secondary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: rosey_flowers
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaShrubHeadTop
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: shrub
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaSpinnerHeadSide
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "spinner" into two
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: spinner
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: spinner_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: spinner_secondary
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaSproutHeadSide
   bodyPart: HeadSide
   markingCategory: HeadSide
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "sprout" into two
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: sprout
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: sprout_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: sprout_secondary
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaVineHeadTop
   bodyPart: HeadTop
   markingCategory: HeadTop
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "vine" into two
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: vine
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: vine_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: vine_secondary
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaVinelHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "vine1" into two
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: vinel
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: vinel_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: vinel_secondary
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaVinesHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "vines" into two
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: vines
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: vines_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: vines_secondary
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaWildflowerHead
   bodyPart: Head
   markingCategory: Head
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-          color: "#FFFFFF"
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
-    state: wildflower
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: wildflower_primary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: wildflower_secondary
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: wildflower_flowers1
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: wildflower_flowers2
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: wildflower_flowers3
+  - sprite: _Impstation/Mobs/Customization/diona.rsi
+    state: wildflower_flowers4
+# End Imp
 
-- type: marking
+- type: marking # Imp: Removed !type:SimpleColoring
   id: DionaVineOverlay
   bodyPart: LLeg
   markingCategory: Overlay
   speciesRestriction: [Diona]
-  coloring:
-    default:
-      type:
-        !type:SimpleColoring
-        color: "#5f7039"
   sprites:
-  - sprite: Mobs/Customization/diona.rsi
+  - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: overlay

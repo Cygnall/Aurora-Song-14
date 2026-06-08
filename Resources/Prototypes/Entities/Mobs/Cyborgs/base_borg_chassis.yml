@@ -549,7 +549,7 @@
     guides:
     - Cyborgs
     - Robotics
-    - Xenoborgs
+    # - Xenoborgs - Aurora's Song - Irrelevant, linter fails if I don't comment this out.
   - type: Access
     tags:
     - Xenoborg

@@ -1,0 +1,221 @@
+﻿- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceFairy
+  name: Fairy appearance
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganHumanTorso
+        - id: OrganHumanHead
+        - id: OrganHumanArmLeft
+        - id: OrganHumanArmRight
+        - id: OrganHumanHandRight
+        - id: OrganHumanHandLeft
+        - id: OrganHumanLegLeft
+        - id: OrganHumanLegRight
+        - id: OrganHumanFootLeft
+        - id: OrganHumanFootRight
+        - id: OrganHumanBrain
+        - id: OrganHumanEyes
+        - id: OrganHumanTongue
+        - id: OrganHumanAppendix
+        - id: OrganHumanEars
+        - id: OrganFairyLungs
+        - id: OrganFairyHeart
+        - id: OrganFairyStomach
+        - id: OrganFairyLiver
+        - id: OrganFairyKidneys
+  - type: HumanoidAppearance
+    species: Fairy
+
+- type: entity
+  id: MobFairy
+  parent:
+  - AppearanceFairy
+  - BaseSpeciesMobOrganic
+  name: Urist McFairy
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      75: Dead
+  - type: SizeAttribute
+    short: true
+  - type: Speech
+    speechSounds: Fairy
+    speechVerb: Fairy
+    allowedEmotes: ['FairyFlutter', 'FairyGlimmer']
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.20
+        density: 50
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      30: 0.7
+      40: 0.5
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 10
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: FairyBlood
+        Quantity: 50
+  - type: Item # fairies are like mice, you can pick them up quickly and store them in a lot of places
+    size: Small
+    heldPrefix: 0
+  - type: PseudoItem # fairies retain PseudoItem so they get all the regular storage behaviors
+    size: "Small"
+    shape:
+    - 0,1,0,0
+  - type: Vocal
+    sounds:
+      Male: FairySpeech
+      Female: FairySpeech
+      Unsexed: FairySpeech
+  - type: FaxableObject
+    insertingState: inserting_mouse
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+      - Mouse
+  - type: AlwaysTriggerMousetrap
+  - type: Carriable # Frontier: Carrying system from nyanotrasen.
+    # Aurora's Song: disables being picked up without having to reparent from human
+    # TODO: after nubody do a more sane solution
+    freeHandsRequired: 10
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatHuman
+      amount: 3
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - CanPilot
+    - FootstepSound
+    - AnomalyHost
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 1
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 3.5
+  - type: PointLight
+    enabled: true
+    radius: 2
+    energy: 10
+
+- type: entity
+  parent: OrganBase
+  id: OrganFairy
+  abstract: true
+  suffix: Fairy
+
+- type: entity
+  id: OrganFairyMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Human, Fairy ]
+
+- type: entity
+  parent: OrganFairy
+  id: OrganFairyInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Arachnid/organs.rsi
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganFairyInternal, OrganFairyMetabolizer ]
+  id: OrganFairyLungs
+  components:
+  - type: Metabolizer
+    groups:
+    - id: Gas
+      rateModifier: 50.0
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganFairyInternal, OrganFairyMetabolizer ]
+  id: OrganFairyHeart
+  components:
+  - type: Metabolizer
+    updateInterval: 1.5
+    groups:
+    - id: Medicine
+      rateModifier: 0.2
+      scaleModifier: 5
+    - id: Cryogenic
+      rateModifier: 0.2
+      scaleModifier: 5
+    - id: Poison
+      rateModifier: 0.2
+      scaleModifier: 5 # Stop infinite fairy chems fr, also make them weak to poisons
+    - id: Narcotic
+      scaleModifier: 5 # because low rate mods stop narcotics from accumulating correctly presently, scale only. Also makes things like tear gas and noct hit them harder
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganFairyInternal, OrganFairyMetabolizer ]
+  id: OrganFairyStomach
+  components:
+  - type: SolutionContainerManager
+    solutions:
+      stomach:
+        maxVol: 30
+# Aurora's Song - edible, grindable organs
+      food:
+        maxVol: 5
+        reagents:
+        - ReagentId: UncookedAnimalProteins
+          Quantity: 5
+# Aurora's Song edit ends
+  - type: Metabolizer
+    updateInterval: 1.5
+    groups:
+    - id: Food
+      rateModifier: 0.1
+      scaleModifier: 4
+    - id: Drink
+      rateModifier: 0.1
+      scaleModifier: 4
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganFairy, OrganHumanInternal, OrganFairyMetabolizer ]
+  id: OrganFairyLiver
+  components:
+  - type: Metabolizer
+    updateInterval: 1.5
+    groups:
+    - id: Alcohol
+      rateModifier: 0.5 # removes alcohol very slowly along with the stomach removing it as a drink
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganFairy, OrganHumanInternal, OrganFairyMetabolizer ]
+  id: OrganFairyKidneys
+  components:
+  - type: Metabolizer
+    updateInterval: 1.5

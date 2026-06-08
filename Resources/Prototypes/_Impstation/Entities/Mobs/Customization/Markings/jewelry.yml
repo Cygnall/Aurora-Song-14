@@ -1,0 +1,135 @@
+- type: marking
+  parent: [BaseChest]   # Aurora's Song
+  id: ChestNecklace
+  bodyPart: Chest
+  markingCategory: Chest
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: chest_necklace
+
+- type: marking
+  parent: [BaseSpeciesEyesStandard]   # Aurora's Song
+  id: HeadEarrings
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: head_earrings1
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: head_earrings2
+
+- type: marking
+  parent: [BaseSpeciesEyesStandard]   # Aurora's Song
+  id: HeadEarringsDrop
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: head_earrings_drop1
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: head_earrings_drop2
+
+- type: marking
+  parent: [BaseSpeciesEyesStandard]   # Aurora's Song
+  id: HeadEarringsWeights
+  bodyPart: HeadSide
+  markingCategory: HeadSide
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: head_earrings_weights1
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: head_earrings_weights2
+
+- type: marking
+  parent: [BaseSpeciesEyesStandard]   # Aurora's Song
+  id: HeadSeptum
+  bodyPart: Snout
+  markingCategory: Snout
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: head_septum
+
+- type: marking
+  parent: [BaseArmsCyberlimb]   # Aurora's Song - This is a slightly silly way to do this, but this allows IPCs to have jewelry
+  id: HandBraceletLeft
+  bodyPart: LHand
+  markingCategory: Arms
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: l_hand_bracelet
+
+- type: marking
+  parent: [BaseArmsCyberlimb]   # Aurora's Song
+  id: HandBraceletRight
+  bodyPart: RHand
+  markingCategory: Arms
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: r_hand_bracelet
+
+- type: marking
+  parent: [BaseArmsCyberlimb]   # Aurora's Song
+  id: HandRingsLeft
+  bodyPart: LHand
+  markingCategory: Arms
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: l_hand_rings1
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: l_hand_rings2
+
+- type: marking
+  parent: [BaseArmsCyberlimb]   # Aurora's Song
+  id: HandRingsRight
+  bodyPart: RHand
+  markingCategory: Arms
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: r_hand_rings1
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: r_hand_rings2

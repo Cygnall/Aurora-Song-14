@@ -1,3 +1,4 @@
+using Content.Shared._AS.BountyContracts.Prototypes; // Aurora Song
 using Content.Shared.Access;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
@@ -37,7 +38,7 @@ public sealed partial class BountyContractCollectionPrototype : IPrototype
     /// Localized name to describe the bounty contract type.
     /// </summary>
     [DataField]
-    public List<BountyContractCategory> Categories { get; private set; } = new();
+    public List<ProtoId<BountyContractCategoryPrototype>> Categories { get; private set; } = new(); // Aurora Song - use prototype
 
     /// <summary>
     /// Access levels required to post to this contract type.

@@ -16,6 +16,8 @@
   - ExteriorLightTube
   - LedLightBulb
   - LedLightTube
+  - DimLightBulb    # Aurora's Song
+  - WarmLightBulb   # Aurora's Song
 
 - type: latheRecipePack
   id: NFBasicToolsStatic

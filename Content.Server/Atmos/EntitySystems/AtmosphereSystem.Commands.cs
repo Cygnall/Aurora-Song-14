@@ -68,7 +68,7 @@ public sealed partial class AtmosphereSystem
     /// <remarks>Please be responsible with this method. Used only by tests and fixgridatmos.</remarks>
     public void RebuildGridAtmosphere(Entity<GridAtmosphereComponent, MapGridComponent> ent)
     {
-        var mixtures = new GasMixture[13]; // Add one per added array. // Frontier:9<13
+        var mixtures = new GasMixture[15]; // Add one per added array. // Frontier:9<13 // AS: 13<15
         for (var i = 0; i < mixtures.Length; i++)
         {
             mixtures[i] = new GasMixture(Atmospherics.CellVolume) { Temperature = Atmospherics.T20C };
@@ -120,6 +120,12 @@ public sealed partial class AtmosphereSystem
         mixtures[12].AdjustMoles(Gas.Nitrogen, Atmospherics.NitrogenMolesStandard);
         mixtures[12].AdjustMoles(Gas.WaterVapor, Atmospherics.NitrogenMolesStandard);
         mixtures[12].Temperature = 340f; // Sauna
+      
+       // Aurora - 13: Respiron @ 101kpa, for the motel
+       mixtures[13].AdjustMoles(Gas.Respiron, Atmospherics.MolesCellStandard);
+
+       // Aurora - 14: Respiron (GM), for the motel
+       mixtures[14].AdjustMoles(Gas.Respiron, Atmospherics.MolesCellGasMiner);
 
         // Force Invalidate & update air on all tiles
         Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent> grid =

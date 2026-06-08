@@ -121,7 +121,7 @@
           collection: MetalBreak
       - !type:SpawnEntitiesBehavior
         spawn:
-          RespironCanisterBroken:
+          HeliumCanisterBroken: # Aurora's Song - RespironCanisterBroken>HeliumCanisterBroken
             min: 1
             max: 1
       - !type:DoActsBehavior

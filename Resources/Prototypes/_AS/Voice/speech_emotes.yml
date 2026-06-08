@@ -1,0 +1,39 @@
+- type: emote
+  id: FairyFlutter
+  name: chat-emote-name-flutter
+  category: Vocal
+  available: false
+  icon: Interface/Emotes/buzz.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-flutter"]
+  chatTriggers:
+   - flutters
+   - flutters her wings
+   - flutters his wings
+   - flutters their wings
+   - flutters its wings
+
+- type: emote
+  id: FairyGlimmer
+  name: chat-emote-name-glimmer
+  category: Vocal
+  available: false
+  icon: Interface/Emotes/chime.png
+  whitelist:
+    components:
+    - Vocal
+  blacklist:
+    tags:
+    - SiliconEmotes
+  chatMessages: ["chat-emote-msg-glimmer"]
+  chatTriggers:
+   - glimmers
+   - sparkles
+   - flickers
+   - twinkles
+   - glitters

@@ -85,3 +85,4 @@
     - back
   - type: UseDelay
     delay: 1
+  - type: Prying # Aurora: Since it requires wield, prying is a must have

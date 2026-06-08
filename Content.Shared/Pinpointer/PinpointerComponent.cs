@@ -80,6 +80,13 @@ public sealed partial class PinpointerComponent : Component
     [DataField]
     public bool SetsTarget = false;
     // End Frontier: extra pinpointer fields
+
+    // Aurora's Song
+    /// <summary>
+    /// Whether this pinpointer has been set to its long range configuration and has extended range brackets.
+    /// </summary>
+    [DataField]
+    public bool LongRange = false;
 }
 
 [Serializable, NetSerializable]

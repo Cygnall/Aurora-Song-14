@@ -13,12 +13,16 @@
   - Criminal
   - Vacancy
   - Construction
+  - Donation # Aurora Song
+  - Promotion # Aurora Song
   - Service
+  - Target # Aurora Song
+  - Trade # Aurora Song
   - Other
 
 - type: bountyContractCollection
   id: Public
-  order: 2
+  order: 3 # Aurora Song: 2 -> 3
   notificationType: PDA
   name: bounty-contract-collection-name-public
   deleteAccess:
@@ -27,5 +31,8 @@
   categories:
   - Vacancy
   - Construction
+  - Donation # Aurora Song
   - Service
+  - Target # Aurora Song
+  - Trade # Aurora Song
   - Other

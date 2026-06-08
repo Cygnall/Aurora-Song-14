@@ -6,7 +6,7 @@
   sprites: MobFeroxiSprites
   defaultSkinTone: "#8DB9D6"
   markingLimits: MobFeroxiMarkingLimits
-  dollPrototype: MobFeroxiDummy
+  dollPrototype: AppearanceFeroxi
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   maleFirstNames: NamesFeroxiFirstMale
   femaleFirstNames: NamesFeroxiFirstFemale

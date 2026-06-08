@@ -8,10 +8,18 @@
   - ContractorClothingUniformJumpsuitMilitaryContractorTac
   - ContractorClothingUniformJumpsuitAtmos
   - ContractorClothingUniformJumpskirtAtmos
+  - ContractorClothingUniformFlightsuitAtmos # Aurora's Song - Flightsuits
+  - ContractorClothingUniformFlightskirtAtmos # Aurora's Song - Flightsuits
   - ContractorClothingUniformMantisLoincloth # Aurora's Song - Mantis drip
   - ContractorClothingUniformMantisDark # Aurora's Song - Mantis drip
   - ContractorClothingUniformMantisOrnate # Aurora's Song - Mantis drip
   - ContractorClothingUniformMantisAiry # Aurora's Song - Mantis drip
+  - ContractorClothingUniformSkirtClayshaper # Aurora's Song - Chaplain drip
+  - ContractorClothingUniformSkirtDruid # Aurora's Song - Chaplain drip
+  - ContractorClothingUniformSkirtMoon # Aurora's Song - Chaplain drip
+  - ContractorClothingUniformSun # Aurora's Song - Chaplain drip
+  - ContractorClothingUniformTech # Aurora's Song - Chaplain drip
+  - ContractorClothingUniformSkirtTidal # Aurora's Song - Chaplain drip
   - ContractorClothingUniformJumpsuitBartender
   - ContractorClothingUniformJumpskirtBartender
   - ContractorClothingUniformJumpsuitCargo
@@ -324,6 +332,17 @@
   - ContractorClothingOuterCoatMantisAiry  # Aurora Song - Mantis drip merge
   - ContractorClothingOuterCoatMantisOrnate  # Aurora Song - Mantis drip merge
   - ContractorClothingWinterCoatMantisMu  # Aurora Song - Mantis drip merge
+  - ContractorClothingOuterMoon # Aurora's Song - Chaplain drip
+  - ContractorClothingOuterSilent # Aurora's Song - Chaplain drip
+  - ContractorClothingOuterCoatBomberBlack # Aurora's Song - Departmental bombers
+  - ContractorClothingOuterCoatBomberWhite # Aurora's Song - Departmental bombers
+  - ContractorClothingOuterCoatBomberCargo # Aurora's Song - Departmental bombers
+  - ContractorClothingOuterCoatBomberEngineer # Aurora's Song - Departmental bombers
+  - ContractorClothingOuterCoatBomberAtmos # Aurora's Song - Departmental bombers
+  - ContractorClothingOuterCoatBomberAtmosHolo # Aurora's Song - Departmental bombers
+  - ContractorClothingOuterCoatBomberMedical # Aurora's Song - Departmental bombers
+  - ContractorClothingOuterCoatBomberScience # Aurora's Song - Departmental bombers
+  - ContractorClothingOuterCoatBomberSecurity # Aurora's Song - Departmental bombers
   - ContractorClothingOuterHoodieGrey
   - ContractorClothingOuterVestHazard
   - ContractorClothingOuterApron
@@ -422,6 +441,7 @@
   - ContractorClothingBeltMantisAiry  # Aurora Song - Mantis drip merge
   - ContractorClothingBeltMantisDark  # Aurora Song - Mantis drip merge
   - ContractorClothingBeltMantisOrnate  # Aurora Song - Mantis drip merge
+  - ContractorClothingBeltDragon # Aurora's Song - Chaplain drip
   - ContractorClothingBeltUtility
   - ContractorClothingBeltUtilityFilled
   - ContractorClothingBeltSalvageWebbing
@@ -547,6 +567,11 @@
   - ContractorClothingMantisFezAiry  # Aurora Song - Mantis drip merge
   - ContractorClothingMantisFezOrnate  # Aurora Song - Mantis drip merge
   - ContractorClothingMantisHoodDark  # Aurora Song - Mantis drip merge
+  - ContractorClothingHeadHatVeil # Aurora's Song - Chaplain drip
+  - ContractorClothingHeadHatDruid # Aurora's Song - Chaplain drip
+  - ContractorClothingHeadHatMoon # Aurora's Song - Chaplain drip
+  - ContractorClothingHeadHatSun # Aurora's Song - Chaplain drip
+  - ContractorClothingHeadHatTidal # Aurora's Song - Chaplain drip
   - ContractorClothingHeadHatHoodBioScientist
   - ContractorClothingHeadRastaHat
   - ContractorClothingHeadHatSombrero
@@ -664,6 +689,12 @@
   - ContractorClothingNeckCloakMantisDark # Aurora Song - Mantis drip merge
   - ContractorClothingNeckMantleMantisOrnate # Aurora Song - Mantis drip merge
   - ContractorClothingNeckMantisShackles # Aurora Song - Mantis drip merge
+  - ContractorClothingNeckChaplainDragon # Aurora's Song - Chaplain drip
+  - ContractorClothingNeckClayshaper # Aurora's Song - Chaplain drip
+  - ContractorClothingNeckDruid # Aurora's Song - Chaplain drip
+  - ContractorClothingNeckDruidMantle # Aurora's Song - Chaplain drip
+  - ContractorClothingNeckSun # Aurora's Song - Chaplain drip
+  - ContractorClothingNeckTidal # Aurora's Song - Chaplain drip
   - ContractorClothingNeckScarfStripedBlack
   - ContractorClothingNeckScarfStripedBlue
   - ContractorClothingNeckScarfStripedBrown
@@ -796,6 +827,7 @@
   - ContractorClothingEyesGlassesMantis  # Aurora Song - Mantis drip merge
   - ContractorClothingEyesGlassesMantisTinted  # Aurora Song - Mantis drip merge
   - ContractorClothingEyesGlassesMantisBlindfold  # Aurora Song - Mantis drip merge
+  - ContractorClothingEyesChaplainBlindfold # Aurora's Song - Chaplain drip
   - ContractorClothingEyesGlassesJamjar
   - ContractorClothingEyesGlassesChemical
   - ContractorClothingEyesHudDiagnostic
@@ -823,6 +855,7 @@
   - ContractorFlippoLighterMantis  # Aurora Song - Mantis drip merge
   - ContractorSyringeMantis  # Aurora Song - Mantis drip merge
   - ContractorKnifeRavel  # Aurora Song - Mantis drip merge
+  - ContractorHoloprojectorPrivate # Aurora Song - Consent Projector
   - ContractorCigarCase
   - ContractorHolocigar # Aurora's Song
   - ContractorNFAshtray
@@ -916,6 +949,25 @@
   - ContractorHandheldCrewMonitor
   - ContractorHypoMini
   - ContractorBible
+  - ContractorHolyTextQuran # Aurora's Song -- More holy books
+  - ContractorHolyTextTanakh # Aurora's Song -- More holy books
+  - ContractorHolyTextHolyScroll # Aurora's Song -- More holy books
+  - ContractorHolyTextHolyTablet # Aurora's Song -- More holy books
+  - ContractorHolyTextGreybible # Aurora's Song -- More holy books
+  - ContractorHolyTextKojiki # Aurora's Song -- More holy books
+  - ContractorHolyTextTaoTeachings # Aurora's Song -- More holy books
+  - ContractorHolyTextPrincipiaDiscordia # Aurora's Song -- More holy books
+  - ContractorHolyTextChaplainsGrimoire # Aurora's Song -- More holy books
+  - ContractorHolyTextUnitologyTome # Aurora's Song -- More holy books
+  - ContractorHolyTextExtremeTeenBible # Aurora's Song -- More holy books
+  - ContractorHolyTextBibble # Aurora's Song -- More holy books
+  - ContractorHolyTextMansus # Aurora's Song -- More holy books
+  - ContractorBibleDruid # Aurora's Song -- More holy books
+  - ContractorBibleCommunistManifesto # Aurora's Song -- More holy books
+  - ContractorBibleNarsie # Aurora's Song -- More holy books
+  - ContractorBibleNanoTrasen # Aurora's Song -- More holy books
+  - ContractorBibleHonk # Aurora's Song -- More holy books
+  - ContractorBibleRatvar # Aurora's Song -- More holy books
   - ContractorBodycam
 
 - type: loadoutGroup
@@ -926,6 +978,9 @@
   - ContractorClothingMaskBreathMedical
   - ContractorClothingMaskMantisVeil # Aurora's Song - Mantis drip
   - ContractorClothingMaskMantisRitual # Aurora's Song - Mantis drip
+  - ContractorClothingMaskClayshaper # Aurora's Song - Chaplain drip
+  - ContractorClothingMaskFire # Aurora's Song - Chaplain drip
+  - ContractorClothingMaskSilent # Aurora's Song - Chaplain drip
   - ContractorClothingMaskSterile
   - ContractorClothingMaskGas
   - ContractorClothingMaskPunkHalf # Punkish (Randomized visuals)

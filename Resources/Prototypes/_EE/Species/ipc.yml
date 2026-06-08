@@ -5,7 +5,7 @@
   prototype: MobIPC
   sprites: MobIPCSprites
   markingLimits: MobIPCMarkingLimits
-  dollPrototype: MobIPCDummy
+  dollPrototype: AppearanceIPC
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
   minAge: 1
   maxAge: 240
@@ -36,6 +36,10 @@
     Hair: MobHumanoidAnyMarking
     Snout: MobHumanoidAnyMarking
     # End DeltaV Additions
+    # begin starcup
+    UndergarmentTop: MobHumanoidAnyMarking # starcup
+    UndergarmentBottom: MobHumanoidAnyMarking # starcup
+    # end starcup
     Chest: MobIPCTorso
     LArm: MobIPCLArm
     RArm: MobIPCRArm
@@ -65,16 +69,24 @@
       points: 1
       required: true
       defaultMarkings: [ MobIPCHeadDefault ]
-    Chest:
+    # begin starcup
+    UndergarmentTop:
       points: 1
+      required: false
+    UndergarmentBottom:
+      points: 1
+      required: false
+      # end starcup
+    Chest:
+      points: 2 # Aurora's Song - 1 > 2, to allow for jewelry
       required: true
       defaultMarkings: [ MobIPCTorsoDefault ]
     Legs:
-      points: 4
+      points: 8 # Aurora's Song - 4 > 8, to allow for jewelry
       required: true
       defaultMarkings: [ MobIPCLLegDefault, MobIPCLFootDefault, MobIPCRLegDefault, MobIPCRFootDefault ]
     Arms:
-      points: 4
+      points: 8 # Aurora's Song - 4 > 8, to allow for jewelry
       required: true
       defaultMarkings: [ MobIPCLArmDefault, MobIPCLHandDefault, MobIPCRArmDefault, MobIPCRHandDefault ]
     Snout: # DeltaV - Adds ability to use more marking types

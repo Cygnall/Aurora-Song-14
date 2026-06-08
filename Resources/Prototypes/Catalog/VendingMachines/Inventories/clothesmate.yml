@@ -118,6 +118,7 @@
     ClothingShoesHeelsStockingsWhiteWhite: 4 # Aurora's Song - heelstockings port
     ClothingShoesHeelsStockingsWhiteWPlain: 4 # Aurora's Song - heelstockings port
     ClothingShoesHeelsStockingsWhiteLatex: 4 # Aurora's Song - heelstockings port
+    ASClothingMaskVeil: 8 #Aurora's Song - Silken Veil implementation
   contrabandInventory:
     ClothingMaskNeckGaiter: 2
     ClothingUniformJumpsuitTacticool: 1

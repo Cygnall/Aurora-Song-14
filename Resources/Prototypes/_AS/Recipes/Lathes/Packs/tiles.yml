@@ -1,0 +1,21 @@
+- type: latheRecipePack
+  id: CorvaxWoodTiles
+  recipes:
+  - FloorTileItemWoodParquet
+  - FloorTileItemWoodChess
+  - FloorTileItemWoodBlack
+  - FloorTileItemWoodLargeBlack
+  - FloorTileItemWoodParquetBlack
+  - FloorTileItemWoodChessBlack
+  - FloorTileItemWoodDark
+  - FloorTileItemWoodLargeDark
+  - FloorTileItemWoodParquetDark
+  - FloorTileItemWoodChessDark
+  - FloorTileItemWoodLight
+  - FloorTileItemWoodLargeLight
+  - FloorTileItemWoodParquetLight
+  - FloorTileItemWoodChessLight
+  - FloorTileItemWoodRed
+  - FloorTileItemWoodLargeRed
+  - FloorTileItemWoodParquetRed
+  - FloorTileItemWoodChessRed

@@ -1,0 +1,169 @@
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceOvinia
+  name: human appearance
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganOviniaTorso
+        - id: OrganOviniaHead
+        - id: OrganOviniaArmLeft
+        - id: OrganOviniaArmRight
+        - id: OrganOviniaHandRight
+        - id: OrganOviniaHandLeft
+        - id: OrganOviniaLegLeft
+        - id: OrganOviniaLegRight
+        - id: OrganOviniaFootLeft
+        - id: OrganOviniaFootRight
+        - id: OrganHumanBrain
+        - id: OrganHumanEyes
+        - id: OrganHumanTongue
+        - id: OrganHumanAppendix
+        - id: OrganHumanEars
+        - id: OrganAnimalLungs
+        - id: OrganAnimalHeart
+        - id: OrganAnimalStomach
+        - id: OrganAnimalLiver
+        - id: OrganAnimalKidneys
+  - type: HumanoidAppearance
+    species: Ovinia
+  - type: Inventory
+    speciesId: ovinia
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: jumpsuit
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: outerclothing_hardsuit
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: jumpsuit-female
+      shoes:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: shoes
+      outerClothing:
+        sizeMaps:
+          32:
+            sprite: _DEN/Mobs/Species/Ovinia/displacement.rsi
+            state: outerclothing_hardsuit
+
+- type: entity
+  name: Urist McSheepy
+  parent:
+  - AppearanceOvinia
+  - BaseSpeciesMobOrganic
+  id: MobOvinia
+  components:
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.35
+        density: 215 # sheep be heavy
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Damageable
+    damageModifierSet: Ovinia
+  - type: Speech
+    speechSounds: Alto
+    speechVerb: Ovinia
+  - type: Vocal
+    sounds:
+      Male: MaleOvinia
+      Female: FemaleOvinia
+      Unsexed: MaleOvinia
+  - type: Tag
+    tags:
+    - CanPilot
+    - FootstepSound
+    - DoorBumpOpener
+    - AnomalyHost
+    - OviniaEmotes
+  - type: ProtectedFromStepTriggers
+    #whitelist:
+    #  types:
+    #    - Shard
+    #    - Mousetrap
+    #    - SlipEntity //Removed - Delta-V
+  - type: TypingIndicator
+    proto: ovinia
+  - type: Hunger
+    baseDecayRate: 0.015 #25% slower than normal (chewin they cud) # Aurora's Song - Scales hunger to match Frontier Standards
+  - type: Thirst
+    baseDecayRate: 0.075 #25% slower than normal
+
+- type: entity
+  parent: OrganBase
+  id: OrganOvinia
+  abstract: true
+  suffix: Ovinia
+
+- type: entity
+  parent: OrganOvinia
+  id: OrganOviniaExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DEN/Mobs/Species/Ovinia/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganOviniaExternal ]
+  id: OrganOviniaTorso
+
+- type: entity
+  parent: [ OrganBaseHead, OrganOviniaExternal ]
+  id: OrganOviniaHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganOviniaExternal ]
+  id: OrganOviniaArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganOviniaExternal ]
+  id: OrganOviniaArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganOviniaExternal ]
+  id: OrganOviniaHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganOviniaExternal ]
+  id: OrganOviniaHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganOviniaExternal ]
+  id: OrganOviniaLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganOviniaExternal ]
+  id: OrganOviniaLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganOviniaExternal ]
+  id: OrganOviniaFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganOviniaExternal ]
+  id: OrganOviniaFootRight
+

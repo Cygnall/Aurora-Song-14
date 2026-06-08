@@ -1,4 +1,4 @@
-// #define NF_CENSUS_DEBUG_LOG // Uncomment to enable debug logging
+#define NF_CENSUS_DEBUG_LOG // Uncomment to enable debug logging
 
 using Content.Server._NF.GC.Components;
 using Content.Server.GameTicking;

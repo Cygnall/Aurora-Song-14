@@ -998,8 +998,10 @@
       shader: unshaded
     - state: panel
       map: ["enum.WiresVisualLayers.MaintenancePanel"]
-  - type: AccessReader
-    access: [["Medical"]]
+  - type: MarketModifier # Frontier
+    mod: 5 # Frontier
+ #- type: AccessReader # Aurora's Song
+ #  access: [["Medical"]] # Aurora's Song
 
 - type: entity
   parent: VendingMachine

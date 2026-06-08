@@ -59,6 +59,7 @@
     - Back
     - suitStorage
   - type: Wieldable # Aurora
+  - type: Prying # Aurora: Since it requires wield, prying is a must have
 
 - type: entity
   name: greatsword
@@ -171,6 +172,7 @@
   - type: Tag
     tags:
     - MantisGreatsword
+  - type: Prying # Aurora: Since it requires wield, prying is a must have
 
 - type: entity
   parent: [BaseItem, BaseFoldable]

@@ -1,0 +1,225 @@
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceHarpy
+  name: harpy appearance
+  components:
+  - type: Inventory
+    speciesId: harpy
+    displacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: _DV/Mobs/Species/Harpy/displacement.rsi
+            state: jumpsuit
+    femaleDisplacements: {} # Frontier: female jumpsuit displacement
+  - type: EntityTableContainerFill
+    containers:
+      body_organs: !type:AllSelector
+        children:
+        - id: OrganHarpyTorso
+        - id: OrganHarpyHead
+        - id: OrganHarpyArmLeft
+        - id: OrganHarpyArmRight
+        - id: OrganHarpyHandRight
+        - id: OrganHarpyHandLeft
+        - id: OrganHarpyLegLeft
+        - id: OrganHarpyLegRight
+        - id: OrganHarpyFootLeft
+        - id: OrganHarpyFootRight
+        - id: OrganHumanBrain
+        - id: OrganHumanEyes
+        - id: OrganHumanTongue
+        - id: OrganHumanAppendix
+        - id: OrganHumanEars
+        - id: OrganHarpyLungs
+        - id: OrganHumanHeart
+        - id: OrganAnimalStomach
+        - id: OrganAnimalLiver
+        - id: OrganAnimalKidneys
+  - type: HumanoidAppearance
+    species: Harpy
+    hideLayersOnEquip:
+    - Hair
+    - Snout
+  - type: Sprite
+    scale: 0.9, 0.9
+
+- type: entity
+  parent:
+  - AppearanceHarpy
+  - BaseSpeciesMobOrganic # starcup: changed from BaseMobHuman for consistency
+  id: MobHarpy
+  name: Urist McHarpy
+  components:
+  - type: NpcFactionMember
+    factions:
+    - NanoTrasen
+    - Harpy # Frontier
+  - type: HarpySinger
+  - type: Instrument
+    allowPercussion: false
+    program: 52
+  - type: SwappableInstrument
+    instrumentList:
+      "Voice": {52: 0}
+      "Trumpet": {56: 0}
+      "Electric": {27: 0}
+      "Bass": {33: 0}
+      "Rock": {29: 0}
+      "Acoustic": {24: 0}
+      "Flute": {73: 0}
+      "Sax": {66: 0}
+      "Piano": {1: 0}
+      "Church Organ": {19: 0}
+      "Harp": {46: 0}
+    onlySetBySelf: true # Frontier
+  - type: UserInterface
+    interfaces:
+      enum.InstrumentUiKey.Key:
+        type: InstrumentBoundUserInterface
+      enum.HumanoidMarkingModifierKey.Key:
+        type: HumanoidMarkingModifierBoundUserInterface
+      enum.StrippingUiKey.Key:
+        type: StrippableBoundUserInterface
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.32
+        density: 90
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Damageable
+    damageModifierSet: Harpy
+  - type: MeleeWeapon
+    soundHit:
+      collection: AlienClaw
+    animation: WeaponArcClaw
+    damage:
+      types:
+        Piercing: 5
+  - type: Speech
+    speechSounds: Harpy
+    speechVerb: Harpy
+    allowedEmotes: ['Meow', 'Hiss', 'Mew', 'Purr', 'Growl', 'Bark', 'Snarl', 'Whine', 'Howl', 'Awoo', 'Honk', 'HarpyRing', 'HarpyPew', 'HarpyBang', 'Beep', 'HarpyRev', 'HarpyCaw', 'Squish', 'Chitter', 'Chirp', 'Squeak', 'Click'] # Aurora's Song - Remove Harpy in front of unified emotes
+  - type: Vocal
+    sounds:
+      Male: SoundsHarpy
+      Female: SoundsHarpy
+      Unsexed: SoundsHarpy
+  - type: InstrumentVisuals
+  - type: GenericVisualizer
+    visuals:
+      enum.InstrumentVisuals.Playing:
+        enum.InstrumentVisuals.Layer:
+          False: {visible: false}
+          True: {visible: true}
+  - type: MovementSpeedModifier
+#    baseWalkSpeed: 2.5 # Frontier
+#    baseSprintSpeed: 5.0 # Frontier
+    weightlessAcceleration: 2.5
+  - type: HarpyVisuals
+  - type: UltraVision
+#  - type: Tag # Frontier
+#    tags: # Frontier
+#    - CanPilot # Frontier
+#    - FootstepSound # Frontier
+#    - DoorBumpOpener # Frontier
+
+- type: entity
+  parent: OrganBase
+  id: OrganHarpy
+  abstract: true
+  suffix: harpy
+
+- type: entity
+  parent: OrganHarpy
+  id: OrganHarpyExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _DV/Mobs/Species/Harpy/parts.rsi
+
+- type: entity
+  parent: [ OrganBaseTorso, OrganHarpyExternal ]
+  id: OrganHarpyTorso
+
+- type: entity
+  parent: [ OrganBaseHead, OrganHarpyExternal ]
+  id: OrganHarpyHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganHarpyExternal ]
+  id: OrganHarpyArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganHarpyExternal ]
+  id: OrganHarpyArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganHarpyExternal ]
+  id: OrganHarpyHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganHarpyExternal ]
+  id: OrganHarpyHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganHarpyExternal ]
+  id: OrganHarpyLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganHarpyExternal ]
+  id: OrganHarpyLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganHarpyExternal ]
+  id: OrganHarpyFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganHarpyExternal ]
+  id: OrganHarpyFootRight
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganHumanInternal, OrganHumanMetabolizer ]
+  id: OrganHarpyLungs
+  name: lungs
+  description: An advanced pair of avian lungs. Filters oxygen by way of moving air constantly through air sacs.
+  components:
+  - type: Metabolizer
+    updateInterval: 2.0
+    removeEmpty: true
+    solutionOnBody: false
+    solution: "Lung"
+    groups:
+    - id: Gas
+      rateModifier: 200.0
+
+- type: entity
+  id: ActionHarpyPlayMidi
+  parent: BaseAction # Frontier, Wizden#27422 compliance
+  name: Play MIDI
+  description: Sing your heart out! Right click yourself to set an instrument.
+  components:
+  - type: Action # Frontier, Wizden#27422 compliance, InstantAction<Action
+    checkCanInteract: false
+    icon: _DV/Interface/Actions/harpy_sing.png
+  - type: InstantAction # Frontier, Wizden#27422 compliance
+    event: !type:OpenUiActionEvent
+      key: enum.InstrumentUiKey.Key
+
+- type: entity
+  id: ActionSyrinxChangeVoiceMask
+  parent: BaseAction # Frontier, Wizden#27422 compliance
+  name: Set name
+  description: Change the name others hear to something else.
+  components:
+  - type: Action # Frontier, Wizden#27422 compliance, InstantAction<Action
+    icon: _DV/Interface/Actions/harpy_syrinx.png
+    itemIconStyle: BigAction
+  - type: InstantAction # Frontier, Wizden#27422 compliance
+    event: !type:VoiceMaskSetNameEvent

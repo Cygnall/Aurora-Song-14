@@ -1,0 +1,5 @@
+﻿- type: localizedDataset
+  id: PlushieCustomEixTalk
+  values:
+    prefix: random-talk-eix-
+    count: 7

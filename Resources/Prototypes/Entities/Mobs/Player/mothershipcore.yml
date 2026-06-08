@@ -162,7 +162,7 @@
   - type: GuideHelp
     guides:
     - Robotics
-    - Xenoborgs
+     # - Xenoborgs - Aurora's Song - Irrelevant, linter fails if I don't comment this out.
   - type: Inventory
     templateId: borg
   - type: NpcFactionMember

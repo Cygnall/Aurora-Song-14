@@ -1,12 +1,13 @@
 - type: entity
   abstract: true
-  parent: [BaseItem, RecyclableItemPlasticSmall] # Frontier: added RecyclableItemPlasticSmall
+  parent: [BaseItem, DrinkBase, RecyclableItemPlasticSmall] # Frontier: added RecyclableItemPlasticSmall # Aurora's Song - Add DrinkBase to make it fillable
   id: SprayBottleBase
   components:
   - type: Edible
     edible: Drink
     solution: drink
     transferAmount: 10
+    destroyOnEmpty: false # Aurora's Song: DO NOT EAT IT
     useSound:
       path: /Audio/Effects/spray3.ogg
       params:

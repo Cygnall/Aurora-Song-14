@@ -660,15 +660,6 @@
   components:
   - type: Label # TheDen
     currentLabel: Mirage 15u # Aurora Song - Name changed back to Mirage, as it's still called that here
-  - type: Sprite # TheDen - Space Drugs colored pill
-    sprite: _DEN/Objects/Specific/Chemistry/pills.rsi
-    state: spacedrugspill
-  #- type: Pill
-  #  state: spacedrugspill
-  - type: Item
-    size: Tiny
-    sprite: _DEN/Objects/Specific/Chemistry/pills.rsi
-    heldPrefix: spacedrugs
   - type: SolutionContainerManager
     solutions:
       food:

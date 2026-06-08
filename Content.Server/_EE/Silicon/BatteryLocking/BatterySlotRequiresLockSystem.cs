@@ -35,6 +35,9 @@ public sealed class BatterySlotRequiresLockSystem : EntitySystem
         if (args.User == uid || !HasComp<SiliconComponent>(uid))
             return;
 
+        if (args.Silent || args.Cancelled) // Aurora's Song - Fix IPC's showing maintenance touching too often
+            return;
+
         _popupSystem.PopupEntity(Loc.GetString("batteryslotrequireslock-component-alert-owner", ("user", Identity.Entity(args.User, EntityManager))), uid, uid, PopupType.Large);
     }
 

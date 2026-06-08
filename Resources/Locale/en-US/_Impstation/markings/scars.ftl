@@ -29,7 +29,6 @@ marking-HandTwistingRight-hand_r_twisting = Twisted Scar (Right Hand)
 marking-SmileScars = The Jonker
 # Aurora's Song - Seperates slime markings from head to overlay
 marking-SlimeSmileScars = The Jonker
-marking-SmileScars-head_smile = The Jonker
 marking-HeadTwisting = Twisted Scar
 marking-HeadTwisting-head_twisting = Twisted Scar
 # Aurora's Song - Seperates slime markings from head to overlay

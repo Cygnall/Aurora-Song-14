@@ -1,3 +1,15 @@
 ﻿#2026 - 04 - 24 | Fix serialisation of office chairs on maps due to ActiveInputMoverController component
 ChairOfficeLight: ASChairOfficeLightSpawner
 ChairOfficeDark: ASChairOfficeDarkSpawner
+
+# 2026-05-14 - Add goblin parts to conversion list
+HeadGoblin: OrganGoblinHead
+TorsoGoblin: OrganGoblinTorso
+LeftArmGoblin: OrganGoblinArmLeft
+RightArmGoblin: OrganGoblinArmRight
+LeftHandGoblin: OrganGoblinHandLeft
+RightHandGoblin: OrganGoblinHandRight
+LeftLegGoblin: OrganGoblinLegLeft
+RightLegGoblin: OrganGoblinLegRight
+LeftFootGoblin: OrganGoblinFootLeft
+RightFootGoblin: OrganGoblinFootRight

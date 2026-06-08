@@ -2,26 +2,35 @@ using Content.Shared._Floof.Consent;
 using Content.Shared.EntityConditions;
 using Content.Shared.Mind;
 using Robust.Shared.Prototypes;
+using Content.Shared.Mind.Components;
 
 namespace Content.Shared._AS.Consent.EntityEffects;
 
-public sealed class ConsentEntityConditionSystem : EntityConditionSystem<MindComponent, Consent>
+public sealed class ConsentEntityConditionSystem
+    : EntityConditionSystem<MindContainerComponent, Consent>
 {
-    [Dependency] private static readonly SharedConsentSystem _consent = default!;
+    [Dependency] private readonly SharedConsentSystem _consent = default!;
+    [Dependency] private readonly SharedMindSystem _mind = default!;
 
-    protected override void Condition(Entity<MindComponent> ent, ref EntityConditionEvent<Consent> args)
+    protected override void Condition(Entity<MindContainerComponent> ent, ref EntityConditionEvent<Consent> args)
     {
-        if (ent.Comp.Session is not { } session)
+        args.Result = false;
+
+        if (!_mind.TryGetMind(ent.Owner, out _, out var mind))
             return;
 
-        if (_consent.TryGetConsent(session.UserId, out var settings))
+        if (mind.Session is not { } session)
+            return;
+
+        if (!_consent.TryGetConsent(session.UserId, out var settings))
             return;
 
         foreach (var effect in args.Condition.EffectTypes)
         {
-            if (settings is not null && _consent.HasConsent(settings, effect))
+            if (_consent.HasConsent(settings, effect))
             {
                 args.Result = true;
+                return;
             }
         }
     }

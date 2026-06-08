@@ -5,7 +5,7 @@
   prototype: MobHuman
   sprites: MobHumanSprites
   markingLimits: MobHumanMarkingLimits
-  dollPrototype: MobHumanDummy
+  dollPrototype: AppearanceHuman
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
 
 # The lack of a layer means that
@@ -58,6 +58,9 @@
       required: false
     HeadTop:
       points: 1
+      required: false
+    HeadSide: #imp
+      points: 2 #up from 1 because i moved earrings here
       required: false
     UndergarmentTop:
       points: 1

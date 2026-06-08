@@ -5,6 +5,7 @@ using System.Numerics;
 using Robust.Shared.Utility;
 using Content.Server.Shuttles.Events;
 using Content.Shared.IdentityManagement;
+using Content.Shared.Verbs; // Aurora's Song: LR Config
 
 namespace Content.Server.Pinpointer;
 
@@ -22,6 +23,7 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
 
         SubscribeLocalEvent<PinpointerComponent, ActivateInWorldEvent>(OnActivate);
         SubscribeLocalEvent<FTLCompletedEvent>(OnLocateTarget);
+        SubscribeLocalEvent<PinpointerComponent, GetVerbsEvent<InteractionVerb>>(AddToggleVerb);
     }
 
     public override bool TogglePinpointer(EntityUid uid, PinpointerComponent? pinpointer = null)
@@ -210,11 +212,17 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
     private Distance CalculateDistance(Vector2 vec, PinpointerComponent pinpointer)
     {
         var dist = vec.Length();
-        if (dist <= pinpointer.ReachedDistance)
+        // Begin Aurora's Song
+        float ModifiedReachedDistance = pinpointer.LongRange ? pinpointer.ReachedDistance * 256 : pinpointer.ReachedDistance; // 256 metres in LR configuration with default value (1 metre)
+        float ModifiedCloseDistance = pinpointer.LongRange ? pinpointer.CloseDistance * 128 : pinpointer.CloseDistance; // 1024 metres in LR configuration with default value (8 metres)
+        float ModifiedMediumDistance = pinpointer.LongRange ? pinpointer.MediumDistance * 256 : pinpointer.MediumDistance; // 4096 metres in LR configuration with default value (16 metres)
+        // End Aurora's Song
+
+        if (dist <= ModifiedReachedDistance) // Aurora's Song: Set to use Modified for dynamicism
             return Distance.Reached;
-        else if (dist <= pinpointer.CloseDistance)
+        else if (dist <= ModifiedCloseDistance) // Aurora's Song: Set to use Modified for dynamicism
             return Distance.Close;
-        else if (dist <= pinpointer.MediumDistance)
+        else if (dist <= ModifiedMediumDistance) // Aurora's Song: Set to use Modified for dynamicism
             return Distance.Medium;
         else
             return Distance.Far;
@@ -231,4 +239,26 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
         UpdateAppearance(uid, pinpointer);
     }
     // End Frontier: clear function
+
+    // Aurora's Song: Verb and Function for toggling LR configuration
+    private void AddToggleVerb(EntityUid uid, PinpointerComponent component, GetVerbsEvent<InteractionVerb> args)
+    {
+        if (!args.CanInteract || !args.CanAccess || args.Hands == null)
+            return;
+
+        //here we build our dynamic verb. Using the object's sprite for now to make it more dynamic for the moment.
+        InteractionVerb toggleVerb = new()
+        {
+            IconEntity = GetNetEntity(uid),
+            Act = () => ToggleState(component),
+            Text = component.LongRange ? Loc.GetString("verb-pinpointer-deactivate-text") : Loc.GetString("verb-pinpointer-activate-text"),
+            Priority = 3
+        };
+
+        args.Verbs.Add(toggleVerb);
+    }
+    private void ToggleState(PinpointerComponent component)
+    {
+        component.LongRange = !component.LongRange;
+    }
 }

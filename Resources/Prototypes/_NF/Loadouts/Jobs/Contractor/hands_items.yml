@@ -249,12 +249,205 @@
 
 - type: loadout
   id: ContractorBible
+  groupBy: holyTexts # Aurora's Song
   effects:
   - !type:GroupLoadoutEffect
     proto: ContractorT2
   price: 500
   inhand:
     - Bible
+
+# Aurora's Song -- More holy books start
+- type: loadout
+  id: ContractorHolyTextQuran
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextQuran
+
+- type: loadout
+  id: ContractorHolyTextTanakh
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextTanakh
+
+- type: loadout
+  id: ContractorHolyTextHolyScroll
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextHolyScroll
+
+- type: loadout
+  id: ContractorHolyTextHolyTablet
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextHolyTablet
+
+- type: loadout
+  id: ContractorHolyTextGreybible
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextGreybible
+
+- type: loadout
+  id: ContractorHolyTextKojiki
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextKojiki
+
+- type: loadout
+  id: ContractorHolyTextTaoTeachings
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextTaoTeachings
+
+- type: loadout
+  id: ContractorHolyTextPrincipiaDiscordia
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextPrincipiaDiscordia
+
+- type: loadout
+  id: ContractorHolyTextChaplainsGrimoire
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextChaplainsGrimoire
+
+- type: loadout
+  id: ContractorHolyTextUnitologyTome
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextUnitologyTome
+
+- type: loadout
+  id: ContractorHolyTextExtremeTeenBible
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextExtremeTeenBible
+
+- type: loadout
+  id: ContractorHolyTextBibble
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextBibble
+
+- type: loadout
+  id: ContractorHolyTextMansus
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - HolyTextMansus
+
+- type: loadout
+  id: ContractorBibleDruid
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleDruid
+
+- type: loadout
+  id: ContractorBibleCommunistManifesto
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleCommunistManifesto
+
+- type: loadout
+  id: ContractorBibleNarsie
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleNarsie
+
+- type: loadout
+  id: ContractorBibleNanoTrasen
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleNanoTrasen
+
+- type: loadout
+  id: ContractorBibleHonk
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleHonk
+
+- type: loadout
+  id: ContractorBibleRatvar
+  groupBy: holyTexts
+  effects:
+  - !type:GroupLoadoutEffect
+    proto: ContractorT2
+  price: 500
+  inhand:
+    - BibleRatvar
+# Aurora's Song -- More holy books end
 
 - type: loadout
   id: ContractorBodycam

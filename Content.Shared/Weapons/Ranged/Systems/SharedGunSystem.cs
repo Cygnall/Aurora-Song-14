@@ -151,8 +151,15 @@ public abstract partial class SharedGunSystem : EntitySystem
         if (user == null ||
             !_combatMode.IsInCombatMode(user) ||
             !TryGetGun(user.Value, out var gun) ||
-            HasComp<ItemComponent>(user)) // Delta-V: Felinids in duffelbags can't shoot.
+            (
+                HasComp<ItemComponent>(user)) && // Delta-V: Felinids in duffelbags can't shoot.
+                Containers.TryGetContainingContainer((user.Value, null, null), out _) // Aurora's Song - but only if they're actually in containers
+            )
         {
+            if(HasComp<ItemComponent>(user)) { // Aurora's Song - send a fail message when trying to shoot in a container
+                PopupSystem.PopupClient(Loc.GetString("gun-firing-in-container"), user.Value);
+            }
+
             return;
         }
 

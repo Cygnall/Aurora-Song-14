@@ -1029,7 +1029,7 @@
     raffle:
       settings: short
   - type: GhostTakeoverAvailable
-  - type: BarkAccent
+  - type: OwOAccent # Aurora's Song - BarkAccent>OwOAccent
   - type: Speech
     speechSounds: Dog
     speechVerb: SmallMob
