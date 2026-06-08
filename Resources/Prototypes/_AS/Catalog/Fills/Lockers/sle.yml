@@ -22,7 +22,7 @@
 
 - type: entity
   id: ASLockerSLESecurityFilled
-  parent: LockerSecurityFilled
+  parent: ASLockerSLEBadge
   suffix: SLE, Filled
   components:
   - type: EntityTableContainerFill
