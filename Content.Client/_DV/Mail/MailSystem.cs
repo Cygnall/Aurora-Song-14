@@ -29,6 +29,8 @@ public sealed class MailJobVisualizerSystem : VisualizerSystem<MailComponent>
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly SpriteSystem _spriteSystem = default!;
 
+    private static readonly ProtoId<JobIconPrototype> JobIconUnknown = "JobIconUnknown"; // Aurora's Song - Externalize variable
+
     protected override void OnAppearanceChange(EntityUid uid, MailComponent component, ref AppearanceChangeEvent args)
     {
         if (args.Sprite == null)
@@ -37,11 +39,11 @@ public sealed class MailJobVisualizerSystem : VisualizerSystem<MailComponent>
         _appearance.TryGetData(uid, MailVisuals.JobIcon, out string job, args.Component);
 
         if (string.IsNullOrEmpty(job))
-            job = "JobIconUnknown";
+            job = JobIconUnknown; // Aurora's Song - Externalize variable
 
         if (!_prototypeManager.TryIndex<JobIconPrototype>(job, out var icon))
         {
-            args.Sprite.LayerSetTexture(MailVisualLayers.JobStamp, _spriteSystem.Frame0(_prototypeManager.Index("JobIconUnknown")));
+            args.Sprite.LayerSetTexture(MailVisualLayers.JobStamp, _spriteSystem.Frame0(_prototypeManager.Index(JobIconUnknown).Icon)); // Aurora's Song - Externalize variable
             return;
         }
 

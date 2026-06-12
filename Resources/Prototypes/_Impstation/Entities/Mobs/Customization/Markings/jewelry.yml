@@ -2,7 +2,6 @@
   parent: [BaseChest]   # Aurora's Song
   id: ChestNecklace
   bodyPart: Chest
-  markingCategory: Chest
   coloring:
     default:
       type:
@@ -16,7 +15,6 @@
   parent: [BaseSpeciesEyesStandard]   # Aurora's Song
   id: HeadEarrings
   bodyPart: HeadSide
-  markingCategory: HeadSide
   coloring:
     default:
       type:
@@ -32,7 +30,6 @@
   parent: [BaseSpeciesEyesStandard]   # Aurora's Song
   id: HeadEarringsDrop
   bodyPart: HeadSide
-  markingCategory: HeadSide
   coloring:
     default:
       type:
@@ -48,7 +45,6 @@
   parent: [BaseSpeciesEyesStandard]   # Aurora's Song
   id: HeadEarringsWeights
   bodyPart: HeadSide
-  markingCategory: HeadSide
   coloring:
     default:
       type:
@@ -64,7 +60,6 @@
   parent: [BaseSpeciesEyesStandard]   # Aurora's Song
   id: HeadSeptum
   bodyPart: Snout
-  markingCategory: Snout
   coloring:
     default:
       type:
@@ -78,7 +73,6 @@
   parent: [BaseArmsCyberlimb]   # Aurora's Song - This is a slightly silly way to do this, but this allows IPCs to have jewelry
   id: HandBraceletLeft
   bodyPart: LHand
-  markingCategory: Arms
   coloring:
     default:
       type:
@@ -92,7 +86,6 @@
   parent: [BaseArmsCyberlimb]   # Aurora's Song
   id: HandBraceletRight
   bodyPart: RHand
-  markingCategory: Arms
   coloring:
     default:
       type:
@@ -106,7 +99,6 @@
   parent: [BaseArmsCyberlimb]   # Aurora's Song
   id: HandRingsLeft
   bodyPart: LHand
-  markingCategory: Arms
   coloring:
     default:
       type:
@@ -122,7 +114,6 @@
   parent: [BaseArmsCyberlimb]   # Aurora's Song
   id: HandRingsRight
   bodyPart: RHand
-  markingCategory: Arms
   coloring:
     default:
       type:

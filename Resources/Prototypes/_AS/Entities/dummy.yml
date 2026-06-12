@@ -1,0 +1,11 @@
+# This exists to trick the tests into thinking there's a clothing item which hides these for code purposes
+- type: entity
+  id: FakeHiderProto
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HideLayerClothing
+    slots:
+    - Eyes
+    - RArmExtension
+    - UndergarmentTop
+    - UndergarmentBottom

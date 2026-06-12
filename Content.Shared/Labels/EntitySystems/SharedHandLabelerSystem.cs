@@ -104,7 +104,7 @@ public abstract class SharedHandLabelerSystem : EntitySystem
 
     private void OnUtilityVerb(Entity<HandLabelerComponent> ent, ref GetVerbsEvent<UtilityVerb> args)
     {
-        if (args.Target is not { Valid: true } target || _whitelistSystem.IsWhitelistFail(ent.Comp.Whitelist, target) || !args.CanAccess)
+        if (args.Target is not { Valid: true } target || !_whitelistSystem.CheckBoth(target, ent.Comp.Blacklist, ent.Comp.Whitelist) || !args.CanAccess)
             return;
 
         if (_tagSystem.HasTag(target, PreventTag)) // Frontier: prevent tagging PseudoItems
@@ -142,7 +142,7 @@ public abstract class SharedHandLabelerSystem : EntitySystem
 
     private void AfterInteractOn(Entity<HandLabelerComponent> ent, ref AfterInteractEvent args)
     {
-        if (args.Target is not { Valid: true } target || _whitelistSystem.IsWhitelistFail(ent.Comp.Whitelist, target) || !args.CanReach)
+        if (args.Target is not { Valid: true } target || !_whitelistSystem.CheckBoth(target, ent.Comp.Blacklist, ent.Comp.Whitelist) || !args.CanReach)
             return;
 
         AddLabelTo(ent, args.User, target);

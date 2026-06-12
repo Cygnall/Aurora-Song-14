@@ -269,7 +269,7 @@
     - 0,0,6,4
     whitelist:
       components:
-        - HumanoidAppearance
+      - HumanoidProfile # Aurora's Song HumanoidAppearance>HumanoidProfile
   - type: PneumaticCannon
     throwItems: false # must be false to get the TOOMP
     baseProjectileSpeed: 25.0 # zoom

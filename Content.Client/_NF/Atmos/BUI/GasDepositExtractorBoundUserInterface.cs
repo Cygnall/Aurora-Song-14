@@ -43,12 +43,12 @@ public sealed class GasDepositExtractorBoundUserInterface(EntityUid owner, Enum 
         _window.SetOutputPressure(pump.TargetPressure);
     }
 
-    private void OnToggleStatusButtonPressed()
+    private void OnToggleStatusButtonPressed(bool status) // Aurora's Song - Use status instead
     {
         if (_window is null)
             return;
 
-        SendPredictedMessage(new GasPressurePumpToggleStatusMessage(_window.PumpStatus));
+        SendPredictedMessage(new GasPressurePumpToggleStatusMessage(status)); // Aurora's Song - Use status instead
     }
 
     private void OnPumpOutputPressurePressed(float value)

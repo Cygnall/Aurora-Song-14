@@ -21,7 +21,7 @@ public abstract partial class SharedConsentSystem : EntitySystem
 {
     [Dependency] private readonly SharedMindSystem _mindSystem = default!;
     [Dependency] private readonly ExamineSystemShared _examineSystem = default!;
-    [Dependency] private readonly ISharedPlayerManager _playerManager = default!;
+    // [Dependency] private readonly ISharedPlayerManager _playerManager = default!; // Aurora's Song
     [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
     [Dependency] private readonly ILogManager _log = default!;
 

@@ -122,7 +122,8 @@ namespace Content.IntegrationTests.Tests
             "Relic",
             "dm01-entryway",
             "Exo",
-            "Snowball",
+	          "Snowball",
+            "Serpentcrest",
         };
         */
         // End Frontier: comment out upstream game maps

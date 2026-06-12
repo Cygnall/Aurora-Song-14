@@ -244,6 +244,7 @@
     - ZombieBlood
     - Sap
     - GoblinBlood # Frontier
+    - SulfurBlood
 
 - type: xenoArchTrigger
   id: TriggerThrow

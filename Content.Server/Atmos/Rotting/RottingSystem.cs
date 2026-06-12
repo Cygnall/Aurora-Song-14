@@ -48,29 +48,6 @@ public sealed class RottingSystem : SharedRottingSystem
         args.Handled = component.CurrentTemperature < Atmospherics.T0C + 0.85f;
     }
 
-
-    public void ReduceAccumulator(EntityUid uid, TimeSpan time)
-    {
-        if (!TryComp<PerishableComponent>(uid, out var perishable))
-            return;
-
-        if (!TryComp<RottingComponent>(uid, out var rotting))
-        {
-            perishable.RotAccumulator -= time;
-            return;
-        }
-        var total = (rotting.TotalRotTime + perishable.RotAccumulator) - time;
-
-        if (total < perishable.RotAfter)
-        {
-            RemCompDeferred(uid, rotting);
-            perishable.RotAccumulator = total;
-        }
-
-        else
-            rotting.TotalRotTime = total - perishable.RotAfter;
-    }
-
     /// <summary>
     /// Is anything speeding up the decay?
     /// e.g. buried in a grave
@@ -115,6 +92,8 @@ public sealed class RottingSystem : SharedRottingSystem
             if (perishable.RotAccumulator >= perishable.RotAfter)
             {
                 var rot = AddComp<RottingComponent>(uid);
+                var ev = new BeginRottingEvent();
+                RaiseLocalEvent(uid, ref ev);
                 rot.NextRotUpdate = _timing.CurTime + rot.RotUpdateRate;
             }
         }

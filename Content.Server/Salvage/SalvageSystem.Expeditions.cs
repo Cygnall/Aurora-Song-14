@@ -16,7 +16,6 @@ using Content.Shared.Procedural; // Frontier
 using Content.Shared.Salvage; // Frontier
 using Robust.Shared.Prototypes; // Frontier
 using Content.Shared._NF.CCVar; // Frontier
-using Content.Shared.Shuttles.Components; // Frontier
 using Robust.Shared.Configuration;
 using Content.Shared.Ghost;
 using System.Numerics; // Frontier

@@ -57,7 +57,7 @@ public sealed class NFPirateRuleSystem : GameRuleSystem<NFPirateRuleComponent>
         else
             ret = Loc.GetString("nf-pirate-role-greeting");
 
-        if (HasComp<HumanoidAppearanceComponent>(uid))
+        if (HasComp<HumanoidProfileComponent>(uid)) // Aurora's Song - Nubody
             ret += "\n\n" + Loc.GetString("nf-pirate-role-greeting-equipment") + "\n";
         return ret;
     }

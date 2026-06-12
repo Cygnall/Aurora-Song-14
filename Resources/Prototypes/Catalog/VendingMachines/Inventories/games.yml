@@ -1,6 +1,6 @@
 - type: vendingMachineInventory
   id: GoodCleanFunInventory
-  startingInventory:
+  startingInventory: # Frontier: Increase a lot of values
     DiceBag: 6
     Paper: 80
     d6Dice: 8
@@ -17,6 +17,7 @@
     MysteryFigureBox: 5
     BooksBag: 3
     CardBoxBlack: 5
+    Magic9Ball: 2
   contrabandInventory:
     Basketball: 1
     # FoodSnackBoritos: 3 # Frontier

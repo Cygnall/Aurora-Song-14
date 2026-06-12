@@ -561,10 +561,11 @@
       path: "/Audio/_NF/Items/Jackhammer/jackhammer-short.ogg"
     attackRate: 2
     damage:
-      groups:
-        Brute: 1.25
       types:
         Structural: 5
+        Blunt: 0.5
+        Slash: 0.5
+        Piercing: 0.5
   - type: Construction
     graph: NFGoblinMadeMiningDrill
     node: NFGoblinMadeMiningDrill

@@ -8,10 +8,9 @@
   - type: CollideOnAnchor
   - type: Transform
     anchored: false
-  - type: AnchoredStorageFilter
+  - type: AnchoredStorageFilter # Aurora's Song
     blacklist:
       components:
-      - HumanoidAppearance # for forks with felines
       - MindContainer # Frontier: consistency with older backpack
   - type: BlockAnchorOn
     blacklist:

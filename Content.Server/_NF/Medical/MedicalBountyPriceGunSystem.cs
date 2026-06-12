@@ -1,5 +1,6 @@
 using Content.Server._NF.Medical.Components;
 using Content.Server.Popups;
+using Content.Shared._AS.Medical; // Aurora's Song - Use AS medical bounty
 using Content.Shared._NF.Bank;
 using Content.Shared.IdentityManagement;
 using Content.Shared.Interaction;
@@ -66,7 +67,7 @@ public sealed class MedicalBountyPriceGunSystem : EntitySystem
 
     private void AppraiseEntity(EntityUid target, EntityUid user)
     {
-        if (TryComp<MedicalBountyComponent>(target, out var bounty))
+        if (TryComp<ASMedicalBountyComponent>(target, out var bounty))
         {
             _popupSystem.PopupEntity(Loc.GetString("medical-price-gun-pricing-result", ("object", Identity.Entity(target, EntityManager)), ("price", BankSystemExtensions.ToSpesoString(bounty.MaxBountyValue))), user, user);
         }

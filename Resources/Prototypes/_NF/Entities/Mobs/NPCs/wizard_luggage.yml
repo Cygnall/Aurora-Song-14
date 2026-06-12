@@ -43,7 +43,7 @@
   - type: NPCImprintingOnSpawnBehaviour
     whitelist:
       components:
-      - HumanoidAppearance
+      - HumanoidProfile # Aurora's Song HumanoidAppearance>HumanoidProfile
   - type: HTN
     rootTask:
        task: NonCombatantFollowerCompound

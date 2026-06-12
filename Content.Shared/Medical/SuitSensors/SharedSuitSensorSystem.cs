@@ -30,7 +30,7 @@ namespace Content.Shared.Medical.SuitSensors;
 
 public abstract class SharedSuitSensorSystem : EntitySystem
 {
-    [Dependency] private readonly SharedStationSystem _stationSystem = default!;
+    // [Dependency] private readonly SharedStationSystem _stationSystem = default!; // Aurora's Song
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
     [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
     [Dependency] private readonly SharedTransformSystem _transform = default!;

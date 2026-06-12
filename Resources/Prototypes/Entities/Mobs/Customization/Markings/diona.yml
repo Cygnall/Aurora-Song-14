@@ -1,8 +1,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaThornsHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: thorns_head
@@ -10,8 +9,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaThornsBody
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: thorns_body
@@ -19,8 +17,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaFlowersHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: Split "flowers_head" in two
     state: flowers_head_primary
@@ -30,8 +27,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaFlowersBody
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: Split "flowers_body" in two
     state: flowers_body_primary
@@ -41,8 +37,7 @@
 - type: marking
   id: DionaLeafCover
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   coloring:
     default:
       type:
@@ -54,8 +49,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaBloomHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: Split "bloom" in two
     state: bloom_primary
@@ -65,8 +59,7 @@
 - type: marking
   id: DionaBracketHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   coloring:
     default:
       type:
@@ -78,8 +71,7 @@
 - type: marking
   id: DionaBrushHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   coloring:
     default:
       type:
@@ -91,8 +83,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaCornflowerHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
 # Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "cornflower" into three
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
@@ -106,8 +97,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaFicusHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: ficus
@@ -115,8 +105,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaGarlandHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
 # Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "garland" into five
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
@@ -134,10 +123,9 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaKingHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
-  sprites:
+  groupWhitelist: [Diona]
 # Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "garland" into five
+  sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
     state: king_primary
   - sprite: _Impstation/Mobs/Customization/diona.rsi
@@ -147,8 +135,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaLaurelHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: laurel
@@ -156,8 +143,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaLeafyHeadTop
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: leafy
@@ -165,9 +151,8 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaLotusHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
-# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "lotus" into two
+  groupWhitelist: [Diona]
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
     state: lotus_primary
@@ -178,8 +163,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaMeadowHeadTop
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: meadow
@@ -187,8 +171,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaOakHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: oak
@@ -196,8 +179,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaPalmHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: palm
@@ -205,8 +187,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaRootHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: root
@@ -214,9 +195,8 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaRoseHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
-# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "rose" into two
+  groupWhitelist: [Diona]
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
     state: rose_primary
@@ -227,9 +207,8 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaRoseyHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
-# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "rosey" into three
+  groupWhitelist: [Diona]
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
     state: rosey_primary
@@ -242,8 +221,8 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaShrubHeadTop
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: shrub
@@ -251,9 +230,8 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaSpinnerHeadSide
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Diona]
-# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "spinner" into two
+  groupWhitelist: [Diona]
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
     state: spinner_primary
@@ -264,9 +242,8 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaSproutHeadSide
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [Diona]
-# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "sprout" into two
+  groupWhitelist: [Diona]
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
     state: sprout_primary
@@ -277,9 +254,8 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaVineHeadTop
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Diona]
-# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "vine" into two
+  groupWhitelist: [Diona]
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
     state: vine_primary
@@ -290,9 +266,8 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaVinelHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
-# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "vine1" into two
+  groupWhitelist: [Diona]
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
     state: vinel_primary
@@ -303,9 +278,8 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaVinesHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
-# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "vines" into two
+  groupWhitelist: [Diona]
+# Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
     state: vines_primary
@@ -316,8 +290,7 @@
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaWildflowerHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Diona]
+  groupWhitelist: [Diona]
 # Start Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi" and split "wildflower" into six
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi
@@ -336,9 +309,8 @@
 
 - type: marking # Imp: Removed !type:SimpleColoring
   id: DionaVineOverlay
-  bodyPart: LLeg
-  markingCategory: Overlay
-  speciesRestriction: [Diona]
+  bodyPart: Overlay
+  groupWhitelist: [Diona]
   sprites:
   - sprite: _Impstation/Mobs/Customization/diona.rsi # Imp: "Mobs/Customization/diona.rsi" < "_Impstation/Mobs/Customization/diona.rsi"
     state: overlay

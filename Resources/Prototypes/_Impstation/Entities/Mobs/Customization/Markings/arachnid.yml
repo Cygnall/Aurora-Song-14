@@ -3,8 +3,7 @@
 - type: marking
   id: SpiderHair1
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/hair.rsi
     state: fluffy
@@ -12,8 +11,7 @@
 - type: marking
   id: SpiderHair2
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/hair.rsi
     state: longhorned
@@ -21,8 +19,7 @@
 - type: marking
   id: SpiderHair3
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/hair.rsi
     state: wisps
@@ -31,8 +28,7 @@
 - type: marking
   id: ArachnidEyesDefault
   bodyPart: Eyes
-  markingCategory: Eyes
-  speciesRestriction: [Arachnid]
+  groupWhitelist: [Arachnid]
   forcedColoring: true
   coloring:
     default:
@@ -45,8 +41,7 @@
 - type: marking
   id: ArachnidEyesRound
   bodyPart: Eyes
-  markingCategory: Eyes
-  speciesRestriction: [Arachnid]
+  groupWhitelist: [Arachnid]
   coloring:
     default:
       type:
@@ -64,8 +59,7 @@
 - type: marking
   id: ArachnidEyesRoundGlowing
   bodyPart: Eyes
-  markingCategory: Eyes
-  speciesRestriction: [Arachnid]
+  groupWhitelist: [Arachnid]
   coloring:
     default:
       type:
@@ -84,8 +78,7 @@
 - type: marking
   id: ArachnidEyesJumper
   bodyPart: Eyes
-  markingCategory: Eyes
-  speciesRestriction: [Arachnid]
+  groupWhitelist: [Arachnid]
   coloring:
     default:
       type:
@@ -103,8 +96,7 @@
 - type: marking
   id: ArachnidEyesJumperGlowing
   bodyPart: Eyes
-  markingCategory: Eyes
-  speciesRestriction: [Arachnid]
+  groupWhitelist: [Arachnid]
   coloring:
     default:
       type:
@@ -123,10 +115,8 @@
 - type: marking
   id: SpiderGlowEyes
   bodyPart: Eyes
-  markingCategory: Eyes
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   forcedColoring: true
-  followSkinColor: false
   coloring:
     default:
       type:
@@ -139,10 +129,7 @@
 - type: marking
   id: SpiderEyesMulti
   bodyPart: Eyes
-  markingCategory: Eyes
-  speciesRestriction: [ Arachnid ]
-  forcedColoring: false
-  followSkinColor: false
+  groupWhitelist: [ Arachnid ]
   coloring:
     default:
       type:
@@ -161,9 +148,7 @@
 - type: marking
   id: ArachnidHeadSegments
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Arachnid]
-  forcedColoring: false
+  groupWhitelist: [Arachnid]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/head.rsi
     state: head_segments1
@@ -175,8 +160,7 @@
 - type: marking
   id: ArachnidCheliceraeSmall
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/headside.rsi
     state: small
@@ -184,8 +168,7 @@
 - type: marking
   id: ArachnidCheliceraeBig
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/headside.rsi
     state: big
@@ -193,8 +176,7 @@
 - type: marking
   id: ArachnidCheliceraeSolifugid
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/headside.rsi
     state: solifugid
@@ -202,8 +184,7 @@
 - type: marking
   id: ArachnidCheliceraeLongjaw
   bodyPart: HeadSide
-  markingCategory: HeadSide
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/headside.rsi
     state: longjaw
@@ -213,8 +194,7 @@
 - type: marking
   id: WhipSpiderMouth
   bodyPart: Snout
-  markingCategory: HeadSide
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/snout.rsi
     state: whipspidermouth
@@ -223,9 +203,7 @@
 - type: marking
   id: ArachnidTorsoSegments
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Arachnid]
-  forcedColoring: false
+  groupWhitelist: [Arachnid]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/chest.rsi
     state: segments1
@@ -235,10 +213,7 @@
 - type: marking
   id: SpiderMirror
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Arachnid ]
-  forcedColoring: false
-  followSkinColor: false
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/animatedmarkings.rsi
     state: spidermirror
@@ -247,8 +222,7 @@
 - type: marking
   id: ArachnidOverlayFluffy
   bodyPart: Chest
-  markingCategory: Overlay
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/chest.rsi
     state: fluffy
@@ -257,9 +231,7 @@
 - type: marking
   id: ArachnidLArmSegments
   bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [Arachnid]
-  forcedColoring: false
+  groupWhitelist: [Arachnid]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/arms.rsi
     state: arm_l_segments1
@@ -269,9 +241,7 @@
 - type: marking
   id: ArachnidRArmSegments
   bodyPart: RArm
-  markingCategory: Arms
-  speciesRestriction: [Arachnid]
-  forcedColoring: false
+  groupWhitelist: [Arachnid]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/arms.rsi
     state: arm_r_segments1
@@ -282,9 +252,7 @@
 - type: marking
   id: ArachnidLLegSegments
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [Arachnid]
-  forcedColoring: false
+  groupWhitelist: [Arachnid]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/legs.rsi
     state: leg_l_segments1
@@ -294,9 +262,7 @@
 - type: marking
   id: ArachnidRLegSegments
   bodyPart: RLeg
-  markingCategory: Legs
-  speciesRestriction: [Arachnid]
-  forcedColoring: false
+  groupWhitelist: [Arachnid]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/legs.rsi
     state: leg_r_segments1
@@ -307,8 +273,7 @@
 - type: marking
   id: AbdomenBasic
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/tail.rsi
     state: abdomenbasic1
@@ -318,8 +283,7 @@
 - type: marking
   id: AbdomenWidow
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/tail.rsi
     state: widow1
@@ -329,8 +293,7 @@
 - type: marking
   id: CreepyArms
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/tail.rsi
     state: creepy
@@ -338,8 +301,7 @@
 - type: marking
   id: AppendagesScorpion
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Arachnid ]
+  groupWhitelist: [ Arachnid ]
   sprites:
   - sprite: _Impstation/Mobs/Customization/Arachnid/tail.rsi
     state: scorpion

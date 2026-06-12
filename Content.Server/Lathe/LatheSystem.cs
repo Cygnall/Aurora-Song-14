@@ -67,7 +67,6 @@ namespace Content.Server.Lathe
         /// Per-tick cache
         /// </summary>
         private readonly List<GasMixture> _environments = new();
-        private const int MaxItemsPerRequest = 100_000; // Frontier
 
         public override void Initialize()
         {

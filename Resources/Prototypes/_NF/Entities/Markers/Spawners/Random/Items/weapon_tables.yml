@@ -142,7 +142,7 @@
       - id: WeaponCaseShortEnergySwordExpedition
       - id: WeaponCaseShortEnergyCutlassExpedition
       - id: WeaponCaseShortEnergySwordDoubleExpedition
-      - id: ClothingHandsGlovesBoxingRigged
+      - id: ClothingHandsGlovesBoxingRiggedRed # Aurora's Song - Add red for upmerge
       - id: UnholyHalberd
       - id: SecBreachingHammer
       #- id: ThrowingKnife

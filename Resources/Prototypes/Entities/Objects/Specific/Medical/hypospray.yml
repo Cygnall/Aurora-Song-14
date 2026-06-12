@@ -156,6 +156,8 @@
     allowedModes:
     - JetInjectorDynamicMode
     - JetInjectorInjectMode
+  - type: StaticPrice
+    price: 500
 
 - type: entity
   parent: JetInjector
@@ -184,6 +186,10 @@
     allowedModes:
     - AdvancedJetInjectorDynamicMode
     - AdvancedJetInjectorInjectMode
+  - type: UseDelay
+    delay: 1
+  - type: StaticPrice
+    price: 1000
 
 - type: entity
   parent: [ BaseClearContraband, SyndiHypo ] # Frontier: added BaseClearContraband

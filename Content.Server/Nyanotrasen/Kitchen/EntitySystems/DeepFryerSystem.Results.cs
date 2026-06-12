@@ -22,6 +22,8 @@ namespace Content.Server.Nyanotrasen.Kitchen.EntitySystems;
 
 public sealed partial class DeepFryerSystem
 {
+    private static readonly string Protein = "Protein"; // Aurora's Song
+
     /// <summary>
     ///     Make an item look deep-fried.
     /// </summary>
@@ -88,7 +90,7 @@ public sealed partial class DeepFryerSystem
 
                 var proteinQuantity = bloodRemoved * BloodToProteinRatio;
                 mobFoodSolution.MaxVolume += proteinQuantity;
-                mobFoodSolution.AddReagent("Protein", proteinQuantity);
+                mobFoodSolution.AddReagent(Protein, proteinQuantity); // Aurora's Song
 
                 // This is a heuristic. If you had blood, you might just taste meaty.
                 if (bloodRemoved > FixedPoint2.Zero)

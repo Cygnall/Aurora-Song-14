@@ -1,6 +1,7 @@
 ﻿using Content.Server.Actions;
 using Content.Server.Humanoid;
 using Content.Shared.Humanoid;
+using Content.Shared.Inventory;
 using Content.Shared.Toggleable;
 using Robust.Shared.Prototypes;
 
@@ -12,7 +13,7 @@ namespace Content.Server._AS.Togglable;
 public sealed class ToggleUndergarmentSystem : EntitySystem
 {
     [Dependency] private readonly ActionsSystem _actions = default!;
-    [Dependency] private readonly HumanoidAppearanceSystem _humanoid = default!;
+    [Dependency] private readonly SharedHideableHumanoidLayersSystem _humanoid = default!;
 
     private static readonly EntProtoId ToggleTopAction = "ActionToggleUndergarmentTop";
     private static readonly EntProtoId ToggleBottomAction = "ActionToggleUndergarmentBottom";
@@ -39,13 +40,13 @@ public sealed class ToggleUndergarmentSystem : EntitySystem
     {
         ent.Comp.UndergarmentTopEnabled = !ent.Comp.UndergarmentTopEnabled;
 
-        _humanoid.SetLayerVisibility(ent.Owner, UndergarmentTop, ent.Comp.UndergarmentTopEnabled);
+        _humanoid.SetLayerOcclusion(ent.Owner, UndergarmentTop, !ent.Comp.UndergarmentTopEnabled, SlotFlags.PREVENTEQUIP);
     }
 
     private void OnToggleBottom(Entity<ToggleUndergarmentComponent> ent, ref ToggleUndergarmentBottomActionEvent _)
     {
         ent.Comp.UndergarmentBottomEnabled = !ent.Comp.UndergarmentBottomEnabled;
 
-        _humanoid.SetLayerVisibility(ent.Owner, UndergarmentBottom, ent.Comp.UndergarmentBottomEnabled);
+        _humanoid.SetLayerOcclusion(ent.Owner, UndergarmentBottom, !ent.Comp.UndergarmentBottomEnabled, SlotFlags.PREVENTEQUIP);
     }
 }

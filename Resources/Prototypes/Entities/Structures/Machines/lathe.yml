@@ -56,6 +56,11 @@
   - type: TechnologyDatabase
   - type: MaterialStorageMagnetPickup # Frontier
     range: 0.30 # Frontier
+  - type: ApcPowerReceiver
+    powerLoad: 150
+  - type: PowerState
+    idlePowerDraw: 150
+    workingPowerDraw: 1000
 
 # a lathe that can be sped up with space lube / slowed down with glue
 - type: entity
@@ -435,6 +440,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticPacks:
     - SecurityEquipmentStatic
     - NfsdPracticeStatic # Frontier: SecurityPracticeStatic<NfsdPracticeStatic
@@ -484,6 +491,8 @@
     - type: Lathe
       idleState: icon
       runningState: icon
+      unlitIdleState: unlit
+      unlitRunningState: unlit-building
       staticPacks:
       - SLEAmmoStatic # Frontier: SecurityAmmoStatic<NfsdAmmoStatic, Aurora's Song - NFSD to SLE
       - NFMercenaryMagazineStatic
@@ -527,6 +536,8 @@
   - type: Lathe
     idleState: icon
     runningState: icon
+    unlitIdleState: unlit
+    unlitRunningState: unlit-building
     staticPacks:
     #- TopicalsStatic # Frontier
     #- ChemistryStatic # Frontier

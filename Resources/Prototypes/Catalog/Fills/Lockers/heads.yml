@@ -13,6 +13,8 @@
 #    - id: AstroNavCartridge # Frontier
 #    - id: ClothingHandsKnuckleDustersQM # Frontier
     - id: ClothingBeltUtilityEngineering # Frontier
+    - id: PlushieLizardJobQuartermaster
+      prob: 0.02
 
 - type: entity
   id: LockerQuarterMasterFilled
@@ -50,6 +52,8 @@
     #   conditions:
     #   - !type:PlayerCountCondition
     #     max: 15
+    - id: PlushieLizardJobCaptain
+      prob: 0.02
 
 # No laser table + Laser table
 - type: entityTable
@@ -133,6 +137,8 @@
     # - id: HoPIDCard # Frontier
 #    - id: WeaponDisabler # Frontier
 #    - id: ClothingEyesHudCommand # Frontier
+    - id: PlushieLizardJobHeadofpersonnel
+      prob: 0.02
 
 - type: entity
   id: LockerHeadOfPersonnelFilled
@@ -163,6 +169,8 @@
     # - id: RCDAmmo # Frontier
     - id: RubberStampCE
     - id: MetalFoamGrenade
+    - id: PlushieLizardJobChiefengineer
+      prob: 0.02
     - id: ShipyardRCD # Frontier
     - id: ShipyardRCDAmmo # Frontier
     - id: trayScanner # Frontier
@@ -212,22 +220,21 @@
   id: LockerFillChiefMedicalOfficerNoHardsuit
   table: !type:AllSelector
     children:
-#    - id: BoxEncryptionKeyMedical # Frontier - bloat
-#    - id: ClothingBackpackDuffelSurgeryFilled # Frontier - bloat
     - id: ClothingEyesHudMedical
-#    - id: ClothingHandsGlovesNitrile # Frontier - bloat
-    - id: ClothingHeadsetAltMedical
-#    - id: ClothingMaskSterile # Frontier - bloat
-#    - id: DoorRemoteMedical # Frontier - bloat
+    - id: ClothingBeltMedicalFilled
     - id: HandheldCrewMonitor
     # - id: Hypospray # Frontier - balance
     - id: HypoMini # Frontier
-    # - id: BoxCMOCircuitboards # Frontier - bloat
-    # - id: MedkitFilled # Frontier - bloat
-    # - id: RubberStampCMO # Frontier - MOM stamp
     - id: MedTekCartridge
-    - id: ClothingBeltMedicalFilled # Frontier - add more bloat
+    # Standard command gear
+    # - id: RubberStampCMO # Frontier - bloat
+    - id: ClothingHeadsetAltMedical
+    # - id: DoorRemoteMedical # Frontier - bloat
+    # - id: BoxEncryptionKeyMedical # Frontier - bloat
+    # - id: BoxCMOCircuitboards # Frontier - bloat
     - id: RubberStampDoctor # Frontier
+    - id: PlushieLizardJobChiefmedicalofficer
+      prob: 0.02
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -279,6 +286,8 @@
     # - id: DoorRemoteResearch # Frontier
     # - id: HandTeleporter # Frontier
     - id: RubberStampRd
+    - id: PlushieLizardJobResearchdirector
+      prob: 0.02
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable
@@ -352,6 +361,8 @@
     - id: ClothingOuterWinterHoS # Frontier: consistency with old fill
     - id: ClothingShoesBootsWinterHoS # Frontier: consistency with old fill
     - id: Demag # Frontier
+    - id: PlushieLizardJobHeadofsecurity
+      prob: 0.02
 
 # Hardsuit table, used for suit storage as well
 - type: entityTable

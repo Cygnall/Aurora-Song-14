@@ -279,6 +279,27 @@
         - id: ChameleonControllerImplanter
 
 - type: entity
+  parent: ClothingBackpackChameleon
+  id: ClothingBackpackChameleonFillAgent
+  suffix: Fill, Chameleon, Syndie
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ChameleonAgentPDA
+        - id: ClothingUniformJumpsuitChameleon
+        - id: ClothingOuterChameleon
+        - id: ClothingNeckChameleon
+        - id: ClothingMaskGasChameleon
+        - id: ClothingHeadHatChameleon
+        - id: ClothingHandsChameleon
+        - id: ClothingEyesChameleon
+        - id: ClothingHeadsetChameleon
+        - id: ClothingShoesChameleon
+        - id: ChameleonControllerImplanter
+
+- type: entity
   parent: ClothingBackpackDuffelSyndicateBundle
   id: ClothingBackpackDuffelSyndicateEVABundle
   name: syndicate EVA bundle
@@ -433,14 +454,13 @@
         - id: NFWeaponSubMachineGunC20r # Frontier: WeaponSubMachineGunC20r<NFWeaponSubMachineGunC20r
         - id: NFMagazineSubMachineGun35 # Frontier: MagazinePistolSubMachineGun<NFMagazineSubMachineGun35
           amount: 2 # Frontier: 3<2
-        - id: NFMagazinePistol35 # Frontier: MagazinePistol<NFMagazinePistol35
+        - id: EnergySword
         - id: SyndicateJawsOfLife
         - id: MedkitCombatFilled # Aurora's Song - Move up in spawn order
         - id: ClothingShoesBootsMagSyndie # Aurora's Song - Move up in spawn order
         - id: C4
           amount: 2
         - id: EmpImplanter
-        - id: AgentIDCard
 
 - type: entity
   abstract: true # Aurora's Song - Disable because "Invalid Prototype"

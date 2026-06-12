@@ -7,7 +7,9 @@
   flavor: drgibbbloodred
   color: "#570303"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink&Food>Digestion
+      metabolites:
+        UncookedAnimalProteins: 0.05
       effects:
       - !type:SatiateThirst
         factor: 2.0
@@ -15,8 +17,3 @@
         - !type:MetabolizerTypeCondition # Aurora's Song - OrganType>MetabolizerTypeCondition
           type: [ Human ]
           inverted: True
-    Food:
-      effects:
-        - !type:AdjustReagent
-          reagent: UncookedAnimalProteins
-          amount: 0.05

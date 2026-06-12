@@ -79,10 +79,7 @@
       solutionOnBody: false
       updateInterval: 0.25
       metabolizerTypes: [ Dragon ]
-      groups:
-        - id: Medicine
-        - id: Cryogenic # Frontier
-        - id: Poison
+      stages: [ "Bloodstream" ] # Aurora's Song - Replace with stages
     - type: Butcherable
       spawned:
         - id: MaterialBananium1
@@ -232,11 +229,10 @@
   name: Clown
   abstract: true
   parent:
-  - MobNonHumanHostileBase
-  - MobHumanoidInvetory
-  - NFBaseMobRestrictions
   - NFMobNoEquipmentOnGib # Aurora's Song - Make sure clowns don't drop stuff
   - BaseMobHumanSynthetic # Aurora's Song - Nubody
+  - MobHumanoidHostileBase # Aurora's Song - Nubody
+  - MobHumanoidInvetory
   id: MobClownBase
   description: A joyous, terrible thing, twisted and warped in The Honkmother's light.
   components:
@@ -321,11 +317,12 @@
   - type: Loadout
     prototypes:
       - ClownUIVClownGear
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _NF/Mobs/Species/Templates/human.rsi
-      state: human
+# Aurora's Song - Uses humanoidhostile now
+#  - type: Sprite
+#    drawdepth: Mobs
+#    layers:
+#    - sprite: _NF/Mobs/Species/Templates/human.rsi
+#      state: human
   - type: Stamina
     baseCritThreshold: 500
   - type: MobThresholds
@@ -366,12 +363,12 @@
     rechargeCooldown: 3
     rechargeSound:
       path: /Audio/_NF/Effects/silence.ogg
-
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _NF/Mobs/Species/Templates/human.rsi
-      state: human
+# Aurora's Song - Uses humanoidhostile now
+#  - type: Sprite
+#    drawdepth: Mobs
+#    layers:
+#    - sprite: _NF/Mobs/Species/Templates/human.rsi
+#      state: human
 
 - type: entity
   name: Horrid Clewne
@@ -384,11 +381,12 @@
   - type: Loadout
     prototypes:
       - ClownUIVCluwneGear
-  - type: Sprite
-    drawdepth: Mobs
-    layers:
-    - sprite: _NF/Mobs/Species/Templates/human.rsi
-      state: human
+# Aurora's Song - Uses humanoidhostile now
+#  - type: Sprite
+#    drawdepth: Mobs
+#    layers:
+#    - sprite: _NF/Mobs/Species/Templates/human.rsi
+#      state: human
   - type: Stamina
     baseCritThreshold: 500
   - type: MovementSpeedModifier

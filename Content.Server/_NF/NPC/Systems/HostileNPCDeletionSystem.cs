@@ -19,6 +19,8 @@ public sealed partial class HostileNPCDeletionSystem : EntitySystem
     [Dependency] private readonly SharedPopupSystem _popup = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
+    private const string NanoTrasen = "NanoTrasen"; // Aurora's Song
+
     public override void Initialize()
     {
         SubscribeLocalEvent<ActiveNPCComponent, ComponentStartup>(OnActiveNPCStartup);
@@ -46,7 +48,7 @@ public sealed partial class HostileNPCDeletionSystem : EntitySystem
         {
             if (protectedGrid.KillHostileMobs
                 && TryComp<NpcFactionMemberComponent>(uid, out var npcFactionMember)
-                && _npcFaction.IsFactionHostile("NanoTrasen", (uid, npcFactionMember)))
+                && _npcFaction.IsFactionHostile(NanoTrasen, (uid, npcFactionMember))) // Aurora's Song
             {
                 _audio.PlayPredicted(protectedGrid.HostileMobKillSound, xform.Coordinates, null);
                 _gibbingSystem.Gib(uid);

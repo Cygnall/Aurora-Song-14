@@ -438,6 +438,9 @@
   - type: LitOnPowered
   - type: ApcPowerReceiver
     powerLoad: 200
+  - type: PowerState # Aurora's Song - Required for test
+    idlePowerDraw: 200
+    workingPowerDraw: 1000
   - type: DatasetVocalizer
     dataset: CuddlyCritterAds
   - type: PointLight

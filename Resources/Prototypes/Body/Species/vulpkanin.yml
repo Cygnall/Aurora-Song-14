@@ -1,103 +1,101 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Vulpkanin
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      onlyGroupWhitelisted: true
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 3
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ VulpEar ]
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: true
+      default: [ VulpSnout ]
+    enum.HumanoidVisualLayers.SnoutCover:
+      limit: 3
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ VulpTail ] # Aurora's Song VulpTailVulp>VulpTail
+    enum.HumanoidVisualLayers.LArm:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.Chest: # Aurora's Song - matching human values
+      limit: 2
+      required: false
+# Aurora's Song - Use human undergarments
+#    enum.HumanoidVisualLayers.UndergarmentTop:
+#      limit: 1
+#      required: false
+#      nudityDefault: [ UndergarmentTopTanktopVulpkanin ]
+#    enum.HumanoidVisualLayers.UndergarmentBottom:
+#      limit: 1
+#      required: false
+#      nudityDefault: [ UndergarmentBottomBoxersVulpkanin ]
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceVulpkanin
   name: vulpkanin appearance
   components:
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganVulpkaninTorso
-        - id: OrganVulpkaninHead
-        - id: OrganVulpkaninArmLeft
-        - id: OrganVulpkaninArmRight
-        - id: OrganVulpkaninHandRight
-        - id: OrganVulpkaninHandLeft
-        - id: OrganVulpkaninLegLeft
-        - id: OrganVulpkaninLegRight
-        - id: OrganVulpkaninFootLeft
-        - id: OrganVulpkaninFootRight
-        - id: OrganVulpkaninBrain
-        - id: OrganVulpkaninEyes
-        - id: OrganVulpkaninTongue
-        - id: OrganVulpkaninAppendix
-        - id: OrganVulpkaninEars
-        - id: OrganVulpkaninLungs
-        - id: OrganVulpkaninHeart
-        - id: OrganVulpkaninStomach
-        - id: OrganVulpkaninLiver
-        - id: OrganVulpkaninKidneys
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganVulpkaninTorso
+      Head: OrganVulpkaninHead
+      ArmLeft: OrganVulpkaninArmLeft
+      ArmRight: OrganVulpkaninArmRight
+      HandRight: OrganVulpkaninHandRight
+      HandLeft: OrganVulpkaninHandLeft
+      LegLeft: OrganVulpkaninLegLeft
+      LegRight: OrganVulpkaninLegRight
+      FootLeft: OrganVulpkaninFootLeft
+      FootRight: OrganVulpkaninFootRight
+      Brain: OrganVulpkaninBrain
+      Eyes: OrganHumanEyes # Aurora's Song - Upstream appearance
+      Tongue: OrganVulpkaninTongue
+      Appendix: OrganVulpkaninAppendix
+      Ears: OrganVulpkaninEars
+      Lungs: OrganVulpkaninLungs
+      Heart: OrganVulpkaninHeart
+      Stomach: OrganVulpkaninStomach
+      Liver: OrganVulpkaninLiver
+      Kidneys: OrganVulpkaninKidneys
+  - type: HumanoidProfile
     species: Vulpkanin
-    # begin starcup: use delta-v sprites
-    # undergarmentTop: UndergarmentTopTanktopVulpkanin
-    # undergarmentBottom: UndergarmentBottomBoxersVulpkanin
-    # end starcup
-    hideLayersOnEquip:
-    - Snout
-    - SnoutCover
-    - HeadTop
-    - HeadSide
-    - FacialHair
-    - Hair
-    # begin starcup: use delta-v sprites
-    # markingsDisplacement:
-    #   Hair:
-    #     sizeMaps:
-    #       32:
-    #         sprite: Mobs/Species/Vulpkanin/displacement.rsi
-    #         state: hair
   - type: Inventory
     speciesId: vulpkanin
-#    displacements: # Aurora's Song - Disable displacements fully
-    # begin starcup: use delta-v sprites
-    #   jumpsuit:
-    #     sizeMaps:
-    #       32:
-    #         sprite: Mobs/Species/Vulpkanin/displacement.rsi
-    #         state: jumpsuit
-    #   back:
-    #     sizeMaps:
-    #       32:
-    #         sprite: Mobs/Species/Vulpkanin/displacement.rsi
-    #         state: back
-    #   outerClothing:
-    #     sizeMaps:
-    #       32:
-    #         sprite: Mobs/Species/Vulpkanin/displacement.rsi
-    #         state: outerwear
-    #   gloves:
-    #     sizeMaps:
-    #       32:
-    #         sprite: Mobs/Species/Vulpkanin/displacement.rsi
-    #         state: hand
-    #   shoes:
-    #     sizeMaps:
-    #       32:
-    #         sprite: Mobs/Species/Vulpkanin/displacement.rsi
-    #         state: shoes
-# Aurora's Song - Disable displacements fully
-#      head:
-#        sizeMaps:
-#          32:
-#            sprite: Mobs/Species/Vulpkanin/displacement.rsi
-#            state: head
-    #   neck:
-    #     sizeMaps:
-    #       32:
-    #        sprite: Mobs/Species/Vulpkanin/displacement.rsi
-    #         state: neck
-    #   eyes:
-    #     sizeMaps:
-    #       32:
-    #         sprite: Mobs/Species/Vulpkanin/displacement.rsi
-    #         state: eyes
-    #   belt:
-    #     sizeMaps:
-    #       32:
-    #         sprite: Mobs/Species/Vulpkanin/displacement.rsi
-    #         state: belt
-    # end starcup
+    # Aurora's Song - Remove displacements entirely
 
 - type: entity
   parent:
@@ -106,8 +104,15 @@
   id: MobVulpkanin
   name: Urist McArfArf
   components:
-#  - type: MessyDrinker # starcup
-#    spillChance: 0.33
+  - type: DamageVisuals
+    damageOverlayGroups:
+      Brute:
+        sprite: Mobs/Effects/brute_damage.rsi
+        color: "#cf0000" # Aurora's Song - set vulpkanin damage overlay back to red to match their red blood
+      Burn:
+        sprite: Mobs/Effects/burn_damage.rsi
+  #  - type: MessyDrinker # starcup
+  #    spillChance: 0.33
   - type: Speech
     speechSounds: Vulpkanin
     speechVerb: Vulpkanin
@@ -128,19 +133,19 @@
         Piercing: 2
         Slash: 3
   - type: DogVision # Aurora's Song - Add back missing traits
-  - type: Temperature # Same as moth temperatures until below is solved.
+  - type: Temperature
     specificHeat: 44
   - type: TemperatureDamage
-    heatDamageThreshold: 320 # TODO: 315 when there is a way to make the temperature alert not blink to the side of the screen and disappear when you "sweat" at 39C.
-    coldDamageThreshold: 230 # TODO: 220 when the above is solved.
+    heatDamageThreshold: 320
+    coldDamageThreshold: 230
     coldDamage:
       types:
         Cold: 0.05 # Per second, scales with temperature & other constants
     heatDamage:
       types:
         Heat: 2.5 # Per second, scales with temperature & other constants
-  - type: Wagging # Aurora's Song - Add back Wagging
-  #   action: ActionToggleWaggingVulpkanin
+  - type: Wagging
+    action: ActionToggleWaggingVulpkanin
   - type: TemperatureProtection
     heatingCoefficient: 1.2
     coolingCoefficient: 0.3
@@ -155,6 +160,12 @@
 #        pitch: 1.33
 #        volume: -5
 #        variation: 0.05
+# Aurora's Song - Disable sulfur organs
+#  - type: Bloodstream
+#    bloodReferenceSolution:
+#      reagents:
+#      - ReagentId: SulfurBlood
+#        Quantity: 300
   # Frontier: interaction & tall/short traits
   - type: ShortWhitelist
     scale: 0.8
@@ -184,10 +195,21 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: Mobs/Species/Human/organs.rsi
+    sprite: Mobs/Species/Human/organs.rsi # Aurora's Song - Use human organs
 
 - type: entity
-  parent: OrganVulpkanin
+  id: OrganVulpkaninVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _DV/Mobs/Species/Vulpkanin/parts.rsi # starcup: use delta-v sprites
+  - type: VisualOrganMarkings
+    markingData:
+      group: Vulpkanin
+
+- type: entity
+  parent: [ OrganVulpkanin, OrganVulpkaninVisual ]
   id: OrganVulpkaninExternal
   abstract: true
   components:
@@ -195,12 +217,23 @@
     sprite: _DV/Mobs/Species/Vulpkanin/parts.rsi # starcup: use delta-v sprites
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganVulpkaninExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganVulpkaninExternal ]
   id: OrganVulpkaninTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganVulpkaninExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganVulpkaninExternal ] # Aurora's Song - Add sexed organs
   id: OrganVulpkaninHead
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.HeadSide
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.FacialHair
+    dependentHidingLayers:
+      enum.HumanoidVisualLayers.Snout:
+      - enum.HumanoidVisualLayers.SnoutCover
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganVulpkaninExternal ]
@@ -238,20 +271,21 @@
   parent: [ OrganBaseBrain, OrganSpriteHumanInternal, OrganVulpkaninInternal ]
   id: OrganVulpkaninBrain
 
-- type: entity
-  parent: [ OrganBaseEyes, OrganVulpkaninInternal ]
-  id: OrganVulpkaninEyes
+# Aurora's Song - Use human eyes
+# - type: entity
+#   parent: [ OrganVulpkaninVisual, OrganBaseEyes, OrganVulpkaninInternal ]
+#   id: OrganVulpkaninEyes
 
 - type: entity
   parent: [ OrganBaseTongue, OrganVulpkaninInternal ]
   id: OrganVulpkaninTongue
 
 - type: entity
-  parent: [ OrganBaseAppendix, OrganSpriteHumanInternal, OrganVulpkaninInternal ]
+  parent: [ OrganBaseAppendix, OrganVulpkaninInternal ]
   id: OrganVulpkaninAppendix
 
 - type: entity
-  parent: [ OrganBaseEars, OrganSpriteHumanInternal, OrganVulpkaninInternal ]
+  parent: [ OrganBaseEars, OrganVulpkaninInternal ]
   id: OrganVulpkaninEars
 
 - type: entity
@@ -267,9 +301,9 @@
   id: OrganVulpkaninStomach
 
 - type: entity
-  parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganVulpkaninInternal, OrganVulpkaninMetabolizer ]
+  parent: [ OrganBaseLiver, OrganVulpkaninInternal, OrganVulpkaninMetabolizer ]
   id: OrganVulpkaninLiver
 
 - type: entity
-  parent: [ OrganBaseKidneys, OrganSpriteHumanInternal, OrganVulpkaninInternal, OrganVulpkaninMetabolizer ]
+  parent: [ OrganBaseKidneys, OrganVulpkaninInternal, OrganVulpkaninMetabolizer ]
   id: OrganVulpkaninKidneys

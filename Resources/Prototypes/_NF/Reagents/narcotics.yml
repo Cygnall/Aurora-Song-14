@@ -6,8 +6,9 @@
   physicalDesc: reagent-physical-desc-rocky
   flavor: salty
   color: "#794c00"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   metabolisms:
-    Narcotic:
+    Bloodstream: # Aurora's Song - Narcotic>Bloodstream
       effects:
       # Effects for non-dwarfs
       - !type:Emote
@@ -59,13 +60,14 @@
   physicalDesc: reagent-physical-desc-murky
   flavor: bitter
   color: "#383351"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   plantMetabolism:
   - !type:PlantAdjustNutrition
     amount: -5
   - !type:PlantAdjustHealth
     amount: -1
   metabolisms:
-    Narcotic:
+    Bloodstream: # Aurora's Song - Narcotic>Bloodstream
       effects:
       # Effects for goblins
       - !type:GenericStatusEffect

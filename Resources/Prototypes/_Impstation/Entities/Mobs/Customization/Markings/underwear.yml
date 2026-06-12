@@ -2,7 +2,6 @@
   parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UnderwearDefault
   bodyPart: UndergarmentBottom
-  markingCategory: UndergarmentBottom
   coloring:
     default:
       type:
@@ -15,7 +14,6 @@
 - type: marking
   id: UnderwearBriefs
   bodyPart: UndergarmentBottom
-  markingCategory: UndergarmentBottom
   coloring:
     default:
       type:
@@ -29,7 +27,6 @@
   parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UnderwearLowriders
   bodyPart: UndergarmentBottom
-  markingCategory: UndergarmentBottom
   coloring:
     default:
       type:
@@ -42,8 +39,7 @@
 #- type: marking # Aurora's Song - removed duplicate
 #  id: UnderwearSatin
 #  bodyPart: UndergarmentBottom
-#  markingCategory: UndergarmentBottom
-#  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
+#  groupWhitelist: [Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
 #  coloring:
 #    default:
 #      type:
@@ -57,7 +53,6 @@
   parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UnderwearTanga
   bodyPart: UndergarmentBottom
-  markingCategory: UndergarmentBottom
   coloring:
     default:
       type:

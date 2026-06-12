@@ -10,7 +10,7 @@ using Robust.Shared.Input;
 
 namespace Content.Client.UserInterface.Controls;
 
-public class ResizableControl : Control
+public sealed class ResizableControl : Control
 {
     public DragMode CurrentDrag = DragMode.None;
     public DragMode AllowedResizeDirection { get; set; } = DragMode.Any;
@@ -117,7 +117,7 @@ public class ResizableControl : Control
             DefaultCursorShape = CursorShape.Arrow;
     }
 
-    protected virtual DragMode GetDragModeFor(Vector2 relativeMousePos)
+    private DragMode GetDragModeFor(Vector2 relativeMousePos)
     {
         var mode = DragMode.None;
 

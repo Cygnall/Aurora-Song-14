@@ -118,7 +118,7 @@
       maxItemSize: Huge
       blacklist:
         components:
-        - HumanoidAppearance
+        - HumanoidProfile # Aurora's Song HumanoidAppearance>HumanoidProfile
     - type: ContainerContainer
       containers:
         storagebase: !type:Container

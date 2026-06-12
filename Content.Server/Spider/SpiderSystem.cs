@@ -1,7 +1,5 @@
 using System.Linq;
 using Content.Server.Popups;
-using System.Linq;
-using Content.Server.Popups;
 using Content.Shared.Spider;
 using Content.Shared.Maps;
 using Content.Shared.Mobs.Systems;

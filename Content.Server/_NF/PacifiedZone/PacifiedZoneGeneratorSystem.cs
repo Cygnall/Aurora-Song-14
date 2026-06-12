@@ -49,7 +49,7 @@ public sealed class PacifiedZoneGeneratorSystem : EntitySystem
         var genQuery = AllEntityQuery<PacifiedZoneGeneratorComponent>();
         while (genQuery.MoveNext(out var genUid, out var component))
         {
-            // Not yet update time, skip this 
+            // Not yet update time, skip this
             if (_gameTiming.CurTime < component.NextUpdate)
                 continue;
 
@@ -60,7 +60,7 @@ public sealed class PacifiedZoneGeneratorSystem : EntitySystem
     private void UpdatePacifiedState(EntityUid genUid, PacifiedZoneGeneratorComponent component)
     {
         List<EntityUid> newEntities = new List<EntityUid>();
-        var query = _lookup.GetEntitiesInRange<HumanoidAppearanceComponent>(Transform(genUid).Coordinates, component.Radius);
+        var query = _lookup.GetEntitiesInRange<HumanoidProfileComponent>(Transform(genUid).Coordinates, component.Radius); // Aurora's Song - Nubody
         foreach (var humanoidUid in query)
         {
             // Check preconditions for an entity to be pacified at all.

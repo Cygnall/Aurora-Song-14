@@ -34,11 +34,9 @@ public sealed partial class ContrabandTurnInSystem : SharedContrabandTurnInSyste
 {
     [Dependency] private readonly IPrototypeManager _protoMan = default!;
     [Dependency] private readonly AudioSystem _audio = default!; // Aurora
-    [Dependency] private readonly AccessReaderSystem _reader = default!; // Aurora
     [Dependency] private readonly PopupSystem _popup = default!; // Aurora
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
     [Dependency] private readonly HandsSystem _hands = default!;
-    [Dependency] private readonly InventorySystem _inventory = default!; // Aurora
     [Dependency] private readonly StackSystem _stack = default!;
     [Dependency] private readonly StationSystem _station = default!;
     [Dependency] private readonly TransformSystem _transform = default!;

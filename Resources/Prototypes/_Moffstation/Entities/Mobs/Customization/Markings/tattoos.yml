@@ -1,8 +1,7 @@
 - type: marking
   id: AvaliTattooEyeLeft
   bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [ Avali ]
+  groupWhitelist: [ Avali ]
   sprites:
   - sprite: _Moffstation/Mobs/Customization/Avali/avali_eyes.rsi
     state: eye_left
@@ -10,8 +9,7 @@
 - type: marking
   id: AvaliTattooEyeRight
   bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [ Avali ]
+  groupWhitelist: [ Avali ]
   sprites:
   - sprite: _Moffstation/Mobs/Customization/Avali/avali_eyes.rsi
     state: eye_right

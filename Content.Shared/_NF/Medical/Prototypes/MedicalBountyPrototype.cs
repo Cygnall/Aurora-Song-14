@@ -1,3 +1,4 @@
+/** Aurora's Song - Disable NF medical bounty system
 using Content.Shared.Chemistry.Reagent;
 using Content.Shared.Damage.Prototypes;
 using Robust.Shared.Prototypes;
@@ -93,3 +94,4 @@ public partial record struct RandomReagentPreset
     [DataField("value")]
     public int ValuePerPoint;
 }
+*/

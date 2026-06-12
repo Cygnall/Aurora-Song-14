@@ -112,7 +112,7 @@ public sealed class LinkedLifecycleGridSystem : EntitySystem
         // End Aurora Song
 
         // Get player characters
-        var mobQuery = AllEntityQuery<HumanoidAppearanceComponent, BankAccountComponent, TransformComponent>();
+        var mobQuery = AllEntityQuery<HumanoidProfileComponent, BankAccountComponent, TransformComponent>(); // Aurora's Song - Nubody
         while (mobQuery.MoveNext(out var mobUid, out _, out _, out var xform))
         {
             handledMindContainers.Add(mobUid);

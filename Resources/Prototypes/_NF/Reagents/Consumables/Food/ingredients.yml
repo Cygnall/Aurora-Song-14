@@ -8,7 +8,7 @@
   physicalDesc: reagent-physical-desc-powdery
   recognizable: true # "Waiter, there seems to be grounds in my coffee."
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
       effects:
       - !type:SatiateHunger
         factor: 0.1
@@ -27,7 +27,7 @@
   viscosity: 0.5
   recognizable: true
   metabolisms:
-    Food:
+    Digestion: # Aurora's Song - Food>Digestion
       effects:
       - !type:SatiateHunger
         conditions:

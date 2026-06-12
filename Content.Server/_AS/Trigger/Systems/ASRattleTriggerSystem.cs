@@ -52,7 +52,7 @@ public sealed class ASRattleTriggerSystem : XOnTriggerSystem<RattleOnTriggerComp
 
         // Frontier: Gets species of the implant user
         var speciesText = $"";
-        if (TryComp<HumanoidAppearanceComponent>(implanted.ImplantedEntity, out var species))
+        if (TryComp<HumanoidProfileComponent>(implanted.ImplantedEntity, out var species)) // Aurora's Song - Nubody
         {
 
             if (HasComp<ReplicantComponent>(implanted.ImplantedEntity)) // AS: Replika

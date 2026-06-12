@@ -9,8 +9,7 @@
 - type: marking
   id: OviniaEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/ear_markings.rsi
     state: ovinia-ears
@@ -21,8 +20,7 @@
 - type: marking
   id: OviniaTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/tail_markings.rsi
     state: ovinia-tail
@@ -31,8 +29,7 @@
 - type: marking
   id: OviniaEarsCow
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia, Human ]
+  groupWhitelist: [ Ovinia, Human ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/ear_markings.rsi
     state: cow-ears
@@ -42,8 +39,7 @@
 - type: marking
   id: OviniaEarsDeer
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia, Human ]
+  groupWhitelist: [ Ovinia, Human ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/ear_markings.rsi
     state: deer-ears
@@ -53,8 +49,7 @@
 - type: marking
   id: OviniaEarsHorse
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia, Human ]
+  groupWhitelist: [ Ovinia, Human ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/ear_markings.rsi
     state: horse-ears
@@ -65,8 +60,7 @@
 - type: marking
   id: OviniaNeckfluff
   bodyPart: NeckFluff
-  markingCategory: NeckFluff
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/head_markings.rsi
     state: ovinia-neck-fluff
@@ -75,8 +69,7 @@
 - type: marking
   id: OviniaLambHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/horn_markings.rsi
     state: lamb-horns
@@ -84,8 +77,7 @@
 - type: marking
   id: OviniaRamHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/horn_markings.rsi
     state: ovinia-ram-horns
@@ -93,8 +85,7 @@
 - type: marking
   id: OviniaPointyHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/horn_markings.rsi
     state: ovinia-pointy-horns
@@ -102,8 +93,7 @@
 - type: marking
   id: OviniaCurvedHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/horn_markings.rsi
     state: ovinia-curved-horns
@@ -111,8 +101,7 @@
 - type: marking
   id: OviniaDeerHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/horn_markings.rsi
     state: ovinia-deer-horns
@@ -120,8 +109,7 @@
 - type: marking
   id: OviniaDevilHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/horn_markings.rsi
     state: ovinia-devil-horns
@@ -129,8 +117,7 @@
 - type: marking
   id: OviniaBaphometHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/horn_markings.rsi
     state: ovinia-baphomet-horns
@@ -138,8 +125,7 @@
 - type: marking
   id: OviniaIbexHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/horn_markings.rsi
     state: ovinia-ibex-horns
@@ -147,8 +133,7 @@
 - type: marking
   id: OviniaJacobHorns
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [ Ovinia, Human ]
+  groupWhitelist: [ Ovinia, Human ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/horn_markings.rsi
     state: jacob-horns
@@ -157,8 +142,7 @@
 - type: marking
   id: OviniaFace
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/snout_markings.rsi
     state: ovinia-face
@@ -168,8 +152,7 @@
 - type: marking
   id: OviniaBlaze
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/snout_markings.rsi
     state: ovinia-blaze
@@ -179,8 +162,7 @@
 - type: marking
   id: OviniaSnout
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/snout_markings.rsi
     state: ovinia-snout
@@ -191,8 +173,7 @@
 - type: marking
   id: OviniaTummy
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/body_markings.rsi
     state: ovinia-tummy
@@ -200,8 +181,7 @@
 - type: marking
   id: OviniaChestFullMasc
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sexRestriction: [ Female ]
   invertSexRestriction: true
   sprites:
@@ -211,8 +191,7 @@
 - type: marking
   id: OviniaChestFullFem
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sexRestriction: [ Male ]
   invertSexRestriction: true
   sprites:
@@ -222,8 +201,7 @@
 - type: marking
   id: OviniaPatternFawn
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   coloring:
     default:
       type: !type:SimpleColoring
@@ -235,8 +213,7 @@
 - type: marking
   id: OviniaPatternCattleMasc
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sexRestriction: [ Female ]
   invertSexRestriction: true
   coloring:
@@ -249,8 +226,7 @@
 - type: marking
   id: OviniaPatternCattleFem
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sexRestriction: [ Male ]
   invertSexRestriction: true
   coloring:
@@ -264,8 +240,7 @@
 - type: marking
   id: OviniaLeftLegValais
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/body_markings.rsi
     state: ovinia-leg-valais-left
@@ -273,8 +248,7 @@
 - type: marking
   id: OviniaRightLegValais
   bodyPart: RLeg
-  markingCategory: Legs
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/body_markings.rsi
     state: ovinia-leg-valais-right
@@ -283,8 +257,7 @@
 - type: marking
   id: OviniaLeftHoof
   bodyPart: LFoot
-  markingCategory: Legs
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/feet_markings.rsi
     state: ovinia-hoof-left
@@ -292,8 +265,7 @@
 - type: marking
   id: OviniaRightHoof
   bodyPart: RFoot
-  markingCategory: Legs
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/feet_markings.rsi
     state: ovinia-hoof-right
@@ -302,8 +274,7 @@
 - type: marking
   id: OviniaLeftArmValais
   bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/body_markings.rsi
     state: ovinia-arm-valais-left
@@ -311,8 +282,7 @@
 - type: marking
   id: OviniaRightArmValais
   bodyPart: RArm
-  markingCategory: Arms
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   sprites:
   - sprite: _DEN/Mobs/Customization/Ovinia/body_markings.rsi
     state: ovinia-arm-valais-right
@@ -321,8 +291,7 @@
 - type: marking
   id: OviniaLeftHandHoof
   bodyPart: LHand
-  markingCategory: Arms # Aurora's Song - Hand category not available
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   coloring:
     default:
       type: !type:SimpleColoring
@@ -334,8 +303,7 @@
 - type: marking
   id: OviniaRightHandHoof
   bodyPart: RHand
-  markingCategory: Arms # Aurora's Song - Hand category not available
-  speciesRestriction: [ Ovinia ]
+  groupWhitelist: [ Ovinia ] # Aurora's Song - Convert to group whitelist
   coloring:
     default:
       type: !type:SimpleColoring

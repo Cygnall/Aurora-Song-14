@@ -110,7 +110,6 @@
     slots: WITHOUT_POCKET
   - type: Tag
     tags:
-    - CorgiWearable
     - WhitelistChameleon
   # Aurora's Song - Disable tail hiding
   # - type: HideLayerClothing
@@ -291,7 +290,6 @@
     slots: WITHOUT_POCKET
   - type: Tag
     tags:
-    - CorgiWearable
     - WhitelistChameleon
   - type: AddAccentClothing
     accent: OwOAccent # Aurora's Song - BarkAccent>OwOAccent

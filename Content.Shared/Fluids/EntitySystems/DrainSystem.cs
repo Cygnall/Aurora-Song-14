@@ -24,6 +24,7 @@ namespace Content.Shared.Fluids.EntitySystems;
 /// <summary>
 /// Handles the draining of solutions from containers into drains.
 /// </summary>
+[Virtual] // Aurora's Song - For AdvDrainSystem
 public class DrainSystem : EntitySystem // Aurora's Song - Remove sealed
 {
     [Dependency] private readonly EntityLookupSystem _lookup = default!;
@@ -246,10 +247,7 @@ public class DrainSystem : EntitySystem // Aurora's Song - Remove sealed
         if (args.Target == null)
             return;
 
-        // TODO: Replace with RandomPredicted once the engine PR is merged
-        var seed = SharedRandomExtensions.HashCodeCombine((int)_timing.CurTick.Value, ent.Owner.GetHashCode());
-        var rand = new System.Random(seed);
-        if (!rand.Prob(ent.Comp.UnclogProbability))
+        if (!SharedRandomExtensions.PredictedProb(_timing, ent.Comp.UnclogProbability, GetNetEntity(ent)))
         {
             _popup.PopupPredicted(Loc.GetString("drain-component-unclog-fail", ("object", args.Target.Value)), args.Target.Value, args.User);
             return;

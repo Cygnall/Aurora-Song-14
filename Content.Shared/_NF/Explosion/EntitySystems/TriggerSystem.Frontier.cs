@@ -17,8 +17,8 @@ namespace Content.Shared.Trigger.Systems;
 public sealed partial class TriggerSystem
 {
     [Dependency] private readonly SharedContainerSystem _container = default!;
-    [Dependency] private readonly GibbingSystem _gibbing = default!;
-    [Dependency] private readonly SharedStationSystem _station = default!;
+    // [Dependency] private readonly GibbingSystem _gibbing = default!; // Aurora's Song
+    // [Dependency] private readonly SharedStationSystem _station = default!; // Aurora's Song
     [Dependency] private readonly InventorySystem _inventory = default!;
 
 

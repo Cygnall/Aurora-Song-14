@@ -48,8 +48,8 @@ namespace Content.Server.NPC.Systems
         [Dependency] private readonly IConfigurationManager _configurationManager = default!;
         [Dependency] private readonly HTNSystem _htn = default!;
         [Dependency] private readonly MobStateSystem _mobState = default!;
-        [Dependency] private readonly NPCSteeringSystem _steering = default!;
-        [Dependency] private readonly SharedTransformSystem _transform = default!;
+        // [Dependency] private readonly NPCSteeringSystem _steering = default!; // Aurora's Song
+        // [Dependency] private readonly SharedTransformSystem _transform = default!; // Aurora's Song
         [Dependency] private readonly IPlayerManager _playerManager = default!;
 
         /// <summary>

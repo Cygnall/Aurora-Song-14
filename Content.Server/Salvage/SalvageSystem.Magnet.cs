@@ -48,7 +48,19 @@ public sealed partial class SalvageSystem
             return;
         }
 
-        TakeMagnetOffer((station.Value, dataComp), args.Index, (uid, component));
+        var index = args.Index;
+        async void TryTakeMagnetOffer()
+        {
+            try
+            {
+                await TakeMagnetOffer((station.Value, dataComp), index, (uid, component));
+            }
+            catch (Exception e)
+            {
+                _runtimeLog.LogException(e, $"{nameof(SalvageSystem)}.{nameof(TakeMagnetOffer)}");
+            }
+        }
+        TryTakeMagnetOffer();
     }
 
     private void OnMagnetStartup(EntityUid uid, SalvageMagnetComponent component, ComponentStartup args)

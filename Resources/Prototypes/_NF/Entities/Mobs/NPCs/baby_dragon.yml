@@ -118,10 +118,7 @@
   - type: Metabolizer
     solutionOnBody: false
     metabolizerTypes: [ Dragon ]
-    groups:
-    - id: Medicine
-    - id: Cryogenic
-    - id: Poison
+    stages: [ "Bloodstream" ] # Aurora's Song - Replace with stages
   - type: Butcherable
     spawned:
     - id: FoodMeatDragon

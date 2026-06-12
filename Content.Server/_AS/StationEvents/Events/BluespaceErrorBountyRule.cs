@@ -44,7 +44,6 @@ namespace Content.Server._AS.StationEvents.Events;
 public sealed class BluespaceErrorBountyRule : StationEventSystem<BluespaceErrorBountyRuleComponent>
 {
     NanotrasenNameGenerator _nameGenerator = new();
-    [Dependency] private readonly IMapManager _mapManager = default!;
     [Dependency] private readonly MapSystem _map = default!;
     [Dependency] private readonly SharedMapSystem _mapSystem = default!;
     [Dependency] private readonly IPrototypeManager _protoManager = default!;
@@ -58,7 +57,6 @@ public sealed class BluespaceErrorBountyRule : StationEventSystem<BluespaceError
     [Dependency] private readonly ShuttleSystem _shuttle = default!;
     [Dependency] private readonly LinkedLifecycleGridSystem _linkedLifecycleGrid = default!;
     [Dependency] private readonly SharedSalvageSystem _salvage = default!;
-    [Dependency] private readonly StationSystem _stationSystem = default!;
     [Dependency] private readonly RadioSystem _radio = default!;
     [Dependency] private readonly StationRenameWarpsSystems _renameWarps = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!; // Aurora Song

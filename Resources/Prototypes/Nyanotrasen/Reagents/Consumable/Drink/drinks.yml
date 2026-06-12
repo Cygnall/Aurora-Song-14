@@ -13,13 +13,12 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
+      metabolites:
+        Radium: 0.01
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        reagent: Radium
-        amount: 0.01
 
 - type: reagent
   id: PinkDrink
@@ -36,7 +35,7 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
       effects:
       - !type:SatiateThirst
         factor: 3
@@ -56,13 +55,10 @@
   metamorphicFillBaseName: fill-
   metamorphicChangeColor: false
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
+      metabolites:
+        Sugar: 0.2
+        Nutriment: 0.1
       effects:
       - !type:SatiateThirst
         factor: 3
-      - !type:AdjustReagent
-        reagent: Sugar
-        amount: 0.2
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.1

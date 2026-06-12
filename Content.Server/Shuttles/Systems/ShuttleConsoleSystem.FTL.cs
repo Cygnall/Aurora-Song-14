@@ -21,9 +21,10 @@ namespace Content.Server.Shuttles.Systems;
 public sealed partial class ShuttleConsoleSystem
 {
     // Begin Mono
-    [Dependency] private readonly IMapManager _mapManager = default!;
+    // [Dependency] private readonly IMapManager _mapManager = default!; // Aurora's Song
     [Dependency] private readonly SharedShuttleSystem _sharedShuttle = default!;
     [Dependency] private readonly SharedAudioSystem _audio = default!;
+    [Dependency] private readonly EntityManager _entity = default!;
 
     private readonly SoundSpecifier _errorSound = new SoundPathSpecifier("/Audio/Effects/Cargo/buzz_sigh.ogg")
     {
@@ -201,7 +202,7 @@ public sealed partial class ShuttleConsoleSystem
                 continue;
 
             // If we have a docked entity, get its grid
-            if (TryComp<TransformComponent>(dock.DockedWith.Value, out var dockedXform) && dockedXform.GridUid != null)
+            if (_entity.TryGetComponent<TransformComponent>(dock.DockedWith.Value, out var dockedXform) && dockedXform.GridUid != null)
             {
                 if (TryComp<FTLLockComponent>(dockedXform.GridUid.Value, out var ftlLock) && ftlLock.Enabled) // AS
                 {
@@ -222,7 +223,7 @@ public sealed partial class ShuttleConsoleSystem
                         continue;
 
                     // If we have a docked entity and it's not our ship, add its grid to the exclusion list
-                    if (TryComp<TransformComponent>(parentDock.DockedWith.Value, out var siblingDockedXform) &&
+                    if (_entity.TryGetComponent<TransformComponent>(parentDock.DockedWith.Value, out var siblingDockedXform) &&
                         siblingDockedXform.GridUid != null &&
                         siblingDockedXform.GridUid != shuttleUid.Value) // AS
                     {

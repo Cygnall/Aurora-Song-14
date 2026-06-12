@@ -13,7 +13,7 @@ namespace Content.Shared._AS.Medical.Prototypes;
 /// Aurora Song: Prototype for AS medical bounties - defines damage and reagents
 /// that must be healed in order to receive a reward.
 /// </summary>
-[Prototype("aSMedicalBounty")]
+[Prototype]
 public sealed partial class ASMedicalBountyPrototype : IPrototype
 {
     /// <inheritdoc/>

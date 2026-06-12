@@ -1,4 +1,4 @@
-
+/** Aurora's Song - Disable NF med bounty system
 using System.Linq;
 using Content.Server._NF.Bank;
 using Content.Server._NF.Medical.Components;
@@ -308,3 +308,4 @@ public sealed partial class MedicalBountySystem : EntitySystem
         return new MedicalBountyRedemptionUIState(MedicalBountyRedemptionStatus.Valid, int.Max(bountyPayout, 0), paidToStation);
     }
 }
+*/

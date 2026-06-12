@@ -107,6 +107,8 @@
     - type: Tag
       tags:
         - CannotSuicide
+        - StunImmune
+        - SlowImmune
     - type: AnimatedEmotes # goob edit - animated emotes
 
 # From the uplink injector
@@ -234,15 +236,6 @@
         Hand:
           location: Left
     - type: ComplexInteraction
-    - type: Clumsy
-      gunShootFailDamage:
-        types:
-          Blunt: 5
-          Piercing: 4
-          Heat: 3
-      catchingFailDamage:
-        types:
-          Blunt: 1
     - type: MeleeWeapon
       angle: 30
       animation: WeaponArcFist
@@ -258,9 +251,6 @@
       nameSegments:
       - NamesClown
     # Frontier: no faction/NPC behaviour
-    # - type: NpcFactionMember
-    #   factions:
-    #     - Syndicate
     # - type: HTN
     #   rootTask:
     #     task: SimpleHumanoidHostileCompound

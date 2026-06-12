@@ -29,7 +29,7 @@ public abstract class SharedCustomExamineSystem : EntitySystem
 
     [Dependency] private readonly SharedConsentSystem _consent = default!;
     [Dependency] private readonly ExamineSystemShared _examine = default!;
-    [Dependency] private readonly ISharedAdminManager _admin = default!;
+    // [Dependency] private readonly ISharedAdminManager _admin = default!; // Aurora's Song
     [Dependency] private readonly IGameTiming _timing = default!;
     [Dependency] private readonly ActionBlockerSystem _actionBlocker = default!;
 

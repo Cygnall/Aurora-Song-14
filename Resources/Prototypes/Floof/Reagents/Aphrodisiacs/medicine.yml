@@ -7,7 +7,7 @@
   flavor: fruity
   color: "#45072f"
   metabolisms:
-    Medicine:
+    Bloodstream: # Aurora's Song - Medicine>Bloodstream
       metabolismRate : 0.03
       effects:
       - !type:PopupMessage
@@ -80,7 +80,7 @@
   flavor: sweet
   color: "#ae0072"
   metabolisms:
-    Medicine:
+    Bloodstream: # Aurora's Song - Medicine>Bloodstream
       metabolismRate : 0.02
       effects:
       - !type:PopupMessage

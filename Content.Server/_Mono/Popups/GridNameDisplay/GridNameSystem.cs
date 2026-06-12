@@ -13,9 +13,9 @@ namespace Content.Server._Mono.Popups.GridNameDisplay;
 /// </summary>
 public sealed class GridNameSystem : EntitySystem
 {
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly PlayerSystem _playerSystem = default!;
+    // [Dependency] private readonly IPlayerManager _playerManager = default!; // Aurora's Song
+    // [Dependency] private readonly SharedTransformSystem _transform = default!; // Aurora's Song
+    // [Dependency] private readonly PlayerSystem _playerSystem = default!; // Aurora's Song
 
     public override void Initialize()
     {

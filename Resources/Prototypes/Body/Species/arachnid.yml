@@ -1,3 +1,42 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Arachnid
+  onlyGroupWhitelisted: true
+  limits:
+    enum.HumanoidVisualLayers.Eyes:
+      limit: 1
+      required: true
+      default: [ ArachnidEyesDefault ]
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1 # imp 0<1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ ArachnidAppendagesDefault ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: true
+      default: [ ArachnidCheliceraeDownwards ]
+    enum.HumanoidVisualLayers.LArm:
+      limit: 8 # imp 2<8
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 8 # imp 2<8
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 8 # imp 2<8
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 8 # imp 2<8
+      required: false
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceArachnid
@@ -6,37 +45,30 @@
   - type: Inventory
     templateId: arachnid
     speciesId: arachnid
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganArachnidTorso
-        - id: OrganArachnidHead
-        - id: OrganArachnidArmLeft
-        - id: OrganArachnidArmRight
-        - id: OrganArachnidHandRight
-        - id: OrganArachnidHandLeft
-        - id: OrganArachnidLegLeft
-        - id: OrganArachnidLegRight
-        - id: OrganArachnidFootLeft
-        - id: OrganArachnidFootRight
-        - id: OrganArachnidBrain
-        - id: OrganArachnidEyes
-        - id: OrganArachnidTongue
-        - id: OrganArachnidAppendix
-        - id: OrganArachnidEars
-        - id: OrganArachnidLungs
-        - id: OrganArachnidHeart
-        - id: OrganArachnidStomach
-        - id: OrganArachnidLiver
-        - id: OrganArachnidKidneys
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganArachnidTorso
+      Head: OrganArachnidHead
+      ArmLeft: OrganArachnidArmLeft
+      ArmRight: OrganArachnidArmRight
+      HandRight: OrganArachnidHandRight
+      HandLeft: OrganArachnidHandLeft
+      LegLeft: OrganArachnidLegLeft
+      LegRight: OrganArachnidLegRight
+      FootLeft: OrganArachnidFootLeft
+      FootRight: OrganArachnidFootRight
+      Brain: OrganArachnidBrain
+      Eyes: OrganArachnidEyes
+      Tongue: OrganArachnidTongue
+      Appendix: OrganArachnidAppendix
+      Ears: OrganArachnidEars
+      Lungs: OrganArachnidLungs
+      Heart: OrganArachnidHeart
+      Stomach: OrganArachnidStomach
+      Liver: OrganArachnidLiver
+      Kidneys: OrganArachnidKidneys
+  - type: HumanoidProfile
     species: Arachnid
-    hideLayersOnEquip: # Aurora's Song - Hide your dang fangs
-    - Hair # imp
-    - Snout
-    - HeadTop
-    - HeadSide
 
 - type: entity
   parent:
@@ -121,7 +153,7 @@
   abstract: true
   components:
   - type: Metabolizer
-    metabolizerTypes: [ Arachnid ]
+    metabolizerTypes: [ Animal, Arachnid ] # Aurora's Song - Add Animal to prevent digestion poisoning from raw meat
 
 - type: entity
   parent: OrganArachnid
@@ -132,12 +164,23 @@
     sprite: Mobs/Species/Arachnid/organs.rsi
 
 - type: entity
-  parent: OrganArachnid
+  id: OrganArachnidVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _Impstation/Mobs/Species/Arachnid/parts.rsi # imp change: all sprites redirect to lighter versions of the base sprite
+  - type: VisualOrganMarkings
+    markingData:
+      group: Arachnid
+
+- type: entity
+  parent: [ OrganArachnid, OrganArachnidVisual ]
   id: OrganArachnidExternal
   abstract: true
   components:
   - type: Sprite
-    sprite: Mobs/Species/Arachnid/parts.rsi
+    sprite: _Impstation/Mobs/Species/Arachnid/parts.rsi # imp change: all sprites redirect to lighter versions of the base sprite
 
 - type: entity
   parent: [ OrganBaseTorso, OrganArachnidExternal ]
@@ -146,6 +189,15 @@
 - type: entity
   parent: [ OrganBaseHead, OrganArachnidExternal ]
   id: OrganArachnidHead
+  # Aurora's Song Start - Correct hideable head layers
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.HeadSide
+    - enum.HumanoidVisualLayers.Eyes
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.FacialHair
+  # Aurora's Song End
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganArachnidExternal ]
@@ -184,7 +236,7 @@
   id: OrganArachnidBrain
 
 - type: entity
-  parent: [ OrganBaseEyes, OrganArachnidInternal ]
+  parent: [ OrganArachnidVisual, OrganBaseEyes, OrganArachnidInternal ]
   id: OrganArachnidEyes
 
 - type: entity
@@ -208,13 +260,13 @@
   id: OrganArachnidHeart
 
 - type: entity
-  parent: [ OrganBaseStomach, OrganArachnidInternal, OrganAnimalMetabolizer ]
+  parent: [ OrganBaseStomach, OrganArachnidInternal, OrganArachnidMetabolizer ] # Aurora's Song - Use Arachnid metabolizer because it has animal metabolization as well
   id: OrganArachnidStomach
 
 - type: entity
-  parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganArachnidInternal, OrganAnimalMetabolizer ]
+  parent: [ OrganBaseLiver, OrganSpriteHumanInternal, OrganArachnidInternal, OrganArachnidMetabolizer ] # Aurora's Song - Use Arachnid metabolizer because it has animal metabolization as well
   id: OrganArachnidLiver
 
 - type: entity
-  parent: [ OrganBaseKidneys, OrganSpriteHumanInternal, OrganArachnidInternal, OrganAnimalMetabolizer ]
+  parent: [ OrganBaseKidneys, OrganSpriteHumanInternal, OrganArachnidInternal, OrganArachnidMetabolizer ] # Aurora's Song - Use Arachnid metabolizer because it has animal metabolization as well
   id: OrganArachnidKidneys

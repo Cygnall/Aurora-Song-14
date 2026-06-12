@@ -25,7 +25,7 @@ namespace Content.Shared._DEN.Holosign.Systems;
 public abstract class SharedLabelableHolosignProjectorSystem : EntitySystem
 {
     [Dependency] protected readonly SharedUserInterfaceSystem _uiSystem = default!;
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
+    // [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!; // Aurora's Song
     [Dependency] private readonly SharedTransformSystem _transform = default!;
     [Dependency] private readonly SharedChargesSystem _charges = default!;
     [Dependency] private readonly EntityLookupSystem _lookup = default!;

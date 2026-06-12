@@ -1,7 +1,6 @@
 - type: marking
   id: NFHumanHairChub
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: goonstation-hair-chub
@@ -9,7 +8,6 @@
 - type: marking
   id: NFHumanHairStreak
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: goonstation-hair-streak
@@ -17,7 +15,6 @@
 - type: marking
   id: NFHumanHairBighawk
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-bighawk
@@ -25,7 +22,6 @@
 - type: marking
   id: NFHumanHairNebulaD
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-d
@@ -33,7 +29,6 @@
 - type: marking
   id: NFHumanHairHalfshavedEmo
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-halfshaved-emo
@@ -41,7 +36,6 @@
 - type: marking
   id: NFHumanHairHalfshavedTrim
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-halfshaved-trim
@@ -49,7 +43,6 @@
 - type: marking
   id: NFHumanHairJensen
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-jensen
@@ -57,7 +50,6 @@
 - type: marking
   id: NFHumanHairLeftSide
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-leftside
@@ -65,7 +57,6 @@
 - type: marking
   id: NFHumanHairLeftSideTrim
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-leftside-trim
@@ -73,7 +64,6 @@
 - type: marking
   id: NFHumanHairMohawkNaomi
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-mohawk-naomi
@@ -81,7 +71,6 @@
 - type: marking
   id: NFHumanHairMohawkShaved
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-mohawk-shaved
@@ -89,7 +78,6 @@
 - type: marking
   id: NFHumanHairRightside
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-rightside
@@ -97,7 +85,6 @@
 - type: marking
   id: NFHumanHairRightsideTrim
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-rightside-trim
@@ -105,7 +92,6 @@
 - type: marking
   id: NFHumanHairShavedBun
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-shavedbun
@@ -113,7 +99,6 @@
 - type: marking
   id: NFHumanHairShavedpart
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-shavedpart
@@ -121,7 +106,6 @@
 - type: marking
   id: NFHumanHairSideswept
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-sideswept
@@ -129,7 +113,6 @@
 - type: marking
   id: NFHumanHairSlick
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-slick
@@ -137,7 +120,6 @@
 - type: marking
   id: NFHumanHairSweepshaved
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-sweepshaved
@@ -145,7 +127,6 @@
 - type: marking
   id: NFHumanHairRecedingFront
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-thinningfront
@@ -153,7 +134,6 @@
 - type: marking
   id: NFHumanHairRecedingRear
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-thinningrear
@@ -161,7 +141,6 @@
 - type: marking
   id: NFHumanHairUndercutTrim
   bodyPart: Hair
-  markingCategory: Hair
   sprites:
     - sprite: _NF/Mobs/Customization/human_hair.rsi
       state: nebula-hair-undercut-trim

@@ -7,6 +7,7 @@ using Content.Server.Preferences.Managers;
 using Content.Server.Station.Systems;
 using Content.Shared._NF.Roles.Components;
 using Content.Shared._NF.Roles.Events;
+using Content.Shared.Body; // Aurora's Song - Nubody
 using Content.Shared.Chat;
 using Content.Shared.Database;
 using Content.Shared.GameTicking;
@@ -38,7 +39,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
     [Dependency] private InventorySystem _inventory = default!;
     [Dependency] private MetaDataSystem _meta = default!;
     [Dependency] private RingerSystem _ringer = default!;
-    [Dependency] private SharedHumanoidAppearanceSystem _humanoid = default!;
+    [Dependency] private SharedVisualBodySystem _visualBody = default!; // Aurora's Song - Nubody
     [Dependency] private SharedMindSystem _mind = default!;
     [Dependency] private SharedRoleSystem _roles = default!;
     [Dependency] private StationJobsSystem _stationJobs = default!;
@@ -139,7 +140,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
             ApplyAppearanceForSession(ent, session);
         }
 
-        // Notify all relevant captains if they have their PDA that someone is applying for a job. 
+        // Notify all relevant captains if they have their PDA that someone is applying for a job.
         if (!ent.Comp.NotificationsSent)
         {
             string jobTitle;
@@ -186,7 +187,7 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
     private void ApplyAppearanceForSession(Entity<InterviewHologramComponent> ent, ICommonSession session)
     {
         var profile = _gameTicker.GetPlayerProfile(session);
-        _humanoid.LoadProfile(ent, profile);
+        _visualBody.ApplyProfileTo(ent.Owner, profile); // Aurora's Song - Nubody conversion
         _meta.SetEntityName(ent, profile.Name);
         ent.Comp.AppearanceApplied = true;
     }

@@ -1,0 +1,13 @@
+- type: species
+  id: Ovinia
+  name: species-name-ovinia
+  roundStart: true
+  prototype: MobOvinia
+  defaultSkinTone: "#ffffff"
+  dollPrototype: AppearanceOvinia
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
+  maleFirstNames: NamesFirstMale
+  femaleFirstNames: NamesFirstFemale
+  lastNames: NamesLast
+  minHeight: 0.8
+  maxHeight: 1.05

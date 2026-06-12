@@ -11,7 +11,7 @@ using Robust.Shared.Timing;
 namespace Content.Client.UserInterface.Systems.Chat.Controls.Denu.Components;
 
 
-public class ToggleCheckbox : CheckBox
+public sealed class ToggleCheckbox : CheckBox
 {
     public long UpdatePeriod { get; set; } = 1000;
     public Action OnToggledOn { get; set; } = () => { };

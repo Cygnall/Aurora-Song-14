@@ -4,8 +4,7 @@
 - type: marking
   id: VulpEar
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: vulp
@@ -15,8 +14,7 @@
 - type: marking
   id: VulpEarFade
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: vulp
@@ -26,8 +24,7 @@
 - type: marking
   id: VulpEarSharp
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: vulp
@@ -37,8 +34,7 @@
 - type: marking
   id: VulpEarJackal
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: jackal
@@ -48,8 +44,7 @@
 - type: marking
   id: VulpEarTerrier
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: terrier
@@ -59,8 +54,7 @@
 - type: marking
   id: VulpEarWolf
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: wolf
@@ -70,8 +64,7 @@
 - type: marking
   id: VulpEarFennec
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: fennec
@@ -81,8 +74,7 @@
 - type: marking
   id: VulpEarFox
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: fox
@@ -90,8 +82,7 @@
 - type: marking
   id: VulpEarOtie
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: otie
@@ -101,8 +92,7 @@
 - type: marking
   id: VulpEarTajaran
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: msai
@@ -112,8 +102,7 @@
 - type: marking
   id: VulpEarShock
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: shock
@@ -121,8 +110,7 @@
 - type: marking
   id: VulpEarCoyote
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: coyote
@@ -130,8 +118,7 @@
 - type: marking
   id: VulpEarDalmatian
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/ear_markings.rsi
       state: dalmatian
@@ -140,8 +127,7 @@
 - type: marking
   id: VulpSnoutAlt
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: muzzle_alt
@@ -151,8 +137,7 @@
 - type: marking
   id: VulpSnout
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: muzzle
@@ -162,8 +147,7 @@
 - type: marking
   id: VulpSnoutSharp
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: muzzle_sharp
@@ -173,8 +157,7 @@
 - type: marking
   id: VulpSnoutFade
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: muzzle_fade
@@ -184,8 +167,7 @@
 - type: marking
   id: VulpSnoutNose
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: nose
@@ -193,8 +175,7 @@
 - type: marking
   id: VulpSnoutMask
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: mask
@@ -204,8 +185,7 @@
 - type: marking
   id: VulpSnoutVulpine
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: vulpine
@@ -215,8 +195,7 @@
 - type: marking
   id: VulpSnoutSwift
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: vulpine-lines
@@ -224,8 +203,7 @@
 - type: marking
   id: VulpSnoutBlaze
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: blaze
@@ -233,8 +211,7 @@
 - type: marking
   id: VulpSnoutPatch
   bodyPart: Snout
-  markingCategory: Snout
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: patch
@@ -243,8 +220,7 @@
 - type: marking
   id: VulpHeadTiger
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: tiger_head
@@ -252,8 +228,7 @@
 - type: marking
   id: VulpHeadTigerFace
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: tiger_face
@@ -261,8 +236,7 @@
 - type: marking
   id: VulpHeadSlash
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/head_markings.rsi
       state: slash
@@ -271,8 +245,7 @@
 - type: marking
   id: VulpTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp
@@ -282,8 +255,7 @@
 - type: marking
   id: VulpTailTip
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp
@@ -293,8 +265,7 @@
 - type: marking
   id: VulpTailAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
+  groupWhitelist: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag
@@ -304,8 +275,7 @@
 - type: marking
   id: VulpTailTipAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
+  groupWhitelist: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_wag
@@ -315,8 +285,7 @@
 - type: marking
   id: VulpTailAlt
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_alt
@@ -326,8 +295,7 @@
 - type: marking
   id: VulpTailAltTip
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: vulp_alt
@@ -337,8 +305,7 @@
 - type: marking
   id: VulpTailLong
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: long
@@ -348,8 +315,7 @@
 - type: marking
   id: VulpTailFox
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox
@@ -359,8 +325,7 @@
 - type: marking
   id: VulpTailFoxTip
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox
@@ -370,8 +335,7 @@
 - type: marking
   id: VulpTailFoxAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
+  groupWhitelist: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox_wag
@@ -381,8 +345,7 @@
 - type: marking
   id: VulpTailFoxTipAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
+  groupWhitelist: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox_wag
@@ -392,8 +355,7 @@
 - type: marking
   id: VulpTailBushy
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: bushfluff
@@ -401,8 +363,7 @@
 - type: marking
   id: VulpTailBushyAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
+  groupWhitelist: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: bushfluff_wag
@@ -410,8 +371,7 @@
 - type: marking
   id: VulpTailCoyote
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: coyote
@@ -419,8 +379,7 @@
 - type: marking
   id: VulpTailCoyoteAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
+  groupWhitelist: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: coyote_wag
@@ -428,8 +387,7 @@
 - type: marking
   id: VulpTailCorgiAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
+  groupWhitelist: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: corgi_wag
@@ -437,8 +395,7 @@
 - type: marking
   id: VulpTailHusky
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: husky-inner
@@ -448,8 +405,7 @@
 - type: marking
   id: VulpTailHuskyAlt
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: husky
@@ -457,8 +413,7 @@
 - type: marking
   id: VulpTailFox2
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox2
@@ -466,8 +421,7 @@
 - type: marking
   id: VulpTailFox3
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fox3
@@ -477,8 +431,7 @@
 - type: marking
   id: VulpTailFennec
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fennec
@@ -486,8 +439,7 @@
 - type: marking
   id: VulpTailOtie
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: otie
@@ -495,8 +447,7 @@
 - type: marking
   id: VulpTailFluffy
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [Vulpkanin, Felinid, IPC]
+  groupWhitelist: [Vulpkanin, Felinid, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: fluffy
@@ -504,8 +455,7 @@
 - type: marking
   id: VulpTailDalmatianAnimated # Aurora's Song - Support wagging
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [] # Aurora's Song - Hidden because its set by wagging
+  groupWhitelist: [] # Aurora's Song - Hidden because its set by wagging
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/tail_markings.rsi
       state: dalmatian_wag
@@ -514,8 +464,7 @@
 - type: marking
   id: VulpBellyCrest
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Vulpkanin] # Funky - Remove for consistency
+  groupWhitelist: [Vulpkanin] # Funky - Remove for consistency
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: belly_crest
@@ -523,8 +472,7 @@
 - type: marking
   id: VulpBellyFull
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Vulpkanin] # Funky - Remove for consistency
+  groupWhitelist: [Vulpkanin] # Funky - Remove for consistency
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: belly_full
@@ -532,8 +480,7 @@
 - type: marking
   id: VulpBellyFox
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Vulpkanin] # Funky - Remove for consistency
+  groupWhitelist: [Vulpkanin] # Funky - Remove for consistency
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: belly_fox
@@ -542,27 +489,24 @@
 # Eventually layering will allow to have markings on the body not layering above jumpsuits
 # - type: marking
 #   id: VulpBodyPointsCrest
-#   markingCategory: Overlay
 #   bodyPart: RFoot
-#   speciesRestriction: [Vulpkanin]
+#   groupWhitelist: [Vulpkanin]
 #   sprites:
 #     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
 #       state: points_crest
 #
 # - type: marking
 #   id: VulpBodyPointsFade
-#   markingCategory: Overlay
 #   bodyPart: RFoot
-#   speciesRestriction: [Vulpkanin]
+#   groupWhitelist: [Vulpkanin]
 #   sprites:
 #     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
 #       state: points_fade
 #
 # - type: marking
 #   id: VulpBodyPointsSharp
-#   markingCategory: Overlay
 #   bodyPart: RFoot
-#   speciesRestriction: [Vulpkanin]
+#   groupWhitelist: [Vulpkanin]
 #   sprites:
 #     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
 #       state: points_sharp
@@ -570,36 +514,32 @@
 # Leg Markings
 - type: marking
   id: VulpPointsFeet
-  markingCategory: Legs # Aurora Song Overlay>Legs
   bodyPart: RFoot
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_feet
 
 - type: marking
   id: VulpPointsCrestLegs
-  markingCategory: Legs
   bodyPart: LLeg
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_crest-legs
 
 - type: marking
   id: VulpPointsFadeLegs
-  markingCategory: Legs
   bodyPart: LLeg
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_fade-legs
 
 - type: marking
   id: VulpPointsSharpLegs
-  markingCategory: Legs
   bodyPart: LLeg
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_sharp-legs
@@ -607,36 +547,32 @@
 # Arm Markings
 - type: marking
   id: VulpPointsHands
-  markingCategory: Arms # Aurora Song Overlay > Arms
   bodyPart: RHand
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_hands
 
 - type: marking
   id: VulpPointsCrestArms
-  markingCategory: Arms
   bodyPart: LArm
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_crest-arms
 
 - type: marking
   id: VulpPointsFadeArms
-  markingCategory: Arms
   bodyPart: LArm
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_fade-arms
 
 - type: marking
   id: VulpPointsSharpArms
-  markingCategory: Arms
   bodyPart: LArm
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/body_markings.rsi
       state: points_sharp-arms
@@ -645,8 +581,7 @@
 - type: marking
   id: VulpHairAdhara
   bodyPart: Hair
-  speciesRestriction: [Vulpkanin, IPC]
-  markingCategory: Hair
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: adhara
@@ -654,8 +589,7 @@
 - type: marking
   id: VulpHairAnita
   bodyPart: Hair
-  speciesRestriction: [Vulpkanin, IPC]
-  markingCategory: Hair
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: anita
@@ -663,8 +597,7 @@
 - type: marking
   id: VulpHairApollo
   bodyPart: Hair
-  speciesRestriction: [Vulpkanin, IPC]
-  markingCategory: Hair
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: apollo
@@ -672,8 +605,7 @@
 - type: marking
   id: VulpHairBelle
   bodyPart: Hair
-  speciesRestriction: [Vulpkanin, IPC]
-  markingCategory: Hair
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: belle
@@ -681,8 +613,7 @@
 - type: marking
   id: VulpHairBraided
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: braided
@@ -690,8 +621,7 @@
 - type: marking
   id: VulpHairBun
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: bun
@@ -699,8 +629,7 @@
 - type: marking
   id: VulpHairCleanCut
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: clean_cut
@@ -708,8 +637,7 @@
 - type: marking
   id: VulpHairCurl
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: curl
@@ -717,8 +645,7 @@
 - type: marking
   id: VulpHairHawk
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: hawk
@@ -726,8 +653,7 @@
 - type: marking
   id: VulpHairJagged
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: jagged
@@ -735,8 +661,7 @@
 - type: marking
   id: VulpHairJeremy
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: jeremy
@@ -744,8 +669,7 @@
 - type: marking
   id: VulpHairKajam
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: kajam
@@ -753,8 +677,7 @@
 - type: marking
   id: VulpHairKeid
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: keid
@@ -762,8 +685,7 @@
 - type: marking
   id: VulpHairKleeia
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: kleeia
@@ -771,8 +693,7 @@
 - type: marking
   id: VulpHairMizar
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: mizar
@@ -780,8 +701,7 @@
 - type: marking
   id: VulpHairPunkBraided
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: punkbraided
@@ -789,8 +709,7 @@
 - type: marking
   id: VulpHairRaine
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: raine
@@ -798,8 +717,7 @@
 - type: marking
   id: VulpHairRough
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: rough
@@ -807,8 +725,7 @@
 - type: marking
   id: VulpHairShort
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: short
@@ -816,8 +733,7 @@
 - type: marking
   id: VulpHairShort2
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: short2
@@ -825,8 +741,7 @@
 - type: marking
   id: VulpHairSpike
   bodyPart: Hair
-  markingCategory: Hair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/hair.rsi
       state: spike
@@ -835,8 +750,7 @@
 - type: marking
   id: VulpFacialHairRuff
   bodyPart: FacialHair
-  markingCategory: FacialHair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/facial_hair.rsi
       state: ruff
@@ -844,8 +758,7 @@
 - type: marking
   id: VulpFacialHairElder
   bodyPart: FacialHair
-  markingCategory: FacialHair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/facial_hair.rsi
       state: elder
@@ -853,8 +766,7 @@
 - type: marking
   id: VulpFacialHairElderChin
   bodyPart: FacialHair
-  markingCategory: FacialHair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/facial_hair.rsi
       state: elder_chin
@@ -862,8 +774,7 @@
 - type: marking
   id: VulpFacialHairKita
   bodyPart: FacialHair
-  markingCategory: FacialHair
-  speciesRestriction: [Vulpkanin, IPC]
+  groupWhitelist: [Vulpkanin, IPC]
   sprites:
     - sprite: _DV/Mobs/Customization/Vulpkanin/facial_hair.rsi
       state: kita

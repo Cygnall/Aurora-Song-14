@@ -13,7 +13,7 @@ public sealed class GridAccessSystem : EntitySystem
 
     [Dependency] private readonly SharedAudioSystem _audio = default!;
 
-    [Dependency] private readonly SharedTransformSystem _sharedTransformSystem = default!;
+    // [Dependency] private readonly SharedTransformSystem _sharedTransformSystem = default!; // Aurora's Song
 
     public override void Initialize()
     {

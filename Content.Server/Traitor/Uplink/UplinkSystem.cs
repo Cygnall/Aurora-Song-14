@@ -17,9 +17,9 @@ public sealed class UplinkSystem : EntitySystem
 {
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
     [Dependency] private readonly SharedHandsSystem _handsSystem = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    // [Dependency] private readonly IPrototypeManager _proto = default!; // Aurora's Song
     [Dependency] private readonly StoreSystem _store = default!;
-    [Dependency] private readonly SharedSubdermalImplantSystem _subdermalImplant = default!;
+    // [Dependency] private readonly SharedSubdermalImplantSystem _subdermalImplant = default!; // Aurora's Song
     [Dependency] private readonly SharedMindSystem _mind = default!;
 
     public static readonly ProtoId<CurrencyPrototype> TelecrystalCurrencyPrototype = "Telecrystal";

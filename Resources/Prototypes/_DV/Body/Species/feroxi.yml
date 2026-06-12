@@ -1,3 +1,56 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Feroxi
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Head:
+      limit: 3
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ FeroxiEars ]
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: true
+      default: [ FeroxiSnout ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 3
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 8 # Aurora: 1>8
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 8 # Aurora: 1>8
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 8 # Aurora: 1>8
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 8 # Aurora: 1>8
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 8 # Aurora: 1>8
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 8 # Aurora: 1>8
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 8 # Aurora: 1>8
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 8 # Aurora: 1>8
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ FeroxiTailAndDorsal ]
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceFeroxi
@@ -11,39 +64,30 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganFeroxiTorso
-        - id: OrganFeroxiHead
-        - id: OrganFeroxiArmLeft
-        - id: OrganFeroxiArmRight
-        - id: OrganFeroxiHandRight
-        - id: OrganFeroxiHandLeft
-        - id: OrganFeroxiLegLeft
-        - id: OrganFeroxiLegRight
-        - id: OrganFeroxiFootLeft
-        - id: OrganFeroxiFootRight
-        - id: OrganHumanBrain
-        - id: OrganHumanEyes
-        - id: OrganHumanTongue
-        - id: OrganHumanAppendix
-        - id: OrganHumanEars
-        - id: OrganFeroxiLungs
-        - id: OrganAnimalHeart
-        - id: OrganFeroxiStomach
-        - id: OrganAnimalLiver
-        - id: OrganHumanKidneys
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganFeroxiTorso
+      Head: OrganFeroxiHead
+      ArmLeft: OrganFeroxiArmLeft
+      ArmRight: OrganFeroxiArmRight
+      HandRight: OrganFeroxiHandRight
+      HandLeft: OrganFeroxiHandLeft
+      LegLeft: OrganFeroxiLegLeft
+      LegRight: OrganFeroxiLegRight
+      FootLeft: OrganFeroxiFootLeft
+      FootRight: OrganFeroxiFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganFeroxiLungs
+      Heart: OrganAnimalHeart
+      Stomach: OrganFeroxiStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
     species: Feroxi
-    hideLayersOnEquip:
-    - Snout
-    - SnoutCover
-    - HeadTop
-    - HeadSide
-    - FacialHair
-    - Hair
 
 - type: entity
   parent:
@@ -108,15 +152,30 @@
   abstract: true
   components:
   - type: Sprite
-    sprite: _DV/Mobs/Species/Feroxi/parts.rsi # Aurora's Song - Use delta-v sprites
+    sprite: _DV/Mobs/Species/Feroxi/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _DV/Mobs/Species/Feroxi/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Feroxi
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganFeroxiExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFeroxiExternal ] # Aurora's Song - Add sexed organs
   id: OrganFeroxiTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganFeroxiExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFeroxiExternal ] # Aurora's Song - Add sexed organs
   id: OrganFeroxiHead
+  # Aurora's Song Start - Correct hideable head layers
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.FacialHair
+    - enum.HumanoidVisualLayers.HeadTop
+  # Aurora's Song End
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganFeroxiExternal ]

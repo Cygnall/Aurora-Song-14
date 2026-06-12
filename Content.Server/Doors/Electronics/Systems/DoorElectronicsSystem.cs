@@ -15,7 +15,7 @@ namespace Content.Server.Doors.Electronics;
 public sealed class DoorElectronicsSystem : EntitySystem
 {
     [Dependency] private readonly UserInterfaceSystem _uiSystem = default!;
-    [Dependency] private readonly AccessReaderSystem _accessReader = default!;
+    // [Dependency] private readonly AccessReaderSystem _accessReader = default!; // Aurora's Song
 
     public override void Initialize()
     {

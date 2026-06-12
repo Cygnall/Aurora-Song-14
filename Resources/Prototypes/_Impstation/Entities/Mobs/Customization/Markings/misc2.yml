@@ -1,8 +1,7 @@
 - type: marking
   id: HumanoidEyebags
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, Reptilian, Dwarf, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy | Separated slime marking
+  groupWhitelist: [ Human, Reptilian, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy | Separated slime marking
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle2.rsi
     state: eyebags
@@ -10,9 +9,8 @@
 - type: marking
   id: HumanoidAbs
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [ Human, Dwarf, Arachnid, Reptilian, SlimePerson, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy
-  followSkinColor: true
+  groupWhitelist: [ Human, Arachnid, Reptilian, Slime, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy
+  forcedColoring: true
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle2.rsi
     state: muscular
@@ -20,8 +18,7 @@
 - type: marking
   id: EyebrowsBig
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy
+  groupWhitelist: [ Human, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle2.rsi
     state: eyebrowsthick
@@ -29,8 +26,7 @@
 - type: marking
   id: EyebrowsBigger
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy
+  groupWhitelist: [ Human, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle2.rsi
     state: eyebrowsultra
@@ -38,8 +34,7 @@
 - type: marking
   id: EyebrowsUnibrow
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [ Human, Dwarf, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy
+  groupWhitelist: [ Human, Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, Harpy ] # Aurora Song edit to add Oni, Goblin, Felinid, Sheleg, Tajaran, Feroxi, Rodentia, and Harpy
   sprites:
   - sprite: _Impstation/Mobs/Customization/markingsbundle2.rsi
     state: eyebrowsunibrow

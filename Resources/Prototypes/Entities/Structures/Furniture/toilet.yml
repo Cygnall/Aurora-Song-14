@@ -31,11 +31,11 @@
   - type: Strap
     whitelist:
       components:
-      - HumanoidAppearance
+      - HumanoidProfile
   - type: DisposalUnit
     blacklist:
       components:
-#      - HumanoidAppearance # Frontier - Allow goblins to jump inside.
+#      - HumanoidProfile # Frontier - Allow goblins to jump inside.
       - Plunger
       - SolutionTransfer
       - EntityStorage

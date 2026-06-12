@@ -1,6 +1,6 @@
-using Content.Server.Body.Components;
 using Content.Shared.Body; // Aurora's Song
 using Content.Shared.Body.Components;
+using Content.Shared.Metabolism;
 using Content.Shared.Nutrition.Components;
 
 namespace Content.Server._DV.Feroxi;

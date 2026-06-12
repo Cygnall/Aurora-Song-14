@@ -1,4 +1,60 @@
-﻿- type: entity
+﻿- type: markingsGroup
+  id: Fairy
+  limits:
+    enum.HumanoidVisualLayers.Special: # the cat ear joke
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail: # the cat tail joke
+      limit: 1 # Aurora Song: You can have a tail. As a treat
+      required: true
+      default: [ MothWingsDefault ]
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.UndergarmentTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.UndergarmentBottom:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 8
+      required: false
+
+- type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceFairy
   name: Fairy appearance
@@ -10,31 +66,29 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganHumanTorso
-        - id: OrganHumanHead
-        - id: OrganHumanArmLeft
-        - id: OrganHumanArmRight
-        - id: OrganHumanHandRight
-        - id: OrganHumanHandLeft
-        - id: OrganHumanLegLeft
-        - id: OrganHumanLegRight
-        - id: OrganHumanFootLeft
-        - id: OrganHumanFootRight
-        - id: OrganHumanBrain
-        - id: OrganHumanEyes
-        - id: OrganHumanTongue
-        - id: OrganHumanAppendix
-        - id: OrganHumanEars
-        - id: OrganFairyLungs
-        - id: OrganFairyHeart
-        - id: OrganFairyStomach
-        - id: OrganFairyLiver
-        - id: OrganFairyKidneys
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganFairyTorso
+      Head: OrganFairyHead
+      ArmLeft: OrganFairyArmLeft
+      ArmRight: OrganFairyArmRight
+      HandRight: OrganFairyHandRight
+      HandLeft: OrganFairyHandLeft
+      LegLeft: OrganFairyLegLeft
+      LegRight: OrganFairyLegRight
+      FootLeft: OrganFairyFootLeft
+      FootRight: OrganFairyFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganFairyLungs
+      Heart: OrganFairyHeart
+      Stomach: OrganFairyStomach
+      Liver: OrganFairyLiver
+      Kidneys: OrganFairyKidneys
+  - type: HumanoidProfile
     species: Fairy
 
 - type: entity
@@ -54,7 +108,7 @@
   - type: Speech
     speechSounds: Fairy
     speechVerb: Fairy
-    allowedEmotes: ['FairyFlutter', 'FairyGlimmer']
+    allowedEmotes: ['Flutter', 'FairyGlimmer', "Flap"]
   - type: Fixtures
     fixtures: # TODO: This needs a second fixture just for mob collisions.
       fix1:
@@ -92,6 +146,8 @@
       Male: FairySpeech
       Female: FairySpeech
       Unsexed: FairySpeech
+  - type: BodyEmotes
+    soundsId: FairyBodyEmotes
   - type: FaxableObject
     insertingState: inserting_mouse
   - type: NpcFactionMember
@@ -141,6 +197,10 @@
   components:
   - type: Metabolizer
     metabolizerTypes: [ Human, Fairy ]
+    updateInterval: 1.5
+    # Make chems last 10x as long with the same healing per tick
+    efficacyMultiplier: 10
+    rateModifier: 0.1
 
 - type: entity
   parent: OrganFairy
@@ -151,32 +211,75 @@
     sprite: Mobs/Species/Arachnid/organs.rsi
 
 - type: entity
+  parent: OrganFairy
+  id: OrganFairyExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Fairy
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFairyExternal ] # Aurora's Song - Add sexed organs
+  id: OrganFairyTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFairyExternal ] # Aurora's Song - Add sexed organs
+  id: OrganFairyHead
+  # Aurora's Song Start - Correct hideable head layers
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.FacialHair
+    - enum.HumanoidVisualLayers.Snout
+  # Aurora's Song End
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganFairyExternal ]
+  id: OrganFairyArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganFairyExternal ]
+  id: OrganFairyArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganFairyExternal ]
+  id: OrganFairyHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganFairyExternal ]
+  id: OrganFairyHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganFairyExternal ]
+  id: OrganFairyLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganFairyExternal ]
+  id: OrganFairyLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganFairyExternal ]
+  id: OrganFairyFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganFairyExternal ]
+  id: OrganFairyFootRight
+
+- type: entity
   parent: [ OrganBaseLungs, OrganFairyInternal, OrganFairyMetabolizer ]
   id: OrganFairyLungs
-  components:
-  - type: Metabolizer
-    groups:
-    - id: Gas
-      rateModifier: 50.0
 
 - type: entity
   parent: [ OrganBaseHeart, OrganFairyInternal, OrganFairyMetabolizer ]
   id: OrganFairyHeart
-  components:
-  - type: Metabolizer
-    updateInterval: 1.5
-    groups:
-    - id: Medicine
-      rateModifier: 0.2
-      scaleModifier: 5
-    - id: Cryogenic
-      rateModifier: 0.2
-      scaleModifier: 5
-    - id: Poison
-      rateModifier: 0.2
-      scaleModifier: 5 # Stop infinite fairy chems fr, also make them weak to poisons
-    - id: Narcotic
-      scaleModifier: 5 # because low rate mods stop narcotics from accumulating correctly presently, scale only. Also makes things like tear gas and noct hit them harder
 
 - type: entity
   parent: [ OrganBaseStomach, OrganFairyInternal, OrganFairyMetabolizer ]
@@ -186,36 +289,16 @@
     solutions:
       stomach:
         maxVol: 30
-# Aurora's Song - edible, grindable organs
       food:
         maxVol: 5
         reagents:
         - ReagentId: UncookedAnimalProteins
           Quantity: 5
-# Aurora's Song edit ends
-  - type: Metabolizer
-    updateInterval: 1.5
-    groups:
-    - id: Food
-      rateModifier: 0.1
-      scaleModifier: 4
-    - id: Drink
-      rateModifier: 0.1
-      scaleModifier: 4
 
 - type: entity
   parent: [ OrganBaseLiver, OrganFairy, OrganHumanInternal, OrganFairyMetabolizer ]
   id: OrganFairyLiver
-  components:
-  - type: Metabolizer
-    updateInterval: 1.5
-    groups:
-    - id: Alcohol
-      rateModifier: 0.5 # removes alcohol very slowly along with the stomach removing it as a drink
 
 - type: entity
   parent: [ OrganBaseKidneys, OrganFairy, OrganHumanInternal, OrganFairyMetabolizer ]
   id: OrganFairyKidneys
-  components:
-  - type: Metabolizer
-    updateInterval: 1.5

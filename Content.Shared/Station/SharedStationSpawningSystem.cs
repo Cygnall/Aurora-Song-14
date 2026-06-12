@@ -1,7 +1,6 @@
 using System.Diagnostics.CodeAnalysis;
 using System.Linq;
 using Content.Shared._AS.License;
-using Content.Shared.Containers.ItemSlots; // Aurora
 using Content.Shared.Hands.Components;
 using Content.Shared.Hands.EntitySystems;
 using Content.Shared.Inventory;
@@ -20,15 +19,8 @@ using Content.Shared.Implants.Components; // Frontier
 using Content.Shared.Radio.Components; // Frontier
 using Robust.Shared.Containers; // Frontier
 using Robust.Shared.Network; // Frontier
-using Content.Shared.Implants; // Frontier
-using Content.Shared.Implants.Components;
-using Content.Shared.Mind; // Frontier
-using Content.Shared.Radio.Components; // Frontier
-using Robust.Shared.Containers; // Frontier
-using Robust.Shared.Network; // Frontier
 using Content.Shared._AS.IPC;
 using Content.Shared.Humanoid;
-using Content.Shared.Preferences; // Aurora's Song 14
 
 namespace Content.Shared.Station;
 
@@ -45,7 +37,6 @@ public abstract class SharedStationSpawningSystem : EntitySystem
     [Dependency] private readonly SharedContainerSystem _container = default!; // Frontier
     [Dependency] private readonly SharedImplanterSystem _implanter = default!; // Frontier
     [Dependency] private readonly LicenseSystem _license = default!; // Aurora
-    [Dependency] private readonly SharedMindSystem _mind = default!; // Aurora
     [Dependency] private readonly InternalEncryptionLoadoutSystem _internalEncryptionLoadout = default!; // Aurora's Song 14
 
     private EntityQuery<HandsComponent> _handsQuery;
@@ -358,24 +349,6 @@ public abstract class SharedStationSpawningSystem : EntitySystem
                 DebugTools.Assert(false, $"Entity {entity} could not insert their loadout encryption key {entProto} into their headset!");
             }
         }
-    }
-
-    public bool GetProfile(EntityUid? uid, [NotNullWhen(true)] out HumanoidCharacterProfile? profile)
-    {
-        if (!TryComp(uid, out HumanoidAppearanceComponent? appearance))
-        {
-            profile = null;
-            return false;
-        }
-
-        if (appearance.LastProfileLoaded is { } lastProfileLoaded)
-        {
-            profile = lastProfileLoaded;
-            return true;
-        }
-
-        profile = HumanoidCharacterProfile.DefaultWithSpecies(appearance.Species);
-        return true;
     }
 
     /// <summary>

@@ -60,6 +60,9 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
 
     private void UpdateHologramShader(EntityUid uid, SpriteComponent sprite, InterviewHologramComponent hologramComp)
     {
+        if (!sprite.AllLayers.Any())
+            return;
+
         // Find the texture height of the largest layer
         float texHeight = sprite.AllLayers.Max(x => x.PixelSize.Y);
 

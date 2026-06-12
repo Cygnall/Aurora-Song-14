@@ -10,8 +10,6 @@ using Content.Shared.Actions;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components; // AS
 using Content.Shared.Chat;
-using Content.Shared.NameModifier.Components; // AS
-using Content.Shared.Database; // AS
 using Content.Shared.Silicons.Laws.Components;
 using Content.Shared.Silicons.StationAi;
 using Content.Shared.StationAi;
@@ -33,10 +31,10 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly SharedTransformSystem _xformSystem = default!;
     [Dependency] private readonly IChatManager _chatManager = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
+    // [Dependency] private readonly SharedAudioSystem _audio = default!; // Aurora's Song
     [Dependency] private readonly MetaDataSystem _metaSystem = default!; // AS
     [Dependency] private readonly GhostRoleSystem _ghostSystem = default!; // AS
-    private EntityCoordinates? _coordinates;
+    // private EntityCoordinates? _coordinates; // Aurora's Song
 
     public override void Initialize()
     {

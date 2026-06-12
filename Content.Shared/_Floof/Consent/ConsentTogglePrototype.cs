@@ -13,7 +13,7 @@ namespace Content.Shared._Floof.Consent;
 /// <summary>
 /// TODO
 /// </summary>
-[Prototype("consentToggle")]
+[Prototype]
 public sealed partial class ConsentTogglePrototype : IPrototype, IComparable
 {
     [IdDataField]

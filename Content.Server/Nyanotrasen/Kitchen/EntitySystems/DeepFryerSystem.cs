@@ -88,7 +88,6 @@ public sealed partial class DeepFryerSystem : SharedDeepfryerSystem
     [Dependency] private readonly MetaDataSystem _metaDataSystem = default!;
     [Dependency] private readonly EntityWhitelistSystem _whitelistSystem = default!;
     [Dependency] private readonly NameModifierSystem _nameModifier = default!; // Frontier
-    [Dependency] private readonly SharedEntityEffectsSystem _effectsSystem = default!; // Aurora's Song
 
     private static readonly string CookingDamageType = "Heat";
     private static readonly float CookingDamageAmount = 10.0f;

@@ -46,6 +46,9 @@
           - !type:DoActsBehavior
             acts: [ "Destruction" ]
   - type: AlwaysHot
+  - type: IgnitionSource
+    temperature: 700
+    ignited: true
   - type: Construction # Frontier
     graph: FiresGraph # Frontier
     node: FireplaceNode # Frontier

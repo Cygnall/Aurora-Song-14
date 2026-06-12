@@ -32,7 +32,6 @@
   components:
   - type: Tag
     tags:
-    - CorgiWearable
     - WhitelistChameleon
 
 #Alternate / slim basic armor vest
@@ -104,7 +103,7 @@
     sprite: Clothing/OuterClothing/Vests/detvest.rsi
 
 - type: entity
-  parent: [ClothingOuterBaseLarge, AllowSuitStorageClothing]
+  parent: [ ClothingOuterBaseMedium, AllowSuitStorageClothing ]
   id: ClothingOuterArmorBaseCarapace
   abstract: true
   components:
@@ -118,10 +117,6 @@
         Caustic: 0.9
   - type: ExplosionResistance
     damageCoefficient: 0.9 # Frontier 0.65<0.9
-  - type: ClothingSpeedModifier
-    walkModifier: 1.0
-    sprintModifier: 1.0
-  - type: HeldSpeedModifier
   - type: GroupExamine
 
 - type: entity
@@ -136,7 +131,6 @@
     sprite: Clothing/OuterClothing/Armor/captain_carapace.rsi
   - type: Tag
     tags:
-    - CorgiWearable
     - WhitelistChameleon
 
 - type: entity
@@ -152,7 +146,7 @@
 
 #Web vest
 - type: entity
-  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, add ContrabandClothing
+  parent: [ClothingOuterArmorBase, ClothingOuterStorageBase, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, add ContrabandClothing
   id: ClothingOuterVestWeb
   name: web vest
   description: A synthetic armor vest. This one has added webbing and ballistic plates.
@@ -168,14 +162,14 @@
         Slash: 0.6
         Piercing: 0.3
         Heat: 0.9
-  - type: ExplosionResistance
+  - type: ExplosionResistance # Aurora's Song
     damageCoefficient: 0.9
   - type: StaticPrice
     price: 1500
 
 #Elite web vest
 - type: entity
-  parent: [ClothingOuterStorageBase, AllowSuitStorageClothing, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, add ContrabandClothing
+  parent: [ClothingOuterArmorBase, AllowSuitStorageClothing, BaseC3SyndicateContraband, ContrabandClothing] # Frontier: BaseSyndicateContraband<BaseC3SyndicateContraband, add ContrabandClothing
   id: ClothingOuterVestWebElite
   name: elite web vest
   description: A synthetic armor vest. This one has added webbing and heat resistant fibers.
@@ -219,10 +213,10 @@
       coefficients:
         Blunt: 0.7 #slightly better overall protection but slightly worse than bulletproof armor against bullets seems sensible
         Slash: 0.7
-        Piercing: 0.7
+        Piercing: 0.7 # Frontier: 0.5>0.7
         Heat: 0.8 # Frontier: 0.9<0.8
         Caustic: 0.9 # Frontier
-  - type: ExplosionResistance
+  - type: ExplosionResistance # Aurora's Song
     damageCoefficient: 0.9
 
 

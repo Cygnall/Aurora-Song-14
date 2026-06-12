@@ -1,3 +1,58 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Sheleg
+  limits:
+    enum.HumanoidVisualLayers.Special: # the cat ear joke
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail: # the cat tail joke
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 8
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 8
+      required: false
+  appearances:
+    enum.HumanoidVisualLayers.Hair:
+      forcedColoring: "#FFFFFF"
+    enum.HumanoidVisualLayers.FacialHair:
+      forcedColoring: "#FFFFFF"
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceSheleg
@@ -10,38 +65,32 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganShelegTorso
-        - id: OrganShelegHead
-        - id: OrganShelegArmLeft
-        - id: OrganShelegArmRight
-        - id: OrganShelegHandRight
-        - id: OrganShelegHandLeft
-        - id: OrganShelegLegLeft
-        - id: OrganShelegLegRight
-        - id: OrganShelegFootLeft
-        - id: OrganShelegFootRight
-        - id: OrganShelegBrain
-        - id: OrganShelegEyes
-        - id: OrganShelegTongue
-        - id: OrganShelegAppendix
-        - id: OrganShelegEars
-        - id: OrganShelegLungs
-        - id: OrganShelegHeart
-        - id: OrganShelegStomach
-        - id: OrganShelegLiver
-        - id: OrganShelegKidneys
+  - type: InitialBody
+    organs:
+      Torso: OrganShelegTorso
+      Head: OrganShelegHead
+      ArmLeft: OrganShelegArmLeft
+      ArmRight: OrganShelegArmRight
+      HandRight: OrganShelegHandRight
+      HandLeft: OrganShelegHandLeft
+      LegLeft: OrganShelegLegLeft
+      LegRight: OrganShelegLegRight
+      FootLeft: OrganShelegFootLeft
+      FootRight: OrganShelegFootRight
+      Brain: OrganShelegBrain
+      Eyes: OrganShelegEyes
+      Tongue: OrganShelegTongue
+      Appendix: OrganShelegAppendix
+      Ears: OrganShelegEars
+      Lungs: OrganShelegLungs
+      Heart: OrganShelegHeart
+      Stomach: OrganShelegStomach
+      Liver: OrganShelegLiver
+      Kidneys: OrganShelegKidneys
   - type: Sprite
     scale: 1.15, 1.2 # tall but dont make it too thin or its going to look bad
-  - type: HumanoidAppearance
+  - type: HumanoidProfile
     species: Sheleg
-    hideLayersOnEquip:
-    - Hair
-    - HeadTop
-    - Snout # Nose, tusks
 
 - type: entity
   save: false
@@ -191,6 +240,9 @@
   components:
   - type: Metabolizer
     metabolizerTypes: [ Sheleg ]
+    # Make chems last 5x as efficient per unit
+    rateModifier: 0.2
+    scaleModifier: 5
 
 - type: entity
   parent: OrganSheleg
@@ -201,7 +253,18 @@
     sprite: _NF/Mobs/Species/Sheleg/organs.rsi
 
 - type: entity
-  parent: OrganSheleg
+  id: OrganShelegVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: _NF/Mobs/Species/Sheleg/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Sheleg
+
+- type: entity
+  parent: [ OrganSheleg, OrganShelegVisual ]
   id: OrganShelegExternal
   abstract: true
   components:
@@ -209,12 +272,21 @@
     sprite: _NF/Mobs/Species/Sheleg/parts.rsi
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganShelegExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganShelegExternal ] # Aurora's Song - Add sexed organs
   id: OrganShelegTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganShelegExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganShelegExternal ] # Aurora's Song - Add sexed organs
   id: OrganShelegHead
+  # Aurora's Song Start - Correct hideable head layers
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Snout
+    - enum.HumanoidVisualLayers.FacialHair
+    - enum.HumanoidVisualLayers.HeadTop #imp
+  # Aurora's Song End
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganShelegExternal ]
@@ -253,8 +325,13 @@
   id: OrganShelegBrain
 
 - type: entity
-  parent: [ OrganBaseEyes, OrganShelegInternal ]
+  parent: [ OrganShelegVisual, OrganBaseEyes, OrganShelegInternal ]
   id: OrganShelegEyes
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Customization/eyes.rsi
+      state: eyes
 
 - type: entity
   parent: [ OrganBaseTongue, OrganShelegInternal ]
@@ -276,40 +353,21 @@
   parent: [ OrganBaseHeart, OrganShelegInternal, OrganShelegMetabolizer ]
   id: OrganShelegHeart
   components:
-  - type: Metabolizer
-    groups:
-    - id: Sheleg
-      rateModifier: 0.20
-      scaleModifier: 5 # Aurora: Fix sheleg chems
-    - id: Cryogenic
-      rateModifier: 0.20
-      scaleModifier: 5 # Aurora: Fix sheleg chems
-    - id: Poison
-      rateModifier: 0.20
-      scaleModifier: 5 # Aurora: Fix sheleg chems
-    - id: Narcotic
-      rateModifier: 0.20
-      scaleModifier: 5 # Aurora: Fix sheleg chems
+  - type: MetabolizerTagWhitelist # Aurora's Song - Replace Sheleg metabolizer with a tag whitelist for chems
+    tags:
+    - Cryogenic
+    - Sheleg
+    - Toxin
+    - Narcotic
+    stages: [ "Bloodstream" ]
 
 - type: entity
   parent: [ OrganBaseStomach, OrganShelegInternal, OrganShelegMetabolizer ]
   id: OrganShelegStomach
-  components:
-  - type: Metabolizer
-    groups:
-    - id: Food
-      rateModifier: 0.25
-    - id: Drink
-      rateModifier: 1.50
 
 - type: entity
   parent: [ OrganBaseLiver, OrganShelegInternal, OrganShelegMetabolizer ]
   id: OrganShelegLiver
-  components:
-  - type: Metabolizer
-    groups:
-    - id: Alcohol
-      rateModifier: 0.1 # removes alcohol very slowly along with the stomach removing it as a drink
 
 - type: entity
   parent: [ OrganBaseKidneys, OrganShelegInternal, OrganShelegMetabolizer ]

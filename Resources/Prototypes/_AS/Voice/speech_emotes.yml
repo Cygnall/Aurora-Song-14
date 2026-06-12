@@ -1,12 +1,12 @@
 - type: emote
-  id: FairyFlutter
+  id: Flutter
   name: chat-emote-name-flutter
-  category: Vocal
+  category: Hands
   available: false
   icon: Interface/Emotes/buzz.png
   whitelist:
     components:
-    - Vocal
+    - Hands
   blacklist:
     tags:
     - SiliconEmotes
@@ -21,12 +21,12 @@
 - type: emote
   id: FairyGlimmer
   name: chat-emote-name-glimmer
-  category: Vocal
+  category: Hands
   available: false
   icon: Interface/Emotes/chime.png
   whitelist:
     components:
-    - Vocal
+    - Hands
   blacklist:
     tags:
     - SiliconEmotes

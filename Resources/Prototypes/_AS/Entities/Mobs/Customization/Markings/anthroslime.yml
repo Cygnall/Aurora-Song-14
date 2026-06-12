@@ -1,10 +1,17 @@
+# Base Markings
+- type: marking # Aurora's Song | Base head into Marking for custom heads
+  id: SlimeHead
+  bodyPart: Head
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: Mobs/Species/Slime/parts.rsi
+    state:  head
 
 # Vulp Slimes
 - type: marking
   id: SlimeVulpkaninSnout
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/anthroslime.rsi
     state:  slime_vulp_head
@@ -12,8 +19,7 @@
 - type: marking
   id: SlimeVulpkaninEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/anthroslime.rsi
     state:  slime_vulp_ears
@@ -21,8 +27,7 @@
 - type: marking
   id: SlimeVulpkaninTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/anthroslime.rsi
     state:  slime_vulp_tail
@@ -31,8 +36,7 @@
 - type: marking
   id: SlimeFelineEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/felineslime.rsi
     state:  slime_feline_ears
@@ -40,8 +44,7 @@
 - type: marking
   id: SlimeFelineTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/felineslime.rsi
     state:  slime_feline_tail
@@ -50,8 +53,7 @@
 - type: marking
   id: SlimeTajaranHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/felineslime.rsi
     state:  slime_tajaran_head
@@ -59,8 +61,7 @@
 - type: marking
   id: SlimeTajaranEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/felineslime.rsi
     state:  slime_tajaran_ears
@@ -68,8 +69,7 @@
 - type: marking
   id: SlimeTajaranTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/felineslime.rsi
     state:  slime_tajaran_tail
@@ -78,8 +78,7 @@
 - type: marking
   id: SlimeFeroxiHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/sharkslime.rsi
     state:  slime_feroxi_head
@@ -87,8 +86,7 @@
 - type: marking
   id: SlimeFeroxiEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/sharkslime.rsi
     state:  slime_feroxi_ears
@@ -96,8 +94,7 @@
 - type: marking
   id: SlimeFeroxiTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/sharkslime.rsi
     state:  slime_feroxi_tail
@@ -106,8 +103,7 @@
 - type: marking
   id: SlimeRodentiaHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/rodentiaslime.rsi
     state:  slime_rodentia_head
@@ -115,8 +111,7 @@
 - type: marking
   id: SlimeRodentiaRabbitEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/rodentiaslime.rsi
     state:  slime_rodentia_rabbit_ears
@@ -124,8 +119,7 @@
 - type: marking
   id: SlimeRodentiaRabbitTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/rodentiaslime.rsi
     state:  slime_rodentia_rabbit_tail
@@ -133,8 +127,7 @@
 - type: marking
   id: SlimeRodentiaRabbitEarsLarge
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: _AS/Mobs/Customization/rodentiaslime32x48.rsi
     state:  slime_rodentia_rabbit_ears_large

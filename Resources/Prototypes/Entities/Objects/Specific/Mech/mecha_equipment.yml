@@ -34,7 +34,7 @@
         - Anomaly # Frontier
         - Mech # Frontier
         - MindContainer # Frontier
-        - HumanoidAppearance # Frontier
+        - HumanoidProfile # Frontier # Aurora's Song HumanoidAppearance>HumanoidProfile
     maxContents: 8
   - type: UIFragment
     ui: !type:MechGrabberUi
@@ -63,7 +63,7 @@
         - Anomaly # Frontier
         - Mech # Frontier
         - MindContainer # Frontier
-        - HumanoidAppearance # Frontier
+        - HumanoidProfile # Frontier # Aurora's Song HumanoidAppearance>HumanoidProfile
     maxContents: 4
     grabDelay: 3
     grabEnergyDelta: -20

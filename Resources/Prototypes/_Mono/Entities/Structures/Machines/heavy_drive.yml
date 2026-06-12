@@ -37,6 +37,9 @@
     driveMassMultiplier: 0.25
   - type: ApcPowerReceiver
     powerLoad: 15000
+  - type: PowerState # Aurora's Song - Required for test
+    idlePowerDraw: 15000
+    workingPowerDraw: 15000
   - type: ExtensionCableReceiver
   - type: Appearance
   - type: AmbientOnPowered
@@ -103,6 +106,9 @@
       shader: unshaded
   - type: ApcPowerReceiver
     powerLoad: 10000
+  - type: PowerState # Aurora's Song - Required for test
+    idlePowerDraw: 10000
+    workingPowerDraw: 10000
   - type: ExtensionCableReceiver
   - type: Appearance
   - type: LitOnPowered

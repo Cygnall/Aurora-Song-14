@@ -207,6 +207,9 @@
       visible: false
   - type: ApcPowerReceiver
     powerLoad: 400
+  - type: PowerState # Aurora's Song - Required for test
+    idlePowerDraw: 400
+    workingPowerDraw: 1000
   - type: Machine
     board: KitchenAssemblerMachineCircuitboard
   - type: ActivatableUI
@@ -255,6 +258,9 @@
       visible: false
   - type: ApcPowerReceiver
     powerLoad: 500
+  - type: PowerState # Aurora's Song - Required for test
+    idlePowerDraw: 500
+    workingPowerDraw: 1000
   - type: Machine
     board: MedicalAssemblerMachineCircuitboard
   - type: ActivatableUI

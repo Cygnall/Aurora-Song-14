@@ -206,7 +206,7 @@
   - type: NPCImprintingOnSpawnBehaviour
     whitelist:
       components:
-      - HumanoidAppearance
+      - HumanoidProfile # Aurora's Song HumanoidAppearance>HumanoidProfile
   - type: NpcFactionMember
     factions:
     - NanoTrasen
@@ -293,7 +293,7 @@
   - type: NPCImprintingOnSpawnBehaviour
     whitelist:
       components:
-      - HumanoidAppearance
+      - HumanoidProfile # Aurora's Song HumanoidAppearance>HumanoidProfile
   - type: NpcFactionMember
     factions:
     - HostileUniversally

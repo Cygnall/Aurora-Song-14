@@ -1199,7 +1199,7 @@
   components:
   - type: Mail
     contents:
-    - id: ClothingHandsGlovesBoxingRigged
+    - id: ClothingHandsGlovesBoxingRiggedRed # Aurora's Song - Add red for upmerge
     - id: ClothingBeltChampion
     - id: PaperMailNTBoxer
 

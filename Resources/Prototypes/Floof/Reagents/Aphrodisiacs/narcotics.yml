@@ -7,7 +7,7 @@
   flavor: spooky
   color: "#c90084"
   metabolisms:
-    Narcotic:
+    Bloodstream: # Aurora's Song - Narcotic>Bloodstream
       metabolismRate : 0.03 #Aurora, one 5u dose is 2.7 minutes
       effects:
       - !type:PopupMessage

@@ -33,7 +33,10 @@ public sealed class AdvDrainSystem : DrainSystem
 
     private readonly HashSet<Entity<PuddleComponent>> _puddles = new();
 
+// Aurora's Song - We cannot duplicate the systems if possible
+#pragma warning disable RA0028
     public override void Initialize()
+#pragma warning restore RA0028
     {
         // base.Initialize(); # This should be running as an independent system
 

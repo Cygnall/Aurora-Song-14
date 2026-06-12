@@ -19,7 +19,7 @@ public sealed class MessageFormatter
 
     public record FormattingRule(string Mark, string StartTag, string EndTag, bool InsideDialogueOnly, bool IsToggle);
 
-    public class FormatterConfig
+    public sealed class FormatterConfig
     {
         public required List<FormattingRule> Rules { get; set; }
 
@@ -32,7 +32,7 @@ public sealed class MessageFormatter
         public bool RemoveAsterisks { get; set; }
     }
 
-    private class FormattingContext
+    private sealed class FormattingContext
     {
         public StringBuilder Result { get; } = new();
         public Stack<FormattingRule> FormattingStack { get; } = new();
@@ -45,7 +45,7 @@ public sealed class MessageFormatter
         int ProcessToken(FormattingContext context, string input, int position, FormatterConfig config);
     }
 
-    private class NormalFormattingState : IFormattingState
+    private sealed class NormalFormattingState : IFormattingState
     {
         public FormattingRule[] OrderedRules { get; }
 
@@ -75,7 +75,7 @@ public sealed class MessageFormatter
         }
     }
 
-    private class DialogueFormattingState : IFormattingState
+    private sealed class DialogueFormattingState : IFormattingState
     {
         public FormattingRule[] OrderedRules { get; }
 

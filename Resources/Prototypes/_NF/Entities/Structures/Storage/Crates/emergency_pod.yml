@@ -59,7 +59,7 @@
         - 10 # water vapor
     whitelist: # Frontier - whitelist
       components:
-      - MedicalBounty
+      - ASMedicalBounty # Aurora's Song - add AS
 #    forceWhitelist: true # Frontier - force whitelist # Aurora's Song
   - type: Damageable
     damageContainer: StructuralInorganic

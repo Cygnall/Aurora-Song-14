@@ -1,5 +1,5 @@
 - type: entity
-  parent: [ GrenadeBase, BaseC2ContrabandUnredeemable ] # Frontier: BaseMinorContraband>BaseC2ContrabandUnredeemable
+  parent: [ TimerGrenadeBase, BaseC2ContrabandUnredeemable ] # Frontier: BaseMinorContraband>BaseC2ContrabandUnredeemable
   id: PipeBomb
   name: pipe bomb
   description: An improvised explosive made from pipes and wire.

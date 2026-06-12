@@ -14,23 +14,26 @@ public sealed partial class FaxMachineComponent : Component
     /// <summary>
     /// Name with which the fax will be visible to others on the network
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("name")]
     public string FaxName { get; set; } = "Unknown";
 
     /// <summary>
     /// Sprite to use when inserting an object.
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
     public string InsertingState = "inserting";
 
     /// <summary>
     /// Device address of fax in network to which data will be send
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField("destinationAddress")]
     public string? DestinationFaxAddress { get; set; }
+
+    /// <summary>
+    /// Name of fax in network to which data will be send
+    /// </summary>
+    [DataField("destinationName")]
+    public string? DestinationFaxName { get; set; }
 
     /// <summary>
     /// Contains the item to be sent, assumes it's paper...
@@ -42,21 +45,18 @@ public sealed partial class FaxMachineComponent : Component
     /// Is fax machine should respond to pings in network
     /// This will make it visible to others on the network
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool ResponsePings { get; set; } = true;
 
     /// <summary>
     /// Should admins be notified on message receive
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool NotifyAdmins { get; set; } = false;
 
     /// <summary>
     /// Should that fax receive nuke codes send by admins. Probably should be captain fax only
     /// </summary>
-    [ViewVariables(VVAccess.ReadWrite)]
     [DataField]
     public bool ReceiveNukeCodes { get; set; } = false;
 
@@ -152,6 +152,18 @@ public sealed partial class FaxMachineComponent : Component
     public EntProtoId PrintOfficePaperId = "PaperOffice";
 
     /// <summary>
+    ///     If the fax machine should add a bit of text in the end of the fax that specifies from where and to where the fax is for
+    /// </summary>
+    [DataField]
+    public bool AddSenderInfo = true;
+
+    /// <summary>
+    ///     The text that is sent along with the paper's content if <see cref="AddSenderInfo"/> is true
+    /// </summary>
+    [DataField]
+    public LocId SenderInfo = "fax-machine-sender-info";
+
+    /// <summary>
     /// Frontier - If true, will sync fax name with a station name.
     /// </summary>
     [ViewVariables]
@@ -197,6 +209,9 @@ public sealed partial class FaxPrintout
     [DataField]
     public bool Locked { get; private set; }
 
+    [DataField]
+    public string? SenderFaxName { get; private set; } = default!;
+
     [DataField] // Frontier
     public bool StampProtected { get; private set; } // Frontier
 
@@ -207,7 +222,7 @@ public sealed partial class FaxPrintout
     {
     }
 
-    public FaxPrintout(string content, string name, string? label = null, string? prototypeId = null, string? stampState = null, List<StampDisplayInfo>? stampedBy = null, bool locked = false, bool stampProtected = false, HashSet<ProtoId<LatheRecipePrototype>>? blueprintRecipes = null) // Frontier: add stampProtected, blueprintRecipes
+    public FaxPrintout(string content, string name, string? label = null, string? prototypeId = null, string? stampState = null, List<StampDisplayInfo>? stampedBy = null, bool locked = false, string? senderFaxName = null, bool stampProtected = false, HashSet<ProtoId<LatheRecipePrototype>>? blueprintRecipes = null) // Frontier: add stampProtected, blueprintRecipes
     {
         Content = content;
         Name = name;
@@ -216,6 +231,7 @@ public sealed partial class FaxPrintout
         StampState = stampState;
         StampedBy = stampedBy ?? new List<StampDisplayInfo>();
         Locked = locked;
+        SenderFaxName = senderFaxName;
         StampProtected = stampProtected; // Frontier
         BlueprintRecipes = blueprintRecipes ?? new(); // Frontier
     }

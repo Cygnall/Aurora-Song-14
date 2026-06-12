@@ -23,7 +23,6 @@ public sealed class DepartmentBonusDispensationMachineSystem : EntitySystem
     [Dependency] private readonly SharedAudioSystem _audio = default!;
     [Dependency] private readonly PopupSystem _popup = default!;
     [Dependency] private readonly UserInterfaceSystem _ui = default!;
-    [Dependency] private readonly IPrototypeManager _protoManager = default!;
 
     public override void Initialize()
     {

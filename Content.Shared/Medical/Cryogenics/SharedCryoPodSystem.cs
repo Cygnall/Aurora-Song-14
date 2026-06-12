@@ -29,6 +29,7 @@ using Content.Shared.Tools.Systems;
 using Content.Shared.UserInterface;
 using Content.Shared.Verbs;
 using Robust.Shared.Containers;
+using Robust.Shared.Prototypes;
 using Robust.Shared.Serialization;
 using Robust.Shared.Timing;
 namespace Content.Shared.Medical.Cryogenics;
@@ -53,15 +54,14 @@ public abstract partial class SharedCryoPodSystem : EntitySystem
     [Dependency] private readonly SharedToolSystem _tool = default!;
     [Dependency] protected readonly SharedUserInterfaceSystem UI = default!;
     [Dependency] private readonly StandingStateSystem _standingState = default!;
-
-    // Frontier: keep a list of cryogenics reagents. The pod will only filter these out from the provided solution.
-    private static readonly string[] CryogenicsReagents = ["Cryoxadone", "Aloxadone", "Doxarubixadone", "Opporozidone", "Necrosol", "Traumoxadone", "Stelloxadone", "Arcryox"];
+    [Dependency] private readonly IPrototypeManager _protoMan = default!;
 
     private EntityQuery<BloodstreamComponent> _bloodstreamQuery;
     private EntityQuery<ItemSlotsComponent> _itemSlotsQuery;
     private EntityQuery<FitsInDispenserComponent> _dispenserQuery;
     private EntityQuery<SolutionContainerManagerComponent> _solutionContainerQuery;
 
+    private ProtoId<ReagentPrototype>[] _cryoChems = []; // Aurora's Song - Allows for filtering out cryo chems to buff them in pod
 
     public override void Initialize()
     {
@@ -80,6 +80,7 @@ public abstract partial class SharedCryoPodSystem : EntitySystem
         SubscribeLocalEvent<CryoPodComponent, ActivatableUIOpenAttemptEvent>(OnActivateUIAttempt);
         SubscribeLocalEvent<CryoPodComponent, EntRemovedFromContainerMessage>(OnEjected);
         SubscribeLocalEvent<CryoPodComponent, EntInsertedIntoContainerMessage>(OnBodyInserted);
+        SubscribeLocalEvent<CryoPodComponent, GotUnEmaggedEvent>(OnUnemagged); // Frontier
 
         _bloodstreamQuery = GetEntityQuery<BloodstreamComponent>();
         _itemSlotsQuery = GetEntityQuery<ItemSlotsComponent>();
@@ -94,6 +95,12 @@ public abstract partial class SharedCryoPodSystem : EntitySystem
             subs.Event<CryoPodSimpleUiMessage>(OnSimpleUiMessage);
             subs.Event<CryoPodInjectUiMessage>(OnInjectUiMessage);
         });
+
+        // Aurora's Song - Get list of all cryo chems
+        _cryoChems = _protoMan.EnumeratePrototypes<ReagentPrototype>()
+            .Where(proto => proto.Tags.Contains("Cryogenic"))
+            .Select(proto => (ProtoId<ReagentPrototype>)proto.ID)
+            .ToArray();
     }
 
     public override void Update(float frameTime)
@@ -130,15 +137,16 @@ public abstract partial class SharedCryoPodSystem : EntitySystem
             return;
         }
 
-        // Frontier
-        // Filter out a fixed amount of each reagent from the cryo pod's beaker
-        // var solutionToInject =
-        //     _solutionContainer.SplitSolution(injectingSolution.Value, entity.Comp.BeakerTransferAmount);
-        var solutionToInject = _solutionContainer.SplitSolutionPerReagentWithOnly(injectingSolution.Value, entity.Comp.BeakerTransferAmount, CryogenicsReagents);
+        var solutionToInject =
+            _solutionContainer.SplitSolution(injectingSolution.Value, entity.Comp.BeakerTransferAmount);
 
-        // For every .25 units used, .5 units per second are added to the body, making cryo-pod more efficient than injections.
-        solutionToInject.ScaleSolution(entity.Comp.PotencyMultiplier);
-        // End Frontier
+        // Aurora's Song - Filter out cryo chems
+        var cryogenicsToInject =
+            solutionToInject.SplitSolutionWithOnly(entity.Comp.BeakerTransferAmount, _cryoChems);
+
+        // Frontier - For every .25 units used, .5 units per second are added to the body, making cryo-pod more efficient than injections.
+        cryogenicsToInject.ScaleSolution(entity.Comp.PotencyMultiplier); // Aurora's Song - Use cryogenics solution instead
+        solutionToInject.AddSolution(cryogenicsToInject, _protoMan); // Aurora's Song - Add the cryogenic chems back to the solution
 
         if (solutionToInject.Volume > 0)
         {

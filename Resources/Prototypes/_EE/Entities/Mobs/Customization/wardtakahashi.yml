@@ -39,7 +39,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingWardtakahashiLArm
   bodyPart: LArm
-  markingCategory: Arms
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
     state: l_arm
@@ -49,7 +48,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingWardtakahashiLHand
   bodyPart: LHand
-  markingCategory: Arms
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
     state: l_hand
@@ -59,7 +57,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingWardtakahashiLLeg
   bodyPart: LLeg
-  markingCategory: Legs
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
     state: l_leg
@@ -70,7 +67,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingWardtakahashiLFoot
   bodyPart: LFoot
-  markingCategory: Legs
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
     state: l_foot
@@ -82,7 +78,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingWardtakahashiRArm
   bodyPart: RArm
-  markingCategory: Arms
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
     state: r_arm
@@ -93,7 +88,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingWardtakahashiRHand
   bodyPart: RHand
-  markingCategory: Arms
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
     state: r_hand
@@ -103,7 +97,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingWardtakahashiRLeg
   bodyPart: RLeg
-  markingCategory: Legs
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
     state: r_leg
@@ -114,7 +107,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingWardtakahashiRFoot
   bodyPart: RFoot
-  markingCategory: Legs
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/wardtakahashi/wardtakahashi_main.rsi
     state: r_foot

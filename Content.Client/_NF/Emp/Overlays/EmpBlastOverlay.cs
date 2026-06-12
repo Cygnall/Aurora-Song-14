@@ -19,6 +19,8 @@ namespace Content.Client._NF.Emp.Overlays
 
         private const float PvsDist = 25.0f;
 
+        private static readonly ProtoId<ShaderPrototype> EmpShader = "Emp"; // Aurora's Song
+
         public override OverlaySpace Space => OverlaySpace.WorldSpace;
         public override bool RequestScreenTexture => true;
 
@@ -28,7 +30,7 @@ namespace Content.Client._NF.Emp.Overlays
         public EmpBlastOverlay()
         {
             IoCManager.InjectDependencies(this);
-            _baseShader = _prototypeManager.Index<ShaderPrototype>("Emp").Instance().Duplicate();
+            _baseShader = _prototypeManager.Index<ShaderPrototype>(EmpShader).Instance().Duplicate(); // Aurora's Song - Make it a variable
         }
 
         protected override bool BeforeDraw(in OverlayDrawArgs args)

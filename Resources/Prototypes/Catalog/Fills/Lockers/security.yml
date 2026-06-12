@@ -48,6 +48,8 @@
       amount: 2
     - id: NetworkConfigurator
     - id: Binoculars
+    - id: PlushieLizardJobWarden
+      prob: 0.02
 
 - type: entityTable
   id: FillLockerWardenHarduit
@@ -96,6 +98,10 @@
     # - id: BookSpaceLaw # Aurora's Song
     - id: ASHyperlinkBookSpaceLaw
       prob: 0.5
+    - id: PlushieLizardJobSecuritycadet
+      prob: 0.02
+    - id: PlushieLizardJobSecurityofficer
+      prob: 0.02
 
 - type: entity
   id: LockerBrigmedicFilled
@@ -176,6 +182,8 @@
     - id: HandLabeler
     - id: BoxTapeRecorder # DeltaV
       prob: 0.3
+    - id: PlushieLizardJobDetective
+      prob: 0.02
 
 - type: entity
   id: ClosetBombFilled

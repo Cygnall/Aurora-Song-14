@@ -7,17 +7,18 @@
   contrabandSeverity: Minor
   flavor: bitter
   color: "#FAFAFA"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   boilingPoint: 212.0  # Dexosyephedrine vape when?
   meltingPoint: 170.0
   metabolisms:
-    Poison:
+    Bloodstream:
       # Main effects
       effects:
       - !type:HealthChange
         damage:
           types:
             Poison: 0.55
-            Blunt: 0.5
+            Blunt: 1.1 # meant to be slightly more than tricordrazine heals
       # OD
       - !type:HealthChange
         conditions:
@@ -28,8 +29,7 @@
           types:
             Poison: 3 # this is added to the base damage of the meth.
             Asphyxiation: 2
-    Narcotic:
-      effects:
+
       # Main effects
       - !type:MovementSpeedModifier
         walkSpeedModifier: 1.20
@@ -58,8 +58,7 @@
         effectProto: StatusEffectDrowsiness
         time: 10
         type: Remove
-    Medicine:
-      effects:
+
       # Side effects
       - !type:ResetNarcolepsy
         conditions:
@@ -75,10 +74,11 @@
   physicalDesc: reagent-physical-desc-powdery
   flavor: bitter
   color: "#D2FFFA"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   boilingPoint: 255.0
   meltingPoint: 36.0
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       # Main effects
       - !type:MovementSpeedModifier
@@ -117,8 +117,6 @@
         effectProto: StatusEffectDrowsiness
         time: 10
         type: Remove
-    Medicine:
-      effects:
       # Side effects
       - !type:ResetNarcolepsy
         conditions:
@@ -135,10 +133,11 @@
   contrabandSeverity: Syndicate
   flavor: sharp
   color: "#9A040E"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   boilingPoint: 212.0
   meltingPoint: 170.0
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       # Main effects
       - !type:MovementSpeedModifier
@@ -169,10 +168,10 @@
         conditions:
         - !type:ReagentCondition
           reagent: Stimulants
-          min: 50
+          min: 45
         damage:
           types:
-            Poison: 1
+            Poison: 3
       # Interactions
       - !type:ModifyStatusEffect
         conditions:
@@ -189,8 +188,6 @@
           min: 1
         reagent: ChloralHydrate
         amount: -10
-    Medicine:
-      effects:
       # Main effects
       - !type:ModifyBleed
         amount: -1.5
@@ -223,6 +220,7 @@
   flavor: bitter
   flavorMinimum: 0.05
   color: "#808080"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   physicalDesc: reagent-physical-desc-crystalline
   plantMetabolism:
   - !type:PlantAdjustNutrition
@@ -230,7 +228,7 @@
   - !type:PlantAdjustHealth
     amount: -1
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       - !type:ModifyStatusEffect
         effectProto: StatusEffectSeeingRainbow
@@ -244,6 +242,7 @@
   desc: reagent-desc-nicotine
   flavor: bitter
   color: "#C0C0C0"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   physicalDesc: reagent-physical-desc-strong-smelling
   plantMetabolism:
   - !type:PlantAdjustHealth
@@ -259,8 +258,9 @@
   contrabandSeverity: Minor
   flavor: bitter
   color: "#215263"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       - !type:MovementSpeedModifier
         walkSpeedModifier: 0.65
@@ -286,8 +286,9 @@
   physicalDesc: reagent-physical-desc-syrupy
   flavor: bitter
   color: "#63806e"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       - !type:ModifyStatusEffect
         effectProto: StatusEffectSeeingRainbow
@@ -302,8 +303,9 @@
   physicalDesc: reagent-physical-desc-powdery
   flavor: bitter
   color: "#ffff00"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       - !type:ModifyStatusEffect
         effectProto: StatusEffectSeeingRainbow
@@ -319,10 +321,11 @@
   physicalDesc: reagent-physical-desc-powdery
   contrabandSeverity: Syndicate
   color: "#128e80"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   boilingPoint: 444.0
   meltingPoint: 128.0
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects: # It would be nice to have speech slurred or mumbly, but accents are a bit iffy atm. Same for distortion effects.
       - !type:MovementSpeedModifier
         walkSpeedModifier: 0.65
@@ -333,7 +336,7 @@
           reagent: Nocturine
           min: 8
         effectProto: StatusEffectForcedSleeping
-        time: 6
+        time: 6 # Aurora's Song - 9>6 - Pre Nubody Upmerge
         delay: 5
 
 - type: reagent
@@ -344,10 +347,11 @@
   physicalDesc: reagent-physical-desc-syrupy
   contrabandSeverity: Syndicate
   color: "#000000"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   boilingPoint: 255.0
   meltingPoint: 36.0
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       - !type:GenericStatusEffect
         key: Muted
@@ -364,10 +368,11 @@
   contrabandSeverity: Minor
   flavor: salty
   color: "#96a8b5"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   boilingPoint: 255.0
   meltingPoint: 36.0
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       - !type:PopupMessage
         type: Local
@@ -412,10 +417,11 @@
   - Security
   flavor: salty
   color: "#ffffff4d"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   boilingPoint: 255.0
   meltingPoint: 36.0
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       - !type:PopupMessage
         type: Local
@@ -471,8 +477,9 @@
   physicalDesc: reagent-physical-desc-soothing
   flavor: paintthinner
   color: "#EE35FF"
+  tags: [ Narcotic ] # Aurora's Song | Narcotic tag required for updated metabolisers
   metabolisms:
-    Narcotic:
+    Bloodstream:
       effects:
       - !type:Emote
         emote: Laugh

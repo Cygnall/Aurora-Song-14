@@ -94,7 +94,7 @@
   #   gib: false
   #   useArgumentEntity: true
     # Medical bounty-specific fields
-  - type: MedicalBounty
+  - type: ASMedicalBounty # Aurora's Song - MedicalBounty>ASMedicalBounty
   - type: NpcFactionMember
     factions:
     - NanoTrasen # Unsure about this one, but friendly turrets shouldn't gun them down

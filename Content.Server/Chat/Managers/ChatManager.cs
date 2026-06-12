@@ -43,7 +43,7 @@ internal sealed partial class ChatManager : IChatManager
     [Dependency] private readonly INetConfigurationManager _netConfigManager = default!;
     [Dependency] private readonly IEntityManager _entityManager = default!;
     [Dependency] private readonly PlayerRateLimitManager _rateLimitManager = default!;
-    [Dependency] private readonly ISharedPlayerManager _player = default!;
+    // [Dependency] private readonly ISharedPlayerManager _player = default!; // Aurora's Song
     [Dependency] private readonly DiscordChatLink _discordLink = default!;
     [Dependency] private readonly ILogManager _logManager = default!;
 

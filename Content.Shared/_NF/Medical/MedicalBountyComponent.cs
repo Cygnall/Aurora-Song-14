@@ -1,3 +1,4 @@
+/** Aurora's Song - Disable NF medical bounty system
 using Content.Shared._NF.Medical.Prototypes;
 
 namespace Content.Server._NF.Medical.Components;
@@ -25,3 +26,4 @@ public sealed partial class MedicalBountyComponent : Component
     /// </summary>
     public bool BountyInitialized;
 }
+*/

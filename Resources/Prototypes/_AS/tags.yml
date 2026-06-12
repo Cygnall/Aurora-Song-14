@@ -1,4 +1,5 @@
 ﻿# Added back stuff from upmerge
+#region Upmerge
 - type: Tag
   id: ATVKeys
 
@@ -34,10 +35,12 @@
 
 - type: Tag
   id: Wringer
+#endregion
 
 #region .30 rifle
 - type: Tag
   id: ASMagazineMarksmanRifle30
+#endregion
 
 #region .40 pistol
 - type: Tag
@@ -57,6 +60,7 @@
 
 - type: Tag
   id: ASSpeedLoaderPistol40
+#endregion
 
 #region .25 caseless
 - type: Tag
@@ -67,6 +71,21 @@
 
 - type: Tag
   id: ASMagazinePistolCaselessRifle
+#endregion
+
+#region Chems
+- type: Tag
+  id: Cryogenic
+
+- type: Tag
+  id: Narcotic
+
+- type: Tag
+  id: Toxin
+
+- type: Tag
+  id: Sheleg
+#endregion
 
 #region Docking Tags
 - type: Tag
@@ -83,6 +102,7 @@
 
 - type: Tag
   id: ArrivalShuttle
+#endregion
 
 #region uplinks - Aurora
 - type: Tag
@@ -90,13 +110,14 @@
 
 - type: Tag
   id: ExchangeUplink
+#endregion
 
 #region licenses
 - type: Tag
   id: License
+#endregion
 
 #region Power Cells
-
 - type: Tag
   id: PowerCellMedium
 
@@ -111,3 +132,4 @@
 
 - type: Tag
   id: PowerCellAntique
+#endregion

@@ -130,7 +130,7 @@ public sealed class HealingSystem : EntitySystem
         var healingDict = healing.Comp.Damage.DamageDict;
         foreach (var type in healingDict)
         {
-            if (damageableDict.GetValueOrDefault(type.Key) > 0) // DeltaV - 0 instead of throwing
+            if (damageableDict.TryGetValue(type.Key, out var amount) && amount > 0)
             {
                 return true;
             }

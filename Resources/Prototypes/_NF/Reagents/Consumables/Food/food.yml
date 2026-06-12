@@ -7,7 +7,7 @@
   flavor: nutriment
   color: "#775441"
   metabolisms:
-    Food:
+    Digestion: # Aurora's Song - Food>Digestion
       metabolismRate: 0.1
       effects:
       - !type:MovementSpeedModifier # Aurora's Song - MovespeedModifier>MovementSpeedModifier
@@ -43,15 +43,11 @@
   color: "#3f1d04"
   recognizable: true
   metabolisms:
-    Food:
-      effects:
+    Digestion: # Aurora's Song - Food>Digestion
+      metabolites:
       # Minimally filling
-      - !type:AdjustReagent
-        reagent: Sugar
-        amount: 0.2
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.1
+        Sugar: 0.2
+        Nutriment: 0.1
 
 - type: reagent
   id: SourCream
@@ -62,7 +58,7 @@
   flavor: sharp
   color: "#F5F5F5"
   metabolisms:
-    Food:
+    Digestion: # Aurora's Song - Food>Digestion
       effects:
       - !type:SatiateHunger
         factor: 0.3
@@ -77,7 +73,7 @@
   color: "#ff6347"
   recognizable: true
   metabolisms:
-    Food:
+    Digestion: # Aurora's Song - Food>Digestion
       effects:
       - !type:SatiateHunger
         factor: 0.2

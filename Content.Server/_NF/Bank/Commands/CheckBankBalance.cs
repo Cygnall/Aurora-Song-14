@@ -6,6 +6,7 @@ using Content.Shared.Administration;
 using Content.Shared.Preferences;
 using Robust.Server.Player;
 using Robust.Shared.Console;
+using Robust.Shared.Utility; // Aurora's Song
 
 namespace Content.Server._NF.Bank.Commands;
 
@@ -64,14 +65,13 @@ public sealed class CheckBankBalance : IConsoleCommand
             var userId = record.UserId;
             var prefs = await _dbManager.GetPlayerPreferencesAsync(userId, default);
             if (prefs != null &&
-                prefs.SelectedCharacterIndex >= 0 &&
-                prefs.Characters.TryGetValue(prefs.SelectedCharacterIndex, out var profile))
+                // Aurora's Song Start - Convert to upstream profiles
+                prefs.SelectedCharacterSlot >= 0 &&
+                prefs.Profiles.TryGetValue(prefs.SelectedCharacterSlot, out var profile))
             {
-                if (profile is HumanoidCharacterProfile humanoid)
-                {
-                    shell.WriteLine($"Player {username} has a bank balance of {humanoid.BankBalance} credits.");
-                    return;
-                }
+                shell.WriteLine($"Player {username} has a bank balance of {profile.BankBalance} credits.");
+                return;
+                // Aurora's Song End
             }
         }
 

@@ -1,3 +1,49 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Tajaran
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail:
+      limit: 1
+      required: true
+      default: [ TajaranTailRetro ]
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: true
+      default: [ TajaranEarsBasic ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2 # Aurora's Song - was 1. Matching other species
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 8 # Aurora 2<8
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 8 # Aurora 2<8
+      required: false
+
 - type: entity
   parent: BaseSpeciesAppearance
   id: AppearanceTajaran
@@ -10,39 +56,30 @@
           32:
             sprite: Mobs/Species/Human/displacement.rsi
             state: jumpsuit-female
-  - type: EntityTableContainerFill
-    containers:
-      body_organs: !type:AllSelector
-        children:
-        - id: OrganTajaranTorso
-        - id: OrganTajaranHead
-        - id: OrganTajaranArmLeft
-        - id: OrganTajaranArmRight
-        - id: OrganTajaranHandRight
-        - id: OrganTajaranHandLeft
-        - id: OrganTajaranLegLeft
-        - id: OrganTajaranLegRight
-        - id: OrganTajaranFootLeft
-        - id: OrganTajaranFootRight
-        - id: OrganHumanBrain
-        - id: OrganHumanEyes
-        - id: OrganHumanTongue
-        - id: OrganHumanAppendix
-        - id: OrganHumanEars
-        - id: OrganHumanLungs
-        - id: OrganAnimalHeart
-        - id: OrganVulpkaninStomach
-        - id: OrganAnimalLiver
-        - id: OrganHumanKidneys
-  - type: HumanoidAppearance
+  - type: InitialBody
+    organs:
+      Torso: OrganTajaranTorso
+      Head: OrganTajaranHead
+      ArmLeft: OrganTajaranArmLeft
+      ArmRight: OrganTajaranArmRight
+      HandRight: OrganTajaranHandRight
+      HandLeft: OrganTajaranHandLeft
+      LegLeft: OrganTajaranLegLeft
+      LegRight: OrganTajaranLegRight
+      FootLeft: OrganTajaranFootLeft
+      FootRight: OrganTajaranFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganAnimalHeart
+      Stomach: OrganVulpkaninStomach
+      Liver: OrganAnimalLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
     species: Tajaran
-    hideLayersOnEquip:
-    - Snout
-    - SnoutCover
-    - HeadTop
-    - HeadSide
-    - FacialHair
-    - Hair
 
 - type: entity
   name: Urist McTajaran
@@ -173,14 +210,28 @@
   components:
   - type: Sprite
     sprite: _EE/Mobs/Species/Tajaran/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: _EE/Mobs/Species/Tajaran/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Tajaran
 
 - type: entity
-  parent: [ OrganBaseTorso, OrganTajaranExternal ]
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganTajaranExternal ] # Aurora's Song - Add sexed organs
   id: OrganTajaranTorso
 
 - type: entity
-  parent: [ OrganBaseHead, OrganTajaranExternal ]
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganTajaranExternal ] # Aurora's Song - Add sexed organs
   id: OrganTajaranHead
+  # Aurora's Song Start - Correct hideable head layers
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.FacialHair
+  # Aurora's Song End
 
 - type: entity
   parent: [ OrganBaseArmLeft, OrganTajaranExternal ]

@@ -9,14 +9,12 @@
     sprite: Objects/Consumable/Drinks/lean.rsi
     state: icon
   metabolisms:
-    Narcotic:
+    Bloodstream: # Aurora's Song - Narcotic&Poison&Medicine>Bloodstream
       effects:
       - !type:GenericStatusEffect
         key: Stutter
         component: StutteringAccent
       - !type:Jitter
-    Poison:
-      effects:
       - !type:HealthChange
         conditions:
         - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition
@@ -31,8 +29,6 @@
           reagent: Lean
           min: 35
         probability: 0.1
-    Medicine:
-      effects:
       - !type:Vomit # Aurora's Song - ChemVomit>Vomit
         conditions:
           - !type:ReagentCondition # Aurora's Song - ReagentThreshold>ReagentCondition

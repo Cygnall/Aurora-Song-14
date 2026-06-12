@@ -332,6 +332,7 @@ public sealed partial class AnomalySystem : SharedAnomalySystem
             msg.AddMarkupOrThrow(Loc.GetString("anomaly-scanner-anomalite-expected", ("count", int.Min(anomalyComp.PointsEarned / anomalyComp.PointsPerCrystalUnit, anomalyComp.MaxCrystals))));
         }
         // End Frontier
+        msg.PushNewline(); // Aurora's Song | each time you add a line, you need to terminate it with a newline push
 
         //Particles title
         msg.AddMarkupOrThrow(Loc.GetString("anomaly-scanner-particle-readout"));

@@ -268,3 +268,33 @@
     guides:
     - Botany
     - Chemicals
+
+- type: entity
+  parent: [ BaseFlatpack, BaseC3SyndicateContraband ] # Aurora's Song - BaseSyndicateContraband>BaseC3SyndicateContraband
+  id: SyndicateMicrowaveFlatpack
+  name: donk co. microwave flatpack
+  description: A flatpack used for constructing a microwave too hot for Nanotrasen to handle.
+  components:
+  - type: Item
+    size: Normal
+  - type: Flatpack
+    entity: SyndicateMicrowave
+  - type: GuideHelp
+    guides:
+    - FoodRecipes
+
+- type: entity
+  parent: [ BaseFlatpack, BaseXenoborgContraband ]
+  id: XenoborgExtractorFlatpack
+  name: xenoborg extractor flatpack
+  description: A flatpack used for constructing a xenoborg extractor.
+  components:
+  - type: Item
+    size: Normal
+  - type: Flatpack
+    entity: XenoborgExtractor
+# Aurora's Song - Disable xenoborg guide
+#  - type: GuideHelp
+#    guides:
+#    - Xenoborgs
+

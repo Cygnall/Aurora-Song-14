@@ -6,11 +6,11 @@
   flavor: bitter
   color: "#fcc4ff"
   metabolisms:
-    Poison:
+    Bloodstream: # Aurora's Song - Poison>Bloodstream
       effects:
       - !type:Oxygenate
         factor: 1.25
-    Gas:
+    Respiration: # Aurora's Song - Gas>Respiration
       effects:
       - !type:Oxygenate
         factor: 1.25

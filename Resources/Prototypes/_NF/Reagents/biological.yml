@@ -13,7 +13,7 @@
     params:
       volume: 6
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
       effects:
       # Effects for non-goblins
       - !type:SatiateThirst
@@ -53,7 +53,7 @@
   physicalDesc: reagent-physical-desc-thick
   color: "#7c3d00"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
       metabolismRate: 0.25
       effects:
         - !type:Emote

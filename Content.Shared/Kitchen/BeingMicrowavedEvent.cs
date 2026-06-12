@@ -8,7 +8,7 @@ public sealed class BeingMicrowavedEvent(EntityUid microwave, EntityUid? user, b
     public EntityUid Microwave = microwave;
     public EntityUid? User = user;
     // Frontier: fields for whether or not the object is actually being heated or irradiated.
-    public bool BeingHeated;
-    public bool BeingIrradiated;
+    public bool BeingHeated = heating; // Aurora's Song - Add missing setter
+    public bool BeingIrradiated = irradiating; // Aurora's Song
     // End Frontier
 }

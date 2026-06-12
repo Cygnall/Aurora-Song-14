@@ -37,10 +37,9 @@ public sealed partial class NymphSystem : EntitySystem
         if (HasComp<ZombieComponent>(args.Target)) // Zombify the new nymph if old one is a zombie
             _zombie.ZombifyEntity(nymph);
 
-        // Aurora's Song - Keep as a bracketed function for NF
-        if (comp.TransferMind == true && _mindSystem.TryGetMind(args.Target, out var mindId, out var mind))
-        {
-            // Move the mind if there is one and it's supposed to be transferred
+        // Move the mind if there is one and it's supposed to be transferred
+        if (comp.TransferMind && _mindSystem.TryGetMind(uid, out var mindId, out var mind))
+        {   // Aurora's Song - Keep as a bracketed function for NF
             _mindSystem.TransferTo(mindId, nymph, mind: mind);
 
             // Frontier: bank account transfer, mob setup

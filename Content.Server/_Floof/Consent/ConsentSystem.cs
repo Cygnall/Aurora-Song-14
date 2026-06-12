@@ -8,6 +8,7 @@ using Content.Server.Mind;
 using Content.Server.Station.Systems;
 using Content.Shared._Floof.Consent;
 using Content.Shared.GameTicking;
+using Content.Shared.Humanoid; // Aurora's Song
 using Robust.Server.Player;
 using Robust.Shared.Network;
 using Robust.Shared.Utility;
@@ -17,9 +18,9 @@ namespace Content.Server._Floof.Consent;
 
 public sealed class ConsentSystem : SharedConsentSystem
 {
-    [Dependency] private readonly ConsentSystem _consent = default!;
+    // [Dependency] private readonly ConsentSystem _consent = default!; // Aurora's Song
     [Dependency] private readonly IPlayerManager _playerManager = default!;
-    [Dependency] private readonly StationSpawningSystem _stationSpawning = default!;
+    // [Dependency] private readonly StationSpawningSystem _stationSpawning = default!; // Aurora's Song
 
     protected override FormattedMessage GetConsentText(NetUserId userId)
     {
@@ -43,10 +44,11 @@ public sealed class ConsentSystem : SharedConsentSystem
         var hasSession = _playerManager.TryGetSessionById(userId, out var session);
 
         if (hasSession && session != null
-            && _stationSpawning.GetProfile(session.AttachedEntity, out var profile)
+            && TryComp<HumanoidProfileComponent>(session.AttachedEntity, out var profile) // Aurora's Song - Nubody
+            && TryComp<MetaDataComponent>(session.AttachedEntity, out var metadata) // Aurora's Song - Remove last profile
             && !string.IsNullOrWhiteSpace(profile.CharacterConsent))
         {
-            result += $"\n\n- [{profile.Name}] -";
+            result += $"\n\n- [{metadata.EntityName}] -"; // Aurora's Song - Remove last profile
             result += $"\n{profile.CharacterConsent}";
         }
 

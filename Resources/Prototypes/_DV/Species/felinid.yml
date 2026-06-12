@@ -3,47 +3,5 @@
   name: species-name-felinid
   roundStart: true
   prototype: MobFelinid
-  sprites: MobHumanSprites
-  markingLimits: MobFelinidMarkingLimits
   dollPrototype: AppearanceFelinid
   skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
-  # Had to comment these out for now, will work on implementing them for all species later
-#  minHeight: 0.65
-#  defaultHeight: 0.8
-#  maxHeight: 1.1
-#  minWidth: 0.6
-#  defaultWidth: 0.8
-#  maxWidth: 1.15
-
-- type: markingPoints
-  id: MobFelinidMarkingLimits
-  points:
-    Hair:
-      points: 1
-      required: false
-    FacialHair:
-      points: 1
-      required: false
-    Tail:
-      points: 1
-      required: true
-      defaultMarkings: [ FelinidTailBasic ]
-    HeadTop:
-      points: 1
-      required: true
-      defaultMarkings: [ FelinidEarsBasic ]
-    Chest:
-      points: 4 # Frontier 1<4
-      required: false
-    Arms:
-      points:  8 # Aurora 4<8
-      required: false
-    Legs:
-      points: 8 # Aurora 4<8
-      required: false
-    UndergarmentBottom:
-      points: 1
-      required: false
-    UndergarmentTop:
-      points: 1
-      required: false

@@ -9,6 +9,7 @@ using Content.Shared.Emag.Systems;
 using Content.Shared.GameTicking;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components;
+using Content.Shared.Overlays;
 using Content.Shared.Radio.Components;
 using Content.Shared.Roles;
 using Content.Shared.Roles.Components;
@@ -37,6 +38,10 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
     [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
     [Dependency] private readonly EmagSystem _emag = default!;
     [Dependency] private readonly TagSystem _tagSystem = default!; // Corvax-Next-AiRemoteControl
+
+    private static readonly ProtoId<SiliconLawsetPrototype> DefaultCrewLawset = "Crewsimov";
+    private static readonly ProtoId<TagPrototype> StationAi = "StationAi"; // Aurora's Song
+
     /// <inheritdoc/>
     public override void Initialize()
     {
@@ -67,7 +72,7 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
 
         // Corvax-Next-AiRemoteControl-Start
         if (HasComp<AiRemoteControllerComponent>(uid)
-            || _tagSystem.HasTag(uid, "StationAi")) // skip a law's notification for remotable and AI
+            || _tagSystem.HasTag(uid, StationAi)) // skip a law's notification for remotable and AI // Aurora's Song
             return;
         // Corvax-Next-AiRemoteControl-End
 
@@ -318,6 +323,11 @@ public sealed class SiliconLawSystem : SharedSiliconLawSystem
 
         while (query.MoveNext(out var update))
         {
+            if (TryComp<ShowCrewIconsComponent>(update, out var crewIconComp))
+            {
+                crewIconComp.UncertainCrewBorder = DefaultCrewLawset != provider.Laws;
+                Dirty(update, crewIconComp);
+            }
             SetLaws(lawset.Laws, update, provider.LawUploadSound);
 
             // Corvax-Next-AiRemoteControl-Start

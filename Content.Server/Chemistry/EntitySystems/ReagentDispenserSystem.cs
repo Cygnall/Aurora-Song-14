@@ -40,7 +40,6 @@ namespace Content.Server.Chemistry.EntitySystems
         [Dependency] private readonly OpenableSystem _openable = default!;
         [Dependency] private readonly HandsSystem _handsSystem = default!;
         [Dependency] private readonly LabelSystem _label = default!; // Frontier
-        [Dependency] private readonly SharedContainerSystem _containers = default!; // Frontier
 
         public override void Initialize()
         {

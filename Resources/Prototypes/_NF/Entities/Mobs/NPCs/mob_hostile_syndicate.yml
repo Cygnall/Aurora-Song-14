@@ -7,10 +7,10 @@
   - NFMobNoEquipmentOnGib
   - MobStaminaFodder
   - MobMovementSpeedModifierRanged
+  - BaseMobHumanSynthetic # Aurora's Song - Nubody
   - MobHumanoidHostileBase
   - MobHumanoidInvetory
   - MobHumanoidHostileAISimpleRanged
-  - BaseMobHumanSynthetic # Aurora's Song - Nubody
   id: MobSyndicateNavalBase
   components:
   - type: CombatMode # Aurora's Song - Enable NavSmash behavior

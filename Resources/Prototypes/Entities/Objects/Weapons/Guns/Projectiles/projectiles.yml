@@ -407,7 +407,7 @@
     - state: omnilaser
       shader: unshaded
   - type: Ammo
-    muzzleFlash: MuzzleFlashEffectOmnilaser
+    muzzleFlash: NFMuzzleFlashEffectOmnilaser # Aurora's Song | Correct muzzleflash prototype
   - type: Physics
   - type: Fixtures
     fixtures:
