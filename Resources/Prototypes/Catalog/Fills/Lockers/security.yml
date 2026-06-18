@@ -95,8 +95,7 @@
       prob: 0.1
     - id: HoloprojectorSecurity
       prob: 0.6
-    # - id: BookSpaceLaw # Aurora's Song
-    - id: ASHyperlinkBookSpaceLaw
+    - id: ASHyperlinkBookSpaceLaw # Aurora's Song - BookSpaceLaw>ASHyperlinkBookSpaceLaw
       prob: 0.5
     - id: PlushieLizardJobSecuritycadet
       prob: 0.02
