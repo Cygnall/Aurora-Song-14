@@ -18,16 +18,16 @@ using Content.Shared.Tools.Components;
 
 namespace Content.Server.Power.EntitySystems;
 
-public sealed class ApcSystem : EntitySystem
+public sealed partial class ApcSystem : EntitySystem
 {
-    [Dependency] private readonly AccessReaderSystem _accessReader = default!;
-    [Dependency] private readonly ISharedAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly EmagSystem _emag = default!;
-    [Dependency] private readonly PopupSystem _popup = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly UserInterfaceSystem _ui = default!;
+    [Dependency] private AccessReaderSystem _accessReader = default!;
+    [Dependency] private ISharedAdminLogManager _adminLogger = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private EmagSystem _emag = default!;
+    [Dependency] private PopupSystem _popup = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private UserInterfaceSystem _ui = default!;
 
     public override void Initialize()
     {
@@ -43,6 +43,7 @@ public sealed class ApcSystem : EntitySystem
         SubscribeLocalEvent<ApcComponent, GotUnEmaggedEvent>(OnUnemagged); // Frontier
 
         SubscribeLocalEvent<ApcComponent, EmpPulseEvent>(OnEmpPulse);
+        SubscribeLocalEvent<ApcComponent, EmpDisabledRemovedEvent>(OnEmpDisabledRemoved); // Frontier: Upstream - #28984
         SubscribeLocalEvent<ApcComponent, ToolUseAttemptEvent>(OnToolUseAttempt); // Frontier
     }
 
@@ -90,7 +91,8 @@ public sealed class ApcSystem : EntitySystem
     // Change the APC's state only when the battery state changes, or when it's first created.
     private void OnBatteryChargeChanged(EntityUid uid, ApcComponent component, ref ChargeChangedEvent args)
     {
-        UpdateApcState(uid, component);
+        // Defer until the next tick.
+        component.NeedStateUpdate = true;
     }
 
     private static void OnApcStartup(EntityUid uid, ApcComponent component, ComponentStartup args)
@@ -180,7 +182,8 @@ public sealed class ApcSystem : EntitySystem
 
     public void UpdateApcState(EntityUid uid,
         ApcComponent? apc = null,
-        PowerNetworkBatteryComponent? battery = null)
+        PowerNetworkBatteryComponent? battery = null,
+        bool forceEmp = false) // Aurora's Song - Force EMP effects
     {
         if (!Resolve(uid, ref apc, ref battery, false))
             return;
@@ -188,6 +191,8 @@ public sealed class ApcSystem : EntitySystem
         if (apc.LastChargeStateTime == null || apc.LastChargeStateTime + ApcComponent.VisualsChangeDelay < _gameTiming.CurTime)
         {
             var newState = CalcChargeState(uid, battery.NetworkBattery);
+            if (forceEmp) // Aurora's Song - Force EMP effects
+                newState = ApcChargeState.Emag;
             if (newState != apc.LastChargeState)
             {
                 apc.LastChargeState = newState;
@@ -235,7 +240,7 @@ public sealed class ApcSystem : EntitySystem
 
     private ApcChargeState CalcChargeState(EntityUid uid, PowerState.Battery battery)
     {
-        if (_emag.CheckFlag(uid, EmagType.Interaction))
+        if (_emag.CheckFlag(uid, EmagType.Interaction) || HasComp<EmpDisabledComponent>(uid)) // Frontier: Upstream - #28984
             return ApcChargeState.Emag;
 
         if (battery.CurrentStorage / battery.Capacity > ApcComponent.HighPowerThreshold)
@@ -268,14 +273,20 @@ public sealed class ApcSystem : EntitySystem
     // At least the EMP visuals won't mispredict, since all APCs also have the BatteryComponent, which also has a EMP effect and is in shared.
     private void OnEmpPulse(EntityUid uid, ApcComponent component, ref EmpPulseEvent args)
     {
-        //if (component.MainBreakerEnabled)
-        //{
-        //    args.Affected = true;
-        //    args.Disabled = true;
-        //    ApcToggleBreaker(uid, component);
-        //}
-        EnsureComp<EmpDisabledComponent>(uid, out var emp); //event calls before EmpDisabledComponent is added, ensure it to force sprite update
+        if (component.MainBreakerEnabled)
+        {
+            args.Affected = true;
+            args.Disabled = true;
+            ApcToggleBreaker(uid, component);
+        }
+        UpdateApcState(uid, forceEmp: true); // Frontier: Upstream - #28984 // Aurora's Song - Add EMP forcing because of EMP prediction
+    }
+
+    // Frontier: Upstream - #28984
+    private void OnEmpDisabledRemoved(EntityUid uid, ApcComponent component, ref EmpDisabledRemovedEvent args) // Frontier: Upstream - #28984
+    {
         UpdateApcState(uid);
+        ApcToggleBreaker(uid, component); // Aurora's Song
     }
 
     private void OnToolUseAttempt(EntityUid uid, ApcComponent component, ToolUseAttemptEvent args) // Frontier

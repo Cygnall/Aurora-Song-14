@@ -1,4 +1,7 @@
-﻿
-- type: metabolizerType
+﻿- type: metabolizerType
   id: Fairy
   name: metabolizer-type-fairy
+
+- type: metabolizerType
+  id: IPC
+  name: metabolizer-type-ipc

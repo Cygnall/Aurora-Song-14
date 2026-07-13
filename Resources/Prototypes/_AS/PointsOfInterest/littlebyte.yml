@@ -36,3 +36,5 @@
       components:
         - type: StationNameSetup
           mapNameTemplate: "Little-Byte Key"
+        - type: VariationPassExemption
+          poweredLightExemption: true

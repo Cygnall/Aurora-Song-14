@@ -1,8 +1,7 @@
 - type: marking
+  parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UndershirtDefault
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -13,10 +12,9 @@
     state: undershirt
 
 - type: marking
+  parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UndershirtRolled
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -27,10 +25,9 @@
     state: rolled_undershirt
 
 - type: marking
+  parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UndershirtSleeveless
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -41,10 +38,9 @@
     state: sleeveless
 
 - type: marking
+  parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UndershirtRolledSleeveless
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -55,10 +51,9 @@
     state: rolled_undershirt_sleeveless
 
 - type: marking
+  parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UndershirtGrossSleeveless
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -69,10 +64,9 @@
     state: gross_sleeveless
 
 - type: marking
+  parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UndershirtNanotrasen
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -83,10 +77,9 @@
     state: nanotrasen
 
 - type: marking
+  parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UndershirtBinder
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:
@@ -99,8 +92,7 @@
 #- type: marking # Aurora's Song - remove duplicate
 #  id: UndershirtBraClassic
 #  bodyPart: UndergarmentTop
-#  markingCategory: UndergarmentTop
-#  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
+#  groupWhitelist: [Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
 #  coloring:
 #    default:
 #      type:
@@ -113,8 +105,7 @@
 #- type: marking # Aurora's Song - remove duplicate
 #  id: UndershirtBraSports
 #  bodyPart: UndergarmentTop
-#  markingCategory: UndergarmentTop
-#  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
+#  groupWhitelist: [Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi] # Delta V - Chitinid, Feroxi
 #  coloring:
 #    default:
 #      type:
@@ -125,10 +116,9 @@
 #    state: sports
 
 - type: marking
+  parent: BaseSpeciesUndergarmentStandard # Aurora's Song - Marking Inheritance
   id: UndershirtBraStrapless
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Dwarf, Human, Reptilian, Arachnid, SlimePerson, Diona, Moth, Vulpkanin, Rodentia, Harpy, Felinid, Vox, Oni, Chitinid, Feroxi, Tajaran] # Delta V - Chitinid, Feroxi; Aurora's Song - added Tajaran
   coloring:
     default:
       type:

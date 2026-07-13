@@ -26,6 +26,26 @@
     mask: ClothingMaskMantisRitual
 #Aurora Song- Mantis drip merge end
 
+# Aurora Song - Chaplain drip start
+- type: loadout
+  id: ContractorClothingMaskClayshaper
+  price: 200
+  equipment:
+    mask: ClothingMaskClayshaper
+
+- type: loadout
+  id: ContractorClothingMaskFire
+  price: 200
+  equipment:
+    mask: ClothingMaskFire
+
+- type: loadout
+  id: ContractorClothingMaskSilent
+  price: 200
+  equipment:
+    mask: ClothingMaskSilent
+# Aurora Song - Chaplain drip end
+
 #T1
 - type: loadout
   id: ContractorClothingMaskSterile

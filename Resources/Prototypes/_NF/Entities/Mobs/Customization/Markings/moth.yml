@@ -1,9 +1,8 @@
 - type: marking
   id: MothAntennasNone
   bodyPart: HeadTop
-  markingCategory: HeadTop
   forcedColoring: true
-  speciesRestriction: [Moth]
+  groupWhitelist: [Moth]
   coloring:
     default:
       type:

@@ -6,21 +6,21 @@
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
       entity_storage: !type:GroupSelector
-        children:
+        children: # Aurora's Song - prob>weight
         - id: SpawnRandomHumanoidCorpseMedicalBountyService
-          prob: 0.25
+          weight: 0.25
         - id: SpawnRandomHumanoidCorpseMedicalBountyMedical
-          prob: 0.2
+          weight: 0.2
         - id: SpawnRandomHumanoidCorpseMedicalBountyCargo
-          prob: 0.15
+          weight: 0.15
         - id: SpawnRandomHumanoidCorpseMedicalBountyEngineering
-          prob: 0.15
+          weight: 0.15
         - id: SpawnRandomHumanoidCorpseMedicalBountyScience
-          prob: 0.1
+          weight: 0.1
         - id: SpawnRandomHumanoidCorpseMedicalBountySecurity
-          prob: 0.1
+          weight: 0.1
         - id: SpawnRandomHumanoidCorpseMedicalBountyCommand
-          prob: 0.05
+          weight: 0.05
   - type: Sprite # Fix our initial state (occupied, occupied-unlit visible).  This sucks.
     noRot: true
     sprite: _NF/Structures/Storage/emergency_pod.rsi

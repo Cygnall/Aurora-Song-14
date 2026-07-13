@@ -1,0 +1,120 @@
+# Aurora Song: AAC Tablet QuickPhrase prototypes for subjects
+
+- type: quickPhrase
+  id: ColorInvisible
+  text: phrase-color-invisible
+  tab: Subjects
+  group: Colors
+  styleClass: ButtonColorGray
+
+- type: quickPhrase
+  id: EmotionHappy
+  text: phrase-emotion-happy
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGreen
+
+- type: quickPhrase
+  id: EmotionSad
+  text: phrase-emotion-sad
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGray
+
+- type: quickPhrase
+  id: EmotionAngry
+  text: phrase-emotion-angry
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: EmotionScared
+  text: phrase-emotion-scared
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: EmotionWorried
+  text: phrase-emotion-worried
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorYellow
+
+- type: quickPhrase
+  id: EmotionConfused
+  text: phrase-emotion-confused
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGray
+
+- type: quickPhrase
+  id: EmotionExcited
+  text: phrase-emotion-excited
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGreen
+
+- type: quickPhrase
+  id: EmotionTired
+  text: phrase-emotion-tired
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGray
+
+- type: quickPhrase
+  id: EmotionHurt
+  text: phrase-emotion-hurt
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: EmotionSick
+  text: phrase-emotion-sick
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorCyan
+
+- type: quickPhrase
+  id: EmotionCalm
+  text: phrase-emotion-calm
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGreen
+
+- type: quickPhrase
+  id: EmotionNervous
+  text: phrase-emotion-nervous
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorYellow
+
+- type: quickPhrase
+  id: EmotionLove
+  text: phrase-emotion-love
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGreen
+
+- type: quickPhrase
+  id: EmotionGrateful
+  text: phrase-emotion-grateful
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGreen
+
+- type: quickPhrase
+  id: EmotionBored
+  text: phrase-emotion-bored
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGray
+
+- type: quickPhrase
+  id: EmotionFun
+  text: phrase-emotion-fun
+  tab: Subjects
+  group: Emotions
+  styleClass: ButtonColorGray

@@ -1,0 +1,313 @@
+# Aurora's Song | Replaced names and descriptions with locale strings
+- type: entity
+  parent: CrateGenericSteel
+  id: N14CrateFootlocker
+  components:
+  - type: Icon
+    sprite: _Nuclear14/Structures/Storage/Crates/footlocker.rsi
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/footlocker.rsi
+  - type: Reflect
+    reflects:
+    - Energy
+    reflectProb: 0.2
+    spread: 90
+
+#Aurora's Song | We don't need loot prototypes
+#- type: entity
+#  parent: [ N14CrateFootlocker ]
+#  id: N14LootCrateFootlocker
+#  suffix: Loot, RandomSmall
+
+- type: entity
+  parent: CrateGenericSteel
+  id: N14CrateAluminium
+  components:
+  - type: Icon
+    sprite: _Nuclear14/Structures/Storage/Crates/aluminiumcrate.rsi
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/aluminiumcrate.rsi
+
+#Aurora's Song | We don't need loot prototypes
+#- type: entity
+#  parent: [ N14CrateFootlocker ]
+#  id: N14LootCrateAluminium
+#  suffix: Loot, Random
+
+#Aurora's Song | Commenting out Fallout references
+#- type: entity
+#  parent: CrateGenericSteel
+#  id: N14CrateArmy
+#  components:
+#  - type: Icon
+#    sprite: _Nuclear14/Structures/Storage/Crates/armycrate.rsi
+#  - type: Sprite
+#    sprite: _Nuclear14/Structures/Storage/Crates/armycrate.rsi
+
+#- type: entity
+#  parent: [ N14CrateFootlocker ]
+#  id: N14LootCrateArmy
+#  suffix: Loot, RandomMilitary
+
+#- type: entity
+#  parent: N14CrateFootlocker
+#  id: N14CrateEnclave
+#  components:
+#  - type: Icon
+#    sprite: _Nuclear14/Structures/Storage/Crates/crateenclave.rsi
+#  - type: Sprite
+#    sprite: _Nuclear14/Structures/Storage/Crates/crateenclave.rsi
+#    # TODO: Will need an access locked variant.
+
+#- type: entity
+#  parent: [ N14CrateEnclave ]
+#  id: N14LootCrateEnclave
+#  suffix: Loot, RandomMilitary
+
+#- type: entity
+#  parent: N14CrateFootlocker
+#  id: N14CrateEnclaveDirectional
+#  suffix: directional
+#  components:
+#  - type: Icon
+#    sprite: _Nuclear14/Structures/Storage/Crates/enclavecrate.rsi
+#  - type: Sprite
+#    sprite: _Nuclear14/Structures/Storage/Crates/enclavecrate.rsi
+
+#- type: entity
+#  parent: [ N14CrateEnclaveDirectional ]
+#  id: N14LootCrateEnclaveDirectional
+#  suffix: Loot, RandomMilitary
+# Aurora's Song | Commenting out Fallout References end
+
+- type: entity
+  parent: CrateGenericSteel
+  id: N14CrateMedical
+  components:
+  - type: Icon
+    sprite: _Nuclear14/Structures/Storage/Crates/medicalcrate.rsi
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/medicalcrate.rsi
+
+#Aurora's Song | We don't need loot prototypes
+#- type: entity
+#  parent: [ N14CrateMedical ]
+#  id: N14LootCrateMedical
+#  suffix: Loot, Medical
+
+# Aurora's Song | We don't need refilling prototypes
+#- type: entity
+#  parent: [ N14CrateMedical ]
+#  id: N14CrateMedicalRefilling
+#  suffix: Refilling, Medical
+
+- type: entity
+  parent: CrateGenericSteel
+  id: N14CrateRed
+  components:
+  - type: Icon
+    sprite: _Nuclear14/Structures/Storage/Crates/redcrate.rsi
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/redcrate.rsi
+
+- type: entity
+  parent: CrateGeneric
+  id: N14Trashbin
+  components:
+  - type: Icon
+    sprite: _Nuclear14/Structures/Storage/Crates/trashbin.rsi
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/trashbin.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+
+- type: entity
+  parent: N14CrateFootlocker
+  id: N14CrateTrashcart
+  components:
+  - type: Icon
+    sprite: _Nuclear14/Structures/Storage/Crates/trashcart.rsi
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/trashcart.rsi
+  - type: TileFrictionModifier
+    modifier: 0.4
+
+- type: entity
+  parent: CrateGeneric
+  id: N14CrateFreezer
+  components:
+  - type: Icon
+    sprite: _Nuclear14/Structures/Storage/Crates/freezer.rsi
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/freezer.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: AntiRottingContainer
+
+#Aurora's Song | We don't need loot prototypes
+#- type: entity
+#  parent: [ N14CrateFreezer ]
+#  id: N14LootCrateFreezer
+#  name: structures-n14-storage-crate-freezer
+#  suffix: Loot, Random
+
+# Wooden
+- type: entity
+  parent: CrateGeneric
+  id: N14CrateWooden
+  components:
+  - type: Icon
+    sprite: _Nuclear14/Structures/Storage/Crates/cratewooden.rsi
+    state: icon
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/cratewooden.rsi
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+    - state: closed
+      map: ["enum.StorageVisualLayers.Door"]
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.4,-0.4,0.4,0.29"
+        density: 50
+        mask:
+        - SmallMobMask #this is so they can go under plastic flaps
+        layer:
+        - MachineLayer
+
+# Aurora's Song | We don't need refilling prototypes
+#- type: entity
+#  parent: [ N14CrateWooden ]
+#  id: N14CrateWastelandBotanyRefilling
+#  suffix: Refilling, Random Botany
+
+#Aurora's Song | We don't need loot prototypes
+#- type: entity
+#  parent: [ N14CrateWooden ]
+#  id: N14LootCrateWastelandBotany
+#  suffix: Loot, Random Botany
+
+- type: entity
+  parent: N14CrateWooden
+  id: N14CrateMilitary
+  components:
+  - type: Icon
+    sprite: _Nuclear14/Structures/Storage/Crates/cratemilitary.rsi
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/cratemilitary.rsi
+
+# Aurora's Song | We don't need refilling prototypes
+#- type: entity
+#  parent: [ N14CrateMilitary ]
+#  id: N14CrateMilitaryRefilling
+#  suffix: Refilling, Random Military
+
+#Aurora's Song | We don't need loot prototypes
+#- type: entity
+#  parent: [ N14CrateMilitary ]
+#  id: N14LootCrateMilitary
+#  suffix: Loot,Random Military
+
+# Breakable Crates (deconstruct or destroy)
+- type: entity
+  parent: BaseStructureDynamic
+  id: N14CrateBreakBase
+  abstract: true
+  components:
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank:
+            min: 0
+            max: 1
+      - !type:EmptyAllContainersBehaviour
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Crates/woodencrates.rsi
+  - type: Storage
+    grid:
+    - 0,0,6,3
+    maxItemSize: Huge
+  - type: ContainerContainer
+    containers:
+      storagebase: !type:Container
+        ents: []
+    # TODO: Add crate deconstruction
+
+- type: entity
+  parent: N14CrateBreakBase
+  id: N14CrateBreakWood
+  suffix: wood
+  components:
+  - type: Sprite
+    state: wood_crate
+
+- type: entity
+  parent: N14CrateBreakBase
+  id: N14CrateBreakPlain
+  suffix: plain
+  components:
+  - type: Sprite
+    state: plain_crate
+
+- type: entity
+  parent: N14CrateBreakBase
+  id: N14CrateBreakPlainDamaged
+  suffix: plain damaged
+  components:
+  - type: Sprite
+    state: plain_crate-1 # TODO: Make this random between states -1, -2 and -3
+
+- type: entity
+  parent: N14CrateBreakBase
+  id: N14CrateBreakSarsaparilla
+  components:
+  - type: Sprite
+    state: sarsaparilla_crate
+
+- type: entity
+  parent: N14CrateBreakSarsaparilla
+  id: N14CrateBreakSarsaparillaDamaged
+  suffix: damaged
+  components:
+  - type: Sprite
+    state: sarsaparilla_crate-1
+
+# Aurora's Song | Commenting out Fallout references
+#- type: entity
+#  parent: N14CrateBreakBase
+#  id: N14CrateBreakArmy
+#  components:
+#  - type: Sprite
+#    state: army_crate
+
+#- type: entity
+#  parent: N14CrateBreakArmy
+#  id: N14CrateBreakArmyDamaged
+#  suffix: damaged
+#  components:
+#  - type: Sprite
+#    state: army_crate-1 # TODO: Make this random between states -1 and -2
+# Aurora's Song | Commenting out Fallout references end

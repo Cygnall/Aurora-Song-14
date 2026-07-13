@@ -1,0 +1,54 @@
+- type: quickPhrase
+  id: TimePhrase
+  parent: BaseMaterialPhrase
+  text: phrase-time
+
+- type: quickPhrase
+  id: FriendPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-friend
+
+- type: quickPhrase
+  id: CrewPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-crew
+
+- type: quickPhrase
+  id: FTLPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-ftl
+
+- type: quickPhrase
+  id: NanochatPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-nanochat
+
+- type: quickPhrase
+  id: NanoPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-nano
+
+- type: quickPhrase
+  id: ShipPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-ship
+
+- type: quickPhrase
+  id: VesselPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-vessel
+
+- type: quickPhrase
+  id: MoonPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-moon
+
+- type: quickPhrase
+  id: SunPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-sun
+
+- type: quickPhrase
+  id: StarPhrase
+  parent: BaseMaterialPhrase
+  text: phrase-star

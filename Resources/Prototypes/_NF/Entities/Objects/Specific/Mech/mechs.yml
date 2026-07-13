@@ -23,7 +23,7 @@
     mechToPilotDamageMultiplier: 0.75
     pilotWhitelist:
       components:
-        - HumanoidAppearance
+      - HumanoidProfile # Aurora's Song HumanoidAppearance>HumanoidProfile
     startingEquipment:
     - MechEquipmentFork
     canRemoveEquipment: false

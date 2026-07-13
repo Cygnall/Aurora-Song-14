@@ -8,7 +8,7 @@ on:
   workflow_dispatch:
   # Frontier: re-enabled autopublish
   schedule:
-    - cron: '0 10 * * *'
+    - cron: '40 7 * * *'
 
 jobs:
   build:
@@ -52,17 +52,17 @@ jobs:
       env:
         PUBLISH_TOKEN: ${{ secrets.PUBLISH_TOKEN }}
         GITHUB_REPOSITORY: ${{ vars.GITHUB_REPOSITORY }}
-        
-    # Aurora Song Commented out to prevent duplicate messages
-    # - name: Publish changelog (Discord)
-    #   continue-on-error: true
-    #   run: Tools/actions_changelogs_since_last_run.py
-    #   env:
-    #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-    #     DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
 
-    # - name: Publish changelog (RSS)
-    #   continue-on-error: true
-    #   run: Tools/actions_changelog_rss.py
-    #   env:
-    #     CHANGELOG_RSS_KEY: ${{ secrets.CHANGELOG_RSS_KEY }}
+    - name: Publish changelog (Discord)
+      continue-on-error: true
+      run: Tools/actions_changelogs_since_last_run.py
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        DISCORD_WEBHOOK_URL: ${{ secrets.CHANGELOG_DISCORD_WEBHOOK }}
+
+#     Aurora Song Commented out because we don't have RSS
+#     - name: Publish changelog (RSS)
+#       continue-on-error: true
+#       run: Tools/actions_changelog_rss.py
+#       env:
+#         CHANGELOG_RSS_KEY: ${{ secrets.CHANGELOG_RSS_KEY }}

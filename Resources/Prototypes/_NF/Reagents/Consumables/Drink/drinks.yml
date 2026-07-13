@@ -8,16 +8,13 @@
   flavor: basic
   color: "#a45c08"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
+      metabolites:
+        Theobromine: 0.05
+        Sugar: 0.2
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: Theobromine
-        amount: 0.05
-      - !type:AdjustReagent
-        reagent: Sugar
-        amount: 0.2
   metamorphicSprite:
     sprite: _NF/Objects/Consumable/Drinks/pumpkinspicelatte.rsi
     state: icon_empty
@@ -34,7 +31,7 @@
   flavor: cucumber
   color: "#b1ceb0"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
       effects:
         - !type:SatiateThirst
           factor: 6
@@ -54,7 +51,7 @@
   flavor: honey
   color: "#E79A3F"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
       effects:
       - !type:SatiateThirst
         factor: 0.6
@@ -71,7 +68,7 @@
   flavor: wassail
   color: "#AD2D00"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
       effects:
       - !type:PopupMessage # a nice warm soothing drink
         type: Local
@@ -95,20 +92,26 @@
   flavor: creative
   color: "#81b42f"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
+      metabolites:
+        PumpkinFlesh: 1
       effects:
       - !type:SatiateThirst
         factor: 2
-      - !type:AdjustReagent
-        reagent: PumpkinFlesh
-        amount: 1
       - !type:HealthChange
         damage:
-          groups:
-            Burn: -1
-            Brute: -1
-            Airloss: -1
-            Toxin: -1
+          types: # Aurora's Song - Convert groups to types
+            Poison: -0.5
+            Radiation: -0.5
+            Blunt: -0.33
+            Slash: -0.33
+            Piercing: -0.33
+            Heat: -0.25
+            Cold: -0.25
+            Shock: -0.25
+            Caustic: -0.25
+            Asphyxiation: -0.5
+            Bloodloss: -0.5
       - !type:Emote
           emote: Belch
           showInChat: true
@@ -131,16 +134,13 @@
   flavor: fast
   color: "#3061e3"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
+      metabolites:
+        Ethanol: 0.03
+        Desoxyephedrine: 0.25
       effects:
       - !type:SatiateThirst
         factor: 1
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.03
-      - !type:AdjustReagent
-        reagent: Desoxyephedrine
-        amount: 0.25
   metamorphicSprite:
     sprite: _NF/Objects/Consumable/Drinks/ginandsonic.rsi
     state: icon_empty
@@ -157,13 +157,12 @@
   flavor: greed
   color: "#eed037"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
+      metabolites:
+        Ethanol: 0.25
       effects:
       - !type:SatiateThirst
         factor: 0.2
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.25
   metamorphicSprite:
     sprite: _NF/Objects/Consumable/Drinks/goldencat.rsi
     state: icon_empty
@@ -180,13 +179,12 @@
   flavor: blast
   color: "#8c934c"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
+      metabolites:
+        Ethanol: 0.25
       effects:
       - !type:SatiateThirst
         factor: 1
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.25
       - !type:Explosion # Aurora's Song - ExplosionReactionEffect>Explosion
         explosionType: Default
         maxIntensity: 0.1
@@ -210,13 +208,12 @@
   flavor: torpedo
   color: "#d4db9a"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
+      metabolites:
+        Ethanol: 0.3
       effects:
       - !type:SatiateThirst
         factor: 0.8
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.3
   metamorphicSprite:
     sprite: _NF/Objects/Consumable/Drinks/torpedojuice.rsi
     state: icon_empty
@@ -233,13 +230,12 @@
   flavor: bees
   color: "#f1d25f"
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
+      metabolites:
+        Ethanol: 0.08
       effects:
       - !type:SatiateThirst
         factor: 0.5
-      - !type:AdjustReagent
-        reagent: Ethanol
-        amount: 0.08
       - !type:SatiateHunger
         factor: 0.1
       - !type:HealthChange

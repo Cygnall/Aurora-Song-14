@@ -10,14 +10,16 @@ using Robust.Shared.Timing;
 
 namespace Content.Client._NF.Emp.Overlays
 {
-    public sealed class EmpBlastOverlay : Overlay
+    public sealed partial class EmpBlastOverlay : Overlay
     {
-        [Dependency] private readonly IEntityManager _entityManager = default!;
-        [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-        [Dependency] private readonly IGameTiming _gameTiming = default!;
+        [Dependency] private IEntityManager _entityManager = default!;
+        [Dependency] private IPrototypeManager _prototypeManager = default!;
+        [Dependency] private IGameTiming _gameTiming = default!;
         private TransformSystem? _transform;
 
         private const float PvsDist = 25.0f;
+
+        private static readonly ProtoId<ShaderPrototype> EmpShader = "Emp"; // Aurora's Song
 
         public override OverlaySpace Space => OverlaySpace.WorldSpace;
         public override bool RequestScreenTexture => true;
@@ -28,7 +30,7 @@ namespace Content.Client._NF.Emp.Overlays
         public EmpBlastOverlay()
         {
             IoCManager.InjectDependencies(this);
-            _baseShader = _prototypeManager.Index<ShaderPrototype>("Emp").Instance().Duplicate();
+            _baseShader = _prototypeManager.Index<ShaderPrototype>(EmpShader).Instance().Duplicate(); // Aurora's Song - Make it a variable
         }
 
         protected override bool BeforeDraw(in OverlayDrawArgs args)

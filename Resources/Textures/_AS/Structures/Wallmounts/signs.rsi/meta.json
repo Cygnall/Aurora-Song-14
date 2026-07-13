@@ -11,7 +11,8 @@
         "original direction_nfsd made by GentleButter",
         "original nfsd/range/law/brig/brigmed/detective/brief/armoury/evidence made by GhostPrinceLost",
         "original interrogation made by whatston3 (GitHub) (interrogation edited from base signs.rsi, likely from bee station at commit https://github.com/BeeStation/BeeStation-Hornet/commit/13dd5ac712385642574138f6d7b30eea7c2fab9c)",
-		"recolors of NFSD sprites to SLE sprites made by chamomileteatime and Vandanna/ Cygnall (discord/ github)"
+		"recolors of NFSD sprites to SLE sprites made by chamomileteatime and Vandanna/ Cygnall (discord/ github)",
+        "ihs_sign designed by Toasterblast (Discord)"
     ],
     "states": [
         {
@@ -54,6 +55,9 @@
         },
 		{
 			"name": "genpop"
-		}
+		},
+        {
+            "name": "ihs_sign"
+        }
     ]
 }

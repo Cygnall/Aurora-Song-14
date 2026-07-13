@@ -1,0 +1,29 @@
+- type: latheRecipePack
+  id: CorvaxWoodTiles
+  recipes:
+  - FloorTileItemWoodParquet
+  - FloorTileItemWoodChess
+  - FloorTileItemWoodBlack
+  - FloorTileItemWoodLargeBlack
+  - FloorTileItemWoodParquetBlack
+  - FloorTileItemWoodChessBlack
+  - FloorTileItemWoodDark
+  - FloorTileItemWoodLargeDark
+  - FloorTileItemWoodParquetDark
+  - FloorTileItemWoodChessDark
+  - FloorTileItemWoodLight
+  - FloorTileItemWoodLargeLight
+  - FloorTileItemWoodParquetLight
+  - FloorTileItemWoodChessLight
+  - FloorTileItemWoodRed
+  - FloorTileItemWoodLargeRed
+  - FloorTileItemWoodParquetRed
+  - FloorTileItemWoodChessRed
+
+- type: latheRecipePack
+  id: XenoTiles
+  recipes:
+  - FloorTileItemXeno
+  - FloorTileItemXenoSteel
+  - FloorTileItemXenoSteelCorner
+  - FloorTileItemXenoMaint

@@ -6,11 +6,11 @@ using Content.Shared.IdentityManagement;
 
 namespace Content.Server._EE.Silicons.BatteryLocking;
 
-public sealed class BatterySlotRequiresLockSystem : EntitySystem
+public sealed partial class BatterySlotRequiresLockSystem : EntitySystem
 
 {
-    [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
-    [Dependency] private readonly SharedPopupSystem _popupSystem = default!;
+    [Dependency] private ItemSlotsSystem _itemSlotsSystem = default!;
+    [Dependency] private SharedPopupSystem _popupSystem = default!;
 
     /// <inheritdoc/>
     public override void Initialize()
@@ -33,6 +33,9 @@ public sealed class BatterySlotRequiresLockSystem : EntitySystem
     private void LockToggleAttempted(EntityUid uid, BatterySlotRequiresLockComponent component, LockToggleAttemptEvent args)
     {
         if (args.User == uid || !HasComp<SiliconComponent>(uid))
+            return;
+
+        if (args.Silent || args.Cancelled) // Aurora's Song - Fix IPC's showing maintenance touching too often
             return;
 
         _popupSystem.PopupEntity(Loc.GetString("batteryslotrequireslock-component-alert-owner", ("user", Identity.Entity(args.User, EntityManager))), uid, uid, PopupType.Large);

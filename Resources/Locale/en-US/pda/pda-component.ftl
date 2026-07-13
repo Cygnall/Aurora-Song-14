@@ -2,11 +2,15 @@
 ### UI
 
 # For the PDA screen
-comp-pda-ui = ID: [color=white]{$owner}[/color], [color=yellow]{$jobTitle}[/color]
+# Aurora's Song - replace job with canon id number
+comp-pda-ui = ID: [color=white]{$owner}[/color] [color=yellow]{$canonIdNumber}[/color]
 
 comp-pda-ui-blank = ID:
 
 comp-pda-ui-owner = Owner: [color=white]{$actualOwnerName}[/color]
+
+# Aurora's Song - separated job into a new line
+comp-pda-ui-job = Job: {$jobTitle}
 
 comp-pda-io-program-list-button = Programs
 

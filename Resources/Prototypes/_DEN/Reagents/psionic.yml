@@ -12,7 +12,7 @@
   flavor: mnemolith
   color: "#313b4a"
   metabolisms:
-    Medicine:
+    Bloodstream: # Aurora's Song - Medicine>Bloodstream
       metabolismRate: 0.1 # 1u lasts 10 seconds, so 15u lasts 2 minutes 30 seconds
       effects:
       - !type:PopupMessage

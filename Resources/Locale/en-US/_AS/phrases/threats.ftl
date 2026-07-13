@@ -17,3 +17,5 @@ phrase-hostile-revenant = revenant
 phrase-hostile-ninja = ninja
 phrase-hostile-thief = thief
 phrase-hostile-heretic = heretic
+phrase-hostile-punk = punk
+phrase-hostile-explorer = explorer

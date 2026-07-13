@@ -24,6 +24,44 @@
     jumpsuit: ClothingUniformSkirtMantisAiry
 # Mantis drip ends
 
+# Aurora Song - Chaplain drip start
+- type: loadout
+  id: ContractorClothingUniformSkirtClayshaper
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformSkirtClayshaper
+
+- type: loadout
+  id: ContractorClothingUniformSkirtDruid
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformSkirtDruid
+
+- type: loadout
+  id: ContractorClothingUniformSkirtMoon
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformSkirtMoon
+
+- type: loadout
+  id: ContractorClothingUniformSun
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformSun
+
+- type: loadout
+  id: ContractorClothingUniformTech
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformTech
+
+- type: loadout
+  id: ContractorClothingUniformSkirtTidal
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformSkirtTidal
+# Aurora Song - Chaplain drip end
+
 - type: loadout
   id: ContractorClothingUniformJumpsuitAtmos
   price: 200
@@ -35,6 +73,20 @@
   price: 200
   equipment:
     jumpsuit: ClothingUniformJumpskirtAtmos
+
+# Aurora - Atmos Flightsuits
+- type: loadout
+  id: ContractorClothingUniformFlightsuitAtmos
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformAtmosFlightSuit
+
+- type: loadout
+  id: ContractorClothingUniformFlightskirtAtmos
+  price: 300
+  equipment:
+    jumpsuit: ClothingUniformAtmosFlightSkirt
+# End Flightsuits
 
 - type: loadout
   id: ContractorClothingUniformJumpsuitBartender

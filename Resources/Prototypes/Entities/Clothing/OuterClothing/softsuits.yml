@@ -13,7 +13,6 @@
     tags:
     - SuitEVA
     - MonkeyWearable
-    - CorgiWearable
     - WhitelistChameleon
   - type: StaticPrice # Frontier
     price: 30 # Frontier
@@ -178,5 +177,4 @@
         ents: [] # Frontier
   - type: Tag
     tags:
-    - CorgiWearable
     - WhitelistChameleon

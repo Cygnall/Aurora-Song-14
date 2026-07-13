@@ -1,0 +1,179 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: Oni
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 2 # Aurora: 1>2
+      required: true
+      default: [ OniHornSingleCurved ]
+    enum.HumanoidVisualLayers.Snout: # Aurora's Song
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail: # Frontier
+      limit: 1 # Frontier
+      required: false # Frontier
+    enum.HumanoidVisualLayers.Chest:
+      limit: 4 # Aurora: 1>4
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 4 # Aurora: 1>4
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 4 # Aurora: 1>4
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 4 # Aurora: 1>4
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 4 # Aurora: 1>4
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 4 # Aurora: 1>4
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 4 # Aurora: 1>4
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 4 # Aurora: 1>4
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 4 # Aurora: 1>4
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceOni
+  name: oni appearance
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: InitialBody
+    organs:
+      Torso: OrganOniTorso
+      Head: OrganOniHead
+      ArmLeft: OrganOniArmLeft
+      ArmRight: OrganOniArmRight
+      HandRight: OrganOniHandRight
+      HandLeft: OrganOniHandLeft
+      LegLeft: OrganOniLegLeft
+      LegRight: OrganOniLegRight
+      FootLeft: OrganOniFootLeft
+      FootRight: OrganOniFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganHumanLungs
+      Heart: OrganHumanHeart
+      Stomach: OrganHumanStomach
+      Liver: OrganHumanLiver
+      Kidneys: OrganHumanKidneys
+  - type: HumanoidProfile
+    species: Oni
+  - type: Sprite
+    scale: 1.2, 1.2
+
+- type: entity
+  parent:
+  - AppearanceOni
+  - BaseSpeciesMobOrganic # starcup: changed from BaseMobHuman for consistency
+  id: MobOni
+  name: Urist McOni
+  components:
+  - type: Speech
+    speechSounds: Baritone
+  - type: Oni
+    modifiers:
+      coefficients:
+        Blunt: 1.2
+        Slash: 1.2
+        Piercing: 1.2
+        Asphyxiation: 1.2
+  - type: Damageable
+    damageModifierSet: Oni
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.42
+        density: 220
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: Stamina
+    baseCritThreshold: 115
+
+- type: entity
+  parent: OrganBaseOrganic # Aurora's Song - OrganBase>OrganBaseOrganic
+  id: OrganOni
+  abstract: true
+  suffix: Oni
+
+- type: entity
+  parent: OrganOni
+  id: OrganOniExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Oni
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganOniExternal ] # Aurora's Song - Add sexed organs
+  id: OrganOniTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganOniExternal ] # Aurora's Song - Add sexed organs
+  id: OrganOniHead
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganOniExternal ]
+  id: OrganOniArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganOniExternal ]
+  id: OrganOniArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganOniExternal ]
+  id: OrganOniHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganOniExternal ]
+  id: OrganOniHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganOniExternal ]
+  id: OrganOniLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganOniExternal ]
+  id: OrganOniLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganOniExternal ]
+  id: OrganOniFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganOniExternal ]
+  id: OrganOniFootRight

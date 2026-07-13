@@ -4,3 +4,10 @@
   components:
   - type: FactionClothing
     faction: ContrabandClothing
+
+- type: entity # used to avoid CDETs attacking for debranded gear
+  id: ColonialCommandClothing
+  abstract: true
+  components:
+  - type: FactionClothing
+    faction: ColonialCommandClothing

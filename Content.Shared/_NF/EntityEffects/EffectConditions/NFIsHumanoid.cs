@@ -13,9 +13,9 @@ namespace Content.Shared._NF.EntityEffects.Effect;
 /// <summary>
 /// Requires that the metabolizing body is a humanoid, with an optional whitelist/blacklist.
 /// </summary>e
-public sealed class NFIsHumanoidEntityConditionSystem : EntityConditionSystem<HumanoidAppearanceComponent, NFIsHumanoid>
+public sealed class NFIsHumanoidEntityConditionSystem : EntityConditionSystem<HumanoidProfileComponent, NFIsHumanoid> // Aurora's Song - Nubody
 {
-    protected override void Condition(Entity<HumanoidAppearanceComponent> ent, ref EntityConditionEvent<NFIsHumanoid> args)
+    protected override void Condition(Entity<HumanoidProfileComponent> ent, ref EntityConditionEvent<NFIsHumanoid> args) // Aurora's Song - Nubody
     {
         if (args.Condition.Whitelist != null && args.Condition.Whitelist.Contains(ent.Comp.Species) != args.Condition.Inverse)
             return;

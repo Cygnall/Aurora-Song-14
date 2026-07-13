@@ -1,0 +1,39 @@
+- type: quickPhrase
+  id: MorningPhrase
+  parent: BaseMannerPhrase
+  text: phrase-morning
+
+- type: quickPhrase
+  id: EveningPhrase
+  parent: BaseMannerPhrase
+  text: phrase-evening
+
+- type: quickPhrase
+  id: GoodnightPhrase
+  parent: BaseMannerPhrase
+  text: phrase-goodnight
+
+- type: quickPhrase
+  id: ExclamationMarkPhrase
+  parent: BaseMannerPhrase
+  text: phrase-exclamationmark
+
+- type: quickPhrase
+  id: QuestionMarkPhrase
+  parent: BaseMannerPhrase
+  text: phrase-questionmark
+
+- type: quickPhrase
+  id: IfPhrase
+  parent: BaseMannerPhrase
+  text: phrase-if
+
+- type: quickPhrase
+  id: IsPhrase
+  parent: BaseMannerPhrase
+  text: phrase-is
+
+- type: quickPhrase
+  id: AndPhrase
+  parent: BaseMannerPhrase
+  text: phrase-and

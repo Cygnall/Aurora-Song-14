@@ -18,6 +18,44 @@
     neck: ClothingNeckMantisShackles
 # Aurora Song - Mantis drip merge end
 
+# Aurora Song - Chaplain drip start
+- type: loadout
+  id: ContractorClothingNeckChaplainDragon
+  price: 500
+  equipment:
+    neck: ClothingNeckChaplainDragon
+
+- type: loadout
+  id: ContractorClothingNeckClayshaper
+  price: 500
+  equipment:
+    neck: ClothingNeckClayshaper
+
+- type: loadout
+  id: ContractorClothingNeckDruid
+  price: 500
+  equipment:
+    neck: ClothingNeckDruid
+
+- type: loadout
+  id: ContractorClothingNeckDruidMantle
+  price: 500
+  equipment:
+    neck: ClothingNeckDruidMantle
+
+- type: loadout
+  id: ContractorClothingNeckSun
+  price: 500
+  equipment:
+    neck: ClothingNeckSun
+
+- type: loadout
+  id: ContractorClothingNeckTidal
+  price: 500
+  equipment:
+    neck: ClothingNeckTidal
+# Aurora Song - Chaplain drip end
+
 #T1
 - type: loadout
   id: ContractorClothingNeckScarfStripedBlack

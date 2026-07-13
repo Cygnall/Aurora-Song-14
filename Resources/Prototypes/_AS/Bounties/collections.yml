@@ -1,0 +1,17 @@
+- type: bountyContractCollection
+  id: Advertisements
+  order: 2
+  notificationType: PDA
+  name: bounty-contract-collection-name-advertisements
+  deleteAccess:
+  - HeadOfPersonnel
+  - HeadOfSecurity
+  categories:
+  - Vacancy
+  - Construction
+  - Donation
+  - Promotion
+  - Service
+  - Target
+  - Trade
+  - Other

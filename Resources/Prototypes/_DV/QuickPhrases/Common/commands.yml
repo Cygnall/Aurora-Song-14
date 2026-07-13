@@ -14,10 +14,10 @@
   parent: BaseImperativePhrase
   text: phrase-need
 
-- type: quickPhrase
-  id: WantPhrase
+- type: quickPhrase #aurora song - changed from WantPhrase and phrase-want to IWantPhrase and phrase-iwant
+  id: IWantPhrase
   parent: BaseImperativePhrase
-  text: phrase-want
+  text: phrase-iwant
 
 - type: quickPhrase
   id: CantPhrase

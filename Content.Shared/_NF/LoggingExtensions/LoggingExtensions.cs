@@ -4,7 +4,7 @@ namespace Content.Shared._NF.LoggingExtensions;
 
 public static class LoggingExtensions
 {
-    [Dependency] private static readonly SharedStackSystem _stack = default!;
+    // [Dependency] private static readonly SharedStackSystem _stack = default!; // Aurora's Song
 
     public static string GetExtraLogs(EntityManager entityManager, EntityUid entity)
     {

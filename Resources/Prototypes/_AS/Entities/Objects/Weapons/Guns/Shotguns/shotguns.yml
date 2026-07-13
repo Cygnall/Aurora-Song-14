@@ -70,6 +70,32 @@
   - type: NFWeaponDetails
     manufacturer: weapon-details-colonial-weapon-manufacturer
 
+- type: entity
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunNanotrasen ] # Parented to Nanotrasen shotgun, as it's a modified enforcer
+  id: ASWeaponShotgunHushpup
+  name: Hushpup
+  description: |-
+    An obscure modification of the Enforcer, fitted with an experimental muffler. Great for those with a strict moral code. Uses 12 gauge shotgun shells.
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/hushpup.ogg
+      params:
+        volume: -3
+        rolloffFactor: 1.3
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Shotguns/hushpup.rsi
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Shotguns/hushpup.rsi
+  - type: Item
+    sprite: Objects/Weapons/Guns/Shotguns/hushpup.rsi
+    shape:
+    - 0,0,3,0 # smaller than BaseShotgun by 1 tile
+  - type: BallisticAmmoProvider
+    capacity: 4
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-cybersun-industries
+
 # Surplus
 - type: entity
   parent: [ BaseC2ContrabandUnredeemable,  NFBaseWeaponShotgunChamber12g, NFBaseWeaponFrameShotgunWieldable ]

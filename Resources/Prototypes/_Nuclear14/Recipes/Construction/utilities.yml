@@ -1,0 +1,11 @@
+﻿# Aurora's Song | Replaced name and description with locale string
+- type: construction
+  id: WallTorch
+  graph: WallTorch
+  startNode: start
+  targetNode: WallTorch
+  category: construction-category-utilities
+  # icon: { sprite: _Nuclear14/Structures/Decoration/torches.rsi, state: wall_torch_unlit } - Aurora's Song
+  objectType: Structure
+  placementMode: SnapgridCenter
+  hide: false

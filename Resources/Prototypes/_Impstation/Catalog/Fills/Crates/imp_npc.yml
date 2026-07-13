@@ -1,0 +1,12 @@
+- type: entity
+  id: CrateNPCPompom
+  parent: CrateLivestock
+  name: crate of pom poms
+  description: A crate containing three Pom Poms, tiny creatures from a distant planet said to only appear during a new moon.
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      entity_storage: !type:AllSelector
+        children:
+        - id: MobPompom
+          amount: 3

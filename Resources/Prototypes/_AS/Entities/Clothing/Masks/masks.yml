@@ -52,6 +52,18 @@
         Heat: 0.95
   - type: IngestionBlocker # Goobstation
 
+- type: entity
+  parent: ClothingMaskBase
+  id: ASClothingMaskVeil
+  name: silken veil
+  description: a beautiful double layer of silk, with thick golden cording trimming the edges and sitting over the crown
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Mask/face_veil.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Mask/face_veil.rsi
+  - type: IdentityBlocker
+
 #- type: entity
 #  parent: ClothingMaskGasCAF
 #  id: ASClothingMaskGasDeathSquad

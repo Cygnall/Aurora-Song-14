@@ -1,0 +1,10 @@
+#Head
+
+- type: marking
+  id: SlimeEyebags
+  bodyPart: HeadSide
+  groupWhitelist: [ Slime ]
+  forcedColoring: true
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/markingsbundle2.rsi
+    state: eyebags

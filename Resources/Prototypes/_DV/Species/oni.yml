@@ -1,0 +1,17 @@
+- type: species
+  id: Oni
+  name: species-name-oni
+  roundStart: true
+  prototype: MobOni
+  dollPrototype: AppearanceOni
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
+  maleFirstNames: NamesOniMale
+  femaleFirstNames: NamesOniFemale
+  lastNames: NamesOniLocation
+  naming: LastNoFirst
+  # Aurora Song: Add scale limiters
+  minHeight: 1.2
+  maxHeight: 1.4
+  minWidth: 1.2
+  maxWidth: 1.4
+  #Aurora song changes end

@@ -1,0 +1,14 @@
+﻿- type: species
+  id: Fairy
+  name: species-name-fairy
+  roundStart: true
+  prototype: MobFairy
+  dollPrototype: AppearanceFairy
+  skinColoration: HumanAnimal # Aurora's Song - Replaced with HumanAnimal
+  maleFirstNames: names_fairy_first
+  femaleFirstNames: names_fairy_first
+  lastNames: names_fairy_last
+  minHeight: 0.35
+  maxHeight: 0.4
+  minWidth: 0.35
+  maxWidth: 0.4

@@ -11,6 +11,7 @@ using Robust.Shared.Map;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Random;
 using Content.Server._NF.Station.Systems;
+using Content.Shared._AS.CCVar;
 using Content.Shared.Maps;
 using Robust.Shared.EntitySerialization.Systems;
 
@@ -19,16 +20,16 @@ namespace Content.Server._NF.GameRule;
 /// <summary>
 /// This handles the dungeon and trading post spawning, as well as round end capitalism summary
 /// </summary>
-public sealed class PointOfInterestSystem : EntitySystem
+public sealed partial class PointOfInterestSystem : EntitySystem
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly IRobustRandom _random = default!;
-    [Dependency] private readonly GameTicker _ticker = default!;
-    [Dependency] private readonly MapLoaderSystem _map = default!;
-    [Dependency] private readonly MetaDataSystem _meta = default!;
-    [Dependency] private readonly StationRenameWarpsSystems _renameWarps = default!;
-    [Dependency] private readonly StationSystem _station = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private IRobustRandom _random = default!;
+    [Dependency] private GameTicker _ticker = default!;
+    [Dependency] private MapLoaderSystem _map = default!;
+    [Dependency] private MetaDataSystem _meta = default!;
+    [Dependency] private StationRenameWarpsSystems _renameWarps = default!;
+    [Dependency] private StationSystem _station = default!;
 
     private List<(Vector2 position, float minClearance)> _stationCoords = new();
 
@@ -300,4 +301,61 @@ public sealed class PointOfInterestSystem : EntitySystem
 
         return coords;
     }
+
+    #region AS
+
+    /// <summary>
+    /// Genericized version of GenerateDepots, used for generating multiple clones of a POI like the cargo depots. Can be used for trade crate destinations if so desired.
+    /// Will generate stations in a circle around the center of the map. All will be generated an equal distance from the center and from eachother.
+    /// </summary>
+    /// <param name="mapUid"> Id of the map we are generating the stations in.</param>
+    /// <param name="poiPrototypes">List of potential prototypes we are picking from</param>
+    /// <param name="count"> Amount of siblings to generate</param>
+    /// <param name="generatedStations"> The generated stations</param>
+    public void GenerateMultiples(MapId mapUid, List<PointOfInterestPrototype> poiPrototypes,int count, out List<EntityUid> generatedStations)
+    {
+
+        generatedStations = new List<EntityUid>();
+
+        var rotation = 2 * Math.PI / count;
+        var rotationOffset = _random.NextAngle() / count;
+
+        if (_ticker.CurrentPreset is null)
+            return;
+
+        var currentPreset = _ticker.CurrentPreset.ID;
+
+        for (int i = 0; i < count && poiPrototypes.Count > 0; i++)
+        {
+            var proto = _random.Pick(poiPrototypes);
+
+            // Safety check: ensure selected POIs are either fine in any preset or accepts this current one.
+            if (proto.SpawnGamePreset.Length > 0 && !proto.SpawnGamePreset.Contains(currentPreset))
+                continue;
+
+            Vector2i offset = new Vector2i(_random.Next(proto.MinimumDistance, proto.MaximumDistance), 0);
+            offset = offset.Rotate(rotationOffset);
+            rotationOffset += rotation;
+
+            string overrideName = proto.Name;
+            if (i < 26)
+                overrideName += $" {(char)('A' + i)}"; // " A" ... " Z"
+            else
+                overrideName += $" {i + 1}"; // " 27", " 28"...
+            if (TrySpawnPoiGrid(mapUid, proto, offset, out var motelUid, overrideName: overrideName) && motelUid is { Valid: true } station)
+            {
+                var depotStation = _station.GetOwningStation(station);
+                if (TryComp<TradeCrateDestinationComponent>(depotStation, out var destComp))
+                {
+                    if (i < 26)
+                        destComp.DestinationProto = proto.Name+$"{(char)('A' + i)}";
+                    else
+                        destComp.DestinationProto = proto.Name+"Other";
+                }
+                generatedStations.Add(station);
+                AddStationCoordsToSet(offset, proto.MinimumClearance); // adjust list of actual station coords
+            }
+        }
+    }
+    #endregion
 }

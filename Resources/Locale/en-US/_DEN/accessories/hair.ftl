@@ -100,3 +100,7 @@ marking-halfshave_long = Halfshave Long
 marking-halfshave_messy = Halfshave Messy
 marking-halfshave_messylong = Halfshave Messy Long
 marking-inari = Inari
+marking-combo_tail_1 = Combo Tail
+marking-combo_tail_2 = Combo Tail (Mirror)
+marking-combo_tail_3 = Combo Tail Long
+marking-combo_tail_4 = Combo Tail Long (Mirror)

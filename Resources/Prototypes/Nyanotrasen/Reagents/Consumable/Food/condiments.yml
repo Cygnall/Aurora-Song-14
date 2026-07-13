@@ -8,14 +8,10 @@
   color: "#a61600"
   recognizable: true
   metabolisms:
-    Food:
-      effects:
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.15
-      - !type:AdjustReagent
-        reagent: JuiceTomato
-        amount: 0.60
+    Digestion: # Aurora's Song - Food>Digestion
+      metabolites:
+        Nutriment: 0.15
+        JuiceTomato: 0.6
 
 - type: reagent
   id: Pesto
@@ -27,17 +23,11 @@
   color: "#5c8400"
   recognizable: true
   metabolisms:
-    Food:
-      effects:
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.10
-      - !type:AdjustReagent
-        reagent: OilOlive
-        amount: 0.35
-      - !type:AdjustReagent
-        reagent: Allicin
-        amount: 0.25
+    Digestion: # Aurora's Song - Food>Digestion
+      metabolites:
+        Nutriment: 0.1
+        OilOlive: 0.35
+        Allicin: 0.25
 
 - type: reagent
   id: Bechamel
@@ -49,17 +39,11 @@
   color: "#fffbc7"
   recognizable: true
   metabolisms:
-    Food:
-      effects:
-      - !type:AdjustReagent
-        reagent: Nutriment
-        amount: 0.10
-      - !type:AdjustReagent
-        reagent: Cream
-        amount: 0.55
-      - !type:AdjustReagent
-        reagent: OilOlive
-        amount: 0.10
+    Digestion: # Aurora's Song - Food>Digestion
+      metabolites:
+        Nutriment: 0.1
+        Cream: 0.55
+        OilOlive: 0.1
 
 - type: reagent
   id: OilGhee
@@ -71,7 +55,7 @@
   color: gold
   recognizable: true
   metabolisms:
-    Food:
+    Digestion: # Aurora's Song - Food>Digestion
       effects:
 #      - !type:AdjustReagent # Frontier
 #        reagent: Nutriment # Frontier

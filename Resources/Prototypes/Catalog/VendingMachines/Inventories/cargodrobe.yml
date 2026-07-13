@@ -15,6 +15,7 @@
     ClothingHeadsetCargo: 3
     EncryptionKeyCargo: 10
     ClothingOuterWinterCargo: 2
+    ClothingOuterCoatBomberCargo: 2 # Imp
     ClothingShoesBootsWinterCargo: 2
     # MailBag: 2 # Frontier
     # Frontier

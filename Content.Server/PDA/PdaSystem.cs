@@ -1,3 +1,4 @@
+using System.Diagnostics.CodeAnalysis;
 using Content.Server.Access.Systems;
 using Content.Server.AlertLevel;
 using Content.Server.CartridgeLoader;
@@ -17,6 +18,8 @@ using Content.Shared.Light;
 using Content.Shared.Light.EntitySystems;
 using Content.Shared.PDA;
 using Content.Shared.PDA.Ringer;
+using Content.Shared.Store.Components;
+using Content.Shared.VoiceMask;
 using Robust.Server.Containers;
 using Robust.Server.GameObjects;
 using Robust.Shared.Containers;
@@ -27,23 +30,24 @@ using Content.Shared._NF.Shipyard.Components; // Frontier
 using Content.Server._NF.Shipyard.Systems; // Frontier
 using Content.Shared._NF.SectorServices; // Frontier
 using Content.Server.RoundEnd; // Frontier
+using Content.Shared._AS.PersistentSystems; // Aurora's Song
 
 namespace Content.Server.PDA
 {
-    public sealed class PdaSystem : SharedPdaSystem
+    public sealed partial class PdaSystem : SharedPdaSystem
     {
-        [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!;
-        [Dependency] private readonly InstrumentSystem _instrument = default!;
-        [Dependency] private readonly RingerSystem _ringer = default!;
-        [Dependency] private readonly StationSystem _station = default!;
-        [Dependency] private readonly StoreSystem _store = default!;
-        [Dependency] private readonly IChatManager _chatManager = default!;
-        [Dependency] private readonly UserInterfaceSystem _ui = default!;
-        [Dependency] private readonly UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
-        [Dependency] private readonly ContainerSystem _containerSystem = default!;
-        [Dependency] private readonly IdCardSystem _idCard = default!;
-        [Dependency] private readonly SectorServiceSystem _sectorService = default!;
-        [Dependency] private readonly RoundEndSystem _roundEndSystem = default!; // Frontier
+        [Dependency] private CartridgeLoaderSystem _cartridgeLoader = default!;
+        [Dependency] private InstrumentSystem _instrument = default!;
+        [Dependency] private RingerSystem _ringer = default!;
+        [Dependency] private StationSystem _station = default!;
+        [Dependency] private StoreSystem _store = default!;
+        [Dependency] private IChatManager _chatManager = default!;
+        [Dependency] private UserInterfaceSystem _ui = default!;
+        [Dependency] private UnpoweredFlashlightSystem _unpoweredFlashlight = default!;
+        [Dependency] private ContainerSystem _containerSystem = default!;
+        [Dependency] private IdCardSystem _idCard = default!;
+        [Dependency] private SectorServiceSystem _sectorService = default!; // Frontier
+        [Dependency] private RoundEndSystem _roundEndSystem = default!; // Frontier
 
         public override void Initialize()
         {
@@ -65,10 +69,11 @@ namespace Content.Server.PDA
             SubscribeLocalEvent<StationRenamedEvent>(OnStationRenamed);
             SubscribeLocalEvent<EntityRenamedEvent>(OnEntityRenamed, after: new[] { typeof(IdCardSystem) });
             SubscribeLocalEvent<AlertLevelChangedEvent>(OnAlertLevelChanged);
-            SubscribeLocalEvent<PdaComponent, InventoryRelayedEvent<ChameleonControllerOutfitSelectedEvent>>(ChameleonControllerOutfitItemSelected);
+            SubscribeLocalEvent<PdaComponent, InventoryRelayedEvent<ChameleonControllerOutfitSelectedEvent>>(OnRelayedEventToIdCard);
+            SubscribeLocalEvent<PdaComponent, InventoryRelayedEvent<VoiceMaskNameUpdatedEvent>>(OnRelayedEventToIdCard);
         }
 
-        private void ChameleonControllerOutfitItemSelected(Entity<PdaComponent> ent, ref InventoryRelayedEvent<ChameleonControllerOutfitSelectedEvent> args)
+        private void OnRelayedEventToIdCard<T>(Entity<PdaComponent> ent, ref InventoryRelayedEvent<T> args)
         {
             // Relay it to your ID so it can update as well.
             if (ent.Comp.ContainedId != null)
@@ -194,7 +199,7 @@ namespace Content.Server.PDA
 
             var address = GetDeviceNetAddress(uid);
             var hasInstrument = HasComp<InstrumentComponent>(uid);
-            var showUplink = HasComp<UplinkComponent>(uid) && IsUnlocked(uid);
+            var showUplink = TryGetUnlockedStore(uid, out _);
 
             UpdateStationName(uid, pda);
             UpdateAlertLevel(uid, pda);
@@ -228,6 +233,7 @@ namespace Content.Server.PDA
                 {
                     ActualOwnerName = pda.OwnerName,
                     IdOwner = id?.FullName,
+                    IdNumber = CanonicalFormat.CanonId(id?.ProfileId).ToString(), // Aurora's Song
                     JobTitle = id?.LocalizedJobTitle,
                     StationAlertLevel = pda.StationAlertLevel,
                     StationAlertColor = pda.StationAlertColor
@@ -293,8 +299,19 @@ namespace Content.Server.PDA
                 return;
 
             // check if its locked again to prevent malicious clients opening locked uplinks
-            if (HasComp<UplinkComponent>(uid) && IsUnlocked(uid))
-                _store.ToggleUi(msg.Actor, uid);
+            if (TryGetUnlockedStore(uid, out var store))
+            {
+                if (store != uid)
+                {
+                    if (TryComp<RemoteStoreComponent>(uid, out var remoteStore))
+                        remoteStore.Store = store;
+                    _store.ToggleUi(msg.Actor, store.Value, remoteAccess: uid);
+                }
+                else
+                {
+                    _store.ToggleUi(msg.Actor, store.Value);
+                }
+            }
         }
 
         private void OnUiMessage(EntityUid uid, PdaComponent pda, PdaLockUplinkMessage msg)
@@ -304,14 +321,24 @@ namespace Content.Server.PDA
 
             if (TryComp<RingerUplinkComponent>(uid, out var uplink))
             {
+                if (TryComp<RemoteStoreComponent>(uid, out var remoteStore))
+                    remoteStore.Store = null;
                 _ringer.LockUplink((uid, uplink));
                 UpdatePdaUi(uid, pda);
             }
         }
 
-        private bool IsUnlocked(EntityUid uid)
+        /// <summary>
+        /// Returns the currently unlocked store, if there is one.
+        /// </summary>
+        private bool TryGetUnlockedStore(EntityUid uid, [NotNullWhen(true)] out EntityUid? store)
         {
-            return !TryComp<RingerUplinkComponent>(uid, out var uplink) || uplink.Unlocked;
+            store = null;
+            if (!TryComp<RingerUplinkComponent>(uid, out var uplink) || !uplink.Unlocked)
+                return false;
+
+            store = _store.GetStore(uid);
+            return store != null;
         }
 
         private void UpdateStationName(EntityUid uid, PdaComponent pda)

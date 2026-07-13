@@ -23,7 +23,7 @@ namespace Content.Server._AS.StationEvents.Systems
             {
                 IconEntity = GetNetEntity(uid),
                 Act = () => ToggleState(component),
-                Text = component.Active ? Loc.GetString("verb-deactivate-text") : Loc.GetString("verb-activate-text"),
+                Text = component.Active ? Loc.GetString("verb-event-deactivate-text") : Loc.GetString("verb-event-activate-text"),
                 Priority = 3
             };
 

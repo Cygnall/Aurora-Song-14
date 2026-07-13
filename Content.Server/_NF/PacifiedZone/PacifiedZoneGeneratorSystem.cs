@@ -9,14 +9,14 @@ using Robust.Shared.Prototypes;
 
 namespace Content.Server._NF.PacifiedZone;
 
-public sealed class PacifiedZoneGeneratorSystem : EntitySystem
+public sealed partial class PacifiedZoneGeneratorSystem : EntitySystem
 {
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly SharedMindSystem _mindSystem = default!;
-    [Dependency] private readonly SharedJobSystem _jobSystem = default!;
-    [Dependency] private readonly AlertsSystem _alerts = default!;
-    [Dependency] private readonly AdminSystem _admin = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private SharedMindSystem _mindSystem = default!;
+    [Dependency] private SharedJobSystem _jobSystem = default!;
+    [Dependency] private AlertsSystem _alerts = default!;
+    [Dependency] private AdminSystem _admin = default!;
 
     private static readonly ProtoId<AlertPrototype> AlertProto = "PacifiedZone";
 
@@ -49,7 +49,7 @@ public sealed class PacifiedZoneGeneratorSystem : EntitySystem
         var genQuery = AllEntityQuery<PacifiedZoneGeneratorComponent>();
         while (genQuery.MoveNext(out var genUid, out var component))
         {
-            // Not yet update time, skip this 
+            // Not yet update time, skip this
             if (_gameTiming.CurTime < component.NextUpdate)
                 continue;
 
@@ -60,7 +60,7 @@ public sealed class PacifiedZoneGeneratorSystem : EntitySystem
     private void UpdatePacifiedState(EntityUid genUid, PacifiedZoneGeneratorComponent component)
     {
         List<EntityUid> newEntities = new List<EntityUid>();
-        var query = _lookup.GetEntitiesInRange<HumanoidAppearanceComponent>(Transform(genUid).Coordinates, component.Radius);
+        var query = _lookup.GetEntitiesInRange<HumanoidProfileComponent>(Transform(genUid).Coordinates, component.Radius); // Aurora's Song - Nubody
         foreach (var humanoidUid in query)
         {
             // Check preconditions for an entity to be pacified at all.

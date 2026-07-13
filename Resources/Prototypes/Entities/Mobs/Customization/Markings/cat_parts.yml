@@ -1,8 +1,7 @@
 - type: marking
   id: CatEars
   bodyPart: Special
-  markingCategory: Special
-  speciesRestriction: [] # Frontier: Human<empty list
+  groupWhitelist: [] # Frontier: Human<empty list
   coloring:
     default:
       type:
@@ -24,8 +23,7 @@
 - type: marking
   id: CatTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: []
+  groupWhitelist: [] # Frontier: Human<empty list
   coloring:
     default:
       type:

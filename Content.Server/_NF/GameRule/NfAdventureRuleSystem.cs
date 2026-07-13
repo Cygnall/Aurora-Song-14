@@ -12,6 +12,7 @@ using Content.Server.GameTicking;
 using Content.Server.GameTicking.Presets;
 using Content.Server.GameTicking.Rules;
 using Content.Server._NF.ShuttleRecords;
+using Content.Shared._AS.CCVar;
 using Content.Shared._NF.Bank;
 using Content.Shared._NF.Bank.Components;
 using Content.Shared._NF.CCVar;
@@ -30,24 +31,24 @@ namespace Content.Server._NF.GameRule;
 /// <summary>
 /// This handles the dungeon and trading post spawning, as well as round end capitalism summary
 /// </summary>
-public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleComponent>
+public sealed partial class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleComponent>
 {
-    [Dependency] private readonly IConfigurationManager _cfg = default!;
-    [Dependency] private readonly IPlayerManager _player = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly BankSystem _bank = default!;
-    [Dependency] private readonly GameTicker _ticker = default!;
-    [Dependency] private readonly PointOfInterestSystem _poi = default!;
-    [Dependency] private readonly IBaseServer _baseServer = default!;
-    [Dependency] private readonly IEntitySystemManager _entSys = default!;
-    [Dependency] private readonly ShuttleRecordsSystem _shuttleRecordsSystem = default!;
+    [Dependency] private IConfigurationManager _cfg = default!;
+    [Dependency] private IPlayerManager _player = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private BankSystem _bank = default!;
+    [Dependency] private GameTicker _ticker = default!;
+    [Dependency] private PointOfInterestSystem _poi = default!;
+    [Dependency] private IBaseServer _baseServer = default!;
+    [Dependency] private IEntitySystemManager _entSys = default!;
+    [Dependency] private ShuttleRecordsSystem _shuttleRecordsSystem = default!;
 
     private readonly HttpClient _httpClient = new();
 
     private readonly ProtoId<GamePresetPrototype> _fallbackPresetID = "NFPirates";
     private ISawmill _sawmill = default!;
 
-    public sealed class PlayerRoundBankInformation
+    public sealed partial class PlayerRoundBankInformation
     {
         // Initial balance, obtained on spawn
         public int StartBalance;
@@ -214,6 +215,7 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         List<PointOfInterestPrototype> marketProtos = new();
         List<PointOfInterestPrototype> requiredProtos = new();
         List<PointOfInterestPrototype> optionalProtos = new();
+        List<PointOfInterestPrototype> motelProtos = new();
         Dictionary<string, List<PointOfInterestPrototype>> remainingUniqueProtosBySpawnGroup = new();
 
         var currentPreset = _ticker.CurrentPreset?.ID ?? _fallbackPresetID;
@@ -232,6 +234,8 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
                 requiredProtos.Add(location);
             else if (location.SpawnGroup == "Optional")
                 optionalProtos.Add(location);
+            else if (location.SpawnGroup == "Motel")//AS: motel handling
+                motelProtos.Add(location);
             else // the remainder are done on a per-poi-per-group basis
             {
                 if (!remainingUniqueProtosBySpawnGroup.ContainsKey(location.SpawnGroup))
@@ -244,7 +248,7 @@ public sealed class NFAdventureRuleSystem : GameRuleSystem<NFAdventureRuleCompon
         _poi.GenerateRequireds(mapUid, requiredProtos, out component.RequiredPois);
         _poi.GenerateOptionals(mapUid, optionalProtos, out component.OptionalPois);
         _poi.GenerateUniques(mapUid, remainingUniqueProtosBySpawnGroup, out component.UniquePois);
-
+        _poi.GenerateMultiples(mapUid, motelProtos,_cfg.GetCVar(ASCCVars.Motels), out component.Motels);//AS: motel handling
         base.Started(uid, component, gameRule, args);
 
         // Using invalid entity, we don't have a relevant entity to reference here.

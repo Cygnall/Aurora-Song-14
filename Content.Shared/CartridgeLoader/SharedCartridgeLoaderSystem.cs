@@ -3,13 +3,13 @@ using Robust.Shared.Containers;
 
 namespace Content.Shared.CartridgeLoader;
 
-public abstract class SharedCartridgeLoaderSystem : EntitySystem
+public abstract partial class SharedCartridgeLoaderSystem : EntitySystem
 {
     public const string InstalledContainerId = "program-container";
 
-    [Dependency] private readonly ItemSlotsSystem _itemSlotsSystem = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearanceSystem = default!;
-    [Dependency] private readonly SharedContainerSystem _container = default!;
+    [Dependency] private ItemSlotsSystem _itemSlotsSystem = default!;
+    [Dependency] private SharedAppearanceSystem _appearanceSystem = default!;
+    [Dependency] private SharedContainerSystem _container = default!;
 
     public override void Initialize()
     {
@@ -77,6 +77,23 @@ public sealed class CartridgeRemovedEvent : EntityEventArgs
     {
         Loader = loader;
     }
+}
+
+//Aurora's Song
+/// <summary>
+/// Gets raised on the active program when an item get moved from the cartridge loader.
+/// </summary>
+/// <param name="loader">The loader an item was inserted or removed from.</param>
+/// <param name="item">The item that was moved.</param>
+/// <param name="container">The container that the item was inserted/removed from.</param>
+/// <param name="inserted">Denotes whether the item is being inserted or removed from the container.</param>
+
+public sealed class LoaderContentsChangedEvent(Entity<CartridgeLoaderComponent> loader, EntityUid item, BaseContainer container, bool inserted) : EntityEventArgs
+{
+    public readonly EntityUid Loader = loader;
+    public readonly EntityUid Item = item;
+    public readonly BaseContainer Container = container;
+    public readonly bool Inserted = inserted;
 }
 
 /// <summary>

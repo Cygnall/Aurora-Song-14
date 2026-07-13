@@ -1,5 +1,5 @@
 - type: entity
-  parent: [VolatileGrenadeBase, GrenadeBase, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
+  parent: [VolatileGrenadeBase, TimerGrenadeBase, BaseC2ContrabandUnredeemable ] # Frontier: BaseSecurityContraband<BaseC2ContrabandUnredeemable
   id: SmokeGrenade
   name: smoke grenade
   description: A tactical grenade that releases a large, long-lasting cloud of smoke when used.
@@ -42,6 +42,9 @@
       - ReagentId: SpaceCleaner
         Quantity: 30
   - type: NFCleanade # Frontier
+  - type: Tag
+    tags:
+    - CleanerGrenade
 
 - type: entity
   parent: SmokeGrenade
@@ -82,7 +85,7 @@
     price: 350
 
 - type: entity
-  parent: [ VolatileGrenadeBase, GrenadeBase ] # Prevent inheriting DeleteOnTrigger from SmokeGrenade # Frontier: removed BaseEngineeringContraband
+  parent: [ VolatileGrenadeBase, TimerGrenadeBase ] # Prevent inheriting DeleteOnTrigger from SmokeGrenade # Frontier: removed BaseEngineeringContraband
   id: AirGrenade
   name: air grenade
   description: A special solid state chemical grenade used for quickly releasing standard air into a spaced area. Fills up to 30 tiles!
@@ -116,3 +119,10 @@
         enabled:
           True: { state: active }
           False: { state: spent }
+  - type: RemoveComponentsOnTrigger # should prevent it from being re-triggered
+    keysIn:
+    - timer
+    triggerOnce: true
+    components:
+    - type: TriggerOnUse
+    - type: TimerTrigger

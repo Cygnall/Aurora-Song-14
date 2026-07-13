@@ -13,17 +13,18 @@ using Robust.Shared.Utility;
 
 namespace Content.Shared.Emp;
 
-public abstract class SharedEmpSystem : EntitySystem
+public abstract partial class SharedEmpSystem : EntitySystem
 {
-    [Dependency] protected readonly IGameTiming Timing = default!;
-    [Dependency] private readonly EntityLookupSystem _lookup = default!;
-    [Dependency] private readonly INetManager _net = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly ExamineSystemShared _examine = default!; // Frontier
+    [Dependency] protected IGameTiming Timing = default!;
+    [Dependency] private EntityLookupSystem _lookup = default!;
+    [Dependency] private INetManager _net = default!;
+    [Dependency] private SharedAudioSystem _audio = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private ExamineSystemShared _examine = default!; // Frontier
+
+    [Dependency] private EntityQuery<EmpResistanceComponent> _resistanceQuery = default!;
 
     private HashSet<EntityUid> _entSet = new();
-    private EntityQuery<EmpResistanceComponent> _resistanceQuery;
 
     public override void Initialize()
     {
@@ -36,8 +37,6 @@ public abstract class SharedEmpSystem : EntitySystem
         SubscribeLocalEvent<EmpDescriptionComponent, GetVerbsEvent<ExamineVerb>>(OnEmpDescriptorExamine); // Frontier
 
         SubscribeLocalEvent<EmpResistanceComponent, EmpAttemptEvent>(OnResistEmpAttempt);
-
-        _resistanceQuery = GetEntityQuery<EmpResistanceComponent>();
     }
 
     public static readonly EntProtoId EmpPulseEffectPrototype = "EffectEmpPulse";
@@ -82,7 +81,8 @@ public abstract class SharedEmpSystem : EntitySystem
     /// <param name="energyConsumption">The amount of energy consumed by the EMP pulse.</param>
     /// <param name="duration">The duration of the EMP effects.</param>
     /// <param name="user">The player that caused the effect. Used for predicted audio.</param>
-    public void EmpPulse(EntityCoordinates coordinates, float range, float energyConsumption, TimeSpan duration, EntityUid? user = null, List<EntityUid>? immuneGrids = null) // Frontier
+    /// <param name="predicted">Whether this pulse is being replicated on the client.</param>
+    public void EmpPulse(EntityCoordinates coordinates, float range, float energyConsumption, TimeSpan duration, EntityUid? user = null, bool predicted = true, List<EntityUid>? immuneGrids = null) // Frontier
     {
         _entSet.Clear();
         _lookup.GetEntitiesInRange(coordinates, range, _entSet);
@@ -102,7 +102,10 @@ public abstract class SharedEmpSystem : EntitySystem
         if (_net.IsServer)
             Spawn(EmpPulseEffectPrototype, coordinates);
 
-        _audio.PlayPredicted(EmpSound, coordinates, user);
+        if (predicted)
+            _audio.PlayPredicted(EmpSound, coordinates, user);
+        else
+            _audio.PlayPvs(EmpSound, coordinates);
     }
 
     /// <summary>

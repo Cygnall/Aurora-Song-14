@@ -1,0 +1,34 @@
+- type: quickPhrase
+  id: HimPhrase
+  parent: BaseNounsPhrase
+  text: phrase-him
+
+- type: quickPhrase
+  id: HisPhrase
+  parent: BaseNounsPhrase
+  text: phrase-his
+
+- type: quickPhrase
+  id: HerPhrase
+  parent: BaseNounsPhrase
+  text: phrase-her
+
+- type: quickPhrase
+  id: HersPhrase
+  parent: BaseNounsPhrase
+  text: phrase-hers
+
+- type: quickPhrase
+  id: ThemPhrase
+  parent: BaseNounsPhrase
+  text: phrase-them
+
+- type: quickPhrase
+  id: TheirsPhrase
+  parent: BaseNounsPhrase
+  text: phrase-theirs
+
+- type: quickPhrase
+  id: ItsPhrase
+  parent: BaseNounsPhrase
+  text: phrase-its

@@ -12,7 +12,7 @@ namespace Content.Server.Administration;
 /// </summary>
 public sealed partial class QuickDialogSystem : EntitySystem
 {
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
 
     /// <summary>
     /// Contains the success/cancel actions for a dialog.
@@ -121,7 +121,7 @@ public sealed partial class QuickDialogSystem : EntitySystem
             }
             case QuickDialogEntryType.ShortText:
             {
-                if (input.Length > 100)
+                if (input.Length > 200) // Aurora's Song - 100 > 200 - Allows longer prayers.
                 {
                     output = default;
                     return false;

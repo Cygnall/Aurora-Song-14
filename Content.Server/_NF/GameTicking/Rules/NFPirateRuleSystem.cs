@@ -9,10 +9,10 @@ using Content.Shared.NPC.Systems;
 
 namespace Content.Server._NF.GameTicking.Rules;
 
-public sealed class NFPirateRuleSystem : GameRuleSystem<NFPirateRuleComponent>
+public sealed partial class NFPirateRuleSystem : GameRuleSystem<NFPirateRuleComponent>
 {
-    [Dependency] private readonly AntagSelectionSystem _antag = default!;
-    [Dependency] private readonly NpcFactionSystem _npcFaction = default!;
+    [Dependency] private AntagSelectionSystem _antag = default!;
+    [Dependency] private NpcFactionSystem _npcFaction = default!;
 
     public override void Initialize()
     {
@@ -57,7 +57,7 @@ public sealed class NFPirateRuleSystem : GameRuleSystem<NFPirateRuleComponent>
         else
             ret = Loc.GetString("nf-pirate-role-greeting");
 
-        if (HasComp<HumanoidAppearanceComponent>(uid))
+        if (HasComp<HumanoidProfileComponent>(uid)) // Aurora's Song - Nubody
             ret += "\n\n" + Loc.GetString("nf-pirate-role-greeting-equipment") + "\n";
         return ret;
     }

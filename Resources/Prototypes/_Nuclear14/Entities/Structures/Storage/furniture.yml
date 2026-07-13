@@ -1,0 +1,31 @@
+# Aurora's Song | replaced names with locale strings
+# Safes
+- type: entity
+  parent: N14ClosetBaseW
+  id: N14ClosetSafe
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Furniture/safe.rsi
+
+- type: entity
+  parent: [ N14ClosetSafe ]
+  id: N14LootClosetSafe
+  suffix: Loot, Random Military
+
+- type: entity
+  parent: [ N14ClosetSafe ]
+  id: N14LootClosetSafeCurrency
+  suffix: Loot, Currency one stack random
+
+- type: entity
+  parent: [ N14ClosetSafe ]
+  id: N14LootClosetSafePrewar
+  suffix: Loot, safe pre-war
+
+- type: entity
+  parent: N14ClosetSafe
+  id: N14ClosetSafeSpinner
+  suffix: Loot, Random Military
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/Furniture/safespinner.rsi

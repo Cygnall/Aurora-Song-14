@@ -10,7 +10,7 @@ using DrawDepth = Content.Shared.DrawDepth.DrawDepth;
 
 namespace Content.Client._NF.Roles.Systems;
 
-public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
+public sealed partial class InterviewHologramSystem : SharedInterviewHologramSystem
 {
     [Dependency] private IPrototypeManager _prototype = default!;
     [Dependency] private IGameTiming _timing = default!;
@@ -60,6 +60,9 @@ public sealed class InterviewHologramSystem : SharedInterviewHologramSystem
 
     private void UpdateHologramShader(EntityUid uid, SpriteComponent sprite, InterviewHologramComponent hologramComp)
     {
+        if (!sprite.AllLayers.Any())
+            return;
+
         // Find the texture height of the largest layer
         float texHeight = sprite.AllLayers.Max(x => x.PixelSize.Y);
 

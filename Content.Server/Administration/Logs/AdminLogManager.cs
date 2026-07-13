@@ -22,22 +22,23 @@ using Robust.Shared.Prototypes;
 using Robust.Shared.Reflection;
 using Robust.Shared.Timing;
 using Robust.Shared.Utility;
+using Content.Shared._AS.CCVar; // Aurora's Song
 
 namespace Content.Server.Administration.Logs;
 
 public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogManager
 {
-    [Dependency] private readonly IConfigurationManager _configuration = default!;
-    [Dependency] private readonly ILogManager _logManager = default!;
-    [Dependency] private readonly IServerDbManager _db = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly IDynamicTypeFactory _typeFactory = default!;
-    [Dependency] private readonly IReflectionManager _reflection = default!;
-    [Dependency] private readonly IDependencyCollection _dependencies = default!;
-    [Dependency] private readonly ISharedPlayerManager _player = default!;
-    [Dependency] private readonly ISharedPlaytimeManager _playtime = default!;
-    [Dependency] private readonly ISharedChatManager _chat = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private IConfigurationManager _configuration = default!;
+    [Dependency] private ILogManager _logManager = default!;
+    [Dependency] private IServerDbManager _db = default!;
+    [Dependency] private IGameTiming _timing = default!;
+    [Dependency] private IDynamicTypeFactory _typeFactory = default!;
+    [Dependency] private IReflectionManager _reflection = default!;
+    [Dependency] private IDependencyCollection _dependencies = default!;
+    [Dependency] private ISharedPlayerManager _player = default!;
+    [Dependency] private ISharedPlaytimeManager _playtime = default!;
+    [Dependency] private ISharedChatManager _chat = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
 
     public const string SawmillId = "admin.logs";
 
@@ -95,6 +96,9 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
     private int _savingLogs;
     private int _logsDropped;
 
+    // Aurora's Song
+    private bool _showAdminLinks;
+
     public void Initialize()
     {
         _sawmill = _logManager.GetSawmill(SawmillId);
@@ -115,6 +119,9 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
             value => _dropThreshold = value, true);
         _configuration.OnValueChanged(CCVars.AdminLogsHighLogPlaytime,
             value => _highImpactLogPlaytime = value, true);
+
+        _configuration.OnValueChanged(ASCCVars.ShowAdminLinks, // Aurora's Song
+            value => _showAdminLinks = value, true);
 
         if (_metricsEnabled)
         {
@@ -479,13 +486,16 @@ public sealed partial class AdminLogManager : SharedAdminLogManager, IAdminLogMa
         {
             _chat.SendAdminAlert(logMessage);
 
-            if (CreateTpLinks(playerNetEnts, out var tpLinks))
-                _chat.SendAdminAlertNoFormatOrEscape(tpLinks);
+            if (_showAdminLinks) // Aurora's Song
+            {
+                if (CreateTpLinks(playerNetEnts, out var tpLinks))
+                    _chat.SendAdminAlertNoFormatOrEscape(tpLinks);
 
-            var coords = GetCoordinates(handler.Values);
+                var coords = GetCoordinates(handler.Values);
 
-            if (CreateCordLinks(coords, out var cordLinks))
-                _chat.SendAdminAlertNoFormatOrEscape(cordLinks);
+                if (CreateCordLinks(coords, out var cordLinks))
+                    _chat.SendAdminAlertNoFormatOrEscape(cordLinks);
+            }
         }
     }
 

@@ -1,0 +1,62 @@
+- type: entity
+  parent: RehydratableAnimalCube
+  id: TreeCube
+  name: tree cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - FloraTree
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: TreeCubeSnowy
+  name: snowy tree cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - FloraTreeSnow
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: TreeCubeConifer
+  name: snowy conifer cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - FloraTreeConifer
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: TreeCubeLarge
+  name: large tree cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - FloraTreeLarge
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: TreeCubeShadow
+  name: shadow tree cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - ShadowTree
+
+- type: entity
+  parent: RehydratableAnimalCube
+  id: TreeCubeLight
+  name: light tree cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - LightTree
+
+- type: entity
+  parent: MonkeyCube
+  id: PompomCube
+  name: Pompom cube
+  components:
+  - type: Rehydratable
+    possibleSpawns:
+    - MobPompom

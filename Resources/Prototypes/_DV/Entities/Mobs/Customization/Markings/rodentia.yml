@@ -4,19 +4,19 @@
   abstract: true
   parent: BaseSpeciesRodentia
   id: BaseSpeciesRodentiaDefault
-  speciesRestriction: [] # Not supposed to be selectable.
+  groupWhitelist: [] # Not supposed to be selectable.
 
 - type: marking
   abstract: true
   parent: BaseSpeciesRodentia
   id: BaseSpeciesRodentiaHybrid
-  speciesRestriction: [Rodentia, IPC, Human] # IPCs and Human-hybrids included!
+  groupWhitelist: [Rodentia, IPC, Human] # IPCs and Human-hybrids included!
 
 - type: marking
   abstract: true
   parent: BaseSpeciesRodentia
   id: BaseSpeciesRodentiaBody
-  speciesRestriction: [Rodentia, Human] # IPCs are excluded, I suppose...
+  groupWhitelist: [Rodentia, Human] # IPCs are excluded, I suppose...
 
 # I'm doing it this way because species can be arbitrary about what is HeadTop and what is HeadSide,
 # and this at least makes it more flexible to change the "rules" if needed.
@@ -41,7 +41,6 @@
   - BaseSpeciesRodentiaDefault
   - BaseRodentiaEars
   id: RodentiaHeadTopEarDefault
-  markingCategory: HeadTop
   bodyPart: HeadTop
   coloring:
     default:
@@ -304,9 +303,8 @@
 
 - type: marking
   id: RodentiaCheeksWhiskers
-  markingCategory: Head # for no-cost markings
   bodyPart: HeadTop # for layering
-  speciesRestriction: [Rodentia, Human] # Funky - Remove IPC due to oversight, Aurora Song: Add humans
+  groupWhitelist: [Rodentia, Human] # Funky - Remove IPC due to oversight, Aurora Song: Add humans
   sprites:
     - sprite: _DV/Mobs/Customization/Rodentia/cheek_markings.rsi
       state: whiskers
@@ -450,7 +448,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaLegLeftCountershade
-  markingCategory: Legs
   bodyPart: LLeg
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -462,7 +459,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaLegRightCountershade
-  markingCategory: Legs
   bodyPart: RLeg
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -542,7 +538,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaArmLeftBasic
-  markingCategory: Arms
   bodyPart: LArm
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -552,7 +547,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaArmRightBasic
-  markingCategory: Arms
   bodyPart: RArm
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -564,7 +558,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaLegLeftBasic
-  markingCategory: Legs
   bodyPart: LLeg
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -574,7 +567,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaLegRightBasic
-  markingCategory: Legs
   bodyPart: RLeg
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -586,7 +578,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaHandLeftBasic
-  markingCategory: Arms
   bodyPart: LHand
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -596,7 +587,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaHandRightBasic
-  markingCategory: Arms
   bodyPart: RHand
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -608,7 +598,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaFootLeftBasic
-  markingCategory: Legs
   bodyPart: LFoot
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi
@@ -618,7 +607,6 @@
   parent: # Aurora Song: Inherit species restrictions.
   - BaseSpeciesRodentiaBody
   id: RodentiaFootRightBasic
-  markingCategory: Legs
   bodyPart: RFoot
   sprites:
     - sprite: _DV/Mobs/Species/Rodentia/parts.rsi

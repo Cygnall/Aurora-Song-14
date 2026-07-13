@@ -4806,7 +4806,6 @@ entities:
   - uid: 1658
     components:
     - type: Transform
-      rot: -1.5707963267948966 rad
       pos: 6.5,1.5
       parent: 1
 - proto: DefaultStationBeaconBar
@@ -9782,7 +9781,7 @@ entities:
     - type: Transform
       pos: -4.5,6.5
       parent: 1
-- proto: MachineMedicalBountyRedemption
+- proto: ASMachineMedicalBountyRedemption
   entities:
   - uid: 382
     components:

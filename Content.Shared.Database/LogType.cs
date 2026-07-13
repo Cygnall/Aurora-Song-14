@@ -535,5 +535,35 @@ public enum LogType
 
     #region Aurora
     StationPayDeposit = 14001,
+
+    /// <summary>
+    /// Persistent Record Created
+    /// </summary>
+    RecordCreate = 14100,
+
+    /// <summary>
+    /// Persistent Record Edited
+    /// </summary>
+    RecordEdit = 14101,
+
+    /// <summary>
+    /// Persistent Record Hidden
+    /// </summary>
+    RecordHide = 14102,
+
+    /// <summary>
+    /// Persistent Record Unhidden
+    /// </summary>
+    RecordUnhide = 14103,
+
+    /// <summary>
+    /// Persistent Record Deleted
+    /// </summary>
+    RecordDelete = 14104,
+
+    /// <summary>
+    /// Persistent Record restored from a deleted state
+    /// </summary>
+    RecordRestore = 14105,
     #endregion
 }

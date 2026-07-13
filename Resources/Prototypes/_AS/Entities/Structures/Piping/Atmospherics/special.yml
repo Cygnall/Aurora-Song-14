@@ -14,12 +14,21 @@
   - type: Rotatable
     increment: 90
   - type: ApcPowerReceiver
-    powerLoad: 10000
+    powerLoad: 1000
   - type: ExtensionCableReceiver
   - type: Anchorable
   - type: Airtight
     airBlocked: false
     requiresPower: true
+  - type: Battery
+    netsync: false
+    maxCharge: 10000
+    startingCharge: 10000
+  - type: ApcPowerReceiverBattery
+    idleLoad: 1000
+    batteryRechargeRate: 200
+    batteryRechargeEfficiency: 0.0
+  - type: ExaminableBattery
 
 - type: entity
   parent: AtmosDeviceFanDirectional
@@ -36,9 +45,18 @@
   - type: Rotatable
     increment: 90
   - type: ApcPowerReceiver
-    powerLoad: 10000
+    powerLoad: 1000
   - type: ExtensionCableReceiver
   - type: Anchorable
   - type: Airtight
     airBlocked: false
     requiresPower: true
+  - type: Battery
+    netsync: false
+    maxCharge: 10000
+    startingCharge: 10000
+  - type: ApcPowerReceiverBattery
+    idleLoad: 1000
+    batteryRechargeRate: 200
+    batteryRechargeEfficiency: 0.0
+  - type: ExaminableBattery

@@ -31,6 +31,7 @@
           Piercing: 1
           Heat: 1
     - type: Damageable
+    - type: Injurable
       damageContainer: Shield
     - type: ExaminableDamage
       messages: ShieldMessages
@@ -71,9 +72,10 @@
   components:
   - type: Repairable # Negative values represent healing
     damage:
-      groups:
-        Brute: -60 # 20 of each Brute Type - 20% of a basic shield HP
       types:
+        Blunt: -20
+        Slash: -20
+        Piercing: -20
         Heat: -20
     fuelCost: 10 # 1/2 of a Welder for a full repair
     doAfterDelay: 5
@@ -444,10 +446,17 @@
   description: Exotic energy shield, when folded, can even fit in your pocket.
   components:
     - type: ItemToggle
+      predictable: false # WD EDIT
       soundActivate:
         path: /Audio/Weapons/ebladeon.ogg
       soundDeactivate:
         path: /Audio/Weapons/ebladeoff.ogg
+      # WD EDIT START
+      soundFailToActivate:
+        path: /Audio/Machines/button.ogg
+        params:
+          variation: 0.250
+      # WD EDIT END
     - type: ItemToggleActiveSound
       activeSound:
         path: /Audio/Weapons/ebladehum.ogg
@@ -489,7 +498,8 @@
       color: blue
     - type: ItemTogglePointLight
     - type: Reflect
-      reflectProb: 0.95
+      reflectProb: 1 # WD EDIT
+      damageOnReflectModifier: 1 # Goob edit
       reflects:
         - Energy
     - type: Blocking
@@ -498,7 +508,7 @@
           Blunt: 1.0
           Slash: 0.9
           Piercing: 0.85
-          Heat: 0.6
+          Heat: 0.5 # WD EDIT
       activeBlockModifier:
         coefficients:
           Blunt: 1.2
@@ -510,33 +520,20 @@
           Piercing: 1
     - type: Appearance
     - type: Damageable
+    - type: Injurable
       damageContainer: Shield
-    - type: ExaminableDamage
-      messages: EnergyShieldMessages
-    - type: Destructible
-      thresholds:
-        - trigger:
-            !type:DamageTrigger
-            damage: 180
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-        - trigger:
-            !type:DamageTrigger
-            damage: 100
-          behaviors:
-            - !type:DoActsBehavior
-              acts: [ "Destruction" ]
-            - !type:PlaySoundBehavior
-              sound:
-                collection: GlassBreak
-            - !type:SpawnEntitiesBehavior
-              spawn:
-                BrokenEnergyShield:
-                  min: 1
-                  max: 1
+      # Aurora's Song - Remove Destructible
     - type: StaticPrice
       price: 350
+      # Aurora's Song Start - Rechargeable Blocking
+    - type: Battery
+      maxCharge: 60
+      startingCharge: 60
+    - type: BatterySelfRecharger
+      autoRechargeRate: 3
+      autoRechargePauseTime: 10
+    - type: RechargeableBlocking
+      # Aurora's Song End - Rechargeable Blocking
 
 - type: entity
   name: broken energy shield

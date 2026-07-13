@@ -1,22 +1,22 @@
 - type: vendingMachineInventory
   id: EngiVendInventory
   startingInventory:
-    ClothingHandsGlovesColorYellow: 10 # Frontier: 6<10
-    CrowbarYellow: 10 # Frontier: 8<10
-    MaintenanceJack: 10 # Frontier
-    Multitool: 10 # Frontier: 4<10
     ClothingEyesGlassesMeson: 10 # Frontier: 4<10
+    ClothingEyesGlassesThermal: 10 # Aurora's Song - 4>10
     ClothingEyesHudDiagnostic: 10 # Aurora's Song - 4>10
     ClothingHeadHatWelding: 6
-#    HolofanProjector: 10    # Frontier
-    BoxInflatable: 2
-    GeigerCounter: 10       # Frontier
-    PowerCellMedium: 15 # Frontier: 5<15
+    CrowbarYellow: 10 # Frontier: 8<10
+    Multitool: 10 # Frontier: 4<10
 #    NetworkConfigurator: 5 # Frontier
+    PowerCellMedium: 15 # Frontier: 5<15
+    ClothingHandsGlovesColorYellow: 10 # Frontier: 6<10
+    BoxInflatable: 2
+    ClothingHeadHatCone: 10 # Frontier: 4<10
+    MaintenanceJack: 10 # Frontier
+    GeigerCounter: 10 # Frontier
     ShipyardRCD: 10 # Frontier
     ShipyardRCDAmmo: 20 # Frontier
     DoorRemoteShipyard: 5 # Frontier
-    ClothingHeadHatCone: 10 # Frontier: 4<10
     AccessConfiguratorCivilian: 5 # Aurora Song: Civilian access configurator.
   contrabandInventory:
     CowToolboxFilled: 1

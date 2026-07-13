@@ -16,7 +16,6 @@ using Content.Shared.Procedural; // Frontier
 using Content.Shared.Salvage; // Frontier
 using Robust.Shared.Prototypes; // Frontier
 using Content.Shared._NF.CCVar; // Frontier
-using Content.Shared.Shuttles.Components; // Frontier
 using Robust.Shared.Configuration;
 using Content.Shared.Ghost;
 using System.Numerics; // Frontier
@@ -36,7 +35,7 @@ public sealed partial class SalvageSystem
     private const double SalvageJobTime = 0.002;
     private readonly List<(ProtoId<SalvageDifficultyPrototype> id, int value)> _missionDifficulties = [("NFModerate", 0), ("NFHazardous", 1), ("NFExtreme", 2)]; // Frontier: mission difficulties with order
 
-    [Dependency] private readonly IConfigurationManager _cfgManager = default!; // Frontier
+    [Dependency] private IConfigurationManager _cfgManager = default!; // Frontier
 
     private float _cooldown;
     private float _failedCooldown; // Frontier
@@ -291,22 +290,6 @@ public sealed partial class SalvageSystem
     // Send all ghosts (relevant for admins) back to the default map so they don't lose their stuff.
     private void OnMapTerminating(EntityUid uid, SalvageExpeditionComponent component, EntityTerminatingEvent ev)
     {
-        FindPlayers(uid, null, out var players); // Begin Aurora's Song | If there is somehow still players on the map when its being deleted throw them into space.
-        if (players.Count > 0)
-        {
-            foreach (var entity in players)
-            {
-                Log.Debug($"Trying to warp {entity}");
-                if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid))
-                {
-                    Log.Error($"Could not get DefaultMap EntityUID, entity {entity} may be deleted.");
-                    break;
-                }
-                var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
-                SafetyWarp(entity, fallback);
-            }
-        } // End Aurora's Song
-
         var ghosts = EntityQueryEnumerator<GhostComponent, TransformComponent>();
         var newCoords = new MapCoordinates(Vector2.Zero, _gameTicker.DefaultMap);
         while (ghosts.MoveNext(out var ghostUid, out _, out var xform))

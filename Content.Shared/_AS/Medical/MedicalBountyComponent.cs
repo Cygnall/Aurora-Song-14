@@ -37,4 +37,10 @@ public sealed partial class ASMedicalBountyComponent : Component
     /// Ensures damage is only applied once, set to true on startup.
     /// </summary>
     public bool BountyInitialized;
+
+    /// <summary>
+    /// Determines if corpse can only be redeemed by medical staff
+    /// </summary>
+    [DataField]
+    public bool MedicalOnly;
 }

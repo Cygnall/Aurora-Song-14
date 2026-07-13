@@ -1,4 +1,5 @@
-﻿using Content.Server.Fluids.EntitySystems;
+﻿using Content.Server._AS.GameTicking.Rules.Components;
+using Content.Server.Fluids.EntitySystems;
 using Content.Server.GameTicking.Rules.VariationPass.Components;
 using Content.Shared.Chemistry.Components;
 using Content.Shared.Random.Helpers;
@@ -8,13 +9,15 @@ using Robust.Shared.Random;
 namespace Content.Server.GameTicking.Rules.VariationPass;
 
 /// <inheritdoc cref="PuddleMessVariationPassComponent"/>
-public sealed class PuddleMessVariationPassSystem : VariationPassSystem<PuddleMessVariationPassComponent>
+public sealed partial class PuddleMessVariationPassSystem : VariationPassSystem<PuddleMessVariationPassComponent>
 {
-    [Dependency] private readonly PuddleSystem _puddle = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
+    [Dependency] private PuddleSystem _puddle = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
 
     protected override void ApplyVariation(Entity<PuddleMessVariationPassComponent> ent, ref StationVariationPassEvent args)
     {
+        if (TryComp<VariationPassExemptionComponent>(args.Station, out var exemption) && exemption.CutWireExemption)// AS
+            return;
         var totalTiles = Stations.GetTileCount(args.Station.AsNullable());
 
         if (!_proto.Resolve(ent.Comp.RandomPuddleSolutionFill, out var proto))

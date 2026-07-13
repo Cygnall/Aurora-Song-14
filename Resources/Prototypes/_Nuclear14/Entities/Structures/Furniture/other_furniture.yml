@@ -1,0 +1,252 @@
+# Aurora's Song | replaced names and descriptions with locale strings
+- type: entity
+  parent: Dresser
+  id: N14Dresser
+  name: furniture-n14-other-dresser
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Furniture/np13_misc.rsi
+    state: dresser
+
+- type: entity
+  parent: BaseStructure
+  id: N14GrandfatherClock
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Furniture/np13_misc.rsi
+    state: grand_clock
+
+# Televisions
+- type: entity
+  parent: BaseStructure
+  id: N14Television
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Furniture/televisions.rsi
+    state: wood_tv
+
+- type: entity
+  parent: N14Television
+  id: N14TelevisionCabinetOpen
+  components:
+  - type: Sprite
+    state: cabinet_tv
+
+# Aurora's Song | Commenting out Fallout references
+#- type: entity
+#  parent: N14Television
+#  id: N14TelevisionRadking
+#  components:
+#  - type: Sprite
+#    state: radking_tv
+
+- type: entity
+  parent: N14Television
+  id: N14TelevisionRedwood
+  components:
+  - type: Sprite
+    state: redwood_tv
+
+- type: entity
+  parent: N14Television
+  id: N14TelevisionTube
+  description: An old pre-war tube television.
+  components:
+  - type: Sprite
+    state: tube_tv
+
+- type: entity
+  parent: N14Television
+  id: N14TelevisionSmall
+  components:
+  - type: Sprite
+    state: small_tv
+    drawdepth: SmallObjects
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.10,-0.10,0.10,0.10"
+        density: 100
+        mask:
+          - TabletopMachineMask
+
+- type: entity
+  parent: N14TelevisionSmall
+  id: N14TelevisionTiny
+  components:
+  - type: Sprite
+    state: tiny_tv
+
+- type: entity
+  parent: [SolutionTank, SolutionHuge, SeatBase]
+  id: N14Toilet
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Decoration/world.rsi
+    state: toilet
+  - type: Clickable
+  - type: InteractionOutline
+  - type: Anchorable
+  - type: Physics
+    bodyType: Static
+  - type: Transform
+    anchored: true
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 80
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+      - trigger:
+          !type:DamageTrigger
+          damage: 40
+        behaviors:
+          - !type:DoActsBehavior
+            acts: [ "Destruction" ]
+          - !type:PlaySoundBehavior
+            sound:
+              collection: MetalBreak
+  - type: AmbientSound
+    enabled: false
+    volume: -8
+    range: 8
+    sound:
+      path: /Audio/Ambience/Objects/drain.ogg
+  - type: ContainerContainer
+    containers:
+      stash: !type:ContainerSlot {}
+  - type: SolutionManager # Aurora's Song - Convert to solution
+    solutions:
+    - SolutionDrainNormal
+  - type: Drain
+    autoDrain: false
+  - type: DumpableSolution
+    solution: drainBuffer
+
+- type: entity
+  parent: N14Toilet
+  id: N14ToiletWater
+  suffix: filled water
+  components:
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 480
+  - type: SolutionRegeneration # Aurora's Song - Removed solution property
+    generated:
+      reagents:
+      - ReagentId: Water
+        Quantity: 2
+
+- type: entity
+  parent: N14Toilet
+  id: N14ToiletDirty
+  suffix: filled dirty water
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 440
+      - ReagentId: GastroToxin
+        Quantity: 40
+  - type: SolutionRegeneration # Aurora's Song - Removed solution property
+    generated:
+      reagents:
+      - ReagentId: Water
+        Quantity: 3
+      - ReagentId: GastroToxin
+        Quantity: 1
+
+- type: entity
+  parent: N14ToiletDirty # Aurora's Song - Convert to solution
+  id: N14ToiletIrradiated
+  suffix: filled rad water
+
+#- type: entity
+#  parent: N14Shower - this parent needs to be made
+#  id: N14Sink
+#  name: sink
+#  description: Waste not, want not
+#  components:
+#  - type: Sprite
+#    state: sink
+#  - type: SolutionContainerManager
+#    solutions:
+#      drainBuffer:
+#        maxVol: 100
+#      tank:
+#        maxVol: 200
+#  - type: DrainableSolution
+#    solution: tank
+#  - type: ReagentTank
+#  - type: Drain
+#    autoDrain: false
+#  - type: DumpableSolution
+#    solution: drainBuffer
+#
+#- type: entity
+#  parent: N14Sink
+#  id: N14SinkFilledWater
+#  suffix: filled water
+#  components:
+#  - type: SolutionContainerManager
+#    solutions:
+#      drainBuffer:
+#        maxVol: 200
+#      tank:
+#        reagents:
+#        - ReagentId: Water
+#          Quantity: 200
+#  - type: SolutionRegeneration # Aurora's Song - Removed solution property
+#    generated:
+#      reagents:
+#      - ReagentId: Water
+#        Quantity: 1
+#
+#- type: entity
+#  parent: N14Sink
+#  id: N14SinkFilledWaterDirty
+#  suffix: filled water dirty
+#  components:
+#  - type: SolutionContainerManager
+#    solutions:
+#      drainBuffer:
+#        maxVol: 200
+#      tank:
+#        reagents:
+#        - ReagentId: WaterDirty
+#          Quantity: 200
+#  - type: SolutionRegeneration # Aurora's Song - Removed solution property
+#    generated:
+#      reagents:
+#      - ReagentId: WaterDirty
+#        Quantity: 1
+#
+#- type: entity
+#  parent: N14Sink
+#  id: N14SinkFilledWaterIrradiated
+#  suffix: filled water irradiated
+#  components:
+#  - type: SolutionContainerManager
+#    solutions:
+#      drainBuffer:
+#        maxVol: 200
+#      tank:
+#        reagents:
+#        - ReagentId: WaterIrradiated
+#          Quantity: 200
+#  - type: SolutionRegeneration # Aurora's Song - Removed solution property
+#    generated:
+#      reagents:
+#      - ReagentId: WaterIrradiated
+#        Quantity: 1

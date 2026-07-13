@@ -68,3 +68,13 @@
   id: SiteWorkerUniformJumpsuitMilitaryScientist
   equipment:
     jumpsuit: ClothingUniformJumpsuitMilitaryScientist
+
+- type: loadout
+  id: SiteWorkerClothingUniformFlightsuitAtmos
+  equipment:
+    jumpsuit: ClothingUniformAtmosFlightSuit
+
+- type: loadout
+  id: SiteWorkerClothingUniformFlightskirtAtmos
+  equipment:
+    jumpsuit: ClothingUniformAtmosFlightSkirt

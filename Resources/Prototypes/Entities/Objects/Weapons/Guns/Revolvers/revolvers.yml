@@ -154,6 +154,7 @@
     price: 1500 # Botany can shit these out like candy, but let's see how it goes
 
 - type: entity
+  abstract: true
   categories: [ HideSpawnMenu ] # Frontier (also removed from uplink)
   parent: WeaponRevolverPython
   id: WeaponRevolverPythonAP # For the uplink.

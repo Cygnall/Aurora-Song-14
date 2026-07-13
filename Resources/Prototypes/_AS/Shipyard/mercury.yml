@@ -1,0 +1,43 @@
+# Author Info
+# GitHub: FoxWithAComputer
+# Discord: Swissed_Fox
+
+# Maintainer Info
+# GitHub: FoxWithAComputer
+# Discord: Swissed_Fox
+
+# Shuttle Notes:
+#
+- type: vessel
+  id: Mercury
+  parent: BaseVessel
+  name: IHS Mercury
+  description: A long-range and compact salvage shuttle, designed to operate far from a home base. Has its own FTL drive.
+  price: 44000 # 40700 appraise
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_AS/Shuttles/mercury.yml
+  guidebookPage: Null
+  class:
+  - Salvage
+  engine:
+  - Bananium
+
+- type: gameMap
+  id: Mercury
+  mapName: 'IHS Mercury'
+  mapPath: /Maps/_AS/Shuttles/mercury.yml
+  minPlayers: 0
+  stations:
+    Mercury:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Mercury {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

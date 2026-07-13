@@ -1,0 +1,141 @@
+# Aurora's Song | Replaced names with locale strings
+# Metal
+
+- type: stack
+  id: FloorTileMetalBlue
+  name: stack-FloorTileMetalBlue
+  spawn: FloorTileItemMetalBlue
+
+- type: stack
+  id: FloorTileMetalBlueSolid
+  name: stack-FloorTileMetalBlueSolid
+  spawn: FloorTileItemMetalBlueSolid
+
+- type: stack
+  id: FloorTileMetalGreen
+  name: stack-FloorTileMetalGreen
+  spawn: FloorTileItemMetalGreen
+
+- type: stack
+  id: FloorTileMetalGreenSolid
+  name: stack-FloorTileMetalGreenSolid
+  spawn: FloorTileItemMetalGreenSolid
+
+- type: stack
+  id: FloorTileMetalGrey
+  name: stack-FloorTileMetalGrey
+  spawn: FloorTileItemMetalGrey
+
+- type: stack
+  id: FloorTileMetalGreySolid
+  name: stack-FloorTileMetalGreySolid
+  spawn: FloorTileItemMetalGreySolid
+
+- type: stack
+  id: FloorTileMetalGreyDark
+  name: stack-FloorTileMetalGreyDark
+  spawn: FloorTileItemMetalGreyDark
+
+- type: stack
+  id: FloorTileMetalGreyDarkSolid
+  name: stack-FloorTileMetalGreyDarkSolid
+  spawn: FloorTileItemMetalGreyDarkSolid
+
+- type: stack
+  id: FloorTileMetalPurple
+  name: stack-FloorTileMetalPurple
+  spawn: FloorTileItemMetalPurple
+
+- type: stack
+  id: FloorTileMetalPurpleSolid
+  name: stack-FloorTileMetalPurpleSolid
+  spawn: FloorTileItemMetalPurpleSolid
+
+- type: stack
+  id: FloorTileMetalRed
+  name: stack-FloorTileMetalRed
+  spawn: FloorTileItemMetalRed
+
+- type: stack
+  id: FloorTileMetalRedSolid
+  name: stack-FloorTileMetalRedSolid
+  spawn: FloorTileItemMetalRedSolid
+
+- type: stack
+  id: FloorTileMetalTeal
+  name: stack-FloorTileMetalTeal
+  spawn: FloorTileItemMetalTeal
+
+- type: stack
+  id: FloorTileMetalTealSolid
+  name: stack-FloorTileMetalTealSolid
+  spawn: FloorTileItemMetalTealSolid
+
+- type: stack
+  id: FloorTileMetalWhite
+  name: stack-FloorTileMetalWhite
+  spawn: FloorTileItemMetalWhite
+
+- type: stack
+  id: FloorTileMetalWhiteSolid
+  name: stack-FloorTileMetalWhiteSolid
+  spawn: FloorTileItemMetalWhiteSolid
+
+- type: stack
+  id: FloorTileMetalYellow
+  name: stack-FloorTileMetalYellow
+  spawn: FloorTileItemMetalYellow
+
+- type: stack
+  id: FloorTileMetalYellowSolid
+  name: stack-FloorTileMetalYellowSolid
+  spawn: FloorTileItemMetalYellowSolid
+
+- type: stack
+  id: FloorTileMetalFreezer
+  name: stack-FloorTileMetalFreezer
+  spawn: FloorTileItemMetalFreezer
+
+# Other
+
+- type: stack
+  id: FloorTileWoodOak
+  name: stack-FloorTileWoodOak
+  spawn: FloorTileItemWoodOak
+
+- type: stack
+  id: FloorTileWoodHouse
+  name: stack-FloorTileWoodHouse
+  spawn: FloorTileItemWoodHouse
+
+- type: stack
+  id: FloorTileWoodMaple
+  name: stack-FloorTileWoodMaple
+  spawn: FloorTileItemWoodMaple
+
+- type: stack
+  id: FloorTileCarpetRed
+  name: stack-FloorTileCarpetRed
+  spawn: FloorTileItemCarpetRed
+
+
+# MS13
+- type: stack
+  id: FloorTileMetalIndustrial
+  name: stack-FloorTileMetalIndustrial
+  spawn: FloorTileItemMetalIndustrial
+
+- type: stack
+  id: FloorTileMetalMS13
+  name: stack-FloorTileMetalMS13
+  spawn: FloorTileItemMetalMS13
+
+- type: stack
+  id: FloorTileMetalGrate
+  name: stack-FloorTileMetalGrate
+  spawn: FloorTileItemMetalGrate
+
+- type: stack
+  id: FloorTileMetalSolid
+  name: stack-FloorTileMetalSolid
+  spawn: FloorTileItemMetalSolid

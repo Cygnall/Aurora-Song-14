@@ -1,15 +1,6 @@
 # this file is subject to getting its shit moved to other files at a later date#
 
 # arachnids
-marking-SpiderMirror = Mirror
-marking-SpiderMirror-spidermirror = Mirror
-marking-SpiderGlowEyes = Glowing Eyes
-marking-SpiderGlowEyes-spidergloweyes = Glowing Eyes
-marking-SpiderEyesMulti = Multicolor Eyes
-marking-SpiderEyesMulti-spidereyesmulti1 = Top
-marking-SpiderEyesMulti-spidereyesmulti2 = Middle Top
-marking-SpiderEyesMulti-spidereyesmulti3 = Middle Bottom
-marking-SpiderEyesMulti-spidereyesmulti4 = Bottom
 
 # diona
 marking-DionaLivingNymph = Living Nymphs
@@ -81,59 +72,6 @@ marking-VitiligoArmL = Vitiligo (Left Arm)
 marking-VitiligoLegL = Vitiligo (Left)
 marking-VitiligoChestF = Vitiligo Spread
 marking-VitiligoChestSpots = Vitiligo Spots
-
-# moths
-marking-MothTrueButterfly = Wings (Rainbow)
-marking-MothTrueButterfly-mothtruebutterfly1 = Stripes
-marking-MothTrueButterfly-mothtruebutterfly2 = Dots
-marking-MothTrueButterfly-mothtruebutterfly3 = Wings
-marking-MothGlowAntenna = Antennae (Glowing)
-marking-MothGlowAntenna-mothglowantenna = Antennae (Glowing)
-marking-MothFireflyOverlay = Firefly Overlay
-marking-MothFireflyOverlay-mothfirefly1 = Firefly Overlay
-marking-MothFirefly = Wings (Firefly)
-marking-MothFirefly-mothfirefly2 = Firefly Wings
-marking-MothBee = Wings (Bumblebee)
-# Frontier: stripes < Stripes
-marking-MothBee-bee1 = Outer Stripes
-marking-MothBee-bee2 = Wings
-# Frontier: stripe < Stripe
-marking-MothBee-bee3 = Inner Stripe
-marking-MothBeetleTail = Beetle Wings (Junebug)
-marking-MothBeetleTail-beetle1 = Outline
-marking-MothBeetleTail-beetle2 = Wings
-marking-MothBeetleTail-beetle3 = Shine
-marking-MothBeetleHorn1 = Beetle Horn (Pronged)
-marking-MothBeetleHorn1-mothbeetlehorn1 = Beetle Horn (Pronged)
-marking-MothBeetleHorn2 = Beetle Horn (Lance)
-marking-MothBeetleHorn2-mothbeetlehorn2 = Beetle Horn (Lance)
-marking-MothBiggerEyes = Bigger Eyes
-marking-MothBiggerEyes-mothbiggereyes = Bigger Eyes
-marking-MothSnoth = Wings (Snoth)
-marking-MothSnoth-snoth1 = Wings
-marking-MothSnoth-snoth2 = Shell
-marking-MothGlasswing = Wings (Glasswing)
-marking-MothGlasswing-glasswing1 = Outer
-marking-MothGlasswing-glasswing2 = Inner
-marking-MothGlasswing-glasswing3 = Stripe
-marking-MothRhinoBeetle = Beetle Wings (Rhino)
-marking-MothRhinoBeetle-rhinobeetle1 = Outline
-marking-MothRhinoBeetle-rhinobeetle2 = Shine
-marking-MothRhinoBeetle-rhinobeetle3 = Wings
-
-# slimes
-marking-fizz = Fizz
-marking-fizz-fizz = Fizz
-marking-bubble = Bubbles
-marking-bubble-bubble = Bubbles
-marking-fishbowl = Fishbowl
-marking-fishbowl-fishbowl1 = Fish
-# Frontier: bubbles < Bubbles
-marking-fishbowl-fishbowl2 = Fish Bubbles
-marking-FadingStars = Fading Starlight
-marking-FadingStars-fadingstars1 = Brightest
-marking-FadingStars-fadingstars2 = Middling
-marking-FadingStars-fadingstars3 = Darkest
 
 # vox
 marking-VoxCocktail = Cocktail
@@ -215,11 +153,12 @@ marking-VoxTailSplit-voxtailsplit = Twinned
 # upstream vox markings dont have localized names. lmfao
 # these are just straight up broken and shouldnt be visible from the markings menu period but ALAS im not skilled enough to remove them so you get this stupid botch job instead
 # marking-VoxBeak = Default Beak [DO NOT USE] # Aurora's Song - Duplicate
-marking-VoxLArmScales = Default Arm [DO NOT USE]
-marking-VoxLHandScales = Default Left Hand [DO NOT USE]
-marking-VoxRArmScales = Default Right Arm [DO NOT USE]
-marking-VoxRHandScales = Default Right Hand [DO NOT USE]
-marking-VoxLFootScales = Default Left Foot [DO NOT USE]
-marking-VoxLLegScales = Default Left Leg [DO NOT USE]
-marking-VoxRFootScales = Default Right Foot [DO NOT USE]
-marking-VoxRLegScales = Default Right Leg [DO NOT USE]
+# Aurora's Song - turned all [DO NOT USE] to (Colorable)
+marking-VoxLArmScales = Default Arm (Colorable)
+marking-VoxLHandScales = Default Left Hand (Colorable)
+marking-VoxRArmScales = Default Right Arm (Colorable)
+marking-VoxRHandScales = Default Right Hand (Colorable)
+marking-VoxLFootScales = Default Left Foot (Colorable)
+marking-VoxLLegScales = Default Left Leg (Colorable)
+marking-VoxRFootScales = Default Right Foot (Colorable)
+marking-VoxRLegScales = Default Right Leg (Colorable)

@@ -2,7 +2,7 @@
 
 - type: entity
   abstract: true
-  parent: BaseItem
+  parent: [SolutionFood, SolutionVeryTiny, BaseItem] # Crayons are less pourous than most foods, so we just assume they have less capacity.
   id: CrayonInedible
   name: crayon
   description: A colourful crayon. A forbidden flavor.
@@ -41,14 +41,13 @@
     flavors:
     - chewy
     - bitter
-  - type: SolutionContainerManager
-    solutions:
-      food:
-        reagents:
-#        - ReagentId: Nutriment # Frontier
-#          Quantity: 3 # Frontier
-        - ReagentId: MindbreakerToxin
-          Quantity: 2
+  - type: Solution
+    solution:
+      reagents:
+#      - ReagentId: Nutriment # Frontier
+#        Quantity: 5 # Frontier
+      - ReagentId: MindbreakerToxin
+        Quantity: 2 # Frontier 10>2
   - type: StaticPrice
     price: 5
   - type: Stamp # Frontier
@@ -305,7 +304,7 @@
 
 - type: entity
   parent: BoxCardboard
-  id: CrayonBox
+  id: CrayonBoxEmpty
   name: crayon box
   description: It's a box of crayons.
   components:
@@ -322,18 +321,6 @@
     shape:
     - 0,0,1,1
     heldPrefix: box
-  - type: EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: CrayonRed
-        - id: CrayonOrange
-        - id: CrayonYellow
-        - id: CrayonGreen
-        - id: CrayonBlue
-        - id: CrayonPurple
-        - id: CrayonBlack
-        - id: CrayonWhite
   - type: ItemMapper
     mapLayers:
       black_box:
@@ -369,3 +356,21 @@
           tags:
           - CrayonWhite
   - type: Appearance
+
+- type: entity
+  parent: CrayonBoxEmpty
+  id: CrayonBox
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: CrayonRed
+        - id: CrayonOrange
+        - id: CrayonYellow
+        - id: CrayonGreen
+        - id: CrayonBlue
+        - id: CrayonPurple
+        - id: CrayonBlack
+        - id: CrayonWhite

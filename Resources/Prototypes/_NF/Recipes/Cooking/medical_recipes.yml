@@ -218,17 +218,17 @@
   result: NFMobHumanBuddy
   time: 20
   group: Secret
-  solids:
-    HeadHuman: 1
-    TorsoHuman: 1
-    LeftArmHuman: 1
-    RightArmHuman: 1
-    LeftHandHuman: 1
-    RightHandHuman: 1
-    LeftLegHuman: 1
-    RightLegHuman: 1
-    LeftFootHuman: 1
-    RightFootHuman: 1
+  solids: # Aurora's Song - Migrate to nubody
+    OrganHumanHead: 1
+    OrganHumanTorso: 1
+    OrganHumanArmLeft: 1
+    OrganHumanArmRight: 1
+    OrganHumanHandLeft: 1
+    OrganHumanHandRight: 1
+    OrganHumanLegLeft: 1
+    OrganHumanLegRight: 1
+    OrganHumanFootLeft: 1
+    OrganHumanFootRight: 1
   recipeType: MedicalAssembler
   hideInGuidebook: true
 
@@ -238,17 +238,17 @@
   result: NFMobGoblinBuddy
   time: 20
   group: Secret
-  solids:
-    HeadGoblin: 1
-    TorsoGoblin: 1
-    LeftArmGoblin: 1
-    RightArmGoblin: 1
-    LeftHandGoblin: 1
-    RightHandGoblin: 1
-    LeftLegGoblin: 1
-    RightLegGoblin: 1
-    LeftFootGoblin: 1
-    RightFootGoblin: 1
+  solids: # Aurora's Song - Migrate to nubody
+    OrganGoblinHead: 1
+    OrganGoblinTorso: 1
+    OrganGoblinArmLeft: 1
+    OrganGoblinArmRight: 1
+    OrganGoblinHandLeft: 1
+    OrganGoblinHandRight: 1
+    OrganGoblinLegLeft: 1
+    OrganGoblinLegRight: 1
+    OrganGoblinFootLeft: 1
+    OrganGoblinFootRight: 1
   recipeType: MedicalAssembler
   hideInGuidebook: true
 
@@ -258,17 +258,17 @@
   result: NFMobReptilianBuddy
   time: 20
   group: Secret
-  solids:
-    HeadReptilian: 1
-    TorsoReptilian: 1
-    LeftArmReptilian: 1
-    RightArmReptilian: 1
-    LeftHandReptilian: 1
-    RightHandReptilian: 1
-    LeftLegReptilian: 1
-    RightLegReptilian: 1
-    LeftFootReptilian: 1
-    RightFootReptilian: 1
+  solids: # Aurora's Song - Migrate to nubody
+    OrganReptilianHead: 1
+    OrganReptilianTorso: 1
+    OrganReptilianArmLeft: 1
+    OrganReptilianArmRight: 1
+    OrganReptilianHandLeft: 1
+    OrganReptilianHandRight: 1
+    OrganReptilianLegLeft: 1
+    OrganReptilianLegRight: 1
+    OrganReptilianFootLeft: 1
+    OrganReptilianFootRight: 1
   recipeType: MedicalAssembler
   hideInGuidebook: true
 
@@ -278,17 +278,17 @@
   result: NFMobSlimePersonBuddy
   time: 20
   group: Secret
-  solids:
-    HeadSlime: 1
-    TorsoSlime: 1
-    LeftArmSlime: 1
-    RightArmSlime: 1
-    LeftHandSlime: 1
-    RightHandSlime: 1
-    LeftLegSlime: 1
-    RightLegSlime: 1
-    LeftFootSlime: 1
-    RightFootSlime: 1
+  solids: # Aurora's Song - Migrate to nubody
+    OrganSlimePersonHead: 1
+    OrganSlimePersonTorso: 1
+    OrganSlimePersonArmLeft: 1
+    OrganSlimePersonArmRight: 1
+    OrganSlimePersonHandLeft: 1
+    OrganSlimePersonHandRight: 1
+    OrganSlimePersonLegLeft: 1
+    OrganSlimePersonLegRight: 1
+    OrganSlimePersonFootLeft: 1
+    OrganSlimePersonFootRight: 1
   recipeType: MedicalAssembler
   hideInGuidebook: true
 
@@ -298,16 +298,16 @@
   result: NFMobVulpkaninBuddy
   time: 20
   group: Secret
-  solids:
-    HeadVulpkanin: 1
-    TorsoVulpkanin: 1
-    LeftArmVulpkanin: 1
-    RightArmVulpkanin: 1
-    LeftHandVulpkanin: 1
-    RightHandVulpkanin: 1
-    LeftLegVulpkanin: 1
-    RightLegVulpkanin: 1
-    LeftFootVulpkanin: 1
-    RightFootVulpkanin: 1
+  solids: # Aurora's Song - Migrate to nubody
+    OrganVulpkaninHead: 1
+    OrganVulpkaninTorso: 1
+    OrganVulpkaninArmLeft: 1
+    OrganVulpkaninArmRight: 1
+    OrganVulpkaninHandLeft: 1
+    OrganVulpkaninHandRight: 1
+    OrganVulpkaninLegLeft: 1
+    OrganVulpkaninLegRight: 1
+    OrganVulpkaninFootLeft: 1
+    OrganVulpkaninFootRight: 1
   recipeType: MedicalAssembler
   hideInGuidebook: true

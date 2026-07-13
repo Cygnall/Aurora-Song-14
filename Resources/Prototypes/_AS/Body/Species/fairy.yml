@@ -1,0 +1,303 @@
+﻿- type: markingsGroup
+  id: Fairy
+  limits:
+    enum.HumanoidVisualLayers.Special: # the cat ear joke
+      limit: 0
+      required: false
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Snout:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Tail: # the cat tail joke
+      limit: 1 # Aurora Song: You can have a tail. As a treat
+      required: true
+      default: [ MothWingsDefault ]
+    enum.HumanoidVisualLayers.HeadTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.UndergarmentTop:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.UndergarmentBottom:
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2
+      required: false
+    enum.HumanoidVisualLayers.LArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RArm:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RHand:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 4
+      required: false
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 4
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceFairy
+  name: Fairy appearance
+  components:
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit:
+        sizeMaps:
+          32:
+            sprite: Mobs/Species/Human/displacement.rsi
+            state: jumpsuit-female
+  - type: InitialBody
+    organs:
+      Torso: OrganFairyTorso
+      Head: OrganFairyHead
+      ArmLeft: OrganFairyArmLeft
+      ArmRight: OrganFairyArmRight
+      HandRight: OrganFairyHandRight
+      HandLeft: OrganFairyHandLeft
+      LegLeft: OrganFairyLegLeft
+      LegRight: OrganFairyLegRight
+      FootLeft: OrganFairyFootLeft
+      FootRight: OrganFairyFootRight
+      Brain: OrganHumanBrain
+      Eyes: OrganHumanEyes
+      Tongue: OrganHumanTongue
+      Appendix: OrganHumanAppendix
+      Ears: OrganHumanEars
+      Lungs: OrganFairyLungs
+      Heart: OrganFairyHeart
+      Stomach: OrganFairyStomach
+      Liver: OrganFairyLiver
+      Kidneys: OrganFairyKidneys
+  - type: HumanoidProfile
+    species: Fairy
+
+- type: entity
+  id: MobFairy
+  parent:
+  - AppearanceFairy
+  - BaseSpeciesMobOrganic
+  name: Urist McFairy
+  components:
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      50: Critical
+      75: Dead
+  - type: SizeAttribute
+    short: true
+  - type: Speech
+    speechSounds: Fairy
+    speechVerb: Fairy
+    allowedEmotes: ['Flutter', 'FairyGlimmer', "Flap"]
+  - type: Fixtures
+    fixtures: # TODO: This needs a second fixture just for mob collisions.
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+          radius: 0.20
+        density: 50
+        restitution: 0.0
+        mask:
+        - MobMask
+        layer:
+        - MobLayer
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      30: 0.7
+      40: 0.5
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 10
+  - type: Bloodstream
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: FairyBlood
+        Quantity: 120 # 1L of blood
+  - type: Item # fairies are like mice, you can pick them up quickly and store them in a lot of places
+    size: Small
+    heldPrefix: 0
+  - type: PseudoItem # fairies retain PseudoItem so they get all the regular storage behaviors
+    size: "Small"
+    shape:
+    - 0,1,0,0
+  - type: Vocal
+    sounds:
+      Male: FairySpeech
+      Female: FairySpeech
+      Unsexed: FairySpeech
+  - type: BodyEmotes
+    soundsId: FairyBodyEmotes
+  - type: FaxableObject
+    insertingState: inserting_mouse
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+      - Mouse
+  - type: AlwaysTriggerMousetrap
+  - type: Carriable # Frontier: Carrying system from nyanotrasen.
+    # Aurora's Song: disables being picked up without having to reparent from human
+    # TODO: after nubody do a more sane solution
+    freeHandsRequired: 10
+  - type: Butcherable
+    spawned:
+    - id: FoodMeatHuman
+      amount: 3
+  - type: Tag
+    tags:
+    - VimPilot
+    - DoorBumpOpener
+    - CanPilot
+    - FootstepSound
+    - AnomalyHost
+  - type: MeleeWeapon
+    soundHit:
+      path: /Audio/Effects/bite.ogg
+    angle: 0
+    animation: WeaponArcBite
+    damage:
+      types:
+        Piercing: 1
+  - type: MovementSpeedModifier
+    weightlessAcceleration: 3.5
+  - type: PointLight
+    enabled: true
+    radius: 2
+    energy: 10
+
+- type: entity
+  parent: OrganBaseOrganic
+  id: OrganFairy
+  abstract: true
+  suffix: Fairy
+
+- type: entity
+  id: OrganFairyMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ Human, Fairy ]
+    updateInterval: 1.5
+    # Make chems last 10x as long with the same healing per tick
+    efficacyMultiplier: 10
+    rateModifier: 0.1
+
+- type: entity
+  parent: OrganFairy
+  id: OrganFairyInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Arachnid/organs.rsi
+
+- type: entity
+  parent: OrganFairy
+  id: OrganFairyExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrgan
+    data:
+      sprite: Mobs/Species/Human/parts.rsi
+  - type: VisualOrganMarkings
+    markingData:
+      group: Fairy
+
+- type: entity
+  parent: [ OrganBaseTorsoSexed, OrganBaseTorso, OrganFairyExternal ] # Aurora's Song - Add sexed organs
+  id: OrganFairyTorso
+
+- type: entity
+  parent: [ OrganBaseHeadSexed, OrganBaseHead, OrganFairyExternal ] # Aurora's Song - Add sexed organs
+  id: OrganFairyHead
+  # Aurora's Song Start - Correct hideable head layers
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.HeadTop
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.FacialHair
+    - enum.HumanoidVisualLayers.Snout
+  # Aurora's Song End
+
+- type: entity
+  parent: [ OrganBaseArmLeft, OrganFairyExternal ]
+  id: OrganFairyArmLeft
+
+- type: entity
+  parent: [ OrganBaseArmRight, OrganFairyExternal ]
+  id: OrganFairyArmRight
+
+- type: entity
+  parent: [ OrganBaseHandLeft, OrganFairyExternal ]
+  id: OrganFairyHandLeft
+
+- type: entity
+  parent: [ OrganBaseHandRight, OrganFairyExternal ]
+  id: OrganFairyHandRight
+
+- type: entity
+  parent: [ OrganBaseLegLeft, OrganFairyExternal ]
+  id: OrganFairyLegLeft
+
+- type: entity
+  parent: [ OrganBaseLegRight, OrganFairyExternal ]
+  id: OrganFairyLegRight
+
+- type: entity
+  parent: [ OrganBaseFootLeft, OrganFairyExternal ]
+  id: OrganFairyFootLeft
+
+- type: entity
+  parent: [ OrganBaseFootRight, OrganFairyExternal ]
+  id: OrganFairyFootRight
+
+- type: entity
+  parent: [ OrganBaseLungs, OrganFairyInternal, OrganFairyMetabolizer ]
+  id: OrganFairyLungs
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganFairyInternal, OrganFairyMetabolizer ]
+  id: OrganFairyHeart
+
+- type: entity
+  parent: [ OrganBaseStomach, OrganFairyInternal, OrganFairyMetabolizer ]
+  id: OrganFairyStomach
+  components:
+  - type: SolutionManager
+    solutions:
+    - SolutionFairyStomach
+
+- type: entity
+  parent: [SolutionTiny, SolutionStomach]
+  id: SolutionFairyStomach
+  categories: [ HideSpawnMenu ]
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganFairy, OrganHumanInternal, OrganFairyMetabolizer ]
+  id: OrganFairyLiver
+
+- type: entity
+  parent: [ OrganBaseKidneys, OrganFairy, OrganHumanInternal, OrganFairyMetabolizer ]
+  id: OrganFairyKidneys

@@ -19,8 +19,11 @@
         types:
           Blunt: 5
           Piercing: 4
-        groups:
-          Burn: 3
+          # Aurora's Song - Convert groups to types
+          Heat: 0.75
+          Shock: 0.75
+          Cold: 0.75
+          Caustic: 0.75
 
 - type: trait
   id: Unclonable

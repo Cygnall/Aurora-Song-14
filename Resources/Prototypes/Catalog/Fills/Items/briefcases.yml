@@ -11,15 +11,14 @@
 
 - type: entity
   id: BriefcaseSyndieSniperBundleFilled
-  parent: BriefcaseSyndie
+  parent: BriefcaseBrown
   suffix: Syndicate, Sniper Bundle
   components:
-  - type: Item
-    size: Ginormous
+  # Aurora's Song Start - Make this one bigger for fills
   - type: Storage
-    maxItemSize: Huge
     grid:
     - 0,0,6,3
+  # Aurora's Song End
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
@@ -40,16 +39,15 @@
     containers:
       storagebase: !type:AllSelector
         children:
+        - id: ClothingOuterCoatJensenSyndie
+        - id: ClothingUniformJumpsuitTacticool
         - id: ClothingEyesGlassesSunglasses
         - id: SpaceCashCounterfeit200000 # Frontier SpaceCash30000<SpaceCashCounterfeit200000
         - id: EncryptionKeySyndie
         - id: RubberStampTrader
         - id: PhoneInstrumentSyndicate
-        - id: ClothingUniformJumpsuitTacticool
-        - id: ClothingOuterCoatJensen
         - id: ClothingHandsGlovesCombat
         - id: ClothingMaskNeckGaiter
-        - id: SyndieHandyFlag
 
 - type: entity
   id: BriefcaseThiefBribingBundleFilled
@@ -60,7 +58,52 @@
     containers:
       storagebase: !type:AllSelector
         children:
+        - id: ClothingOuterCoatJensen
         - id: ClothingEyesGlassesSunglasses
         - id: SpaceCash20000
-        - id: ClothingOuterCoatJensen
         - id: ClothingHandsGlovesColorBlack
+
+- type: entity
+  id: BriefcaseWeaponHushpupFilled
+  parent: BriefcaseWeapon # Aurora's Song BriefcaseWeaponSmall>BriefcaseWeapon
+  name: secure hushpup case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponShotgunHushpup # Aurora's Song - WeaponShotgunHushpup>ASWeaponShotgunHushpup
+        - id: TreasureCoinIron
+
+- type: entity
+  id: BriefcaseWeaponC20Filled
+  parent: BriefcaseWeaponSmall
+  name: secure C-20r case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: NFWeaponSubMachineGunC20r # Aurora's Song - WeaponSubMachineGunC20r>NFWeaponSubMachineGunC20r
+
+- type: entity
+  id: BriefcaseWeaponBulldogFilled
+  parent: BriefcaseWeapon # Aurora's Song BriefcaseWeaponSmall>BriefcaseWeapon
+  name: secure bulldog case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase:
+        id: NFWeaponShotgunBulldog # Aurora's Song - WeaponShotgunBulldog>NFWeaponShotgunBulldog
+
+- type: entity
+  id: BriefcaseWeaponChinaLakeFilled
+  parent: BriefcaseWeapon
+  name: secure china lake case
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: NFWeaponLauncherChinaLake # Aurora's Song - WeaponLauncherChinaLake>NFWeaponLauncherChinaLake
+        - id: NFGrenadeFrag # Aurora's Song - GrenadeFrag>NFGrenadeFrag
+          amount: 2

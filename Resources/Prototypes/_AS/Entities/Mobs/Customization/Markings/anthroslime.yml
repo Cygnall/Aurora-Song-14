@@ -1,140 +1,201 @@
+# Base Markings
+- type: marking # Base head into Marking for custom heads
+  id: SlimeHead
+  bodyPart: Head
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: Mobs/Species/Slime/parts.rsi
+    state:  head
+
+- type: marking # Same with the eyes
+  id: SlimeEyes
+  bodyPart: Eyes
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: Mobs/Customization/eyes.rsi
+    state: eyes
 
 # Vulp Slimes
 - type: marking
   id: SlimeVulpkaninSnout
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/anthroslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/anthroslime.rsi
     state:  slime_vulp_head
 
 - type: marking
   id: SlimeVulpkaninEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/anthroslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/anthroslime.rsi
     state:  slime_vulp_ears
 
 - type: marking
   id: SlimeVulpkaninTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/anthroslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/anthroslime.rsi
     state:  slime_vulp_tail
 
 # Feline Slimes
 - type: marking
   id: SlimeFelineEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/felineslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/felineslime.rsi
     state:  slime_feline_ears
 
 - type: marking
   id: SlimeFelineTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/felineslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/felineslime.rsi
     state:  slime_feline_tail
 
 # Tajaran Slimes
 - type: marking
   id: SlimeTajaranHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/felineslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/felineslime.rsi
     state:  slime_tajaran_head
 
 - type: marking
   id: SlimeTajaranEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/felineslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/felineslime.rsi
     state:  slime_tajaran_ears
 
 - type: marking
   id: SlimeTajaranTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/felineslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/felineslime.rsi
     state:  slime_tajaran_tail
 
 # Feroxi Slimes
 - type: marking
   id: SlimeFeroxiHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/sharkslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/sharkslime.rsi
     state:  slime_feroxi_head
 
 - type: marking
   id: SlimeFeroxiEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/sharkslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/sharkslime.rsi
     state:  slime_feroxi_ears
 
 - type: marking
   id: SlimeFeroxiTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/sharkslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/sharkslime.rsi
     state:  slime_feroxi_tail
 
 # Rodentia Slimes
 - type: marking
   id: SlimeRodentiaHead
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/rodentiaslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/rodentiaslime.rsi
     state:  slime_rodentia_head
 
 - type: marking
   id: SlimeRodentiaRabbitEars
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/rodentiaslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/rodentiaslime.rsi
     state:  slime_rodentia_rabbit_ears
 
 - type: marking
   id: SlimeRodentiaRabbitTail
   bodyPart: Tail
-  markingCategory: Tail
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/rodentiaslime.rsi
+  - sprite: _AS/Mobs/Customization/Slime/rodentiaslime.rsi
     state:  slime_rodentia_rabbit_tail
 
 - type: marking
   id: SlimeRodentiaRabbitEarsLarge
   bodyPart: HeadTop
-  markingCategory: HeadTop
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
-  - sprite: _AS/Mobs/Customization/rodentiaslime32x48.rsi
+  - sprite: _AS/Mobs/Customization/Slime/rodentiaslime32x48.rsi
     state:  slime_rodentia_rabbit_ears_large
+
+# Arachnid slimes
+- type: marking
+  id: SlimeArachnidCurled
+  bodyPart: Tail
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Slime/arachnidslime.rsi
+    state:  slime-curled
+
+- type: marking
+  id: SlimeArachnidScorpion
+  bodyPart: Tail
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Slime/arachnidslime.rsi
+    state:  slime-scorpion
+
+- type: marking
+  id: SlimeArachnidShort
+  bodyPart: Tail
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Slime/arachnidslime.rsi
+    state:  slime-short
+
+# Lizard slimes
+- type: marking
+  id: SlimeLizardTail
+  bodyPart: Tail
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Slime/lizardslime.rsi
+    state:  slime-lizard
+
+- type: marking
+  id: SlimeLizardSnake
+  bodyPart: Tail
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Slime/lizardslime.rsi
+    state:  slime-snake
+
+- type: marking
+  id: SlimeLizardSnakeLarge
+  bodyPart: Tail
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Slime/lizardslime64x32.rsi
+    state:  slime-snake-large
+
+# Vox slimes
+- type: marking
+  id: SlimeVoxTail
+  bodyPart: Tail
+  groupWhitelist: [Slime]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Slime/voxslime.rsi
+    state:  slime-tail-vox
+

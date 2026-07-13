@@ -147,7 +147,7 @@
   parent: [ClothingBackpackNapsack, BaseFoldable] # A roleplay toy that can carry people
   id: ClothingBackpackCoffinMantis
   suffix: DO NOT MAP # Use the Basic version instead
-  name: sarcophagus
+  name: pyxis # Aurora Song: Rename sarcophagus > pyxis to match the greek inspiration better
   description: "An ornate coffin, heavy and gilded, its surface adorned with staring eyes and draped cloths. Used to haul psions away for study, therapy, or questioning. Includes a case of restraints for the stubborn ones. The straps can be stowed away, but it's so heavy you can only wear it over outerwear."
   components:
   - type: Foldable
@@ -228,7 +228,7 @@
   parent: ClothingBackpackCoffinMantis
   id: ClothingBackpackCoffinMantisFilled
   suffix: Filled, DO NOT MAP # Use the Basic version instead
-  name: sarcophagus
+  name: pyxis # Aurora Song: Rename sarcophagus > pyxis to match the greek inspiration better
   description: "An ornate coffin, heavy and gilded, its surface adorned with staring eyes and draped cloths. Used to haul psions away for study, therapy, or questioning. The straps can be stowed away, but it's so heavy you can only wear it over outerwear."
   components:
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
@@ -241,7 +241,7 @@
   parent: ClothingBackpackCoffinMantis
   id: ClothingBackpackCoffinMantisBasic # A version of the sarcophagus without the space for the extra items, if you want to map it
   suffix: Mappable
-  name: sarcophagus
+  name: pyxis # Aurora Song: Rename sarcophagus > pyxis to match the greek inspiration better
   description: "An ornate coffin, heavy and gilded, its surface adorned with staring eyes and draped cloths. Used to haul psions away for study, therapy, or questioning."
   components:
   - type: Storage

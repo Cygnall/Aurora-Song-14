@@ -39,11 +39,11 @@ public sealed partial class SalvageSystem
      * Handles actively running a salvage expedition.
      */
 
-    [Dependency] private readonly MobStateSystem _mobState = default!;
-    [Dependency] private readonly GameTicker _gameTicker = default!; // Frontier
-    [Dependency] private readonly DamageableSystem _damageable = default!; // AS
-    [Dependency] private readonly IPlayerManager _players = default!; // Coyote
-    [Dependency] private readonly SharedBuckleSystem _buckle = default!; // AS
+    [Dependency] private MobStateSystem _mobState = default!;
+    [Dependency] private GameTicker _gameTicker = default!; // Frontier
+    [Dependency] private DamageableSystem _damageable = default!; // AS
+    [Dependency] private IPlayerManager _players = default!; // Coyote
+    [Dependency] private SharedBuckleSystem _buckle = default!; // AS
 
     private void InitializeRunner()
     {
@@ -62,7 +62,7 @@ public sealed partial class SalvageSystem
         }
 
         // TODO: This is terrible but need bluespace harnesses or something.
-        var query = EntityQueryEnumerator<HumanoidAppearanceComponent, MobStateComponent, TransformComponent>();
+        var query = EntityQueryEnumerator<HumanoidProfileComponent, MobStateComponent, TransformComponent>();
 
         while (query.MoveNext(out var uid, out _, out var mobState, out var mobXform))
         {
@@ -196,6 +196,22 @@ public sealed partial class SalvageSystem
                 return;
         }
 
+        FindPlayers(ev.FromMapUid.Value, null, out var players); // Begin Aurora's Song | If there is somehow still players on the map when its being deleted throw them into space.
+        if (players.Count > 0)
+        {
+            foreach (var entity in players)
+            {
+                Log.Debug($"Trying to warp {entity}");
+                if (!_mapSystem.TryGetMap(_gameTicker.DefaultMap, out var mapUid))
+                {
+                    Log.Error($"Could not get DefaultMap EntityUID, entity {entity} may be deleted.");
+                    break;
+                }
+                var fallback = new EntityCoordinates(mapUid.Value, _random.NextVector2(2000f, 2000f));
+                SafetyWarp(entity, fallback);
+            }
+        } // End Aurora's Song
+
         // Last shuttle has left so finish the mission.
         QueueDel(ev.FromMapUid.Value);
     }
@@ -275,7 +291,7 @@ public sealed partial class SalvageSystem
 
                             // Get a list of all grid positions on the destination map
                             List<Vector2> gridCoords = new();
-                            var gridQuery = EntityManager.AllEntityQueryEnumerator<MapGridComponent, TransformComponent>();
+                            var gridQuery = AllEntityQuery<MapGridComponent, TransformComponent>();
                             while (gridQuery.MoveNext(out var _, out _, out var xform))
                             {
                                 if (xform.MapID == mapId)
@@ -437,7 +453,7 @@ public sealed partial class SalvageSystem
 
         var query =
             EntityQueryEnumerator<
-                HumanoidAppearanceComponent,
+                HumanoidProfileComponent, // Aurora's Song
                 MindContainerComponent,
                 MobStateComponent,
                 TransformComponent>();
@@ -581,13 +597,6 @@ public sealed partial class SalvageSystem
             if (HasComp<ActiveNPCComponent>(playerQUID) || HasComp<NFSalvageMobRestrictionsComponent>(playerQUID))
                 continue;
 
-            // Hostile ghost role. Continue
-            if (TryComp(playerQUID, out NpcFactionMemberComponent? npcFaction))
-            {
-                var hostileFactions = npcFaction.HostileFactions;
-                if (hostileFactions.Contains("NanoTrasen")) // TODO: move away from hardcoded faction
-                    continue;
-            }
             players.Add(playerQUID);
         }
     }
@@ -615,7 +624,7 @@ public sealed partial class SalvageSystem
 
             Log.Debug($"Strap point found: {strapuid}");
             SafetyWarp(player, xform.Coordinates);
-            _buckle.TryBuckle(strapuid, null, strapuid);
+            _buckle.TryBuckle(player, null, strapuid);
             return;
         }
 

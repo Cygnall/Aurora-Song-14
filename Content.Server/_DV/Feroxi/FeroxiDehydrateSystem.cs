@@ -1,13 +1,13 @@
-using Content.Server.Body.Components;
-using Content.Server.Body.Systems;
+using Content.Shared.Body; // Aurora's Song
 using Content.Shared.Body.Components;
+using Content.Shared.Metabolism;
 using Content.Shared.Nutrition.Components;
 
 namespace Content.Server._DV.Feroxi;
 
-public sealed class FeroxiDehydrateSystem : EntitySystem
+public sealed partial class FeroxiDehydrateSystem : EntitySystem
 {
-    [Dependency] private readonly BodySystem _body = default!;
+    [Dependency] private BodySystem _body = default!;
 
     public override void Update(float frameTime)
     {
@@ -34,7 +34,11 @@ public sealed class FeroxiDehydrateSystem : EntitySystem
     {
         ent.Comp.Dehydrated = shouldBeDehydrated;
 
-        foreach (var entity in _body.GetBodyOrganEntityComps<LungComponent>(ent.Owner))
+        // Aurora's Song - Convert to nubody-ish
+        if (!_body.TryGetOrgansWithComponent<LungComponent>(ent.Owner, out var entities))
+            return;
+
+        foreach (var entity in entities) // Aurora's Song - Convert to nubody-ish
         {
             if (!TryComp<MetabolizerComponent>(entity, out var metabolizer) || metabolizer.MetabolizerTypes == null)
             {

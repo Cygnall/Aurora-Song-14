@@ -58,6 +58,19 @@
                     </CollapsibleBody>
                 </Collapsible>
             </BoxContainer>
+            <!-- Aurora's Song Start - Tags -->
+            <BoxContainer Name="TagsContainer" HorizontalExpand="True">
+                <Collapsible>
+                    <CollapsibleHeading Title="{Loc 'guidebook-reagent-tags-header'}"/>
+                    <CollapsibleBody>
+                        <BoxContainer Name="TagsDescriptionContainer"
+                                      Orientation="Vertical"
+                                      Margin="10 0 10 0"
+                                      HorizontalExpand="True" />
+                    </CollapsibleBody>
+                </Collapsible>
+            </BoxContainer>
+            <!-- Aurora's Song End - Tags -->
             <BoxContainer Margin="10 5 10 10" HorizontalExpand="True">
                 <!-- The troublemaker !-->
                 <RichTextLabel Name="ReagentDescription" HorizontalAlignment="Left"/>

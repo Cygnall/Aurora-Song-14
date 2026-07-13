@@ -95,7 +95,7 @@
 
 - type: npcFaction
   id: ContrabandClothing
-  defaultHostile: true
+#  defaultHostile: true | Aurora Song: Stop Debranded gear from making you hostile to all factions.
 
 - type: npcFaction
   id: ContrabandDetection

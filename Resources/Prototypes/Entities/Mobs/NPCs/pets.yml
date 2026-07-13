@@ -680,6 +680,7 @@
     requiredTriggeredSpeed: 1
   - type: TriggerOnStepTrigger
   - type: GibOnTrigger
+    deleteOrgans: true # Aurora's Song - Hamlet shouldn't drop organs
   - type: EmitSoundOnTrigger
     sound:
       path: "/Audio/Animals/mouse_squeak.ogg"

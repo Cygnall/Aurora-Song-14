@@ -1,0 +1,9 @@
+- type: traitCategory
+  id: BloodSwapTraits
+  name: trait-category-blood-swap
+  maxTraitPoints: 1
+
+- type: traitCategory
+  id: IPCSpeechSynth
+  name: trait-category-synthesizer
+  maxTraitPoints: 1

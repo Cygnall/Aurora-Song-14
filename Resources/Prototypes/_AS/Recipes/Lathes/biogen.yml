@@ -1,0 +1,85 @@
+
+#region Materials/Tools
+
+- type: latheRecipe
+  id: ASBioGenMeatSheet
+  result: MaterialSheetMeat1
+  parent: BaseMaterialsNoDiscountRecipe
+  materials:
+    Biomass: 10
+
+- type: latheRecipe
+  id: ASBioGenChitinPlate
+  result: MaterialSheetChitin1
+  parent: BaseMaterialsNoDiscountRecipe
+  materials:
+    Biomass: 10
+
+#region Cubes
+
+- type: latheRecipe
+  id: ASBioGenTreeCube
+  result: TreeCube
+  parent: BaseCubeRecipe
+  materials:
+    Biomass: 100
+
+- type: latheRecipe
+  id: ASBioGenTreeSnowyCube
+  result: TreeCubeSnowy
+  parent: BaseCubeRecipe
+  materials:
+    Biomass: 100
+
+- type: latheRecipe
+  id: ASBioGenTreeConiferCube
+  result: TreeCubeConifer
+  parent: BaseCubeRecipe
+  materials:
+    Biomass: 100
+
+- type: latheRecipe
+  id: ASBioGenTreeLargeCube
+  result: TreeCubeLarge
+  parent: BaseCubeRecipe
+  materials:
+    Biomass: 300
+
+- type: latheRecipe
+  id: ASBioGenTreeShadowCube
+  result: TreeCubeShadow
+  parent: BaseCubeRecipe
+  materials:
+    Biomass: 100
+    Plasma: 1000
+
+- type: latheRecipe
+  id: ASBioGenTreeLightCube
+  result: TreeCubeLight
+  parent: BaseCubeRecipe
+  materials:
+    Biomass: 100
+    Plasma: 1000
+
+- type: latheRecipe
+  id: ASBioGenPompomCube
+  result: PompomCube
+  parent: BaseCubeRecipe
+
+# region Seeds
+
+- type: latheRecipe
+  id: ASBioGenPomegranateSeeds
+  parent: BioGenSeedsRecipe
+  result: PomegranateSeeds
+  icon:
+    sprite: Objects/Specific/Hydroponics/pomegranate.rsi
+    state: seed
+
+- type: latheRecipe
+  id: ASBioGenPompomBushSeeds
+  parent: BioGenSeedsRecipe
+  result: PompomBushSeeds
+  icon:
+    sprite: _Impstation/Objects/Specific/Hydroponics/pompombush.rsi
+    state: seed

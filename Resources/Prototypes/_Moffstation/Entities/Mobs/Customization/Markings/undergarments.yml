@@ -1,8 +1,7 @@
 - type: marking
   id: UndergarmentBottomBoxersAvali
   bodyPart: UndergarmentBottom
-  markingCategory: UndergarmentBottom
-  speciesRestriction: [Avali]
+  groupWhitelist: [Avali]
   coloring:
     default:
       type: !type:SimpleColoring
@@ -14,8 +13,7 @@
 - type: marking
   id: UndergarmentBottomBriefsAvali
   bodyPart: UndergarmentBottom
-  markingCategory: UndergarmentBottom
-  speciesRestriction: [Avali]
+  groupWhitelist: [Avali]
   coloring:
     default:
       type: !type:SimpleColoring
@@ -27,8 +25,7 @@
 - type: marking
   id: UndergarmentBottomSatinAvali
   bodyPart: UndergarmentBottom
-  markingCategory: UndergarmentBottom
-  speciesRestriction: [Avali]
+  groupWhitelist: [Avali]
   coloring:
     default:
       type: !type:SimpleColoring
@@ -40,8 +37,7 @@
 - type: marking
   id: UndergarmentTopTanktopAvali
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Avali]
+  groupWhitelist: [Avali]
   coloring:
     default:
       type: !type:SimpleColoring
@@ -53,8 +49,7 @@
 - type: marking
   id: UndergarmentTopSportsbraAvali
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Avali]
+  groupWhitelist: [Avali]
   coloring:
     default:
       type: !type:SimpleColoring
@@ -66,8 +61,7 @@
 - type: marking
   id: UndergarmentTopBinderAvali
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Avali]
+  groupWhitelist: [Avali]
   coloring:
     default:
       type: !type:SimpleColoring
@@ -79,8 +73,7 @@
 - type: marking
   id: UndergarmentTopBraAvali
   bodyPart: UndergarmentTop
-  markingCategory: UndergarmentTop
-  speciesRestriction: [Avali]
+  groupWhitelist: [Avali]
   coloring:
     default:
       type: !type:SimpleColoring

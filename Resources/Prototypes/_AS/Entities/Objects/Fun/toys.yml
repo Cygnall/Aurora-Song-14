@@ -1,11 +1,59 @@
 - type: entity
   parent: BasePlushieCat
-  id: ShanaPlushie
-  name: familiar white cat plushie
+  id: PlushieShana
+  name: familiar white catwolf plushie
+  description: Looks tired. Might bite you. Smells like vanilla.
   components:
   - type: Sprite
-    sprite: _AS/Objects/Fun/staffplushie.rsi
+    sprite: _AS/Objects/Fun/customplushie.rsi
     state: shanamctavish
+  - type: DatasetVocalizer
+    dataset: PlushieShanaTalk
+  - type: Vocalizer
+    minVocalizeInterval: 12m
+    maxVocalizeInterval: 14m
+    hideChat: true
   - type: FoodSequenceElement
     entries:
       CottonBurger: PlushieCatWhite
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: shana-inhand-left
+      right:
+      - state: shana-inhand-right
+
+
+
+
+
+- type: entity
+  parent: PlushieCustomEix
+  id: PlushieEix
+  name: familiar frilled lizard plushie
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Fun/customplushie.rsi
+    state: eixfrilledlizard
+  - type: DatasetVocalizer
+    dataset: PlushieCustomEixTalk
+  - type: Vocalizer
+    minVocalizeInterval: 12m
+    maxVocalizeInterval: 14m
+    hideChat: true
+
+- type: entity
+  parent: PlushieCustomNeem
+  id: PlushieNeem
+  name: familiar green kobold plushie
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Fun/customplushie.rsi
+    state: neemgreenkobold
+  - type: DatasetVocalizer
+    dataset: PlushieCustomneemTalk
+  - type: Vocalizer
+    minVocalizeInterval: 12m
+    maxVocalizeInterval: 14m
+    hideChat: true
+

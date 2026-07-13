@@ -124,8 +124,9 @@ public enum QuickDialogEntryType
     /// Any floating point value.
     /// </summary>
     Float,
+    // Aurora's Song - ShortText length 100 > 200
     /// <summary>
-    /// Maximum of 100 characters string.
+    /// Maximum of 200 characters string.
     /// </summary>
     ShortText,
     /// <summary>

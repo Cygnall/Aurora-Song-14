@@ -108,10 +108,9 @@
     East: /Textures/Tiles/Planet/Snow/snow_double_edge_east.png
     North: /Textures/Tiles/Planet/Snow/snow_double_edge_north.png
     West: /Textures/Tiles/Planet/Snow/snow_double_edge_west.png
-  baseTurf: FloorDirt
+  baseTurf: FloorDirt # Frontier
   itemDrop: FloorTileItemSnow # Delta V
   deconstructTools: [ Digging ] # Frontier
-  isSubfloor: true
   footstepSounds:
     collection: FootstepSnow
 

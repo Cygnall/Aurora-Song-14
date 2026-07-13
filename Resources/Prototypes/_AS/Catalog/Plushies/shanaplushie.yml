@@ -1,0 +1,5 @@
+﻿- type: localizedDataset
+  id: PlushieShanaTalk
+  values:
+    prefix: random-talk-shana-
+    count: 4

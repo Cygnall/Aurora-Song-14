@@ -133,3 +133,13 @@
   components:
   - type: Sprite
     state: interrogation
+
+- type: entity
+  parent: ASBaseSign
+  id: ASSignIHS
+  name: "IHS Sign"
+  description: "A seal of quality, assuring the viewer that this shuttle meets all known Iverian standards."
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Wallmounts/signs.rsi
+    state: ihs_sign

@@ -1,0 +1,66 @@
+# Free
+# 1 cost
+# 2 cost
+
+- type: trait
+  id: Archaic
+  name: trait-archaic-name
+  description: trait-archaic-desc
+  category: SpeechTraits
+  cost: 2
+  components:
+  - type: ArchaicAccent
+
+- type: trait
+  id: MilbratAccent
+  name: trait-milbrat-name
+  description: trait-milbrat-desc
+  category: SpeechTraits
+  cost: 2
+  components:
+  - type: MilbratAccent
+
+- type: trait
+  id: IPCSiliconSynthesizer
+  replaceComponents: true
+  name: trait-silicon-synth-name
+  description: trait-silicon-synth-desc
+  category: IPCSpeechSynth
+  speciesWhitelist: [IPC]
+  cost: 1
+  components:
+    - type: Speech
+      speechSounds: Borg
+      speechVerb: Robotic
+
+- type: trait
+  id: IPCSyndieSiliconSynthesizer
+  replaceComponents: true
+  name: trait-syndie-synth-name
+  description: trait-syndie-synth-desc
+  category: IPCSpeechSynth
+  speciesWhitelist: [IPC]
+  cost: 1
+  components:
+    - type: Speech
+      speechSounds: SyndieBorg
+      speechVerb: Robotic
+    - type: Vocal
+      sounds:
+        Unsexed: UnisexSiliconSyndicate
+
+- type: trait
+  id: IPCXenoborgSynthesizer
+  replaceComponents: true
+  name: trait-xeno-synth-name
+  description: trait-xeno-synth-desc
+  category: IPCSpeechSynth
+  speciesWhitelist: [IPC]
+  cost: 1
+  components:
+    - type: Speech
+      speechSounds: Xenoborg
+      speechVerb: Robotic
+    - type: Vocal
+      sounds:
+        Unsexed: UnisexSiliconXenoborg

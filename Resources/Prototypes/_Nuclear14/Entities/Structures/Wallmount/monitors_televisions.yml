@@ -1,0 +1,54 @@
+# Aurora's Song | replaced name and description with locale strings
+- type: entity
+  parent: BaseComputer
+  id: N14ComputerVDU
+  components:
+  - type: Sprite
+    drawdepth: Overdoors
+    sprite: _Nuclear14/Structures/Wallmounts/vdu.rsi
+    layers:
+      - map: ["computerLayerBody"]
+        state: VDU
+      - map: ["computerLayerKeyboard"]
+        state: keyboard
+      - map: ["computerLayerScreen"]
+        state: screen
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.20,-0.10,0.25,0.35"
+        density: 250
+        mask:
+          - FullTileMask
+        layer:
+          - WallLayer
+  - type: WallMount
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 200
+      behaviors: #excess damage, don't spawn entities.
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 1
+            max: 1
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Transform
+    anchored: true
+
+# See terminals for more wall mounted versions

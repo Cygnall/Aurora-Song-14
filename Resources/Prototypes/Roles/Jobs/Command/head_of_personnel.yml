@@ -23,7 +23,6 @@
   startingGear: HoPGear
   icon: "JobIconHeadOfPersonnel"
   supervisors: job-supervisors-captain
-  canBeAntag: false
   # Frontier: default access
   # access:
   # - Command
@@ -52,6 +51,8 @@
   # - Cargo
   # - Atmospherics
   # - Medical
+  # - GenpopEnter
+  # - GenpopLeave
   accessGroups: # Frontier
   - GeneralAccess # Frontier
   # End Frontier

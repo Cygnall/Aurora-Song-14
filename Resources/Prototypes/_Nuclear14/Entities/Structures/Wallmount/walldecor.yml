@@ -1,0 +1,159 @@
+# Aurora's Song | replaced names and descriptions with locale strings
+# see adverts for sign base
+- type: entity
+  parent: BaseSign
+  id: N14SignBase # for non directional signs otherwise remove snapCardinals: true
+  abstract: true
+  components:
+  - type: WallMount
+    arc: 360
+  - type: Sprite
+    drawdepth: Overdoors
+    sprite: _Nuclear14/Structures/Wallmounts/adverts.rsi
+    snapCardinals: true # one direction
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+# Flags
+# Aurora's Song | All flags commented out as they are either fallout references, or modern states
+
+#- type: entity
+#  parent: N14SignBase
+#  id: N14FlagWallUS
+#  suffix: US
+#  components:
+#  - type: Sprite
+#    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+#    state: flag_us
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallChina
+#  suffix: China
+#  components:
+#  - type: Sprite
+#    state: flag_china
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallCalifornia
+#  suffix: California
+#  components:
+#  - type: Sprite
+#    state: flag_cali
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallArizona
+#  suffix: Arizona
+#  components:
+#  - type: Sprite
+#    state: flag_arizona
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallEnclave
+#  suffix: Enclave
+#  components:
+#  - type: Sprite
+#    state: flag_enclave
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallNCR
+#  suffix: NCR
+#  components:
+#  - type: Sprite
+#    state: flag_ncr
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallLegion
+#  suffix: Legion
+#  components:
+#  - type: Sprite
+#    state: flag_legion
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallRangers
+#  suffix: Rangers
+#  components:
+#  - type: Sprite
+#    state: flag_rangers
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallWesternBrotherhood
+#  suffix: Midwestern BOS
+#  components:
+#  - type: Sprite
+#    state: flag_westbos
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallWashingtonBrotherhood # Actually Eastern but repurposed.
+#  suffix: Washington BOS
+#  components:
+#  - type: Sprite
+#    state: flag_eastbos
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallColorado
+#  suffix: colorado
+#  components:
+#  - type: Sprite
+#    state: flag_colorado
+
+#- type: entity
+#  parent: N14FlagWallUS
+#  id: N14FlagWallDenver
+#  suffix: denver
+#  components:
+#  - type: Sprite
+#    state: flag_denver
+
+# Decor
+- type: entity
+  parent: N14SignBase
+  id: N14WallDecorClock
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Wallmounts/walldecor.rsi
+    snapCardinals: false
+    state: clock
+
+- type: entity
+  parent: N14WallDecorClock
+  id: N14WallDecorCalendar
+  components:
+  - type: Sprite
+    state: calendar
+
+- type: entity
+  parent: N14WallDecorClock
+  id: N14WallDecorCalendar1
+  components:
+  - type: Sprite
+    state: calendar_blank
+
+- type: entity
+  parent: N14WallDecorClock
+  id: N14WallDecorCross
+  components:
+  - type: Sprite
+    state: cross
+
+- type: entity
+  parent: N14WallDecorClock
+  id: N14WallDecorWallscreen
+  components:
+  - type: Sprite
+    state: wallscreen

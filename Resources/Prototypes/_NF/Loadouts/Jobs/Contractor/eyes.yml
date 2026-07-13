@@ -23,6 +23,46 @@
   equipment:
     eyes: ClothingEyesEyepatch
 
+#Aurora's Song - Colorful glasses start
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulPink
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulPink
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulRed
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulRed
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulYellow
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulYellow
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulGreen
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulGreen
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulBlue
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulBlue
+
+- type: loadout
+  id: ContractorClothingEyesGlassesColorfulPurple
+  price: 200
+  equipment:
+    eyes: ClothingEyesGlassesColorfulPurple
+
+#Aurora's Song - Colorful glasses end
+
 #Aurora Song- Mantis drip merge start
 - type: loadout
   id: ContractorClothingEyesGlassesMantis
@@ -42,6 +82,14 @@
   equipment: #I know it's confusing, but this is the blindfold, not the veil, which is a mask.
     eyes: ClothingEyesGlassesEpistemicsMantisVeil
 # Aurora Song- Mantis drip merge end
+
+# Aurora Song - Chaplain drip start
+- type: loadout
+  id: ContractorClothingEyesChaplainBlindfold
+  price: 500
+  equipment:
+    eyes: ClothingEyesChaplainBlindfold
+# Aurora Song - Chaplain drip end
 
 #T1
 - type: loadout

@@ -6,7 +6,7 @@ on:
 
 env:
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-  CHANGELOG_DIR: Resources/Changelog/Changelog.yml # Frontier: Changelog.yml<Frontier.yml Aurora Song: Frontier.yml>Changelog.yml
+  CHANGELOG_DIR: Resources/Changelog/Aurora.yml # Frontier: Changelog.yml<Frontier.yml Aurora Song: Frontier.yml>Aurora.yml
   PR_NUMBER: ${{ github.event.number }}
 
 jobs:

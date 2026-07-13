@@ -3,10 +3,7 @@ using Robust.Shared.GameStates;
 namespace Content.Shared._AS.Traits;
 
 /// <summary>
-/// Set player blood to Oxidant and chagnes their typing indicator to "Robot"
-/// Used for Replicant trait.
+/// Used for Replicant trait. Used with <see cref="ReplicantSystem"/> to change the player's typing indicator.
 /// </summary>
 [RegisterComponent, NetworkedComponent, Access(typeof(ReplicantSystem))]
-public sealed partial class ReplicantComponent : Component
-{
-}
+public sealed partial class ReplicantComponent : Component { }

@@ -1,5 +1,5 @@
 <Control xmlns="https://spacestation14.io">
-    <PanelContainer Name="BountyPanel" Margin="5" StyleClasses="AngleRect" HorizontalExpand="True">
+    <PanelContainer Name="BountyPanel" Margin="5" StyleClasses="BackgroundPanel" HorizontalExpand="True">
         <BoxContainer Orientation="Vertical" HorizontalExpand="True">
             <BoxContainer Orientation="Horizontal">
                 <Label Name="BountyName" HorizontalExpand="True" />

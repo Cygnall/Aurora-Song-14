@@ -125,3 +125,17 @@
   tab: Safety
   group: Antagonists
   styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostilePunk
+  text: phrase-hostile-punk
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed
+
+- type: quickPhrase
+  id: HostileExplorer
+  text: phrase-hostile-explorer
+  tab: Safety
+  group: Antagonists
+  styleClass: ButtonColorRed

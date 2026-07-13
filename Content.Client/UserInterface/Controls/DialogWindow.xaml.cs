@@ -110,7 +110,7 @@ public sealed partial class DialogWindow : FancyWindow
     protected override void Opened()
     {
         base.Opened();
-        
+
         // Grab keyboard focus for the first dialog entry
         _promptLines[0].Item2.GrabKeyboardFocus();
     }
@@ -143,7 +143,7 @@ public sealed partial class DialogWindow : FancyWindow
 
     private bool VerifyShortText(string input)
     {
-        return input.Length <= 100;
+        return input.Length <= 200; // Aurora's Song - 100 > 200 - Allows longer prayers
     }
 
     private bool VerifyLongText(string input)

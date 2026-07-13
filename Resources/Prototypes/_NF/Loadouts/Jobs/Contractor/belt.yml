@@ -18,6 +18,14 @@
     belt: ClothingBeltMantisOrnate
 # Aurora Song - Mantis drip merge end
 
+# Aurora Song - Chaplain drip start
+- type: loadout
+  id: ContractorClothingBeltDragon
+  price: 500
+  equipment:
+    belt: ClothingBeltChaplainDragon
+# Aurora Song - Chaplain drip end
+
 - type: loadout
   id: ContractorClothingBeltPlant
   price: 500

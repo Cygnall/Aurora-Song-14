@@ -1,0 +1,19 @@
+- type: quickPhrase
+  id: APhrase
+  parent: BaseNumberPhrase
+  text: phrase-a
+
+- type: quickPhrase
+  id: BPhrase
+  parent: BaseNumberPhrase
+  text: phrase-b
+
+- type: quickPhrase
+  id: CPhrase
+  parent: BaseNumberPhrase
+  text: phrase-c
+
+- type: quickPhrase
+  id: DPhrase
+  parent: BaseNumberPhrase
+  text: phrase-d

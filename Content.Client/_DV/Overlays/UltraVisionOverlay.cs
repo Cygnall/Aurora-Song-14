@@ -9,10 +9,11 @@ namespace Content.Client._DV.Overlays;
 
 public sealed partial class UltraVisionOverlay : Overlay
 {
-    [Dependency] private readonly IPrototypeManager _prototypeManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
     [Dependency] IEntityManager _entityManager = default!;
 
+    private static readonly ProtoId<ShaderPrototype> UltraVision = "UltraVision"; // Aurora's Song
 
     public override bool RequestScreenTexture => true;
     public override OverlaySpace Space => OverlaySpace.WorldSpace;
@@ -21,7 +22,7 @@ public sealed partial class UltraVisionOverlay : Overlay
     public UltraVisionOverlay()
     {
         IoCManager.InjectDependencies(this);
-        _ultraVisionShader = _prototypeManager.Index<ShaderPrototype>("UltraVision").Instance().Duplicate();
+        _ultraVisionShader = _prototypeManager.Index<ShaderPrototype>(UltraVision).Instance().Duplicate(); // Aurora's Song - Make it a variable
     }
 
     protected override bool BeforeDraw(in OverlayDrawArgs args)

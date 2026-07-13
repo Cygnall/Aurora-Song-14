@@ -192,6 +192,10 @@
       Plastic: 100
   - type: StaticPrice
     price: 15 # increases in price after decomposed into raw materials # Frontier: 30<12.5, 12.5<15 - TODO: material value rework
+  - type: HideLayerClothing #imp PUT YOUR FUCKING NOSE AWAY.
+    layers:
+      Snout: Mask
+    hideOnToggle: true
 
 - type: entity
   parent: ClothingMaskBase
@@ -745,9 +749,6 @@
     sprite: Clothing/Mask/italian_moustache.rsi
   - type: Item
     storedRotation: -90
-  - type: AddAccentClothing
-    accent: ReplacementAccent
-    replacement: italian
 
 - type: entity
   parent: ClothingMaskBase

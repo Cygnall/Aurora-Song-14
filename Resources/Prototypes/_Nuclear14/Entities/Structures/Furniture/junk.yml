@@ -1,0 +1,216 @@
+# Aurora's Song | Replaced names and descriptions with locale strings
+- type: entity
+  id: N14JunkWoodBase
+  abstract: true
+  placement:
+    mode: SnapgridCenter
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Furniture/junk.rsi
+    snapCardinals: true
+    netsync: false
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: WoodDestroy
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          MaterialWoodPlank:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Tag
+    tags:
+    - Wooden
+  - type: Transform
+    anchored: true
+  - type: Physics
+    bodyType: Static
+  - type: Anchorable
+  - type: Pullable
+  - type: InteractionOutline
+  - type: Clickable
+# No fixture on this base, inherit from further down for fixture
+
+- type: entity
+  parent: N14JunkWoodBase
+  id: N14JunkMetalBase
+  abstract: true
+  components:
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Physics
+    canCollide: False
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 125
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          SheetSteel1:
+            min: 0
+            max: 1
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+  - type: Tag
+    tags:
+    - Metal
+
+# Wood Junk
+- type: entity
+  parent: N14JunkWoodBase
+  id: N14JunkDresser
+  components:
+  - type: Sprite
+    state: junk_dresser
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+
+- type: entity
+  parent: N14JunkDresser
+  id: N14JunkCabinet
+  components:
+  - type: Sprite
+    state: junk_cabinet
+
+- type: entity
+  parent: N14JunkDresser
+  id: N14JunkTable
+  components:
+  - type: Sprite
+    state: junk_table
+
+# Metal Junk
+- type: entity
+  parent: N14JunkMetalBase
+  id: N14JunkMachine
+  components:
+  - type: Sprite
+    state: junk_machine
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 100
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+            bounds: "-0.45,-0.45,0.45,0.45"
+        density: 60
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+
+- type: entity
+  parent: N14JunkMachine
+  id: N14JunkMicrowave
+  components:
+  - type: Sprite
+    state: junk_micro
+
+- type: entity
+  parent: N14JunkMachine
+  id: N14JunkJukebox
+  components:
+  - type: Sprite
+    state: junk_jukebox
+
+- type: entity
+  parent: N14JunkMetalBase
+  id: N14JunkBed1
+  components:
+  - type: Sprite
+    state: junk_bed1
+
+- type: entity
+  parent: N14JunkMetalBase
+  id: N14JunkBed2
+  components:
+  - type: Sprite
+    state: junk_bed2
+
+- type: entity
+  parent: N14JunkMachine
+  id: N14JunkTV
+  components:
+  - type: Sprite
+    state: junk_tv
+
+- type: entity
+  parent: N14JunkMachine
+  id: N14JunkArcade
+  components:
+  - type: Sprite
+    state: junk_arcade
+
+- type: entity
+  parent: N14JunkMetalBase
+  id: N14JunkUrinal
+  components:
+  - type: Sprite
+    state: junk_urinal
+
+- type: entity
+  parent: Mirror
+  id: N14JunkMirror
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Furniture/junk.rsi
+    state: junk_mirror
+    drawdepth: Overdoors
+
+- type: entity
+  parent: N14JunkMetalBase
+  id: N14JunkClock
+  components:
+  - type: Sprite
+    state: junk_clock
+    drawdepth: Overdoors
+  - type: WallMount

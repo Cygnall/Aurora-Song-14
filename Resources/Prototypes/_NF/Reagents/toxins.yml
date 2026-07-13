@@ -7,6 +7,7 @@
   physicalDesc: reagent-physical-desc-translucent
   flavor: antiseptic
   color: "#457c7d"
+  tags: [ Toxin ] # Aurora's Song | Toxin tag required for updated metabolisers
   recognizable: true
   boilingPoint: 100.0
   meltingPoint: 0.0
@@ -18,7 +19,7 @@
   slipData:
     requiredSlipSpeed: 3.5
   metabolisms:
-    Drink:
+    Digestion: # Aurora's Song - Drink>Digestion
       effects:
       # Shouldn't drink this.
       - !type:SatiateThirst
@@ -36,13 +37,14 @@
   physicalDesc: reagent-physical-desc-strong-smelling
   flavor: bitter
   color: "#6c805c"
+  tags: [ Toxin ] # Aurora's Song | Toxin tag required for updated metabolisers
   plantMetabolism:
   - !type:PlantAdjustToxins
     amount: 10
   - !type:PlantAdjustHealth
     amount: -5
   metabolisms:
-    Poison:
+    Bloodstream: # Aurora's Song - Poison>Bloodstream
       metabolismRate : 0.05
       effects:
       - !type:SatiateThirst

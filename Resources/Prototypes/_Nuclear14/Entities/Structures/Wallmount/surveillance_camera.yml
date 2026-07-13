@@ -1,0 +1,14 @@
+# Aurora's Song | replaced name and description with locale strings
+- type: entity
+  parent: SurveillanceCameraBase
+  id: N14SurveillanceCameraBrotherhoodWashington
+  suffix: BrotherhoodWashington
+  components:
+  - type: DeviceNetwork
+    deviceNetId: Wired
+    receiveFrequencyId: SurveillanceCamera
+    transmitFrequencyId: SurveillanceCameraBrotherhoodWashington
+  - type: SurveillanceCamera
+    networkSet: true
+  - type: Sprite
+    drawdepth: Overdoors

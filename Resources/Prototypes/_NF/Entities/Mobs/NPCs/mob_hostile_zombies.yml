@@ -1,23 +1,26 @@
 # region base
 - type: entity
+  parent: [ MobPassiveRegenStrong ] # Aurora's Song - Use inheritance more wisely
   id: MobPassiveRegenZombie
   abstract: true
   components:
   - type: PassiveDamage
-    allowedStates:
-    - Alive
-    - Critical
-    - Dead
-    damageCap: 9999
     damage:
-      groups:
-        Brute: -0.4
-        Burn: -0.2
-        Airloss: -1
+      types: # Aurora's Song - Convert from groups to types
+        Blunt: -0.14
+        Slash: -0.13
+        Piercing: -0.13
+        Heat: -0.05
+        Shock: -0.05
+        Cold: -0.05
+        Caustic: -0.05
+        Asphyxiation: -0.5
+        Bloodloss: -0.5
 
 - type: entity
   abstract: true
   parent:
+  - SolutionHypospraySmall # Aurora's Song - Convert to solution
   - MobMovementSpeedModifierEVAMelee
   - MobStaminaBoss
   - MobNonHumanHostileBase
@@ -54,19 +57,14 @@
         Structural: 45
     soundHit:
       path: /Audio/Effects/bite.ogg
-  - type: SolutionContainerManager
-    solutions:
-      melee:
-        maxVol: 20
-  - type: SolutionRegeneration
-    solution: melee
+  - type: SolutionRegeneration # Aurora's Song - Removed solution property
     generated:
       reagents:
       - ReagentId: NFZombieBiteToxin # ~3-4 bites - slow down, ~8-9 bites - poison damage
         Quantity: 1
   - type: MeleeChemicalInjector
     transferAmount: 1
-    solution: melee
+    solution: hypospray # Aurora's Song - melee>hypospray
   - type: Butcherable
     spawned:
     - id: NFSpawnZombieLoot
@@ -473,8 +471,7 @@
         Cold: 4
         Slash: 6
         Structural: 45
-  - type: SolutionRegeneration
-    solution: melee
+  - type: SolutionRegeneration # Aurora's Song - Removed solution property
     generated:
       reagents:
       - ReagentId: Fresium
@@ -673,7 +670,6 @@
       reagents:
       - ReagentId: WeldingFuel
         Quantity: 100
-  - type: Timer
   - type: TimedSpawner
     prototypes:
     - NFZombiePileLoophole
@@ -748,8 +744,9 @@
     layers:
     - state: spawner
   - type: Damageable
-    damageContainer: Biological
     damageModifierSet: Zombie
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Biological
   - type: Destructible
     thresholds:
     - trigger:

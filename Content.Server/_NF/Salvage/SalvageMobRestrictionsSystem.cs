@@ -1,10 +1,9 @@
-using Content.Shared.Body.Components;
-using Content.Server.Body.Systems;
 using Content.Server.Explosion.EntitySystems;
 using Content.Shared.Mobs;
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Managers;
 using Content.Server.Popups;
+using Content.Shared.Body; // Aurora's Song
 using Content.Shared.Database;
 using Content.Shared.Gibbing;
 using Content.Shared.Popups;
@@ -12,12 +11,12 @@ using Robust.Shared.Player;
 
 namespace Content.Server._NF.Salvage;
 
-public sealed class SalvageMobRestrictionsSystem : EntitySystem
+public sealed partial class SalvageMobRestrictionsSystem : EntitySystem
 {
-    [Dependency] private readonly GibbingSystem _gibbing = default!;
-    [Dependency] private readonly ExplosionSystem _explosion = default!;
-    [Dependency] private readonly IAdminLogManager _adminLogger = default!;
-    [Dependency] private readonly PopupSystem _popupSystem = default!;
+    [Dependency] private GibbingSystem _gibbing = default!;
+    [Dependency] private ExplosionSystem _explosion = default!;
+    [Dependency] private IAdminLogManager _adminLogger = default!;
+    [Dependency] private PopupSystem _popupSystem = default!;
 
     public override void Initialize()
     {
@@ -33,7 +32,7 @@ public sealed class SalvageMobRestrictionsSystem : EntitySystem
     private void OnInit(EntityUid uid, NFSalvageMobRestrictionsComponent component, ComponentInit args)
     {
         var gridUid = Transform(uid).ParentUid;
-        if (!EntityManager.EntityExists(gridUid))
+        if (!Exists(gridUid))
         {
             // Give up, we were spawned improperly
             return;
@@ -112,7 +111,7 @@ public sealed class SalvageMobRestrictionsSystem : EntitySystem
             EntityManager.AddComponents(uid, component.AddComponentsReturnGrid);
             EntityManager.RemoveComponents(uid, component.RemoveComponentsReturnGrid);
 
-            if (!EntityManager.TryGetComponent(uid, out ActorComponent? actor))
+            if (!TryComp(uid, out ActorComponent? actor))
                 return;
 
             if (actor.PlayerSession.AttachedEntity == null)
@@ -126,7 +125,7 @@ public sealed class SalvageMobRestrictionsSystem : EntitySystem
             EntityManager.AddComponents(uid, component.AddComponentsLeaveGrid);
             EntityManager.RemoveComponents(uid, component.RemoveComponentsLeaveGrid);
 
-            if (!EntityManager.TryGetComponent(uid, out ActorComponent? actor))
+            if (!TryComp(uid, out ActorComponent? actor))
                 return;
 
             if (actor.PlayerSession.AttachedEntity == null)

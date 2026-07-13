@@ -26,11 +26,11 @@
     areaInsert: true
     maxItemSize: Small
     grid:
-    - 0,0,3,1
+    - 0,0,3,2 # Aurora's Song 0,0,3,1 > 0,0,3,2
     whitelist:
       components:
       - Cash
-      - Paper
+      # - Paper # Aurora's Song
       - NFCoin
       - NFShipyardVoucher
       - Card # single cards

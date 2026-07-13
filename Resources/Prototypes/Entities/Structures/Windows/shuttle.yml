@@ -12,8 +12,9 @@
     fuelCost: 15
     doAfterDelay: 3
   - type: Damageable
-    damageContainer: StructuralInorganic
     damageModifierSet: RGlass
+  - type: Injurable
+    damageContainer: StructuralInorganic
   - type: Destructible
     thresholds:
     - trigger:
@@ -98,3 +99,8 @@
   - type: DamageVisuals
     damageOverlay:
       sprite: Structures/Windows/cracks_diagonal.rsi
+# Aurora's Song Start
+  - type: Construction
+    graph: ASWindowDiagonal
+    node: shuttleWindowDiagonal
+# Aurora's Song End

@@ -36,7 +36,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingShellguardLArm
   bodyPart: LArm
-  markingCategory: Arms
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/shellguard/shellguard_main.rsi
     state: l_arm-1
@@ -48,7 +47,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingShellguardLHand
   bodyPart: LHand
-  markingCategory: Arms
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/shellguard/shellguard_main.rsi
     state: l_hand-1
@@ -60,7 +58,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingShellguardLLeg
   bodyPart: LLeg
-  markingCategory: Legs
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/shellguard/shellguard_main.rsi
     state: l_leg-1
@@ -73,7 +70,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingShellguardLFoot
   bodyPart: LFoot
-  markingCategory: Legs
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/shellguard/shellguard_main.rsi
     state: l_foot-1
@@ -87,7 +83,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingShellguardRArm
   bodyPart: RArm
-  markingCategory: Arms
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/shellguard/shellguard_main.rsi
     state: r_arm-1
@@ -100,7 +95,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingShellguardRHand
   bodyPart: RHand
-  markingCategory: Arms
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/shellguard/shellguard_main.rsi
     state: r_hand-1
@@ -112,7 +106,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingShellguardRLeg
   bodyPart: RLeg
-  markingCategory: Legs
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/shellguard/shellguard_main.rsi
     state: r_leg-1
@@ -125,7 +118,6 @@
   - BaseSpeciesIPC
   id: CyberLimbsMarkingShellguardRFoot
   bodyPart: RFoot
-  markingCategory: Legs
   sprites:
   - sprite: _EE/Mobs/Species/Cybernetics/shellguard/shellguard_main.rsi
     state: r_foot-1

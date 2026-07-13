@@ -1,9 +1,7 @@
 - type: marking
   id: ArmProstheticLeft
   bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   coloring:
     default:
       type:
@@ -16,19 +14,15 @@
 - type: marking
   id: ArmTwistingLeft
   bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: arm_l_twisting
 
 - type: marking
   id: ArmProstheticRight
-  bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  bodyPart: RArm # Aurora's Song LArm>RArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   coloring:
     default:
       type:
@@ -40,10 +34,8 @@
 
 - type: marking
   id: ArmTwistingRight
-  bodyPart: LArm
-  markingCategory: Arms
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  bodyPart: RArm # Aurora's Song LArm>RArm
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: arm_r_twisting
@@ -51,9 +43,7 @@
 - type: marking
   id: ChestBackstabbed
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: chest_backstabbed
@@ -61,9 +51,7 @@
 - type: marking
   id: ChestTwistingLeft
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: chest_l_twisting
@@ -71,9 +59,7 @@
 - type: marking
   id: ChestTwistingRight
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: chest_r_twisting
@@ -81,9 +67,7 @@
 - type: marking
   id: ChestStar
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: chest_star
@@ -91,9 +75,7 @@
 - type: marking
   id: FootProstheticLeft
   bodyPart: LFoot
-  markingCategory: Legs
-  speciesRestriction: [Human, Dwarf, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   coloring:
     default:
       type:
@@ -106,9 +88,7 @@
 - type: marking
   id: FootProstheticRight
   bodyPart: RFoot
-  markingCategory: Legs
-  speciesRestriction: [Human, Dwarf, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   coloring:
     default:
       type:
@@ -121,9 +101,7 @@
 - type: marking
   id: HandProstheticLeft
   bodyPart: LHand
-  markingCategory: Arms
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   coloring:
     default:
       type:
@@ -136,9 +114,7 @@
 - type: marking
   id: HandTwistingLeft
   bodyPart: LHand
-  markingCategory: Arms
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: hand_l_twisting
@@ -146,9 +122,7 @@
 - type: marking
   id: HandProstheticRight
   bodyPart: RHand
-  markingCategory: Arms
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   coloring:
     default:
       type:
@@ -161,9 +135,7 @@
 - type: marking
   id: HandTwistingRight
   bodyPart: RHand
-  markingCategory: Arms
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: hand_r_twisting
@@ -171,19 +143,16 @@
 - type: marking
   id: SmileScars
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran, Moved slime markings to overlay
-  followSkinColor: false
+  groupWhitelist: [Human, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran, Moved slime markings to overlay
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: head_smile
 
 - type: marking # Aurora's Song - Moved slime's markings to overlay
   id: SlimeSmileScars
-  bodyPart: Head
-  markingCategory: Overlay
-  speciesRestriction: [SlimePerson]
-  followSkinColor: false
+  bodyPart: HeadSide # Aurora's Song Head>HeadSide
+  groupWhitelist: [Slime]
+  forcedColoring: true # Aurora's Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: head_smile
@@ -191,19 +160,16 @@
 - type: marking
   id: HeadTwisting
   bodyPart: Head
-  markingCategory: Head
-  speciesRestriction: [Human, Dwarf, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran, Moved slime markings to overlay
-  followSkinColor: false
+  groupWhitelist: [Human, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran, Moved slime markings to overlay
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: head_twisting
 
 - type: marking # Aurora's Song - Moved slime markings to overlay
   id: HeadSlimeTwisting
-  bodyPart: Head
-  markingCategory: Overlay
-  speciesRestriction: [SlimePerson]
-  followSkinColor: false
+  bodyPart: HeadSide # Aurora's Song Head>HeadSide
+  groupWhitelist: [Slime]
+  forcedColoring: true # Aurora's Song
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: head_twisting
@@ -211,9 +177,7 @@
 - type: marking
   id: LegProstheticLeft
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [Human, Dwarf, SlimePerson, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Slime, Arachnid, Oni, Goblin, Felinid, Vulpkanin, Tajaran] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   coloring:
     default:
       type:
@@ -226,9 +190,7 @@
 - type: marking
   id: LegTwistingLeft
   bodyPart: LLeg
-  markingCategory: Legs
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: leg_l_twisting
@@ -236,9 +198,7 @@
 - type: marking
   id: LegProstheticRight
   bodyPart: RLeg
-  markingCategory: Legs
-  speciesRestriction: [Human, Dwarf, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Slime, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   coloring:
     default:
       type:
@@ -251,9 +211,7 @@
 - type: marking
   id: LegTwistingRight
   bodyPart: RLeg
-  markingCategory: Legs
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: leg_r_twisting
@@ -261,9 +219,7 @@
 - type: marking
   id: TorsoIncision
   bodyPart: Chest
-  markingCategory: Chest
-  speciesRestriction: [Human, Dwarf, Reptilian, SlimePerson, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
-  followSkinColor: false
+  groupWhitelist: [Human, Reptilian, Slime, Arachnid, Oni, Goblin, Felinid] # Frontier: add Oni, Felinid | Aurora's Song - Vulpkanin, Tajaran
   sprites:
   - sprite: _Impstation/Mobs/Customization/scars.rsi
     state: torso_incision

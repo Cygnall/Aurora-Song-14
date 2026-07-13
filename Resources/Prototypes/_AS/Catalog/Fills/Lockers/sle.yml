@@ -22,7 +22,7 @@
 
 - type: entity
   id: ASLockerSLESecurityFilled
-  parent: LockerSecurityFilled
+  parent: ASLockerSLEBadge
   suffix: SLE, Filled
   components:
   - type: EntityTableContainerFill
@@ -34,10 +34,26 @@
   id: FillASLockerSLESecurity
   table: !type:AllSelector
     children:
-    - !type:NestedSelector
-      tableId: FillLockerSecurity
+    - id: FlashlightSeclite
+      prob: 0.8
+    - id: NFWeaponEnergyPistolDisabler
+    - id: ASClothingUniformJumpskirtSLEClassic
+      prob: 0.3
     - id: ASClothingHeadHelmetSLE
     - id: ASClothingOuterArmorSLE
+    - id: ASClothingBeltSLEFilled
+    - id: Flash
+      prob: 0.5
+    - id: ASClothingEyesGlassesSLE
+    - id: ClothingHeadsetSecurity
+    - id: ASClothingHandsGlovesCombatSLEDarkBlue
+    - id: ASClothingShoesBootsSLEDarkBlueFilled
+    - id: WeaponMeleeNeedle
+      prob: 0.6
+    - id: ASHyperlinkBookSpaceLaw # Use this instead of BookSpaceLaw
+      prob: 0.5
+
+    - id: ASHoloprojectorSLE
 
 - type: entity
   id: ASClosetSLEBombFilled

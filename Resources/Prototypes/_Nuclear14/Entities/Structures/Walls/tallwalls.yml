@@ -1,0 +1,391 @@
+# Aurora's Song | replaced names with locale strings
+- type: entity
+  parent: BaseWall
+  id: N14BaseWallTall
+  suffix: tall
+  abstract: true
+  components:
+  - type: Sprite
+    drawdepth: Mobs
+  - type: SpriteFade
+  - type: Damageable
+    damageModifierSet: Rock
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14BaseWallTallMetalWeak
+  abstract: true
+  components:
+  - type: Damageable
+    damageModifierSet: PerforatedMetallic
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14BaseWallTallMetal
+  abstract: true
+  components:
+  - type: Damageable
+    damageModifierSet: StructuralMetallic
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14BaseWallTallMetalStrong
+  abstract: true
+  components:
+  - type: Damageable
+    damageModifierSet: StructuralMetallicStrong
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+  - type: RadiationBlocker
+    resistance: 10
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14BaseWallTallWood
+  abstract: true
+  components:
+  - type: Damageable
+    damageModifierSet: Wood
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14WallBrickTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/brick.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/brick.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallbrick
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14WallBrickAltTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/brickalt.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/brickalt.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallbrickalt
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14WallBrickGrayTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/brickgray.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/brickgray.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallbrickgray
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14WallConcreteTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/concrete.rsi
+    drawdepth: Mobs
+  - type: SpriteFade
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/concrete.rsi
+  - type: Damageable
+    damageModifierSet: Rock
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+  - type: IconSmooth
+    key: walls
+    base: tallconcrete
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14WallConcreteAltTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/concretealt.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/concretealt.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallconcretealt
+
+- type: entity
+  parent: N14BaseWallTallMetal
+  id: N14WallMetalTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/metal.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/metal.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallmetal
+
+- type: entity
+  parent: N14BaseWallTallMetal
+  id: N14WallReinfMetalTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/reinfmetal.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/reinfmetal.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallreinfmetal
+
+- type: entity
+  parent: N14BaseWallTall
+  id: N14WallRockTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rock.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rock.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallrock
+  - type: SoundOnGather
+  - type: Gatherable
+    toolWhitelist:
+      tags:
+        - Pickaxe
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+      - trigger:
+          !type:DamageTrigger
+          damage: 150
+        behaviors:
+          - !type:DoActsBehavior
+            acts: ["Destruction"]
+
+- type: entity
+  parent: N14WallRockTall
+  id: N14WallRockDroughtTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rockdrought.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rockdrought.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallrockdrought
+
+- type: entity
+  parent: N14WallRockTall
+  id: N14WallRockMammothTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rockmammoth.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rockmammoth.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallrockmammoth
+
+- type: entity
+  parent: N14BaseWallTallMetalWeak
+  id: N14WallRoughScrapTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/roughscrap.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/roughscrap.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallroughscrap
+
+- type: entity
+  parent: N14BaseWallTallMetal
+  id: N14WallIndustrialRustTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rustindustrial.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rustindustrial.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallrustindustrial
+
+- type: entity
+  parent: N14BaseWallTallMetal
+  id: N14WallMetalRustTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rustmetal.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/rustmetal.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallrustmetal
+
+- type: entity
+  parent: N14BaseWallTallMetalWeak
+  id: N14WallScrapTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/scrap.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/scrap.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallscrap
+
+- type: entity
+  parent: N14BaseWallTallMetalWeak
+  id: N14WallScrapBlueTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/scrapblue.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/scrapblue.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallscrapblue
+
+- type: entity
+  parent: N14BaseWallTallMetalWeak
+  id: N14WallScrapRedTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/scrapred.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/scrapred.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallscrapred
+
+- type: entity
+  parent: N14BaseWallTallMetalWeak
+  id: N14WallScrapWhiteTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/scrapwhite.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/scrapwhite.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallscrapwhite
+
+- type: entity
+  parent: N14BaseWallTallMetal
+  id: N14WallSewerTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/sewer.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/sewer.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallsewer
+
+- type: entity
+  parent: N14BaseWallTallWood
+  id: N14WallSidingTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/siding.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/siding.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallsiding
+
+- type: entity
+  parent: N14BaseWallTallWood
+  id: N14WallSidingBlueTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/sidingblue.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/sidingblue.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallsidingblue
+
+- type: entity
+  parent: N14BaseWallTallWood
+  id: N14WallSidingRedTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/sidingred.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/sidingred.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallsidingred
+
+- type: entity
+  parent: N14BaseWallTallWood
+  id: N14WallSidingGreenTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/sidinggreen.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/sidinggreen.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallsidinggreen
+
+- type: entity
+  parent: N14BaseWallTallWood
+  id: N14WallWoodTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/wood.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/wood.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallwood
+
+- type: entity
+  parent: N14BaseWallTallWood
+  id: N14WallWoodAltTall
+  suffix: tall
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/woodalt.rsi
+  - type: Icon
+    sprite: _Nuclear14/Structures/Walls/ms13/tall/woodalt.rsi
+  - type: IconSmooth
+    key: walls
+    base: tallwoodalt

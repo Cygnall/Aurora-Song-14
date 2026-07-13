@@ -203,9 +203,11 @@
         Blunt: 9
   - type: PassiveDamage
     damage:
-      groups:
-        Brute: 10
-  - type: Damageable
+      types: # Aurora's Song - Convert from groups to types
+        Blunt: 3
+        Slash: 3
+        Piercing: 4
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
     damageContainer: Inorganic
   - type: Destructible
     thresholds:

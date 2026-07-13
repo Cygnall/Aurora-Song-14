@@ -207,6 +207,53 @@
     head: ClothingHeadHoodMantisDark
 # Aurora Song - Mantis drip merge end
 
+# Aurora Song - Chaplain drip start
+- type: loadout
+  id: ContractorClothingHeadHatVeil
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 250
+  equipment:
+    head: ClothingHeadHatVeil
+
+- type: loadout
+  id: ContractorClothingHeadHatDruid
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 250
+  equipment:
+    head: ClothingHeadHatDruid
+
+- type: loadout
+  id: ContractorClothingHeadHatMoon
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 250
+  equipment:
+    head: ClothingHeadHatMoon
+
+- type: loadout
+  id: ContractorClothingHeadHatSun
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 250
+  equipment:
+    head: ClothingHeadHatSun
+
+- type: loadout
+  id: ContractorClothingHeadHatTidal
+  hideEffects:
+  - !type:GroupLoadoutEffect
+    proto: NFHeadwearCapable
+  price: 250
+  equipment:
+    head: ClothingHeadHatTidal
+# Aurora Song - Chaplain drip end
+
 #T1
 - type: loadout
   id: ContractorClothingHeadHatHoodBioScientist # Time restrictions removed | Aurora Song

@@ -10,7 +10,8 @@ phrase-can-i = Can I
 phrase-should-i = Should I
 phrase-give-me = Give
 phrase-need = I need
-phrase-want = I want
+phrase-iwant = I want
+# aurora song- changed from phrase-want to phrase-iwant
 phrase-cant = I can't
 phrase-show = Show
 phrase-help = Help

@@ -112,6 +112,8 @@
       - id: FakeCapfruitSeeds
       - id: CucumberSeeds
       - id: NFGlowshroomSeeds
+      - id: PomegranateSeeds # Aurora Song
+      - id: PompomBushSeeds # Aurora Song
     - !type:GroupSelector
       weight: 10
       children:

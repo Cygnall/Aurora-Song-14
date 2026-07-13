@@ -6,3 +6,115 @@
   speciesBlacklist: [IPC]
   components:
     - type: Replicant
+    - type: BloodSwap
+      bloodReagent: Oxidant
+
+- type: trait
+  id: BloodSwapRed
+  name: trait-red-blood-name
+  description: trait-red-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Human, Dwarf, Reptilian, Vulpkanin, Tajaran, Felinid, Harpy, Oni, Rodentia, Feroxi, Ovinia]
+  components:
+    - type: BloodSwap
+      bloodReagent: Blood
+
+- type: trait
+  id: BloodSwapInsect
+  name: trait-insect-blood-name
+  description: trait-insect-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Moth]
+  components:
+    - type: BloodSwap
+      bloodReagent: InsectBlood
+
+- type: trait
+  id: BloodSwapSlime
+  name: trait-slime-blood-name
+  description: trait-slime-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, SlimePerson]
+  components:
+    - type: BloodSwap
+      bloodReagent: Slime
+
+- type: trait
+  id: BloodSwapAmmonia
+  name: trait-ammonia-blood-name
+  description: trait-ammonia-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Vox, Avali]
+  components:
+    - type: BloodSwap
+      bloodReagent: AmmoniaBlood
+
+- type: trait
+  id: BloodSwapSap
+  name: trait-sap-blood-name
+  description: trait-sap-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Diona]
+  components:
+    - type: BloodSwap
+      bloodReagent: Sap
+
+- type: trait
+  id: BloodSwapBlue
+  name: trait-blue-blood-name
+  description: trait-blue-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Arachnid]
+  components:
+    - type: BloodSwap
+      bloodReagent: CopperBlood
+
+- type: trait
+  id: BloodSwapAcid
+  name: trait-acid-blood-name
+  description: trait-acid-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC]
+  components:
+    - type: BloodSwap
+      bloodReagent: FluorosulfuricAcid
+
+- type: trait
+  id: BloodSwapFairy
+  name: trait-fairy-blood-name
+  description: trait-fairy-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Fairy]
+  components:
+    - type: BloodSwap
+      bloodReagent: FairyBlood
+
+- type: trait
+  id: BloodSwapGoblin
+  name: trait-goblin-blood-name
+  description: trait-goblin-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Goblin]
+  components:
+    - type: BloodSwap
+      bloodReagent: GoblinBlood
+
+- type: trait
+  id: BloodSwapCryox
+  name: trait-cryox-blood-name
+  description: trait-cryox-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Sheleg]
+  components:
+    - type: BloodSwap
+      bloodReagent: Cryoxadone

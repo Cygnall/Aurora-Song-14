@@ -148,33 +148,33 @@
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
-        children:
-        - id: HeadHuman
+        children: # Aurora's Song - Migrate to nubody
+        - id: OrganHumanHead
           amount: 1
-        - id: TorsoHuman
+        - id: OrganHumanTorso
           amount: 1
-        - id: LeftArmHuman
+        - id: OrganHumanArmLeft
           amount: 1
-        - id: RightArmHuman
+        - id: OrganHumanArmRight
           amount: 1
-        - id: LeftHandHuman
+        - id: OrganHumanHandLeft
           amount: 1
-        - id: RightHandHuman
+        - id: OrganHumanHandRight
           amount: 1
-        - id: LeftLegHuman
+        - id: OrganHumanLegLeft
           amount: 1
-        - id: RightLegHuman
+        - id: OrganHumanLegRight
           amount: 1
-        - id: LeftFootHuman
+        - id: OrganHumanFootLeft
           amount: 1
-        - id: RightFootHuman
+        - id: OrganHumanFootRight
           amount: 1
   - type: Storage
     grid:
     - 0,0,4,3
     whitelist:
       components:
-        - BodyPart
+        - Organ # Aurora's Song - BodyPart>Organ
 
 - type: entity
   name: Build-a-Buddy kit
@@ -186,26 +186,26 @@
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
-        children:
-        - id: HeadGoblin
+        children: # Aurora's Song - Migrate to nubody
+        - id: OrganGoblinHead
           amount: 1
-        - id: TorsoGoblin
+        - id: OrganGoblinTorso
           amount: 1
-        - id: LeftArmGoblin
+        - id: OrganGoblinArmLeft
           amount: 1
-        - id: RightArmGoblin
+        - id: OrganGoblinArmRight
           amount: 1
-        - id: LeftHandGoblin
+        - id: OrganGoblinHandLeft
           amount: 1
-        - id: RightHandGoblin
+        - id: OrganGoblinHandRight
           amount: 1
-        - id: LeftLegGoblin
+        - id: OrganGoblinLegLeft
           amount: 1
-        - id: RightLegGoblin
+        - id: OrganGoblinLegRight # Aurora's Song - Migrate to nubody
           amount: 1
-        - id: LeftFootGoblin
+        - id: OrganGoblinFootLeft # Aurora's Song - Migrate to nubody
           amount: 1
-        - id: RightFootGoblin
+        - id: OrganGoblinFootRight # Aurora's Song - Migrate to nubody
           amount: 1
 
 - type: entity
@@ -218,26 +218,26 @@
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
-        children:
-        - id: HeadReptilian
+        children: # Aurora's Song - Migrate to nubody
+        - id: OrganReptilianHead
           amount: 1
-        - id: TorsoReptilian
+        - id: OrganReptilianTorso
           amount: 1
-        - id: LeftArmReptilian
+        - id: OrganReptilianArmLeft
           amount: 1
-        - id: RightArmReptilian
+        - id: OrganReptilianArmRight
           amount: 1
-        - id: LeftHandReptilian
+        - id: OrganReptilianHandLeft
           amount: 1
-        - id: RightHandReptilian
+        - id: OrganReptilianHandRight
           amount: 1
-        - id: LeftLegReptilian
+        - id: OrganReptilianLegLeft
           amount: 1
-        - id: RightLegReptilian
+        - id: OrganReptilianLegRight
           amount: 1
-        - id: LeftFootReptilian
+        - id: OrganReptilianFootLeft
           amount: 1
-        - id: RightFootReptilian
+        - id: OrganReptilianFootRight
           amount: 1
 
 - type: entity
@@ -250,26 +250,26 @@
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
-        children:
-        - id: HeadSlime
+        children: # Aurora's Song - Migrate to nubody
+        - id: OrganSlimePersonHead
           amount: 1
-        - id: TorsoSlime
+        - id: OrganSlimePersonTorso
           amount: 1
-        - id: LeftArmSlime
+        - id: OrganSlimePersonArmLeft
           amount: 1
-        - id: RightArmSlime
+        - id: OrganSlimePersonArmRight
           amount: 1
-        - id: LeftHandSlime
+        - id: OrganSlimePersonHandLeft
           amount: 1
-        - id: RightHandSlime
+        - id: OrganSlimePersonHandRight
           amount: 1
-        - id: LeftLegSlime
+        - id: OrganSlimePersonLegLeft
           amount: 1
-        - id: RightLegSlime
+        - id: OrganSlimePersonLegRight
           amount: 1
-        - id: LeftFootSlime
+        - id: OrganSlimePersonFootLeft
           amount: 1
-        - id: RightFootSlime
+        - id: OrganSlimePersonFootRight
           amount: 1
 
 - type: entity
@@ -282,24 +282,24 @@
   - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
     containers:
       storagebase: !type:AllSelector
-        children:
-        - id: HeadVulpkanin
+        children: # Aurora's Song - Migrate to nubody
+        - id: OrganVulpkaninHead
           amount: 1
-        - id: TorsoVulpkanin
+        - id: OrganVulpkaninTorso
           amount: 1
-        - id: LeftArmVulpkanin
+        - id: OrganVulpkaninArmLeft
           amount: 1
-        - id: RightArmVulpkanin
+        - id: OrganVulpkaninArmRight
           amount: 1
-        - id: LeftHandVulpkanin
+        - id: OrganVulpkaninHandLeft
           amount: 1
-        - id: RightHandVulpkanin
+        - id: OrganVulpkaninHandRight
           amount: 1
-        - id: LeftLegVulpkanin
+        - id: OrganVulpkaninLegLeft
           amount: 1
-        - id: RightLegVulpkanin
+        - id: OrganVulpkaninLegRight
           amount: 1
-        - id: LeftFootVulpkanin
+        - id: OrganVulpkaninFootLeft
           amount: 1
-        - id: RightFootVulpkanin
+        - id: OrganVulpkaninFootRight
           amount: 1

@@ -196,7 +196,7 @@
 
 # region Tier 3
 - type: entity
-  parent: NFMobWizardAdeptBlue
+  parent: NFMobWizardlBase # Aurora's Song | Reparent to prevent unused BasicEntityAmmoProvider from throwing a debugassertion
   id: NFMobWizardMasterBlue
   categories: [ HideSpawnMenu ]
   name: blue wizard master
@@ -212,6 +212,11 @@
   - type: BatteryAmmoProvider # Aurora's Song - HitscanBatteryAmmoProvider>BatteryAmmoProvider
     proto: WizardHitscanLightning
     fireCost: 100
+  - type: Gun # Aurora's Song | Move copy of gun component from prior parent to ensure proper behaviour
+    showExamineText: false
+    fireRate: 1
+    soundGunshot:
+      path: /Audio/Effects/Lightning/lightningshock.ogg
 
 - type: entity
   parent: NFMobWizardAdeptRed
@@ -318,7 +323,7 @@
   - type: NPCImprintingOnSpawnBehaviour
     whitelist:
       components:
-      - HumanoidAppearance
+      - HumanoidProfile # Aurora's Song HumanoidAppearance>HumanoidProfile
   - type: HTN
     rootTask:
        task: MeleeFollowerCompound

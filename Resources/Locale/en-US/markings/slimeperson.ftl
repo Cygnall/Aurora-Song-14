@@ -24,3 +24,4 @@ marking-SlimeGradientRightHand = Slime Right Hand (Gradient)
 
 # Aurora's Song - Creates Slime Head markings for custom heads
 marking-SlimeHead = Slime Head
+marking-SlimeEyes = Eyes

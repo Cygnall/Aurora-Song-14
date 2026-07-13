@@ -1,0 +1,18 @@
+- type: foodSequenceElement
+  id: Pomegranate
+  name: food-sequence-content-pomegranate
+  sprites:
+  - sprite: Objects/Specific/Hydroponics/pomegranate.rsi
+    state: produce
+  tags:
+  - Fruit
+
+- type: foodSequenceElement
+  id: PomegranateSlice
+  name: food-sequence-content-pomegranate-slice
+  sprites:
+  - sprite: Objects/Specific/Hydroponics/pomegranate.rsi
+    state: slice
+  tags:
+  - Fruit
+  - Slice

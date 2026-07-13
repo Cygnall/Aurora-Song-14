@@ -1,0 +1,9 @@
+- type: quickPhrase
+  id: PhraseLogisticsOre
+  parent: BaseLogisticsSubjectPhrase
+  text: phrase-ore
+
+- type: quickPhrase
+  id: PhraseLogisticsRock
+  parent: BaseLogisticsSubjectPhrase
+  text: phrase-rock

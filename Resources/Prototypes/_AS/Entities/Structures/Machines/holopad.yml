@@ -160,3 +160,20 @@
   components:
   - type: Label
     currentLabel: as-holopad-general-sle-outpost-reception
+
+#region The alley
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadAlleyShipyards
+  suffix: Alley Shipyards, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-alley-shipyards
+
+- type: entity
+  parent: NFHolopadPoiBase
+  id: ASHolopadAlleyBar
+  suffix: Alley Bar, POI
+  components:
+  - type: Label
+    currentLabel: as-holopad-general-alley-bar

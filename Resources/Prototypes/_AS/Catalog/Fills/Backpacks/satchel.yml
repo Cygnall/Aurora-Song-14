@@ -8,18 +8,18 @@
     containers:
       storagebase: !type:AllSelector
         children:
-        - id: RightHandSkeleton
-        - id: LeftHandSkeleton
+        - id: OrganSkeletonPersonHandRight # Aurora's Song - Migrate to nubody
+        - id: OrganSkeletonPersonHandLeft # Aurora's Song - Migrate to nubody
         - id: FoodPoppy
         - id: ClothingHeadHatStrawHat
         - id: MaterialBones1
-        - id: LeftArmSkeleton
-        - id: LeftHandSkeleton
-        - id: LeftFootSkeleton
-        - id: LeftLegSkeleton
-        - id: TorsoSkeleton
+        - id: OrganSkeletonPersonArmLeft # Aurora's Song - Migrate to nubody
+        - id: OrganSkeletonPersonHandLeft # Aurora's Song - Migrate to nubody
+        - id: OrganSkeletonPersonFootLeft # Aurora's Song - Migrate to nubody
+        - id: OrganSkeletonPersonLegLeft # Aurora's Song - Migrate to nubody
+        - id: OrganSkeletonPersonTorso # Aurora's Song - Migrate to nubody
         - id: GoldRingGem
         - id: MaterialBones1
-        - id: RightLegSkeleton
-        - id: RightFootSkeleton
+        - id: OrganSkeletonPersonLegRight # Aurora's Song - Migrate to nubody
+        - id: OrganSkeletonPersonFootRight # Aurora's Song - Migrate to nubody
         - id: GoldRingDiamond

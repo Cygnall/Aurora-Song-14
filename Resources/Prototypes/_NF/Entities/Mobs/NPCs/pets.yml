@@ -325,13 +325,10 @@
 
 - type: entity
   id: MobCatBloodCult
-  parent: [NFMobPet, MobCatMistake]
+  parent: [NFMobPet, MobCatMistake, BaseMobBloodsucker] # Aurora's Song - Replace BodyComponent with BaseMobBloodsucker
   name: blood cult cat
   description: Founded the Blood Cult out of boredom.
   components:
-  - type: Body
-    prototype: Bloodsucker
-    requiredLegs: 1
   - type: MeleeWeapon
     damage:
       types:

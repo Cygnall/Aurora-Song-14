@@ -4,7 +4,7 @@
 # Redemption machine for AS medical bounties
 
 - type: entity
-  parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseMachinePowered]
+  parent: [MachineMedicalBountyRedemption]
   id: ASMachineMedicalBountyRedemption
   name: patient discharge unit
   description: A specialized medical terminal for processing patient discharges and rewards. Insert healed patients to receive payment.
@@ -26,36 +26,12 @@
         type: ASMedicalBountyRedemptionBoundUserInterface
   - type: ActivatableUI
     key: enum.ASMedicalBountyRedemptionUiKey.Key
-  - type: ActivatableUIRequiresPower
   - type: AccessReader
     access: [["Medical"]]
-  - type: ActivatableUIRequiresAccess
-  - type: InteractionOutline
-  - type: Physics
-    bodyType: Static
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeAabb
-          bounds: "-0.45,-0.45,0.45,0.45"
-        density: 190
-        mask:
-        - MachineMask
-        layer:
-        - MachineLayer
-  - type: DragInsertContainer
-    containerId: body_container
-  - type: ExitContainerOnMove
-    containerId: body_container
-  - type: ContainerContainer
-    containers:
-      body_container: !type:ContainerSlot
   - type: ASMedicalBountyRedemption
     bodyContainer: body_container
     taxAccounts:
       Medical: 0.75
-  - type: Appearance
   - type: GenericVisualizer
     visuals:
       enum.ASMedicalBountyRedemptionVisuals.Full:
@@ -69,6 +45,3 @@
         lights:
           True: { visible: true }
           False: { visible: false }
-  - type: ApcPowerReceiver
-    powerLoad: 1000
-  - type: Climbable

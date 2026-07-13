@@ -32,3 +32,10 @@
   - ASWeaponSubMachineGunAP4C
   categories: [ HideSpawnMenu ]
   id: ASWeaponSubMachineGunAP4CExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - ASWeaponShotgunHushpup
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponShotgunHushpupExpedition

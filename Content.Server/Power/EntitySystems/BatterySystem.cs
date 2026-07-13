@@ -1,14 +1,19 @@
 using Content.Server.Power.Components;
+using System.Diagnostics.CodeAnalysis; // WD
+using Robust.Server.Containers; // WD
 using Content.Shared.Power.Components;
 using Content.Shared.Power.EntitySystems;
 using Content.Shared.Rejuvenate;
+using Robust.Shared.Containers; // WD
 using Robust.Shared.Utility;
 using Content.Server._NF.Power.Components; // Frontier
 
 namespace Content.Server.Power.EntitySystems;
 
-public sealed class BatterySystem : SharedBatterySystem
+public sealed partial class BatterySystem : SharedBatterySystem
 {
+    [Dependency] private ContainerSystem _container = default!; // WD
+
     public override void Initialize()
     {
         base.Initialize();
@@ -66,4 +71,32 @@ public sealed class BatterySystem : SharedBatterySystem
             SetCharge((uid, bat), netBat.NetworkBattery.CurrentStorage);
         }
     }
+
+    // WD EDIT START
+    public bool TryGetBatteryComponent(EntityUid uid, [NotNullWhen(true)] out BatteryComponent? battery,
+        [NotNullWhen(true)] out EntityUid? batteryUid)
+    {
+        if (TryComp(uid, out battery))
+        {
+            batteryUid = uid;
+            return true;
+        }
+
+        if (!_container.TryGetContainer(uid, "cell_slot", out var container)
+            || container is not ContainerSlot slot)
+        {
+            battery = null;
+            batteryUid = null;
+            return false;
+        }
+
+        batteryUid = slot.ContainedEntity;
+
+        if (batteryUid != null)
+            return TryComp(batteryUid, out battery);
+
+        battery = null;
+        return false;
+    }
+    // WD EDIT END
 }

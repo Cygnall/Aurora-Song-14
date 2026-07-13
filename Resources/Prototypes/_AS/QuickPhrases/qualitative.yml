@@ -1,0 +1,24 @@
+- type: quickPhrase
+  id: SoonPhrase
+  parent: BaseQualitativePhrase
+  text: phrase-soon
+
+- type: quickPhrase
+  id: HavePhrase
+  parent: BaseQualitativePhrase
+  text: phrase-have
+
+- type: quickPhrase
+  id: WantPhrase
+  parent: BaseQualitativePhrase
+  text: phrase-want
+
+- type: quickPhrase
+  id: OnlyPhrase
+  parent: BaseQualitativePhrase
+  text: phrase-only
+
+- type: quickPhrase
+  id: AnyPhrase
+  parent: BaseQualitativePhrase
+  text: phrase-any

@@ -45,6 +45,7 @@
   - type: CryoSleepFallback
 
 - type: entity
+  abstract: true # Aurora's Song - Prefer AS variant
   parent: [BaseStructureDisableToolUse, BaseStructureIndestructible, BaseMachinePowered]
   id: MachineMedicalBountyRedemption
   name: body retrieval unit
@@ -60,12 +61,13 @@
       shader: unshaded
       map: ["lights"]
       visible: false
-  - type: UserInterface
-    interfaces:
-      enum.MedicalBountyRedemptionUiKey.Key:
-        type: MedicalBountyRedemptionBoundUserInterface
-  - type: ActivatableUI
-    key: enum.MedicalBountyRedemptionUiKey.Key
+# Aurora's Song - Use AS variant
+#  - type: UserInterface
+#    interfaces:
+#      enum.MedicalBountyRedemptionUiKey.Key:
+#        type: MedicalBountyRedemptionBoundUserInterface
+#  - type: ActivatableUI
+#    key: enum.MedicalBountyRedemptionUiKey.Key
   - type: ActivatableUIRequiresPower
   - type: InteractionOutline
   - type: Physics
@@ -88,24 +90,26 @@
   - type: ContainerContainer
     containers:
       body_container: !type:ContainerSlot
-  - type: MedicalBountyRedemption
-    bodyContainer: body_container
-    taxAccounts:
-      Medical: 0.75 # 75%
+# Aurora's Song - Use AS variant
+#  - type: MedicalBountyRedemption
+#    bodyContainer: body_container
+#    taxAccounts:
+#      Medical: 0.75 # 75%
   - type: Appearance
-  - type: GenericVisualizer
-    visuals:
-      enum.MedicalBountyRedemptionVisuals.Full:
-        base:
-          True: { state: closed_full }
-          False: { state: closed }
-        lights:
-          True: { state: both_on_unlit }
-          False: { state: left_on_unlit }
-      enum.PowerDeviceVisuals.Powered:
-        lights:
-          True: { visible: true }
-          False: { visible: false }
+# Aurora's Song
+#  - type: GenericVisualizer
+#    visuals:
+#      enum.MedicalBountyRedemptionVisuals.Full:
+#        base:
+#          True: { state: closed_full }
+#          False: { state: closed }
+#        lights:
+#          True: { state: both_on_unlit }
+#          False: { state: left_on_unlit }
+#      enum.PowerDeviceVisuals.Powered:
+#        lights:
+#          True: { visible: true }
+#          False: { visible: false }
   - type: ApcPowerReceiver
     powerLoad: 1000 # Keeping this explicit
   - type: Climbable

@@ -37,3 +37,8 @@
   parent: BaseLightRecipe
   id: BlueLedLightBulb
   result: BlueLedLightBulb
+
+- type: latheRecipe
+  parent: BaseHoloprojector
+  id: HoloBellProjector
+  result: HoloBellProjector

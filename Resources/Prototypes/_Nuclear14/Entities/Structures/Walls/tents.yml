@@ -1,0 +1,76 @@
+# Aurora's Song | replaced names and descriptions with locale strings
+- type: entity
+  parent: BaseStructure
+  id: N14TentLeatherWall
+  components:
+  - type: Sprite
+    drawdepth: Walls
+    sprite: _Nuclear14/Structures/Walls/nc14/tents.rsi
+    state: leather_edge
+  - type: Physics
+    bodyType: Static
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.5,-0.5,0.5,0.5"
+        mask:
+        - FullTileMask
+        layer:
+        - WallLayer
+        density: 100
+  - type: Damageable
+    damageModifierSet: Web
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: StructuralInorganic
+  - type: RangedDamageSound
+    soundGroups:
+      Brute:
+        collection:
+          GenericHit
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Occluder
+  - type: RadiationBlocker
+    resistance: 1
+  - type: BlockWeather
+
+- type: entity
+  parent: N14TentLeatherWall
+  id: N14TentLeatherCorner
+  suffix: corner
+  components:
+  - type: Sprite
+    state: leather_corner
+
+- type: entity
+  parent: N14TentLeatherWall
+  id: N14TentClothWall
+  description: A tent made out of cloth.
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Walls/nc14/tents.rsi
+    state: cloth_edge
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+
+- type: entity
+  parent: N14TentClothWall
+  id: N14TentClothCorner
+  suffix: corner
+  components:
+  - type: Sprite
+    state: cloth_corner

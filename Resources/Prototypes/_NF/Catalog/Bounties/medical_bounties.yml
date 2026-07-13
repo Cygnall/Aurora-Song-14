@@ -1,5 +1,5 @@
 # Medical bounty prototypes, unidentified corpses may spawn with one of these damage prototypes.
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: MurderedBlunt
   damageSets:
     Blunt:
@@ -14,7 +14,7 @@
       penalty: 10
   baseReward: 2000 # 4K-8K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: MurderedPierce
   damageSets:
     Piercing:
@@ -29,7 +29,7 @@
       penalty: 10
   baseReward: 2000 # 4K-8K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: MurderedSlash
   damageSets:
     Slash:
@@ -44,7 +44,7 @@
       penalty: 10
   baseReward: 2000 # 4K-8K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: MildBruteMix
   damageSets:
     Blunt:
@@ -69,7 +69,7 @@
       penalty: 10
   baseReward: 2000 # 5K-8K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: Suffocated
   damageSets:
     Asphyxiation:
@@ -84,7 +84,7 @@
       penalty: 10
   baseReward: 2000 # 4K-8K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: PlasmaFire
   damageSets:
     Heat:
@@ -94,7 +94,7 @@
       penalty: 10
   baseReward: 3000 # 10K-32K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: Spaced
   damageSets:
     Blunt:
@@ -119,7 +119,7 @@
       penalty: 10
   baseReward: 1000 # 8500-24K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: MildBurnMix
   damageSets:
     Heat:
@@ -144,7 +144,7 @@
       penalty: 10
   baseReward: 2000 # 4K-8K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: Insuls
   damageSets:
     Heat:
@@ -159,7 +159,7 @@
       penalty: 10
   baseReward: 1500 # 7500-11500
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: AcidSlimes
   damageSets:
     Caustic:
@@ -169,7 +169,7 @@
       penalty: 20
   baseReward: 3000 # 8K-12K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: SpiderAttackMild
   damageSets:
     Poison:
@@ -189,7 +189,7 @@
       value: 20
   baseReward: 4250 # 6600-10500
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: SpiderAttack
   damageSets:
     Poison:
@@ -204,7 +204,7 @@
       value: 20
   baseReward: 4250 # 7100-10500
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: DeliciousMushroom
   damageSets:
     Poison:
@@ -224,7 +224,7 @@
       value: 30
   baseReward: 4500 # 6400-10500
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: HyperpacmanGoneWrong
   damageSets:
     Radiation:
@@ -244,7 +244,7 @@
       penalty: 10
   baseReward: 2250 # ~6250-19K
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: AsphyxAndCellular
   damageSets:
     Asphyxiation:
@@ -259,7 +259,7 @@
       penalty: 25
   baseReward: 2000 # 5500-9500
 
-- type: medicalBounty
+- type: aSMedicalBounty # Aurora's Song - medicalBounty>aSMedicalBounty
   id: DeliciousUranium
   damageSets:
     Radiation:

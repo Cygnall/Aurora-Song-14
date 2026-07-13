@@ -8,7 +8,7 @@
   recognizable: true
   physicalDesc: reagent-physical-desc-viscous
   metabolisms:
-    Poison:
+    Bloodstream: # Aurora's Song - Poison>Bloodstream
       effects:
       - !type:HealthChange
         damage:

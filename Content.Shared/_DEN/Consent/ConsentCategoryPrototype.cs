@@ -8,7 +8,7 @@ namespace Content.Shared._DEN.Consent;
 /// <summary>
 /// This is a prototype for tracking consent categories
 /// </summary>
-[Prototype("consentCategory")]
+[Prototype]
 public sealed partial class ConsentCategoryPrototype : IPrototype
 {
     /// <inheritdoc/>

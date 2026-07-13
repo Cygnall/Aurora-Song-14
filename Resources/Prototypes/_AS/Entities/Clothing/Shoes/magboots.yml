@@ -25,3 +25,5 @@
     severity: Class2
     turnInValues:
     allowedDepartments: [ Security, Command ]
+  - type: FactionClothing
+    faction: ColonialCommandClothing

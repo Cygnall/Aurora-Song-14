@@ -13,4 +13,4 @@
       sprite: Interface/Alerts/internals.rsi
       state: internal1
   - type: InstantAction
-    event: !type:ToggleActionEvent
+    event: !type:ToggleInternalsActionEvent # Aurora's Song: ToggleActionEvent > ToggleInternalsActionEvent

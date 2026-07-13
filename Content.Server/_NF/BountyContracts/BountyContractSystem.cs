@@ -6,6 +6,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.CartridgeLoader;
 using Content.Server.Chat.Systems;
 using Content.Server.StationRecords.Systems;
+using Content.Shared._AS.BountyContracts.Prototypes; // Aurora Song
 using Content.Shared._NF.Bank;
 using Content.Shared._NF.BountyContracts;
 using Content.Shared.Access.Systems;
@@ -22,13 +23,13 @@ public sealed partial class BountyContractSystem : SharedBountyContractSystem
 {
     private ISawmill _sawmill = default!;
 
-    [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!;
-    [Dependency] private readonly StationRecordsSystem _records = default!;
-    [Dependency] private readonly AccessReaderSystem _accessReader = default!;
-    [Dependency] private readonly NFAccessSystemUtilities _accessUtils = default!;
-    [Dependency] private readonly ChatSystem _chat = default!;
-    [Dependency] private readonly IPrototypeManager _proto = default!;
-    [Dependency] private readonly IAdminLogManager _adminLog = default!;
+    [Dependency] private CartridgeLoaderSystem _cartridgeLoader = default!;
+    [Dependency] private StationRecordsSystem _records = default!;
+    [Dependency] private AccessReaderSystem _accessReader = default!;
+    [Dependency] private NFAccessSystemUtilities _accessUtils = default!;
+    [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private IPrototypeManager _proto = default!;
+    [Dependency] private IAdminLogManager _adminLog = default!;
 
     public override void Initialize()
     {
@@ -149,7 +150,8 @@ public sealed partial class BountyContractSystem : SharedBountyContractSystem
     /// <param name="actor">The entity posting the bounty.</param>
     /// <returns>New bounty contract. Null if contract creation failed.</returns>
     public BountyContract? TryCreateBountyContract(ProtoId<BountyContractCollectionPrototype> collection,
-        BountyContractCategory category,
+        // BountyContractCategory category, // Aurora Song - commented out
+        ProtoId<BountyContractCategoryPrototype> category, // Aurora Song
         string name,
         int reward,
         EntityUid authorUid,
@@ -192,8 +194,16 @@ public sealed partial class BountyContractSystem : SharedBountyContractSystem
             notificationType = bountyCollection.NotificationType;
 
         LocId announcement = "bounty-contracts-announcement-generic-create";
-        if (CategoriesMeta.TryGetValue(category, out var categoryMeta) && categoryMeta.Announcement != null)
-            announcement = categoryMeta.Announcement.Value;
+
+        // start Aurora Song - use BountyContractCategoryPrototype
+
+        // if (CategoriesMeta.TryGetValue(category, out var categoryMeta) && categoryMeta.Announcement != null)
+        //     announcement = categoryMeta.Announcement.Value;
+
+        if (_proto.TryIndex(category, out var categoryProto) && categoryProto.Announcement != null)
+            announcement = categoryProto.Announcement.Value;
+
+        // end Aurora Song
 
         // Generate a notification
         if (notificationType == BountyContractNotificationType.PDA)

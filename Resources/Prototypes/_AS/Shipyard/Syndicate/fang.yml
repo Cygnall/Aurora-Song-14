@@ -1,0 +1,38 @@
+# Author Info
+# GitHub: Toasterblast
+# Discord: Toasterblast
+
+# Maintainer Info
+# GitHub: Toasterblast
+# Discord: Toasterblast
+- type: vessel
+  id: Fang
+  parent: BaseVesselAntag
+  name: Fang
+  description: A large, expedition capable Syndicate vessel intended for long-term operations deep in hostile territory.
+  price: 190000 #appraises to 76000 ish + 15 EC (45000)of contra for a total of 121000, markup 50% to 181500, round up for nicer number
+  category: Large
+  group: Syndicate
+  shuttlePath: /Maps/_AS/Shuttles/Syndicate/fang.yml
+  guidebookPage: Null
+  class:
+  - Syndicate
+  engine:
+  - Bananium
+
+- type: gameMap
+  id: Fang
+  mapName: 'Fang'
+  mapPath: /Maps/_AS/Shuttles/Syndicate/fang.yml
+  minPlayers: 0
+  stations:
+    Fang:
+      stationProto: StandardFrontierAntagVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Fang {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

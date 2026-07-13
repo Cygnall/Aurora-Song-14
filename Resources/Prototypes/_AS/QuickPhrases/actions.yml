@@ -1,0 +1,49 @@
+- type: quickPhrase
+  id: SleepPhrase
+  parent: BaseActionPhrase
+  text: phrase-sleep
+
+- type: quickPhrase
+  id: RidePhrase
+  parent: BaseActionPhrase
+  text: phrase-ride
+
+- type: quickPhrase
+  id: JoinPhrase
+  parent: BaseActionPhrase
+  text: phrase-join
+
+- type: quickPhrase
+  id: HiringPhrase
+  parent: BaseActionPhrase
+  text: phrase-hiring
+
+- type: quickPhrase
+  id: OpenPhrase
+  parent: BaseActionPhrase
+  text: phrase-open
+
+- type: quickPhrase
+  id: ClosedPhrase
+  parent: BaseActionPhrase
+  text: phrase-closed
+
+- type: quickPhrase
+  id: BreathePhrase
+  parent: BaseActionPhrase
+  text: phrase-breathe
+
+- type: quickPhrase
+  id: SpeakPhrase
+  parent: BaseActionPhrase
+  text: phrase-speak
+
+- type: quickPhrase
+  id: BuyPhrase
+  parent: BaseActionPhrase
+  text: phrase-buy
+
+- type: quickPhrase
+  id: SellPhrase
+  parent: BaseActionPhrase
+  text: phrase-sell

@@ -16,6 +16,8 @@
   - ExteriorLightTube
   - LedLightBulb
   - LedLightTube
+  - DimLightBulb    # Aurora's Song
+  - WarmLightBulb   # Aurora's Song
 
 - type: latheRecipePack
   id: NFBasicToolsStatic
@@ -87,6 +89,7 @@
   - ConveyorBeltAssembly
   - SheetRGlass
   - Durathread
+  - MetalRod # Aurora's Song
 
 - type: latheRecipePack
   id: NFBasicElectronicsStatic

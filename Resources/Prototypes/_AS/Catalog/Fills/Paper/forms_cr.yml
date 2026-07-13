@@ -29,6 +29,7 @@
         - id: ASPaperWrittenAuroraContrabandAmnesty
         - id: ASPaperWrittenAuroraContrabandTurnover
         - id: ASPaperWrittenAuroraContrabandPermit
+        - id: ASPaperWrittenAuroraCitation
         - id: Paper
           prob: 0.5
         - id: Paper
@@ -293,3 +294,33 @@
 
       [color=#AAAAAA]This Permit is void without the signature of the Holder and the signature and stamp of the Commissioner.[/color]
 
+- type: entity # Based on form made by Blumbee (Aki Suboshi)
+  id: ASPaperWrittenAuroraCitation
+  name: citation
+  parent: Paper
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Paper
+    content: |2 # If updating this, update ASPaperWrittenSleCitation
+      [color=#000f89][bold]Aurora Sector Command[/bold][/color]
+      [color=#000f89]‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾[/color]
+      [head=2]Citation[/head]
+
+      [head=3]Criminal Citation Information[/head]
+      [bold]Subject (Person/Vessel IFF):[/bold]
+      [bold]Criminal Offenses:[/bold]
+      [bold]Total Fines:[/bold]
+      [bold]Time of Offense:[/bold]
+
+      [head=3]Officer Information[/head]
+      [bold]Case #:[/bold]
+      [bold]Issued Time:[/bold]
+      [bold]Issuing Officer:[/bold]
+      [bold]Officer Rank:[/bold]
+
+
+
+
+      [color=#AAAAAA]Criminal Citations may only be issued for crimes with Misdemeanor severity. They cannot be issued for Felonies.[/color]
+
+      [color=#AAAAAA]This Citation is only valid when issued by an agent of the SLE and signed by said Officer.[/color]

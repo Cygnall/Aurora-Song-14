@@ -2,7 +2,6 @@
   parent: [BaseTattoo, BaseSpeciesChestStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooHiveChest
   bodyPart: Chest
-  markingCategory: Chest
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_hive_chest
@@ -11,7 +10,6 @@
   parent: [BaseTattoo, BaseSpeciesChestStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooNightlingChest
   bodyPart: Chest
-  markingCategory: Chest
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_nightling
@@ -20,7 +18,6 @@
   parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooSilverburghLeftLeg
   bodyPart: LLeg
-  markingCategory: Legs
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_silverburgh_l_leg
@@ -29,7 +26,6 @@
   parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooSilverburghRightLeg
   bodyPart: RLeg
-  markingCategory: Legs
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_silverburgh_r_leg
@@ -38,7 +34,6 @@
   parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooCampbellLeftArm
   bodyPart: LArm
-  markingCategory: Arms
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_campbell_l_arm
@@ -47,7 +42,6 @@
   parent: [BaseTattoo, BaseSpeciesArmsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooCampbellRightArm
   bodyPart: RArm
-  markingCategory: Arms
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_campbell_r_arm
@@ -56,7 +50,6 @@
   parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooCampbellLeftLeg
   bodyPart: LLeg
-  markingCategory: Legs
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_campbell_l_leg
@@ -65,43 +58,38 @@
   parent: [BaseTattoo, BaseSpeciesLegsStandardOrganic] # AuroraSong: Marking inheritance
   id: TattooCampbellRightLeg
   bodyPart: RLeg
-  markingCategory: Legs
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_campbell_r_leg
 
 - type: marking # Aurora's Song - Moved slime markings to overlay to allow for animal heads
-  bodyPart: Eyes
-  markingCategory: [Head]
   id: TattooEyeRight
-  speciesRestriction: [Human, Dwarf, Reptilian, Oni, Goblin, Felinid, Vulpkanin, Tajaran, Feroxi, Sheleg, Fairy, Rodentia, Harpy]
+  bodyPart: Eyes
+  groupWhitelist: [Human, Reptilian, Oni, Goblin, Felinid, Vulpkanin, Tajaran, Feroxi, Sheleg, Fairy, Rodentia, Harpy]
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_r
 
 - type: marking # Aurora's Song - Moved slime markings to overlay to allow for animal heads
   bodyPart: Eyes
-  markingCategory: Overlay
   id: TattooSlimeEyeRight
-  speciesRestriction: [Slimeperson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_r
 
 - type: marking # Aurora's Song - Moved slime markings to overlay to allow for animal heads
-  bodyPart: Eyes
-  markingCategory: Head
   id: TattooEyeLeft
-  speciesRestriction: [Human, Dwarf, Reptilian, Oni, Goblin, Felinid, Vulpkanin, Tajaran, Feroxi, Sheleg, Fairy, Rodentia, Harpy]
+  bodyPart: Eyes
+  groupWhitelist: [Human, Reptilian, Oni, Goblin, Felinid, Vulpkanin, Tajaran, Feroxi, Sheleg, Fairy, Rodentia, Harpy]
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_l
 
 - type: marking # Aurora's Song - Moved slime markings to overlay to allow for animal heads
   bodyPart: Eyes
-  markingCategory: Overlay
   id: TattooSlimeEyeLeft
-  speciesRestriction: [SlimePerson]
+  groupWhitelist: [Slime]
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_l
@@ -109,7 +97,6 @@
 - type: marking
   parent: [BaseEyes, BaseSpeciesMoth] # AuroraSong: Marking inheritance
   id: TattooEyeMothRight
-  markingCategory: Overlay
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_moth_r
@@ -117,7 +104,6 @@
 - type: marking
   parent: [BaseEyes, BaseSpeciesMoth] # AuroraSong: Marking inheritance
   id: TattooEyeMothLeft
-  markingCategory: Overlay
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
     state: tattoo_eye_moth_l
@@ -125,8 +111,7 @@
 - type: marking
   id: TattooEyeVulpkaninRight
   bodyPart: Eyes
-  markingCategory: [Head]
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   coloring:
     default:
       type:
@@ -139,8 +124,7 @@
 - type: marking
   id: TattooEyeVulpkaninLeft
   bodyPart: Eyes
-  markingCategory: Head
-  speciesRestriction: [Vulpkanin]
+  groupWhitelist: [Vulpkanin]
   coloring:
     default:
       type:
@@ -158,8 +142,7 @@
   # this is not a very big issue on humans, but is much more pronounced on vox & other nonhuman species, where the skin being more colorful can make for some truly dreadful meshing with the sprite thats definitely not desired.
   # some of these limitations could possibly be removed with better control over how the marking can be customized - possibly removing stacking, allowing recoloring & clamping higher-end colors for the eyeshadow, etc.
   bodyPart: Eyes
-  markingCategory: Overlay
-  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf]
+  groupWhitelist: [Human, Slime, Reptilian]
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi
@@ -168,8 +151,7 @@
 - type: marking
   id: TattooEyeshadowLower
   bodyPart: Eyes
-  markingCategory: Overlay
-  speciesRestriction: [Human, SlimePerson, Reptilian, Dwarf]
+  groupWhitelist: [Human, Slime, Reptilian]
   forcedColoring: true
   sprites:
   - sprite: Mobs/Customization/tattoos.rsi

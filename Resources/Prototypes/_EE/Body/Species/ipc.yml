@@ -1,0 +1,435 @@
+- type: markingsGroup
+  parent: Undergarments
+  id: IPC
+  limits:
+    enum.HumanoidVisualLayers.Hair:
+      limit: 1 # DeltaV - Fixes hair not displaying
+      required: false
+    enum.HumanoidVisualLayers.FacialHair:
+      limit: 1 # DeltaV - Fixes hair not displaying
+      required: false
+    enum.HumanoidVisualLayers.Tail: # DeltaV - Adds ability to use more marking types
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.Eyes: # DeltaV - Moves screen to the eyes layer
+      limit: 2 # Funky - Increase to 2 for Protogen mouth and eyes
+      required: false # Funky - Disable requirement
+    enum.HumanoidVisualLayers.Head:
+      limit: 1
+      required: true
+      default: [ MobIPCHeadDefault ]
+    enum.HumanoidVisualLayers.Chest:
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
+      required: true
+      default: [ MobIPCTorsoDefault ]
+    enum.HumanoidVisualLayers.LArm:
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
+      required: true
+      default: [ MobIPCLArmDefault ]
+    enum.HumanoidVisualLayers.RArm:
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
+      required: true
+      default: [ MobIPCRArmDefault ]
+    enum.HumanoidVisualLayers.LHand:
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
+      required: true
+      default: [ MobIPCLHandDefault ]
+    enum.HumanoidVisualLayers.RHand:
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
+      required: true
+      default: [ MobIPCRHandDefault ]
+    enum.HumanoidVisualLayers.LLeg:
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
+      required: true
+      default: [ MobIPCLLegDefault ]
+    enum.HumanoidVisualLayers.RLeg:
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
+      required: true
+      default: [ MobIPCRLegDefault ]
+    enum.HumanoidVisualLayers.LFoot:
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
+      required: true
+      default: [ MobIPCLFootDefault ]
+    enum.HumanoidVisualLayers.RFoot:
+      limit: 2 # Aurora's Song - 1 > 2, to allow for jewelry
+      required: true
+      default: [ MobIPCRFootDefault ]
+    enum.HumanoidVisualLayers.Snout: # DeltaV - Adds ability to use more marking types
+      limit: 1
+      required: false
+    enum.HumanoidVisualLayers.HeadSide:
+      limit: 1
+      required: false
+
+- type: entity
+  parent: BaseSpeciesAppearance
+  id: AppearanceIPC
+  name: IPC appearance
+  components:
+  - type: EncryptionKeyHolder # Aurora's Song - Keep this in Appearance, because the menu needs this to mock the loadout
+    keySlots: 20 # Aurora's Song - 4>20 because we have a lot more encryption key
+    examineWhileLocked: false
+    keysExtractionMethod: Cutting
+    keysUnlocked: false
+  - type: Inventory
+    templateId: ipc
+  - type: InitialBody
+    organs:
+      Torso: OrganIPCTorso
+      Head: OrganIPCHead
+      ArmLeft: OrganIPCArmLeft
+      ArmRight: OrganIPCArmRight
+      HandRight: OrganIPCHandRight
+      HandLeft: OrganIPCHandLeft
+      LegLeft: OrganIPCLegLeft
+      LegRight: OrganIPCLegRight
+      FootLeft: OrganIPCFootLeft
+      FootRight: OrganIPCFootRight
+      Brain: PositronicBrain
+      Eyes: OrganIPCEyes
+      Tongue: OrganIPCTongue
+      Ears: OrganIPCEars
+      Heart: OrganIPCPump
+      Stomach: OrganIPCStomach # Aurora's Song
+      Liver: OrganIPCLiver # Aurora's Song
+  - type: HumanoidProfile
+    species: IPC
+  - type: Sprite
+    noRot: true
+    drawdepth: Mobs
+    layers: # TODO: We can probably unify this with upstream layer ordering
+    - map: [ "enum.HumanoidVisualLayers.Chest" ]
+    - map: [ "enum.HumanoidVisualLayers.Head" ]
+    - map: [ "enum.HumanoidVisualLayers.Snout" ]
+    - map: [ "enum.HumanoidVisualLayers.Eyes" ]
+    - map: [ "enum.HumanoidVisualLayers.RArm" ]
+    - map: [ "enum.HumanoidVisualLayers.LArm" ]
+    - map: [ "enum.HumanoidVisualLayers.RLeg" ]
+    - map: [ "enum.HumanoidVisualLayers.LLeg" ]
+    - shader: StencilClear
+      sprite: Mobs/Species/Human/parts.rsi
+      state: l_leg
+    - shader: StencilMask
+      map: [ "enum.HumanoidVisualLayers.StencilMask" ]
+      sprite: Mobs/Customization/masking_helpers.rsi
+      state: female_full
+      visible: false
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentBottom" ]  # starcup
+    - map: [ "enum.HumanoidVisualLayers.UndergarmentTop" ]  # starcup
+    - map: [ "enum.HumanoidVisualLayers.LFoot" ]
+    - map: [ "enum.HumanoidVisualLayers.RFoot" ]
+    - map: [ "socks" ]
+    - map: [ "underpants" ]
+    - map: [ "undershirt" ]
+    - map: [ "jumpsuit" ]
+    - map: [ "enum.HumanoidVisualLayers.LHand" ]
+    - map: [ "enum.HumanoidVisualLayers.RHand" ]
+    - map: [ "enum.HumanoidVisualLayers.Handcuffs" ]
+      color: "#ffffff"
+      sprite: Objects/Misc/handcuffs.rsi
+      state: body-overlay-2
+      visible: false
+    - map: [ "id" ]
+    - map: [ "gloves" ]
+    - map: [ "shoes" ]
+    - map: [ "ears" ]
+    - map: [ "outerClothing" ]
+    - map: [ "eyes" ]
+    - map: [ "belt" ]
+    - map: [ "neck" ]
+    - map: [ "back" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadSide" ] # starcup: moved beneath hair
+    - map: [ "enum.HumanoidVisualLayers.FacialHair" ]
+    - map: [ "enum.HumanoidVisualLayers.Hair" ]
+    - map: [ "enum.HumanoidVisualLayers.HeadTop" ]
+    - map: [ "mask" ]
+    - map: [ "head" ]
+    - map: [ "pocket1" ]
+    - map: [ "pocket2" ]
+    - map: [ "enum.HumanoidVisualLayers.Tail" ]
+    - map: [ "clownedon" ] # Dynamically generated
+      sprite: "Effects/creampie.rsi"
+      state: "creampie_human"
+      visible: false
+
+- type: entity
+  parent:
+  - AppearanceIPC
+  - MobBloodstream # Aurora's Song
+  - PlayerSiliconHumanoidBase
+  id: MobIPC
+  name: Urist McPositronic
+  description: A positronic brain in a metal body.
+  components: # Aurora's Song - Components cleaned up for the nubody changes to silicon_base
+  - type: PowerCellSlot
+    cellSlotId: cell_slot
+    fitsInCharger: true
+  - type: ItemSlots
+    slots:
+      cell_slot:
+        locked: true
+        name: power-cell-slot-component-slot-name-default
+        startingItem: PowerCellMedium
+  - type: BatterySlotRequiresLock
+    itemSlot: cell_slot
+  - type: EncryptionHolderRequiresLock
+  - type: SiliconEmitSoundOnDrained
+    sound: "/Audio/Weapons/Guns/EmptyAlarm/smg_empty_alarm.ogg" # SOMEONE PLEASE FIND A BETTER SOUND FOR THIS.
+    minInterval: 15
+    maxInterval: 30
+    popUp: "silicon-power-low"
+  - type: Lock
+    locked: true
+    lockOnClick: false
+    unlockOnClick: false
+    lockTime: 5
+    unlockTime: 5
+    breakOnAccessBreaker: false # DeltaV - cant be emagged
+  - type: InteractionPopup
+    successChance: 1
+    interactSuccessString: hugging-success-generic
+    interactSuccessSound: /Audio/Effects/thudswoosh.ogg
+    messagePerceivedByOthers: hugging-success-generic-others
+  - type: NpcFactionMember
+    factions:
+      - NanoTrasen
+  - type: StandingState
+  - type: MobState
+    allowedStates:
+      - Alive
+      - Critical
+      - Dead
+  - type: MobThresholds
+    thresholds:
+      0: Alive
+      119.999: Critical # TO make it almost impossible
+      120: Dead
+    stateAlertDict:
+      Alive: BorgHealth
+      Critical: BorgCrit
+      Dead: BorgDead
+  - type: TypingIndicator
+    proto: robot
+  - type: SlowOnDamage
+    speedModifierThresholds:
+      60: 0.7
+      80: 0.5 # DeltaV - was 90
+      100: 0.3 # DeltaV - was 120, which is irrelvant?
+  - type: SiliconDownOnDead
+  - type: GuideHelp
+    guides:
+      - IPC
+  - type: Silicon
+    entityType: enum.SiliconType.Player
+    batteryPowered: true
+    drainPerSecond: 1.3 # DeltaV change from 1.5
+    idleDrainReduction: 0.6 # TheDen - 60% less power usage while idling, for IPC Dynamic Power Draw
+    chargeThresholdMid: 0.80
+    chargeThresholdLow: 0.35
+    chargeThresholdCritical: 0.10
+    speedModifierThresholds:
+      4: 1
+      3: 1
+      2: 0.80
+      1: 0.45
+      0: 0.00
+  - type: BatteryDrinker
+  - type: ActiveRadio
+  - type: IntrinsicRadioReceiver
+  - type: IntrinsicRadioTransmitter
+  - type: DeadStartupButton
+    sound:
+      path: /Audio/_EE/Effects/Silicon/startup.ogg
+  - type: EmitBuzzWhileDamaged
+  - type: WeldingHealable
+  - type: SnoutHelmet # DeltaV - IPC Snouts
+  #  replacementRace: vulpkanin # Aurora's Song - Refactored helmet component
+  - type: Wagging # Aurora's Song - Add wagging
+  - type: DamagedSiliconAccent # Aurora's Song - Add silicon accent
+    enableChargeCorruption: false
+    damageAtMaxCorruption: 200
+  - type: DamageOnHighSpeedImpact
+    damage:
+      types:
+        Blunt: 10
+    soundHit:
+      path: /Audio/Effects/hit_kick.ogg
+  - type: MeleeWeapon
+    hidden: true
+    soundHit:
+      collection: Punch
+    angle: 30
+    animation: WeaponArcFist
+    attackRate: 1
+    damage:
+      types:
+        Blunt: 6 # It's tough.
+  # Aurora's Song Start - RP Metabolizer
+  - type: Bloodstream
+    maxBleedAmount: 0 # IPCs should not bleed, as Oil is not easy to replenish
+    bloodReferenceSolution:
+      reagents:
+      - ReagentId: Oil
+        Quantity: 600
+  # Aurora's Song Edit: BlockInjection rewrite
+  - type: SpeciesBlockInjection
+    messageSelf: ipc-injector-component-blocked-user
+    messageOther: ipc-injector-component-blocked-other
+  # End Aurora's Song Edit
+  - type: CanNotVomit
+  # Aurora's Song End
+
+- type: entity
+  parent: OrganBase
+  id: OrganIPC
+  abstract: true
+  suffix: IPC
+  # Aurora's Song - Remove reagent from limbs
+
+# Aurora's Song
+- type: entity
+  id: OrganIPCMetabolizer
+  abstract: true
+  components:
+  - type: Metabolizer
+    metabolizerTypes: [ IPC ]
+  - type: MetabolizerTagWhitelist
+    tags:
+    - Aphrodisiac
+    - IPCCompatible
+    stages: [ "Bloodstream" ]
+
+- type: entity
+  parent: OrganIPC
+  id: OrganIPCInternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _EE/Mobs/Species/IPC/organs.rsi
+
+# Aurora's Song
+- type: entity
+  parent: OrganIPC
+  id: OrganIPCInternalAS
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _AS/Mobs/Species/IPC/organs.rsi
+
+- type: entity
+  id: OrganIPCVisual
+  abstract: true
+  components:
+  - type: VisualOrgan
+    data:
+      sprite: null
+      state: null
+    sexStateOverrides:
+      Male: null
+      Female: null
+  - type: VisualOrganMarkings
+    markingData:
+      group: IPC
+
+- type: entity
+  parent: [ OrganIPC, OrganIPCVisual ]
+  id: OrganIPCExternal
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _EE/Mobs/Species/IPC/parts.rsi
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseTorsoSexed, OrganBaseTorso ]
+  id: OrganIPCTorso
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseHead ]
+  id: OrganIPCHead
+  # Aurora's Song Start - Correct hideable head layers
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers:
+    - enum.HumanoidVisualLayers.HeadSide
+    - enum.HumanoidVisualLayers.FacialHair
+    - enum.HumanoidVisualLayers.Hair
+    - enum.HumanoidVisualLayers.Eyes
+    - enum.HumanoidVisualLayers.Snout
+  # Aurora's Song End
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseArmLeft ]
+  id: OrganIPCArmLeft
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseArmRight ]
+  id: OrganIPCArmRight
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseHandLeft ]
+  id: OrganIPCHandLeft
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseHandRight ]
+  id: OrganIPCHandRight
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseLegLeft ]
+  id: OrganIPCLegLeft
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseLegRight ]
+  id: OrganIPCLegRight
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseFootLeft ]
+  id: OrganIPCFootLeft
+
+- type: entity
+  parent: [ OrganIPCExternal, OrganBaseFootRight ]
+  id: OrganIPCFootRight
+
+- type: entity
+  parent: [ OrganIPCVisual, OrganBaseEyes, OrganIPCInternal ]
+  id: OrganIPCEyes
+  name: robotic eyes
+  description: "01001001 00100000 01110011 01100101 01100101 00100000 01111001 01101111 01110101 00100001"
+  components:
+  - type: VisualOrganMarkings
+    hideableLayers: # Aurora's Song - Screen disabling
+    - enum.HumanoidVisualLayers.Eyes
+
+- type: entity
+  parent: [ OrganBaseTongue, OrganIPCInternal ]
+  id: OrganIPCTongue
+  name: vocal modulator
+  description: "A vocal modulator, used to produce speech."
+
+- type: entity
+  parent: [ OrganBaseEars, OrganIPCInternal ]
+  id: OrganIPCEars
+  name: "sonic receptors"
+  description: "A set of highly attuned membranes, capable of sensing anything an organic ear can sense" # DeltaV
+
+- type: entity
+  parent: [ OrganBaseHeart, OrganIPCInternal, OrganIPCMetabolizer ] # Aurora's Song - Add BaseHeart and Metabolizer
+  id: OrganIPCPump
+  name: micro pump
+  description: "A micro pump, used to circulate coolant."
+
+# Aurora's Song Start - More IPC organs
+- type: entity
+  parent: [ OrganBaseStomach, OrganIPCInternalAS, OrganIPCMetabolizer ]
+  id: OrganIPCStomach
+  name: synthetic stomach
+  description: "A synthetic stomach typically given to IPCs so they can eat without fear."
+
+- type: entity
+  parent: [ OrganBaseLiver, OrganIPCInternalAS, OrganIPCMetabolizer ]
+  id: OrganIPCLiver
+  name: synthetic liver
+  description: "A synthetic liver typically given to IPCs so they can filter out the deliciousness of food."
+  components:
+  - type: Metabolizer
+    maxReagents: 5 # To make it like a liver
+# Aurora's Song End

@@ -9,7 +9,7 @@ namespace Content.Server._NF.Shuttles.Systems;
 
 public sealed partial class ForceAnchorSystem : EntitySystem
 {
-    [Dependency] PhysicsSystem _physics = default!;
+    // [Dependency] PhysicsSystem _physics = default!; // Aurora's Song
     [Dependency] ShuttleSystem _shuttle = default!;
 
     public override void Initialize()

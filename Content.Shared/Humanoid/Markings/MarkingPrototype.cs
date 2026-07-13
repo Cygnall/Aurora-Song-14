@@ -24,32 +24,27 @@ namespace Content.Shared.Humanoid.Markings
         public string Name { get; private set; } = default!;
 
         [DataField("bodyPart", required: true)]
-        public HumanoidVisualLayers BodyPart { get; private set; }
+        public HumanoidVisualLayers BodyPart { get; private set; } = default!;
 
-        [DataField("markingCategory", required: true)]
-        public MarkingCategories MarkingCategory { get; private set; }
-
-        [DataField("speciesRestriction")]
-        public List<string>? SpeciesRestrictions { get; private set; }
+        [DataField]
+        public List<ProtoId<MarkingsGroupPrototype>>? GroupWhitelist;
 
         // DEN - Invert marking restrictions
+        // Aurora's Song - Convert to invert group whitelist for consistency
         [DataField]
-        public bool InvertSpeciesRestriction { get; private set; }
+        public bool InvertGroupWhitelist { get; private set; }
 
-        [DataField]
+        [DataField("sexRestriction")]
         public Sex? SexRestriction { get; private set; }
 
         // DEN - Invert marking restrictions
         [DataField]
         public bool InvertSexRestriction { get; private set; }
 
-        [DataField]
-        public bool FollowSkinColor { get; private set; }
+        [DataField("forcedColoring")]
+        public bool ForcedColoring { get; private set; } = false;
 
-        [DataField]
-        public bool ForcedColoring { get; private set; }
-
-        [DataField]
+        [DataField("coloring")]
         public MarkingColors Coloring { get; private set; } = new();
 
         /// <summary>
@@ -82,7 +77,7 @@ namespace Content.Shared.Humanoid.Markings
         /// top of humans' ear marking lists.
         /// </remarks>
         [DataField]
-        public HashSet<ProtoId<SpeciesPrototype>>? PreferredSpecies = null;
+        public HashSet<ProtoId<MarkingsGroupPrototype>>? PreferredGroup = null;
 
         // End Aurora Song
 

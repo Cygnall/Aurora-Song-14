@@ -6,8 +6,6 @@
   name: baby space dragon
   description: Even a flying leviathan starts off small and from an egg.
   components:
-  - type: Body
-    prototype: Animal
   - type: Climbing
   - type: NameIdentifier
     group: GenericNumber
@@ -120,10 +118,7 @@
   - type: Metabolizer
     solutionOnBody: false
     metabolizerTypes: [ Dragon ]
-    groups:
-    - id: Medicine
-    - id: Cryogenic
-    - id: Poison
+    stages: [ "Bloodstream" ] # Aurora's Song - Replace with stages
   - type: Butcherable
     spawned:
     - id: FoodMeatDragon

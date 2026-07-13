@@ -1,0 +1,71 @@
+- type: entity # Floofstation
+  name: pomegranate
+  parent: [SolutionSmall, FoodProduceBase]
+  id: FoodPomegranate
+  description: A delicious, sweet fruit, believed to have special properties.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - sweet
+      - spooky
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nymphalexine # Aurora's Song | refactor to remove horny popups from what is just a fruit.
+        Quantity: 30
+      - ReagentId: Nutriment
+        Quantity: 10
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/pomegranate.rsi
+  - type: Produce
+    seedId: pomegranate
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuicePomegranate
+        Quantity: 20
+  - type: Tag
+    tags:
+    - Fruit
+  - type: FoodSequenceElement
+    entries:
+      Burger: Pomegranate
+      Taco: Pomegranate
+  # TODO: there is going to be an upstream refactor to the way butchering and slicing things works.
+  # when this happens please change this to ToolRefinable. thank you.
+  - type: SliceableFood
+    count: 2
+    slice: FoodPomegranateSlice
+
+- type: entity # Floofstation
+  name: pomegranate slice
+  parent: [SolutionTiny, ProduceSliceBase]
+  id: FoodPomegranateSlice
+  description: A delicious, sweet fruit, believed to have special properties.
+  components:
+  - type: FlavorProfile
+    flavors:
+      - sweet
+      - spooky
+  - type: Sprite
+    sprite: Objects/Specific/Hydroponics/pomegranate.rsi
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: Nymphalexine # Aurora's Song | refactor to remove horny popups from what is just a fruit.
+        Quantity: 15
+      - ReagentId: Nutriment
+        Quantity: 5
+  - type: Extractable
+    juiceSolution:
+      reagents:
+      - ReagentId: JuicePomegranate
+        Quantity: 10
+  - type: Tag
+    tags:
+    - Fruit
+    - Slice
+  - type: FoodSequenceElement
+    entries:
+      Burger: PomegranateSlice
+      Taco: PomegranateSlice

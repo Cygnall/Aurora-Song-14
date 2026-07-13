@@ -7,7 +7,6 @@
   parent: BaseSpeciesIPC
   id: BaseRobotScreen
   bodyPart: Eyes # DeltaV - Moves screen to the eyes layer
-  markingCategory: Eyes
 # End Aurora Song
 
 - type: marking

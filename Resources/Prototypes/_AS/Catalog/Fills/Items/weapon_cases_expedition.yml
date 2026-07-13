@@ -90,3 +90,18 @@
           amount: 1
         - id: ASMagazineSubMachineGun40
           amount: 4
+
+- type: entity
+  parent: WeaponCaseLong
+  id: WeaponCaseLongHushpupExpeditionT4
+  suffix: Dungeon, Hushpup
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponShotgunHushpupExpedition
+          amount: 1
+        - id: NFAmmunitionBoxShellShotgunBuckshot
+          amount: 2

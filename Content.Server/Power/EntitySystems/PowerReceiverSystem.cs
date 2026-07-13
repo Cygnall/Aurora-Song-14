@@ -9,14 +9,17 @@ using Content.Shared.Power.EntitySystems;
 using Content.Shared.Verbs;
 using Robust.Shared.GameStates;
 using Robust.Shared.Utility;
+using Content.Shared.Emp; // Frontier: Upstream - #28984
 
 namespace Content.Server.Power.EntitySystems
 {
-    public sealed class PowerReceiverSystem : SharedPowerReceiverSystem
+    public sealed partial class PowerReceiverSystem : SharedPowerReceiverSystem
     {
-        [Dependency] private readonly IAdminManager _adminManager = default!;
-        private EntityQuery<ApcPowerReceiverComponent> _recQuery;
-        private EntityQuery<ApcPowerProviderComponent> _provQuery;
+        [Dependency] private IAdminManager _adminManager = default!;
+
+        [Dependency] private EntityQuery<ApcPowerReceiverComponent> _recQuery = default!;
+        [Dependency] private EntityQuery<ApcPowerProviderComponent> _provQuery = default!;
+        [Dependency] private EntityQuery<HandsComponent> _handsQuery = default!;
 
         public override void Initialize()
         {
@@ -35,8 +38,8 @@ namespace Content.Server.Power.EntitySystems
 
             SubscribeLocalEvent<ApcPowerReceiverComponent, ComponentGetState>(OnGetState);
 
-            _recQuery = GetEntityQuery<ApcPowerReceiverComponent>();
-            _provQuery = GetEntityQuery<ApcPowerProviderComponent>();
+            SubscribeLocalEvent<ApcPowerReceiverComponent, EmpPulseEvent>(OnEmpPulse); // Frontier: Upstream - #28984
+            SubscribeLocalEvent<ApcPowerReceiverComponent, EmpDisabledRemovedEvent>(OnEmpEnd); // Frontier: Upstream - #28984
         }
 
         private void OnExamined(Entity<ApcPowerReceiverComponent> ent, ref ExaminedEvent args)
@@ -112,7 +115,7 @@ namespace Content.Server.Power.EntitySystems
             if(!args.CanAccess || !args.CanInteract)
                 return;
 
-            if (!HasComp<HandsComponent>(args.User))
+            if (!_handsQuery.HasComp(args.User))
                 return;
 
             if (!_recQuery.TryGetComponent(uid, out var receiver))
@@ -125,7 +128,7 @@ namespace Content.Server.Power.EntitySystems
             {
                 Act = () =>
                 {
-                    TogglePower(uid, user: args.User);
+                    TryTogglePower(uid, user: args.User); // Frontier: Upstream - #28984
                 },
                 Icon = new SpriteSpecifier.Texture(new ("/Textures/Interface/VerbIcons/Spare/poweronoff.svg.192dpi.png")),
                 Text = Loc.GetString("power-switch-component-toggle-verb"),
@@ -171,6 +174,26 @@ namespace Content.Server.Power.EntitySystems
 
             component = receiver;
             return true;
+        }
+
+        // Frontier: Upstream - #28984
+        private void OnEmpPulse(EntityUid uid, ApcPowerReceiverComponent component, ref EmpPulseEvent args)
+        {
+            if (!component.PowerDisabled)
+            {
+                args.Affected = true;
+                args.Disabled = true;
+                TogglePower(uid, false);
+            }
+        }
+
+        // Frontier: Upstream - #28984
+        private void OnEmpEnd(EntityUid uid, ApcPowerReceiverComponent component, ref EmpDisabledRemovedEvent args)
+        {
+            if (component.PowerDisabled)
+            {
+                TogglePower(uid, false);
+            }
         }
     }
 }

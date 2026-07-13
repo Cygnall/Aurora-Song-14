@@ -10,8 +10,6 @@ using Content.Shared.Actions;
 using Content.Shared.Mind;
 using Content.Shared.Mind.Components; // AS
 using Content.Shared.Chat;
-using Content.Shared.NameModifier.Components; // AS
-using Content.Shared.Database; // AS
 using Content.Shared.Silicons.Laws.Components;
 using Content.Shared.Silicons.StationAi;
 using Content.Shared.StationAi;
@@ -24,19 +22,19 @@ using Robust.Shared.Audio.Systems;
 
 namespace Content.Server._Corvax.Silicons.Borgs;
 
-public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
+public sealed partial class AiRemoteControlSystem : SharedAiRemoteControlSystem
 {
-    [Dependency] private readonly SharedActionsSystem _actions = default!;
-    [Dependency] private readonly SiliconLawSystem _lawSystem = default!;
-    [Dependency] private readonly SharedStationAiSystem _stationAiSystem = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
-    [Dependency] private readonly UserInterfaceSystem _userInterface = default!;
-    [Dependency] private readonly SharedTransformSystem _xformSystem = default!;
-    [Dependency] private readonly IChatManager _chatManager = default!;
-    [Dependency] private readonly SharedAudioSystem _audio = default!;
-    [Dependency] private readonly MetaDataSystem _metaSystem = default!; // AS
-    [Dependency] private readonly GhostRoleSystem _ghostSystem = default!; // AS
-    private EntityCoordinates? _coordinates;
+    [Dependency] private SharedActionsSystem _actions = default!;
+    [Dependency] private SiliconLawSystem _lawSystem = default!;
+    [Dependency] private SharedStationAiSystem _stationAiSystem = default!;
+    [Dependency] private SharedMindSystem _mind = default!;
+    [Dependency] private UserInterfaceSystem _userInterface = default!;
+    [Dependency] private SharedTransformSystem _xformSystem = default!;
+    [Dependency] private IChatManager _chatManager = default!;
+    // [Dependency] private SharedAudioSystem _audio = default!; // Aurora's Song
+    [Dependency] private MetaDataSystem _metaSystem = default!; // AS
+    [Dependency] private GhostRoleSystem _ghostSystem = default!; // AS
+    // private EntityCoordinates? _coordinates; // Aurora's Song
 
     public override void Initialize()
     {
@@ -163,7 +161,7 @@ public sealed class AiRemoteControlSystem : SharedAiRemoteControlSystem
 
         _userInterface.TryToggleUi(uid, RemoteDeviceUiKey.Key, actor.PlayerSession);
 
-        var query = EntityManager.EntityQueryEnumerator<AiRemoteControllerComponent>();
+        var query = EntityQueryEnumerator<AiRemoteControllerComponent>();
         var remoteDevices = new List<RemoteDevicesData>();
 
         while (query.MoveNext(out var queryUid, out var comp))

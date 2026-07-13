@@ -19,7 +19,7 @@
 - type: latheRecipe
   parent: BaseRoboticsRecipe
   id: TorsoIPC
-  result: TorsoIPC
+  result: OrganIPCTorso # Aurora's Song - TorsoIPC>OrganIPCTorso
   completetime: 3
   materials:
     Steel: 3000
@@ -32,47 +32,47 @@
 - type: latheRecipe
   parent: BaseIPCLimbRecipe
   id: LeftArmIPC
-  result: LeftArmIPC
+  result: OrganIPCArmLeft # Aurora's Song - LeftArmIPC>OrganIPCArmLeft
 
 - type: latheRecipe
   parent: BaseIPCLimbRecipe
   id: RightArmIPC
-  result: RightArmIPC
+  result: OrganIPCArmRight # Aurora's Song - RightArmIPC>OrganIPCArmRight
 
 - type: latheRecipe
   parent: BaseIPCLimbRecipe
   id: LeftHandIPC
-  result: LeftHandIPC
+  result: OrganIPCHandLeft # Aurora's Song - LeftHandIPC>OrganIPCHandLeft
 
 - type: latheRecipe
   parent: BaseIPCLimbRecipe
   id: RightHandIPC
-  result: RightHandIPC
+  result: OrganIPCHandRight # Aurora's Song - RightHandIPC>OrganIPCHandRight
 
 - type: latheRecipe
   parent: BaseBorgLimbRecipe
   id: LeftLegIPC
-  result: LeftLegIPC
+  result: OrganIPCLegLeft # Aurora's Song - LeftLegIPC>OrganIPCLegLeft
 
 - type: latheRecipe
   parent: BaseBorgLimbRecipe
   id: RightLegIPC
-  result: RightLegIPC
+  result: OrganIPCLegRight # Aurora's Song - RightLegIPC>OrganIPCLegRight
 
 - type: latheRecipe
   parent: BaseIPCLimbRecipe
   id: LeftFootIPC
-  result: LeftFootIPC
+  result: OrganIPCFootLeft # Aurora's Song - LeftFootIPC>OrganIPCFootLeft
 
 - type: latheRecipe
   parent: BaseIPCLimbRecipe
   id: RightFootIPC
-  result: RightFootIPC
+  result: OrganIPCFootRight # Aurora's Song - RightFootIPC>OrganIPCFootRight
 
 - type: latheRecipe
   parent: BaseIPCLimbRecipe
   id: HeadIPC
-  result: HeadIPC
+  result: OrganIPCHead # Aurora's Song - HeadIPC>OrganIPCHead
 
 - type: latheRecipe
   parent: BaseIPCOrganRecipe

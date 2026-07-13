@@ -7,8 +7,10 @@
   flavor: medicine
   color: "#880077"
   worksOnTheDead: true
+  tags: # Aurora's Song
+  - Cryogenic
   metabolisms:
-    Cryogenic:
+    Bloodstream: # Aurora's Song - Cryogenic>Bloodstream
       effects:
       - !type:HealthChange
         conditions:
@@ -29,8 +31,10 @@
   flavor: medicine
   color: "#FFA861"
   worksOnTheDead: true
+  tags: # Aurora's Song
+  - Cryogenic
   metabolisms:
-    Cryogenic:
+    Bloodstream: # Aurora's Song - Cryogenic>Bloodstream
       effects:
       - !type:HealthChange
         conditions:
@@ -40,8 +44,10 @@
           types:
             Poison: -6
             Radiation: -3
-          groups:
-            Brute: 3
+            # Aurora's Song - Convert from groups to types
+            Blunt: 1
+            Slash: 1
+            Piercing: 1
 
 #impstation
 - type: reagent
@@ -53,7 +59,7 @@
   color: "#bdfff3"
   recognizable: true
   metabolisms:
-    Medicine:
+    Bloodstream: # Aurora's Song - Medicine>Bloodstream
       metabolismRate: 0.1 #this should metabolise in the same amount of time as a drink in a 5:1 mix
       effects:
       - !type:AdjustReagent

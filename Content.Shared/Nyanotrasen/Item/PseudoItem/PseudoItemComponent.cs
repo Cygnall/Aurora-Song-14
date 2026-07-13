@@ -25,7 +25,7 @@ public sealed partial class PseudoItemComponent : Component
 
     [DataField, AutoNetworkedField] // Frontier
     public float StoredRotation; // Frontier
-
+    public bool AddedItemComponent = false; // Aurora's Song - tracks whether a temporary item component is being used
     public bool Active = false;
 
     /// <summary>

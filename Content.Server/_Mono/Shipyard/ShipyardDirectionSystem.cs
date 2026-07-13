@@ -9,18 +9,19 @@ namespace Content.Server._Mono.Shipyard;
 /// <summary>
 /// A system that tells players which direction their newly purchased ship is located
 /// </summary>
-public sealed class ShipyardDirectionSystem : EntitySystem
+public sealed partial class ShipyardDirectionSystem : EntitySystem
 {
-    [Dependency] private readonly IChatManager _chatManager = default!;
-    [Dependency] private readonly IPlayerManager _playerManager = default!;
+    [Dependency] private IChatManager _chatManager = default!;
+    [Dependency] private IPlayerManager _playerManager = default!;
+    [Dependency] private EntityManager _entityManager = default!; // Aurora's Song - Use entman
 
     /// <summary>
     /// Sends a message to the player indicating the compass direction of their newly purchased ship
     /// </summary>
     public void SendShipDirectionMessage(EntityUid player, EntityUid ship)
     {
-        if (!TryComp<TransformComponent>(player, out var playerTransform) ||
-            !TryComp<TransformComponent>(ship, out var shipTransform))
+        if (!_entityManager.TryGetComponent<TransformComponent>(player, out var playerTransform) || // Aurora's Song - Use entman
+            !_entityManager.TryGetComponent<TransformComponent>(ship, out var shipTransform)) // Aurora's Song - Use entman
             return;
 
         // Make sure both entities are on the same map

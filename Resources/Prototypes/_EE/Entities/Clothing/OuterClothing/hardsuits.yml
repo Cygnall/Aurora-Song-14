@@ -63,6 +63,8 @@
     severity: Class2
     turnInValues:
     allowedDepartments: [ Security, Command ]
+  - type: FactionClothing # Aurora Song, prevent CDETs from targeting
+    faction: ColonialCommandClothing
 
 - type: entity
   parent: ClothingOuterHardsuitSyndieElite
@@ -98,3 +100,5 @@
     severity: Class2
     turnInValues:
     allowedDepartments: [ Security, Command ]
+  - type: FactionClothing # Aurora Song, prevent CDETs from targeting
+    faction: ColonialCommandClothing

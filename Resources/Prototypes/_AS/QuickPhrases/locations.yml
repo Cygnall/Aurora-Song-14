@@ -12,6 +12,11 @@
 
 - type: quickPhrase
   parent: BaseCivilianLocationPhrase
+  id: LocationPortBorealPhrase
+  text: station-beacon-port-boreal
+
+- type: quickPhrase
+  parent: BaseCivilianLocationPhrase
   id: LocationTheAlleyPhrase
   text: station-beacon-the-alley
 
@@ -39,6 +44,16 @@
   parent: BaseCivilianLocationPhrase
   id: LocationLittleBytePhrase
   text: station-beacon-little-byte
+
+- type: quickPhrase
+  parent: BaseCivilianLocationPhrase
+  id: LocationCargoDepotPhrase
+  text: station-beacon-cargo-depot
+
+- type: quickPhrase
+  parent: BaseCivilianLocationPhrase
+  id: LocationBreathEZPhrase
+  text: station-beacon-breathez
 
 # Engineering
 

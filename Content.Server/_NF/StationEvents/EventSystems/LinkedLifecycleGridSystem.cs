@@ -14,10 +14,10 @@ using Content.Server._AS.Touched;
 
 namespace Content.Server.StationEvents.Events;
 
-public sealed class LinkedLifecycleGridSystem : EntitySystem
+public sealed partial class LinkedLifecycleGridSystem : EntitySystem
 {
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly SharedMindSystem _mind = default!;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private SharedMindSystem _mind = default!;
 
     public override void Initialize()
     {
@@ -112,7 +112,7 @@ public sealed class LinkedLifecycleGridSystem : EntitySystem
         // End Aurora Song
 
         // Get player characters
-        var mobQuery = AllEntityQuery<HumanoidAppearanceComponent, BankAccountComponent, TransformComponent>();
+        var mobQuery = AllEntityQuery<HumanoidProfileComponent, BankAccountComponent, TransformComponent>(); // Aurora's Song - Nubody
         while (mobQuery.MoveNext(out var mobUid, out _, out _, out var xform))
         {
             handledMindContainers.Add(mobUid);
@@ -191,7 +191,7 @@ public sealed class LinkedLifecycleGridSystem : EntitySystem
     // Deletes a grid, reparenting every humanoid and player character that's on it.
     public void UnparentPlayersFromGrid(EntityUid grid, bool deleteGrid, bool ignoreLifeStage = false)
     {
-        if (!EntityManager.EntityExists(grid))
+        if (!Exists(grid))
             return;
 
         if (!ignoreLifeStage && TerminatingOrDeleted(grid))

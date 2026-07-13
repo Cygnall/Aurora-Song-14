@@ -1,0 +1,82 @@
+# Head
+
+- type: marking
+  id: FairyAntennaDroop
+  bodyPart: HeadTop
+  groupWhitelist: [Fairy]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: droop
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: droop-tip
+
+- type: marking
+  id: FairyAntennaFeeler
+  bodyPart: HeadTop
+  groupWhitelist: [Fairy]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: feeler
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: feeler-tip
+
+- type: marking
+  id: FairyAntennaLong
+  bodyPart: HeadTop
+  groupWhitelist: [Fairy]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: long
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: long-tip
+
+- type: marking
+  id: FairyAntennaLowFeeler
+  bodyPart: HeadTop
+  groupWhitelist: [Fairy]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: low_feeler
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: low_feeler-tip
+
+- type: marking
+  id: FairyAntennaSide
+  bodyPart: HeadTop
+  groupWhitelist: [Fairy]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: side
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: side-tip
+
+- type: marking
+  id: FairyAntennaSlug
+  bodyPart: HeadTop
+  groupWhitelist: [Fairy]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: slug
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: slug-tip
+
+- type: marking
+  id: FairyAntennaThin
+  bodyPart: HeadTop
+  groupWhitelist: [Fairy]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: thin
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: thin-tip
+    
+- type: marking
+  id: FairyAntennaWings
+  bodyPart: HeadTop
+  groupWhitelist: [Fairy]
+  sprites:
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: wings
+  - sprite: _AS/Mobs/Customization/Fairy/fairy_antenna.rsi
+    state: wings-tip
+

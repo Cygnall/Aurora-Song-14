@@ -6,18 +6,21 @@
 # GitHub: crystalHex (https://github.com/crystalHex)
 # Discord: ???
 
+# GitHub: SalamanderSkies (https://github.com/salamanderskies)
+# Discord: SalamanderSkies
+
 # Shuttle Notes:
 #
 - type: vessel
   id: DecadeDove
   parent: BaseVessel
   name: DYS Dove
-  description: Versatile expedition-capable multi-purpose light freighter.
-  price: 77000 # 64078 0.2 76893.6
+  description: A versatile, expedition-capable light freighter.   # Aurora's Song
+  price: 65000 # 64078 0.2 76893.6                                  Aurora's Song - ~41k, 77000 > 65000
   category: Medium
   group: Expedition
-  shuttlePath: /Maps/_NF/Shuttles/Expedition/decadedove.yml
-  guidebookPage: Null
+  shuttlePath: /Maps/_AS/Shuttles/Expedition/dove.yml             # Aurora's Song - Redirect to Aurora version
+  guidebookPage: ShipyardDove                                     # Aurora's Song
   class:
   - Expedition
   engine:
@@ -26,7 +29,7 @@
 - type: gameMap
   id: DecadeDove
   mapName: 'DYS Dove'
-  mapPath: /Maps/_NF/Shuttles/Expedition/decadedove.yml
+  mapPath: /Maps/_AS/Shuttles/Expedition/dove.yml                 # Aurora's Song - Redirect to Aurora version
   minPlayers: 0
   stations:
     DecadeDove:

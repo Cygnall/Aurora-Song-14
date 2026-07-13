@@ -1,0 +1,30 @@
+# Aurora's Song - Convert to nubody and simplify
+
+# Organs with boosted metabolizm
+- type: entity
+  id: OrganSyntheticHeart
+  parent: [OrganHumanHeart, BaseC3SyndicateContraband] # Frontier: add BaseC3SyndicateContraband
+  name: synthetic heart
+  description: "Whirrs and pumps blood."
+  components:
+  - type: Metabolizer
+    maxReagents: 4
+
+- type: entity
+  id: OrganSyntheticLiver
+  parent: [OrganHumanLiver, BaseC3SyndicateContraband] # Frontier: add BaseC3SyndicateContraband
+  name: synthetic liver
+  description: "Filters toxins from the bloodstream at higher rate than old 'ganic liver."
+  components:
+  - type: Metabolizer
+    maxReagents: 5
+    updateInterval: 10.0 # Aurora's Song - Increase metabolite metabolism
+
+- type: entity
+  id: OrganSyntheticKidneys
+  parent: [OrganHumanKidneys, BaseC3SyndicateContraband] # Frontier: add BaseC3SyndicateContraband
+  name: synthetic kidneys
+  description: "Filters toxins from the bloodstream at higher rate than old 'ganic liver."
+  components:
+  - type: Metabolizer
+    maxReagents: 5

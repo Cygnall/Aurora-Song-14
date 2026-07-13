@@ -1,0 +1,268 @@
+#Aurora's Song | Replaced names and descriptions with locale strings in structures.yml
+# Barrels
+# Base
+- type: entity
+  parent: BaseStructureDynamic
+  id: N14BaseBarrel
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: blue-closed
+    netsync: false
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeAabb
+            bounds: "-0.2,-0.2,0.2,0.45"
+        density: 50
+        mask:
+        - MachineMask
+        layer:
+        - WallLayer
+  - type: Damageable
+    damageModifierSet: Metallic
+  - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Heat
+        damage: 5
+      behaviors:
+      - !type:SolutionExplosionBehavior
+        solution: barrel
+    - trigger:
+        !type:DamageTypeTrigger
+        damageType: Piercing
+        damage: 5
+      behaviors:
+      - !type:SolutionExplosionBehavior
+        solution: barrel
+    - trigger:
+        !type:DamageTrigger
+        damage: 50
+      behaviors:
+      - !type:SpillBehavior
+        solution: barrel
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+
+# Base Open
+- type: entity
+  parent: [SolutionTank, SolutionHuge, N14BaseBarrel] # Aurora's Song - Convert to solution
+  id: N14BaseBarrelOpen
+  suffix: open
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: DrainableSolution
+    solution: barrel
+  - type: ReagentTank
+
+# Closed
+- type: entity
+  parent: N14BaseBarrel
+  id: N14BlackBarrel
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: black-closed
+
+- type: entity
+  parent: N14BaseBarrel
+  id: N14BlueBarrel
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: blue-closed
+
+- type: entity
+  parent: N14BaseBarrel
+  id: N14RedBarrel
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: red-closed
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 120
+  - type: DamageOnToolInteract
+    tools: Welding
+    weldingDamage:
+      types:
+        Heat: 10
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 90
+
+- type: entity
+  parent: N14BaseBarrel
+  id: N14YellowBarrel
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: yellow-closed
+  - type: RadiationSource
+    intensity: 2
+    slope: 1
+
+# Open
+- type: entity
+  parent: N14BaseBarrelOpen
+  id: N14BlackBarrelOpen
+  suffix: open
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: black-open
+
+- type: entity
+  parent: N14BaseBarrelOpen
+  id: N14BlueBarrelOpen
+  suffix: open
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: blue-open
+
+- type: entity
+  parent: N14BaseBarrelOpen
+  id: N14RedBarrelOpen
+  suffix: open
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: red-open
+
+- type: entity
+  parent: N14BaseBarrelOpen
+  id: N14YellowBarrelOpen
+  suffix: open
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: yellow-open
+  - type: RadiationSource
+    intensity: 1
+    slope: 1
+
+# Full barrels
+- type: entity
+  parent: N14BlackBarrelOpen
+  id: N14BlackBarrelFull
+  suffix: full
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: black-full
+    # TODO - fill with some sort of waste product? Maybe just dirty water.
+
+- type: entity
+  parent: N14RedBarrelOpen
+  id: N14RedBarrelFull
+  suffix: full
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: red-full
+  - type: Solution # Aurora's Song - Convert to solution
+    solution:
+      reagents:
+      - ReagentId: WeldingFuel
+        Quantity: 120
+  - type: DamageOnToolInteract
+    tools: Welding
+    weldingDamage:
+      types:
+        Heat: 10
+  - type: Explosive
+    explosionType: Default
+    totalIntensity: 90
+
+- type: entity
+  parent: N14YellowBarrelOpen
+  id: N14YellowBarrelFull
+  suffix: full
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/barrels.rsi
+    state: yellow-full
+  - type: RadiationSource
+    intensity: 3
+    slope: 1
+  - type: PointLight
+    netsync: false
+    radius: 1.5
+    energy: 1.6
+    color: "#3db83b"
+    castShadows: false
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 1000
+      behaviors:
+      - !type:SpillBehavior
+        solution: barrel
+      - !type:PlaySoundBehavior
+        sound:
+          collection: MetalBreak
+      - !type:DoActsBehavior
+        acts: ["Destruction"]
+    # TODO - fill with some sort of radioactive waste reagent.
+
+# Burning Barrels
+- type: entity
+  parent: BaseStructureDynamic
+  id: N14BurningBarrel
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/burningbarrel.rsi
+    state: burnbarrel
+    netsync: false
+    noRot: true
+  - type: Fixtures
+    fixtures:
+      fix1:
+        shape:
+          !type:PhysShapeCircle
+            radius: 0.2
+        density: 50
+        mask:
+        - MachineMask
+        layer:
+        - MidImpassable
+        - LowImpassable
+
+- type: entity
+  parent: N14BurningBarrel
+  id: N14BurningBarrelLit
+  components:
+  - type: Sprite
+    sprite: _Nuclear14/Structures/Storage/burningbarrel.rsi
+    state: burnbarrel_lit
+    netsync: false
+  - type: PointLight
+    color: "#E25822"
+    radius: 1.0
+    energy: 5.0
+    netsync: false
+  - type: LightBehaviour
+    behaviours:
+      - !type:RandomizeBehaviour # immediately make it bright and flickery
+        id: N14burnbarrel_lit
+        interpolate: Nearest
+        minDuration: 0.02
+        maxDuration: 0.06
+        startValue: 6.0
+        endValue: 9.0
+        property: Energy
+        isLooped: true

@@ -4,54 +4,53 @@ using System.Linq;
 using System.Numerics;
 using Robust.Shared.Utility;
 using Content.Server.Shuttles.Events;
-using Content.Shared.IdentityManagement;
+using Content.Shared.Verbs; // Aurora's Song: LR Config
 
 namespace Content.Server.Pinpointer;
 
-public sealed class PinpointerSystem : SharedPinpointerSystem
+public sealed partial class PinpointerSystem : SharedPinpointerSystem
 {
-    [Dependency] private readonly SharedTransformSystem _transform = default!;
-    [Dependency] private readonly SharedAppearanceSystem _appearance = default!;
-
-    private EntityQuery<TransformComponent> _xformQuery;
+    [Dependency] private SharedTransformSystem _transform = default!;
+    [Dependency] private SharedAppearanceSystem _appearance = default!;
 
     public override void Initialize()
     {
         base.Initialize();
-        _xformQuery = GetEntityQuery<TransformComponent>();
 
         SubscribeLocalEvent<PinpointerComponent, ActivateInWorldEvent>(OnActivate);
         SubscribeLocalEvent<FTLCompletedEvent>(OnLocateTarget);
+        SubscribeLocalEvent<PinpointerComponent, GetVerbsEvent<InteractionVerb>>(AddToggleVerb);
     }
 
-    public override bool TogglePinpointer(EntityUid uid, PinpointerComponent? pinpointer = null)
+    public override bool TogglePinpointer(Entity<PinpointerComponent?> ent)
     {
-        if (!Resolve(uid, ref pinpointer))
+        if (!Resolve(ent, ref ent.Comp))
             return false;
 
-        var isActive = !pinpointer.IsActive;
-        SetActive(uid, isActive, pinpointer);
-        UpdateAppearance(uid, pinpointer);
+        var isActive = !ent.Comp.IsActive;
+        SetActive(ent, isActive);
+        UpdateAppearance(ent);
         return isActive;
     }
 
-    private void UpdateAppearance(EntityUid uid, PinpointerComponent pinpointer, AppearanceComponent? appearance = null)
+    private void UpdateAppearance(Entity<PinpointerComponent?, AppearanceComponent?> ent)
     {
-        if (!Resolve(uid, ref appearance))
+        if (!Resolve(ent, ref ent.Comp1) || !Resolve(ent, ref ent.Comp2))
             return;
-        _appearance.SetData(uid, PinpointerVisuals.IsActive, pinpointer.IsActive, appearance);
-        _appearance.SetData(uid, PinpointerVisuals.TargetDistance, pinpointer.DistanceToTarget, appearance);
+
+        _appearance.SetData(ent, PinpointerVisuals.IsActive, ent.Comp1.IsActive, ent.Comp2);
+        _appearance.SetData(ent, PinpointerVisuals.TargetDistance, ent.Comp1.DistanceToTarget, ent.Comp2);
     }
 
-    private void OnActivate(EntityUid uid, PinpointerComponent component, ActivateInWorldEvent args)
+    private void OnActivate(Entity<PinpointerComponent> ent, ref ActivateInWorldEvent args)
     {
         if (args.Handled || !args.Complex)
             return;
 
-        TogglePinpointer(uid, component);
+        TogglePinpointer(ent.AsNullable());
 
-        if (!component.CanRetarget)
-            LocateTarget(uid, component);
+        if (!ent.Comp.CanRetarget)
+            LocateTarget(ent);
 
         args.Handled = true;
     }
@@ -69,12 +68,14 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
             if (pinpointer.CanRetarget)
                 continue;
 
-            LocateTarget(uid, pinpointer);
+            LocateTarget((uid, pinpointer));
         }
     }
 
-    private void LocateTarget(EntityUid uid, PinpointerComponent component)
+    private void LocateTarget(Entity<PinpointerComponent> ent)
     {
+        var component = ent.Comp;
+
         // try to find target from whitelist
         if (component.IsActive && component.Component != null)
         {
@@ -85,8 +86,8 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
                 return;
             }
 
-            var target = FindTargetFromComponent(uid, reg.Type);
-            SetTarget(uid, target, component);
+            var target = FindTargetFromComponent(ent.Owner, reg.Type);
+            SetTarget(ent.AsNullable(), target);
         }
     }
 
@@ -99,7 +100,7 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
         var query = EntityQueryEnumerator<PinpointerComponent>();
         while (query.MoveNext(out var uid, out var pinpointer))
         {
-            UpdateDirectionToTarget(uid, pinpointer);
+            UpdateDirectionToTarget((uid, pinpointer));
         }
     }
 
@@ -107,21 +108,19 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
     ///     Try to find the closest entity from whitelist on a current map
     ///     Will return null if can't find anything
     /// </summary>
-    private EntityUid? FindTargetFromComponent(EntityUid uid, Type whitelist, TransformComponent? transform = null)
+    private EntityUid? FindTargetFromComponent(Entity<TransformComponent?> ent, Type whitelist)
     {
-        _xformQuery.Resolve(uid, ref transform, false);
-
-        if (transform == null)
+        if (!Resolve(ent, ref ent.Comp))
             return null;
 
         // sort all entities in distance increasing order
-        var mapId = transform.MapID;
+        var mapId = ent.Comp.MapID;
         var l = new SortedList<float, EntityUid>();
-        var worldPos = _transform.GetWorldPosition(transform);
+        var worldPos = _transform.GetWorldPosition(ent.Comp);
 
         foreach (var (otherUid, _) in EntityManager.GetAllComponents(whitelist))
         {
-            if (!_xformQuery.TryGetComponent(otherUid, out var compXform) || compXform.MapID != mapId)
+            if (!TryComp(otherUid, out TransformComponent? compXform) || compXform.MapID != mapId)
                 continue;
 
             var dist = (_transform.GetWorldPosition(compXform) - worldPos).LengthSquared();
@@ -135,10 +134,12 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
     /// <summary>
     ///     Update direction from pinpointer to selected target (if it was set)
     /// </summary>
-    protected override void UpdateDirectionToTarget(EntityUid uid, PinpointerComponent? pinpointer = null)
+    protected override void UpdateDirectionToTarget(Entity<PinpointerComponent?> ent)
     {
-        if (!Resolve(uid, ref pinpointer))
+        if (!Resolve(ent, ref ent.Comp))
             return;
+
+        var pinpointer = ent.Comp;
 
         if (!pinpointer.IsActive)
             return;
@@ -148,40 +149,40 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
         var target = pinpointer.Target;
         if (target == null || !Exists(target.Value))
         {
-            SetDistance(uid, Distance.Unknown, pinpointer);
-            TrySetArrowAngle(uid, Angle.Zero, pinpointer); // Frontier
+            SetDistance(ent, Distance.Unknown);
+            TrySetArrowAngle(ent, Angle.Zero); // Frontier
             if (oldDist != pinpointer.DistanceToTarget) // Frontier
-                UpdateAppearance(uid, pinpointer); // Frontier
+                UpdateAppearance(ent); // Frontier
             return;
         }
 
-        var dirVec = CalculateDirection(uid, target.Value);
+        var dirVec = CalculateDirection(ent, target.Value);
         // var oldDist = pinpointer.DistanceToTarget; // Frontier: moved up
 
         // Frontier: if the pinpointer has a max range and the distance to target is greater than the max range, set the distance to unknown
         if (pinpointer.MaxRange > 0 && dirVec != null && dirVec.Value.LengthSquared() > pinpointer.MaxRange * pinpointer.MaxRange)
         {
-            SetDistance(uid, Distance.Unknown, pinpointer);
-            TrySetArrowAngle(uid, Angle.Zero, pinpointer);
+            SetDistance(ent, Distance.Unknown);
+            TrySetArrowAngle(ent, Angle.Zero);
             if (oldDist != pinpointer.DistanceToTarget) // Frontier
-                UpdateAppearance(uid, pinpointer); // Frontier
+                UpdateAppearance(ent); // Frontier
             return;
         }
 
         if (dirVec != null)
         {
             var angle = dirVec.Value.ToWorldAngle();
-            TrySetArrowAngle(uid, angle, pinpointer);
+            TrySetArrowAngle(ent, angle);
             var dist = CalculateDistance(dirVec.Value, pinpointer);
-            SetDistance(uid, dist, pinpointer);
+            SetDistance(ent, dist);
         }
         else
         {
-            SetDistance(uid, Distance.Unknown, pinpointer);
-            TrySetArrowAngle(uid, Angle.Zero, pinpointer); // Frontier
+            SetDistance(ent, Distance.Unknown);
+            TrySetArrowAngle(ent, Angle.Zero); // Frontier
         }
         if (oldDist != pinpointer.DistanceToTarget)
-            UpdateAppearance(uid, pinpointer);
+            UpdateAppearance(ent);
     }
 
     /// <summary>
@@ -190,12 +191,10 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
     /// <returns>Null if failed to calculate distance between two entities</returns>
     private Vector2? CalculateDirection(EntityUid pinUid, EntityUid trgUid)
     {
-        var xformQuery = GetEntityQuery<TransformComponent>();
-
         // check if entities have transform component
-        if (!xformQuery.TryGetComponent(pinUid, out var pin))
+        if (!TryComp(pinUid, out TransformComponent? pin))
             return null;
-        if (!xformQuery.TryGetComponent(trgUid, out var trg))
+        if (!TryComp(trgUid, out TransformComponent? trg))
             return null;
 
         // check if they are on same map
@@ -203,18 +202,24 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
             return null;
 
         // get world direction vector
-        var dir = _transform.GetWorldPosition(trg, xformQuery) - _transform.GetWorldPosition(pin, xformQuery);
+        var dir = _transform.GetWorldPosition(trg) - _transform.GetWorldPosition(pin);
         return dir;
     }
 
     private Distance CalculateDistance(Vector2 vec, PinpointerComponent pinpointer)
     {
         var dist = vec.Length();
-        if (dist <= pinpointer.ReachedDistance)
+        // Begin Aurora's Song
+        float ModifiedReachedDistance = pinpointer.LongRange ? pinpointer.ReachedDistance * 256 : pinpointer.ReachedDistance; // 256 metres in LR configuration with default value (1 metre)
+        float ModifiedCloseDistance = pinpointer.LongRange ? pinpointer.CloseDistance * 128 : pinpointer.CloseDistance; // 1024 metres in LR configuration with default value (8 metres)
+        float ModifiedMediumDistance = pinpointer.LongRange ? pinpointer.MediumDistance * 256 : pinpointer.MediumDistance; // 4096 metres in LR configuration with default value (16 metres)
+        // End Aurora's Song
+
+        if (dist <= ModifiedReachedDistance) // Aurora's Song: Set to use Modified for dynamicism
             return Distance.Reached;
-        else if (dist <= pinpointer.CloseDistance)
+        else if (dist <= ModifiedCloseDistance) // Aurora's Song: Set to use Modified for dynamicism
             return Distance.Close;
-        else if (dist <= pinpointer.MediumDistance)
+        else if (dist <= ModifiedMediumDistance) // Aurora's Song: Set to use Modified for dynamicism
             return Distance.Medium;
         else
             return Distance.Far;
@@ -227,8 +232,30 @@ public sealed class PinpointerSystem : SharedPinpointerSystem
             return;
 
         pinpointer.Target = null;
-        UpdateDirectionToTarget(uid, pinpointer);
-        UpdateAppearance(uid, pinpointer);
+        UpdateDirectionToTarget((uid, pinpointer));
+        UpdateAppearance((uid, pinpointer));
     }
     // End Frontier: clear function
+
+    // Aurora's Song: Verb and Function for toggling LR configuration
+    private void AddToggleVerb(EntityUid uid, PinpointerComponent component, GetVerbsEvent<InteractionVerb> args)
+    {
+        if (!args.CanInteract || !args.CanAccess || args.Hands == null)
+            return;
+
+        //here we build our dynamic verb. Using the object's sprite for now to make it more dynamic for the moment.
+        InteractionVerb toggleVerb = new()
+        {
+            IconEntity = GetNetEntity(uid),
+            Act = () => ToggleState(component),
+            Text = component.LongRange ? Loc.GetString("verb-pinpointer-deactivate-text") : Loc.GetString("verb-pinpointer-activate-text"),
+            Priority = 3
+        };
+
+        args.Verbs.Add(toggleVerb);
+    }
+    private void ToggleState(PinpointerComponent component)
+    {
+        component.LongRange = !component.LongRange;
+    }
 }

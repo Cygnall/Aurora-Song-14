@@ -23,7 +23,7 @@ GITHUB_API_URL = os.environ.get("GITHUB_API_URL", "https://api.github.com")
 DISCORD_SPLIT_LIMIT = 2000
 DISCORD_WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
-CHANGELOG_FILE = "Resources/Changelog/Changelog.yml" # Frontier: Changelog.yml<Frontier.yml Aurora Song Frontier.yml>Changelog.yml
+CHANGELOG_FILE = "Resources/Changelog/Aurora.yml" # Frontier: Changelog.yml<Frontier.yml Aurora's Song - Frontier.yml>Aurora.yml
 
 TYPES_TO_EMOJI = {"Fix": "🐛", "Add": "🆕", "Remove": "❌", "Tweak": "⚒️"}
 

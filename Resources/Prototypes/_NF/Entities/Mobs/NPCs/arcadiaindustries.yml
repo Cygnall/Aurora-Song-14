@@ -67,9 +67,11 @@
       angle: 0
       animation: WeaponArcBite
       damage:
-        groups:
-          Brute: 4
-    - type: Damageable
+        types: # Aurora's Song - Convert from groups to types
+          Blunt: 1.33
+          Slash: 1.34
+          Piercing: 1.33
+    - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
       damageContainer: Inorganic
     - type: Bloodstream
       bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
@@ -129,7 +131,7 @@
         types:
           Piercing: 5
           Heat: 5
-    - type: Damageable
+    - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
       damageContainer: Inorganic
     - type: Bloodstream
       bloodReferenceSolution: # Aurora's Song - Update bloodstream yml
@@ -204,7 +206,7 @@
         - SemiAuto
       soundGunshot: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
     - type: CombatMode
-    - type: Damageable
+    - type: Injurable # Aurora's Song - Extract damageContainer to Injurable
       damageContainer: Inorganic
     - type: Bloodstream
       bloodReferenceSolution: # Aurora's Song - Update bloodstream yml

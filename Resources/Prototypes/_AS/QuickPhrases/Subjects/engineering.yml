@@ -1,0 +1,19 @@
+- type: quickPhrase
+  id: HeliumPhrase
+  parent: BaseEngineeringSubjectPhrase
+  text: phrase-helium
+
+- type: quickPhrase
+  id: AmmoniaPhrase
+  parent: BaseEngineeringSubjectPhrase
+  text: phrase-ammonia
+
+- type: quickPhrase
+  id: RespironPhrase
+  parent: BaseEngineeringSubjectPhrase
+  text: phrase-respiron
+
+- type: quickPhrase
+  id: WallPhrase
+  parent: BaseEngineeringSubjectPhrase
+  text: phrase-wall

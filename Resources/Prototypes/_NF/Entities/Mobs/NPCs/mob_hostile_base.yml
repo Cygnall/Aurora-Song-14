@@ -36,18 +36,13 @@
 
 # region Regeneration
 - type: entity
+  parent: [ MobPassiveRegen ] # Aurora's Song - Use inheritance more wisely
   id: MobPassiveRegenWeak
   abstract: true
   components:
   - type: PassiveDamage
     allowedStates:
     - Alive
-    damageCap: 500
-    damage:
-      groups:
-        Brute: -0.5
-        Burn: -0.5
-        Airloss: -1
 
 - type: entity
   id: MobPassiveRegen
@@ -57,14 +52,20 @@
     allowedStates:
     - Alive
     - Critical
-    damageCap: 500
     damage:
-      groups:
-        Brute: -0.5
-        Burn: -0.5
-        Airloss: -1
+      types: # Aurora's Song - Convert from groups to types
+        Blunt: -0.2
+        Slash: -0.15
+        Piercing: -0.15
+        Heat: -0.13
+        Shock: -0.12
+        Cold: -0.13
+        Caustic: -0.12
+        Asphyxiation: -0.5
+        Bloodloss: -0.5
 
 - type: entity
+  parent: [ MobPassiveRegen ] # Aurora's Song - Use inheritance more wisely
   id: MobPassiveRegenStrong
   abstract: true
   components:
@@ -73,12 +74,6 @@
     - Alive
     - Critical
     - Dead
-    damageCap: 9999
-    damage:
-      groups:
-        Brute: -0.5
-        Burn: -0.5
-        Airloss: -1
 #endregion
 
 #region Restrictions
@@ -108,7 +103,6 @@
     - type: CanMoveInAir
     - type: Tag
     - type: Access
-    - type: Timer
     - type: TimedSpawner
     - type: Jittering
 
@@ -437,7 +431,8 @@
   - MobBloodstream
   - MobFlammable
   - MobEnhancedMovement
-  - BaseMobSpecies
+  - AppearanceHuman # Aurora's Song
+  - BaseSpeciesMob # Aurora's Song - BaseMobSpecies>BaseSpeciesMob
   - MobHumanoidHostileAIComplex
   - BaseC3MobHuman
   - NFBaseMobRestrictions
@@ -623,5 +618,6 @@
   - type: GibOnTrigger
     deleteItems: true
     deleteOrgans: true
-    gib: false
-    useArgumentEntity: true
+  # Aurora's Song - Remove old NF trigger
+  #   gib: false
+  #   useArgumentEntity: true

@@ -1,0 +1,33 @@
+- type: pointOfInterest
+  id: BreathEZ
+  parent: BasePOI
+  name: "BreathEZ Motel"
+  minimumDistance: 5500
+  maximumDistance: 6000
+  spawnGamePreset: [ NFAdventure, NFPirate ]
+  spawnGroup: Motel
+  gridPath: /Maps/_AS/POI/breathEZ.yml
+  addComponents:
+  - type: StationTransit
+    routes:
+      MinorPointsOfInterest: 10
+
+- type: gameMap
+  id: BreathEZ
+  mapName: "BreathEZ Motel"
+  mapPath: /Maps/_AS/POI/breathEZ.yml
+  minPlayers: 0
+  stations:
+    BreathEZ:
+      stationProto: StandardFrontierOutpost
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: "BreathEZ Motel"
+        - type: StationJobs
+          availableJobs: {}
+        - type: StationDeadDropHintExempt
+        - type: VariationPassExemption
+          cutWireExemption: true
+          poweredLightExemption: true
+          puddleMessExemption: true
+          entitySpawnExemption: true
