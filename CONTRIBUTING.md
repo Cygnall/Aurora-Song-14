@@ -7,7 +7,7 @@ If you're considering contributing to Aurora's Song, [Wizard's Den's PR guidelin
 Importantly, do not make webedits. From the text above:
 > Do not use GitHub's web editor to create PRs. PRs submitted through the web editor may be closed without review.
 
-"Upstream" refers to the [new-frontiers-14/frontier-station-14](https://github.com/new-frontiers-14/frontier-station-14) repository that this fork was created from.
+"Upstream" refers to the [space-wizards/space-station-14](https://github.com/space-wizards/space-station-14.git). While our upstream is now Wizard's Den, this repository was originally forked from [new-frontiers-14/frontier-station-14](https://github.com/new-frontiers-14/frontier-station-14).
 
 # Aurora's Song specific content
 
@@ -25,7 +25,7 @@ Examples:
 
 If you make a change to an upstream C# or YAML file, **you must add comments on or around the changed lines**.
 The comments should clarify what changed, to make conflict resolution simpler when a file is changed upstream.
-If you make changes to values, to be consistent, leave a comment in the form `Aurora's Song - OLD<NEW`.
+If you make changes to values, to be consistent, leave a comment in the form `Aurora's Song - OLD>NEW`.
 
 For YAML specifically, if you add a component or add a list of contiguous fields, use block comments, but if you make limited edits to a component's fields, comment the fields individually.
 
@@ -61,14 +61,14 @@ A cyborg module with an added moduleId field (inline blank comment), a commented
     - HydroponicsToolSpade
     - HydroponicsToolClippers
     # - Bucket # Aurora's Song
-  # Aurora's Song - droppable borg items
+  # Aurora's Song Start - droppable borg items
   - type: DroppableBorgModule
     items:
     - id: Bucket
       whitelist:
         tags:
         - Bucket
-  # End Aurora's Song
+  # Aurora's Song End
 ```
 
 A comment on a new imported namespace:
@@ -82,12 +82,12 @@ component.Capacity = state.Capacity;
 
 component.UIUpdateNeeded = true;
 
-// Aurora's Song - ensure signature colour is consistent
+// Aurora's Song Start - ensure signature colour is consistent
 if (TryComp<StampComponent>(uid, out var stamp))
 {
     stamp.StampedColor = state.Color;
 }
-// End Aurora's Song
+// Aurora's Song End
 ```
 
 An edit to a Delta-V locale file, note the `OLD>NEW` format and the separate line for the comment.
