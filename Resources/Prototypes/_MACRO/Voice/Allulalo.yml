@@ -25,7 +25,7 @@
     Chitter:
       path: /Audio/_MACRO/Voice/Allulalo/allulalo_chitter.ogg
     Sneeze:
-      collection: UnisexSneezes #placeholder
+      collection: MaleSneezes #placeholder - Aurora's Song UnisexSneezes > MaleSneezes
     Cough:
       path: /Audio/Voice/Vox/vox_cough.ogg #placeholder
     Yawn:

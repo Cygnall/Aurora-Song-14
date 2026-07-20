@@ -171,7 +171,7 @@
       Female: UnisexAllulalo
       Unsexed: UnisexAllulalo
   - type: Damageable
-    damageContainer: Biological
+    # damageContainer: Biological - Aurora's Song
     damageModifierSet: Allulalo #stops them from being oppressive hopefully
   - type: Bloodstream
     bloodReferenceSolution:
@@ -215,7 +215,7 @@
   - type: MeleeChemicalInjector
     solution: melee
   - type: SolutionRegeneration
-    solution: melee
+    # solution: melee - Aurora's Song
     generated:
       reagents:
       - ReagentId: Ethanotoxin
