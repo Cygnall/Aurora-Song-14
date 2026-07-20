@@ -11,13 +11,13 @@ using Robust.Shared.Timing;
 
 namespace Content.Shared._MACRO.TooShortForUI;
 
-public sealed class TooShortForUI : EntitySystem
+public sealed partial class TooShortForUI : EntitySystem // Aurora's Song - Make partial
 {
-    [Dependency] private readonly EntityWhitelistSystem _whitelist = default!;
-    [Dependency] private readonly IGameTiming _timing = default!;
-    [Dependency] private readonly INetManager _net = default!;
-    [Dependency] private readonly SharedGravitySystem _gravity = default!;
-    [Dependency] private readonly SharedPopupSystem _popup = default!;
+    [Dependency] private EntityWhitelistSystem _whitelist = default!; // Aurora's Song - Remove readonly
+    [Dependency] private IGameTiming _timing = default!; // Aurora's Song - Remove readonly
+    [Dependency] private INetManager _net = default!; // Aurora's Song - Remove readonly
+    [Dependency] private SharedGravitySystem _gravity = default!; // Aurora's Song - Remove readonly
+    [Dependency] private SharedPopupSystem _popup = default!; // Aurora's Song - Remove readonly
 
     public override void Initialize()
     {
