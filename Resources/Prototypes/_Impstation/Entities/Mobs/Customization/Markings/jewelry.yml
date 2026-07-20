@@ -124,3 +124,35 @@
     state: r_hand_rings1
   - sprite: _Impstation/Mobs/Customization/jewelry.rsi
     state: r_hand_rings2
+
+# Aurora's Song Start - Allu can have rings, as treat.
+- type: marking
+  id: WingRingsLeft
+  bodyPart: LHand
+  groupWhitelist: [Allulalo]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: l_hand_rings1
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: l_hand_rings2
+
+- type: marking
+  id: WingRingsRight
+  bodyPart: RHand
+  groupWhitelist: [Allulalo]
+  coloring:
+    default:
+      type:
+        !type:SimpleColoring
+          color: "#ffc833"
+  sprites:
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: r_hand_rings1
+  - sprite: _Impstation/Mobs/Customization/jewelry.rsi
+    state: r_hand_rings2
+# Aurora's Song End

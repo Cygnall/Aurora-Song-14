@@ -177,7 +177,7 @@
     bloodReferenceSolution:
       reagents:
       - ReagentId: BloodAllulalo
-        Quantity: 250 #should be 50 less than the default of 300. theyre small
+        Quantity: 480 # Aurora's Song - was 250, 50 less than the default of 300. 4L of blood.
   - type: DamageVisuals
     damageOverlayGroups:
       Brute:
@@ -200,12 +200,18 @@
     damage:
       types:
         Piercing: 4
-  - type: SolutionContainerManager
+  # Aurora's Song Start
+  - type: SolutionManager
     solutions:
-      melee:
-        reagents:
-        - ReagentId: Ethanotoxin
-          Quantity: 4 #you can bite someone four times. upped from two based on feedback
+    - SolutionVenomAllulalo
+  # Aurora's Song End
+# Aurora's Song - Use SolutionManager instead
+#  - type: SolutionContainerManager
+#    solutions:
+#      melee:
+#        reagents:
+#        - ReagentId: Ethanotoxin
+#          Quantity: 4 #you can bite someone four times. upped from two based on feedback
   - type: MeleeChemicalInjector
     solution: melee
   - type: SolutionRegeneration
@@ -374,3 +380,17 @@
 - type: entity
   parent: [ OrganBaseKidneys, OrganAllulaloInternal, OrganHumanMetabolizer ]
   id: OrganAllulaloKidneys
+
+# Aurora's Song Start
+- type: entity
+  parent: Solution
+  id: SolutionVenomAllulalo
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    id: melee
+    solution:
+      reagents:
+      - ReagentId: Ethanotoxin
+        Quantity: 4
+# Aurora's Song End

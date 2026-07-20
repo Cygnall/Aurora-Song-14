@@ -67,6 +67,7 @@
   id: BaseArmsCyberlimb
   invertGroupWhitelist: true
   groupWhitelist:
+  - Allulalo
   - Harpy
   - Vox
   - Diona
@@ -78,6 +79,7 @@
   id: BaseLegsCyberlimb
   invertGroupWhitelist: true
   groupWhitelist:
+  - Allulalo
   - Harpy
   - Vox
   - Diona
