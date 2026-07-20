@@ -52,6 +52,9 @@ trait-goblin-blood-desc = You have green, foul-smelling blood, as seen in Goblin
 trait-cryox-blood-name = Cryoxadone blood
 trait-cryox-blood-desc = You have cryoxadone for blood, as seen in Sheleg and many space animals.
 
+trait-methylated-blood-name = Methylated blood
+trait-methylated-blood-desc = You have ethanol-based blood, as seen in Allulalo.
+
 trait-heavyweight-name = Heavyweight
 trait-heavyweight-desc = Makes you harder to move.
 

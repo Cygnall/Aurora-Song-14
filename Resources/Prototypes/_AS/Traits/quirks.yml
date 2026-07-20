@@ -118,3 +118,14 @@
   components:
     - type: BloodSwap
       bloodReagent: Cryoxadone
+
+- type: trait
+  id: BloodSwapMethylated
+  name: trait-methylated-blood-name
+  description: trait-methylated-blood-desc
+  category: BloodSwapTraits
+  cost: 1
+  speciesBlacklist: [IPC, Allulalo]
+  components:
+    - type: BloodSwap
+      bloodReagent: BloodAllulalo
