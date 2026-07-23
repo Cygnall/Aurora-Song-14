@@ -218,10 +218,10 @@
   # - /Audio/_Goobstation/Heretic/Ambience/Antag/Heretic/heretic_gain.ogg
   # - /Audio/_Goobstation/Heretic/castsummon.ogg
   # Aurora's Song Edit End
-  - /Audio/_Impstation/Allulalo/allulalo_say.ogg
-  - /Audio/_Impstation/Allulalo/allulalo_ask.ogg
-  - /Audio/_Impstation/Allulalo/allulalo_exclaim.ogg
-  - /Audio/_Impstation/Allulalo/allulalo_deathgasp.ogg
+  - /Audio/_MACRO/Voice/Allulalo/allulalo_say.ogg
+  - /Audio/_MACRO/Voice/Allulalo/allulalo_ask.ogg
+  - /Audio/_MACRO/Voice/Allulalo/allulalo_exclaim.ogg
+  - /Audio/_MACRO/Voice/Allulalo/allulalo_deathgasp.ogg
   # Aurora's Song Edit Start
   # - /Audio/_Impstation/Animals/bananadeer_eee.ogg
   # - /Audio/_Impstation/Animals/bros_hurt.ogg
