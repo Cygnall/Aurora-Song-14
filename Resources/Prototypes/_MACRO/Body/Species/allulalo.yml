@@ -171,13 +171,16 @@
       Female: UnisexAllulalo
       Unsexed: UnisexAllulalo
   - type: Damageable
-    # damageContainer: Biological - Aurora's Song
     damageModifierSet: Allulalo #stops them from being oppressive hopefully
+  # Aurora's Song Start
+  - type: Injurable
+    damageContainer: Biological
+  # Aurora's Song End
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
       - ReagentId: BloodAllulalo
-        Quantity: 480 # Aurora's Song - was 250, 50 less than the default of 300. 4L of blood.
+        Quantity: 480 # Aurora's Song - 4L of blood. Was 250, 50 less than the default of 300 (pre-solutions refactor).
   - type: DamageVisuals
     damageOverlayGroups:
       Brute:
@@ -200,30 +203,14 @@
     damage:
       types:
         Piercing: 4
-  # Aurora's Song Start
   - type: SolutionManager
     solutions:
     - SolutionVenomAllulalo
-  # Aurora's Song End
-# Aurora's Song - Use SolutionManager instead
-#  - type: SolutionContainerManager
-#    solutions:
-#      melee:
-#        reagents:
-#        - ReagentId: Ethanotoxin
-#          Quantity: 4 #you can bite someone four times. upped from two based on feedback
   - type: MeleeChemicalInjector
     solution: melee
-  - type: SolutionRegeneration
-    # solution: melee - Aurora's Song
-    generated:
-      reagents:
-      - ReagentId: Ethanotoxin
-        Quantity: 0.05 #20 second cooldown between bites working full power
   - type: StaminaResistance
     damageCoefficient: 1.25 #takes the disabler/batong hits needed to stun from 4 > 3
   - type: Butcherable
-    butcheringType: Spike
     spawned:
     - id: FoodMeatChicken #this was yesters idea, not mine
       amount: 5
@@ -245,6 +232,22 @@
     baseWalkSpeed: 3
     baseSprintSpeed: 5
   - type: UnableToWield
+
+- type: entity
+  id: SolutionVenomAllulalo
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    id: melee
+    solution:
+      reagents:
+      - ReagentId: Ethanotoxin
+        Quantity: 4 #you can bite someone four times. upped from two based on feedback
+  - type: SolutionRegeneration
+    generated:
+      reagents:
+      - ReagentId: Ethanotoxin
+        Quantity: 0.05 #20 second cooldown between bites working full power
 
 - type: entity
   parent: OrganBase
@@ -381,17 +384,3 @@
 - type: entity
   parent: [ OrganBaseKidneys, OrganAllulaloInternal, OrganHumanMetabolizer ]
   id: OrganAllulaloKidneys
-
-# Aurora's Song Start
-- type: entity
-  parent: Solution
-  id: SolutionVenomAllulalo
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: Solution
-    id: melee
-    solution:
-      reagents:
-      - ReagentId: Ethanotoxin
-        Quantity: 4
-# Aurora's Song End
