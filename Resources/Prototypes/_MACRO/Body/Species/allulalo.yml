@@ -172,10 +172,6 @@
       Unsexed: UnisexAllulalo
   - type: Damageable
     damageModifierSet: Allulalo #stops them from being oppressive hopefully
-  # Aurora's Song Start
-  - type: Injurable
-    damageContainer: Biological
-  # Aurora's Song End
   - type: Bloodstream
     bloodReferenceSolution:
       reagents:
