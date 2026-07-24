@@ -1,0 +1,80 @@
+# Separate lizard plushie loot table for the mystery box so it won't touch the expedition spawners.
+- type: entityTable
+  id: AllLizardPlushieGambaTable
+  table: !type:GroupSelector
+    children:
+      # Common Plushies - Basics and Assistants
+      - !type:GroupSelector
+        weight: 8
+        children:
+          - id: PlushieLizard
+          - id: PlushieSpaceLizard
+          - id: PlushieLizardJobMedicalintern
+          - id: PlushieLizardJobResearchassistant
+          - id: PlushieLizardJobSecuritycadet
+          - id: PlushieLizardJobServiceworker
+          - id: PlushieLizardJobTechnicalassistant
+          - id: PlushieLizardJobPassenger
+      # Common Plushies - Service workers
+      - !type:GroupSelector
+        weight: 6
+        children:
+          - id: PlushieLizardJobBartender
+          - id: PlushieLizardJobBoxer
+          - id: PlushieLizardJobBotanist
+          - id: PlushieLizardJobChaplain
+          - id: PlushieLizardJobChef
+          - id: PlushieLizardJobClown # :o)
+          - id: PlushieLizardJobJanitor
+          - id: PlushieLizardJobLawyer
+          - id: PlushieLizardJobLibrarian
+          - id: PlushieLizardJobMime #
+          - id: PlushieLizardJobMusician
+          - id: PlushieLizardJobPsychologist
+          - id: PlushieLizardJobReporter
+          - id: PlushieLizardJobZookeeper
+      # Uncommon Plushies - Station Jobs
+      - !type:GroupSelector
+        weight: 4
+        children:
+          - id: PlushieLizardJobAtmospherictechnician
+          - id: PlushieLizardJobCargotechnician
+          - id: PlushieLizardJobChemist
+          - id: PlushieLizardJobDetective
+          - id: PlushieLizardJobMedicaldoctor
+          - id: PlushieLizardJobParamedic
+          - id: PlushieLizardJobSalvagespecialist
+          - id: PlushieLizardJobScientist
+          - id: PlushieLizardJobSecurityofficer
+          - id: PlushieLizardJobStationengineer
+      # Rare Plushies - Command Jobs
+      - !type:GroupSelector
+        weight: 0.5
+        children:
+          - id: PlushieLizardJobCaptain
+          - id: PlushieLizardJobChiefengineer
+          - id: PlushieLizardJobChiefmedicalofficer
+          - id: PlushieLizardJobHeadofpersonnel
+          - id: PlushieLizardJobHeadofsecurity
+          - id: PlushieLizardJobResearchdirector
+      # Ultra-Rare Plushies
+      - !type:GroupSelector
+        weight: 0.01
+        children:
+          - id: PlushieLizardInversed
+          - id: PlushieLizardJobMultiweh
+
+- type: entityTable
+  id: RareLizardPlushieGambaTable
+  table: !type:GroupSelector
+    children:
+    - id: PlushieLizardJobCaptain
+    - id: PlushieLizardJobChiefengineer
+    - id: PlushieLizardJobChiefmedicalofficer
+    - id: PlushieLizardJobHeadofpersonnel
+    - id: PlushieLizardJobHeadofsecurity
+    - id: PlushieLizardJobResearchdirector
+    - id: PlushieLizardInversed
+      weight: 0.1
+    - id: PlushieLizardJobMultiweh
+      weight: 0.01

@@ -1,0 +1,29 @@
+- type: reagent
+  id: Echion
+  name: reagent-name-echion
+  parent: BasePyrotechnic
+  desc: reagent-desc-echion
+  physicalDesc: reagent-physical-desc-ionizing
+  slipData:
+    requiredSlipSpeed: 3.5
+  flavor: chaos
+  flavorMinimum: 0.01
+  color: "#83db2b"
+  contrabandSeverity: Major
+  recognizable: true
+  boilingPoint: -127.3
+  meltingPoint: -186.4
+  tileReactions:
+  - !type:FlammableTileReaction
+    temperatureMultiplier: 5
+  metabolisms:
+    Bloodstream: # Aurora's Song - Poison>Bloodstream
+      effects:
+      - !type:HealthChange
+        damage:
+          types:
+            Poison: 1
+            Heat: 1
+            Radiation: 3
+      - !type:Flammable
+        multiplier: 0.3

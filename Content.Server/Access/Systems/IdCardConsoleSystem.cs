@@ -50,7 +50,7 @@ public sealed partial class IdCardConsoleSystem : SharedIdCardConsoleSystem
     {
         base.Initialize();
 
-        SubscribeLocalEvent<IdCardConsoleComponent, SharedIdCardSystem.WriteToTargetIdMessage>(OnWriteToTargetIdMessage); // Frontier
+        SubscribeLocalEvent<IdCardConsoleComponent, WriteToTargetIdMessage>(OnWriteToTargetIdMessage);
         SubscribeLocalEvent<IdCardConsoleComponent, SharedIdCardSystem.WriteToShuttleDeedMessage>(OnWriteToShuttleDeedMessage); // Frontier
 
         // one day, maybe bound user interfaces can be shared too.
@@ -64,7 +64,7 @@ public sealed partial class IdCardConsoleSystem : SharedIdCardConsoleSystem
             before: [typeof(EmptyOnMachineDeconstructSystem), typeof(ItemSlotsSystem)]);
     }
 
-    private void OnWriteToTargetIdMessage(EntityUid uid, IdCardConsoleComponent component, SharedIdCardSystem.WriteToTargetIdMessage args)
+    private void OnWriteToTargetIdMessage(EntityUid uid, IdCardConsoleComponent component, WriteToTargetIdMessage args)
     {
         if (args.Actor is not { Valid: true } player)
             return;

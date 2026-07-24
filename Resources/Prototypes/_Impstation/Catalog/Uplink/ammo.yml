@@ -1,0 +1,81 @@
+﻿# Please list new additions in this order: by TC price in its category, and if it has the same price as another item, then by alphabetical order by ID (not name).
+
+- type: listing
+  id: UplinkSpeedLoaderAnaconda
+  name: uplink-speedloader-sniper-name
+  description: uplink-speedloader-sniper-desc
+  icon: { sprite: /Textures/_Impstation/Objects/Weapons/Guns/Ammunition/SpeedLoaders/Magnum/sniper.rsi, state: icon }
+  productEntity: SpeedLoaderAnaconda
+  cost:
+    Telecrystal: 1
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkMagazineEchion
+  name: uplink-magazine-echion-name
+  description: uplink-magazine-echion-desc
+  icon: { sprite: /Textures/_Impstation/Objects/Weapons/Guns/Ammunition/Magazine/Special/echioncanister.rsi, state: icon }
+  productEntity: EchionCanister
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkMagazineRifleNemesis
+  name: uplink-rifle-magazine-nemesis-name
+  description: uplink-rifle-magazine-nemesis-desc
+  icon: { sprite: /Textures/_Impstation/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/nemesismag.rsi, state: icon }
+  productEntity: ASMagazineBRTopMountedRifle30
+  cost:
+    Telecrystal: 2
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkRocketConcussiveBundle
+  name: uplink-rocketcon-name
+  description: uplink-rocketcon-desc
+  icon: { sprite: /Textures/_Impstation/Objects/Weapons/Guns/Projectiles/bazooka.rsi, state: concussion }
+  productEntity: LeviathanConcussionRocketBox
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkRocketExplosiveBundle
+  name: uplink-rocketexp-name
+  description: uplink-rocketexp-desc
+  icon: { sprite: /Textures/_Impstation/Objects/Weapons/Guns/Projectiles/bazooka.rsi, state: explosive }
+  productEntity: LeviathanExplosiveRocketBox
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkRocketIncendiaryBundle
+  name: uplink-rocketinc-name
+  description: uplink-rocketinc-desc
+  icon: { sprite: /Textures/_Impstation/Objects/Weapons/Guns/Projectiles/bazooka.rsi, state: incendiary }
+  productEntity: LeviathanIncendiaryRocketBox
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkAmmo
+
+- type: listing
+  id: UplinkEchionSynth
+  name: uplink-echion-synth-name
+  description: uplink-echion-synth-desc
+  icon: { sprite: /Textures/_AS/Structures/Machines/echionsynth.rsi, state: off }
+  productEntity: CybersunEchionSynthesizerCircuitboard
+  discountCategory: rareDiscounts
+  discountDownTo:
+    Telecrystal: 2
+  cost:
+    Telecrystal: 4
+  categories:
+  - UplinkAmmo

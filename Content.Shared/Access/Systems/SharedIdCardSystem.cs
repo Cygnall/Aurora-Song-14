@@ -338,24 +338,7 @@ public abstract partial class SharedIdCardSystem : EntitySystem
         }
     }
 
-    // Frontier: rename IDs & shuttles
-    [Serializable, NetSerializable]
-    public sealed class WriteToTargetIdMessage : BoundUserInterfaceMessage
-    {
-        public readonly string FullName;
-        public readonly string JobTitle;
-        public readonly List<ProtoId<AccessLevelPrototype>> AccessList;
-        public readonly string JobPrototype;
-
-        public WriteToTargetIdMessage(string fullName, string jobTitle, List<ProtoId<AccessLevelPrototype>> accessList, string jobPrototype)
-        {
-            FullName = fullName;
-            JobTitle = jobTitle;
-            AccessList = accessList;
-            JobPrototype = jobPrototype;
-        }
-    }
-
+    // Frontier: rename shuttles
     [Serializable, NetSerializable]
     public sealed class WriteToShuttleDeedMessage : BoundUserInterfaceMessage
     {
@@ -368,5 +351,5 @@ public abstract partial class SharedIdCardSystem : EntitySystem
             ShuttleSuffix = shuttleSuffix;
         }
     }
-    // End Frontier: rename IDs & shuttles
+    // End Frontier: rename shuttles
 }

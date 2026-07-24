@@ -45,6 +45,9 @@
 
 #region .30 rifle
 - type: Tag
+  id: ASMagazineBRTopMountedRifle30
+
+- type: Tag
   id: ASMagazineMarksmanRifle30
 #endregion
 

@@ -9,6 +9,7 @@ using Content.Shared.ActionBlocker;
 using Content.Shared.Administration.Managers;
 using Content.Shared.Examine;
 using Content.Shared.Interaction;
+using Content.Shared.Photography; // Aurora's Song
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
 using Robust.Shared.Timing;
@@ -43,6 +44,11 @@ public abstract partial class SharedCustomExamineSystem : EntitySystem
         CheckExpirations(ent);
         if (ent.Comp.PublicData.Content is null && ent.Comp.SubtleData.Content is null)
             return;
+
+        // Aurora's Song Start - We want to copy this component directly onto the photo
+        if (HasComp<PictureTakerComponent>(args.Examiner))
+            return;
+        // Aurora's Sond End
 
         var publicData = ent.Comp.PublicData;
         var subtleData = ent.Comp.SubtleData;

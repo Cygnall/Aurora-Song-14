@@ -275,6 +275,7 @@
       - id: AmmoTechFabCircuitboard
       - id: PortablePumpMachineCircuitBoard
       - id: HotplateMachineCircuitboard
+      - id: KitbashEchionSynthesizerCircuitboard # Aurora
     # T4: core department tech boards
     - !type:GroupSelector
       weight: 0.5

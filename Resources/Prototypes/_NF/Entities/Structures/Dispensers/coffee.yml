@@ -7,6 +7,11 @@
   components:
   - type: Storage # Aurora's Song - Move to parent
     openOnActivate: false
+    # Aurora's Song start - add whitelist
+    whitelist:
+      tags:
+      - DrinkBottle
+    # Aurora's Song end
   - type: Rotatable
   - type: Sprite
     sprite: _NF/Structures/coffeemachine.rsi

@@ -46,6 +46,14 @@ gun-examine-caliber-40mm-grenade-dart = 40mm grenades / tracking darts
 gun-examine-caliber-rocket = rocket-propelled grenades
 gun-examine-caliber-cannon-ball = cannon balls
 gun-examine-caliber-mail-capsule = mail capsules
+# Imp Station specific
+gun-examine-caliber-leviathan = 155mm rocket-propelled shells
+gun-examine-caliber-fuel = high-pressure ignited welding fuel
+gun-examine-caliber-echion-low = 800J echion bolt
+gun-examine-caliber-echion-medium = 1000J echion bolt
+gun-examine-caliber-echion-high = 1200J echion bolt
+gun-examine-caliber-echion-high-burst = 4400J echion burst
+gun-examine-caliber-echion-hitscan = 800J accelerated echion stream
 
 # Manufacturers (alphabetical please)
 weapon-details-manufacturer-custom-made = Custom Made
@@ -58,6 +66,8 @@ weapon-details-manufacturer-nanotrasen-technologies = NanoTrasen Technologies
 weapon-details-manufacturer-steelbolt-tool-forge = Steelbolt Tool Forge
 # Aurora Song specific
 weapon-details-manufacturer-arcadia-sec-solutions = Arcadia Security Solutions
+# Imp Station specific
+weapon-details-manufacturer-waffle-corp = Waffle Corporation
 
 # Classes (alphabetical please)
 weapon-details-class-assault-rifle = Assault Rifle
@@ -71,3 +81,5 @@ weapon-details-class-shotgun = Shotgun
 weapon-details-class-sniper = Sniper Rifle
 weapon-details-class-submachine-gun = Submachine Gun
 weapon-details-class-tool = Tool
+# Imp Station specific
+weapon-details-class-flamethrower = Flamethrower

@@ -3,6 +3,7 @@
   name: guide-entry-species
   text: "/ServerInfo/Guidebook/Mobs/Species.xml"
   children:
+  - Allulalo # Macrocosm
   - Arachnid
   - Avali # Moffstation - Avali Guidebook Entry
   - Decapoid # Macrocosm

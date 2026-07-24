@@ -56,6 +56,10 @@
     - id: SpaceCash1000
       prob: 0.25
       amount: 1
+    - id: PunkEchionCanister # Aurora
+      prob: 0.5
+    - id: ASBlueprintAmmoEchionCanisterPunk # Aurora
+      prob: 0.3
     - id: SpawnDungeonLootCircuitBoard
       prob: 0.35
       amount: 2
@@ -64,6 +68,8 @@
       amount: 1
     - id: SpawnDungeonLootToolsAdvancedEngineering
       amount: 1
+      prob: 0.1
+    - id: WeaponCaseShuvitExpeditionT1 # Aurora
       prob: 0.1
     - id: SpawnDungeonLootPartsEngi
       amount: 3
@@ -97,6 +103,10 @@
     - id: SpaceCash1000
       prob: 0.25
       amount: 1
+    - id: PunkEchionCanister # Aurora
+      prob: 0.5
+    - id: ASBlueprintAmmoEchionCanisterPunk # Aurora
+      prob: 0.3
     - id: GroundCannabis
       prob: 0.25
       amount: 3
@@ -112,6 +122,8 @@
     - id: WeaponCaseShortMk58Expedition
       amount: 1
       prob: 0.55
+    - id: WeaponCaseShuvitExpeditionT1 # Aurora
+      prob: 0.3
     - id: HoloGraffitiProjectorEmpty
       amount: 1
       prob: 0.05
@@ -148,6 +160,10 @@
     - id: SpaceCash2500
       prob: 0.25
       amount: 1
+    - id: PunkEchionCanister # Aurora
+      prob: 0.5
+    - id: ASBlueprintAmmoEchionCanisterPunk # Aurora
+      prob: 0.3
     - id: GroundCannabis
       prob: 0.25
       amount: 3
@@ -157,6 +173,8 @@
     - id: WeaponCaseLongKammererExpedition
       amount: 1
       prob: 0.55
+    - id: WeaponCaseCasperExpeditionT2 # Aurora
+      prob: 0.3
     - id: SpawnDungeonLootPartsEngi
       amount: 3
       prob: 0.35
@@ -198,6 +216,10 @@
     - id: SpaceCash2500
       prob: 0.35
       amount: 1
+    - id: PunkEchionCanister # Aurora
+      prob: 0.5
+    - id: ASBlueprintAmmoEchionCanisterPunk # Aurora
+      prob: 0.3
     - id: GroundCannabis
       prob: 0.35
       amount: 3
@@ -216,6 +238,8 @@
     - id: WeaponCaseLongDrozdExpedition
       amount: 1
       prob: 0.55
+    - id: WeaponCaseCasperExpeditionT2 # Aurora
+      prob: 0.3
     - id: HoloGraffitiProjector
       amount: 1
       prob: 0.45
@@ -254,6 +278,8 @@
     - id: SpaceCash2500
       prob: 0.35
       amount: 1
+    - id: KitbashEchionSynthesizerCircuitboard # Aurora
+      prob: 0.8
     - id: GroundCannabis
       prob: 0.35
       amount: 3

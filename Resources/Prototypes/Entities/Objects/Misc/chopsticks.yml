@@ -13,6 +13,7 @@
   - type: Utensil
     types:
     - Fork
+    - Spoon # Aurora's Song - Added spoon type to chopsticks.
   - type: Tag
     tags:
     - Trash

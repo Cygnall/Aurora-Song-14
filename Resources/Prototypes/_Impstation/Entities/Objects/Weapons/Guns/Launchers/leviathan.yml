@@ -1,0 +1,66 @@
+- type: entity
+  name: Leviathan
+  parent: [ NFBaseWeaponLauncherChamberRockets, NFBaseWeaponFrameLauncherGorlex ]
+  id: WeaponLauncherBazooka
+  description: A symbol of hubris, arrogance, and an overwhelming lust for destruction. Not intended for use without a hardsuit.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Launchers/leviathan.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-1
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/Launchers/leviathan.rsi
+  - type: HeldSpeedModifier
+    walkModifier: 0.8
+    sprintModifier: 0.6
+  - type: GunRequiresWield
+  - type: Gun
+    examineCaliber: gun-examine-caliber-leviathan
+    fireRate: 0.5
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/leviathan.ogg
+  - type: BallisticAmmoProvider
+    whitelist:
+      tags:
+        - CartridgeBazooka
+    proto: CartridgeBazookaExp
+    capacity: 1
+    soundInsert:
+      path: /Audio/_Impstation/Weapons/Guns/Cock/beecharge.ogg
+  - type: MagazineVisuals
+    magState: mag
+    steps: 2
+    zeroVisible: false
+  - type: DamageOnShoot
+    damage:
+      types:
+        Blunt: 8
+    stunChance: 1
+    stunSeconds: 5
+    popupText: damage-on-shoot-leviathan
+    damageSound: /Audio/Weapons/boxingpunch3.ogg
+  - type: Appearance
+
+- type: entity
+  name: single-use Telecrystal beacon
+  parent: [ BaseItem, BaseC3SyndicateContraband ]
+  id: LeviathanTCBeacon
+  description: an advanced beacon based on telecrystal technology capable of teleporting in a single large item. But what...?
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Launchers/leviathan.rsi
+    layers:
+      - state: boxed
+        map: ["enum.GunVisualLayers.Base"]
+  - type: Item
+    size: Normal
+  - type: WeaponCaseInsertable
+  - type: SpawnItemsOnUse
+    items:
+      - id: WeaponLauncherBazooka
+    sound:
+      path: /Audio/_Impstation/Machines/echion_off.ogg

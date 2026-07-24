@@ -106,6 +106,9 @@
         Blunt: -15
         Piercing: -15
         Slash: -15
+  - type: Tag # Aurora, for the Refueling whitelist
+    tags:
+    - WeldingTool
 
 - type: entity
   parent: [SolutionToolWelder, BaseWelder]

@@ -7,10 +7,24 @@
 
 - type: entity
   parent:
+  - BaseExpeditionWeaponTier1
+  - ASWeaponEchionBSShuvit
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponShuvitExpedition
+
+- type: entity
+  parent:
   - BaseExpeditionWeaponTier2
   - ASWeaponPistolBRDIP15BSO
   categories: [ HideSpawnMenu ]
   id: ASWeaponPistolBRDIP15BSOExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier2
+  - ASWeaponEchionCasperSlide
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionCasperExpedition
 
 - type: entity
   parent:
@@ -32,6 +46,34 @@
   - ASWeaponShotgunFalchion
   categories: [ HideSpawnMenu ]
   id: ASWeaponShotgunFalchionExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - WeaponPlasmaAdder
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionAdderExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - WeaponAnaconda
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponAnacondaExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier3
+  - WeaponFlamerXiuhcoatl
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponFlamerXiuhcoatlExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier4
+  - WeaponPlasmaAkurra
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionAkurraExpedition
 
 - type: entity
   parent:
@@ -58,3 +100,24 @@
   parent: [ASWeaponEnergyPistolPulse, BaseC3NanoTrasenContrabandLowValue, BaseExpeditionWeaponTier5]
   categories: [ HideSpawnMenu ]
   id: ASWeaponEnergyPistolPulseExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - ASWeaponRifleBasilisk
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponRifleBasiliskExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - WeaponPlasmaAnanke
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionAnankeExpedition
+
+- type: entity
+  parent:
+  - BaseExpeditionWeaponTier5
+  - WeaponPlasmaGlykon
+  categories: [ HideSpawnMenu ]
+  id: ASWeaponEchionGlykonExpedition

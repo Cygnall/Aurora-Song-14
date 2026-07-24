@@ -594,7 +594,7 @@
       - chicken
       - pasta
   - type: Sprite
-    sprite: _NF/Objects/Consumable/Food/meals.rsi
+    sprite: _NF/Objects/Consumable/Food/meals.rsi # Aurora's Song: fixing this path for my recipe generator
     state: chickenparm
   - type: Solution # Aurora's Song - Convert to solution
     solution:
@@ -628,7 +628,7 @@
       - ReagentId: Flavorol
         Quantity: 7
   - type: Sprite
-    sprite: /Textures/_NF/Objects/Consumable/Food/meals.rsi
+    sprite: _NF/Objects/Consumable/Food/meals.rsi # Aurora's Song: fixing this path for my recipe generator
     state: quesadilla
 
 - type: entity
@@ -653,7 +653,7 @@
       - ReagentId: Flavorol
         Quantity: 10
   - type: Sprite
-    sprite: /Textures/_NF/Objects/Consumable/Food/meals.rsi
+    sprite: _NF/Objects/Consumable/Food/meals.rsi # Aurora's Song: fixing this path for my recipe generator
     state: burrito
 
 - type: entity
@@ -663,7 +663,7 @@
   description: Wrapped cornmeal goodness.
   components:
   - type: Sprite
-    sprite: /Textures/_NF/Objects/Consumable/Food/meals.rsi
+    sprite: _NF/Objects/Consumable/Food/meals.rsi # Aurora's Song: fixing this path for my recipe generator
     state: tamale_wrapped
   - type: SpawnItemsOnUse
     items:
@@ -679,7 +679,7 @@
   description: Unwrapped cornmeal goodness.
   components:
   - type: Sprite
-    sprite: /Textures/_NF/Objects/Consumable/Food/meals.rsi
+    sprite: _NF/Objects/Consumable/Food/meals.rsi # Aurora's Song: fixing this path for my recipe generator
     state: tamale
   - type: Solution # Aurora's Song - Convert to solution
     solution:
@@ -707,7 +707,7 @@
   description: The ghost of a good meal.
   components:
   - type: Sprite
-    sprite: /Textures/_NF/Objects/Consumable/Food/meals.rsi
+    sprite: _NF/Objects/Consumable/Food/meals.rsi # Aurora's Song: fixing this path for my recipe generator
     state: tamale_husk
 
 - type: entity

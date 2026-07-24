@@ -1,0 +1,59 @@
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledAkurra
+  name: Akurra bundle
+  description: "A fearsome liquid-ammo plasma rifle, bundled with 4 canisters of its proprietary fuel."
+  suffix: Akurra bundle
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponPlasmaAkurra
+        - id: EchionCanister
+          amount: 4
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledBR
+  name: Basilisk-11 bundle
+  description: "Precise and deadly, just as a professional should be. Bundled with 3 magazines."
+  suffix: Basilisk-11 bundle
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASWeaponRifleBasilisk
+        - id: ASMagazineBRTopMountedRifle30
+          amount: 2
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledAnanke
+  name: Ananke bundle
+  description: "A deadly liquid-ammo plasma shotgun, bundled with 4 canisters of its proprietary fuel."
+  suffix: Ananke bundle
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponPlasmaAnanke
+        - id: EchionCanister
+          amount: 4
+
+- type: entity
+  parent: ClothingBackpackDuffelSyndicateBundle
+  id: ClothingBackpackDuffelSyndicateFilledGlykon
+  name: Glykon bundle
+  description: "A sophisticated liquid-ammo plasma sniper, bundled with 4 canisters of its proprietary fuel."
+  suffix: Glykon bundle
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: WeaponPlasmaGlykon
+        - id: EchionCanister
+          amount: 4

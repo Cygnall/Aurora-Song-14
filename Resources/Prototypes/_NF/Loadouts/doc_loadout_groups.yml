@@ -69,6 +69,23 @@
   fallbacks:
   - DocDocPDA
 
+# Aurora's Song Start - DoC backpack items
+- type: loadoutGroup
+  id: DocBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - PlushieLizardJobChiefmedicalofficer
+  - PlushieLizardJobCaptain
+  - PlushieLizardJobHeadofpersonnel
+  - PlushieLizardJobHeadofsecurity
+  - PlushieLizardJobResearchdirector
+  - PlushieLizardJobChiefengineer
+  subgroups:
+  - ContractorBackpackItems
+# Aurora's Song End
+
 - type: loadoutGroup
   id: DocShoes
   name: loadout-group-contractor-shoes

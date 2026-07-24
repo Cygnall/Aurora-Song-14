@@ -336,9 +336,31 @@
 
 - type: loadout # Aurora's Song - Shirtless Coyote Pants
   id: ContractorClothingUniformJumpsuitCoyotePants
+  groupBy: coyotepants
   price: 200
   equipment:
     jumpsuit: ClothingUniformJumpsuitCoyotePants
+
+- type: loadout # Aurora's Song - coyote pants recolor
+  id: ContractorClothingUniformJumpsuitJackalPants
+  groupBy: coyotepants
+  price: 200
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitJackalPants    
+
+- type: loadout # Aurora's Song - coyote pants recolor
+  id: ContractorClothingUniformJumpsuitWolfPants
+  groupBy: coyotepants
+  price: 200
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitWolfPants    
+
+- type: loadout # Aurora's Song - coyote pants recolor
+  id: ContractorClothingUniformJumpsuitHoundPants
+  groupBy: coyotepants
+  price: 200
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitHoundPants
 
 #T1
 - type: loadout

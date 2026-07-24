@@ -1,0 +1,24 @@
+- type: entity
+  parent: [ SolutionSmall, BasicHitscan ] # Aurora's Song - Add solution so ammo works
+  id: GlykonBeam
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: HitscanBasicDamage
+    damage:
+      types:
+        Heat: 7.5
+        Piercing: 7.5
+  - type: HitscanBasicRaycast
+    collisionMask:
+        - Impassable
+        - BulletImpassable
+  - type: HitscanBasicVisuals
+    muzzleFlash:
+      sprite: _Impstation/Objects/Weapons/Guns/Projectiles/hitscan.rsi
+      state: muzzle_synd
+    travelFlash:
+      sprite: _Impstation/Objects/Weapons/Guns/Projectiles/hitscan.rsi
+      state: beam_synd
+    impactFlash:
+      sprite: _Impstation/Objects/Weapons/Guns/Projectiles/hitscan.rsi
+      state: impact_synd

@@ -2110,3 +2110,123 @@ Entries:
   id: 9623
   time: '2026-07-20T13:13:26.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1257
+- author: meatsmall
+  changes:
+    - type: Fix
+      message: you can no longer fill your spacepresso machine with shotguns
+  id: 9624
+  time: '2026-07-21T10:18:37.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1274
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Canes are now grouped together in the loadouts screen.
+  id: 9625
+  time: '2026-07-22T03:36:22.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1268
+- author: Sunburstschitin
+  changes:
+    - type: Add
+      message: >-
+        Added the tinydot and tinyline crayon symbols from Den. HD 4K crayon
+        drawings are the future!
+  id: 9626
+  time: '2026-07-23T08:33:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1283
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: >-
+        cameras now copy custom examine onto the photograph instead of taking
+        preferences of picture taker
+  id: 9627
+  time: '2026-07-23T11:48:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1281
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: ID Card Computer works again!
+  id: 9628
+  time: '2026-07-24T01:37:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1282
+- author: heirdragonair
+  changes:
+    - type: Add
+      message: three new pants to choose from in the loadout!
+    - type: Tweak
+      message: made the coyote pants more swagful
+  id: 9629
+  time: '2026-07-24T01:49:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1271
+- author: assignedgod
+  changes:
+    - type: Tweak
+      message: 'Fairies have been made shorter once again '
+  id: 9630
+  time: '2026-07-24T01:52:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1284
+- author: BenadrylJackson
+  changes:
+    - type: Tweak
+      message: >-
+        Added spoon type to chopsticks, noodle enjoyers everywhere rejoice in
+        not having to RP the bowl falling on the ground after you consume
+        noodle.
+  id: 9631
+  time: '2026-07-24T02:12:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1285
+- author: DVDPlayerOfDiscordFame
+  changes:
+    - type: Add
+      message: >-
+        Ten new weapons have been added to the loot ecosystem, including some
+        Spicy Green Ones you may know!
+  id: 9632
+  time: '2026-07-24T02:29:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1014
+- author: Sunburstschitin
+  changes:
+    - type: Add
+      message: >-
+        BFM LLC has shared a product allowing diona to grow forty new markings!
+        Sprout a tail while supplies last!
+  id: 9633
+  time: '2026-07-24T03:41:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1075
+- author: mothrii, meatsmall
+  changes:
+    - type: Add
+      message: Two new cloaks that can help conceal your identity
+  id: 9634
+  time: '2026-07-24T04:01:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1248
+- author: KieueCaprie
+  changes:
+    - type: Add
+      message: Job-specific lizard plushies now have in-hand and helmet sprites.
+    - type: Add
+      message: >-
+        The bulk lizard plushie crate has been re-enabled and is selling for
+        20,000 spesos. We hope you use this privilege wisely.
+    - type: Add
+      message: >-
+        A blind box for lizard plushies can now be obtained from CritterVends
+        (for those hack-savvy) and Grand Gambling Crates.
+    - type: Add
+      message: >-
+        Job-specific lizard plushies can now be picked out from the loadout
+        starting from 1000 spesos each. Aurora Command roles may find that they
+        have the privilege of picking out command-based lizard plushies for 5000
+        spesos.
+  id: 9635
+  time: '2026-07-24T05:21:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1269
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: >-
+        Adds Allulalo, a reclusive species of small, raptor-like aliens from the
+        Imp sector.
+  id: 9636
+  time: '2026-07-24T23:16:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1273

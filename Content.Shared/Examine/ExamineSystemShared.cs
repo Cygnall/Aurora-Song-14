@@ -4,6 +4,7 @@ using Content.Shared.Ghost;
 using Content.Shared.Interaction;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
+using Content.Shared.Photography; // Aurora's Song
 using JetBrains.Annotations;
 using Robust.Shared.Containers;
 using Robust.Shared.Map;
@@ -65,6 +66,11 @@ namespace Content.Shared.Examine
 
             if (!InRangeUnOccluded(examiner, entity, ExamineDetailsRange))
                 return false;
+
+            // Aurora's Song Start - Allow photos to detail examine
+            if (HasComp<PictureTakerComponent>(examiner))
+                return true;
+            // Aurora's Song End
 
             // Is the target hidden in a opaque locker or something? Currently this check allows players to examine
             // their organs, if they can somehow target them. Really this should be with userSeeInsideSelf: false, and a

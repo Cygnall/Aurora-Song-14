@@ -50,6 +50,7 @@
   </Box>
   # Impstation specific species
   <Box>
-    <GuideEntityEmbed Entity="MobDecapoid" Caption="Decapoid"/>
+  <GuideEntityEmbed Entity="MobAllulalo" Caption="Allulalo"/>
+  <GuideEntityEmbed Entity="MobDecapoid" Caption="Decapoid"/>
   </Box>
 </Document>

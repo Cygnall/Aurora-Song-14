@@ -1,0 +1,120 @@
+# Guns that use Echion as fuel and typically shoot energy-style projectiles
+- type: entity
+  name: BS Shuvit
+  parent: [SolutionToolVeryTiny, BaseWeaponEchion, BaseC2ExpeditionContraband] # Aurora's Song - Solution refactor
+  id: ASWeaponEchionBSShuvit
+  description: It remains unclear if the make of this weapon is that of pure genius or absolute insanity.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/FuelGuns/bs-shuvit.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/FuelGuns/bs-shuvit.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Belt
+  - type: Appearance
+  - type: Item
+    sprite: _AS/Objects/Weapons/Guns/FuelGuns/bs-shuvit.rsi
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: NFWeaponDetails
+    class: weapon-details-class-pistol
+    manufacturer: weapon-details-manufacturer-custom-made
+  - type: Gun
+    examineCaliber: gun-examine-caliber-echion-low
+    projectileSpeed: 25
+    clumsyProof: false
+    cameraRecoilScalar: 1
+    fireRate: 4.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    minAngle: 5
+    maxAngle: 15
+    angleIncrease: 3
+    angleDecay: 20
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/adder.ogg
+  - type: Solution # Aurora's Song - Solution refactor
+    solution:
+      reagents:
+      - ReagentId: Echion
+        Quantity: 7.5
+  - type: SolutionAmmoProvider
+    solutionId: chamber
+    proto: BulletPlasmaAkurra
+    fireCost: 1.25
+  - type: Tag
+    tags:
+    - EchionGun
+    - Sidearm
+
+- type: entity
+  name: Casper Slide
+  parent: [SolutionToolTiny, BaseWeaponEchion, BaseGunWieldable, BaseC2ExpeditionContraband] # Aurora's Song - Solution refactor
+  id: ASWeaponEchionCasperSlide
+  description: Despite the suggestions of the haphazard paint job, you can tell there's real care put into this weapon's construction.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/FuelGuns/casper-slide.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/FuelGuns/casper-slide.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Belt
+  - type: Appearance
+  - type: Item
+    sprite: _AS/Objects/Weapons/Guns/FuelGuns/casper-slide.rsi
+    size: Large
+    shape:
+    - 0,0,3,1
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: false
+  - type: NFWeaponDetails
+    class: weapon-details-class-assault-rifle
+    manufacturer: weapon-details-manufacturer-custom-made
+  - type: Gun
+    examineCaliber: gun-examine-caliber-echion-medium
+    projectileSpeed: 25
+    clumsyProof: false
+    cameraRecoilScalar: 1
+    fireRate: 3.5
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    minAngle: 21
+    maxAngle: 39
+    angleIncrease: 2
+    angleDecay: 18
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/akurra.ogg
+  - type: Solution # Aurora's Song - Solution refactor
+    solution:
+      reagents:
+      - ReagentId: Echion
+        Quantity: 15
+  - type: SolutionAmmoProvider
+    solutionId: chamber
+    proto: BulletPlasmaAdder
+    fireCost: 1.25

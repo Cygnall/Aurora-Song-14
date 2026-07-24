@@ -29,17 +29,18 @@
     - ClothingMultipleHeadphones
 
 # Toys
-- type: loadout
-  id: PlushieLizard
-  storage:
-    back:
-    - PlushieLizard
-
-- type: loadout
-  id: PlushieSpaceLizard
-  storage:
-    back:
-    - PlushieSpaceLizard
+# Aurora's Song - moved to _AS/Loadouts/jobs/Contractor/fun.yml
+# - type: loadout
+#   id: PlushieLizard
+#   storage:
+#     back:
+#     - PlushieLizard
+#
+# - type: loadout
+#   id: PlushieSpaceLizard
+#   storage:
+#     back:
+#     - PlushieSpaceLizard
 
 - type: loadout
   id: ThreeCandles

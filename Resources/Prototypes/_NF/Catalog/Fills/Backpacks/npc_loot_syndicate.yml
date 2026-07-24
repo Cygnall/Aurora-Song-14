@@ -78,6 +78,10 @@
       - id: NFSpeedLoaderPistol45
       - id: SpaceCash5000
       - id: MercCoin1
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+        prob: 0.5
+      - id: SuperEchionCanister # Aurora
+        prob: 0.3
       # Bonus Loot T3
       - id: SpaceCash2500
         prob: 0.9
@@ -109,6 +113,10 @@
       - id: NFSpeedLoaderPistol45
       - id: SpaceCash2500
       - id: MercCoin1
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+        prob: 0.5
+      - id: SuperEchionCanister # Aurora
+        prob: 0.3
       # Bonus Loot T3
       - id: SpaceCash2500
         prob: 0.9
@@ -139,6 +147,10 @@
       - id: NFSpeedLoaderPistol45Overpressure
       - id: SpaceCash2500
       - id: MercCoin1
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+        prob: 0.5
+      - id: SuperEchionCanister # Aurora
+        prob: 0.3
       # Bonus Loot T3
       - id: SpaceCash2500
         prob: 0.9
@@ -167,6 +179,8 @@
     items:
       - id: SpaceCash2500
       - id: MercCoin1
+      - id: SuperEchionCanister # Aurora
+        prob: 0.5
       # Bonus Loot T3
       - id: SpaceCash2500
         prob: 0.9
@@ -197,6 +211,10 @@
       - id: NFWeaponEnergyPistolLaserAdvancedExpedition
       - id: SpaceCash2500
       - id: MercCoin1
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+        prob: 0.4
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.3
       # Bonus Loot T3
       - id: SpaceCash2500
         prob: 0.9
@@ -226,6 +244,10 @@
       - id: NFWeaponEnergyPistolLaserExpedition
       - id: SpaceCash2500
       - id: MercCoin1
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+        prob: 0.4
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.3
       # Bonus Loot T3
       - id: SpaceCash2500
         prob: 0.9
@@ -255,6 +277,8 @@
       - id: PowerCellHighPrinted
       - id: SpaceCash2500
       - id: MercCoin1
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.3
       # Bonus Loot T3
       - id: SpaceCash2500
         prob: 0.9
@@ -284,6 +308,8 @@
       - id: SpaceCash2500
       - id: SpaceCash1000
       - id: MercCoin1
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.3
       # Bonus Loot T3
       - id: SpaceCash2500
         prob: 0.9
@@ -318,6 +344,11 @@
       - id: ClothingShoesBootsMagSyndie
       - id: SpaceCash10000
       - id: MercCoin1
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+      - id: SuperEchionCanister # Aurora
+        prob: 0.5
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.5
       # Bonus Loot T4
       - id: SpaceCash2500
         prob: 0.9
@@ -348,6 +379,11 @@
       - id: ClothingShoesBootsMagSyndie
       - id: SpaceCash10000
       - id: MercCoin1
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+      - id: SuperEchionCanister # Aurora
+        prob: 0.5
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.5
       # Bonus Loot T4
       - id: SpaceCash2500
         prob: 0.9
@@ -378,6 +414,12 @@
       - id: ClothingShoesBootsMagSyndie
       - id: SpaceCash10000
       - id: MercCoin1
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+        prob: 0.7
+      - id: SuperEchionCanister # Aurora
+        prob: 0.5
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.5
       # Bonus Loot T4
       - id: SpaceCash2500
         prob: 0.9
@@ -404,6 +446,12 @@
     items:
       - id: SpaceCash10000
       - id: MercCoin1
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+        prob: 0.7
+      - id: SuperEchionCanister # Aurora
+        prob: 0.5
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.5
       # Bonus Loot T4
       - id: SpaceCash2500
         prob: 0.9
@@ -756,6 +804,10 @@
       - id: NFAmmunitionBoxShellShotgunSlug
       - id: SpaceCash2500
       - id: SpaceCash2500
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+        prob: 0.4
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.5
       # Bonus Loot T2
       - id: SpaceCash2500
         prob: 0.9
@@ -783,6 +835,10 @@
       - id: NFAmmunitionBoxShellShotgunIncendiary
       - id: JawsOfLife
       - id: SpaceCash2500
+      - id: CybersunEchionSynthesizerCircuitboard # Aurora
+        prob: 0.4
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.5
       # Bonus Loot T2
       - id: SpaceCash2500
         prob: 0.9
@@ -809,6 +865,8 @@
     items:
       - id: JawsOfLife
       - id: SpaceCash2500
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.5
       # Bonus Loot T2
       - id: SpaceCash2500
         prob: 0.9
@@ -834,6 +892,8 @@
   - type: SpawnItemsOnUse
     items:
       - id: SpaceCash2500
+      - id: ASBlueprintAmmoEchionCanisterCybersun # Aurora
+        prob: 0.5
       # Bonus Loot T2
       - id: SpaceCash2500
         prob: 0.9
@@ -866,6 +926,10 @@
       - id: WeaponSprayNozzle
       - id: Stimpack
       - id: SpaceCash2500
+      - id: EchionCanister # Aurora
+        prob: 0.7
+      - id: SuperEchionCanister # Aurora
+        prob: 0.3
       # Bonus Loot T2
       - id: SpaceCash2500
         prob: 0.9
@@ -893,6 +957,10 @@
       - id: WeaponWaterBlasterSuper
       - id: Stimpack
       - id: SpaceCash2500
+      - id: EchionCanister # Aurora
+        prob: 0.7
+      - id: SuperEchionCanister # Aurora
+        prob: 0.3
       # Bonus Loot T2
       - id: SpaceCash2500
         prob: 0.9
@@ -919,6 +987,10 @@
     items:
       - id: WeaponWaterBlaster
       - id: SpaceCash2500
+      - id: EchionCanister # Aurora
+        prob: 0.7
+      - id: SuperEchionCanister # Aurora
+        prob: 0.3
       # Bonus Loot T2
       - id: SpaceCash2500
         prob: 0.9
@@ -945,6 +1017,10 @@
     items:
       - id: WeaponWaterPistol
       - id: SpaceCash2500
+      - id: EchionCanister # Aurora
+        prob: 0.7
+      - id: SuperEchionCanister # Aurora
+        prob: 0.3
       # Bonus Loot T2
       - id: SpaceCash2500
         prob: 0.9

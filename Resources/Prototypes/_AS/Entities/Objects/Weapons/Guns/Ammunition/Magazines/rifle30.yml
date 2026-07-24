@@ -212,3 +212,56 @@
       - state: inhand-right-mag
       - state: inhand-right-stripe
         color: "#dddddd"
+
+#region .30 Top Mounted
+- type: entity
+  id: ASBaseMagazineBRTopMountedRifle30
+  name: top mounted rifle magazine (.30 rifle)
+  parent: NFBaseMagazineRifle30
+  abstract: true
+  components:
+  - type: Tag
+    tags:
+      - ASMagazineBRTopMountedRifle30 # TODO: make it make sense, change the tags
+  - type: BallisticAmmoProvider
+    mayTransfer: true
+    whitelist:
+      tags:
+        - NFCartridgeRifle30
+    proto: NFCartridgeRifle30
+    capacity: 24
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/nemesismag.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-6
+      map: ["enum.GunVisualLayers.Mag"]
+  - type: MagazineVisuals
+    magState: mag
+    steps: 7
+    zeroVisible: false
+  - type: Item
+    sprite: _Impstation/Objects/Weapons/Guns/Ammunition/Magazine/Rifle/nemesismag.rsi
+    inhandVisuals:
+      left:
+      - state: inhand-left-mag
+      right:
+      - state: inhand-right-mag
+
+- type: entity
+  id: ASMagazineBRTopMountedRifle30Empty
+  name: top mounted rifle magazine (.30 rifle, any)
+  parent: ASBaseMagazineBRTopMountedRifle30
+  suffix: empty
+  components:
+  - type: BallisticAmmoProvider
+    proto: null
+
+- type: entity
+  id: ASMagazineBRTopMountedRifle30
+  name: top mounted rifle magazine (.30 rifle)
+  parent: ASBaseMagazineBRTopMountedRifle30
+  components:
+  - type: BallisticAmmoProvider
+    proto: NFCartridgeRifle30

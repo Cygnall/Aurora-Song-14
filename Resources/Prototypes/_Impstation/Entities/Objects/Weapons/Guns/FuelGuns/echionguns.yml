@@ -1,0 +1,199 @@
+# Guns that use Echion as fuel and typically shoot energy-style projectiles
+- type: entity
+  name: Adder
+  parent: [BaseWeaponEchion, BaseC3SyndicateContraband]
+  id: WeaponPlasmaAdder
+  description: The future of stellar warfare in the palm of your hand. Uses Echion, produced from advanced synthesizers.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/adder.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/adder.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Belt
+  - type: Gun
+    minAngle: 3
+    maxAngle: 10
+    angleIncrease: 2
+    angleDecay: 1
+  - type: Appearance
+  - type: Item
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/adder.rsi
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: Tag
+    tags:
+    - EchionGun
+    - Sidearm
+
+- type: entity
+  name: Akurra
+  parent: [SolutionToolSmall, BaseWeaponEchion, BaseGunWieldable, BaseC3SyndicateContraband] # Aurora's Song - Solution refactor
+  id: WeaponPlasmaAkurra
+  description: A beautiful marriage of technology and malice in a single package. Uses Echion, produced from advanced synthesizers.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/akurra.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/akurra.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Belt
+  - type: Appearance
+  - type: Item
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/akurra.rsi
+    size: Large
+    shape:
+    - 0,0,3,1
+  - type: NFWeaponDetails
+    class: weapon-details-class-assault-rifle
+  - type: Gun
+    examineCaliber: gun-examine-caliber-echion-medium
+    projectileSpeed: 25
+    clumsyProof: false
+    cameraRecoilScalar: 1
+    fireRate: 5.3
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    minAngle: 21
+    maxAngle: 39
+    angleIncrease: 2
+    angleDecay: 18
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/adder.ogg
+  - type: Solution # Aurora's Song - Solution refactor
+    solution:
+      reagents:
+      - ReagentId: Echion
+        Quantity: 30
+  - type: SolutionAmmoProvider
+    solutionId: chamber
+    proto: BulletPlasmaAkurra
+    fireCost: 0.75
+
+- type: entity
+  name: Ananke
+  parent: [SolutionToolSmall, BaseWeaponEchion, BaseGunWieldable, BaseC3SyndicateContraband] # Aurora's Song - Solution refactor
+  id: WeaponPlasmaAnanke
+  description: The short-range of this brutal shotgun makes it a favorite among operatives who wish to see the whites of Nanotrasen eyes in the heat of combat. Uses Echion, produced from advanced synthesizers.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/ananke.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/ananke.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Belt
+  - type: Appearance
+  - type: Item
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/ananke.rsi
+    size: Large
+    shape:
+    - 0,0,3,2
+  - type: NFWeaponDetails
+    class: weapon-details-class-shotgun
+  - type: Gun
+    examineCaliber: gun-examine-caliber-echion-high-burst
+    projectileSpeed: 25
+    clumsyProof: false
+    cameraRecoilScalar: 1
+    fireRate: 2.3
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/ananke.ogg
+  - type: GunRequiresWield
+  - type: Solution # Aurora's Song - Solution refactor
+    solution:
+      reagents:
+      - ReagentId: Echion
+        Quantity: 30
+  - type: SolutionAmmoProvider
+    solutionId: chamber
+    proto: BulletPlasmaSpread
+    fireCost: 5
+
+- type: entity
+  name: Glykon
+  parent: [SolutionToolVeryTiny, BaseWeaponEchion, BaseGunWieldable, BaseC3SyndicateContraband] # Aurora's Song - Solution refactor
+  id: WeaponPlasmaGlykon
+  description: Deadly, precise, and beautiful-- a state-of-the-art tool for the most merciless of assassins. Uses Echion, produced from advanced synthesizers.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/glykon.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/glykon.rsi
+    quickEquip: false
+    slots:
+      - suitStorage
+      - Belt
+  - type: Appearance
+  - type: Item
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/glykon.rsi
+    size: Huge
+    shape:
+    - 0,0,5,1
+  - type: NFWeaponDetails
+    class: weapon-details-class-sniper
+  - type: Gun
+    examineCaliber: gun-examine-caliber-echion-hitscan
+    clumsyProof: false
+    cameraRecoilScalar: 1
+    fireRate: 10
+    selectedMode: FullAuto
+    availableModes:
+    - SemiAuto
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/glykon.ogg
+  - type: GunRequiresWield
+  - type: Solution # Aurora's Song - Solution refactor
+    solution:
+      reagents:
+      - ReagentId: Echion
+        Quantity: 7.5
+  - type: SolutionAmmoProvider
+    solutionId: chamber
+    proto: GlykonBeam
+    fireCost: 1.5 #5 shots per spread equals 7.5-- 4 bursts in 30u
+  - type: StaticPrice
+    price: 100
+  - type: SpeedModifiedOnWield
+    walkModifier: 0.35
+    sprintModifier: 0.35
+  - type: CursorOffsetRequiresWield
+  - type: EyeCursorOffset
+    maxOffset: 3
+    pvsIncrease: 0.3

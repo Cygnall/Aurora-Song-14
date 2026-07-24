@@ -1,0 +1,109 @@
+# Flamethrowers that specifically want welding fuel and only want to refuel at Welding Fuel sources
+- type: entity
+  name: BaseWeaponFlamer
+  parent: [ BaseItem, BaseGunWieldable ]
+  id: BaseWeaponFlamer
+  abstract: true
+  description: A rooty tooty point and shooty.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/xiuhcoatl.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-unshaded-4
+        map: ["enum.GunVisualLayers.MagUnshaded"]
+        shader: unshaded
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/xiuhcoatl.rsi
+    quickEquip: false
+    slots:
+    - Back
+    - suitStorage
+  - type: Appearance
+  - type: AmmoCounter
+  - type: Item
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/xiuhcoatl.rsi
+    size: Huge
+    shape:
+    - 0,0,4,3
+  - type: NFWeaponDetails
+    class: weapon-details-class-flamethrower
+    manufacturer: weapon-details-manufacturer-gorlex-steel-works
+  - type: Gun
+    examineCaliber: gun-examine-caliber-fuel
+    projectileSpeed: 16
+    clumsyProof: false
+    cameraRecoilScalar: 0
+    fireRate: 10
+    selectedMode: FullAuto
+    availableModes:
+    - FullAuto
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/flamethrower.ogg
+  - type: GunRequiresWield
+  - type: StaticPrice
+    price: 500
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 100
+      Steel: 400
+  - type: IgnitionSource
+    temperature: 700
+
+# Echion weapons that specifically want to only use Echion and refuel from those sources
+- type: entity
+  name: BaseWeaponEchion
+  parent: [SolutionGun, SolutionToolTiny, BaseItem] # Aurora's Song - Solution refactor
+  id: BaseWeaponEchion
+  description: A rooty tooty point and shooty.
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/adder.rsi
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/adder.rsi
+  - type: Appearance
+  - type: AmmoCounter
+  - type: MagazineVisuals
+    magState: mag
+    steps: 5
+    zeroVisible: true
+  - type: Item
+    sprite: _Impstation/Objects/Weapons/Guns/FuelGuns/adder.rsi
+    size: Small
+  - type: NFWeaponDetails
+    class: weapon-details-class-pistol
+    manufacturer: weapon-details-manufacturer-cybersun-industries
+  - type: Gun
+    examineCaliber: gun-examine-caliber-echion-high
+    projectileSpeed: 25
+    clumsyProof: false
+    cameraRecoilScalar: 1
+    fireRate: 4
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/akurra.ogg
+  - type: Solution # Aurora's Song - Solution refactor
+    solution:
+      reagents:
+      - ReagentId: Echion
+        Quantity: 15
+  - type: SolutionAmmoProvider
+    solutionId: chamber
+    proto: BulletPlasmaAdder
+    fireCost: 1.5
+  - type: SolutionItemStatus
+    solution: chamber
+  - type: SolutionRefuel
+    fuelSolutionName: chamber
+    fuelReagent: Echion
+  - type: ExaminableSolution
+    solution: chamber
+  - type: Tag
+    tags:
+    - EchionGun
+  - type: StaticPrice
+    price: 500

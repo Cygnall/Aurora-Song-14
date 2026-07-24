@@ -33,3 +33,23 @@
     providedRecipes:
     - ASAmmunitionBoxShellShotgun8gHE
     - MagazineShotgunLeverEmpty
+
+- type: entity
+  parent: NFBaseBlueprintExpeditionArmory
+  id: ASBlueprintAmmoEchionCanisterCybersun
+  name: Echion canister blueprint
+  description: A blueprint with a schematic of an Echion canister. It can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - CybersunEchionCanisterRecipe
+
+- type: entity
+  parent: NFBaseBlueprintExpeditionSalvage
+  id: ASBlueprintAmmoEchionCanisterPunk
+  name: Echion canister blueprint
+  description: A blueprint with a schematic of an Echion Canister. It has a certain smell. It can be inserted into a protolathe or techfab.
+  components:
+  - type: Blueprint
+    providedRecipes:
+    - PunkEchionCanisterRecipe

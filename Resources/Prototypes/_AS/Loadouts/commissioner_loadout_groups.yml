@@ -47,6 +47,22 @@
   - CommissionerCommissionerPDA
 
 - type: loadoutGroup
+  id: CommissionerBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - PlushieLizardJobHeadofsecurity
+  - PlushieLizardJobCaptain
+  - PlushieLizardJobHeadofpersonnel
+  - PlushieLizardJobResearchdirector
+  - PlushieLizardJobChiefengineer
+  - PlushieLizardJobChiefmedicalofficer
+  subgroups:
+  - SergeantBackpackItems
+  - ContractorBackpackItems
+
+- type: loadoutGroup
   id: CommissionerFace
   name: loadout-group-contractor-face
   hidden: true # No point in showing this, it gets auto-selected.

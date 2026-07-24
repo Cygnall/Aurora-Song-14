@@ -88,7 +88,8 @@
       - id: PlushieHampter
       - id: PlushiePenguin
       - id: PlushieHuman
-      - id: PlushieLizard
+      - id: MysteryWehBox
+      - id: MysteryWehBoxCommand # Does this dilute the pool a bit more? Yes. Is it funny? Yes.
       - id: PlushieLamp
       - id: PlushieSharkBlue
       - id: PlushieMoth

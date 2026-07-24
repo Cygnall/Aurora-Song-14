@@ -463,3 +463,36 @@
     sprite: _AS/Clothing/Uniforms/Jumpsuit/coyotepants.rsi
   - type: Clothing
     sprite: _AS/Clothing/Uniforms/Jumpsuit/coyotepants.rsi
+
+- type: entity # Aurora's Song - coyote pants recolor
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitJackalPants
+  name: jackal pants
+  description: A pair of common jackal cargo pants made from a breathable material. Try not to squat down in them too fast.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/jackalpants.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/jackalpants.rsi
+
+- type: entity # Aurora's Song - coyote pants recolor
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitWolfPants
+  name: wolf pants
+  description: A pair of common wolf cargo pants made from a breathable material. Try not to squat down in them too fast.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/wolfpants.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/wolfpants.rsi
+
+- type: entity # Aurora's Song - coyote pants recolor
+  parent: ClothingUniformBase
+  id: ClothingUniformJumpsuitHoundPants
+  name: hound pants
+  description: A pair of common hound cargo pants made from a breathable material. Try not to squat down in them too fast.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/houndpants.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Uniforms/Jumpsuit/houndpants.rsi

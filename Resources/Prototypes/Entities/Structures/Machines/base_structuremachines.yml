@@ -58,6 +58,7 @@
   - type: LightningTarget
     priority: 1
   - type: BindToStation # Frontier
+  - type: TooShortForUiBlacklist # MACRO
 
 - type: entity
   abstract: true

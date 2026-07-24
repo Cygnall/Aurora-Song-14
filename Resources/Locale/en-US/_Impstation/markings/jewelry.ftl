@@ -29,3 +29,13 @@ marking-HandRingsLeft = Rings (Left)
 marking-HandRingsRight-r_hand_rings1 = Right Index Finger
 marking-HandRingsRight-r_hand_rings2 = Right Ring Finger
 marking-HandRingsRight = Rings (Right)
+
+# Aurora's Song Start
+marking-WingRingsLeft-l_hand_rings1 = Lower Ring
+marking-WingRingsLeft-l_hand_rings2 = Upper Ring
+marking-WingRingsLeft = Rings (Left)
+
+marking-WingRingsRight-r_hand_rings1 = Lower Ring
+marking-WingRingsRight-r_hand_rings2 = Upper Ring
+marking-WingRingsRight = Rings (Right)
+# Aurora's Song End

@@ -1,0 +1,343 @@
+#T0 (Free)
+- type: loadout
+  id: PlushieLizard
+  name: lizard plushie
+  storage:
+    back:
+    - PlushieLizard
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieSpaceLizard
+  name: space lizard plushie
+  storage:
+    back:
+    - PlushieSpaceLizard
+  groupBy: "wehs"
+
+#T1 (1000)
+- type: loadout
+  id: PlushieLizardJobMedicalintern
+  name: medical intern lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobMedicalintern
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobResearchassistant
+  name: research assistant lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobResearchassistant
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobSecuritycadet
+  name: security cadet lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobSecuritycadet
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobServiceworker
+  name: service worker lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobServiceworker
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobTechnicalassistant
+  name: technical assistant lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobTechnicalassistant
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobPassenger
+  name: passenger lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobPassenger
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobBartender
+  name: bartender lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobBartender
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobBoxer
+  name: boxer lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobBoxer
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobBotanist
+  name: botanist lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobBotanist
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobChaplain
+  name: chaplain lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobChaplain
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobChef
+  name: chef lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobChef
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobClown
+  name: clown lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobClown
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobJanitor
+  name: janitor lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobJanitor
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobLawyer
+  name: lawyer lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobLawyer
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobLibrarian
+  name: librarian lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobLibrarian
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobMime
+  name: mime lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobMime
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobMusician
+  name: musician lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobMusician
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobPsychologist
+  name: psychologist lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobPsychologist
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobReporter
+  name: reporter lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobReporter
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobZookeeper
+  name: zookeeper lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobZookeeper
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobAtmospherictechnician
+  name: atmospheric technician lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobAtmospherictechnician
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobCargotechnician
+  name: cargo technician lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobCargotechnician
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobChemist
+  name: chemist lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobChemist
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobDetective
+  name: detective lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobDetective
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobMedicaldoctor
+  name: medical doctor lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobMedicaldoctor
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobParamedic
+  name: paramedic lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobParamedic
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobSalvagespecialist
+  name: salvage specialist lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobSalvagespecialist
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobScientist
+  name: scientist lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobScientist
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobSecurityofficer
+  name: security officer lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobSecurityofficer
+  groupBy: "wehs"
+
+- type: loadout
+  id: PlushieLizardJobStationengineer
+  name: station engineer lizard plushie
+  price: 1000
+  storage:
+    back:
+    - PlushieLizardJobStationengineer
+  groupBy: "wehs"
+
+#T2 (5000)
+
+- type: loadout
+  id: PlushieLizardJobCaptain
+  name: captain lizard plushie
+  price: 5000
+  storage:
+    back:
+    - PlushieLizardJobCaptain
+  groupBy: "commandwehs"
+
+- type: loadout
+  id: PlushieLizardJobChiefengineer
+  name: chief engineer lizard plushie
+  price: 5000
+  storage:
+    back:
+    - PlushieLizardJobChiefengineer
+  groupBy: "commandwehs"
+
+- type: loadout
+  id: PlushieLizardJobChiefmedicalofficer
+  name: chief medical officer lizard plushie
+  price: 5000
+  storage:
+    back:
+    - PlushieLizardJobChiefmedicalofficer
+  groupBy: "commandwehs"
+
+- type: loadout
+  id: PlushieLizardJobHeadofpersonnel
+  name: head of personnel lizard plushie
+  price: 5000
+  storage:
+    back:
+    - PlushieLizardJobHeadofpersonnel
+  groupBy: "commandwehs"
+
+- type: loadout
+  id: PlushieLizardJobHeadofsecurity
+  name: head of security lizard plushie
+  price: 5000
+  storage:
+    back:
+    - PlushieLizardJobHeadofsecurity
+  groupBy: "commandwehs"
+
+- type: loadout
+  id: PlushieLizardJobResearchdirector
+  name: research director lizard plushie
+  price: 5000
+  storage:
+    back:
+    - PlushieLizardJobResearchdirector
+  groupBy: "commandwehs"

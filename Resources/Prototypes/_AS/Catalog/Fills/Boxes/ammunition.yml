@@ -49,3 +49,16 @@
         children:
         - id: ASMagazineSubMachineGun35Funny
           amount: 4
+
+- type: entity
+  name: box of Echion fuel canisters
+  parent: WeaponCaseShortAmmo
+  id: WeaponCaseShortEchionCanisterSyndicate
+  description: A box full of official Cybersun Echion fuel canisters.
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EchionCanister
+          amount: 4

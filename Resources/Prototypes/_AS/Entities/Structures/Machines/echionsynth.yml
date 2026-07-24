@@ -1,0 +1,139 @@
+- type: entity
+  id: ASSyndicateEchionSynth
+  parent: [ SolutionTank, SolutionNormal, BaseMachinePowered, ConstructibleMachine, BaseC3Contraband ] # Aurora's Song - Solution refactor
+  name: Echion synthesizer
+  description: A causal loop in the core of this machine somehow fluctuates space and time at a microscopic scale to create the dangerous energy condensate known as Echion.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Machines/echionsynth.rsi
+    layers:
+    - state: off
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: cap-1
+      visible: false
+      shader: unshaded
+      map: ["enum.SolutionContainerLayers.Fill"]
+    - state: normal-unshaded
+      visible: false
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Appearance
+  - type: Transform
+    anchored: true
+  - type: Repairable
+    fuelCost: 10
+    doAfterDelay: 5
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 150
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+  - type: ApcPowerReceiver
+    powerLoad: 10000
+  - type: ExtensionCableReceiver
+  - type: PowerSwitch
+  - type: WiresVisuals
+  - type: WiresPanel
+  - type: Machine
+    board: CybersunEchionSynthesizerCircuitboard
+  - type: GenericVisualizer
+    visuals:
+      enum.PowerDeviceVisuals.Powered:
+        enum.PowerDeviceVisualLayers.Powered:
+          True: { visible: true }
+          False: { visible: false }
+  - type: SolutionContainerVisuals
+    maxFillLevels: 8
+    fillBaseName: cap-
+  - type: SolutionItemStatus
+    solution: tank
+  - type: ExaminableSolution
+    solution: tank
+  - type: ReagentTank
+    tankType: Fuel
+    fuelWhitelist:
+      tags:
+        - EchionGun
+    fuelBlacklist:
+      tags:
+        - WeldingTool
+  - type: DrainableSolution
+    solution: tank
+  - type: LitOnPowered
+  - type: PointLight
+    enabled: false
+    netsync: false
+    radius: 1.5
+    energy: 1.5
+    color: "#83db2b"
+  - type: AmbientOnPowered
+  - type: AmbientSound
+    volume: -5
+    range: 5
+    sound:
+      path: /Audio/_Impstation/Machines/echion.ogg
+  - type: PoweredComponent
+    components:
+    - type: SolutionRegeneration
+      generated:
+          reagents:
+          - ReagentId: Echion
+            Quantity: 1
+
+- type: entity
+  id: ASPunkEchionSynth
+  parent: [SolutionSmall, ASSyndicateEchionSynth] # Aurora's Song - Solution refactor
+  name: kitbashed Echion synthesizer
+  description: The fact that scrap electronics, sheet metal, and duct tape are capable of theoretical quantum physics evokes a fair bit of concern.
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Machines/kitbashsynth.rsi
+    layers:
+    - state: off
+      map: ["enum.LatheVisualLayers.IsRunning"]
+    - state: cap-1
+      visible: false
+      shader: unshaded
+      map: ["enum.SolutionContainerLayers.Fill"]
+    - state: normal-unshaded
+      visible: false
+      shader: unshaded
+      map: ["enum.PowerDeviceVisualLayers.Powered"]
+    - state: panel
+      map: ["enum.WiresVisualLayers.MaintenancePanel"]
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 75
+      behaviors:
+      - !type:DoActsBehavior
+        acts: ["Breakage"]
+  - type: ApcPowerReceiver
+    powerLoad: 8000
+  - type: Machine
+    board: KitbashEchionSynthesizerCircuitboard
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: cap-
+  - type: LitOnPowered
+  - type: PointLight
+    enabled: false
+    netsync: false
+    radius: 1.5
+    energy: 1.5
+    color: "#83db2b"
+  - type: PoweredComponent
+    components:
+    - type: SolutionRegeneration
+      generated:
+          reagents:
+          - ReagentId: Echion
+            Quantity: 0.5
+    - type: RadiationSource
+      intensity: 2

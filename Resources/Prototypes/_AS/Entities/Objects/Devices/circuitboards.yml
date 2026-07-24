@@ -47,3 +47,41 @@
       Capacitor: 2
     stackRequirements:
       Steel: 3
+
+# Echion Synth Circuitboards
+- type: entity
+  id: KitbashEchionSynthesizerCircuitboard
+  parent: BaseMachineCircuitboard
+  name: kitbashed Echion synthesizer machine board
+  description: A haphazard control board for some homemade theoretical partical physics.
+  components:
+  - type: Sprite
+    sprite: /Textures/_AS/Objects/Misc/module.rsi
+    state: hacked-merc-fab-board
+  - type: MachineBoard
+    prototype: ASPunkEchionSynth
+    requirements:
+      Capacitor: 10
+      MatterBin: 5
+    stackRequirements:
+      Steel: 5
+      Plasma: 10
+      Uranium: 10
+
+- type: entity
+  id: CybersunEchionSynthesizerCircuitboard
+  parent: BaseMachineCircuitboard
+  name: Echion synthesizer machine board
+  description: You can feel a weird power buzzing from inside this board and it's not even plugged into anything...
+  components:
+  - type: Sprite
+    sprite: /Textures/_AS/Objects/Misc/module.rsi
+    state: syndicate
+  - type: MachineBoard
+    prototype: ASSyndicateEchionSynth
+    requirements:
+      Capacitor: 5
+      MatterBin: 5
+    stackRequirements:
+      Steel: 5
+      Bluespace: 1

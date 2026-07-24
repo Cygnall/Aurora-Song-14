@@ -212,6 +212,9 @@
   - ContractorClothingUniformJumpsuitMilitaryColorLightBrown
   - ContractorClothingUniformJumpsuitMilitaryColorBrown
   - ContractorClothingUniformJumpsuitCoyotePants # Aurora's Song - Shirtless Coyote Pants
+  - ContractorClothingUniformJumpsuitJackalPants # Aurora's Song - coyote pants recolor
+  - ContractorClothingUniformJumpsuitWolfPants # Aurora's Song - coyote pants recolor
+  - ContractorClothingUniformJumpsuitHoundPants # Aurora's Song - coyote pants recolor
   - ContractorClothingUniformJumpskirtBlackElegantDress
   - ContractorClothingUniformJumpskirtRedElegantDress
   - ContractorClothingUniformJumpskirtGreenElegantDress
@@ -896,6 +899,39 @@
   - ContractorCrayonBox
   - ContractorSoapNT
   - PlushieLizard
+  # Aurora's Song Start - The avalanche of job wehs begins here:
+  - PlushieSpaceLizard
+  - PlushieLizardJobMedicalintern
+  - PlushieLizardJobResearchassistant
+  - PlushieLizardJobSecuritycadet
+  - PlushieLizardJobServiceworker
+  - PlushieLizardJobTechnicalassistant
+  - PlushieLizardJobPassenger
+  - PlushieLizardJobBartender
+  - PlushieLizardJobBoxer
+  - PlushieLizardJobBotanist
+  - PlushieLizardJobChaplain
+  - PlushieLizardJobChef
+  - PlushieLizardJobClown
+  - PlushieLizardJobJanitor
+  - PlushieLizardJobLawyer
+  - PlushieLizardJobLibrarian
+  - PlushieLizardJobMime
+  - PlushieLizardJobMusician
+  - PlushieLizardJobPsychologist
+  - PlushieLizardJobReporter
+  - PlushieLizardJobZookeeper
+  - PlushieLizardJobAtmospherictechnician
+  - PlushieLizardJobCargotechnician
+  - PlushieLizardJobChemist
+  - PlushieLizardJobDetective
+  - PlushieLizardJobMedicaldoctor
+  - PlushieLizardJobParamedic
+  - PlushieLizardJobSalvagespecialist
+  - PlushieLizardJobScientist
+  - PlushieLizardJobSecurityofficer
+  - PlushieLizardJobStationengineer
+  # Aurora's Song End
   - ContractorPlushieSharkGrey
   - ContractorPlushieSharkBlue
   - ContractorPlushieSharkPink
@@ -932,13 +968,13 @@
   - ContractorBriefcaseBrownFilled
   - ContractorToolboxEmergency
   - ContractorToolboxMechanical
-  - ContractorMantisMeleeCane # Aurora's Song - Mantis drip merge
   - ContractorCane
   - ContractorOffsetCane # Aurora's Song - for mobility impaired trait
   - ContractorOffsetCaneClown # Aurora's Song - for mobility impaired trait
   - ContractorOffsetCaneMime # Aurora's Song - for mobility impaired trait
   - ContractorOffsetCaneNT # Aurora's Song - for mobility impaired trait
   - ContractorOffsetCaneWood # Aurora's Song - for mobility impaired trait
+  - ContractorMantisMeleeCane # Aurora's Song - Mantis drip merge
   - ContractorLGBTQHandyFlag
   - ContractorNTHandyFlag
   - ContractorBalloonNT

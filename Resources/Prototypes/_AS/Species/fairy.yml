@@ -9,7 +9,7 @@
   femaleFirstNames: names_fairy_first
   lastNames: names_fairy_last
   minHeight: 0.35
-  maxHeight: 0.75
+  maxHeight: 0.5
   minWidth: 0.35
-  maxWidth: 0.75
-  defaultScale: 0.4
+  maxWidth: 0.5
+  defaultScale: 0.35

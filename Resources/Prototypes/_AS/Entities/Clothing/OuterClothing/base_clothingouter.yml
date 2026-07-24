@@ -46,3 +46,8 @@
     highPressureMultiplier: 0.525
     lowPressureMultiplier: 10000
   - type: HeldSpeedModifier
+  - type: DamageOnShootProtection # 8 damage is enough to allow the Leviathan to be fired without damage or knockdown
+    slots: OUTERCLOTHING
+    damageProtection:
+      flatReductions:
+        Blunt: 8

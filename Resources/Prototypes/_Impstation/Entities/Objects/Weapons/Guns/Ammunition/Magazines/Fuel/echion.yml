@@ -1,0 +1,168 @@
+# Fuel Canisters compatible with any Echion weapon.
+- type: entity
+  parent: [ SolutionTank, SolutionTiny, BaseItem, BaseC3SyndicateContraband ] # Aurora's Song - Solution refactor
+  id: EchionCanister
+  name: Echion canister
+  description: A special containment device designed for quickly refueling Echion weapons.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Ammunition/Magazine/Special/echioncanister.rsi
+    layers:
+      - state: canister
+        map: ["enum.GunVisualLayers.Base"]
+      - state: canister-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        shader: unshaded
+  - type: Appearance
+  - type: Item
+    size: Small
+  - type: WeaponCaseInsertable
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: canister-
+  - type: ExaminableSolution
+    solution: tank
+  - type: SolutionItemStatus
+    solution: tank
+  - type: ReagentTank
+    tankType: Fuel
+    fuelWhitelist:
+      tags:
+        - EchionGun
+    fuelBlacklist:
+      tags:
+        - WeldingTool
+  - type: Solution # Aurora's Song - Solution refactor
+    solution:
+      reagents:
+      - ReagentId: Echion
+        Quantity: 30
+  - type: SolutionRefuel
+    fuelSolutionName: tank
+    fuelReagent: Echion
+  - type: DrainableSolution
+    solution: tank
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 100
+      Glass: 50
+  - type: Tag
+    tags:
+    - EchionGun
+
+- type: entity
+  parent: [ SolutionTank, SolutionVeryTiny, BaseItem, BaseC2ExpeditionContraband ] # Aurora's Song - Solution refactor
+  id: PunkEchionCanister
+  name: Echion canister
+  description: A home-made canister designed for quickly refueling Echion weapons, but it feels kinda fragile.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Ammunition/Magazine/Special/punkcanister.rsi
+    layers:
+      - state: canister
+        map: ["enum.GunVisualLayers.Base"]
+      - state: canister-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        shader: unshaded
+  - type: Appearance
+  - type: Item
+    size: Small
+  - type: WeaponCaseInsertable
+  - type: SolutionContainerVisuals
+    maxFillLevels: 4
+    fillBaseName: canister-
+  - type: ExaminableSolution
+    solution: tank
+  - type: SolutionItemStatus
+    solution: tank
+  - type: ReagentTank
+    tankType: Fuel
+    fuelWhitelist:
+      tags:
+        - EchionGun
+    fuelBlacklist:
+      tags:
+        - WeldingTool
+  - type: Solution # Aurora's Song - Solution refactor
+    solution:
+      reagents:
+      - ReagentId: Echion
+        Quantity: 15
+  - type: SolutionRefuel
+    fuelSolutionName: tank
+    fuelReagent: Echion
+  - type: DrainableSolution
+    solution: tank
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 50
+      Glass: 100
+  - type: DamageOnLand
+    damage:
+      types:
+        Blunt: 5
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Blunt: 4
+  - type: Damageable
+  - type: Injurable # Aurora's Song - Add injurable
+    damageContainer: Inorganic
+  - type: Destructible
+    thresholds:
+    - trigger:
+        !type:DamageTrigger
+        damage: 10
+      behaviors:
+      - !type:PlaySoundBehavior
+        sound:
+          collection: GlassBreak
+          params:
+            volume: -4
+      - !type:SpillBehavior { }
+      - !type:SpawnEntitiesBehavior
+        spawn:
+          ShardGlass:
+            min: 0
+            max: 1
+        transferForensics: true
+      - !type:DoActsBehavior
+        acts: [ "Destruction" ]
+  - type: Tag
+    tags:
+    - EchionGun
+
+- type: entity
+  parent: [SolutionNormal, EchionCanister] # Aurora's Song - Solution refactor
+  id: SuperEchionCanister
+  name: heavy Echion canister
+  description: A special containment device designed for quickly refueling Echion weapons with an expanded capacity.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Ammunition/Magazine/Special/supercanister.rsi
+    layers:
+      - state: canister
+        map: ["enum.GunVisualLayers.Base"]
+      - state: canister-1
+        map: ["enum.SolutionContainerLayers.Fill"]
+        shader: unshaded
+  - type: Appearance
+  - type: Item
+    size: Normal
+    shape:
+    - 0,0,1,2
+  - type: SolutionContainerVisuals
+    maxFillLevels: 6
+    fillBaseName: canister-
+  - type: Solution # Aurora's Song - Solution refactor
+    solution:
+      reagents:
+      - ReagentId: Echion
+        Quantity: 120
+  - type: PhysicalComposition
+    materialComposition:
+      Steel: 300
+      Glass: 150
+  - type: Tag
+    tags:
+    - EchionGun

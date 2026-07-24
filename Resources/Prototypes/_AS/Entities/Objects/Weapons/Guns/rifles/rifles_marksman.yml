@@ -105,3 +105,55 @@
     sprite: Objects/Weapons/Guns/Snipers/bolt_gun_wood.rsi
   - type: AltFireMelee
     attackType: Light
+
+- type: entity
+  name: Basilisk-11
+  parent: [ NFBaseWeaponRifleAssaultChamber30, NFBaseWeaponFrameRifleAssaultCybersun, BaseC3SyndicateContraband ]
+  id: ASWeaponRifleBasilisk
+  description: A fearsome state-of-the-art battle rifle often used by Syndicate agents who care more for violence than secrecy.
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Rifles/nemesis.rsi
+    layers:
+      - state: base
+        map: ["enum.GunVisualLayers.Base"]
+      - state: mag-0
+        map: ["enum.GunVisualLayers.Mag"]
+  - type: Clothing
+    sprite: _Impstation/Objects/Weapons/Guns/Rifles/nemesis.rsi
+  - type: Gun
+    fireRate: 5
+    burstFireRate: 10
+    shotsPerBurst: 3
+    burstCooldown: 0.40
+    minAngle: 2
+    maxAngle: 6
+    angleIncrease: 2
+    angleDecay: 4
+    selectedMode: Burst
+    availableModes:
+      - SemiAuto
+      - Burst
+    soundGunshot:
+      path: /Audio/_Impstation/Weapons/Guns/Gunshots/nemesis.ogg
+  - type: ChamberMagazineAmmoProvider
+    soundRack:
+      path: /Audio/Weapons/Guns/Cock/batrifle_cock.ogg
+    boltClosed: null
+  - type: ItemSlots
+    slots:
+      gun_magazine:
+        name: Magazine
+        startingItem: ASMagazineBRTopMountedRifle30
+        insertSound: /Audio/Weapons/Guns/MagIn/batrifle_magin.ogg
+        ejectSound: /Audio/Weapons/Guns/MagOut/batrifle_magout.ogg
+        priority: 2
+        whitelist:
+          tags:
+            - ASMagazineBRTopMountedRifle30
+        whitelistFailPopup: gun-magazine-whitelist-fail
+  - type: MagazineVisuals
+    magState: mag
+    steps: 1
+    zeroVisible: true
+  - type: Appearance

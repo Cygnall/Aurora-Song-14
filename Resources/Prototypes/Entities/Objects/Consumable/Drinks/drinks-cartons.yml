@@ -217,8 +217,8 @@
       reagents:
       - ReagentId: Milk
         Quantity: 120
-  - type: Tag
-    tags: [ ]
+  # - type: Tag # Aurora's Song
+  #   tags: [ ] # Aurora's Song
 
 - type: entity
   parent: DrinkCartonNormalBase
@@ -239,8 +239,8 @@
       reagents:
       - ReagentId: MilkSoy
         Quantity: 120
-  - type: Tag
-    tags: [ ]
+  # - type: Tag # Aurora's Song
+  #   tags: [ ] # Aurora's Song
 
 - type: entity
   parent: [DrinkBaseMaterialPlastic, DrinkCartonNormalBase]
@@ -262,8 +262,8 @@
       reagents:
       - ReagentId: MilkOat
         Quantity: 120
-  - type: Tag
-    tags: [ ]
+  # - type: Tag # Aurora's Song
+  #   tags: [ ] # Aurora's Song
 
 # Large cartons
 

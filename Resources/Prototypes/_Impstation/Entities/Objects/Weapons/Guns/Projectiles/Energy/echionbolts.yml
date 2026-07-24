@@ -1,0 +1,110 @@
+- type: entity
+  name: adder plasma bolt
+  id: BulletPlasmaAdder
+  parent: [SolutionSmall, NFBaseBulletLaser] # Aurora's Song - Solution refactor
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Projectiles/energybolts.rsi
+    layers:
+    - state: mediumsynd
+      shader: unshaded
+  - type: Fixtures
+    fixtures:
+      projectile:
+        shape:
+          !type:PhysShapeAabb
+          bounds: "-0.1,-0.1,0.1,0.1"
+        hard: false
+        mask:
+        - Impassable
+        - BulletImpassable
+      fly-by: &flybyfixture
+        shape: !type:PhysShapeCircle
+          radius: 1.5
+        layer:
+        - Impassable
+        - MidImpassable
+        - HighImpassable
+        - LowImpassable
+        hard: False
+  - type: Ammo
+    muzzleFlash: MuzzleFlashEffectSyndLaser
+  - type: Projectile
+    impactEffect: BulletImpactEffectSyndicate
+    damage:
+      types:
+        Heat: 12.5
+        Piercing: 12.5
+
+- type: entity
+  name: shuvit plasma bolt
+  id: BulletPlasmaShuvit
+  parent: BulletPlasmaAdder
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Heat: 12
+        Piercing: 12
+
+- type: entity
+  name: casper plasma bolt
+  id: BulletPlasmaCasper
+  parent: BulletPlasmaAdder
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Projectile
+    damage:
+      types:
+        Heat: 14
+        Piercing: 14
+
+- type: entity
+  name: akurra plasma bolt
+  id: BulletPlasmaAkurra
+  parent: BulletPlasmaAdder
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Projectiles/energybolts.rsi
+    layers:
+    - state: lightsynd
+      shader: unshaded
+  - type: Projectile
+    damage:
+      types:
+        Heat: 11
+        Piercing: 11
+
+- type: entity
+  name: ananke plasma bolt
+  id: BulletPlasmaAnanke
+  parent: BulletPlasmaAdder
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Weapons/Guns/Projectiles/energybolts.rsi
+    layers:
+    - state: heavysynd
+      shader: unshaded
+  - type: Projectile
+    impactEffect: BulletImpactEffectSyndicate
+    damage:
+      types:
+        Heat: 7
+        Piercing: 7
+  - type: TimedDespawn
+    lifetime: 0.20 # Very short range
+
+- type: entity
+  name: echion plasma barrage
+  id: BulletPlasmaSpread
+  categories: [ HideSpawnMenu ]
+  parent: BulletPlasmaAnanke
+  components:
+  - type: ProjectileSpread
+    proto: BulletPlasmaAnanke
+    count: 5 #70 damage if you hit all your shots, but hardcapped range
+    spread: 20
