@@ -3,9 +3,9 @@ using Content.Shared.Wieldable;
 
 namespace Content.Shared._MACRO.UnableToWield;
 
-public sealed partial class UnableToWieldSystem : EntitySystem // Aurora's Song - Make partial
+public sealed partial class UnableToWieldSystem : EntitySystem
 {
-    [Dependency] private SharedPopupSystem _popup = default!; // Aurora's Song - Remove readonly
+    [Dependency] private SharedPopupSystem _popup = default!;
 
     public override void Initialize()
     {

@@ -68,7 +68,7 @@
   id: AlienEyesThree
   bodyPart: Eyes
   # markingCategory: Face # Aurora's Song
-  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Allulalo ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist
+  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Allulalo ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist, added Allulalo.
   invertGroupWhitelist: true # Aurora's Song - invertSpeciesRestriction>invertGroupWhitelist
   coloring:
     default:
@@ -82,7 +82,7 @@
   id: AlienEyesWide
   bodyPart: Eyes
   # markingCategory: Face # Aurora's Song
-  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Allulalo ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist
+  groupWhitelist: [ Moth, Arachnid, IPC, Vox, Allulalo ] # Aurora's Song - removed den species, speciesRestriction>groupWhitelist, added Allulalo.
   invertGroupWhitelist: true # Aurora's Song - invertSpeciesRestriction>invertGroupWhitelist
   coloring:
     default:
