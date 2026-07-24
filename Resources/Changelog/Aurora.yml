@@ -2200,3 +2200,24 @@ Entries:
   id: 9634
   time: '2026-07-24T04:01:04.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1248
+- author: KieueCaprie
+  changes:
+    - type: Add
+      message: Job-specific lizard plushies now have in-hand and helmet sprites.
+    - type: Add
+      message: >-
+        The bulk lizard plushie crate has been re-enabled and is selling for
+        20,000 spesos. We hope you use this privilege wisely.
+    - type: Add
+      message: >-
+        A blind box for lizard plushies can now be obtained from CritterVends
+        (for those hack-savvy) and Grand Gambling Crates.
+    - type: Add
+      message: >-
+        Job-specific lizard plushies can now be picked out from the loadout
+        starting from 1000 spesos each. Aurora Command roles may find that they
+        have the privilege of picking out command-based lizard plushies for 5000
+        spesos.
+  id: 9635
+  time: '2026-07-24T05:21:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1269
