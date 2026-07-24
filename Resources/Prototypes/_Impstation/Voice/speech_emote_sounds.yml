@@ -31,3 +31,17 @@
       params:
         volume: -3
         variation: 0.1
+    # Aurora's song start - missing emotes
+    Clap:
+      collection: Claps
+    ClapSingle:
+      collection: ClapSingle
+    Salute:
+      collection: Salutes
+    Snap:
+      collection: Snaps
+      params:
+        volume: -7
+    Crack:
+        collection: Cracks
+    # Aurora's Song end
