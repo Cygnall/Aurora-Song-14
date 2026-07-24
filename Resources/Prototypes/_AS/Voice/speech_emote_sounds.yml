@@ -46,7 +46,9 @@
     Crack:
         collection: Cracks
     Blink:
-        collection: Blinks
+        path: /Audio/_AS/Voice/Fairy/fairy_blink.ogg
+        params:
+         variation: 0.1
     FairyGlimmer:
       collection: FairyGlimmer
     Flutter:

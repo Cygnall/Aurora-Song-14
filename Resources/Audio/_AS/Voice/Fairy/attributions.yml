@@ -8,3 +8,9 @@
   license: "CC0-1.0"
   copyright: "Base sounds sourced from freesound's CC0 library, edited and layered in Ableton Live"
   source: "https://github.com/crekulon"
+
+- files: ["fairy_blink.ogg"]
+  license: "CC0-1.0"
+  copyright: "Made by sparklepunk_ on freesound.org. Mixed to mono, sped up, and compressed by meatsmall."
+  source: "https://freesound.org/people/sparklepunk_/sounds/620672/"
+  

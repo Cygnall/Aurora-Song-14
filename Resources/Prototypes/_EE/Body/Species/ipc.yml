@@ -210,6 +210,8 @@
       Dead: BorgDead
   - type: TypingIndicator
     proto: robot
+  - type: BodyEmotes # Aurora's Song
+    soundsId: IPCBodyEmotes # Aurora's Song
   - type: SlowOnDamage
     speedModifierThresholds:
       60: 0.7

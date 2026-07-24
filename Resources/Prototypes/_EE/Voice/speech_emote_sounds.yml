@@ -65,3 +65,25 @@
       collection: IPCWhirrs
       params:
         variation: 0
+
+# Aurora Song start - custom IPC sounds
+- type: emoteSounds
+  id: IPCBodyEmotes
+  sounds:
+    Clap:
+      collection: Claps
+    ClapSingle:
+      collection: ClapSingle
+    Salute:
+      collection: Salutes
+    Snap:
+      collection: Snaps
+      params:
+        volume: -7
+    Crack:
+        collection: Cracks
+    Blink:
+        path: /Audio/_AS/Voice/IPC/ipc_blink.ogg
+        params:
+            variation: 0.1
+# Aurora's Song end
