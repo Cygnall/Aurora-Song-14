@@ -133,13 +133,12 @@
   group: market
 
 - type: cargoProduct
-  id: FunLizardPlushies
-  abstract: true # Frontier
+  id: FunLizardPlushies # Aurora's Song - remove abstract
   icon:
     sprite: Objects/Fun/Plushies/lizard.rsi
     state: icon
   product: CrateFunLizardPlushieBulk
-  cost: 500
+  cost: 20000 # Aurora's Song - 500>20000 - TENTATIVE
   category: cargoproduct-category-name-fun
   group: market
 

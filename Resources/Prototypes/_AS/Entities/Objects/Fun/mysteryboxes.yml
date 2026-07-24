@@ -1,0 +1,103 @@
+- type: entity
+  parent: MysteryFigureBox
+  id: MysteryWehBox
+  name: mystery weh friend box
+  description: A box containing a plush toy resembling a lizard. The box art claims that your new best friend is just a box "a-weh"!
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Fun/wehfren.rsi
+    scale: 0.65, 0.65
+    layers:
+      - state: wehfren-box
+  - type: StaticPrice
+    price: 160
+  - type: SpawnEntityTableOnTrigger
+    useMapCoords: true
+    table: !type:AllSelector
+      children:
+      - id: WehFrenBoxTrash
+      - !type:NestedSelector
+        tableId: AllLizardPlushieGambaTable
+
+- type: entity
+  parent: MysteryFigureBox
+  id: MysteryWehBoxCommand
+  name: mystery limited-edition weh friend box
+  description: A box containing a plush toy resembling a lizard. The box art claims that your new best friend is just a box "a-weh"! This one is extra-fancy!
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Fun/wehfren.rsi
+    scale: 0.65, 0.65
+    layers:
+      - state: wehfren-box-gold
+  - type: StaticPrice
+    price: 320
+  - type: SpawnEntityTableOnTrigger
+    useMapCoords: true
+    table: !type:AllSelector
+      children:
+      - id: WehFrenBoxGoldTrash
+      - !type:NestedSelector
+        tableId: RareLizardPlushieGambaTable
+
+- type: entity
+  parent: MysteryFigureBoxTrash
+  id: WehFrenBoxTrash
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Fun/wehfren.rsi
+    state: wehfren-box-unfolded
+
+- type: entity
+  parent: MysteryFigureBoxTrash
+  id: WehFrenBoxGoldTrash
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Fun/wehfren.rsi
+    state: wehfren-box-gold-unfolded
+
+- type: entity
+  parent: MysteryWehBox
+  id: MysteryWehDebug
+  name: overflowing mystery weh friend box
+  description: A box containing a plush toy resembling a lizard. The box art claims that your new best friend is just a box "a-weh"! This... box seems to be full to bursting...
+  suffix: DEBUG
+  components:
+    - type: SpawnItemsOnUse
+      items:
+          - id: PlushieLizardJobMedicalintern
+          - id: PlushieLizardJobResearchassistant
+          - id: PlushieLizardJobSecuritycadet
+          - id: PlushieLizardJobServiceworker
+          - id: PlushieLizardJobTechnicalassistant
+          - id: PlushieLizardJobPassenger
+          - id: PlushieLizardJobBartender
+          - id: PlushieLizardJobBoxer
+          - id: PlushieLizardJobBotanist
+          - id: PlushieLizardJobChaplain
+          - id: PlushieLizardJobChef
+          - id: PlushieLizardJobClown
+          - id: PlushieLizardJobJanitor
+          - id: PlushieLizardJobLawyer
+          - id: PlushieLizardJobLibrarian
+          - id: PlushieLizardJobMime
+          - id: PlushieLizardJobMusician
+          - id: PlushieLizardJobPsychologist
+          - id: PlushieLizardJobReporter
+          - id: PlushieLizardJobZookeeper
+          - id: PlushieLizardJobAtmospherictechnician
+          - id: PlushieLizardJobCargotechnician
+          - id: PlushieLizardJobChemist
+          - id: PlushieLizardJobDetective
+          - id: PlushieLizardJobMedicaldoctor
+          - id: PlushieLizardJobParamedic
+          - id: PlushieLizardJobSalvagespecialist
+          - id: PlushieLizardJobScientist
+          - id: PlushieLizardJobSecurityofficer
+          - id: PlushieLizardJobStationengineer
+          - id: PlushieLizardJobCaptain
+          - id: PlushieLizardJobChiefengineer
+          - id: PlushieLizardJobChiefmedicalofficer
+          - id: PlushieLizardJobHeadofpersonnel
+          - id: PlushieLizardJobHeadofsecurity
+          - id: PlushieLizardJobResearchdirector

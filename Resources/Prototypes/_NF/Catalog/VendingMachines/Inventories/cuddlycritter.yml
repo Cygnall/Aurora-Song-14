@@ -60,6 +60,7 @@
     PlushieExperiment: 3 # Aurora's Song
     PlushieCatWhite: 3 # Aurora's Song
     CrazyGlue: 1
+    MysteryWehBox: 5 # Aurora's Song
   emaggedInventory:
     PlushieJester: 3
     PlushieJanitor: 3
@@ -71,3 +72,4 @@
     NFPlushieBotanist: 3
     NFPlushieCmo: 3
     NFPlushieEngineer: 3
+    MysteryWehBoxCommand: 3 # Aurora's Song

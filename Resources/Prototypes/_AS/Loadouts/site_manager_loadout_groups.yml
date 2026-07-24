@@ -120,3 +120,18 @@
   - SiteManagerPDA
   fallbacks:
   - SiteManagerPDA
+
+- type: loadoutGroup
+  id: SiteManagerBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - PlushieLizardJobChiefengineer
+  - PlushieLizardJobCaptain
+  - PlushieLizardJobHeadofpersonnel
+  - PlushieLizardJobHeadofsecurity
+  - PlushieLizardJobResearchdirector
+  - PlushieLizardJobChiefmedicalofficer
+  subgroups:
+  - ContractorBackpackItems

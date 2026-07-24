@@ -87,6 +87,12 @@
   maxLimit: 6
   loadouts:
   - ColonialRepresentativeASPouchColonialRepresentative
+  - PlushieLizardJobCaptain
+  - PlushieLizardJobHeadofpersonnel
+  - PlushieLizardJobHeadofsecurity
+  - PlushieLizardJobResearchdirector
+  - PlushieLizardJobChiefengineer
+  - PlushieLizardJobChiefmedicalofficer
   subgroups:
   - ContractorBackpackItems
 

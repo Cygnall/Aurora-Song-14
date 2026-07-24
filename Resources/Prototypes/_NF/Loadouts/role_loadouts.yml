@@ -234,11 +234,11 @@
   - DocEars
   - ContractorBoxSurvival
   - DocPDA
+  - DocBackpackItems # Aurora Song
   - ContractorWallet
   - MedicCartridge
   - ContractorImplanter
   - ContractorEncryptionKey
-  - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
 

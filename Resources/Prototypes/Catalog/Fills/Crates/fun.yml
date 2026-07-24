@@ -58,7 +58,7 @@
   parent: CrateGenericSteel
   id: CrateFunLizardPlushieBulk
   name: bulk lizard plushie crate
-  description: A buncha soft lizard plushies. Throw them around and then wonder how you're gonna explain this purchase to NT.
+  description: A buncha soft lizard plushies. Throw them around, hug them, wear them, wonder how you're gonna explain this purchase to your friends and co-workers. #Aurora's Song - change description to not mention NT
   components:
   - type: EntityTableContainerFill
     containers:

@@ -273,7 +273,7 @@
   - ContractorWallet
   - ContractorCartridge
   - ContractorImplanter
-  - SergeantBackpackItems
+  - CommissionerBackpackItems
   - ContractorHandItems
   - SLESpeciesSpecific
 
@@ -320,7 +320,7 @@
   - ContractorFace
   - SiteManagerGlasses
   - SiteManagerPDA
-  - ContractorBackpackItems
+  - SiteManagerBackpackItems # Apparently this doubles the backpack items for Site Managers. I do not see any other "BackpackItems" in this list, so how in the FUCK did that happen?!
   - ContractorBoxSurvival
   - ContractorWallet
   - ContractorCartridge
