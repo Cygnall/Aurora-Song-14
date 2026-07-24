@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.2.1
   forkId: ""
   forkVersion: ""
-  time: 07/24/2026 06:16:14
-  entityCount: 1230
+  time: 07/24/2026 06:28:25
+  entityCount: 1231
 maps: []
 grids:
 - 1
@@ -863,7 +863,8 @@ entities:
           -2,-6:
             2: 16
             1: 258
-            0: 3272
+            3: 64
+            0: 3208
           -2,-7:
             2: 26624
         uniqueMixes:
@@ -878,6 +879,11 @@ entities:
         - volume: 2500
           immutable: True
           moles: {}
+        - volume: 2500
+          temperature: 293.14975
+          moles:
+            Oxygen: 20.078888
+            Nitrogen: 75.53487
         chunkSize: 4
     - type: GasTileOverlay
     - type: RadiationGridResistance
@@ -2678,10 +2684,10 @@ entities:
       parent: 1
 - proto: CrateFoodCooking
   entities:
-  - uid: 331
+  - uid: 174
     components:
     - type: Transform
-      pos: -5.5,-22.5
+      pos: -4.5,-22.5
       parent: 1
 - proto: CrateFunInstrumentsVariety
   entities:
@@ -5949,6 +5955,13 @@ entities:
     - type: Transform
       pos: -3.606241,2.4060311
       parent: 1
+- proto: MachineFTLDrive
+  entities:
+  - uid: 173
+    components:
+    - type: Transform
+      pos: -5.5,-22.5
+      parent: 1
 - proto: MaterialReclaimer
   entities:
   - uid: 786
@@ -8095,17 +8108,17 @@ entities:
       parent: 1
 - proto: VendingMachineRestockBooze
   entities:
-  - uid: 1098
+  - uid: 185
     components:
     - type: Transform
-      pos: -4.732243,-22.65291
+      pos: -3.7173388,-22.668951
       parent: 1
 - proto: VendingMachineRestockSmokes
   entities:
-  - uid: 1099
+  - uid: 172
     components:
     - type: Transform
-      pos: -4.534326,-22.288326
+      pos: -3.5454638,-22.309576
       parent: 1
 - proto: WallShuttle
   entities:
