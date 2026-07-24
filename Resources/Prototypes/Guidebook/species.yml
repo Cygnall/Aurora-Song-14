@@ -3,7 +3,7 @@
   name: guide-entry-species
   text: "/ServerInfo/Guidebook/Mobs/Species.xml"
   children:
-  - Allulalo
+  - Allulalo # Macrocosm
   - Arachnid
   - Avali # Moffstation - Avali Guidebook Entry
   - Diona # Note: Frontier changes inside
