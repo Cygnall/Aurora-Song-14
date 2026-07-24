@@ -2193,3 +2193,10 @@ Entries:
   id: 9633
   time: '2026-07-24T03:41:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1075
+- author: mothrii, meatsmall
+  changes:
+    - type: Add
+      message: Two new cloaks that can help conceal your identity
+  id: 9634
+  time: '2026-07-24T04:01:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1248
