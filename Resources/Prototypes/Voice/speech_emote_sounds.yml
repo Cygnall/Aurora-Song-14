@@ -707,6 +707,10 @@
         volume: -6
     Salute:
       collection: Salutes
+    Crack: # Aurora's Song
+      collection: Cracks # Aurora's Song
+    Blink: # Aurora's Song
+      collection: Blinks # Aurora's Song
     Flutter: # Aurora's Song - Add flutter from fairy
       path: /Audio/Voice/Moth/moth_flap.ogg
 
