@@ -251,10 +251,12 @@
   # - /Audio/_Impstation/Voice/Anomalocarid/anomalocarid_ask.ogg
   # - /Audio/_Impstation/Voice/Anomalocarid/anomalocarid_exclaim.ogg
   # - /Audio/_Impstation/Voice/Anomalocarid/anomalocarid_deathgasp.ogg
-  # - /Audio/_Impstation/Voice/Arachnid/arachnid_gasp.ogg
-  # - /Audio/_Impstation/Voice/Decapoid/decapoid_gasp.ogg
-  # - /Audio/_Impstation/Voice/Decapoid/decapoid_deathgasp.ogg
-  # - /Audio/_Impstation/Voice/Decapoid/decapoid_scream.ogg
+  # Aurora's Song Edit End
+  - /Audio/_MACRO/Voice/Arachnid/arachnid_gasp.ogg
+  - /Audio/_MACRO/Voice/Decapoid/decapoid_gasp.ogg
+  - /Audio/_MACRO/Voice/Decapoid/decapoid_deathgasp.ogg
+  - /Audio/_MACRO/Voice/Decapoid/decapoid_scream.ogg
+  # Aurora's Song Edit Start
   # - /Audio/_Impstation/Voice/Gastropoid/snail_gasp.ogg
   # - /Audio/_Impstation/Voice/Gastropoid/snail_deathgasp.ogg
   # - /Audio/_Impstation/Voice/Gastropoid/snail_scream.ogg

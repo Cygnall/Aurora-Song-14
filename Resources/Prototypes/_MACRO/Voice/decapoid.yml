@@ -17,7 +17,7 @@
     Laugh:
       path: /Audio/_MACRO/Voice/Decapoid/decapoid_laugh.ogg
     Sneeze:
-      collection: UnisexSneezes
+      collection: MaleSneezes #Aurora's Song UnisexSneezes > MaleSneezes
     Cough:
       path: /Audio/_MACRO/Voice/Decapoid/decapoid_cough.ogg
     CatMeow:

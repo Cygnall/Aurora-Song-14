@@ -31,13 +31,13 @@
         Blunt: 1 #see above
     passiveBlockFraction: 0.0 #does not give damage reduction passively
     activeBlockFraction: 0.5 #gives 50% damage reduction against brute damage to the decapoid while the claw is raised
-  - type: Damageable
+  - type: Injurable
     damageContainer: DecapoidShield #determines what types of damage are reduced by the Blocking component, DecapoidShield damage container is brute damage only
   - type: ToolTileCompatible
     delay: 0.5
   - type: Tool
     qualities:
-      - Prying
+    - Prying
     useSound: /Audio/_MACRO/Items/Decapoid/claw_prying.ogg
   - type: Prying
     speedModifier: 1.5
@@ -46,18 +46,18 @@
   - type: MultipleTool
     statusShowBehavior: true
     entries:
-      - behavior: Prying
-        sprite:
-          sprite: *ClawRSI
-          state: icon-closed
-        useSound: /Audio/_MACRO/Items/Decapoid/claw_prying.ogg
-        changeSound: /Audio/_MACRO/Items/Decapoid/switch.ogg
-      - behavior: Cutting
-        sprite:
-          sprite: *ClawRSI
-          state: icon
-        useSound: /Audio/_MACRO/Items/Decapoid/claw_cutting.ogg
-        changeSound: /Audio/_MACRO/Items/Decapoid/switch.ogg
+    - behavior: Prying
+      sprite:
+        sprite: *ClawRSI
+        state: icon-closed
+      useSound: /Audio/_MACRO/Items/Decapoid/claw_prying.ogg
+      changeSound: /Audio/_MACRO/Items/Decapoid/switch.ogg
+    - behavior: Cutting
+      sprite:
+        sprite: *ClawRSI
+        state: icon
+      useSound: /Audio/_MACRO/Items/Decapoid/claw_cutting.ogg
+      changeSound: /Audio/_MACRO/Items/Decapoid/switch.ogg
   - type: OrganAttached
     slot: left
     handEquipment: true
@@ -74,8 +74,8 @@
     state: icon
   - type: Tag
     tags:
-      - Vaporizer
-      - WhitelistChameleon
+    - Vaporizer
+    - WhitelistChameleon
   - type: Clothing
     quickEquip: true
     slots:
@@ -167,10 +167,10 @@
     edible: Drink
     solution: waterTank
     destroyOnEmpty: false
-  - type: SolutionContainerManager
-    solutions:
-      waterTank:
-        maxVol: 30
+  - type: Solution
+    id: waterTank
+    solution:
+      maxVol: 30
   - type: RefillableSolution
     solution: waterTank
   - type: ExaminableSolution

@@ -25,6 +25,7 @@
   - ContractorSidearm # Aurora's Song
   - ContractorAmmo # Aurora's Song
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
 
 - type: roleLoadout
   id: JobPilot
@@ -50,6 +51,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
 
 - type: roleLoadout
   id: JobMercenary
@@ -78,6 +80,7 @@
   - MercenarySidearm # Aurora's Song
   - MercenaryAmmo # Aurora's Song
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
 
 # region Frontier
 - type: roleLoadout
@@ -101,6 +104,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
 
 - type: roleLoadout
   id: JobNFJanitor
@@ -122,6 +126,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
 
 - type: roleLoadout
   id: JobMailCarrier
@@ -143,6 +148,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
 
 - type: roleLoadout
   id: JobStationTrafficController
@@ -167,6 +173,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
 
 # Aurora Song: Moved to _AS as JobColonialRepresentative
 # - type: roleLoadout
@@ -215,6 +222,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
 
 # region Misc
 - type: roleLoadout
@@ -241,6 +249,7 @@
   - ContractorBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
 
 # Aurora's Song - JobPlantManager and JobPlantTechnician roles are disabled
 #- type: roleLoadout
@@ -312,6 +321,7 @@
   - PirateBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
   canCustomizeName: true # pseudonym?
 
 - type: roleLoadout
@@ -333,6 +343,7 @@
   - PirateBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
   canCustomizeName: true # pseudonym?
 
 - type: roleLoadout
@@ -354,6 +365,7 @@
   - PirateCaptainBackpackItems
   - ContractorHandItems
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song
   canCustomizeName: true # pseudonym?
 
 # region Prisoner
@@ -373,3 +385,4 @@
   - PrisonerPDA
   - PrisonerWallet
   - NFSpeciesSpecific
+  - ASDecapoidSpeciesSpecific # Aurora's Song

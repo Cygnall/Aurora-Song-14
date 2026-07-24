@@ -14,6 +14,13 @@
     species:
     - Avali
 
+- type: loadoutEffectGroup # Aurora's Song - Water vapor and pill-having loadout effect group.
+  id: ASWaterVaporBreatherPill
+  effects:
+  - !type:SpeciesLoadoutEffect
+    species:
+    - Decapoid
+
 #region Jobs
 
 - type: loadoutEffectGroup # Aurora's Song - Medical blacklist added

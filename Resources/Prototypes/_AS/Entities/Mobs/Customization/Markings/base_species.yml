@@ -5,6 +5,7 @@
 
 # Species for reference, excluding non-roundstart:
 # Arachnid
+# Decapoid
 # Diona
 # Dwarf
 # Felinid
@@ -34,6 +35,7 @@
   invertGroupWhitelist: true
   groupWhitelist:
   - Arachnid
+  - Decapoid
   - Diona
   - IPC
   - Moth
@@ -77,6 +79,7 @@
   - Moth
   - Vox
   # Inorganic / Skinless
+  - Decapoid
   - Diona
   - IPC
   # Technically Tajaran are missing one pixel off the heel (like, very subtle digitigrade)
