@@ -258,7 +258,8 @@
   components:
   - type: Metabolizer
     metabolizerTypes: [ Allulalo ]
-    updateIntervalMultiplier: 1.5 # This should make them metabolize things twice as fast. I think. This new system is scary.
+    updateIntervalMultiplier: 0.5 # Aurora's Song - 1.5 > 0.5. Should make reagents be metabolised faster.
+    efficacyMultiplier: 0.5 # Aurora's Song - Metabolized faster, but not more effective.
 
 - type: entity
   id: OrganAllulaloVisual
