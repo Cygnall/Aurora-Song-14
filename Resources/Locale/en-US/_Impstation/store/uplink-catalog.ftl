@@ -42,3 +42,9 @@ uplink-ananke-desc = Brutal and unapolagetic-- the Ananke shotgun, bundled with 
 
 uplink-glykon-name = Glykon bundle
 uplink-glykon-desc = Beautiful, elegant, and deadly. The Glykon bundled with 4 canisters of Echion fuel.
+
+uplink-kaijucloak-name = Kaiju Cloak
+uplink-kaijucloak-desc = Are you too recognizable, even in a hardsuit? Simply hide your loose parts with this large cloak! It'll cover wings, tails, and extra limbs!
+
+uplink-fugitivecloak-name = Monochrome Cloak
+uplink-fugitivecloak-desc = Hide your extra appendages in a more black and white style.

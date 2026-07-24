@@ -61,9 +61,10 @@
     data:
       state: torso
   - type: VisualOrganMarkings
-    hideableLayers: # Aurora's Song - Hidable undergarments
+    hideableLayers: # Aurora's Song - Hidable undergarments and tail
     - enum.HumanoidVisualLayers.UndergarmentTop
     - enum.HumanoidVisualLayers.UndergarmentBottom
+    - enum.HumanoidVisualLayers.Tail
     markingData:
       layers:
       - Chest

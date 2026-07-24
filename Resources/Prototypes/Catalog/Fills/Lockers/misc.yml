@@ -180,6 +180,8 @@
     - id: ToolboxSyndicateFilled
     - id: BalloonSyn
     - id: ASWeaponRifleMosinBolt # Aurora's Song | NFWeaponRifleBarlowsBolt<ASWeaponRifleMosinBolt
+    - id: ClothingNeckCloakKaijuCloak #imp
+    - id: ClothingNeckCloakFugitiveCloak #imp
       weight: 2
     - id: ClothingHandsKnuckleDustersSyndicate
 
