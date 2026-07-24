@@ -1,0 +1,350 @@
+#region Head
+- type: marking
+  id: DionaFlyLureHead
+  bodyPart: HeadTop
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: flylure
+
+- type: marking
+  id: DionaLeafPonytailHead
+  bodyPart: HeadSide
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: leafponytail
+
+- type: marking
+  id: DionaAntlersHead
+  bodyPart: HeadSide
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: antlers
+
+- type: marking
+  id: DionaSideAntlerHead
+  bodyPart: HeadSide
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: sideantlertrunk
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: sideantlerflower
+
+- type: marking
+  id: DionaTreeFaceHead
+  bodyPart: HeadSide
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: treefacetrunk
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: treefaceleaves
+
+- type: marking
+  id: DionaBigEyeHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: bigeye
+
+- type: marking
+  id: DionaBluebellHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: bluebellflower
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: bluebellstem
+
+- type: marking
+  id: DionaEyeFlowerHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: eyeflower
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: eyeflowerstem
+
+- type: marking
+  id: DionaMandiblesHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: mandibles
+
+- type: marking
+  id: DionaMothHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: mothface
+
+- type: marking
+  id: DionaPompomHead
+  bodyPart: HeadTop
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: pompom
+
+- type: marking
+  id: DionaSmallCornflowerHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: smallcornflower
+
+- type: marking
+  id: DionaSmallMandiblesHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: smallmandibles
+
+- type: marking
+  id: DionaSproutLeavesHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: sproutleaves
+
+- type: marking
+  id: DionaThornFangsHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: thornfangs
+
+- type: marking
+  id: DionaTripleEyeHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: tripleeye
+
+- type: marking
+  id: DionaVineHornsHead
+  bodyPart: HeadTop
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: vinehorns
+
+- type: marking
+  id: DionaIntennaHead
+  bodyPart: HeadTop
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: intenna
+
+- type: marking
+  id: DionaOutennaHead
+  bodyPart: HeadTop
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: outenna
+
+- type: marking
+  id: DionaStemHead
+  bodyPart: HeadTop
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: stem
+
+- type: marking
+  id: DionaBurnHead
+  bodyPart: Head
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: faceburn
+
+- type: marking
+  id: DionaThornRidgeChest
+  bodyPart: HeadTop
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_head.rsi
+    state: thornridge
+
+#region Chest
+- type: marking
+  id: DionaClownFlowerChest
+  bodyPart: Chest
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_chest.rsi
+    state: clownflower
+
+- type: marking
+  id: DionaRibsChest
+  bodyPart: Chest
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_chest.rsi
+    state: ribs
+
+- type: marking
+  id: DionaSpineChest
+  bodyPart: Chest
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_chest.rsi
+    state: spine
+
+- type: marking
+  id: DionaBurnChest
+  bodyPart: Chest
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_chest.rsi
+    state: chestburn
+
+- type: marking
+  id: DionaMouthChest
+  bodyPart: Chest
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_chest.rsi
+    state: chestmouth
+  - sprite: _AS/Mobs/Customization/diona/diona_chest.rsi
+    state: chestmouthblep
+
+#region Tail
+- type: marking
+  id: DionaSproutTail
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: sprouttail
+
+- type: marking
+  id: DionaLightTail
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: lighttailinner
+    shader: unshaded
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: lighttailouter
+
+
+- type: marking
+  id: DionaNymphTail
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: nymphtail
+
+- type: marking
+  id: DionaSmallFlowerTail
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: smallflower
+
+- type: marking
+  id: DionaTrunkTail
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: trunk
+
+- type: marking
+  id: DionaSnakeTail
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: snake
+
+- type: marking
+  id: DionaWillowWingChest
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: willowwings
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: willowwingleaves
+
+- type: marking
+  id: DionaBranchWingChest
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: shavedwillowwings
+
+- type: marking
+  id: DionaLadybugChest
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: ladybugshell
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: ladybugspots
+
+- type: marking
+  id: DionaSylvanChest
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: sylvan
+
+- type: marking
+  id: DionaLittleWingChest
+  bodyPart: Tail
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_tail.rsi
+    state: littlewing
+
+#region Overlay
+- type: marking
+  id: DionaMothOverlay
+  bodyPart: Overlay
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_overlay.rsi
+    state: mothoverlay
+
+#region Arms
+- type: marking
+  id: DionaEyesRightArm
+  bodyPart: RArm
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_arms.rsi
+    state: rarmeyes
+
+- type: marking
+  id: DionaEyesLeftArm
+  bodyPart: LArm
+  groupWhitelist: [Diona]
+  sprites:
+  - sprite: _AS/Mobs/Customization/diona/diona_arms.rsi
+    state: larmeyes
