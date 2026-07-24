@@ -84,7 +84,7 @@
   name: chat-emote-name-multichirp
   category: Vocal
   available: false
-  icon: _Impstation/Interface/Emotes/chirp.png #imp
+  icon: Interface/Emotes/chirp.png # Aurora's Song - default chirp icon
   whitelist:
     components:
     - Nymph

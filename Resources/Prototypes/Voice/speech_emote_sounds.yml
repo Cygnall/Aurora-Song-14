@@ -298,6 +298,8 @@
       collection: DionaSneeze
     Chirp:
       path: /Audio/Animals/nymph_chirp.ogg
+    Multichirp: # Impstation
+      path: /Audio/_Impstation/Effects/Emotes/multichirp.ogg # Aurora's Song
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
     Honk:
