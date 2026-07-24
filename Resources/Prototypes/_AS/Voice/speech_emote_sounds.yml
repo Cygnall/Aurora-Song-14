@@ -43,6 +43,8 @@
       collection: Snaps
       params:
         volume: -7 # block end
+    Crack:
+        collection: Cracks
     Blink:
         collection: Blinks
     FairyGlimmer:
