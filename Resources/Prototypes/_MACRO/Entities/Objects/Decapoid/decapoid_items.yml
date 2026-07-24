@@ -170,7 +170,7 @@
   - type: Solution
     id: waterTank
     solution:
-      maxVol: 30
+      maxVol: 60 # Aurora's Song - 30 > 60
   - type: RefillableSolution
     solution: waterTank
   - type: ExaminableSolution
