@@ -92,6 +92,7 @@
 #      enum.WiresUiKey.Key:
 #        type: WiresBoundUserInterface
   - type: BindToStation # Frontier
+  - type: TooShortForUiBlacklist # MACRO
 
 - type: entity
   parent: BaseComputer

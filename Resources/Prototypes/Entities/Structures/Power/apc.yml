@@ -154,6 +154,7 @@
     - Power
   - type: BatteryDrinkerSource # EE IPCs
     maxAmount: 10000
+  - type: TooShortForUiBlacklist # MACRO
 
 # APC under construction
 - type: entity
