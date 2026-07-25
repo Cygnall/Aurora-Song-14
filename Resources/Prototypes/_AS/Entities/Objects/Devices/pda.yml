@@ -290,9 +290,9 @@
   description: Whosoever bears this PDA puts the law on their back.
   components:
   - type: Pda
-    id: ASSergeantIDCard
-    bookSlot: # Frontier
-      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+    id: OffDutyOfficerIDCard
+    bookSlot:
+      startingItem: HyperlinkBookSLESop
       priority: -2
       whitelist:
         tags:

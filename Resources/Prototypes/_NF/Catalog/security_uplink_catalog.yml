@@ -910,7 +910,7 @@
         - Commissioner
         - Sergeant
 
-- type: listing
+- type: listing # Aurora's Song - Added Off Duty Officer Bundle
   id: UplinkSecurityOffDutyOfficerBundle
   name: uplink-security-off-duty-officer-bundle-name
   description: uplink-security-off-duty-officer-bundle-desc
