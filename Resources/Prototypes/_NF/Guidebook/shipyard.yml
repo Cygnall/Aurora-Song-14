@@ -8,6 +8,7 @@
   - ShipyardAkupara
   - ShipyardAmbition
   - ShipyardApothecary
+  - ShipyardBalena
   - ShipyardBarge
   - ShipyardBaroness
   - ShipyardBazaar
@@ -85,6 +86,11 @@
   id: ShipyardApothecary
   name: guide-entry-shipyard-apothecary
   text: "/ServerInfo/_NF/Guidebook/Shipyard/Apothecary.xml"
+
+- type: guideEntry
+  id: ShipyardBalena
+  name: guide-entry-shipyard-balena
+  text: "/ServerInfo/_NF/Guidebook/Shipyard/Balena.xml"
 
 - type: guideEntry
   id: ShipyardBarge
