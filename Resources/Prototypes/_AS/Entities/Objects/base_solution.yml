@@ -1,0 +1,8 @@
+- type: entity
+  parent: Solution
+  id: Solution1920 # x 1080, I needed something half the size of 3840
+  categories: [ HideSpawnMenu ]
+  components:
+  - type: Solution
+    solution:
+      maxVol: 1920

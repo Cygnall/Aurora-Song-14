@@ -278,7 +278,7 @@
 #region Bluespace Vial Fills
 - type: entity
   parent: VialBluespace
-  suffix: Bruizine 300u
+  suffix: Bruizine 240u # Aurora's Song - 300>240
   id: BruizineMedicalVialBluespace
   components:
     - type: Label
@@ -287,11 +287,11 @@
       solution:
         reagents:
         - ReagentId: Bruizine
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Lacerinol 300u
+  suffix: Lacerinol 240u # Aurora's Song - 300>240
   id: LacerinolMedicalVialBluespace
   components:
     - type: Label
@@ -300,11 +300,11 @@
       solution:
         reagents:
         - ReagentId: Lacerinol
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Puncturase 300u
+  suffix: Puncturase 240u # Aurora's Song - 300>240
   id: PuncturaseMedicalVialBluespace
   components:
     - type: Label
@@ -313,11 +313,11 @@
       solution:
         reagents:
         - ReagentId: Puncturase
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Dex+ 300u
+  suffix: Dex+ 240u # Aurora's Song - 300>240
   id: DexPlusMedicalVialBluespace
   components:
     - type: Label
@@ -326,11 +326,11 @@
       solution:
         reagents:
         - ReagentId: DexalinPlus
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Saline 300u
+  suffix: Saline 240u # Aurora's Song - 300>240
   id: SalineMedicalVialBluespace
   components:
     - type: Label
@@ -339,11 +339,11 @@
       solution:
         reagents:
         - ReagentId: Saline
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Pyrazine 300u
+  suffix: Pyrazine 240u # Aurora's Song - 300>240
   id: PyrazineMedicalVialBluespace
   components:
     - type: Label
@@ -352,11 +352,11 @@
       solution:
         reagents:
         - ReagentId: Pyrazine
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Insuzine 300u
+  suffix: Insuzine 240u # Aurora's Song - 300>240
   id: InsuzineMedicalVialBluespace
   components:
     - type: Label
@@ -365,11 +365,11 @@
       solution:
         reagents:
         - ReagentId: Insuzine
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Leporazine 300u
+  suffix: Leporazine 240u # Aurora's Song - 300>240
   id: LeporazineMedicalVialBluespace
   components:
     - type: Label
@@ -378,11 +378,11 @@
       solution:
         reagents:
         - ReagentId: Leporazine
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Stellibinin 300u
+  suffix: Stellibinin 240u # Aurora's Song - 300>240
   id: StellibininMedicalVialBluespace
   components:
     - type: Label
@@ -391,11 +391,11 @@
       solution:
         reagents:
         - ReagentId: Stellibinin
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Tranexamic Acid 300u
+  suffix: Tranexamic Acid 240u # Aurora's Song - 300>240
   id: TranexamicAcidMedicalVialBluespace
   components:
     - type: Label
@@ -404,7 +404,7 @@
       solution:
         reagents:
         - ReagentId: TranexamicAcid
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
@@ -423,7 +423,7 @@
 
 - type: entity
   parent: VialBluespace
-  suffix: Polypyrylium Oligomers 300u
+  suffix: Polypyrylium Oligomers 240u # Aurora's Song - 300>240
   id: OligomersMedicalVialBluespace
   components:
     - type: Label
@@ -432,11 +432,11 @@
       solution:
         reagents:
         - ReagentId: PolypyryliumOligomers
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Omnizine 300u
+  suffix: Omnizine 240u # Aurora's Song - 300>240
   id: OmnizineMedicalVialBluespace
   components:
     - type: Label
@@ -445,11 +445,11 @@
       solution:
         reagents:
         - ReagentId: Omnizine
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
 
 - type: entity
   parent: VialBluespace
-  suffix: Hyperzine 300u
+  suffix: Hyperzine 240u # Aurora's Song - 300>240
   id: HyperzineMedicalVialBluespace
   components:
     - type: Label
@@ -458,4 +458,4 @@
       solution:
         reagents:
         - ReagentId: Stimulants
-          Quantity: 300
+          Quantity: 240 # Aurora's Song - 300>240
