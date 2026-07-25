@@ -47,7 +47,7 @@
   - type: Stack
     count: 10
 
-- type: entity
+- type: entity # Aurora's Song - Added 20 TC coin stack
   parent: FrontierUplinkCoin
   id: FrontierUplinkCoin20
   suffix: 20 TC
