@@ -3,6 +3,13 @@
 #  payPerHour: 14000
 #  job: CargoTechnician
 
+# Default civilian payouts below here
+
+- type: stationPay
+  id: offdutyofficerPay
+  payPerHour: 5000 # Lower number, incentive to pick this job, but inequivalent to being "clocked-in"
+  job: OffDutyOfficer
+
 # Default station payouts below here
 
 - type: stationPay

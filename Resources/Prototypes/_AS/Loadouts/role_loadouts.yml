@@ -1,3 +1,33 @@
+#region Civilian
+
+- type: roleLoadout
+  id: JobOffDutyOfficer
+  groups:
+  - OffDutyOfficerHead
+  - OffDutyOfficerNeck
+  - OffDutyOfficerJumpsuit
+  - OffDutyOfficerGloves
+  - OffDutyOfficerBackpack
+  - OffDutyOfficerOuterClothing
+  - SLEForcedOuterClothing
+  - OffDutyOfficerShoes
+  - OffDutyOfficerFace
+  - OffDutyOfficerGlasses
+  - OffDutyOfficerBelt
+  - OffDutyOfficerEars
+  - SLEBoxSurvival
+  - OffDutyOfficerPDA
+  - ContractorWallet
+  - ContractorCartridge
+  - ContractorImplanter
+  - ContractorEncryptionKey
+  - OffDutyOfficerBackpackItems
+  - ContractorHandItems
+  - MercenaryLongarm
+  - MercenarySidearm
+  - MercenaryAmmo
+  - SLESpeciesSpecific
+
 #region Medical
 
 - type: roleLoadout

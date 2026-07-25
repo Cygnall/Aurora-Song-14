@@ -285,6 +285,32 @@
 
 - type: entity
   parent: ASBaseSecurityPDA
+  id: OffDutyOfficerPDA
+  name: off-duty officer PDA
+  description: Whosoever bears this PDA puts the law on their back.
+  components:
+  - type: Pda
+    id: ASSergeantIDCard
+    bookSlot: # Frontier
+      startingItem: HyperlinkBookSLESop # Aurora's Song - changed to AS version
+      priority: -2
+      whitelist:
+        tags:
+        - BookSpaceLaw
+        - BookNfsdSop
+  - type: Appearance
+    appearanceDataInit:
+      enum.PdaVisuals.PdaType:
+        !type:String
+        pda-assergeant
+  - type: PdaBorderColor
+    borderColor: "#98BBC2"
+    accentHColor: "#2A4F63"
+  - type: Icon
+    state: pda-assergeant
+
+- type: entity
+  parent: ASBaseSecurityPDA
   id: ASLieutenantPDA
   name: lieutenant PDA
   description: Whosoever bears this PDA puts the law on their back.

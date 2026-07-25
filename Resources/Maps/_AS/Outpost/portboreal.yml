@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.2.1
   forkId: ""
   forkVersion: ""
-  time: 07/06/2026 04:15:51
-  entityCount: 13718
+  time: 07/25/2026 20:13:33
+  entityCount: 13722
 maps:
 - 1
 grids:
@@ -81428,6 +81428,28 @@ entities:
     components:
     - type: Transform
       pos: 0.5,3.5
+      parent: 2
+- proto: SpawnPointOffDutyOfficer
+  entities:
+  - uid: 13719
+    components:
+    - type: Transform
+      pos: -8.5,9.5
+      parent: 2
+  - uid: 13720
+    components:
+    - type: Transform
+      pos: 9.5,-34.5
+      parent: 2
+  - uid: 13721
+    components:
+    - type: Transform
+      pos: -6.5,7.5
+      parent: 2
+  - uid: 13722
+    components:
+    - type: Transform
+      pos: 22.5,-26.5
       parent: 2
 - proto: SpawnPointPilot
   entities:
