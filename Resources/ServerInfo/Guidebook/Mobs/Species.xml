@@ -48,4 +48,8 @@
   <Box>
   <GuideEntityEmbed Entity="AppearanceOvinia" Caption="Ovinia"/>
   </Box>
+  # Impstation specific species
+  <Box>
+  <GuideEntityEmbed Entity="MobAllulalo" Caption="Allulalo"/>
+  </Box>
 </Document>

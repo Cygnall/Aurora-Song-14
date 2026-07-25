@@ -2221,3 +2221,19 @@ Entries:
   id: 9635
   time: '2026-07-24T05:21:55.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1269
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: >-
+        Adds Allulalo, a reclusive species of small, raptor-like aliens from the
+        Imp sector.
+  id: 9636
+  time: '2026-07-24T23:16:25.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1273
+- author: AvianMaiden
+  changes:
+    - type: Add
+      message: The CNF Glatisant, a medium-sized patrol shuttle for the SLE!
+  id: 9637
+  time: '2026-07-25T01:56:34.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1280

@@ -1,0 +1,38 @@
+# Author Info
+# GitHub: AvianMaiden
+# Discord: SpaceMammal
+
+# Shuttle Notes:
+# Sidegrade to the Prowler, having the same radar but different advantages and disadvantages.
+- type: vessel
+  id: Glatisant
+  parent: BaseVessel
+  name: CNF Glatisant
+  description: A medium-sized patrol/reconnaissance voidcraft with a powerful radar suite. A demilitarized surplus from the CNF, homegrown in the Colony.
+  price: 36000 #Appraises on purchase at ~30000. 20% markup applied due to the presence of the radar.
+  category: Medium
+  group: Security
+  access: Sergeant
+  shuttlePath: /Maps/_AS/Shuttles/Sle/glatisant.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Glatisant
+  mapName: 'CNF Glatisant'
+  mapPath: /Maps/_AS/Shuttles/Sle/glatisant.yml
+  minPlayers: 0
+  stations:
+    Glatisant:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Glatisant {1}'
+          nameGenerator:
+            !type:NanotrasenNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

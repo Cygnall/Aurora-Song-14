@@ -3,27 +3,28 @@
   name: guide-entry-species
   text: "/ServerInfo/Guidebook/Mobs/Species.xml"
   children:
+  - Allulalo # Macrocosm
   - Arachnid
+  - Avali # Moffstation - Avali Guidebook Entry
   - Diona # Note: Frontier changes inside
   - Dwarf # Note: Frontier changes inside
+  - Fairy # Aurora
+  - Felinid # DeltaV
+  - Feroxi # DeltaV
+  - Goblin # Frontier
+  - Harpy # DeltaV
   - Human
+  - IPC # Aurora
   - Moth
+  - Oni # DeltaV
+  - Ovinia # Den addition
   - Reptilian
-  - Avali # Moffstation - Avali Guidebook Entry
+  - Rodentia # DeltaV
+  - Sheleg # Frontier
   - SlimePerson
+  - Tajaran # EE
   - Vox
   - Vulpkanin
-  - Goblin # Frontier
-  - Sheleg # Frontier
-  - Harpy # DeltaV
-  - Felinid # DeltaV
-  - Oni # DeltaV
-  - Rodentia # DeltaV
-  - Feroxi # DeltaV
-  - Tajaran # EE
-  - Fairy # Aurora
-  - Ovinia # Den addition
-  - IPC # Aurora
 
 - type: guideEntry
   id: Arachnid
