@@ -2237,3 +2237,12 @@ Entries:
   id: 9637
   time: '2026-07-25T01:56:34.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1280
+- author: Zenixic
+  changes:
+    - type: Add
+      message: >-
+        Added the PT Balena from NF, a service yacht with a pool, to the
+        shipyard!
+  id: 9638
+  time: '2026-07-25T02:18:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1263
