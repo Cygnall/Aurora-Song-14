@@ -148,6 +148,8 @@
       Male: MaleSlime
       Female: FemaleSlime
       Unsexed: MaleSlime
+  - type: BodyEmotes #imp edit
+    soundsId: SlimeBodyEmotes
   - type: Damageable
     damageModifierSet: Slime
   - type: PassiveDamage # Around 8 damage a minute healed

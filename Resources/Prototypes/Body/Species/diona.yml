@@ -155,7 +155,7 @@
           - MobLayer
   - type: Speech
     speechVerb: Plant
-    allowedEmotes: ['Chirp']
+    allowedEmotes: ['Chirp', 'Multichirp'] # Aurora's Song - add multichirp
   - type: Vocal
     sounds:
       Male: UnisexDiona

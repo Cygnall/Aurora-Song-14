@@ -105,3 +105,12 @@
   files:
     - /Audio/_Impstation/Voice/Slime/slimewhistle.ogg
 
+- type: soundCollection
+  id: Blinks
+  files:
+    - /Audio/_Impstation/Effects/Emotes/blink.ogg
+
+- type: soundCollection
+  id: WetBlinks
+  files:
+    - /Audio/_Impstation/Effects/Emotes/wetblink.ogg

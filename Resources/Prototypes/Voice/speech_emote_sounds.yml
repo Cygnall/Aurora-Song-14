@@ -298,6 +298,8 @@
       collection: DionaSneeze
     Chirp:
       path: /Audio/Animals/nymph_chirp.ogg
+    Multichirp: # Impstation
+      path: /Audio/_Impstation/Effects/Emotes/multichirp.ogg # Aurora's Song
     MonkeyScreeches: # Frontier
       collection: MonkeyScreeches # Frontier
     Honk:
@@ -645,8 +647,13 @@
         volume: -6
     Salute:
       collection: Salutes
-    Crack: # Imp
-      collection: Cracks # Imp
+    Crack: # Imp addition
+      collection: Cracks
+    Blink: # Imp addition
+      collection: Blinks
+      params:
+        volume: -3
+        variation: 0.1
 
 - type: emoteSounds
   id: DionaBodyEmotes
@@ -664,8 +671,13 @@
       path: /Audio/Voice/Diona/diona_salute.ogg
       params:
        volume: -5
-    Crack: # Imp
-      collection: Cracks # Imp
+    Crack: # imp
+      collection: Cracks
+    Blink: # Imp addition
+      collection: Blinks
+      params:
+        volume: -3
+        variation: 0.1
 
 - type: emoteSounds
   id: ReptilianBodyEmotes
@@ -686,6 +698,8 @@
       collection: Salutes
     Crack: # Imp
       collection: Cracks # Imp
+    Blink: # Imp
+      collection: Blinks # Imp
 
 - type: emoteSounds
   id: MothBodyEmotes
@@ -702,6 +716,13 @@
         volume: -6
     Salute:
       collection: Salutes
+    Crack: # Aurora's Song
+      collection: Cracks # Aurora's Song
+    Blink: # Aurora's Song
+      collection: Blinks # Aurora's Song
+      params: # imp
+        volume: -3 # imp
+        variation: 0.1 # imp
     Flutter: # Aurora's Song - Add flutter from fairy
       path: /Audio/Voice/Moth/moth_flap.ogg
 

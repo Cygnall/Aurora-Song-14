@@ -43,6 +43,12 @@
       collection: Snaps
       params:
         volume: -7 # block end
+    Crack:
+        collection: Cracks
+    Blink:
+        path: /Audio/_AS/Voice/Fairy/fairy_blink.ogg
+        params:
+         variation: 0.1
     FairyGlimmer:
       collection: FairyGlimmer
     Flutter:
