@@ -1,8 +1,4 @@
 using Content.Server.CartridgeLoader;
-<<<<<<< HEAD
-=======
-using Content.Server.Ghost.Components;
->>>>>>> a0f06d67069 (Add Critical Implant Tracker Cartridge and UI functionality (#59))
 using Content.Server.Station.Systems;
 using Content.Shared._WF.CartridgeLoader.Cartridges;
 using Content.Shared.CartridgeLoader;
@@ -10,20 +6,14 @@ using Content.Shared.Ghost;
 using Content.Shared.Humanoid;
 using Content.Shared.Implants.Components;
 using Content.Shared.Inventory;
-<<<<<<< HEAD
 using Content.Shared.Mind;
-=======
->>>>>>> a0f06d67069 (Add Critical Implant Tracker Cartridge and UI functionality (#59))
 using Content.Shared.Mobs;
 using Content.Shared.Mobs.Components;
 using Content.Shared.Mobs.Systems;
 using Content.Shared.PDA;
-<<<<<<< HEAD
 using Content.Shared.SSDIndicator;
 using Content.Shared.Trigger.Components.Conditions;
 using Content.Shared.Trigger.Components.Triggers;
-=======
->>>>>>> a0f06d67069 (Add Critical Implant Tracker Cartridge and UI functionality (#59))
 using Robust.Shared.Containers;
 using Robust.Shared.Timing;
 
@@ -34,17 +24,10 @@ public sealed class CriticalImplantTrackerCartridgeSystem : EntitySystem
     [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!;
     [Dependency] private readonly StationSystem _stationSystem = default!;
     [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
-<<<<<<< HEAD
     [Dependency] private readonly InventorySystem _inventorySystem = default!;
     [Dependency] private readonly IGameTiming _gameTiming = default!;
     [Dependency] private readonly SharedMindSystem _mindSystem = default!;
     [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-=======
-    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
-    [Dependency] private readonly MetaDataSystem _metaData = default!;
-    [Dependency] private readonly InventorySystem _inventorySystem = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
->>>>>>> a0f06d67069 (Add Critical Implant Tracker Cartridge and UI functionality (#59))
 
     public override void Initialize()
     {
@@ -79,7 +62,6 @@ public sealed class CriticalImplantTrackerCartridgeSystem : EntitySystem
         {
             var isCritical = _mobStateSystem.IsCritical(mobUid, mobState);
             var isDead = _mobStateSystem.IsDead(mobUid, mobState);
-<<<<<<< HEAD
 
             // Only consider entities in critical or dead condition
             if (!isCritical && !isDead)
@@ -92,20 +74,6 @@ public sealed class CriticalImplantTrackerCartridgeSystem : EntitySystem
                              TryComp<PdaComponent>(idSlot, out var pda) &&
                              pda.ContainedId != null;
 
-=======
-            
-            // Only consider entities in critical or dead condition
-            if (!isCritical && !isDead)
-                continue;
-            
-            // For dead entities, check if they have PDA and ID card
-            if (isDead)
-            {
-                var hasPda = _inventorySystem.TryGetSlotEntity(mobUid, "id", out var idSlot) && 
-                             TryComp<PdaComponent>(idSlot, out var pda) && 
-                             pda.ContainedId != null;
-                
->>>>>>> a0f06d67069 (Add Critical Implant Tracker Cartridge and UI functionality (#59))
                 if (!hasPda)
                     continue;
             }
@@ -126,7 +94,6 @@ public sealed class CriticalImplantTrackerCartridgeSystem : EntitySystem
             }
 
             // Calculate time since entering crit/death
-<<<<<<< HEAD
             var timeSinceCrit = "Active";
             if (isDead)
             {
@@ -159,43 +126,20 @@ public sealed class CriticalImplantTrackerCartridgeSystem : EntitySystem
 
             // Check if the entity has a medAlert beacon that is enabled
             var hasActiveBeacon = false;
-=======
-            // For dead entities, check if they have a ghost component with time of death
-            var timeSinceCrit = "Unknown";
-            if (isDead && TryComp<GhostComponent>(mobUid, out var ghost))
-            {
-                var elapsedTime = _gameTiming.CurTime - ghost.TimeOfDeath;
-                var totalSeconds = (int)elapsedTime.TotalSeconds;
-                var minutes = totalSeconds / 60;
-                var seconds = totalSeconds % 60;
-                timeSinceCrit = minutes > 0 ? $"{minutes}m {seconds}s" : $"{seconds}s";
-            }
-
-            // Find all implants on this entity
-            var implants = new List<string>();
->>>>>>> a0f06d67069 (Add Critical Implant Tracker Cartridge and UI functionality (#59))
             if (_containerSystem.TryGetContainer(mobUid, ImplanterComponent.ImplantSlotId, out var implantContainer))
             {
                 foreach (var implant in implantContainer.ContainedEntities)
                 {
-<<<<<<< HEAD
                     // Has a mob-state trigger AND is either not togglable or currently toggled on
                     if (TryComp<TriggerOnMobstateChangeComponent>(implant, out _) &&
                         (!TryComp<ToggleTriggerConditionComponent>(implant, out var toggle) || toggle.Enabled))
                     {
                         hasActiveBeacon = true;
                         break;
-=======
-                    if (HasComp<SubdermalImplantComponent>(implant))
-                    {
-                        var implantName = MetaData(implant).EntityName;
-                        implants.Add(implantName);
->>>>>>> a0f06d67069 (Add Critical Implant Tracker Cartridge and UI functionality (#59))
                     }
                 }
             }
 
-<<<<<<< HEAD
             // Only add patients who have an active medAlert beacon
             if (!hasActiveBeacon)
                 continue;
@@ -207,13 +151,6 @@ public sealed class CriticalImplantTrackerCartridgeSystem : EntitySystem
 
             // Add all critical/dead patients with active beacons
             patients.Add(new CriticalPatientData(name, coordinates, species, timeSinceCrit, isDead, isSpaceSleepDisorder));
-=======
-            // Only add patients who have implants
-            if (implants.Count > 0)
-            {
-                patients.Add(new CriticalPatientData(name, implants, coordinates, species, timeSinceCrit, isDead));
-            }
->>>>>>> a0f06d67069 (Add Critical Implant Tracker Cartridge and UI functionality (#59))
         }
 
         var state = new CriticalImplantTrackerUiState(patients);

@@ -18,6 +18,7 @@ using Robust.Shared.Configuration;
 using Robust.Shared.Console;
 using Robust.Shared.Player;
 using Robust.Shared.Prototypes;
+using Content.Shared.StationRecords; // Aurora's Song
 
 namespace Content.Server.CrewManifest;
 
@@ -28,6 +29,7 @@ public sealed partial class CrewManifestSystem : EntitySystem
     [Dependency] private EuiManager _euiManager = default!;
     [Dependency] private IConfigurationManager _configManager = default!;
     [Dependency] private IPrototypeManager _prototypeManager = default!;
+    [Dependency] private IdCardSystem _idCardSystem = default!;
 
     /// <summary>
     ///     Cached crew manifest entries. The alternative is to outright
