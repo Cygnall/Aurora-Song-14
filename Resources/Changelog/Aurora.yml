@@ -2289,3 +2289,10 @@ Entries:
   id: 9643
   time: '2026-07-26T09:24:01.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1289
+- author: ZigTag
+  changes:
+    - type: Add
+      message: added a toggle for pumping or equalizing pressure in gas containers
+  id: 9644
+  time: '2026-07-26T09:26:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1279
