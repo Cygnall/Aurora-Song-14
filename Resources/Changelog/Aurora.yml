@@ -2296,3 +2296,10 @@ Entries:
   id: 9644
   time: '2026-07-26T09:26:00.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1279
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: The popup for swapping fire modes works again.
+  id: 9645
+  time: '2026-07-26T20:27:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1298
