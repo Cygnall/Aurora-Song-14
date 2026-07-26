@@ -262,8 +262,8 @@
         color: "#162581"
   # Aurora's Song Start - Use pre-existing SpeciesBlockInjection, rather than BlockInjection.
   - type: SpeciesBlockInjection
-    messageSelf: block-injection-decapoid-self
-    messageOther: block-injection-decapoid
+    messageSelf: decapoid-injector-component-blocked-user
+    messageOther: decapoid-injector-component-blocked-other
   # Aurora's Song End
   - type: CanWieldOneHanded
 
