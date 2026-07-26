@@ -211,10 +211,10 @@
 - type: entity
   parent: PassengerIDCard
   id: ContractorIDCard
-  name: wayfarer ID card # Wayfarer: contractor < wayfarer
+  name: contractor ID card
   components:
   - type: PresetIdCard
-    job: Wayfarer # Wayfarer: Contractor < Wayfarer
+    job: Contractor
   - type: Sprite
     sprite: _NF/Objects/Misc/id_cards.rsi
     layers:

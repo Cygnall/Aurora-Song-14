@@ -6,7 +6,7 @@
   setPreference: false
   icon: "JobIconUnknown"
   supervisors: job-supervisors-hire
-  canBeAntag: false
+  # canBeAntag: false # Aurora's Song
 
 - type: playTimeTracker
   id: JobInactive
