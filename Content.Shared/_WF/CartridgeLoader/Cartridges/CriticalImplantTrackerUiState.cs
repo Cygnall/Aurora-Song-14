@@ -24,7 +24,7 @@ public sealed class CriticalPatientData
     public bool IsDead { get; }
     public bool IsSpaceSleepDisorder { get; }
 
-    public CriticalPatientData(string name, string coordinates, string species, string timeSinceCrit, bool isDead)
+    public CriticalPatientData(string name, string coordinates, string species, string timeSinceCrit, bool isDead, bool isSpaceSleepDisorder)
     {
         Name = name;
         Coordinates = coordinates;
