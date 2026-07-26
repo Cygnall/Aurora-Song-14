@@ -83,7 +83,7 @@ public sealed partial class CrewManifestSystem : EntitySystem
     private void AfterGeneralRecordCreated(AfterGeneralRecordCreatedEvent ev)
     {
         // Coyote: NOP, we build on open
-        // BuildCrewManifest();
+        // BuildCrewManifest(ev.Key.OriginStation);
         // UpdateEuis(ev.Key.OriginStation);
         // End Coyote
     }
@@ -227,7 +227,7 @@ public sealed partial class CrewManifestSystem : EntitySystem
     /// <summary>
     ///     Builds the crew manifest for a station. Stores it in the cache afterwards.
     /// </summary>
-    private CrewManifestEntries BuildCrewManifest()
+    private CrewManifestEntries BuildCrewManifest() // Coyote: remove args, remove name
     {
         var sensors = EntityQueryEnumerator<SuitSensorComponent>(); // Coyote
 
