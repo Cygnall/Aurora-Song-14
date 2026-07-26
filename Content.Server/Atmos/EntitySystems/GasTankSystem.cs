@@ -97,7 +97,7 @@ public sealed partial class GasTankSystem : SharedGasTankSystem
         if (deltaP < entity.Comp.SafetyPressure)
             deltaP = Math.Min(entity.Comp.ReleasePressure, deltaP);
 
-        var removed = _atmosphereSystem.FlowGas(entity.Comp.Air, deltaP, dt, ReleaseArea);
+        var removed = entity.Comp.Vacate ? _atmosphereSystem.FlowGas(entity.Comp.Air, entity.Comp.ReleasePressure, dt, ReleaseArea) : _atmosphereSystem.FlowGas(entity.Comp.Air, deltaP, dt, ReleaseArea); // Aurora's Song - Make vacating ignore deltaP
 
         if (removed == null)
             return;

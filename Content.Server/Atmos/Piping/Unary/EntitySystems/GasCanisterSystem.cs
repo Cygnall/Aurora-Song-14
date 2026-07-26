@@ -117,6 +117,14 @@ public sealed partial class GasCanisterSystem : SharedGasCanisterSystem
                 ? _atmos.GetContainingMixture(entity.Owner, args.Grid, args.Map, false, true)
                 : CompOrNull<GasTankComponent>(entity.Comp.GasTankSlot.Item.Value)?.Air;
 
+            // Aurora's Song Start - Allow forcing out gasses
+            if (output != null && entity.Comp.Vacate)
+            {
+                _atmos.PumpGasTo(entity.Comp.Air, output, entity.Comp.ReleasePressure);
+                return;
+            }
+            // Aurora's Song End
+
             // Only let gas flow one way!
             _atmos.ReleaseGasTo(entity.Comp.Air, output, entity.Comp.ReleasePressure);
         }

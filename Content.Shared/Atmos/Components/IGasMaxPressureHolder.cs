@@ -41,4 +41,16 @@ public interface IGasMaxPressureHolder : IGasMixtureHolder
     ///     This determines the current value
     /// </summary>
     float Integrity { get; set; }
+
+    // Aurora's Song Start
+    /// <summary>
+    /// This pumps air out of the cans when in atmosphere. Rather than equalizing.
+    /// </summary>
+    bool Vacate { get; set; }
+
+    /// <summary>
+    /// Sound made when the valve on this device is opened or closed.
+    /// </summary>
+    SoundSpecifier ValveSound { get; set; }
+    // Aurora's Song End
 }
