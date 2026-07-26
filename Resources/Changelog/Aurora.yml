@@ -2282,3 +2282,10 @@ Entries:
   id: 9642
   time: '2026-07-26T09:11:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1294
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: Forensics works on blood swapping traits!
+  id: 9643
+  time: '2026-07-26T09:24:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1289
