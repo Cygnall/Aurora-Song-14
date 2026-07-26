@@ -2303,3 +2303,10 @@ Entries:
   id: 9645
   time: '2026-07-26T20:27:56.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1298
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Folding chairs now fit in bags.
+  id: 9646
+  time: '2026-07-26T20:28:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1300
