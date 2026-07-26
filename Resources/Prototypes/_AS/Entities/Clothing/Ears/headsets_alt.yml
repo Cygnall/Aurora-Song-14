@@ -18,6 +18,22 @@
 
 - type: entity
   parent: ASClothingHeadsetAltSLENavy
+  id: ASClothingHeadsetAltSLEOffDutyNavy
+  name: SLE off-duty over-ear headset
+  description: An updated over-ear headset for Sector Law Enforcement personnel.
+  components:
+  - type: ContainerFill
+    containers:
+      key_slots:
+      - EncryptionKeyCommon
+      - EncryptionKeyTraffic
+      - EncryptionKeyShipboard
+      - EncryptionKeyNfsd
+      - EncryptionKeyCommand
+      - EncryptionKeyMedical
+
+- type: entity
+  parent: ASClothingHeadsetAltSLENavy
   id: ASClothingHeadsetAltSLEOrange
   name: SLE over-ear headset
   description: An updated over-ear headset for Sector Law Enforcement personnel.
