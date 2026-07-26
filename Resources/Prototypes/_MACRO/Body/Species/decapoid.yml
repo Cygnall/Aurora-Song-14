@@ -260,8 +260,11 @@
       Brute:
         sprite: _MACRO/Mobs/Effects/decapoid_brute_damage.rsi
         color: "#162581"
-  - type: BlockInjection
-    failurePopup: block-injection-decapoid
+  # Aurora's Song Start - Use pre-existing SpeciesBlockInjection, rather than BlockInjection.
+  - type: SpeciesBlockInjection
+    messageSelf: block-injection-decapoid-self
+    messageOther: block-injection-decapoid
+  # Aurora's Song End
   - type: CanWieldOneHanded
 
 - type: entity # For testing purposes.
