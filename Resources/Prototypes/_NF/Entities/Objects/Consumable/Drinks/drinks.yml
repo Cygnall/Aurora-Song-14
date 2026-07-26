@@ -111,33 +111,7 @@
     sprite: _NF/Clothing/Head/Hats/condiment_cup.rsi
   - type: CondimentCup
   - type: NFIngredient
-
-# imp coffee cup
-- type: entity
-  parent: [SolutionTiny, DrinkBase] # Aurora's Song - Convert to solution
-  id: DrinkDisposableCup
-  name: disposable cup
-  components:
-  - type: PhysicalComposition
-    materialComposition:
-      Cardboard: 25
-  - type: ExaminableSolution
-    solution: drink
-  - type: FitsInDispenser
-    solution: drink
-  - type: Tag
-    tags:
-      - DrinkGlass
-  - type: Sprite
-    sprite: _NF/Objects/Consumable/Drinks/coffeecup.rsi
-    state: icon
-  - type: Item
-    inhandVisuals:
-      left:
-      - state: inhand-left
-      right:
-      - state: inhand-right
-  - type: Appearance
+# Aurora's Song - moved impstation disposable cup to its own namespace, where it belongs
 
 - type: entity
   parent: DrinkDisposableCup

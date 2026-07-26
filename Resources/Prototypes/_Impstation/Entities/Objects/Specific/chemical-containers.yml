@@ -1,0 +1,20 @@
+# imp coffee cup
+- type: entity
+  parent: [DrinkBaseCup] # Aurora's Song - Convert to solution > parent DrinkBaseCup
+  id: DrinkDisposableCup
+  name: disposable cup
+  description: A mass-produced cup made of compacted cardboard.
+  components: # Aurora's Song - Removed multiple redundant components
+  - type: PhysicalComposition
+    materialComposition:
+      Cardboard: 25
+  - type: Sprite
+    sprite: _NF/Objects/Consumable/Drinks/coffeecup.rsi
+    state: icon
+  - type: Item
+    inhandVisuals:
+      left:
+      - state: inhand-left
+      right:
+      - state: inhand-right
+  - type: Appearance
