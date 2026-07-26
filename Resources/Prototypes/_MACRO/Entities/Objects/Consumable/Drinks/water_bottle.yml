@@ -37,8 +37,8 @@
     solution:
       reagents:
       - ReagentId: Water
-        Quantity: 80
-      maxVol: 80
+        Quantity: 90 # Aurora's Song - 80 > 90
+      maxVol: 90 # Aurora's Song - 80 > 90
   - type: Sprite
     sprite: _MACRO/Objects/Consumable/Drinks/Plastic/tallwaterbottle.rsi
   - type: FitsInDispenser
@@ -55,9 +55,9 @@
     solution:
       reagents:
       - ReagentId: Water
-        Quantity: 35
+        Quantity: 84 # Aurora's Song - 35 > 84
       - ReagentId: Laughter
-        Quantity: 15
+        Quantity: 36 # Aurora's Song - 15 > 36
   - type: FitsInDispenser
     solution: drink
   - type: Label
