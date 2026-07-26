@@ -16,4 +16,4 @@
         state: icon
     - type: CriticalImplantTrackerCartridge
     - type: StaticPrice
-      price: 1000
+      price: 20 # Aurora's Song - 1000>20 - Same price as MedTek
