@@ -2337,3 +2337,10 @@ Entries:
   id: 9649
   time: '2026-07-26T21:38:08.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1297
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Let service cyborgs hold drinks with the lounge module!
+  id: 9650
+  time: '2026-07-26T21:58:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1295
