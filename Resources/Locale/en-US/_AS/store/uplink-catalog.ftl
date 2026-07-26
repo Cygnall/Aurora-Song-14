@@ -80,6 +80,9 @@ uplink-security-energy-sword-desc = An energy sword with an orange blade, for th
 uplink-security-frag-bundle-name = NGP-40 Fragmentation Bundle
 uplink-security-frag-bundle-desc = A bundle containing an NGP-40 type launcher, and ten fragmentation grenades.
 
+uplink-security-off-duty-officer-bundle-name = Off-Duty Officer Bundle
+uplink-security-off-duty-officer-bundle-desc = A bundle of equipment to quickly prep an off-duty SLE Officer.
+
 uplink-security-baton-bundle-name = NGP-40 Baton Bundle
 uplink-security-baton-bundle-desc = A bundle containing an NGP-40 type launcher, and ten baton grenades.
 

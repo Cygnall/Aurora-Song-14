@@ -25,6 +25,7 @@
             Contractor: [ -1, -1 ]
             Pilot: [ -1, -1 ]
             Mercenary: [ -1, -1 ]
+            OffDutyOfficer: [ -1, -1 ]
             Borg: [ -1, -1 ]
             ColonialRepresentative: [ 1, 1 ]
             StationTrafficController: [ 1, 1 ]

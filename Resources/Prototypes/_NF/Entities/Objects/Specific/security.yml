@@ -47,6 +47,14 @@
   - type: Stack
     count: 10
 
+- type: entity # Aurora's Song - Added 20 TC coin stack
+  parent: FrontierUplinkCoin
+  id: FrontierUplinkCoin20
+  suffix: 20 TC
+  components:
+  - type: Stack
+    count: 20
+
 # Uplinks
 
 # Aurora's Song - NFSD Uplinks converted to SLE

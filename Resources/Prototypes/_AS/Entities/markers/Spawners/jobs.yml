@@ -1,4 +1,19 @@
-﻿#region Medical
+﻿#region Civilian
+
+- type: entity
+  parent: SpawnPointSecurityOfficer
+  id: SpawnPointOffDutyOfficer
+  name: off duty officer
+  components:
+  - type: SpawnPoint
+    job_id: OffDutyOfficer
+  - type: Sprite
+    layers:
+      - state: green
+      - sprite: _AS/Markers/jobs.rsi
+        state: sle-off-duty-officer
+
+#region Medical
 
 - type: entity
   id: SpawnPointMedic
