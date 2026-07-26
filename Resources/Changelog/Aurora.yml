@@ -2328,3 +2328,12 @@ Entries:
   id: 9648
   time: '2026-07-26T20:42:59.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1254
+- author: BudaLope
+  changes:
+    - type: Add
+      message: Ports Wayfarer's Crew Manifest Improvements
+    - type: Add
+      message: Ports Wayfarer's Crit Implant Tracker
+  id: 9649
+  time: '2026-07-26T21:38:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1297
