@@ -1,0 +1,14 @@
+#region manufacturer
+- type: entity
+  id: ASBaseWeaponFrameRifleAssaultStarTech
+  parent: [ NFBaseWeaponFrameRifleAssault ]
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 4
+    maxAngle: 12
+    angleIncrease: 2.5
+    angleDecay: 3
+    fireRate: 6 # fire rate tweak, increase | Aurora
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-nanotrasen-munitions # Nanotrasen Munitions flavour text | Aurora
