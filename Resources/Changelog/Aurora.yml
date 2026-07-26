@@ -2310,3 +2310,10 @@ Entries:
   id: 9646
   time: '2026-07-26T20:28:52.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1300
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Fairies can now go on your head.
+  id: 9647
+  time: '2026-07-26T20:30:34.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1299
