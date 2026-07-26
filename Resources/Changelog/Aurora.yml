@@ -2268,3 +2268,10 @@ Entries:
   id: 9640
   time: '2026-07-25T21:59:13.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1286
+- author: AvianMaiden
+  changes:
+    - type: Tweak
+      message: A handful of nonlethal tools and disablers can now be used by pacifists!
+  id: 9641
+  time: '2026-07-26T08:35:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1290
