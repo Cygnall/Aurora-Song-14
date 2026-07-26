@@ -2317,3 +2317,14 @@ Entries:
   id: 9647
   time: '2026-07-26T20:30:34.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1299
+- author: KieueCaprie
+  changes:
+    - type: Add
+      message: >-
+        Weh implanters have finally arrived in the Aurora sector from the
+        Frontier! Find them in your loadouts and/or your nearest medical vendor!
+    - type: Tweak
+      message: The musician lizard plushie can now play music.
+  id: 9648
+  time: '2026-07-26T20:42:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1254
