@@ -2344,3 +2344,10 @@ Entries:
   id: 9650
   time: '2026-07-26T21:58:58.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1295
+- author: Laeras
+  changes:
+    - type: Fix
+      message: 'Fixed swapping hands backwards! '
+  id: 9651
+  time: '2026-07-26T22:57:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1302
