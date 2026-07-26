@@ -294,3 +294,5 @@
           Yellow: { state: mode-yellow }
   - type: StaticPrice
     price: 250
+  - type: PacifismAllowedGun # Aurora's Song - added PacifismAllowedGun since it is not a weapon
+

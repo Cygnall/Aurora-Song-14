@@ -75,6 +75,7 @@
     range: 2
     energyConsumption: 2700000
     disableDuration: 30
+  - type: PacifismAllowedGun # Aurora's Song - added PacifismAllowedGun as EMPs are not lethal weapons
 
 - type: entity
   name: portable particle decelerator
@@ -108,6 +109,7 @@
       startingCharge: 2400
     - type: BatterySelfRecharger
       autoRechargeRate: 4
+    - type: PacifismAllowedGun # Aurora's Song - added PacifismAllowedGun to match Wizden
 
 #region Thermal
 - type: entity
