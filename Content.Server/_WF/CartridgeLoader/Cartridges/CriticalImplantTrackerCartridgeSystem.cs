@@ -19,15 +19,15 @@ using Robust.Shared.Timing;
 
 namespace Content.Server._WF.CartridgeLoader.Cartridges;
 
-public sealed class CriticalImplantTrackerCartridgeSystem : EntitySystem
+public sealed partial class CriticalImplantTrackerCartridgeSystem : EntitySystem
 {
-    [Dependency] private readonly CartridgeLoaderSystem _cartridgeLoader = default!;
-    [Dependency] private readonly StationSystem _stationSystem = default!;
-    [Dependency] private readonly MobStateSystem _mobStateSystem = default!;
-    [Dependency] private readonly InventorySystem _inventorySystem = default!;
-    [Dependency] private readonly IGameTiming _gameTiming = default!;
-    [Dependency] private readonly SharedMindSystem _mindSystem = default!;
-    [Dependency] private readonly SharedContainerSystem _containerSystem = default!;
+    [Dependency] private CartridgeLoaderSystem _cartridgeLoader = default!;
+    [Dependency] private StationSystem _stationSystem = default!;
+    [Dependency] private MobStateSystem _mobStateSystem = default!;
+    [Dependency] private InventorySystem _inventorySystem = default!;
+    [Dependency] private IGameTiming _gameTiming = default!;
+    [Dependency] private SharedMindSystem _mindSystem = default!;
+    [Dependency] private SharedContainerSystem _containerSystem = default!;
 
     public override void Initialize()
     {
@@ -88,9 +88,9 @@ public sealed class CriticalImplantTrackerCartridgeSystem : EntitySystem
 
             // Get species
             var species = "Unknown";
-            if (TryComp<HumanoidAppearanceComponent>(mobUid, out var humanoid))
+            if (TryComp<HumanoidProfileComponent>(mobUid, out var humanoid))
             {
-                species = humanoid.Species.ToString();
+                species = humanoid.Species;
             }
 
             // Calculate time since entering crit/death
