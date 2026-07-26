@@ -353,11 +353,14 @@
   # Aurora's Song End
 
 - type: entity
-  parent: BasePlushieLizardJob
+  parent: [BasePlushieLizardJob, BaseHandheldInstrument] # Aurora's Song - BasePlushieLizardJob>BasePlushieLizardJob, BaseHandheldInstrument
   id: PlushieLizardJobMusician
   name: musician lizard plushie
   description: An adorable stuffed toy that resembles a lizardperson as a musician. It smells faintly of sweat and has a few strings coming loose.
   components:
+  - type: Instrument # Aurora's Song - weh
+    program: 1
+    bank: 101
   - type: Sprite
     state: musician
   # Aurora's Song Start - equippedPrefix and heldPrefix

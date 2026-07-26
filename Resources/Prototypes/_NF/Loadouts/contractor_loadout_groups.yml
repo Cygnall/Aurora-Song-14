@@ -1113,6 +1113,7 @@
   - ContractorLightImplanter
   - ContractorBikeHornImplanter
   - ContractorSadTromboneImplanter
+  - ContractorWehImplanter
   - ContractorMimePowersImplanter
   - ContractorBibleUserImplanter
   fallbacks:
