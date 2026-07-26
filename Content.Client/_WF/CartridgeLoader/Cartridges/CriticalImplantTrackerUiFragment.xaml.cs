@@ -49,7 +49,7 @@ public sealed partial class CriticalImplantTrackerUiFragment : BoxContainer
             {
                 Margin = new Thickness(0, 0, 0, 5),
                 HorizontalExpand = true,
-                StyleClasses = { "AngleRect" },
+                StyleClasses = { "BackgroundPanel" }, // Aurora's Song - AngleRect>BackgroundPanel
                 ModulateSelfOverride = Color.FromHex("#3F3F3F") // Gray background like bounty contracts
             };
 
