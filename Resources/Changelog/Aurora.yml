@@ -2351,3 +2351,10 @@ Entries:
   id: 9651
   time: '2026-07-26T22:57:23.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1302
+- author: Cygnall
+  changes:
+    - type: Add
+      message: SLE Off-Duty Officer
+  id: 9652
+  time: '2026-07-26T23:01:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1293
