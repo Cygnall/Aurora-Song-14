@@ -2358,3 +2358,12 @@ Entries:
   id: 9652
   time: '2026-07-26T23:01:42.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1293
+- author: Laeras
+  changes:
+    - type: Fix
+      message: >-
+        Let cyborg construction modules pick up parts for construction
+        (igniters, power cells, capacitors, matter bins, manipulators)
+  id: 9653
+  time: '2026-07-27T06:56:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1305
