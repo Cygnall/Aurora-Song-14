@@ -752,6 +752,7 @@
           - Ingot
           - RodMetal1
           - Sheet
+          - ConstructionMaterial # Aurora's Song - Parity with the hand below
           components:
           - ConstructionMaterials
     - hand: # Aurora's Song - Make it like NF
@@ -780,6 +781,9 @@
           - MachineBoard
           - ComputerBoard
           - Circuitboard
+          - MachinePart # Aurora's Song - this tag corresponds to the StockParts, capacitors, matter bins, and power cells
+          tags:
+          - Igniter # Aurora's Song - used for hyper convection lathes
         blacklist:
           components:
           - SiliconLawProvider
