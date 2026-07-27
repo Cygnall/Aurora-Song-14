@@ -1,6 +1,6 @@
-# Aurora Song - SLE (Sector Law Enforcement) airlock access variants
 # Locked airlocks with specific access requirements
 
+# region SLE Airlocks
 - type: entity
   parent: ASAirlockSLEGlass
   id: ASAirlockSLEGlassLocked
@@ -91,11 +91,54 @@
     containers:
       board: [ DoorElectronicsPrisoner ]
 
-# SLE External Airlocks
+# region SLE External Airlocks
+
 - type: entity
   parent: ASAirlockExternalGlassSLE
   id: ASAirlockExternalGlassSLELocked
   suffix: SLE, Glass, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+# region SLE Shuttle Airlocks
+
+- type: entity
+  id: ASAirlockShuttleSLELocked
+  parent: ASAirlockShuttleSLE
+  suffix: SLE, Docking, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  id: ASAirlockGlassShuttleSLELocked
+  parent: ASAirlockGlassShuttleSLE
+  suffix: SLE, Glass, Docking, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+# region Security External Airlocks
+
+- type: entity
+  parent: AirlockExternal
+  id: AirlockExternalSecurityLocked
+  suffix: External, Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+# region HighSecDoors
+
+- type: entity
+  parent: HighSecDoor
+  id: HighSecSecurityLocked
+  suffix: Security, Locked
   components:
   - type: ContainerFill
     containers:
