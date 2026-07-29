@@ -197,4 +197,41 @@
     layers:
       - state: internals
       - state: extendedtank
+
+- type: entity
+  parent: BoxSurvival
+  id: ASBoxSurvivalDecapoid
+  suffix: Water Vapor (Pill)
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: EmergencyWaterVaporTankFilled
+        - id: PillEmergency
+        - id: FoodPSB
+        - id: DrinkWaterBottleLargeFull
+        - id: Flare
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: emergencytank
+
+- type: entity
+  parent: BoxSurvivalEngineering
+  id: ASBoxSurvivalExtendedDecapoid
+  suffix: Water Vapor (Pill)
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: DoubleEmergencyWaterVaporTankFilled
+        - id: PillEmergency
+        - id: FoodPSB
+        - id: DrinkWaterBottleLargeFull
+  - type: Sprite
+    layers:
+    - state: internals
+    - state: extendedtank
 # End Aurora Song

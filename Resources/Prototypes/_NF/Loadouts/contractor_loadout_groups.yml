@@ -1061,12 +1061,15 @@
   - ContractorASBoxSurvivalExtendedFeroxi # Aurora Song
   - ContractorASBoxSurvivalAvali # Aurora Song
   - ContractorASBoxSurvivalExtendedAvali # Aurora Song
+  - ContractorASBoxSurvivalDecapoid # Aurora Song
+  - ContractorASBoxSurvivalExtendedDecapoid # Aurora Song
   fallbacks:
   - ContractorNFBoxSurvival
   - ContractorNFBoxSurvivalNitrogen
   - ContractorNFBoxSurvivalSheleg
   - ContractorASBoxSurvivalFeroxi # Aurora Song
   - ContractorASBoxSurvivalAvali # Aurora Song
+  - ContractorASBoxSurvivalDecapoid # Aurora Song
 
 - type: loadoutGroup
   id: ContractorEncryptionKey

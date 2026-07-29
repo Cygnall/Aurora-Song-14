@@ -71,6 +71,7 @@
   - Harpy
   - Vox
   - Diona
+  - Decapoid
 
 ## Exclude anything that doesn't have standard legs (e.g. if any taurs are ever added)
 - type: marking
@@ -83,3 +84,4 @@
   - Harpy
   - Vox
   - Diona
+  - Decapoid
