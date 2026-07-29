@@ -2374,3 +2374,12 @@ Entries:
   id: 9654
   time: '2026-07-27T07:13:59.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1304
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: >-
+        Adds Decapoids, imperial crab-like aliens first spotted in the Imp
+        sector.
+  id: 9655
+  time: '2026-07-29T02:34:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1288
