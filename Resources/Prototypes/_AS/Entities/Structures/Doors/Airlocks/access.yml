@@ -91,6 +91,37 @@
     containers:
       board: [ DoorElectronicsPrisoner ]
 
+# region Command Airlocks
+
+- type: entity
+  parent: AirlockCommand
+  id: AirlockCommandSecurityLocked
+  suffix: Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: AirlockCommandGlass
+  id: AirlockCommandGlassSecurityLocked
+  suffix: Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+# region Glass Airlocks
+
+- type: entity
+  parent: AirlockGlass
+  id: AirlockGenericSecurityGlassLocked
+  suffix: Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
 # region SLE External Airlocks
 
 - type: entity
