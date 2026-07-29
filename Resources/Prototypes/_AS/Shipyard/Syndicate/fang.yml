@@ -9,7 +9,7 @@
   id: Fang
   parent: BaseVesselAntag
   name: Fang
-  description: A large, expedition capable Syndicate vessel intended for long-term operations deep in hostile territory.
+  description: A large Syndicate vessel intended for long-term operations deep in hostile territory.
   price: 190000 #appraises to 76000 ish + 15 EC (45000)of contra for a total of 121000, markup 50% to 181500, round up for nicer number
   category: Large
   group: Syndicate
