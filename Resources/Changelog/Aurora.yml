@@ -2383,3 +2383,10 @@ Entries:
   id: 9655
   time: '2026-07-29T02:34:50.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1288
+- author: Laeras
+  changes:
+    - type: Add
+      message: Added naming remote chassis for shipminds and AI!
+  id: 9656
+  time: '2026-07-29T02:46:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1303
