@@ -12,7 +12,7 @@ If you want to host or create content for Aurora Song, this is the repo you need
 
 <div class="header" align="center">
 
-[Discord](https://discord.gg/zUXmPrwbbM) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Wiki](https://wiki.aurorasong.net/index.php)
+[Discord](https://discord.gg/zUXmPrwbbM) | [Steam](https://store.steampowered.com/app/1255460/Space_Station_14/) | [Wiki](https://wiki.aurorasong.gay/index.php)
 
 </div>
 
