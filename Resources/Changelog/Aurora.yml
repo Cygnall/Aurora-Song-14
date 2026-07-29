@@ -2390,3 +2390,10 @@ Entries:
   id: 9656
   time: '2026-07-29T02:46:56.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1303
+- author: Laeras
+  changes:
+    - type: Tweak
+      message: Allowed Scrambled Speech trait users to use CaPiTaLiZaTiOn!
+  id: 9657
+  time: '2026-07-29T03:18:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1308
