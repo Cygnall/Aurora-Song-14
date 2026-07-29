@@ -2,6 +2,7 @@
 - type: entityTable
   id: StorageFillEVASuitSLE
   table: !type:AllSelector
+    children:
     - id: ASClothingOuterEVASuitSLE
     - id: ASJetpackSLEFilled
     - id: ClothingShoesBootsMag
@@ -10,6 +11,7 @@
 - type: entityTable
   id: StorageFillEVASuitSLEPatrol
   table: !type:AllSelector
+    children:
     - id: ClothingOuterSoftsuitSlePatrol
     - id: ASJetpackSLEFilled
     - id: ASClothingShoesBootsMagSLEFilled
