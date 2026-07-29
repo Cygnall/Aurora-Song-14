@@ -133,6 +133,35 @@
     containers:
       board: [ DoorElectronicsSecurity ]
 
+- type: entity
+  parent: AirlockGlassExternal
+  id: AirlockExternalGlassSecurityLocked
+  suffix: External, Glass, Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+# region Security ShuttleAirlocks
+
+- type: entity
+  parent: AirlockShuttle
+  id: AirlockShuttleSecurityLocked
+  suffix: External, Docking, Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
+- type: entity
+  parent: AirlockGlassShuttle
+  id: AirlockGlassShuttleSecurityLocked
+  suffix: External, Glass, Docking, Security, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
 # region HighSecDoors
 
 - type: entity
