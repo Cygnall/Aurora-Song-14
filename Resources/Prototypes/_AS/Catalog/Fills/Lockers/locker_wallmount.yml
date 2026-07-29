@@ -90,3 +90,15 @@
       storagebase: !type:NestedSelector
         tableId: StorageFillEVASuitSLEPatrol
 #endregion SLE
+
+#region prisoner
+- type: entity
+  parent: [ LockerWallEVAColorPrisoner ]
+  id: LockerWallEVAColorPrisonerFilled
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitPrisoner
+#endregion prisoner

@@ -17,3 +17,14 @@
     - id: ASClothingShoesBootsMagSLEFilled
     - id: DoubleEmergencyTankO2N2EqualFilled
 # endregion SLE
+
+# region prisoner
+- type: entityTable
+  id: StorageFillEVASuitPrisoner
+  table: !type:AllSelector
+    children:
+    - id: ClothingOuterEVASuitPrisoner
+    - id: JetpackMiniFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
+# endregion prisoner

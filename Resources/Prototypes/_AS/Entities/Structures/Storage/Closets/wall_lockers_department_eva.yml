@@ -65,3 +65,36 @@
     maxFillLevels: 6
     fillBaseName: fillEva
 #endregion SLE
+
+#region prisoner
+- type: entity
+  categories: [ HideSpawnMenu ]
+  id: LockerWallEVAColorPrisoner
+  parent: NFBaseLockerGridInvWallColor
+  name: Prisoner EVA wall locker
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+      color: "#ff6200"
+    - state: fillEva-0
+      map: ["enum.StorageFillLayers.Fill"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+      color: "#ff6200"
+    - state: door-decal-line-01
+      map: [ decal1 ]
+      color: "#3C4142"
+    - state: door-decal-eva-01
+      map: [ decal2 ]
+      color: "#3C4142"
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+  - type: StorageFillVisualizer
+    maxFillLevels: 6
+    fillBaseName: fillEva
+#endregion prisoner
