@@ -2397,3 +2397,10 @@ Entries:
   id: 9657
   time: '2026-07-29T03:18:31.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1308
+- author: Toasterblast
+  changes:
+    - type: Fix
+      message: Removed all lies. You can now trust everything you read ever.
+  id: 9658
+  time: '2026-07-29T22:49:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1315
