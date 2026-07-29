@@ -82,11 +82,11 @@
 
 - type: entity
   parent: [ ASLockerWallEVAColorSLEOrange ]
-  id: ASLockerWallEVAColorSLEOrangeFilled
-  suffix: Filled
+  id: ASLockerWallEVAColorSLEOrangePatrolFilled
+  suffix: Patrol, Filled
   components:
   - type: EntityTableContainerFill
     containers:
       storagebase: !type:NestedSelector
-        tableId: StorageFillEVASuitSLE
+        tableId: StorageFillEVASuitSLEPatrol
 #endregion SLE
