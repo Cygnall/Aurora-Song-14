@@ -96,11 +96,19 @@ public sealed partial class AiRemoteControlSystem : SharedAiRemoteControlSystem
     private void OnReturnMindIntoAi(Entity<AiRemoteControllerComponent> entity, ref ReturnMindIntoAiEvent args)
     {
         ReturnMindIntoAi(entity);
-        _metaSystem.SetEntityName(entity, "Empty Remote Chassis"); // AS
+        // Aurora's Song Start
+        string name = TryComp<NameModifierComponent>(entity, out var borgNameModifierComponent) ? borgNameModifierComponent.BaseName : MetaData(entity).EntityName;// storage for name, only needed because we can't be sure if the entity has an NMC or not
+
+        if (name == entity.Comp.CurrentName) // Checks if name has changed during time controlling chassis
+            _metaSystem.SetEntityName(entity, entity.Comp.PreviousName); // Sets the name to what it was before being controlled
+        // Aurora's Song End
     }
     public void AiTakeControl(EntityUid ai, EntityUid entity)
     {
         if (!_mind.TryGetMind(ai, out var mindId, out var mind))
+            return;
+
+        if (_mind.TryGetMind(entity, out _, out _)) // Aurora's Song - Prevent taking over an entity with a mind
             return;
 
         if (!TryComp<StationAiHeldComponent>(ai, out var stationAiHeldComp))
@@ -108,6 +116,7 @@ public sealed partial class AiRemoteControlSystem : SharedAiRemoteControlSystem
 
         if (!TryComp<AiRemoteControllerComponent>(entity, out var aiRemoteComp))
             return;
+
         if (_stationAiSystem.TryGetCore(ai, out var stationAiCore) && stationAiCore.Comp?.RemoteEntity != null
                 && (Transform(stationAiCore).WorldPosition - Transform(entity).WorldPosition).Length() > 256 // AS: Changed range and made this use world position
             )
@@ -139,15 +148,15 @@ public sealed partial class AiRemoteControlSystem : SharedAiRemoteControlSystem
         _mind.ControlMob(ai, entity);
         aiRemoteComp.AiHolder = ai;
         aiRemoteComp.LinkedMind = mindId;
-        if (TryComp<NameModifierComponent>(ai, out var nameModifierComponent)) // AS: Make it rename things to represent its being remoted.
-        {
-            _metaSystem.SetEntityName(entity, nameModifierComponent.BaseName + " Remote Chassis");
-        }
-        else
-        {
-            _metaSystem.SetEntityName(entity, Comp<MetaDataComponent>(ai).EntityName + " Remote Chassis");
-        }
-
+        // Aurora's Song Start - This section does a few things!
+        // First it gets the borg's name and saves it to aiRemoteComp
+        aiRemoteComp.PreviousName = TryComp<NameModifierComponent>(entity, out var borgNMC) ? borgNMC.BaseName : MetaData(entity).EntityName;
+        // Then, it gets and saves the AI's name
+        string aiName = TryComp<NameModifierComponent>(ai, out var nameModifierComponent) ? nameModifierComponent.BaseName : MetaData(ai).EntityName;
+        //Then it sets the borg's name to a combination of the AI's name and the borg's name, to allow identification.
+        aiRemoteComp.CurrentName = aiName + " // " + aiRemoteComp.PreviousName;
+        _metaSystem.SetEntityName(entity, aiRemoteComp.CurrentName);
+        // Aurora's Song End
         _stationAiSystem.SwitchRemoteEntityMode(stationAiCore, false);
 
         RewriteLaws(ai, entity);
@@ -176,6 +185,7 @@ public sealed partial class AiRemoteControlSystem : SharedAiRemoteControlSystem
             };
             if (_stationAiSystem.TryGetCore(uid, out var stationAiCore) && stationAiCore.Comp?.RemoteEntity != null
                     && (Transform(stationAiCore).WorldPosition - Transform(queryUid).WorldPosition).Length() < 4096 // AS: World position over relative
+                    && !_mind.TryGetMind(queryUid, out _, out _) // Aurora's Song - Hide any bodies currently in use
                 )
             {
                 remoteDevices.Add(data);
