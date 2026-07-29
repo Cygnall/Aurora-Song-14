@@ -9,18 +9,18 @@
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
-      color: "#4a6fa5"  # SLE blue
+      color: "#67ABAE"  # SLE blue
     - state: fillEva-0
       map: ["enum.StorageFillLayers.Fill"]
     - state: door
       map: ["enum.StorageVisualLayers.Door"]
-      color: "#4a6fa5"  # SLE blue
+      color: "#67ABAE"  # SLE blue
     - state: door-decal-line-01
       map: [ decal1 ]
-      color: "#2a4a7c"  # SLE dark blue
+      color: "#152A5C"  # SLE dark blue
     - state: door-decal-eva-02
       map: [ decal2 ]
-      color: "#2a4a7c"  # SLE dark blue
+      color: "#152A5C"  # SLE dark blue
     - state: welded
       visible: false
       map: ["enum.WeldableLayers.BaseWelded"]
@@ -42,12 +42,12 @@
     layers:
     - state: base
       map: ["enum.StorageVisualLayers.Base"]
-      color: "#4a6fa5"  # SLE blue
+      color: "#67ABAE"  # SLE blue
     - state: fillEva-0
       map: ["enum.StorageFillLayers.Fill"]
     - state: door
       map: ["enum.StorageVisualLayers.Door"]
-      color: "#4a6fa5"  # SLE blue
+      color: "#67ABAE"  # SLE blue
     - state: door-decal-line-01
       map: [ decal1 ]
       color: "#E37B40"  # SLE orange
