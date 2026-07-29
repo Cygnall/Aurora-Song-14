@@ -102,6 +102,15 @@
     containers:
       board: [ DoorElectronicsSecurity ]
 
+- type: entity
+  parent: ASAirlockExternalSLE
+  id: ASAirlockExternalSLELocked
+  suffix: SLE, Locked
+  components:
+  - type: ContainerFill
+    containers:
+      board: [ DoorElectronicsSecurity ]
+
 # region SLE Shuttle Airlocks
 
 - type: entity
