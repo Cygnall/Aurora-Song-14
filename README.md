@@ -1,5 +1,5 @@
 <div class="header" align="center">
-<img alt="Frontier Station" height="300" src="https://github.com/AuroraSong14/Aurora-Song-14/blob/master/Resources/Textures/_AS/Logo/logo.png" />
+<img alt="Aurora Sector" height="300" src="https://github.com/AuroraSong14/Aurora-Song-14/blob/master/Resources/Textures/_AS/Logo/logo.png" />
 </div>
 
 Aurora Song is a fork of [Space Station 14](https://github.com/space-wizards/space-station-14) that runs on [Robust Toolbox](https://github.com/space-wizards/RobustToolbox) engine written in C#.
@@ -18,7 +18,7 @@ If you want to host or create content for Aurora Song, this is the repo you need
 
 ## Documentation/Wiki
 
-Our [wiki](https://wiki.aurorasong.net/index.php) has documentation on Aurora Song's content.
+Our [wiki](https://wiki.aurorasong.gay/index.php) has documentation on Aurora Song's content.
 
 ## Contributing
 
