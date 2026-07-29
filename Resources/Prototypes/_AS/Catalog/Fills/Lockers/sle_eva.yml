@@ -29,17 +29,3 @@
           amount: 2
         - id: GasAnalyzer
         - id: HolofanProjector
-
-- type: entity
-  parent: ASLockerWallEVAColorSLE
-  id: ASLockerWallEVAColorSLEFilled
-  suffix: Filled
-  components:
-  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
-    containers:
-      storagebase: !type:AllSelector
-        children:
-        - id: ASClothingOuterEVASuitSLE
-        - id: ASJetpackSLEFilled
-        - id: ClothingShoesBootsMag
-        - id: DoubleEmergencyTankO2N2EqualFilled

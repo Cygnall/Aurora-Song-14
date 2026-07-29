@@ -1,0 +1,17 @@
+# region SLE
+- type: entityTable
+  id: StorageFillEVASuitSLE
+  table: !type:AllSelector
+    - id: ASClothingOuterEVASuitSLE
+    - id: ASJetpackSLEFilled
+    - id: ClothingShoesBootsMag
+    - id: DoubleEmergencyTankO2N2EqualFilled
+
+- type: entityTable
+  id: StorageFillEVASuitSLEPatrol
+  table: !type:AllSelector
+    - id: ClothingOuterSoftsuitSlePatrol
+    - id: ASJetpackSLEFilled
+    - id: ASClothingShoesBootsMagSLEFilled
+    - id: DoubleEmergencyTankO2N2EqualFilled
+# endregion SLE
