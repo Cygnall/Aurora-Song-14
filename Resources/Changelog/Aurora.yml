@@ -2481,3 +2481,16 @@ Entries:
   id: 9663
   time: '2026-07-30T03:35:46.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1275
+- author: GreyScaleHarlequin
+  changes:
+    - type: Fix
+      message: Fixed components on greatshield, it now blocks damage properly
+    - type: Fix
+      message: Commander beret is no longer contraband
+    - type: Fix
+      message: En-blocs are now recyclable
+    - type: Fix
+      message: Satanus suit now has a light sprite
+  id: 9664
+  time: '2026-07-30T04:00:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1278
