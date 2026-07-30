@@ -14,10 +14,10 @@ namespace Pow3r
     {
         private bool _showDemo;
 
-        private Dictionary<NodeId, DisplayLoad> _displayLoads = new();
-        private Dictionary<NodeId, DisplayBattery> _displayBatteries = new();
-        private Dictionary<NodeId, DisplayNetwork> _displayNetworks = new();
-        private Dictionary<NodeId, DisplaySupply> _displaySupplies = new();
+        private Dictionary<SlotHandle, DisplayLoad> _displayLoads = new();
+        private Dictionary<SlotHandle, DisplayBattery> _displayBatteries = new();
+        private Dictionary<SlotHandle, DisplayNetwork> _displayNetworks = new();
+        private Dictionary<SlotHandle, DisplaySupply> _displaySupplies = new();
 
         private void DoUI(float frameTime)
         {
@@ -37,14 +37,16 @@ namespace Pow3r
             if (Button("Generator"))
             {
                 var supply = new Supply();
-                _state.Supplies.Allocate(out supply.Id) = supply;
+                supply.PowerStateInst = _state;
+                _state.Supplies.Allocate(out supply.Id) = supply.InitializationStruct;
                 _displaySupplies.Add(supply.Id, new DisplaySupply());
             }
 
             if (Button("Load"))
             {
                 var load = new Load();
-                _state.Loads.Allocate(out load.Id) = load;
+                load.PowerStateInst = _state;
+                _state.Loads.Allocate(out load.Id) = load.InitializationStruct;
                 _displayLoads.Add(load.Id, new DisplayLoad());
             }
 
@@ -59,7 +61,8 @@ namespace Pow3r
             if (Button("Battery"))
             {
                 var battery = new Battery();
-                _state.Batteries.Allocate(out battery.Id) = battery;
+                battery.PowerStateInst = _state;
+                _state.Batteries.Allocate(out battery.Id) = battery.InitializationStruct;
                 _displayBatteries.Add(battery.Id, new DisplayBattery());
                 _state.GroupedNets = null;
             }
@@ -140,7 +143,7 @@ namespace Pow3r
                 End();
             }
 
-            foreach (var load in _state.Loads.Values)
+            foreach (ref var load in _state.Loads.Values)
             {
                 var displayLoad = _displayLoads[load.Id];
 
@@ -184,7 +187,7 @@ namespace Pow3r
                 End();
             }
 
-            foreach (var supply in _state.Supplies.Values)
+            foreach (ref var supply in _state.Supplies.Values)
             {
                 var displaySupply = _displaySupplies[supply.Id];
                 Begin($"Generator {supply.Id}##Gen{supply.Id}");
@@ -230,7 +233,7 @@ namespace Pow3r
                 End();
             }
 
-            foreach (var battery in _state.Batteries.Values)
+            foreach (ref var battery in _state.Batteries.Values)
             {
                 var displayBattery = _displayBatteries[battery.Id];
 
@@ -371,20 +374,35 @@ namespace Pow3r
 
                     case Supply s:
                         _state.Supplies.Free(s.Id);
-                        _state.Networks.Values.ForEach(n => n.Supplies.Remove(s.Id));
+                        foreach (var n in _state.Networks.Values)
+                        {
+                            n.Supplies.Remove(s.Id);
+                        }
                         _displaySupplies.Remove(s.Id);
                         break;
 
                     case Load l:
                         _state.Loads.Free(l.Id);
-                        _state.Networks.Values.ForEach(n => n.Loads.Remove(l.Id));
+                        foreach (var n in _state.Networks.Values)
+                        {
+                            n.Loads.Remove(l.Id);
+                        }
                         _displayLoads.Remove(l.Id);
                         break;
 
                     case Battery b:
                         _state.Batteries.Free(b.Id);
-                        _state.Networks.Values.ForEach(n => n.BatteryLoads.Remove(b.Id));
-                        _state.Networks.Values.ForEach(n => n.BatterySupplies.Remove(b.Id));
+
+                        foreach (var n in _state.Networks.Values)
+                        {
+                            n.BatteryLoads.Remove(b.Id);
+                        }
+
+                        foreach (var n in _state.Networks.Values)
+                        {
+                            n.BatterySupplies.Remove(b.Id);
+                        }
+
                         _displayBatteries.Remove(b.Id);
                         _state.GroupedNets = null;
                         break;

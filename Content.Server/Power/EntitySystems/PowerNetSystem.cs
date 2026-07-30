@@ -86,7 +86,7 @@ namespace Content.Server.Power.EntitySystems
         private void ApcPowerReceiverShutdown(EntityUid uid, ApcPowerReceiverComponent component,
             ComponentShutdown args)
         {
-            _powerState.Loads.Free(component.NetworkLoad.Id);
+            _powerState.Loads.FreeWithCopyTo(component.NetworkLoad.Id, ref component.NetworkLoad.InitializationStruct);
         }
 
         private void ApcPowerReceiverRemove(EntityUid uid, ApcPowerReceiverComponent component, ComponentRemove args)
@@ -117,7 +117,7 @@ namespace Content.Server.Power.EntitySystems
 
         private void BatteryShutdown(EntityUid uid, PowerNetworkBatteryComponent component, ComponentShutdown args)
         {
-            _powerState.Batteries.Free(component.NetworkBattery.Id);
+            _powerState.Batteries.FreeWithCopyTo(component.NetworkBattery.Id, ref component.NetworkBattery.InitializationStruct);
         }
 
         private static void BatteryPaused(EntityUid uid, PowerNetworkBatteryComponent component, ref EntityPausedEvent args)
@@ -138,7 +138,7 @@ namespace Content.Server.Power.EntitySystems
 
         private void PowerConsumerShutdown(EntityUid uid, PowerConsumerComponent component, ComponentShutdown args)
         {
-            _powerState.Loads.Free(component.NetworkLoad.Id);
+            _powerState.Loads.FreeWithCopyTo(component.NetworkLoad.Id, ref component.NetworkLoad.InitializationStruct);
         }
 
         private static void PowerConsumerPaused(EntityUid uid, PowerConsumerComponent component, ref EntityPausedEvent args)
@@ -159,7 +159,7 @@ namespace Content.Server.Power.EntitySystems
 
         private void PowerSupplierShutdown(EntityUid uid, PowerSupplierComponent component, ComponentShutdown args)
         {
-            _powerState.Supplies.Free(component.NetworkSupply.Id);
+            _powerState.Supplies.FreeWithCopyTo(component.NetworkSupply.Id, ref component.NetworkSupply.InitializationStruct);
         }
 
         private static void PowerSupplierPaused(EntityUid uid, PowerSupplierComponent component, ref EntityPausedEvent args)
@@ -282,6 +282,7 @@ namespace Content.Server.Power.EntitySystems
             // Synchronize batteries
             RaiseLocalEvent(new NetworkBatteryPreSync());
 
+            // TODO Aurora Song: cut the tickrate for this system a bit with accurate deltas
             // Run power solver.
             _solver.Tick(frameTime, _powerState, _parMan);
 
@@ -440,17 +441,20 @@ namespace Content.Server.Power.EntitySystems
 
         private void AllocLoad(PowerState.Load load)
         {
-            _powerState.Loads.Allocate(out load.Id) = load;
+            load.PowerStateInst = _powerState;
+            _powerState.Loads.Allocate(out load.Id) = load.InitializationStruct;
         }
 
         private void AllocSupply(PowerState.Supply supply)
         {
-            _powerState.Supplies.Allocate(out supply.Id) = supply;
+            supply.PowerStateInst = _powerState;
+            _powerState.Supplies.Allocate(out supply.Id) = supply.InitializationStruct;
         }
 
         private void AllocBattery(PowerState.Battery battery)
         {
-            _powerState.Batteries.Allocate(out battery.Id) = battery;
+            battery.PowerStateInst = _powerState;
+            _powerState.Batteries.Allocate(out battery.Id) = battery.InitializationStruct;
         }
 
         private void AllocNetwork(PowerState.Network network)
