@@ -2453,3 +2453,12 @@ Entries:
   id: 9661
   time: '2026-07-30T02:54:09.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1312
+- author: BenadrylJackson
+  changes:
+    - type: Add
+      message: >-
+        Added the Plasteel Arming Sword and Truncheon to the MercVend, Melee
+        enjoyers rejoice in being able to cut and pummel things to pieces.
+  id: 9662
+  time: '2026-07-30T02:59:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1316
