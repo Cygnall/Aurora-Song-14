@@ -2462,3 +2462,22 @@ Entries:
   id: 9662
   time: '2026-07-30T02:59:13.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1316
+- author: BudaLope
+  changes:
+    - type: Add
+      message: Tracking Dart Pistol
+    - type: Add
+      message: Coordinates to pinpointer tracking
+    - type: Tweak
+      message: SLE armor values
+    - type: Tweak
+      message: Reduced rank requirement for several SLE ships
+    - type: Tweak
+      message: Removed rank requirement for contra scanner module
+    - type: Tweak
+      message: Batons can be put into thigh sheathes
+    - type: Tweak
+      message: Medkits can be attached to SLE Webbing
+  id: 9663
+  time: '2026-07-30T03:35:46.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1275
