@@ -2501,3 +2501,13 @@ Entries:
   id: 9665
   time: '2026-07-30T04:09:50.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1317
+- author: avosirenfal
+  changes:
+    - type: Tweak
+      message: >-
+        Test merging changes to the power system to improve performance. We
+        don't expect issues, but if anything problematic happens we may restart
+        the server to revert if needed.
+  id: 9666
+  time: '2026-07-30T06:38:14.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1319
