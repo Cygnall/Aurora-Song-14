@@ -80,32 +80,32 @@
       energy: 2 #TheDen
       color: "#678AD9"
     - type: ItemTogglePointLight
-    - type: Blocking
-      passiveBlockFraction: 0.7
-      passiveBlockModifier:
-        coefficients:
-          Blunt: 1
-          Slash: 1
-          Piercing: 1
-          Heat: 1
-      activeBlockModifier:
-        coefficients:
-          Blunt: 0.7
-          Slash: 0.7
-          Piercing: 0.7
-          Heat: 0.7
-        flatReductions:
-          Heat: 3
-          Blunt: 3
-          Slash: 3
-          Piercing: 3
     - type: Reflect # Aurora's Song - adjust Greatshield to be highest tier of E-Shield
       reflectProb: 0.9
       damageOnReflectModifier: 0.6
       reflects:
       - Energy
+    - type: Blocking
+      passiveBlockModifier:
+        coefficients:
+          Blunt: 0.9 # Aurora's Song | 1 >0.9
+          Slash: 0.7 # Aurora's Song | 1 > 0.7
+          Piercing: 0.6 # Aurora's Song | 1 > 0.6
+          Heat: 0.6 # Aurora's Song | 1 > 0.6
+      activeBlockModifier:
+        coefficients:
+          Blunt: 0.9 # Aurora's Song | 1 > 0.9
+          Slash: 0.7 # Aurora's Song | 1 > 0.7
+          Piercing: 0.6 # Aurora's Song | 1 > 0.6
+          Heat: 0.6 # Aurora's Song | 1 > 0.6
+        flatReductions:
+          Heat: 3
+          Blunt: 3
+          Slash: 3
+          Piercing: 3
     - type: Appearance
-    - type: Injurable # Aurora's Song - Damageable>Injurable
+    - type: Damageable # Aurora's Song | re-added damageable for shield to function
+    - type: Injurable # Aurora's Song | add injurable to mirror upstream
       damageContainer: Shield
     - type: Battery
       maxCharge: 180

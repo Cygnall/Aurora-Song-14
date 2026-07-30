@@ -37,7 +37,7 @@
 
 - type: entity
   id: ASBaseMagazineEnblocRifle30Long
-  parent: NFBaseMagazineRifle30
+  parent: [NFBaseMagazineRifle30, RecyclableItemSteelTiny]
   name: en-bloc clip (.30 long rifle)
   abstract: true
   components:

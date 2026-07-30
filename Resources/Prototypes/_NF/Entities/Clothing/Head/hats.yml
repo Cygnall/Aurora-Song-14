@@ -270,10 +270,23 @@
   - type: HamsterWearable
 
 - type: entity
-  parent: ClothingHeadHatBeretHoS
+  parent: ClothingHeadBase # Aurora's Song | ClothingHeadHatBeretHoS > ClothingHeadBase - Contraband inheritance issue
   id: ClothingHeadHatBeretCommander
   name: commander's beret
   description: A black beret with a commander's rank emblem.
+  components:
+  - type: Sprite
+    sprite: Clothing/Head/Hats/beret_hos.rsi
+  - type: Clothing
+    sprite: Clothing/Head/Hats/beret_hos.rsi
+  - type: Tag
+    tags:
+    - PetWearable
+    - CorgiWearable
+    - ClothMade
+    - Recyclable
+    - HamsterWearable
+    - WhitelistChameleon
 
 - type: entity
   parent: ClothingHeadBaseButcherable
