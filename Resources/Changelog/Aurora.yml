@@ -2404,3 +2404,26 @@ Entries:
   id: 9658
   time: '2026-07-29T22:49:35.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1315
+- author: BudaLope
+  changes:
+    - type: Remove
+      message: Removed Self Harvesting from botany (returns August 28th at latest)
+    - type: Fix
+      message: >-
+        Added SpaceGarbage component to several items that needed it. You can
+        now recycle things like igniters.
+    - type: Tweak
+      message: Doubled the time between magnet scans (1 second to 2 seconds)
+    - type: Add
+      message: 'Adds a cosmetic drain for decoration reasons. '
+    - type: Tweak
+      message: Reclaimers process items 5x as fast
+    - type: Tweak
+      message: Items tagged as trash do not remain upon UIV/VRoid deletion
+    - type: Tweak
+      message: Conveyors convey twice as fast
+    - type: Tweak
+      message: Every gun is now technically caseless
+  id: 9659
+  time: '2026-07-30T02:28:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1310
