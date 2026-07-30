@@ -46,3 +46,39 @@
   - type: SpeedModifiedOnWield
     walkModifier: 0.9
     sprintModifier: 0.9
+
+# Dart
+- type: entity
+  id: ASBaseWeaponEncumberanceDartLauncher
+  abstract: true
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    - 0,1,0,1
+  - type: Clothing
+    quickEquip: false
+    slots:
+    - Belt
+    - suitStorage
+  - type: Tag
+    tags:
+    - Sidearm
+- type: entity
+
+  id: ASBaseWeaponFrameDart
+  parent: [ ASBaseWeaponEncumberanceDartLauncher, ASBaseItemWeaponGun ]
+  abstract: true
+  components:
+  - type: Gun
+    minAngle: 1.6
+    maxAngle: 3
+    angleIncrease: 5
+    angleDecay: 2
+    fireRate: 1
+    selectedMode: SemiAuto
+    availableModes:
+    - SemiAuto
+  - type: StaticPrice
+    price: 1500

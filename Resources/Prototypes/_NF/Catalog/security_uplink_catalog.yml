@@ -1130,12 +1130,12 @@
       whitelist:
         tags:
           - SecurityUplink
-    - !type:BuyerJobCondition
-      whitelist: # Aurora's Song - Switched Sheriff to Commissioner, added LT and Sgt. to whitelist.
-        - Lieutenant
-        - Sergeant
-        - OffDutyOfficer
-        - Commissioner
+    # - !type:BuyerJobCondition # Aurora's Song - Removed job condition
+    #   whitelist: # Aurora's Song - Switched Sheriff to Commissioner, added LT and Sgt. to whitelist.
+    #     - Lieutenant
+    #     - Sergeant
+    #     - Commissioner
+    #     - OffDutyOfficer
 
 - type: listing
   id: UplinkSecurityTeleShield

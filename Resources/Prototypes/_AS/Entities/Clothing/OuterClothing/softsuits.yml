@@ -13,19 +13,21 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetSoftsuitSlePatrol
   - type: ExplosionResistance
-    damageCoefficient: 0.5
+    damageCoefficient: 0.75 # .5 > .75 Easier to explode
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.65
-        Slash: 0.65
+        Blunt: 0.5 # .65 > .5 Harder to beat
+        Slash: 0.5 # .65 > .5 Harder to stab
         Piercing: 0.65
-        Heat: 0.7
-        Radiation: 0.55
-        Caustic: 0.75
+        Heat: 0.6 # .7 > .6 Harder to burn
+        Radiation: 0.4 # .55 > .4 Harder to irradiate
+        Caustic: 0.4 # .75 > .4 Harder to super burn
   - type: ClothingSpeedModifier
     walkModifier: 0.95
-    sprintModifier: 0.9
+    sprintModifier: 0.95 # .9 > .95 Faster to move in
+  - type: StaminaResistance # Stun resist, inline with bloodred values here
+    damageCoefficient: 0.75
 
 - type: entity
   parent: ClothingOuterSoftsuitSlePatrol
