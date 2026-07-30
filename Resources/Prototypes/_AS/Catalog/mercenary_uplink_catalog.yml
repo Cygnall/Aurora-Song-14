@@ -79,6 +79,38 @@
       tags:
       - MercenaryUplink
 
+- type: listing
+  id: UplinkMercenaryTruncheon
+  name: uplink-mercenary-truncheon-name
+  description: uplink-mercenary-truncheon-desc
+  productEntity: Truncheon
+  icon: { sprite: Objects/Weapons/Melee/truncheon.rsi, state: icon }
+  cost:
+    MercCoin: 7
+  categories:
+  - UplinkMercenaryWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - MercenaryUplink
+
+- type: listing
+  id: UplinkMercenaryPlasteelArmingSword
+  name: uplink-mercenary-plasteelarmingsword-name
+  description: uplink-mercenary-plasteelarmingsword-desc
+  productEntity: PlasteelArmingSword
+  icon: { sprite: _NF/Objects/Weapons/Melee/armingsword.rsi, state: icon }
+  cost:
+    MercCoin: 5
+  categories: 
+  - UplinkMercenaryWeapons
+  conditions:
+  - !type:StoreWhitelistCondition
+    whitelist:
+      tags:
+      - MercenaryUplink
+
 #Utility - Medical
 
 - type: listing

@@ -24,6 +24,12 @@ uplink-mercenary-shotgun1-desc = Old reliable, rack and shoot. Marked for Suplus
 uplink-mercenary-smg1-name = Surplus Drozd
 uplink-mercenary-smg1-desc = Based on an old design, this SMG is still more than capable of putting rounds down-range.
 
+uplink-mercenary-truncheon-name = Truncheon
+uplink-mercenary-truncheon-desc = A rigid, steel-studded baton, meant to harm. On the handle is a label that says 'for authorized use only.'
+
+uplink-mercenary-plasteelarmingsword-name = Plasteel Arming Sword
+uplink-mercenary-plasteelarmingsword-desc = An ancient design manufactured with modern materials and machines for a very specific target demographic.
+
 uplink-mercenary-gauze-name = Gauze Roll
 uplink-mercenary-gauze-desc = A full roll of Gauze, for the merc on the go.
 
