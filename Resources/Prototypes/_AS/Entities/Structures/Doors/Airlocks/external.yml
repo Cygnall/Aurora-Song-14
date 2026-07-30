@@ -1,8 +1,18 @@
-# SLE External Airlocks
+# region SLE External Airlocks
 - type: entity
   parent: AirlockExternalGlass
   id: ASAirlockExternalGlassSLE
-  suffix: SLE, Glass 
+  suffix: SLE, Glass
   components:
   - type: Sprite
     sprite: _AS/Structures/Doors/Airlocks/Glass/externalsle.rsi
+
+- type: entity
+  parent: AirlockExternal
+  id: ASAirlockExternalSLE
+  suffix: SLE
+  components:
+  - type: Sprite
+    sprite: _AS/Structures/Doors/Airlocks/Standard/externalsle.rsi
+
+# endregion SLE External Airlocks

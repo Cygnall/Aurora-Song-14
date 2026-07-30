@@ -2,6 +2,9 @@
     "version": 1,
     "license": "CC-BY-SA-3.0",
     "copyright": "Taken from shiptest at commmit https://github.com/shiptest-ss13/Shiptest/commit/440a15fb476a20d77ba28c1fe315c1b659032ce8, edited by Alekshhh | Edited, grayscaled and split into layers added decal sprites by erhardsteinhauer (discord/github)",
+	"extra_copyright": [
+        "door-decal-sle-01 for Aurora's Song by Vandanna/ Cygnall (discord/ github)"
+    ],
     "size": {
         "x": 32,
         "y": 32
@@ -90,6 +93,9 @@
         },
         {
             "name": "door-decal-l4-expl"
+        },
+        {
+            "name": "door-decal-sle-01"
         },
         {
             "name": "door-decal-null"

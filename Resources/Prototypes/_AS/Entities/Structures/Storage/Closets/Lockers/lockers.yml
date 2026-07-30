@@ -145,40 +145,6 @@
   - type: AccessReader
     access: [["HeadOfSecurity"]]
 
-# Aurora Song - SLE Wall EVA Locker
-- type: entity
-  categories: [ HideSpawnMenu ]
-  id: ASLockerWallEVAColorSLE
-  parent: NFBaseLockerGridInvWallColor
-  name: SLE EVA wall locker
-  components:
-  - type: Sprite
-    layers:
-    - state: base
-      map: ["enum.StorageVisualLayers.Base"]
-      color: "#4a6fa5"  # SLE blue
-    - state: fillEva-0
-      map: ["enum.StorageFillLayers.Fill"]
-    - state: door
-      map: ["enum.StorageVisualLayers.Door"]
-      color: "#4a6fa5"  # SLE blue
-    - state: door-decal-line-01
-      map: [ decal1 ]
-      color: "#2a4a7c"  # SLE dark blue
-    - state: door-decal-eva-02
-      map: [ decal2 ]
-      color: "#2a4a7c"  # SLE dark blue
-    - state: welded
-      visible: false
-      map: ["enum.WeldableLayers.BaseWelded"]
-    - state: locked
-      map: ["enum.LockVisualLayers.Lock"]
-  - type: AccessReader
-    access: [['Security']]
-  - type: StorageFillVisualizer
-    maxFillLevels: 6
-    fillBaseName: fillEva
-
 # CR
 - type: entity
   id: ASLockerColonialRepresentative

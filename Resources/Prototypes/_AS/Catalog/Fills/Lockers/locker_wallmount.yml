@@ -68,3 +68,37 @@
     - id: HandLabeler
     - id: ClothingEyesGlassesChemical
 #endregion Chemistry
+
+#region SLE
+- type: entity
+  parent: [ ASLockerWallEVAColorSLE ]
+  id: ASLockerWallEVAColorSLEFilled
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitSLE
+
+- type: entity
+  parent: [ ASLockerWallEVAColorSLEOrange ]
+  id: ASLockerWallEVAColorSLEOrangePatrolFilled
+  suffix: Patrol, Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitSLEPatrol
+#endregion SLE
+
+#region prisoner
+- type: entity
+  parent: [ LockerWallEVAColorPrisoner ]
+  id: LockerWallEVAColorPrisonerFilled
+  suffix: Filled
+  components:
+  - type: EntityTableContainerFill
+    containers:
+      storagebase: !type:NestedSelector
+        tableId: StorageFillEVASuitPrisoner
+#endregion prisoner
