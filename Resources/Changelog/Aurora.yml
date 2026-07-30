@@ -2427,3 +2427,12 @@ Entries:
   id: 9659
   time: '2026-07-30T02:28:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1310
+- author: Sunburstschitin
+  changes:
+    - type: Tweak
+      message: Removed the OwOnavirus joke from the felinid guidebook entry.
+    - type: Tweak
+      message: Fixed some grammar in the felinid guidebook entry.
+  id: 9660
+  time: '2026-07-30T02:32:07.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1318
