@@ -2494,3 +2494,10 @@ Entries:
   id: 9664
   time: '2026-07-30T04:00:16.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1278
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Shuttle vent systems no longer have ephedrine stuck in them.
+  id: 9665
+  time: '2026-07-30T04:09:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1317
