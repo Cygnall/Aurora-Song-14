@@ -2436,3 +2436,20 @@ Entries:
   id: 9660
   time: '2026-07-30T02:32:07.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1318
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: move multiple prototypes to proper files
+    - type: Add
+      message: some additional security-locked vanilla airlocks
+    - type: Add
+      message: multiple SLE external/ docking airlock prototypes
+    - type: Add
+      message: SLE Officer/ Evidence wall lockers
+    - type: Add
+      message: SLE Patrol EVA Locker
+    - type: Add
+      message: Prisoner EVA wall locker
+  id: 9661
+  time: '2026-07-30T02:54:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1312
