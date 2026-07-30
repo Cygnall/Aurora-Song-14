@@ -13,6 +13,7 @@
   - type: Tag
     tags:
     - ConstructionMaterial
+  - type: SpaceGarbage # Aurora's Song
 
 - type: entity
   parent: PartBase

@@ -18,7 +18,7 @@ public sealed partial class MaterialStorageMagnetPickupSystem : EntitySystem
     [Dependency] private EntityLookupSystem _lookup = default!;
     [Dependency] private SharedMaterialStorageSystem _storage = default!;
 
-    private static readonly TimeSpan ScanDelay = TimeSpan.FromSeconds(1);
+    private static readonly TimeSpan ScanDelay = TimeSpan.FromSeconds(2); // Aurora's Song 1>2
 
     private EntityQuery<PhysicsComponent> _physicsQuery;
 

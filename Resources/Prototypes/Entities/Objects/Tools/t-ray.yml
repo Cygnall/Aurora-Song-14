@@ -27,3 +27,4 @@
     price: 85
   - type: UseDelay
     delay: 1
+  - type: SpaceGarbage # Aurora's Song

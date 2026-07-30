@@ -18,8 +18,8 @@ public sealed partial class SeedPrototype : SeedData, IPrototype
 public enum HarvestType : byte
 {
     NoRepeat,
-    Repeat,
-    SelfHarvest
+    Repeat
+    // SelfHarvest Aurora's Song: Self Harvest Removal
 }
 
 /*

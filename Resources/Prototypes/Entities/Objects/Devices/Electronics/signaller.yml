@@ -29,6 +29,7 @@
     receiveFrequencyId: BasicDevice
   - type: WirelessNetworkConnection
     range: 15
+  - type: SpaceGarbage # Aurora's Song
 
 - type: entity
   parent: RemoteSignaller

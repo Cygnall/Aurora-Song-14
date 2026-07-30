@@ -4062,7 +4062,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 774
-- proto: FloorDrain
+- proto: FloorDrainCosmetic
   entities:
   - uid: 368
     components:

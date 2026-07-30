@@ -11,6 +11,8 @@ using Robust.Shared.Map;
 using Robust.Shared.Player;
 using Content.Shared._Goobstation.Vehicles;
 using Content.Server._AS.Touched;
+using Content.Shared.Tag; // Aurora's Song
+using Robust.Shared.Prototypes; // Aurora's Song
 
 namespace Content.Server.StationEvents.Events;
 
@@ -18,6 +20,9 @@ public sealed partial class LinkedLifecycleGridSystem : EntitySystem
 {
     [Dependency] private SharedTransformSystem _transform = default!;
     [Dependency] private SharedMindSystem _mind = default!;
+    [Dependency] private TagSystem _tagSystem = default!; // Aurora's Song
+
+    private static readonly ProtoId<TagPrototype> TrashProto = "Trash"; // Aurora's Song
 
     public override void Initialize()
     {
@@ -99,13 +104,13 @@ public sealed partial class LinkedLifecycleGridSystem : EntitySystem
 
         // Begin Aurora Song
         var itemQuery = AllEntityQuery<TouchedComponent, TransformComponent>();
-        while (itemQuery.MoveNext(out var touched, out var xform))
+        while (itemQuery.MoveNext(out var uid, out var touched, out var xform))
         {
             if (xform.GridUid == null || xform.MapUid == null || xform.GridUid != grid || xform.ParentUid != grid || xform.Anchored != false ||
-                touched.Touched == false)
+                touched.Touched == false || _tagSystem.HasTag(uid, TrashProto))
                 continue;
 
-            var (targetUid, targetXform) = GetParentToReparent(touched.Owner, xform);
+            var (targetUid, targetXform) = GetParentToReparent(uid, xform);
 
             reparentEntities.Add(((targetUid, targetXform), targetXform.MapUid!.Value, _transform.GetWorldPosition(targetXform)));
         }
