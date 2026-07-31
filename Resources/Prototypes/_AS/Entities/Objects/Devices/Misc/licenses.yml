@@ -2,7 +2,7 @@
   parent: Clothing
   id: LicenseContrabandHandling
   name: contraband handling license
-  description: This license grants the named holder the legal allowance for the usage of C2-class contraband, the tackling of Bluespace threats, and the transportation of C3-class contraband for turn-in to the authorities.
+  description: This license grants the named holder the legal allowance for the usage of C2-class contraband, the tackling of Bluespace threats, and the transportation of C3-class and C2-U-class contraband for turn-in, or registration with the authorities. This license does not permit the usage of C2-class contraband marked for departmental use, such as C2-ColComm-class contraband.
   components:
   - type: Sprite
     sprite: _AS/Objects/Specific/License/contraband_handling_license.rsi
