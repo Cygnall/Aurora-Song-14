@@ -4,8 +4,8 @@ meta:
   engineVersion: 277.2.1
   forkId: ""
   forkVersion: ""
-  time: 07/31/2026 12:35:41
-  entityCount: 386
+  time: 07/31/2026 13:19:29
+  entityCount: 387
 maps: []
 grids:
 - 1
@@ -2114,6 +2114,12 @@ entities:
     - type: Transform
       rot: -1.5707963267948966 rad
       pos: 6.5,0.5
+      parent: 1
+  - uid: 181
+    components:
+    - type: Transform
+      rot: 1.5707963267948966 rad
+      pos: 0.5,-1.5
       parent: 1
 - proto: PoweredlightBlack
   entities:
