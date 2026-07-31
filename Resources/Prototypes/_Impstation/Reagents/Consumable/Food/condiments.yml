@@ -8,7 +8,7 @@
   flavor: bitter
   color: "#df0000"
   metabolisms:
-    Food:
+    Digestion:
       effects:
       - !type:SatiateHunger
         conditions:
