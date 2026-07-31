@@ -1,6 +1,6 @@
 - type: entity
   id: CrystalPurple
-  parent: CrystalBase
+  parent: ShardCrystalBase
   suffix: purple
   components:
     - type: Sprite
