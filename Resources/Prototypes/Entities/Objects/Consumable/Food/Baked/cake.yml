@@ -334,7 +334,7 @@
       - state: alpha-filling-inhand-left
         color: "#ffffff"
       right:
-      - state: plain-inhand-right
+      - state: plain-slice-inhand-right # Aurora's Song - fix visual issue
       - state: alpha-slice-filling-inhand-right
         color: "#ffffff"
 # Tastes like sweetness, cream cheese.
