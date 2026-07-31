@@ -2605,3 +2605,10 @@ Entries:
   id: 9678
   time: '2026-07-31T23:33:30.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1321
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Shipmind back in rotation!
+  id: 9679
+  time: '2026-07-31T23:35:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1342
