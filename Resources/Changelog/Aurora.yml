@@ -2518,3 +2518,10 @@ Entries:
   id: 9667
   time: '2026-07-31T03:46:13.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1325
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: (Some) Nuclear 14 tiles are now printable in the cutter.
+  id: 9668
+  time: '2026-07-31T03:51:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1322
