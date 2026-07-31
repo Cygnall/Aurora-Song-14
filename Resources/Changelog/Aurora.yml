@@ -2525,3 +2525,10 @@ Entries:
   id: 9668
   time: '2026-07-31T03:51:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1322
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Ovinia min and max height made default
+  id: 9669
+  time: '2026-07-31T04:27:54.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1328
