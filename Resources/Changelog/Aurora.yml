@@ -2575,3 +2575,10 @@ Entries:
   id: 9674
   time: '2026-07-31T23:12:27.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1324
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Fixed some items being named "solution"!
+  id: 9675
+  time: '2026-07-31T23:14:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1331
