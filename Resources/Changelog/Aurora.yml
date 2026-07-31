@@ -2532,3 +2532,10 @@ Entries:
   id: 9669
   time: '2026-07-31T04:27:54.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1328
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: Decapoid's Big Claw now actually blocks brute damage when raised.
+  id: 9670
+  time: '2026-07-31T23:04:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1337
