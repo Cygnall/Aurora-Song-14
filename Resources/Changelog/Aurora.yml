@@ -2546,3 +2546,10 @@ Entries:
   id: 9671
   time: '2026-07-31T23:06:41.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1335
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Fixed right hand-held cheese cake slice visuals
+  id: 9672
+  time: '2026-07-31T23:07:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1334
