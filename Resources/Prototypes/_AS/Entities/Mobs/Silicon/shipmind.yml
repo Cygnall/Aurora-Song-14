@@ -83,6 +83,7 @@
   - type: Tag
     tags:
     - CanPilot
+    - StationAi # Aurora's Song - Allows them to be downloaded to intellicards
 
 - type: entity
   id: StationAiBrainShipmind
