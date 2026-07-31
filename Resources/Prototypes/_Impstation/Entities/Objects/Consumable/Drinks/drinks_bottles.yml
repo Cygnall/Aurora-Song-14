@@ -1,0 +1,139 @@
+
+- type: entity
+  parent: [DrinkVisualsAllFilled, DrinkBottlePlasticSmallBaseFull]
+  id: DrinkFoodColoringBottleFull
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _Impstation/Objects/Consumable/Drinks/Plastic/foodcoloringbottle.rsi
+    layers:
+    - state: icon_empty
+      map: ["enum.OpenableVisuals.Layer"]
+    - state: fill-3
+      map: ["enum.SolutionContainerLayers.Fill"]
+  - type: SolutionContainerVisuals
+    maxFillLevels: 3
+    fillBaseName: fill-
+    inHandsMaxFillLevels: 0
+    inHandsFillBaseName: null
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        maxVol: 15
+  - type: PhysicalComposition
+    materialComposition:
+      Plastic: 15
+  - type: Item
+    size: Tiny
+
+- type: entity
+  parent: DrinkFoodColoringBottleFull
+  id: DrinkRedFoodColoringBottleFull
+  name: red food coloring bottle
+  components:
+  - type: Sprite
+    color: "#720000"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: RedFoodColoring
+          Quantity: 15
+
+- type: entity
+  parent: DrinkFoodColoringBottleFull
+  id: DrinkOrangeFoodColoringBottleFull
+  name: orange food coloring bottle
+  components:
+  - type: Sprite
+    color: "#b15f02"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: OrangeFoodColoring
+          Quantity: 15
+
+- type: entity
+  parent: DrinkFoodColoringBottleFull
+  id: DrinkYellowFoodColoringBottleFull
+  name: yellow food coloring bottle
+  components:
+  - type: Sprite
+    color: "#bdad1e"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: YellowFoodColoring
+          Quantity: 15
+
+- type: entity
+  parent: DrinkFoodColoringBottleFull
+  id: DrinkGreenFoodColoringBottleFull
+  name: green food coloring bottle
+  components:
+  - type: Sprite
+    color: "#00970d"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: GreenFoodColoring
+          Quantity: 15
+
+- type: entity
+  parent: DrinkFoodColoringBottleFull
+  id: DrinkCyanFoodColoringBottleFull
+  name: cyan food coloring bottle
+  components:
+  - type: Sprite
+    color: "#4fb182"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: CyanFoodColoring
+          Quantity: 15
+
+- type: entity
+  parent: DrinkFoodColoringBottleFull
+  id: DrinkBlueFoodColoringBottleFull
+  name: blue food coloring bottle
+  components:
+  - type: Sprite
+    color: "#1f3b8a"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: BlueFoodColoring
+          Quantity: 15
+
+- type: entity
+  parent: DrinkFoodColoringBottleFull
+  id: DrinkPinkFoodColoringBottleFull
+  name: pink food coloring bottle
+  components:
+  - type: Sprite
+    color: "#913469"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: PinkFoodColoring
+          Quantity: 15
+
+- type: entity
+  parent: DrinkFoodColoringBottleFull
+  id: DrinkPurpleFoodColoringBottleFull
+  name: purple food coloring bottle
+  components:
+  - type: Sprite
+    color: "#832bb6"
+  - type: SolutionContainerManager
+    solutions:
+      drink:
+        reagents:
+        - ReagentId: PurpleFoodColoring
+          Quantity: 15
