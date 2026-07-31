@@ -30,7 +30,7 @@
       stationProto: StandardFrontierVessel
       components:
       - type: StationNameSetup
-        mapNameTemplate: 'Runabout {1}'
+        mapNameTemplate: 'Sacre {1}'
         nameGenerator: !type:NanotrasenNameGenerator
           prefixCreator: '14'
       - type: StationJobs
