@@ -7,7 +7,7 @@
 - type: vessel
   id: Sacre
   parent: BaseVessel
-  name: Sacre
+  name: CNS Sacre
   description: A stripped civilian vessel intended for light salvage, mining, or cargo work. Stripped surplus processed by CNS.
   price: 32000 # Appraises on purchase at ~29000. Slight markup for rounding up and basic FTL drive.
   category: Medium
@@ -22,7 +22,7 @@
 
 - type: gameMap
   id: Sacre
-  mapName: 'Sacre'
+  mapName: 'CNS Sacre'
   mapPath: /Maps/_AS/Shuttles/sacre.yml
   minPlayers: 0
   stations:
