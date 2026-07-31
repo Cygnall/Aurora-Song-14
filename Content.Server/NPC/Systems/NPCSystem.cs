@@ -18,6 +18,7 @@
 // SPDX-License-Identifier: AGPL-3.0-or-later
 
 using System.Diagnostics.CodeAnalysis;
+using Content.Server._AS;
 using Content.Server.NPC.Components;
 using Content.Server.NPC.HTN;
 using Content.Shared.CCVar;
@@ -171,6 +172,11 @@ namespace Content.Server.NPC.Systems
             RemComp<ActiveNPCComponent>(uid);
         }
 
+        // Start Aurora Song
+        private TickLimiter Limiter =>
+            field ??= new TickLimiter(Subs, AuroraCVars.TickLimiterNpcSystem);
+        // End Aurora Song
+
         /// <inheritdoc />
         public override void Update(float frameTime)
         {
@@ -178,6 +184,13 @@ namespace Content.Server.NPC.Systems
 
             if (!Enabled)
                 return;
+
+            // Start Aurora Song
+            frameTime = Limiter.CheckTickLimit(frameTime);
+
+            if (frameTime == 0)
+                return;
+            // End Aurora Song
 
             // Check player distances periodically to pause/unpause NPCs.
             if (_pauseWhenNoPlayersInRange)
