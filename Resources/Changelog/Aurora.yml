@@ -2511,3 +2511,10 @@ Entries:
   id: 9666
   time: '2026-07-30T06:38:14.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1319
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: Resin windows can now be built on top of grilles.
+  id: 9667
+  time: '2026-07-31T03:46:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1325
