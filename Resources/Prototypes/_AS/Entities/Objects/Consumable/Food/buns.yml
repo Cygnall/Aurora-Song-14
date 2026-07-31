@@ -1,0 +1,216 @@
+# Base
+- type: entity
+  parent: [SolutionTiny, FoodInjectableBase]
+  id: FoodBunBase
+  abstract: true
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Consumable/Food/buns.rsi
+  - type: Edible
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 30
+      - ReagentId: Flavorol
+        Quantity: 10
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,0
+    storedOffset: 0, -5
+  - type: FlavorProfile
+    flavors:
+      - bread
+  - type: Tag
+    tags:
+    - Bread
+
+# Buns
+- type: entity
+  parent: FoodBunBase
+  id: FoodBunSteamedMeat # cha siu, kinda.
+  suffix: Meat
+  name: steamed bun
+  description: A steamed bun. This one smells savory.
+  components:
+  - type: Sprite
+    state: steamed
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 30
+      - ReagentId: Flavorol
+        Quantity: 10
+      - ReagentId: Protein
+        Quantity: 10
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - meaty
+      - sweet
+      - smokey
+  - type: Tag
+    tags:
+    - Meat
+
+- type: entity
+  parent: FoodBunSteamedMeat
+  id: FoodBunBakedMeat
+  name: baked bun
+  description: A baked bun, sprinkled with sesame seeds. This one smells savory.
+  components:
+  - type: Sprite
+    state: baked
+
+- type: entity
+  parent: FoodBunBase
+  id: FoodBunSteamedVegetable
+  suffix: Vegetable
+  name: steamed bun
+  description: A steamed bun. This one smells savory.
+  components:
+  - type: Sprite
+    state: steamed
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 30
+      - ReagentId: Flavorol
+        Quantity: 10
+      - ReagentId: Vitamin
+        Quantity: 10
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - cabbage
+      - tofu
+      - onion
+  - type: Tag
+    tags:
+    - Vegetable
+
+- type: entity
+  parent: FoodBunSteamedVegetable
+  id: FoodBunBakedVegetable
+  name: baked bun
+  description: A baked bun, sprinkled with sesame seeds. This one smells savory.
+  components:
+  - type: Sprite
+    state: baked
+
+- type: entity
+  parent: FoodBunBase
+  id: FoodBunSteamedCustard
+  suffix: Custard
+  name: steamed bun
+  description: A steamed bun. This one smells sweet.
+  components:
+  - type: Sprite
+    state: steamed
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 30
+      - ReagentId: Flavorol
+        Quantity: 10
+      - ReagentId: Sugar
+        Quantity: 10
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - sweet
+      - custard
+
+- type: entity
+  parent: FoodBunSteamedCustard
+  id: FoodBunBakedCustard
+  name: baked bun
+  description: A baked bun, sprinkled with sesame seeds. This one smells sweet.
+  components:
+  - type: Sprite
+    state: baked
+
+# Fiber
+- type: entity
+  parent: FoodBunBase
+  id: FoodBunSteamedFiberVegetable
+  suffix: Vegetable
+  name: cotton steamed bun
+  description: A cotton-based steamed bun. This one smells savory.
+  components:
+  - type: Sprite
+    state: steamed-cotton
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 30
+      - ReagentId: Flavorol
+        Quantity: 10
+      - ReagentId: Fiber
+        Quantity: 10
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - carrot
+      - cabbage
+  - type: Tag
+    tags:
+    - ClothMade
+  - type: MothFood # Frontier
+  - type: Edible
+    requiresSpecialDigestion: true
+
+- type: entity
+  parent: FoodBunSteamedFiberVegetable
+  id: FoodBunBakedFiberVegetable
+  name: cotton baked bun
+  description: A cotton-based baked bun, sprinkled with sesame seeds. This one smells savory.
+  components:
+  - type: Sprite
+    state: baked-cotton
+
+- type: entity
+  parent: FoodBunBase
+  id: FoodBunSteamedFiberCustard
+  suffix: Custard
+  name: cotton steamed bun
+  description: A cotton-based steamed bun. This one smells sweet.
+  components:
+  - type: Sprite
+    state: steamed-cotton
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Nutriment
+        Quantity: 20
+      - ReagentId: Flavorol
+        Quantity: 10
+      - ReagentId: Sugar
+        Quantity: 10
+      - ReagentId: Fiber
+        Quantity: 10
+  - type: FlavorProfile
+    flavors:
+      - bread
+      - sweet
+      - custard
+  - type: Tag
+    tags:
+    - ClothMade
+  - type: MothFood # Frontier
+  - type: Edible
+    requiresSpecialDigestion: true
+
+- type: entity
+  parent: FoodBunSteamedFiberCustard
+  id: FoodBunBakedFiberCustard
+  name: cotton baked bun
+  description: A cotton-based baked bun, sprinkled with sesame seeds. This one smells sweet.
+  components:
+  - type: Sprite
+    state: baked-cotton
