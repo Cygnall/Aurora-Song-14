@@ -2589,3 +2589,12 @@ Entries:
   id: 9676
   time: '2026-07-31T23:18:32.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1332
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: >-
+        You can now bake or steam three varieties of bun, as well as two cotton
+        variants.
+  id: 9677
+  time: '2026-07-31T23:27:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1309
