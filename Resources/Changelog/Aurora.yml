@@ -2562,3 +2562,16 @@ Entries:
   id: 9673
   time: '2026-07-31T23:10:24.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1326
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Decapoids can now select two head markings.
+    - type: Tweak
+      message: >-
+        Crushers and crusher daggers can now be selected as longarms and
+        sidearms, respectively.
+    - type: Fix
+      message: Decapoid Off-Duty Officers will now spawn with their vaporiser and tank.
+  id: 9674
+  time: '2026-07-31T23:12:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1324
