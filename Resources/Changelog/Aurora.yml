@@ -2553,3 +2553,12 @@ Entries:
   id: 9672
   time: '2026-07-31T23:07:10.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1334
+- author: Laeras
+  changes:
+    - type: Fix
+      message: >-
+        Fixed the chat-breaking shipmind bug, and the loss of the ai eye on
+        death bug.
+  id: 9673
+  time: '2026-07-31T23:10:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1326
