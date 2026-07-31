@@ -28,11 +28,11 @@ public sealed partial class BlockingSystem : EntitySystem
 {
     [Dependency] private SharedActionsSystem _actionsSystem = default!;
     [Dependency] private ActionContainerSystem _actionContainer = default!;
-    [Dependency] private SharedTransformSystem _transformSystem = default!;
+    //[Dependency] private SharedTransformSystem _transformSystem = default!;  // Impstation - Unused after blocking rework
     //[Dependency] private FixtureSystem _fixtureSystem = default!; // Impstation - Unused after blocking rework
     [Dependency] private SharedHandsSystem _handsSystem = default!;
     [Dependency] private SharedPopupSystem _popupSystem = default!;
-    [Dependency] private EntityLookupSystem _lookup = default!;
+    //[Dependency] private EntityLookupSystem _lookup = default!;  // Impstation - Unused after blocking rework
     //[Dependency] private SharedPhysicsSystem _physics = default!; // Impstation - Unused after blocking rework
     [Dependency] private ExamineSystemShared _examine = default!;
     //[Dependency] private TurfSystem _turf = default!; // Impstation - Unused after blocking rework
@@ -258,6 +258,11 @@ public sealed partial class BlockingSystem : EntitySystem
         _popupSystem.PopupClient(msgError, user, user);
     }
 
+    /// <summary>
+    /// Called when the user stops blocking.
+    /// </summary>
+    /// <param name="ent">The entity with the blocking component.</param>
+    /// <param name="user">The entity who's using the item to block.</param>
     // imp - changed this whole thing to remove fixtures/anchoring and replace with slowdown
     public void StopBlocking(Entity<BlockingComponent> ent, EntityUid user)
     {
