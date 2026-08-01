@@ -27,7 +27,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Empress {1}'
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:SleNameGenerator # Aurora's Song - NanotrasenNameGenerator>SleNameGenerator
             prefixCreator: '14'
         - type: StationJobs
           availableJobs: {} # Removed the chef since we dont have a real loadout for it
