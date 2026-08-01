@@ -32,7 +32,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Glatisant {1}'
           nameGenerator:
-            !type:NanotrasenNameGenerator
+            !type:SleNameGenerator
             prefixCreator: '14'
         - type: StationJobs
           availableJobs: {}
