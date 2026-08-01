@@ -10,7 +10,7 @@
   name: CNS Sacre
   description: A stripped civilian vessel intended for light salvage, mining, or cargo work. Stripped surplus processed by CNS.
   price: 32000 # Appraises on purchase at ~29000. Slight markup for rounding up and basic FTL drive.
-  category: Medium
+  category: Small
   group: Shipyard
   shuttlePath: /Maps/_AS/Shuttles/sacre.yml
   guidebookPage: Null
