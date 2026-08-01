@@ -2654,3 +2654,10 @@ Entries:
   id: 9685
   time: '2026-08-01T22:16:26.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1341
+- author: Toasterblast
+  changes:
+    - type: Fix
+      message: The medical assembler obeys conservation of mass again.
+  id: 9686
+  time: '2026-08-01T22:17:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1345
