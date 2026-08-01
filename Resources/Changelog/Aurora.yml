@@ -2626,3 +2626,10 @@ Entries:
   id: 9681
   time: '2026-08-01T03:25:24.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1344
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Star Tech LDR for SLE, in their uplinks
+  id: 9682
+  time: '2026-08-01T03:50:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1347
