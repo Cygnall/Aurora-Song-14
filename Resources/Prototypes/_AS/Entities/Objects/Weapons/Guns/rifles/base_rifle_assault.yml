@@ -1,0 +1,15 @@
+#region manufacturer
+- type: entity
+  id: ASBaseWeaponFrameRifleAssaultStarTech
+  parent: [ NFBaseWeaponFrameRifleAssault ]
+  abstract: true
+  components:
+  - type: Gun
+    projectileSpeed: 30
+    minAngle: 3.5
+    maxAngle: 10
+    angleIncrease: 2.5
+    angleDecay: 6
+    fireRate: 6
+  - type: NFWeaponDetails
+    manufacturer: weapon-details-manufacturer-startech
