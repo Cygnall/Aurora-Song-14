@@ -25,7 +25,7 @@
 
 # StarTech
 - type: entity
-  name: StarTech LDR
+  name: Star Tech LDR
   description: |-
     A reliable military-grade assault rifle. On the receiver is a label that says 'Certified Surplus.'
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRifleAssaultChamber20, ASBaseWeaponFrameRifleAssaultStarTech ]
@@ -51,7 +51,7 @@
 - type: entity
   id: ASWeaponRifleAssaultStarTechLDRLessLethal
   parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRifleAssaultChamber20Rubber, ASBaseWeaponFrameRifleAssaultStarTech ]
-  name: StarTech LDR
+  name: Star Tech LDR
   description: |-
     A medium end military grade assault rifle. On the receiver is a label that says 'for authorized use only.'
   suffix: Aurora, Less-lethal
