@@ -75,7 +75,7 @@ namespace Content.Server.Power.Pow3r
 
         private void ClearLoadsAndSupplies(PowerState state)
         {
-            foreach (var load in state.Loads.Values)
+            foreach (ref var load in state.Loads.Values)
             {
                 if (load.Paused)
                     continue;
@@ -83,7 +83,7 @@ namespace Content.Server.Power.Pow3r
                 load.ReceivingPower = 0;
             }
 
-            foreach (var supply in state.Supplies.Values)
+            foreach (ref var supply in state.Supplies.Values)
             {
                 if (supply.Paused)
                     continue;
@@ -104,7 +104,7 @@ namespace Content.Server.Power.Pow3r
             var demand = 0f;
             foreach (var loadId in network.Loads)
             {
-                var load = state.Loads[loadId];
+                ref var load = ref state.Loads[loadId];
 
                 if (!load.Enabled || load.Paused)
                     continue;
@@ -120,7 +120,7 @@ namespace Content.Server.Power.Pow3r
             // Add demand from batteries
             foreach (var batteryId in network.BatteryLoads)
             {
-                var battery = state.Batteries[batteryId];
+                ref var battery = ref state.Batteries[batteryId];
                 if (!battery.Enabled || !battery.CanCharge || battery.Paused)
                     continue;
 
@@ -142,7 +142,7 @@ namespace Content.Server.Power.Pow3r
             var totalMaxSupply = 0f;
             foreach (var supplyId in network.Supplies)
             {
-                var supply = state.Supplies[supplyId];
+                ref var supply = ref state.Supplies[supplyId];
                 if (!supply.Enabled || supply.Paused)
                     continue;
 
@@ -173,7 +173,7 @@ namespace Content.Server.Power.Pow3r
                 // determine supply available from batteries
                 foreach (var batteryId in network.BatterySupplies)
                 {
-                    var battery = state.Batteries[batteryId];
+                    ref var battery = ref state.Batteries[batteryId];
                     if (!battery.Enabled || !battery.CanDischarge || battery.Paused)
                         continue;
 
@@ -205,7 +205,7 @@ namespace Content.Server.Power.Pow3r
             // Distribute supply to loads.
             foreach (var loadId in network.Loads)
             {
-                var load = state.Loads[loadId];
+                ref var load = ref state.Loads[loadId];
                 if (!load.Enabled || load.DesiredPower == 0 || load.Paused)
                     continue;
 
@@ -215,7 +215,7 @@ namespace Content.Server.Power.Pow3r
             // Distribute supply to batteries
             foreach (var batteryId in network.BatteryLoads)
             {
-                var battery = state.Batteries[batteryId];
+                ref var battery = ref state.Batteries[batteryId];
                 if (!battery.Enabled || battery.DesiredPower == 0 || battery.Paused || !battery.CanCharge)
                     continue;
 
@@ -237,7 +237,7 @@ namespace Content.Server.Power.Pow3r
                 // Apply load to supplies
                 foreach (var supplyId in network.Supplies)
                 {
-                    var supply = state.Supplies[supplyId];
+                    ref var supply = ref state.Supplies[supplyId];
                     if (!supply.Enabled || supply.Paused)
                         continue;
 
@@ -262,7 +262,7 @@ namespace Content.Server.Power.Pow3r
             // Apply load to supplying batteries
             foreach (var batteryId in network.BatterySupplies)
             {
-                var battery = state.Batteries[batteryId];
+                ref var battery = ref state.Batteries[batteryId];
                 if (!battery.Enabled || battery.Paused || !battery.CanDischarge)
                     continue;
 
@@ -297,7 +297,7 @@ namespace Content.Server.Power.Pow3r
         {
             // Clear supplying/loading on any batteries that haven't been marked by usage.
             // Because we need this data while processing ramp-pegging, we can't clear it at the start.
-            foreach (var battery in state.Batteries.Values)
+            foreach (ref var battery in state.Batteries.Values)
             {
                 if (battery.Paused)
                     continue;
@@ -352,7 +352,7 @@ namespace Content.Server.Power.Pow3r
         private void ValidateNetworkGroups(PowerState state, List<List<Network>> groupedNetworks)
         {
             HashSet<Network> nets = new();
-            HashSet<NodeId> netIds = new();
+            HashSet<SlotHandle> netIds = new();
             foreach (var layer in groupedNetworks)
             {
                 nets.Clear();
@@ -362,7 +362,7 @@ namespace Content.Server.Power.Pow3r
                 {
                     foreach (var batteryId in net.BatteryLoads)
                     {
-                        var battery = state.Batteries[batteryId];
+                        ref var battery = ref state.Batteries[batteryId];
                         if (battery.LinkedNetworkDischarging == default)
                             continue;
 
@@ -380,7 +380,7 @@ namespace Content.Server.Power.Pow3r
 
                     foreach (var batteryId in net.BatterySupplies)
                     {
-                        var battery = state.Batteries[batteryId];
+                        ref var battery = ref state.Batteries[batteryId];
                         if (battery.LinkedNetworkCharging == default)
                             continue;
 
@@ -426,7 +426,7 @@ namespace Content.Server.Power.Pow3r
 
             foreach (var batteryId in network.BatteryLoads)
             {
-                var battery = state.Batteries[batteryId];
+                ref var battery = ref state.Batteries[batteryId];
 
                 if (battery.LinkedNetworkDischarging == default || battery.LinkedNetworkDischarging == network.Id)
                     continue;

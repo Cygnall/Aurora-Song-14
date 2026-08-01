@@ -20,7 +20,7 @@ public sealed partial class ConveyorComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField, AutoNetworkedField]
-    public float Speed = 2f;
+    public float Speed = 4f; // Aurora's Song 2>4 Faster movement means entities spend less time on belt being hit by physics system
 
     /// <summary>
     ///     The current state of this conveyor

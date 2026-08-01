@@ -55,6 +55,24 @@
         - id: NFGrenadeBaton
           amount: 10
 
+- type: entity
+  parent: ASClothingBackpackDuffelSLENavy
+  id: ASClothingBackpackDuffelSLEOffDutyOfficerBundle
+  name: off-duty officer bundle
+  description: "A bundle of equipment to quickly prep an off-duty SLE Officer."
+  components:
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+        children:
+        - id: ASClothingBeltSLEWebbingFilled
+        - id: ASClothingShoesBootsSLEDarkBlue
+        - id: ASClothingHandsGlovesCombatSLEDarkBlue
+        - id: ASClothingHeadHatSLEBeretBigNavy
+        - id: ASClothingUniformJumpskirtSLEClassic
+        - id: ASClothingHeadsetAltSLEOffDutyNavy
+        - id: ASClothingEyesGlassesSLE
+
 #region Botany
 - type: entity
   parent: NFClothingBackpackDuffelColorGreen

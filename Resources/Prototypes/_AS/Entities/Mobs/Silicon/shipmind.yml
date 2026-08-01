@@ -83,12 +83,14 @@
   - type: Tag
     tags:
     - CanPilot
+    - StationAi # Aurora's Song - Allows them to be downloaded to intellicards
 
 - type: entity
   id: StationAiBrainShipmind
   parent: BaseItem
   categories: [ HideSpawnMenu, DoNotMap ]
   components:
+  - type: Alerts # Aurora's Song - Allows the shipmind to see its own battery state and health when in the core
   - type: BlockMovement
     blockInteraction: false
   - type: SiliconLawBound
@@ -153,6 +155,7 @@
   - type: MobState
     allowedStates:
     - Alive
+    - Dead # Aurora's Song - Allows the shipmind to be Dead
   - type: Appearance
   - type: GuideHelp
     guides:

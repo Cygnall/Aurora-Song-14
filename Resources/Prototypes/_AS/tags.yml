@@ -7,9 +7,6 @@
   id: DeathAcidifier
 
 - type: Tag
-  id: DrinkGlass
-
-- type: Tag
   id: Ingredient
 
 - type: Tag

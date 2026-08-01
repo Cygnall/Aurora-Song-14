@@ -50,4 +50,4 @@ plant-analyzer-mutation-canscream = Mandragora
 plant-analyzer-harvest-Unknown = Unknown
 plant-analyzer-harvest-Repeat = Perennial
 plant-analyzer-harvest-NoRepeat = Ephemeral
-plant-analyzer-harvest-SelfHarvest = Self-harvesting
+# plant-analyzer-harvest-SelfHarvest = Self-harvesting # Aurora's Song: Self Harvest Removal

@@ -5053,7 +5053,7 @@ entities:
       deviceLists:
       - 536
       - 1605
-- proto: FloorDrain
+- proto: FloorDrainCosmetic
   entities:
   - uid: 286
     components:

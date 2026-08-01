@@ -1,0 +1,135 @@
+- type: loadoutGroup
+  id: OffDutyOfficerJumpsuit
+  name: loadout-group-contractor-jumpsuit
+  loadouts: [] #First Section: Role specific freebies/discounts/rewards
+  subgroups:
+  - MercenaryJumpsuit
+  - PilotJumpsuit
+  - ContractorJumpsuit
+  fallbacks:
+  - MercenaryClothingUniformJumpsuitMercenary
+  - MercenaryClothingUniformJumpskirtMercenary
+
+- type: loadoutGroup
+  id: OffDutyOfficerBackpack
+  name: loadout-group-contractor-backpack
+  loadouts: []
+  subgroups:
+  - MercenaryBackpack
+  - PilotBackpack
+  - ContractorBackpack
+  - SLEBackpackBrown
+  fallbacks:
+  - MercenaryClothingBackpackMercenary
+
+- type: loadoutGroup
+  id: OffDutyOfficerShoes
+  name: loadout-group-contractor-shoes
+  loadouts: []
+  subgroups:
+  - MercenaryShoes
+  - PilotShoes
+  - ContractorShoes
+  fallbacks:
+  - MercenaryClothingShoesBootsMercenary
+
+- type: loadoutGroup
+  id: OffDutyOfficerOuterClothing
+  name: loadout-group-contractor-outerclothing
+  minLimit: 0
+  loadouts: []
+  subgroups:
+  - MercenaryOuterClothing
+  - PilotOuterClothing
+  - ContractorOuterClothing
+
+- type: loadoutGroup
+  id: OffDutyOfficerHead
+  name: loadout-group-contractor-head
+  minLimit: 0
+  loadouts: []
+  subgroups:
+  - MercenaryHead
+  - PilotHead
+  - ContractorHead
+
+- type: loadoutGroup
+  id: OffDutyOfficerEars
+  name: loadout-group-contractor-ears
+  minLimit: 1
+  maxLimit: 1
+  loadouts: []
+  subgroups:
+  - MercenaryEars
+  - PilotEars
+  - ContractorEars
+  fallbacks:
+  - MercenaryClothingHeadsetAltMercenaryCommon
+
+- type: loadoutGroup
+  id: OffDutyOfficerGloves
+  name: loadout-group-contractor-gloves
+  minLimit: 0
+  loadouts: []
+  subgroups:
+  - MercenaryGloves
+  - PilotGloves
+  - ContractorGloves
+
+- type: loadoutGroup
+  id: OffDutyOfficerNeck
+  name: loadout-group-contractor-neck
+  loadouts: []
+  subgroups:
+  - MercenaryNeck
+  - ContractorNeck
+
+- type: loadoutGroup
+  id: OffDutyOfficerPDA
+  name: loadout-group-contractor-pda
+  hidden: true # No point in showing this, it gets auto-selected.
+  loadouts:
+  - OffDutyOfficerOffDutyOfficerPDA
+  fallbacks:
+  - OffDutyOfficerOffDutyOfficerPDA
+
+- type: loadoutGroup
+  id: OffDutyOfficerGlasses
+  name: loadout-group-contractor-glasses
+  minLimit: 0
+  loadouts: []
+  subgroups:
+  - MercenaryGlasses
+  - PilotGlasses
+  - ContractorGlasses
+  - SLEGlasses
+
+- type: loadoutGroup
+  id: OffDutyOfficerFace
+  name: loadout-group-contractor-face
+  loadouts: []
+  subgroups:
+  - MercenaryFace
+  - PilotFace
+  - ContractorFace
+  fallbacks:
+  - MercenaryClothingMaskGasMercenary
+
+- type: loadoutGroup
+  id: OffDutyOfficerBelt
+  name: loadout-group-contractor-belt
+  minLimit: 0
+  loadouts: []
+  subgroups:
+  - MercenaryBelt
+  - ContractorBelt
+
+- type: loadoutGroup
+  id: OffDutyOfficerBackpackItems
+  name: loadout-group-contractor-backpack-items
+  minLimit: 0
+  maxLimit: 6
+  loadouts:
+  - SergeantASPouchSLE
+  subgroups:
+  - ContractorBackpackItems

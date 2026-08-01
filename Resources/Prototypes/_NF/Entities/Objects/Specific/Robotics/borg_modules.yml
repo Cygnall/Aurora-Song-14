@@ -122,14 +122,14 @@
         emptyLabel: borg-placeholder-display-name-glassware
         emptyRepresentative: DrinkGlass
         whitelist:
-          tags:
-          - DrinkGlass
+          components:
+          - FitsInDispenser # Aurora's Song - Switch to FitsInDispenser
     - hand:
         emptyLabel: borg-placeholder-display-name-glassware
         emptyRepresentative: DrinkGlass
         whitelist:
-          tags:
-          - DrinkGlass
+          components:
+          - FitsInDispenser # Aurora's Song - Switch to FitsInDispenser
   - type: BorgModuleIcon
     icon: { sprite: Interface/Actions/actions_borg.rsi, state: service-module }
 
@@ -195,20 +195,20 @@
         whitelist:
           tags:
           - GlassBeaker
-          - DrinkGlass
           components:
           - Utensil
           - NFCookware
+          - FitsInDispenser # Aurora's Song - Switch to FitsInDispenser
     - hand:
         emptyLabel: borg-placeholder-display-name-cookware
         emptyRepresentative: FoodPlateTin
         whitelist:
           tags:
           - GlassBeaker
-          - DrinkGlass
           components:
           - Utensil
           - NFCookware
+          - FitsInDispenser # Aurora's Song - Switch to FitsInDispenser
     - hand:
         emptyLabel: borg-placeholder-display-name-food-or-ingredients
         emptyRepresentative: ReagentContainerFlour

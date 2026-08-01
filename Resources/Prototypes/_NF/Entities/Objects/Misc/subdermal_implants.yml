@@ -178,3 +178,19 @@
   - type: RadioImplant
     radioChannels:
     - Freelance
+
+- type: entity
+  parent: BaseSubdermalImplant
+  id: WehImplant
+  name: weh implant
+  description: This implant lets the user weh anywhere at any time.
+  categories: [ HideSpawnMenu ]
+  components:
+    - type: SubdermalImplant
+      implantAction: ActionActivateWehImplant
+    - type: TriggerOnActivateImplant
+    - type: EmitSoundOnTrigger
+      sound:
+        collection: Weh
+        params:
+          variation: 0.125

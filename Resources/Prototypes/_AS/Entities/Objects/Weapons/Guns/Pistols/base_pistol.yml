@@ -83,6 +83,33 @@
           tags:
             - NFCartridgePistol45
 
+- type: entity
+  id: ASBaseWeaponDartChamber
+  abstract: true
+  components:
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/silenced.ogg
+      params:
+        volume: -8
+  - type: ItemSlots
+    slots:
+      gun_chamber:
+        name: Chamber
+        startingItem: null
+        priority: 1
+        whitelist:
+          tags:
+            - NFTrackingDart
+  - type: ChamberMagazineAmmoProvider
+    autoCycle: false
+    canRack: false
+    soundBoltClosed: /Audio/Weapons/Guns/MagIn/ltrifle_magin.ogg
+    soundBoltOpened: /Audio/Weapons/Guns/MagOut/ltrifle_magout.ogg
+  - type: ContainerContainer
+    containers:
+      gun_chamber: !type:ContainerSlot
+
 #region manufacturer
 - type: entity
   id: ASBaseWeaponFramePistolHazardZone

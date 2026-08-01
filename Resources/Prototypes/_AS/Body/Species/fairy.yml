@@ -139,6 +139,12 @@
     size: "Small"
     shape:
     - 0,1,0,0
+  - type: Clothing
+    quickEquip: false
+    sprite: null
+    equippedPrefix: 0
+    slots:
+    - HEAD
   - type: Vocal
     sounds:
       Male: FairySpeech

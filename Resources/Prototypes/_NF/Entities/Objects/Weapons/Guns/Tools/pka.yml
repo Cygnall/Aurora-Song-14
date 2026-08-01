@@ -41,6 +41,7 @@
     price: 0 # WizDen price
   - type: NFWeaponDetails
     class: weapon-details-class-tool
+  - type: SpaceGarbage # Aurora's Song
 
 #region manufacturer
 - type: entity

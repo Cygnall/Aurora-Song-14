@@ -2255,3 +2255,367 @@ Entries:
   id: 9639
   time: '2026-07-25T02:55:09.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1287
+- author: ZigTag
+  changes:
+    - type: Tweak
+      message: Bar shelfs are now 3 tiles high!
+    - type: Tweak
+      message: Bluespace Vials are now 240u instead of 300u
+    - type: Tweak
+      message: Bluespace Jugs are now 1920u instead of 3840u
+    - type: Fix
+      message: Bluespace items are now consistently 240u a tile
+  id: 9640
+  time: '2026-07-25T21:59:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1286
+- author: AvianMaiden
+  changes:
+    - type: Tweak
+      message: A handful of nonlethal tools and disablers can now be used by pacifists!
+  id: 9641
+  time: '2026-07-26T08:35:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1290
+- author: Cutinup99
+  changes:
+    - type: Fix
+      message: Allowed BRDI mags to fit in drop leg holsters
+  id: 9642
+  time: '2026-07-26T09:11:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1294
+- author: ZigTag
+  changes:
+    - type: Fix
+      message: Forensics works on blood swapping traits!
+  id: 9643
+  time: '2026-07-26T09:24:01.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1289
+- author: ZigTag
+  changes:
+    - type: Add
+      message: added a toggle for pumping or equalizing pressure in gas containers
+  id: 9644
+  time: '2026-07-26T09:26:00.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1279
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: The popup for swapping fire modes works again.
+  id: 9645
+  time: '2026-07-26T20:27:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1298
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Folding chairs now fit in bags.
+  id: 9646
+  time: '2026-07-26T20:28:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1300
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Fairies can now go on your head.
+  id: 9647
+  time: '2026-07-26T20:30:34.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1299
+- author: KieueCaprie
+  changes:
+    - type: Add
+      message: >-
+        Weh implanters have finally arrived in the Aurora sector from the
+        Frontier! Find them in your loadouts and/or your nearest medical vendor!
+    - type: Tweak
+      message: The musician lizard plushie can now play music.
+  id: 9648
+  time: '2026-07-26T20:42:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1254
+- author: BudaLope
+  changes:
+    - type: Add
+      message: Ports Wayfarer's Crew Manifest Improvements
+    - type: Add
+      message: Ports Wayfarer's Crit Implant Tracker
+  id: 9649
+  time: '2026-07-26T21:38:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1297
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Let service cyborgs hold drinks with the lounge module!
+  id: 9650
+  time: '2026-07-26T21:58:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1295
+- author: Laeras
+  changes:
+    - type: Fix
+      message: 'Fixed swapping hands backwards! '
+  id: 9651
+  time: '2026-07-26T22:57:23.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1302
+- author: Cygnall
+  changes:
+    - type: Add
+      message: SLE Off-Duty Officer
+  id: 9652
+  time: '2026-07-26T23:01:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1293
+- author: Laeras
+  changes:
+    - type: Fix
+      message: >-
+        Let cyborg construction modules pick up parts for construction
+        (igniters, power cells, capacitors, matter bins, manipulators)
+  id: 9653
+  time: '2026-07-27T06:56:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1305
+- author: ZigTag
+  changes:
+    - type: Tweak
+      message: Bluespace beaker is now size normal (2x2)
+  id: 9654
+  time: '2026-07-27T07:13:59.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1304
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: >-
+        Adds Decapoids, imperial crab-like aliens first spotted in the Imp
+        sector.
+  id: 9655
+  time: '2026-07-29T02:34:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1288
+- author: Laeras
+  changes:
+    - type: Add
+      message: Added naming remote chassis for shipminds and AI!
+  id: 9656
+  time: '2026-07-29T02:46:56.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1303
+- author: Laeras
+  changes:
+    - type: Tweak
+      message: Allowed Scrambled Speech trait users to use CaPiTaLiZaTiOn!
+  id: 9657
+  time: '2026-07-29T03:18:31.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1308
+- author: Toasterblast
+  changes:
+    - type: Fix
+      message: Removed all lies. You can now trust everything you read ever.
+  id: 9658
+  time: '2026-07-29T22:49:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1315
+- author: BudaLope
+  changes:
+    - type: Remove
+      message: Removed Self Harvesting from botany (returns August 28th at latest)
+    - type: Fix
+      message: >-
+        Added SpaceGarbage component to several items that needed it. You can
+        now recycle things like igniters.
+    - type: Tweak
+      message: Doubled the time between magnet scans (1 second to 2 seconds)
+    - type: Add
+      message: 'Adds a cosmetic drain for decoration reasons. '
+    - type: Tweak
+      message: Reclaimers process items 5x as fast
+    - type: Tweak
+      message: Items tagged as trash do not remain upon UIV/VRoid deletion
+    - type: Tweak
+      message: Conveyors convey twice as fast
+    - type: Tweak
+      message: Every gun is now technically caseless
+  id: 9659
+  time: '2026-07-30T02:28:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1310
+- author: Sunburstschitin
+  changes:
+    - type: Tweak
+      message: Removed the OwOnavirus joke from the felinid guidebook entry.
+    - type: Tweak
+      message: Fixed some grammar in the felinid guidebook entry.
+  id: 9660
+  time: '2026-07-30T02:32:07.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1318
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: move multiple prototypes to proper files
+    - type: Add
+      message: some additional security-locked vanilla airlocks
+    - type: Add
+      message: multiple SLE external/ docking airlock prototypes
+    - type: Add
+      message: SLE Officer/ Evidence wall lockers
+    - type: Add
+      message: SLE Patrol EVA Locker
+    - type: Add
+      message: Prisoner EVA wall locker
+  id: 9661
+  time: '2026-07-30T02:54:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1312
+- author: BenadrylJackson
+  changes:
+    - type: Add
+      message: >-
+        Added the Plasteel Arming Sword and Truncheon to the MercVend, Melee
+        enjoyers rejoice in being able to cut and pummel things to pieces.
+  id: 9662
+  time: '2026-07-30T02:59:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1316
+- author: BudaLope
+  changes:
+    - type: Add
+      message: Tracking Dart Pistol
+    - type: Add
+      message: Coordinates to pinpointer tracking
+    - type: Tweak
+      message: SLE armor values
+    - type: Tweak
+      message: Reduced rank requirement for several SLE ships
+    - type: Tweak
+      message: Removed rank requirement for contra scanner module
+    - type: Tweak
+      message: Batons can be put into thigh sheathes
+    - type: Tweak
+      message: Medkits can be attached to SLE Webbing
+  id: 9663
+  time: '2026-07-30T03:35:46.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1275
+- author: GreyScaleHarlequin
+  changes:
+    - type: Fix
+      message: Fixed components on greatshield, it now blocks damage properly
+    - type: Fix
+      message: Commander beret is no longer contraband
+    - type: Fix
+      message: En-blocs are now recyclable
+    - type: Fix
+      message: Satanus suit now has a light sprite
+  id: 9664
+  time: '2026-07-30T04:00:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1278
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Shuttle vent systems no longer have ephedrine stuck in them.
+  id: 9665
+  time: '2026-07-30T04:09:50.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1317
+- author: avosirenfal
+  changes:
+    - type: Tweak
+      message: >-
+        Test merging changes to the power system to improve performance. We
+        don't expect issues, but if anything problematic happens we may restart
+        the server to revert if needed.
+  id: 9666
+  time: '2026-07-30T06:38:14.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1319
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: Resin windows can now be built on top of grilles.
+  id: 9667
+  time: '2026-07-31T03:46:13.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1325
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: (Some) Nuclear 14 tiles are now printable in the cutter.
+  id: 9668
+  time: '2026-07-31T03:51:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1322
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Ovinia min and max height made default
+  id: 9669
+  time: '2026-07-31T04:27:54.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1328
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: Decapoid's Big Claw now actually blocks brute damage when raised.
+  id: 9670
+  time: '2026-07-31T23:04:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1337
+- author: Laeras
+  changes:
+    - type: Add
+      message: Added ultraviolet lights and colored lights to the service techfab!
+  id: 9671
+  time: '2026-07-31T23:06:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1335
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Fixed right hand-held cheese cake slice visuals
+  id: 9672
+  time: '2026-07-31T23:07:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1334
+- author: Laeras
+  changes:
+    - type: Fix
+      message: >-
+        Fixed the chat-breaking shipmind bug, and the loss of the ai eye on
+        death bug.
+  id: 9673
+  time: '2026-07-31T23:10:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1326
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Decapoids can now select two head markings.
+    - type: Tweak
+      message: >-
+        Crushers and crusher daggers can now be selected as longarms and
+        sidearms, respectively.
+    - type: Fix
+      message: Decapoid Off-Duty Officers will now spawn with their vaporiser and tank.
+  id: 9674
+  time: '2026-07-31T23:12:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1324
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Fixed some items being named "solution"!
+  id: 9675
+  time: '2026-07-31T23:14:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1331
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Fixed intellicards!
+  id: 9676
+  time: '2026-07-31T23:18:32.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1332
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: >-
+        You can now bake or steam three varieties of bun, as well as two cotton
+        variants.
+  id: 9677
+  time: '2026-07-31T23:27:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1309
+- author: DimesEqual9
+  changes:
+    - type: Fix
+      message: Clarified the CHL's description
+  id: 9678
+  time: '2026-07-31T23:33:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1321
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Shipmind back in rotation!
+  id: 9679
+  time: '2026-07-31T23:35:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1342
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Saker and variants to shipyards
+  id: 9680
+  time: '2026-08-01T01:28:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1336

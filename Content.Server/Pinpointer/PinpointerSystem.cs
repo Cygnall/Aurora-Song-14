@@ -101,6 +101,7 @@ public sealed partial class PinpointerSystem : SharedPinpointerSystem
         while (query.MoveNext(out var uid, out var pinpointer))
         {
             UpdateDirectionToTarget((uid, pinpointer));
+            UpdateTargetCoordinates((uid, pinpointer)); // Aurora's Song
         }
     }
 
@@ -130,6 +131,21 @@ public sealed partial class PinpointerSystem : SharedPinpointerSystem
         // return uid with a smallest distance
         return l.Count > 0 ? l.First().Value : null;
     }
+
+    // Aurora's Song Start
+    private void UpdateTargetCoordinates(Entity<PinpointerComponent?> ent)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return;
+
+        if (ent.Comp.Target != null)
+        {
+            var xform = Transform(ent.Comp.Target.Value);
+            var coords = _transform.GetWorldPosition(xform);
+            SetTargetCoordinates(ent, coords);
+        }
+    }
+    // Aurora's Song End
 
     /// <summary>
     ///     Update direction from pinpointer to selected target (if it was set)

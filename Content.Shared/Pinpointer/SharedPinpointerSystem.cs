@@ -1,3 +1,4 @@
+using System.Numerics; // Aurora's Song
 using Content.Shared._NF.Pinpointer;
 using Content.Shared.Administration.Logs;
 using Content.Shared.Database;
@@ -240,6 +241,16 @@ public abstract partial class SharedPinpointerSystem : EntitySystem
         args.Handled = true;
     }
     // End Frontier: demag
+
+    // Aurora's Song Start
+    public void SetTargetCoordinates(Entity<PinpointerComponent?> ent, Vector2 coords)
+    {
+        if (!Resolve(ent, ref ent.Comp))
+            return;
+        ent.Comp.TargetCoordinates = coords;
+        Dirty(ent);
+    }
+    // Aurora's Song End
 }
 
 // Frontier - do-after

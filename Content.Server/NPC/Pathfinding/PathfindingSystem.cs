@@ -3,6 +3,7 @@ using System.Linq;
 using System.Numerics;
 using System.Threading;
 using System.Threading.Tasks;
+using Content.Server._AS;
 using Content.Server.Administration.Managers;
 using Content.Server.Destructible;
 using Content.Server.NPC.Systems;
@@ -91,9 +92,22 @@ namespace Content.Server.NPC.Pathfinding
             _transform.OnGlobalMoveEvent -= OnMoveEvent;
         }
 
+        // Start Aurora Song
+        private TickLimiter Limiter =>
+            field ??= new TickLimiter(Subs, AuroraCVars.TickLimiterPathfindingSystem);
+        // End Aurora Song
+
         public override void Update(float frameTime)
         {
             base.Update(frameTime);
+
+            // Start Aurora Song
+            frameTime = Limiter.CheckTickLimit(frameTime);
+
+            if (frameTime == 0)
+                return;
+            // End Aurora Song
+
             var options = new ParallelOptions()
             {
                 MaxDegreeOfParallelism = _parallel.ParallelProcessCount,

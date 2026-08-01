@@ -5,6 +5,7 @@ using Content.Shared.Atmos.Piping.Binary.Components;
 using Content.Shared.Containers.ItemSlots;
 using Content.Shared.Database;
 using Content.Shared.NodeContainer;
+using Content.Shared.Verbs; // Aurora's Song
 using Robust.Shared.Containers;
 using GasCanisterComponent = Content.Shared.Atmos.Piping.Unary.Components.GasCanisterComponent;
 
@@ -26,6 +27,7 @@ public abstract partial class SharedGasCanisterSystem : GasMaxPressureSystem<Gas
         SubscribeLocalEvent<GasCanisterComponent, ComponentStartup>(OnCanisterStartup);
         SubscribeLocalEvent<GasCanisterComponent, MapInitEvent>(OnCanisterMapInit);
         SubscribeLocalEvent<GasCanisterComponent, BoundUIOpenedEvent>(OnCanisterUIOpened);
+        SubscribeLocalEvent<GasCanisterComponent, GetVerbsEvent<AlternativeVerb>>(OnGetAlternativeVerb); // Aurora's Song
 
         // Bound UI subscriptions
         SubscribeLocalEvent<GasCanisterComponent, GasCanisterHoldingTankEjectMessage>(OnHoldingTankEjectMessage);
@@ -122,6 +124,25 @@ public abstract partial class SharedGasCanisterSystem : GasMaxPressureSystem<Gas
         ToggleValve(entity, args.Valve, args.Actor);
         DirtyUI(entity);
     }
+
+    // Aurora's Song Start - Vacate verb
+    private void OnGetAlternativeVerb(Entity<GasCanisterComponent> entity, ref GetVerbsEvent<AlternativeVerb> args)
+    {
+        if (!args.CanAccess || !args.CanInteract || args.Hands == null)
+            return;
+
+        var user = args.User;
+        args.Verbs.Add(new AlternativeVerb()
+        {
+            Text = entity.Comp.Vacate ? Loc.GetString("comp-gas-tank-vent") : Loc.GetString("comp-gas-tank-vacate"),
+            Act = () =>
+            {
+                ToggleVacate(entity, user: user);
+            },
+            Disabled = entity.Comp.ReleaseValveOpen,
+        });
+    }
+    // Aurora's Song End
 
     protected void ToggleValve(Entity<GasCanisterComponent> entity, EntityUid? user = null)
     {

@@ -27,3 +27,34 @@
   - FloorTileItemXenoSteel
   - FloorTileItemXenoSteelCorner
   - FloorTileItemXenoMaint
+
+- type: latheRecipePack
+  id: N14Tiles
+  recipes:
+  - FloorTileItemMetalBlue
+  - FloorTileItemMetalBlueSolid
+  - FloorTileItemMetalGreen
+  - FloorTileItemMetalGreenSolid
+  - FloorTileItemMetalGrey
+  - FloorTileItemMetalGreySolid
+  - FloorTileItemMetalGreyDark
+  - FloorTileItemMetalGreyDarkSolid
+  - FloorTileItemMetalPurple
+  - FloorTileItemMetalPurpleSolid
+  - FloorTileItemMetalRed
+  - FloorTileItemMetalRedSolid
+  - FloorTileItemMetalTeal
+  - FloorTileItemMetalTealSolid
+  - FloorTileItemMetalWhite
+  - FloorTileItemMetalWhiteSolid
+  - FloorTileItemMetalYellow
+  - FloorTileItemMetalYellowSolid
+  - FloorTileItemMetalFreezer
+  - FloorTileItemMetalIndustrial
+  - FloorTileItemMetalMS13
+  - FloorTileItemMetalGrate
+  - FloorTileItemMetalSolid
+  - FloorTileItemWoodOak
+  - FloorTileItemWoodHouse
+  - FloorTileItemWoodMaple
+  - FloorTileItemCarpetRed

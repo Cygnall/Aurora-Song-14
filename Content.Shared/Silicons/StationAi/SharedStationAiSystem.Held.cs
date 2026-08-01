@@ -39,7 +39,7 @@ public abstract partial class SharedStationAiSystem
 
     private void OnCoreJump(Entity<StationAiHeldComponent> ent, ref JumpToCoreEvent args)
     {
-        if (!TryGetCore(ent.Owner, out var core) || core.Comp?.RemoteEntity == null)
+        if (!TryGetCore(ent.Owner, out var core) || core.Comp?.RemoteEntity == null || core.Comp.RemoteEntity == EntityUid.Invalid) // Aurora's Song - Fixes a single error that can arise from the core pointing to an invalid entity instead of null
             return;
 
         _xforms.DropNextTo(core.Comp.RemoteEntity.Value, core.Owner);

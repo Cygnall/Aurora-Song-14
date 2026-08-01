@@ -38,6 +38,7 @@
       params:
         maxDistance: 1
   - type: MiningScanner
+  - type: SpaceGarbage # Aurora's Song
 
 - type: entity
   id: MineralScanner

@@ -51,7 +51,7 @@
 
 - type: entity
   name: bluespace jug
-  parent: [Solution3840, Jug] # Aurora's Song - Use Solution3840
+  parent: [Solution1920, Jug] # Aurora's Song - Use Solution1920, 240u a tile
   id: JugBluespace
   description: Uses bluespace technology to contain an impossible amount of liquid.
   components:

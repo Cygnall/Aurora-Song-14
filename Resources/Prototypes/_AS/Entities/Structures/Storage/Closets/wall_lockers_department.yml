@@ -1,0 +1,67 @@
+# region SLE
+- type: entity
+  id: LockerWallColorSLE
+  parent: NFBaseLockerGridInvWallColor
+  name: SLE wall locker
+  suffix: Officer
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+      color: "#67ABAE"
+    - state: fillGeneric-0
+      map: ["enum.StorageFillLayers.Fill"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+      color: "#67ABAE"
+    - state: door-decal-line-03
+      map: [ decal1 ]
+      color: "#FF9B55"
+    - state: door-decal-sle-01
+      map: [ decal2 ]
+      color: "#ffd700"
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+  - type: StorageFillVisualizer
+    maxFillLevels: 9
+    fillBaseName: fillGeneric
+  - type: AccessReader
+    access: [["Security"]]
+
+- type: entity
+  id: LockerWallColorSLEEvidence
+  parent: NFBaseLockerGridInvWallColor
+  name: SLE wall locker
+  suffix: Evidence
+  components:
+  - type: Sprite
+    layers:
+    - state: base
+      map: ["enum.StorageVisualLayers.Base"]
+      color: "#67ABAE"
+    - state: fillGeneric-0
+      map: ["enum.StorageFillLayers.Fill"]
+    - state: door
+      map: ["enum.StorageVisualLayers.Door"]
+      color: "#67ABAE"
+    - state: door-decal-line-03
+      map: [ decal1 ]
+      color: "#FF9B55"
+    - state: door-decal-engi-03
+      map: [ decal2 ]
+      color: "#E9823C"
+    - state: welded
+      visible: false
+      map: ["enum.WeldableLayers.BaseWelded"]
+    - state: locked
+      map: ["enum.LockVisualLayers.Lock"]
+  - type: StorageFillVisualizer
+    maxFillLevels: 9
+    fillBaseName: fillGeneric
+  - type: AccessReader
+    access: [["Security"]]
+# endregion SLE

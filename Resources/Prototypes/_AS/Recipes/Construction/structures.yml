@@ -46,12 +46,13 @@
   startNode: start
   targetNode: resinWindow
   category: construction-category-structures
+  canBuildInImpassable: true
+  conditions:
+    - !type:EmptyOrWindowValidInTile
+    - !type:NoWindowsInTile
   objectType: Structure
   placementMode: SnapgridCenter
   canRotate: false
-  canBuildInImpassable: false
-  conditions:
-    - !type:TileNotBlocked
 
 # Diagonal Walls
 - type: construction # Aurora - Added name field for proper menu display with (diagonal) suffix

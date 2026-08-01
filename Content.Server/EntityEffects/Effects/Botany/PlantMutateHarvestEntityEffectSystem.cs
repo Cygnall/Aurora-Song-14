@@ -17,9 +17,9 @@ public sealed partial class PlantMutateHarvestEntityEffectSystem : EntityEffectS
             case HarvestType.NoRepeat:
                 entity.Comp.Seed.HarvestRepeat = HarvestType.Repeat;
                 break;
-            case HarvestType.Repeat:
-                entity.Comp.Seed.HarvestRepeat = HarvestType.SelfHarvest;
-                break;
+            // case HarvestType.Repeat: Aurora's Song: Self Harvest Removal
+            //     entity.Comp.Seed.HarvestRepeat = HarvestType.SelfHarvest;
+            //     break;
         }
     }
 }

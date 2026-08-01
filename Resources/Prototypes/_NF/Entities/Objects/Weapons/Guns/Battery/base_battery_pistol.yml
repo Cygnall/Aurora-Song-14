@@ -116,6 +116,7 @@
   - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletDisabler
     fireCost: 60
+  - type: PacifismAllowedGun # Aurora's Song - added PacifismAllowedGun so pacifists can have any form of nonlethal self-defense
 
 - type: entity
   id: NFBaseWeaponEnergyGunPractice
@@ -128,6 +129,7 @@
   - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: NFBulletLaserPractice
     fireCost: 30
+  - type: PacifismAllowedGun # Aurora's Song - added PacifismAllowedGun to match Wizden allowing pacifist practice weapons
 
 - type: entity
   id: NFBaseWeaponEnergyPistolHitScan

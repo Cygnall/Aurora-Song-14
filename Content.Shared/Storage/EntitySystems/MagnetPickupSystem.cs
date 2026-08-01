@@ -30,7 +30,7 @@ public sealed partial class MagnetPickupSystem : EntitySystem
 
     [Dependency] private EntityQuery<PhysicsComponent> _physicsQuery = default!;
 
-    private static readonly TimeSpan ScanDelay = TimeSpan.FromSeconds(1);
+    private static readonly TimeSpan ScanDelay = TimeSpan.FromSeconds(2); // Aurora's Song 1>2
     private const int MaxEntitiesToInsert = 15; // Frontier
 
 

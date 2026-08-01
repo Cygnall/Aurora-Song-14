@@ -177,6 +177,7 @@
     - type: GuideHelp
       guides:
       - Security
+    - type: SpaceGarbage # Aurora's Song
     # - Antagonists # Frontier: guidebook entry removed
 
 - type: entity

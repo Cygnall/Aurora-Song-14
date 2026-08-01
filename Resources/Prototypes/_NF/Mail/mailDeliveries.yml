@@ -68,7 +68,7 @@
     MailNFMedkit: 0.5
     MailNFIFFBoard: 0.25
     MailNFMoney: 1
-    MailNFNecrosol: 0.5
+    # MailNFNecrosol: 0.5 # Aurora's Song
     MailNFOmnizine: 0.5
     MailNFPen: 0.75
     MailNFPowerCell: 0.5

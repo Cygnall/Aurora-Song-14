@@ -56,14 +56,14 @@ public sealed partial class MaterialReclaimerComponent : Component
     /// For example, with a rate of 50, an entity with 100 total material takes 2 seconds to process.
     /// </summary>
     [DataField, ViewVariables(VVAccess.ReadWrite)]
-    public float BaseMaterialProcessRate = 100f;
+    public float BaseMaterialProcessRate = 500f; // Aurora's Song 100>500
 
     /// <summary>
     /// How quickly it takes to consume X amount of materials per second.
     /// For example, with a rate of 50, an entity with 100 total material takes 2 seconds to process.
     /// </summary>
     [DataField, AutoNetworkedField, ViewVariables(VVAccess.ReadWrite)]
-    public float MaterialProcessRate = 100f;
+    public float MaterialProcessRate = 500f; // Aurora's Song 100>500
 
     /// <summary>
     /// Machine part whose rating modifies <see cref="MaterialProcessRate"/>

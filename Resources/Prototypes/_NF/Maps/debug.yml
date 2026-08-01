@@ -16,6 +16,7 @@
             Service: [ -1, -1 ]
             Pilot: [ -1, -1 ]
             Mercenary: [ -1, -1 ]
+            OffDutyOfficer: [ -1, -1 ] # Aurora's Song - Added Off Duty Officer role
             Borg: [ -1, -1]
             ColonialRepresentative: [ -1, -1 ] # Aurora's Song - changed SR to Colonial Representative
             StationTrafficController: [ -1, -1 ]

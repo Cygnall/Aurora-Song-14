@@ -38,6 +38,7 @@
   - BaseGeneratorShuttle
   - PortableGeneratorJrPacman
   id: PortableGeneratorJrPacmanShuttle
+  name: J.R.P.A.C.M.A.N. portable generator # Aurora's Song - fix name issue
   suffix: Welding Fuel, 6 kW, Ship
   components:
     - type: Solution # Aurora's Song - Convert to solution

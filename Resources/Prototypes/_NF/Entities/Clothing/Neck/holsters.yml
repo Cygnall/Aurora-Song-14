@@ -39,6 +39,7 @@
           - PowerCellHigh # Aurora's Song - Allow power cells to fit
           - PowerCellMedium # Aurora's Song - Allow power cells to fit
           - PowerCellSmall # Aurora's Song - Allow power cells to fit
+          - MagazineBRDIP15 # Auroa's Song - Allow BRDI mags to fit
   - type: Appearance
   - type: ItemMapper
     mapLayers:
@@ -63,6 +64,7 @@
           - PowerCellHigh # Aurora's Song - Allow power cells to fit
           - PowerCellMedium # Aurora's Song - Allow power cells to fit
           - PowerCellSmall # Aurora's Song - Allow power cells to fit
+          - MagazineBRDIP15 # Auroa's Song - Allow BRDI mags to fit
   - type: ContainerContainer
     containers:
       storagebase: !type:Container
@@ -87,6 +89,7 @@
         whitelist:
           tags:
           - Knife
+          - Baton # Aurora's Song
   - type: Appearance
   - type: ItemMapper
     mapLayers:
@@ -94,6 +97,7 @@
         whitelist:
           tags:
           - Knife
+          - Baton # Aurora's Song
   - type: ContainerContainer
     containers:
       storagebase: !type:Container

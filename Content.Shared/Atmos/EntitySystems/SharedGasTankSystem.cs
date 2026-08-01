@@ -107,6 +107,17 @@ public abstract partial class SharedGasTankSystem : GasMaxPressureSystem<GasTank
             },
             Disabled = entity.Comp.IsConnected,
         });
+        // Aurora's Song Start - Vacate verb
+        args.Verbs.Add(new AlternativeVerb()
+        {
+            Text = entity.Comp.Vacate ? Loc.GetString("comp-gas-tank-vent") : Loc.GetString("comp-gas-tank-vacate"),
+            Act = () =>
+            {
+                ToggleVacate(entity, user: user);
+            },
+            Disabled = entity.Comp.ReleaseValveOpen,
+        });
+        // Aurora's Song End
     }
 
     /// <see cref="ToggleValve(Entity{GasTankComponent},bool,EntityUid?)"/>>

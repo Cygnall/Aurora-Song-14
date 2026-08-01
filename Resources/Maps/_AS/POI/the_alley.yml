@@ -18841,7 +18841,7 @@ entities:
     - type: Transform
       pos: 0.39276886,24.473726
       parent: 1
-- proto: FloorDrain
+- proto: FloorDrainCosmetic
   entities:
   - uid: 2698
     components:

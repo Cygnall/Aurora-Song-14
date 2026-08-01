@@ -1,0 +1,71 @@
+- type: job
+  id: OffDutyOfficer
+  name: job-name-off-duty-officer
+  description: job-description-off-duty-officer
+  playTimeTracker: JobOffDutyOfficer
+  requirements:
+    - !type:OverallPlaytimeRequirement
+      time: 108000 # 30 hours
+    - !type:DepartmentTimeRequirement
+      department: Security
+      time: 64800 # 18 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 43200 # 12 hours
+  alternateRequirementSets:
+    longerPlaytimeLessSec:
+    - !type:OverallPlaytimeRequirement
+      time: 540000 # 150 hours
+    - !type:RoleTimeRequirement
+      role: JobSecurityOfficer
+      time: 21600 # 6 hours
+  startingGear: OffDutyOfficerGear
+  icon: JobIconOffDutyOfficer
+  supervisors: job-supervisors-lieutenant
+  weight: 140
+  displayWeight: 50
+  access:
+  - Sergeant
+  - Prisoner
+  accessGroups:
+  - GeneralNfsdAccess
+  special:
+  - !type:AddImplantSpecial
+    implants: [ MindShieldImplant, TrackingImplant ]
+  - !type:GiveItemOnHolidaySpecial
+    holiday: FrontierBirthday
+    prototype: FrontierBirthdayGift
+
+- type: startingGear
+  id: OffDutyOfficerGear
+  equipment:
+    pocket1: MercCoin15
+    pocket2: ASWeaponPistolMk58SLessLethal
+  storage:
+    back:
+    - Flash
+    - NFMagazineHighCapacityPistol35Overpressure
+    - NFMagazineHighCapacityPistol35Rubber
+    - BaseSecurityUplinkRadioOfficer
+    - ASShipVoucherSLESergeant
+    - FrontierUplinkCoin20
+  licenses:
+  - LicenseContrabandHandling
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  - EncryptionKeyTraffic
+  - EncryptionKeyShipboard
+
+- type: chameleonOutfit
+  id: OffDutyOfficerChameleonOutfit
+  job: OffDutyOfficer
+  hasMindShield: true
+  equipment:
+    head: ClothingHeadHatNfsdBeretBrown
+    mask: ASClothingMaskGasSLE
+    eyes: ASClothingEyesGlassesSLE
+    outerClothing: ASClothingOuterArmorSLE
+    neck: ASClothingNeckSLEBadgeSergeant
+    belt: ASClothingBeltSLEFilled
+    gloves: ASClothingHandsGlovesCombatSLEDarkBlue
+    shoes: ASClothingShoesBootsSLEDarkBlueFilled
+

@@ -6046,7 +6046,7 @@ entities:
     - type: Transform
       pos: -5.899738,7.826929
       parent: 1
-- proto: FloorDrain
+- proto: FloorDrainCosmetic
   entities:
   - uid: 157
     components:

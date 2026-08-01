@@ -402,7 +402,15 @@
       map: ["foldedLayer"]
       visible: false
   - type: Item
-    size: Huge
+    size: Large # Aurora's Song - Huge > Large
+  # Aurora's Song Start
+    shape:
+    - 0,0,3,0
+    storedSprite:
+      sprite: Structures/Furniture/folding_chair.rsi
+      state: folding_folded
+    storedOffset: 0, -9
+    # Aurora's Song End
   - type: Appearance
   - type: MeleeWeapon
     damage:

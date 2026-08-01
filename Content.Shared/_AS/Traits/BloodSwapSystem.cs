@@ -1,6 +1,8 @@
 using Content.Shared.Body.Components;
 using Content.Shared.Body.Systems;
 using Content.Shared.Chemistry.Components;
+using Content.Shared.Forensics;
+using Content.Shared.Forensics.Components;
 
 namespace Content.Shared._AS.Traits;
 
@@ -27,9 +29,16 @@ public sealed partial class BloodSwapSystem : EntitySystem
         var bloodVolume = bloodStream.BloodReferenceSolution.Volume;
 
         // Create a solution made from the reagent defined in BloodSwapComponent and the volume gotten from BloodstreamComponent.
-        Solution bloodSolution = new([new(component.BloodReagent, bloodVolume)]);
+        Solution bloodSolution = new(component.BloodReagent, bloodVolume);
 
         // Replace the player's blood with this solution.
         _bloodSystem.ChangeBloodReagents(uid, bloodSolution);
+
+        if (!TryComp<DnaComponent>(uid, out var dnaComp) || dnaComp.DNA == null)
+            return;
+
+        // Regenerate the DNA in the solution so DNA properly gets added.
+        var ev = new GenerateDnaEvent { Owner = uid, DNA = dnaComp.DNA };
+        RaiseLocalEvent(uid, ref ev);
     }
 }

@@ -1,4 +1,5 @@
 using System.Linq;
+using Content.Server._AS;
 using Content.Server.Administration.Logs;
 using Content.Server.Atmos.Components;
 using Content.Server.Fluids.EntitySystems;
@@ -94,9 +95,21 @@ public sealed partial class AtmosphereSystem : SharedAtmosphereSystem
             CacheDecals();
     }
 
+    // Start Aurora Song
+    private TickLimiter Limiter =>
+        field ??= new TickLimiter(Subs, AuroraCVars.TickLimiterAtmosSystem, discrete: true);
+    // End Aurora Song
+
     public override void Update(float frameTime)
     {
         base.Update(frameTime);
+
+        // Start Aurora Song
+        frameTime = Limiter.CheckTickLimit(frameTime);
+
+        if (frameTime == 0)
+            return;
+        // End Aurora Song
 
         UpdateProcessing(frameTime);
         UpdateHighPressure(frameTime);

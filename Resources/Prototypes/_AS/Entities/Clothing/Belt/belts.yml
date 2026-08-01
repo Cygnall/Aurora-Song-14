@@ -14,7 +14,7 @@
     damageCoefficient: 0.1
 
 - type: entity
-  parent: [ ASClothingRigStorageHolsterBase, ContentsExplosionResistanceBase, BaseC2ContrabandUnredeemable ]
+  parent: [ ASClothingSRigStorageHolsterMedkitBase, ASClothingRigStorageHolsterBase, ContentsExplosionResistanceBase, BaseC2ContrabandUnredeemable ]
   id: ASClothingBeltSLEWebbing
   name: SLE webbing
   description: A tactical assault webbing for Sector Law Enforcement personnel.
@@ -28,7 +28,7 @@
     damageCoefficient: 0.1
 
 - type: entity
-  parent: [ ASClothingSRigStorageHolsterMedkitBase, ContentsExplosionResistanceBase, BaseC2ContrabandUnredeemable, ASClothingBeltSLEWebbing ]
+  parent:  ASClothingBeltSLEWebbing
   id: ASClothingBeltSLEWebbingCorpsman
   name: SLE webbing
   description: A tactical assault webbing for Sector Law Enforcement personnel. Corpsman variant.

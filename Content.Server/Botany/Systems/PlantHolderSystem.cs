@@ -673,8 +673,8 @@ public sealed partial class PlantHolderSystem : EntitySystem
 
         CheckHealth(uid, component);
 
-        if (component.Harvest && component.Seed.HarvestRepeat == HarvestType.SelfHarvest)
-            AutoHarvest(uid, component);
+        // if (component.Harvest && component.Seed.HarvestRepeat == HarvestType.SelfHarvest) Aurora's Song: Self Harvest Removal
+        //     AutoHarvest(uid, component);
 
         // If enough time has passed since the plant was harvested, we're ready to harvest again!
         if (!component.Dead && component.Seed.ProductPrototypes.Count > 0)
@@ -777,17 +777,17 @@ public sealed partial class PlantHolderSystem : EntitySystem
         return true;
     }
 
-    public void AutoHarvest(EntityUid uid, PlantHolderComponent? component = null)
-    {
-        if (!Resolve(uid, ref component))
-            return;
+    // public void AutoHarvest(EntityUid uid, PlantHolderComponent? component = null) Aurora's Song: Self Harvest Removal
+    // {
+    //     if (!Resolve(uid, ref component))
+    //         return;
 
-        if (component.Seed == null || !component.Harvest)
-            return;
+    //     if (component.Seed == null || !component.Harvest)
+    //         return;
 
-        _botany.AutoHarvest(component.Seed, Transform(uid).Coordinates);
-        AfterHarvest(uid, component);
-    }
+    //     _botany.AutoHarvest(component.Seed, Transform(uid).Coordinates);
+    //     AfterHarvest(uid, component);
+    // }
 
     private void AfterHarvest(EntityUid uid, PlantHolderComponent? component = null)
     {

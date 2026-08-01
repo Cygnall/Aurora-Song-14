@@ -21,15 +21,6 @@
     sprite: _AS/Structures/Doors/Airlocks/Glass/docksle.rsi
 
 - type: entity
-  id: ASAirlockGlassShuttleSLELocked
-  parent: ASAirlockGlassShuttleSLE
-  suffix: SLE, Glass, Docking, Locked
-  components:
-  - type: ContainerFill
-    containers:
-      board: [ DoorElectronicsSecurity ]
-
-- type: entity
   id: ASAirlockShuttleSLE
   parent: AirlockShuttle
   name: external airlock

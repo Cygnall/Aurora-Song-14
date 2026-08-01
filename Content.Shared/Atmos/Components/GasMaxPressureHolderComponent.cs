@@ -39,7 +39,7 @@ public abstract partial class GasMaxPressureHolderComponent : Component, IGasMax
     /// Sound made when the valve on this device is opened or closed.
     /// </summary>
     [DataField]
-    public SoundSpecifier ValveSound =
+    public SoundSpecifier ValveSound { get; set; } = // Aurora's Song - add { get; set; }
         new SoundCollectionSpecifier("valveSqueak")
         {
             Params = AudioParams.Default.WithVolume(-5f),

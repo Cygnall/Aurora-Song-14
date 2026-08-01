@@ -34,7 +34,7 @@
 
 - type: entity
   name: bluespace vial
-  parent: BaseBeakerMetallic
+  parent: [SolutionLarge, BaseBeakerMetallic] # Aurora's Song - 240u a tile
   id: VialBluespace
   description: A vial device created with bluespace technology.
   components:
@@ -53,9 +53,6 @@
     fillBaseName: vial-1-
     inHandsMaxFillLevels: 4
     inHandsFillBaseName: -fill-
-  - type: Solution # Aurora's Song - Convert to solution
-    solution:
-      maxVol: 300 # I'm leaving this as 300, makes them slightly (60u) larger than Jugs
   - type: SolutionTransfer
     maxTransferAmount: 300
   - type: Item

@@ -12,6 +12,7 @@ job-description-commissioner = Manage your department and keep them efficient, q
 job-description-colonial-representative = Represent the interests of the colony and sector, manage civilian affairs, and liaise with command staff to ensure sector stability.
 job-description-site-manager = Oversee manufacturing operations: Power generation, material production, and research & development. Handle manufacturing bounties.
 job-description-site-worker = Maintain production, repair damaged systems, and support operations under the Site Manager's direction.
+job-description-off-duty-officer = An off-duty Officer of the SLE, but on-call for emergency situations.
 
 # ColonialCommand
 job-description-colcomoff = Represent the Auroran Government's interests in the sector.

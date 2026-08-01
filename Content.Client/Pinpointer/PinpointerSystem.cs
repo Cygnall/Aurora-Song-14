@@ -1,3 +1,5 @@
+using Content.Client.GPS.UI; // Aurora's Song
+using Content.Client.Items; // Aurora's Song
 using Content.Shared.Pinpointer;
 using Robust.Client.GameObjects;
 using Robust.Client.Graphics;
@@ -8,6 +10,15 @@ public sealed partial class PinpointerSystem : SharedPinpointerSystem
 {
     [Dependency] private IEyeManager _eyeManager = default!;
     [Dependency] private SpriteSystem _sprite = default!;
+
+    // Aurora's Song Start - Pinpointer GPS
+    public override void Initialize()
+    {
+        base.Initialize();
+
+        Subs.ItemStatus<PinpointerComponent>(ent => new PinpointerStatusControl(ent));
+    }
+    // Aurora's Song End
 
     public override void Update(float frameTime)
     {

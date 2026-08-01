@@ -36,6 +36,7 @@
         path: /Audio/Machines/Nuke/general_beep.ogg
         params:
           volume: -2
+  - type: SpaceGarbage # Aurora's Song
 
 - type: entity
   parent: TimerTrigger
@@ -72,6 +73,7 @@
         path: /Audio/Machines/Nuke/general_beep.ogg
         params:
           volume: -2
+  - type: SpaceGarbage # Aurora's Song
 
 - type: entity
   parent: BaseItem
@@ -92,3 +94,4 @@
   - type: PayloadTrigger
     components:
     - type: TriggerOnVoice
+  - type: SpaceGarbage # Aurora's Song
