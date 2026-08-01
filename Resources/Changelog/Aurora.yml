@@ -2647,3 +2647,10 @@ Entries:
   id: 9684
   time: '2026-08-01T22:15:16.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1338
+- author: Laeras
+  changes:
+    - type: Add
+      message: stole impstation's crystal recipes! and added food coloring.
+  id: 9685
+  time: '2026-08-01T22:16:26.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1341
