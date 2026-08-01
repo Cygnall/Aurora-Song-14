@@ -5,16 +5,18 @@
   id: BoxFoodColoring
   description: A little container for food coloring bottles.
   components:
-  - type: StorageFill
-    contents:
-    - id: DrinkRedFoodColoringBottleFull
-    - id: DrinkOrangeFoodColoringBottleFull
-    - id: DrinkYellowFoodColoringBottleFull
-    - id: DrinkGreenFoodColoringBottleFull
-    - id: DrinkCyanFoodColoringBottleFull
-    - id: DrinkBlueFoodColoringBottleFull
-    - id: DrinkPinkFoodColoringBottleFull
-    - id: DrinkPurpleFoodColoringBottleFull
+  - type: EntityTableContainerFill # Aurora's Song - StorageFill>EntityTableContainerFill
+    containers:
+      storagebase: !type:AllSelector
+         children:
+         - id: DrinkRedFoodColoringBottleFull
+         - id: DrinkOrangeFoodColoringBottleFull
+         - id: DrinkYellowFoodColoringBottleFull
+         - id: DrinkGreenFoodColoringBottleFull
+         - id: DrinkCyanFoodColoringBottleFull
+         - id: DrinkBlueFoodColoringBottleFull
+         - id: DrinkPinkFoodColoringBottleFull
+         - id: DrinkPurpleFoodColoringBottleFull
   - type: Storage
     grid:
     - 0,0,3,1

@@ -17,7 +17,7 @@
     inHandsMaxFillLevels: 0
     inHandsFillBaseName: null
   - type: Solution
-    solutions:
+    solution:
       maxVol: 15
   - type: PhysicalComposition
     materialComposition:
@@ -33,7 +33,7 @@
   - type: Sprite
     color: "#720000"
   - type: Solution
-    solutions:
+    solution:
       reagents:
       - ReagentId: RedFoodColoring
         Quantity: 15
@@ -46,7 +46,7 @@
   - type: Sprite
     color: "#b15f02"
   - type: Solution
-    solutions:
+    solution:
       reagents:
       - ReagentId: OrangeFoodColoring
         Quantity: 15
@@ -59,7 +59,7 @@
   - type: Sprite
     color: "#bdad1e"
   - type: Solution
-    solutions:
+    solution:
       reagents:
       - ReagentId: YellowFoodColoring
         Quantity: 15
@@ -72,7 +72,7 @@
   - type: Sprite
     color: "#00970d"
   - type: Solution
-    solutions:
+    solution:
       reagents:
        - ReagentId: GreenFoodColoring
          Quantity: 15
@@ -85,7 +85,7 @@
   - type: Sprite
     color: "#4fb182"
   - type: Solution
-    solutions:
+    solution:
       reagents:
       - ReagentId: CyanFoodColoring
         Quantity: 15
@@ -98,7 +98,7 @@
   - type: Sprite
     color: "#1f3b8a"
   - type: Solution
-    solutions:
+    solution:
       reagents:
       - ReagentId: BlueFoodColoring
         Quantity: 15
@@ -111,7 +111,7 @@
   - type: Sprite
     color: "#913469"
   - type: Solution
-    solutions:
+    solution:
       reagents:
       - ReagentId: PinkFoodColoring
         Quantity: 15
@@ -124,7 +124,7 @@
   - type: Sprite
     color: "#832bb6"
   - type: Solution
-    solutions:
+    solution:
       reagents:
       - ReagentId: PurpleFoodColoring
         Quantity: 15
