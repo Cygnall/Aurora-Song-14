@@ -1,6 +1,6 @@
 - type: entity
   abstract: true
-  parent: MaterialBase
+  parent: MaterialBaseRecycleable # Aurora's Song - Make shards recycleable
   id: ShardBase
   description: It's a shard of some unknown material.
   components:
