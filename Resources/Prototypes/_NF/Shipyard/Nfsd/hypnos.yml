@@ -36,7 +36,7 @@
         - type: StationNameSetup
           mapNameTemplate: 'Hypnos {1}'
           nameGenerator:
-            !type:SleNameGenerator
+            !type:SleNameGenerator # Aurora's Song - NanotrasenNameGenerator>SleNameGenerator
             prefixCreator: '14'
         - type: StationJobs
           availableJobs: {}

@@ -1,4 +1,4 @@
-// Taken from NanotrasenNameGenerator.cs, but altered to use the SLE prefixes and suffixes instead of NT ones.
+// Taken from NanotrasenNameGenerator.cs in Wizden namespace, but altered to use the SLE prefixes and suffixes instead of NT ones.
 using JetBrains.Annotations;
 using Robust.Shared.Random;
 
