@@ -2661,3 +2661,12 @@ Entries:
   id: 9686
   time: '2026-08-01T22:17:08.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1345
+- author: Laeras
+  changes:
+    - type: Tweak
+      message: >-
+        Took the A out of ATV(and similar vehicles) by making it no longer
+        function in space
+  id: 9687
+  time: '2026-08-01T22:27:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1349
