@@ -31,23 +31,23 @@
     - id: BluespaceMercenaryFTLCrash # Aurora's Song | Mercenary FTL UIV
     - id: ASBluespaceNanoTrasenCrash # Aurora's Song | NT Overhaul
 
-# - type: entity # Aurora
-#   id: BluespaceMinorEventScheduler
-#   parent: BaseGameRule
-#   components:
-#   - type: BasicStationEventScheduler
-#     scheduledGameRules: !type:NestedSelector
-#       tableId: MinorBluespaceEventsTable
-#     minimumTimeUntilFirstEvent: 3600 # 60 minutes
-#     minMaxEventTiming:
-#       min: 2700 # 45 minutes between events
-#       max: 4500 # 75 minutes between events
+- type: entity # Aurora
+  id: BluespaceMinourEventScheduler
+  parent: BaseGameRule
+  components:
+  - type: BasicStationEventScheduler
+    scheduledGameRules: !type:NestedSelector
+      tableId: MinourBluespaceEventsTable
+    minimumTimeUntilFirstEvent: 3600 # 60 minutes
+    minMaxEventTiming:
+      min: 2700 # 45 minutes between events
+      max: 4500 # 75 minutes between events
 
-# - type: entityTable # Aurora
-#   id: MinorBluespaceEventsTable
-#   table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
-#     children:
-#     - id: BluespaceShipmindFTLCrash
+- type: entityTable # Aurora
+  id: MinourBluespaceEventsTable
+  table: !type:AllSelector # we need to pass a list of rules, since rules have further restrictions to consider via StationEventComp
+    children:
+    - id: BluespaceShipmindFTLCrash
 
 - type: entity
   id: BluespaceDungeonEventScheduler

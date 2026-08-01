@@ -1,0 +1,158 @@
+- type: microwaveMealRecipe
+  id: RecipeBunSteamedMeat
+  name: steamed meat bun recipe
+  result: FoodBunSteamedMeat
+  time: 15
+  group: Savory
+  reagents:
+    Water: 15
+    UncookedAnimalProteins: 10
+    BbqSauce: 5
+  solids:
+    FoodDoughSlice: 1
+  recipeType:
+  - Microwave
+
+- type: microwaveMealRecipe
+  id: RecipeBunBakedMeat
+  name: baked meat bun recipe
+  result: FoodBunBakedMeat
+  time: 15
+  group: Savory
+  reagents:
+    Egg: 2
+    UncookedAnimalProteins: 10
+    BbqSauce: 5
+  solids:
+    FoodDoughSlice: 1
+  recipeType:
+  - Oven
+
+- type: microwaveMealRecipe
+  id: RecipeBunSteamedVegetable
+  name: steamed vegetable bun recipe
+  result: FoodBunSteamedVegetable
+  time: 15
+  group: Savory
+  reagents:
+    Water: 15
+    Soysauce: 5
+  solids:
+    FoodDoughSlice: 1
+    FoodCabbage: 1
+    FoodCarrot: 1
+    FoodOnionSlice: 1
+  recipeType:
+  - Microwave
+
+- type: microwaveMealRecipe
+  id: RecipeBunBakedVegetable
+  name: baked vegetable bun recipe
+  result: FoodBunBakedVegetable
+  time: 15
+  group: Savory
+  reagents:
+    Egg: 2
+    Soysauce: 5
+  solids:
+    FoodDoughSlice: 1
+    FoodCabbage: 1
+    FoodCarrot: 1
+    FoodOnionSlice: 1
+  recipeType:
+  - Oven
+
+- type: microwaveMealRecipe
+  id: RecipeBunSteamedCustard
+  name: steamed custard bun recipe
+  result: FoodBunSteamedCustard
+  time: 15
+  group: Dessert
+  reagents:
+    Water: 15
+    Egg: 12
+    Sugar: 5
+    Cream: 5
+  solids:
+    FoodDoughSlice: 1
+  recipeType:
+  - Microwave
+
+- type: microwaveMealRecipe
+  id: RecipeBunBakedCustard
+  name: baked custard bun recipe
+  result: FoodBunBakedCustard
+  time: 15
+  group: Dessert
+  reagents:
+    Egg: 14
+    Sugar: 5
+    Cream: 5
+  solids:
+    FoodDoughSlice: 1
+  recipeType:
+  - Oven
+
+# Fiber
+- type: microwaveMealRecipe
+  id: RecipeBunSteamedVegetableFiber
+  name: steamed fiber vegetable bun recipe
+  result: FoodBunSteamedFiberVegetable
+  time: 15
+  group: Savory
+  reagents:
+    Water: 15
+    Soysauce: 5
+  solids:
+    FoodDoughCottonSlice: 1
+    FoodCabbage: 1
+    FoodCarrot: 1
+  recipeType:
+  - Microwave
+
+- type: microwaveMealRecipe
+  id: RecipeBunBakedVegetableFiber
+  name: baked fiber vegetable bun recipe
+  result: FoodBunBakedFiberVegetable
+  time: 15
+  group: Savory
+  reagents:
+    Egg: 2
+    Soysauce: 5
+  solids:
+    FoodDoughCottonSlice: 1
+    FoodCabbage: 1
+    FoodCarrot: 1
+  recipeType:
+  - Oven
+
+- type: microwaveMealRecipe
+  id: RecipeBunSteamedCustardFiber
+  name: steamed fiber custard bun recipe
+  result: FoodBunSteamedFiberCustard
+  time: 15
+  group: Dessert
+  reagents:
+    Water: 15
+    Egg: 12
+    Sugar: 5
+    Cream: 5
+  solids:
+    FoodDoughCottonSlice: 1
+  recipeType:
+  - Microwave
+
+- type: microwaveMealRecipe
+  id: RecipeBunBakedCustardFiber
+  name: baked fiber custard bun recipe
+  result: FoodBunBakedFiberCustard
+  time: 15
+  group: Dessert
+  reagents:
+    Egg: 14
+    Sugar: 5
+    Cream: 5
+  solids:
+    FoodDoughCottonSlice: 1
+  recipeType:
+  - Oven

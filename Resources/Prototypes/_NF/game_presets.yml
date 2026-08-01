@@ -10,7 +10,7 @@
     - NFAdventure
     - NFBasicStationEventScheduler
     - BluespaceEventScheduler
-    # - BluespaceMinorEventScheduler # Aurora
+    - BluespaceMinourEventScheduler # Aurora
     - BluespaceDungeonEventScheduler
     - BluespaceSalvageEventScheduler
     - SmugglingEventScheduler
@@ -29,7 +29,7 @@
     - NFAdventure
     - NFBasicStationEventScheduler
     - BluespaceEventScheduler
-    # - BluespaceMinorEventScheduler # Aurora
+    - BluespaceMinourEventScheduler # Aurora
     - BluespaceDungeonEventScheduler
     - BluespaceSalvageEventScheduler
     - SmugglingEventScheduler

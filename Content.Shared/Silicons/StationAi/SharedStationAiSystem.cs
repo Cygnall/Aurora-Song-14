@@ -383,7 +383,7 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private void OnCorePower(Entity<StationAiCoreComponent> ent, ref PowerChangedEvent args)
     {
-        if (!args.Powered)
+        if (!args.Powered && MetaData(ent).EntityPrototype?.ID != "PlayerStationAiShipmind") //Aurora's Song - Prevent death from powerloss if shipmind (TODO: change things to ensure shipmind doesn't run out of power before played)
         {
             KillHeldAi(ent);
         }
@@ -449,8 +449,7 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         if (_net.IsClient)
             return false;
 
-        var comparison = new EntityUid(0); // TODO: Someone smarter than me come up with a more elegent solution
-        if (ent.Comp.RemoteEntity != null && ent.Comp.RemoteEntity != comparison) // AS: Its null or 0 if the eye gets deleted somehow.
+        if (ent.Comp.RemoteEntity != null && ent.Comp.RemoteEntity != EntityUid.Invalid) // AS: Creation of comparison UID > Using EntityUid.Invalid
             return false; // We don't want to set up an eye if it already exists
 
         var proto = ent.Comp.RemoteEntityProto;
@@ -464,11 +463,8 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         if (proto != null)
         {
             var eye = SpawnAtPosition(proto, coords.Value); // AS
-            if (ent.Comp.Remote)
-            {
-                var eyeComp = EnsureComp<StationAiEyeComponent>(eye); // AS
-                eyeComp.CoreEntity = ent; // AS
-            }
+            var eyeComp = EnsureComp<StationAiEyeComponent>(eye); // AS > removed if statement
+            eyeComp.CoreEntity = ent; // AS
             ent.Comp.RemoteEntity = eye; // AS
             Dirty(ent);
         }
@@ -676,9 +672,8 @@ public abstract partial class SharedStationAiSystem : EntitySystem
     // Aurora's Song Start
     private void OnComponentShutdown(EntityUid uid, StationAiEyeComponent component, ComponentShutdown args) // AS
     {
-
-        var comparison = new EntityUid(0); // TODO: Someone smarter than me come up with a more elegent solution
-        if (component.CoreEntity == null || component.CoreEntity == comparison) // If its been nulled or zero, it either doesn't exist or been set that way purposefully.
+        // Aurora's Song - Removed a line here setting a variable to EntityUid.Invalid, replace comparison on if below
+        if (component.CoreEntity == null || component.CoreEntity == EntityUid.Invalid) // Aurora's Song - If its been nulled or zero, it either doesn't exist or been set that way purposefully.
             return;
 
         if (!TryComp<StationAiCoreComponent>(component.CoreEntity.Value, out var coreComp))

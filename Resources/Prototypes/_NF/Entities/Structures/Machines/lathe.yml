@@ -90,6 +90,7 @@
     unlitRunningState: unlit-building # Aurora Song - bringing techfab states into line w/ upstream
     staticPacks:
     - NFLightsStatic
+    - NFLightsColoredStatic # Aurora's Song - Add colored lights
     - NFBasicToolsStatic
     - NFBasicStorageStatic
     - NFBasicPartsStatic
