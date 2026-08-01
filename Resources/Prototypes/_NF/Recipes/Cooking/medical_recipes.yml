@@ -10,8 +10,8 @@
   solids:
     BlankMediPen: 1
   reagents:
-    Epinephrine: 12
-    TranexamicAcid: 3
+    Epinephrine: 15 # Aurora's Song - recipe cost brought in line with contents of pen
+    TranexamicAcid: 5 # Aurora's Song - yeah
   recipeType: MedicalAssembler
 
 - type: microwaveMealRecipe
