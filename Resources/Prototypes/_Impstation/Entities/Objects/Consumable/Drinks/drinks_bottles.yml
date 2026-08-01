@@ -16,10 +16,9 @@
     fillBaseName: fill-
     inHandsMaxFillLevels: 0
     inHandsFillBaseName: null
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      drink:
-        maxVol: 15
+      maxVol: 15
   - type: PhysicalComposition
     materialComposition:
       Plastic: 15
@@ -33,12 +32,11 @@
   components:
   - type: Sprite
     color: "#720000"
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      drink:
-        reagents:
-        - ReagentId: RedFoodColoring
-          Quantity: 15
+      reagents:
+      - ReagentId: RedFoodColoring
+        Quantity: 15
 
 - type: entity
   parent: DrinkFoodColoringBottleFull
@@ -47,12 +45,11 @@
   components:
   - type: Sprite
     color: "#b15f02"
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      drink:
-        reagents:
-        - ReagentId: OrangeFoodColoring
-          Quantity: 15
+      reagents:
+      - ReagentId: OrangeFoodColoring
+        Quantity: 15
 
 - type: entity
   parent: DrinkFoodColoringBottleFull
@@ -61,12 +58,11 @@
   components:
   - type: Sprite
     color: "#bdad1e"
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      drink:
-        reagents:
-        - ReagentId: YellowFoodColoring
-          Quantity: 15
+      reagents:
+      - ReagentId: YellowFoodColoring
+        Quantity: 15
 
 - type: entity
   parent: DrinkFoodColoringBottleFull
@@ -75,12 +71,11 @@
   components:
   - type: Sprite
     color: "#00970d"
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      drink:
-        reagents:
-        - ReagentId: GreenFoodColoring
-          Quantity: 15
+      reagents:
+       - ReagentId: GreenFoodColoring
+         Quantity: 15
 
 - type: entity
   parent: DrinkFoodColoringBottleFull
@@ -89,12 +84,11 @@
   components:
   - type: Sprite
     color: "#4fb182"
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      drink:
-        reagents:
-        - ReagentId: CyanFoodColoring
-          Quantity: 15
+      reagents:
+      - ReagentId: CyanFoodColoring
+        Quantity: 15
 
 - type: entity
   parent: DrinkFoodColoringBottleFull
@@ -103,12 +97,11 @@
   components:
   - type: Sprite
     color: "#1f3b8a"
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      drink:
-        reagents:
-        - ReagentId: BlueFoodColoring
-          Quantity: 15
+      reagents:
+      - ReagentId: BlueFoodColoring
+        Quantity: 15
 
 - type: entity
   parent: DrinkFoodColoringBottleFull
@@ -117,12 +110,11 @@
   components:
   - type: Sprite
     color: "#913469"
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      drink:
-        reagents:
-        - ReagentId: PinkFoodColoring
-          Quantity: 15
+      reagents:
+      - ReagentId: PinkFoodColoring
+        Quantity: 15
 
 - type: entity
   parent: DrinkFoodColoringBottleFull
@@ -131,9 +123,8 @@
   components:
   - type: Sprite
     color: "#832bb6"
-  - type: SolutionContainerManager
+  - type: Solution
     solutions:
-      drink:
-        reagents:
-        - ReagentId: PurpleFoodColoring
-          Quantity: 15
+      reagents:
+      - ReagentId: PurpleFoodColoring
+        Quantity: 15
