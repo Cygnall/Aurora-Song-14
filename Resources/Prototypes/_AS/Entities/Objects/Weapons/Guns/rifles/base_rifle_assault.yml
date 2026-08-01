@@ -5,10 +5,11 @@
   abstract: true
   components:
   - type: Gun
-    minAngle: 4
-    maxAngle: 12
+    projectileSpeed: 30
+    minAngle: 3.5
+    maxAngle: 10
     angleIncrease: 2.5
-    angleDecay: 3
-    fireRate: 6 # fire rate tweak, increase | Aurora
+    angleDecay: 6
+    fireRate: 6
   - type: NFWeaponDetails
-    manufacturer: weapon-details-manufacturer-nanotrasen-munitions # Nanotrasen Munitions flavour text | Aurora
+    manufacturer: weapon-details-manufacturer-startech
