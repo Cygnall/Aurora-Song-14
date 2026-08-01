@@ -53,6 +53,7 @@
     DrinkSakeBottleFull: 3
     DrinkBeerCan: 5
     DrinkWineCan: 5
+    BoxFoodColoring: 2 #imp item
     DrinkAngobittersBottleFull: 3 # DeltaV - Angostura Bitters Bottle
     DrinkDisposableCup: 5 # #imp
     EthylredoxrazineAutoInjector: 2 # Frontier so bartenders can jab someone dying of alcohol poisoning
