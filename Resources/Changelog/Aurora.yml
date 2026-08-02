@@ -2697,3 +2697,12 @@ Entries:
   id: 9690
   time: '2026-08-02T06:10:46.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1350
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: >-
+        Added the SGD required trait, which makes you mute when not wearing a
+        Speech Generating Device.
+  id: 9691
+  time: '2026-08-02T06:54:15.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1346
