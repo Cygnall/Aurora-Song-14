@@ -2670,3 +2670,12 @@ Entries:
   id: 9687
   time: '2026-08-01T22:27:19.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1349
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: >-
+        Shields no longer anchor or body-block when raised. They slow you down
+        now, instead.
+  id: 9688
+  time: '2026-08-02T02:45:44.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1339
