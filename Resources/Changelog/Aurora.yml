@@ -2688,3 +2688,12 @@ Entries:
   id: 9689
   time: '2026-08-02T02:46:35.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1340
+- author: Laeras
+  changes:
+    - type: Fix
+      message: >-
+        Removed an edgecase bug relating to /ghosting while remotely controlling
+        a body, and removed the DAGD ion law
+  id: 9690
+  time: '2026-08-02T06:10:46.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1350
