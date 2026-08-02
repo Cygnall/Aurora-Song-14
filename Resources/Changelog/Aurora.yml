@@ -2679,3 +2679,12 @@ Entries:
   id: 9688
   time: '2026-08-02T02:45:44.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1339
+- author: ThatOneMoon
+  changes:
+    - type: Tweak
+      message: >-
+        The Holopickaxe has been buffed with increased swing speed and damage,
+        rock and stone miners. 
+  id: 9689
+  time: '2026-08-02T02:46:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1340
