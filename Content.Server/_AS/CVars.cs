@@ -26,4 +26,36 @@ public sealed class AuroraCVars
             CVar.SERVERONLY,
             "how long before dead player's suit sensors are toggled, in seconds"
         );
+
+    public static readonly CVarDef<int> TickLimiterPowerSystem =
+        CVarDef.Create(
+            "tick_limiter.power_system",
+            1,
+            CVar.SERVERONLY,
+            "power system will be updated once every N ticks"
+        );
+
+    public static readonly CVarDef<int> TickLimiterNpcSystem =
+        CVarDef.Create(
+            "tick_limiter.npc_system",
+            1,
+            CVar.SERVERONLY,
+            "npc system will be updated once every N ticks"
+        );
+
+    public static readonly CVarDef<int> TickLimiterAtmosSystem =
+        CVarDef.Create(
+            "tick_limiter.atmos_system",
+            1,
+            CVar.SERVERONLY,
+            "atmospherics system will be updated once every N ticks"
+        );
+
+    public static readonly CVarDef<int> TickLimiterPathfindingSystem =
+        CVarDef.Create(
+            "tick_limiter.pathfinding_system",
+            1,
+            CVar.SERVERONLY,
+            "pathfinding system will be updated once every N ticks"
+        );
 }

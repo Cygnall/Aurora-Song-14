@@ -49,7 +49,7 @@
       amount: 1
   products:
     ZombieSlushie: 3
-    
+
 - type: reaction
   id: LungClogger
   requiredMixerCategories:

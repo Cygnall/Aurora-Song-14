@@ -1,8 +1,10 @@
 using System.Linq;
+using Content.Server._AS;
 using Content.Server.NodeContainer.EntitySystems;
 using Content.Server.Power.Components;
 using Content.Server.Power.NodeGroups;
 using Content.Server.Power.Pow3r;
+using Content.Shared._AS.CCVar;
 using Content.Shared.CCVar;
 using Content.Shared.Power;
 using Content.Shared.Power.Components;
@@ -273,9 +275,21 @@ namespace Content.Server.Power.EntitySystems
             };
         }
 
+        // Start Aurora Song
+        private TickLimiter Limiter =>
+            field ??= new TickLimiter(Subs, AuroraCVars.TickLimiterPowerSystem);
+        // End Aurora Song
+
         public override void Update(float frameTime)
         {
             base.Update(frameTime);
+
+            // Start Aurora Song
+            frameTime = Limiter.CheckTickLimit(frameTime);
+
+            if (frameTime == 0)
+                return;
+            // End Aurora Song
 
             ReconnectNetworks();
 

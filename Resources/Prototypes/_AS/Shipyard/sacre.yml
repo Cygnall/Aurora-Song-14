@@ -1,0 +1,40 @@
+# Author Info
+# GitHub: Cygnall
+# Discord: Vandanna
+
+# Shuttle Notes:
+# Civilian variant of the Saker. Intended to exist to allow obscurity by commonality.
+- type: vessel
+  id: Sacre
+  parent: BaseVessel
+  name: CNS Sacre
+  description: A stripped civilian vessel intended for light salvage, mining, or cargo work. Stripped surplus processed by CNS.
+  price: 32000 # Appraises on purchase at ~29000. Slight markup for rounding up and basic FTL drive.
+  category: Small
+  group: Shipyard
+  shuttlePath: /Maps/_AS/Shuttles/sacre.yml
+  guidebookPage: Null
+  class:
+  - Cargo
+  - Salvage
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: Sacre
+  mapName: 'CNS Sacre'
+  mapPath: /Maps/_AS/Shuttles/sacre.yml
+  minPlayers: 0
+  stations:
+    Sacre:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'Sacre {1}'
+        nameGenerator: !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          ContractorInterview: [ 0, 0 ]
+          PilotInterview: [ 0, 0 ]
+          MercenaryInterview: [ 0, 0 ]

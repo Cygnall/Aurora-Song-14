@@ -1134,6 +1134,7 @@
   - ContractorSidearmMK58
   - ContractorSidearmLaserPistol
   - ContractorSidearmDisabler
+  - ContractorSidearmCrusherDagger # Aurora's Song - For Decas
 
 - type: loadoutGroup # Aurora's Song - Ammo group for Contractor
   id: ContractorAmmo

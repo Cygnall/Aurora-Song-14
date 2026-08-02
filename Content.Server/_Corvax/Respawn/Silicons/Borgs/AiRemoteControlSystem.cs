@@ -95,14 +95,17 @@ public sealed partial class AiRemoteControlSystem : SharedAiRemoteControlSystem
 
     private void OnReturnMindIntoAi(Entity<AiRemoteControllerComponent> entity, ref ReturnMindIntoAiEvent args)
     {
+        ResetName(entity); // Aurora's Song
         ReturnMindIntoAi(entity);
-        // Aurora's Song Start
+    }
+    // Aurora's Song Start
+    private void ResetName(Entity<AiRemoteControllerComponent> entity)
+    {
         string name = TryComp<NameModifierComponent>(entity, out var borgNameModifierComponent) ? borgNameModifierComponent.BaseName : MetaData(entity).EntityName;// storage for name, only needed because we can't be sure if the entity has an NMC or not
-
         if (name == entity.Comp.CurrentName) // Checks if name has changed during time controlling chassis
             _metaSystem.SetEntityName(entity, entity.Comp.PreviousName); // Sets the name to what it was before being controlled
-        // Aurora's Song End
     }
+    // Aurora's Song End
     public void AiTakeControl(EntityUid ai, EntityUid entity)
     {
         if (!_mind.TryGetMind(ai, out var mindId, out var mind))
@@ -253,7 +256,7 @@ public sealed partial class AiRemoteControlSystem : SharedAiRemoteControlSystem
                 return;
 
             _ghostSystem.ReRegisterGhostRole(component.AiHolder.Value, ghostRole);
-
+            ResetName((uid, component)); // Aurora's Song - Without this, ghosting leaves the controller's name attached to the chassis
             component.AiHolder = null;
             component.LinkedMind = null; // Null these out to set them up for later
         }

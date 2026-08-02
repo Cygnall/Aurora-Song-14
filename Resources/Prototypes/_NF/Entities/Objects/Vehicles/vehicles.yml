@@ -302,6 +302,7 @@
 - type: entity
   id: NFVehicleJanicart
   parent: [SolutionTank, SolutionGinormous, VehicleJanicart] # Aurora's Song - Convert to solution
+  name: janicart # Aurora's Song - name fixing due to weird parent
   components:
   - type: ItemSlots
     slots:

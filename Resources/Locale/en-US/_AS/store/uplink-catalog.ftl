@@ -74,6 +74,9 @@ uplink-mercenary-30Rifle-OP-mags-desc = A quartet of .30 Rifle magazines, stacke
 
 # region Security Uplink
 
+uplink-security-ldr-name = Star Tech LDR
+uplink-security-ldr-desc = A high-quality assault rifle chambered in .20 rifle.
+
 uplink-security-explosivegrenades-box-name = Explosive Grenade Box
 uplink-security-explosivegrenades-box-desc = A box containing 4 HE grenades.
 

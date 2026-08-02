@@ -2,6 +2,7 @@
 // Copyright (c) 2024 New Frontiers Contributors
 // See AGPLv3.txt for details.
 using System.Numerics;
+using System.Text.RegularExpressions; // Aurora's Song - Switched to a regex check for shuttle designations
 using Content.Shared._NF.Shuttles.Events;
 using Content.Shared.Shuttles.BUIStates;
 using Content.Shared.Shuttles.Components;
@@ -11,6 +12,10 @@ namespace Content.Client.Shuttles.UI
 {
     public sealed partial class NavScreen
     {
+        // Aurora's Song - Added a regex for shuttle designations
+        // follows the pattern of capital letters, followed by dash, followed by digits.
+        private static readonly Regex ShuttleDesignationRegex = new(@"^[A-Z]+\-[0-9]+$");
+
         private readonly ButtonGroup _buttonGroup = new();
         public event Action<NetEntity?, InertiaDampeningMode>? OnInertiaDampeningModeChanged;
         public event Action<NetEntity?, ServiceFlags>? OnServiceFlagsChanged;
@@ -138,7 +143,7 @@ namespace Content.Client.Shuttles.UI
             {
                 var shipNameParts = metadata.EntityName.Split(' ');
                 var designation = shipNameParts[^1];
-                if (designation.Length > 2 && designation[2] == '-')
+                if (ShuttleDesignationRegex.IsMatch(designation)) // Aurora's Song - Switched to a regex check
                 {
                     NavDisplayLabel.Text = string.Join(' ', shipNameParts[..^1]);
                     ShuttleDesignation.Text = designation;

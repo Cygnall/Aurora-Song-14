@@ -11,7 +11,7 @@
       required: true
       default: [ DecapoidGillsDefault ]
     enum.HumanoidVisualLayers.Head:
-      limit: 1
+      limit: 2 # Aurora's Song
       required: false
     enum.HumanoidVisualLayers.Hair:
       limit: 1
