@@ -1,0 +1,11 @@
+# Recipes - Impstation Custom Additions
+
+- type: latheRecipe
+  id: SGDRecipe
+  result: ClothingNeckSGD
+  completetime: 10
+  materials:
+    Steel: 300
+    Glass: 300
+    Plastic: 100
+    Gold: 100

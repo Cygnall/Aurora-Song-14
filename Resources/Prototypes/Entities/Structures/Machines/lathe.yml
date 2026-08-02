@@ -226,6 +226,7 @@
     staticPacks:
     - NFChemistryBasicStatic # Frontier
     - NFSurgeryBasicStatic # Frontier
+    - ImpProtoStatic # Impstation
     dynamicPacks:
     - AdvancedTools
     - ScienceEquipment
