@@ -2782,3 +2782,12 @@ Entries:
   id: 9699
   time: '2026-08-03T07:24:16.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1361
+- author: Laeras
+  changes:
+    - type: Add
+      message: >-
+        Allows zooming in/out using shuttle consoles! And also increases the
+        zoom range!
+  id: 9700
+  time: '2026-08-03T08:18:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1362
