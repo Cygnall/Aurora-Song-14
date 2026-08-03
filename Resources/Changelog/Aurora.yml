@@ -2752,3 +2752,12 @@ Entries:
   id: 9695
   time: '2026-08-03T06:49:51.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1348
+- author: Laeras
+  changes:
+    - type: Tweak
+      message: >-
+        Due to new bluespace exhalation technology, sleeping members of Aurora
+        Sector no longer use air!
+  id: 9696
+  time: '2026-08-03T07:06:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1353
