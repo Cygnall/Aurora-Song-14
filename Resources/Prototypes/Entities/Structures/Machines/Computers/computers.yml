@@ -122,6 +122,8 @@
   abstract: true
   components:
   - type: ShuttleConsole
+    maxZoom: 3, 3 # Aurora's Song - These values are in Vector2 format, just keep them both the same and everything is nicies
+    initialZoom: 2, 2 # Aurora's Song
   - type: ActivatableUI
     key: enum.ShuttleConsoleUiKey.Key
   - type: UserInterface

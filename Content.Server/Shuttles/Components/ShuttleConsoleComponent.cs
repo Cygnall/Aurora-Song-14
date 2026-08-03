@@ -12,9 +12,9 @@ namespace Content.Server.Shuttles.Components
         public readonly List<EntityUid> SubscribedPilots = new();
 
         /// <summary>
-        /// How much should the pilot's eye be zoomed by when piloting using this console?
+        /// How much should the pilot's eye be allowed to zoom out to when piloting using this console?
         /// </summary>
-        [DataField("zoom")]
+        [DataField("maxZoom")] // Aurora's Song
         public Vector2 Zoom = new(1.5f, 1.5f);
 
         /// <summary>
@@ -42,5 +42,12 @@ namespace Content.Server.Shuttles.Components
         [DataField]
         public InertiaDampeningMode DampeningMode = InertiaDampeningMode.Dampen;
         // End Frontier
+        // Aurora's Song - Start
+        /// <summary>
+        /// How much should the pilot's eye be zoomed to initially when piloting using this console?
+        /// </summary>
+        [DataField("initialZoom")]
+        public Vector2 InitialZoom = new(1.5f, 1.5f);
+        // Aurora's Song - End
     }
 }

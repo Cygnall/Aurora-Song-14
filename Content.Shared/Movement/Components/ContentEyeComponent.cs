@@ -21,4 +21,16 @@ public sealed partial class ContentEyeComponent : Component
     /// </summary>
     [ViewVariables(VVAccess.ReadWrite), DataField("maxZoom"), AutoNetworkedField]
     public Vector2 MaxZoom = Vector2.One;
+    // Aurora's Song - Start
+    /// <summary>
+    /// Holds a value for effects that modify max zoom
+    /// </summary>
+    [DataField, AutoNetworkedField]
+    public Vector2 HeldZoom = Vector2.One;
+
+    /// <summary>
+    /// Ensures HeldZoom is not changed while true
+    /// </summary
+    public bool HeldZoomLock = false;
+    // Aurora's Song - End
 }

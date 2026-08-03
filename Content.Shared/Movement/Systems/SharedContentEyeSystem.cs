@@ -140,6 +140,23 @@ public abstract partial class SharedContentEyeSystem : EntitySystem
         Dirty(uid, component);
     }
 
+    // Aurora's Song - Start - Without this function, using the shuttle console will screw up your maximum zoom *after* you've used it, preventing aghosts from zooming far out, etc.
+    public void SetHeldZoom(EntityUid uid, Vector2 value, ContentEyeComponent? component = null)
+    {
+        if (!Resolve(uid, ref component) || component.HeldZoomLock == true) // Aurora's Song
+            return;
+
+        component.HeldZoom = value;
+        Dirty(uid, component);
+    }
+
+    public void SetHeldZoomLock(EntityUid uid,bool lockValue, ContentEyeComponent? component = null)
+    { // locks the held variable so ideally nothing else can touch it
+        if (!Resolve(uid, ref component))
+            return;
+        component.HeldZoomLock = lockValue;
+    }
+    // Aurora's Song - End
     public void UpdateEyeOffset(Entity<EyeComponent> eye)
     {
         var evAttempt = new GetEyeOffsetAttemptEvent();
