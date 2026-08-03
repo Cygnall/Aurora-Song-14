@@ -20,12 +20,15 @@
     activatedShape:
     - 0,0,2,0
     - 1,1,1,2
+  - type: MeleeWeapon # Aurora, given increased swing speed
+    autoAttack: true
+    attackRate: 1.5
   - type: ItemToggleMeleeWeapon
     activatedDamage:
-        types: # Slightly less total damage than wielded crusher glaive has
-          Heat: 8
-          Piercing: 2
-          Structural: 40 # +10 damage compared to crusher glaive
+        types: # Aurora, buffed the damage values
+          Heat: 6
+          Piercing: 6
+          Structural: 75
     deactivatedSecret: true
   - type: Sprite
     sprite: _NF/Objects/Weapons/Melee/energy_pickaxe.rsi

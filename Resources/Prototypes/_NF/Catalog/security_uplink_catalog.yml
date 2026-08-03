@@ -518,6 +518,28 @@
         - OffDutyOfficer
         - Commissioner
 
+- type: listing # Aurora's Song - Added StarTech LDR
+  id: UplinkSecurityLDR
+  name:  uplink-security-ldr-name
+  description: uplink-security-ldr-desc
+  productEntity: ASWeaponRifleAssaultStarTechLDR
+  icon: { sprite: _AS/Objects/Weapons/Guns/Rifles/ldrifle.rsi, state: icon }
+  cost:
+    FrontierUplinkCoin: 4
+  categories:
+    - UplinkSecurityWeapons
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+    - !type:BuyerJobCondition
+      whitelist: # Aurora's Song - Switched NFSD to SLE roles
+        - Lieutenant
+        - Sergeant
+        - OffDutyOfficer
+        - Commissioner
+
 - type: listing
   id: UplinkSecurityVulcan
   name:  uplink-security-vulcan-name

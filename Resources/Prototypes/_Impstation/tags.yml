@@ -4,6 +4,9 @@
   id: CartridgeBazooka
 
 - type: Tag
+  id: Crystal # BountyCrystal
+
+- type: Tag
   id: EchionGun
 
 - type: Tag

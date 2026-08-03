@@ -2619,3 +2619,90 @@ Entries:
   id: 9680
   time: '2026-08-01T01:28:53.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1336
+- author: Vandanna
+  changes:
+    - type: Add
+      message: SLE Name Generator for mapping tools
+  id: 9681
+  time: '2026-08-01T03:25:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1344
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Star Tech LDR for SLE, in their uplinks
+  id: 9682
+  time: '2026-08-01T03:50:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1347
+- author: Laeras
+  changes:
+    - type: Tweak
+      message: Allows glass shards and rods to be recycled!
+  id: 9683
+  time: '2026-08-01T22:14:04.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1333
+- author: DevArchwave
+  changes:
+    - type: Add
+      message: Conveyor Belt Cleanup system to help with the performance degradation.
+  id: 9684
+  time: '2026-08-01T22:15:16.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1338
+- author: Laeras
+  changes:
+    - type: Add
+      message: stole impstation's crystal recipes! and added food coloring.
+  id: 9685
+  time: '2026-08-01T22:16:26.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1341
+- author: Toasterblast
+  changes:
+    - type: Fix
+      message: The medical assembler obeys conservation of mass again.
+  id: 9686
+  time: '2026-08-01T22:17:08.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1345
+- author: Laeras
+  changes:
+    - type: Tweak
+      message: >-
+        Took the A out of ATV(and similar vehicles) by making it no longer
+        function in space
+  id: 9687
+  time: '2026-08-01T22:27:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1349
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: >-
+        Shields no longer anchor or body-block when raised. They slow you down
+        now, instead.
+  id: 9688
+  time: '2026-08-02T02:45:44.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1339
+- author: ThatOneMoon
+  changes:
+    - type: Tweak
+      message: >-
+        The Holopickaxe has been buffed with increased swing speed and damage,
+        rock and stone miners. 
+  id: 9689
+  time: '2026-08-02T02:46:35.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1340
+- author: Laeras
+  changes:
+    - type: Fix
+      message: >-
+        Removed an edgecase bug relating to /ghosting while remotely controlling
+        a body, and removed the DAGD ion law
+  id: 9690
+  time: '2026-08-02T06:10:46.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1350
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: >-
+        Added the SGD required trait, which makes you mute when not wearing a
+        Speech Generating Device.
+  id: 9691
+  time: '2026-08-02T06:54:15.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1346
