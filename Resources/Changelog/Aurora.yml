@@ -2722,3 +2722,12 @@ Entries:
   id: 9693
   time: '2026-08-03T03:47:38.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1358
+- author: Laeras
+  changes:
+    - type: Add
+      message: >-
+        Gave the SLE enhanced visual range on their shuttle consoles! Watch out
+        ne'er-do-wells!
+  id: 9694
+  time: '2026-08-03T05:42:49.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1360
