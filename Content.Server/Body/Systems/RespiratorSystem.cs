@@ -2,6 +2,7 @@ using Content.Server.Administration.Logs;
 using Content.Server.Atmos.EntitySystems;
 using Content.Server.Body.Components;
 using Content.Server.Chat.Systems;
+using Content.Shared._AS.Medical;
 using Content.Shared.Body.Systems;
 using Content.Shared.Alert;
 using Content.Shared.Atmos;
@@ -89,7 +90,7 @@ public sealed partial class RespiratorSystem : EntitySystem
             if (_mobState.IsDead(uid))
                 continue;
 
-            if (TryComp<SSDIndicatorComponent>(uid, out var ssd) && ssd.IsSSD) // Wayfarer: Prevents SSD clients from breathing to prevent offline asphyx deaths.
+            if (!HasComp<ASMedicalBountyComponent>(uid) && TryComp<SSDIndicatorComponent>(uid, out var ssd) && ssd.IsSSD) // Wayfarer: Prevents SSD clients from breathing to prevent offline asphyx deaths. // Aurora's Song - Forces medical bounties to breathe
                 continue;
 
             UpdateSaturation(uid, -(float)respirator.UpdateInterval.TotalSeconds, respirator);
