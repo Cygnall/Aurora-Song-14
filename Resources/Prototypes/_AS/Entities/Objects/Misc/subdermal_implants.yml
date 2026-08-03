@@ -7,16 +7,3 @@
   components:
   - type: RattleOnTrigger
     radioChannel: ColCom
-
-- type: entity
-  parent: BaseSubdermalImplant
-  id: RadioImplantSLE
-  name: SLE radio implant
-  description: This implant grants access to the SLE channel without a headset.
-  categories: [ HideSpawnMenu ]
-  components:
-  - type: SubdermalImplant
-    permanent: true
-  - type: RadioImplant
-    radioChannels:
-    - Sle
