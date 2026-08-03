@@ -1,0 +1,9 @@
+- type: entity
+  abstract: true
+  parent: [SolutionVeryTiny, DrinkBottlePlasticBaseFull]
+  id: DrinkBottlePlasticVeryTinyBaseFull
+  components:
+  - type: Item
+    size: Tiny
+  - type: FitsInDispenser
+    solution: drink

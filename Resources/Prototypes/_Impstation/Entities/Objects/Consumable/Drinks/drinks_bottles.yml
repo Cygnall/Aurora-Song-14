@@ -1,6 +1,6 @@
 
 - type: entity
-  parent: [DrinkVisualsAllFilled, DrinkBottlePlasticSmallBaseFull]
+  parent: [DrinkVisualsAllFilled, DrinkBottlePlasticVeryTinyBaseFull] # Aurora's Song
   id: DrinkFoodColoringBottleFull
   abstract: true
   components:
@@ -16,14 +16,14 @@
     fillBaseName: fill-
     inHandsMaxFillLevels: 0
     inHandsFillBaseName: null
-  - type: Solution
-    solution:
-      maxVol: 15
+#  - type: Solution # Aurora's Song - Inherited from parent now
+#    solution:
+#      maxVol: 15 # Aurora's Song
   - type: PhysicalComposition
     materialComposition:
       Plastic: 15
-  - type: Item
-    size: Tiny
+#  - type: Item # Aurora's Song - Inherits this value now
+#    size: Tiny # Aurora's Song
 
 - type: entity
   parent: DrinkFoodColoringBottleFull
