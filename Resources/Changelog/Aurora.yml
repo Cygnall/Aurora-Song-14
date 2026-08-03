@@ -2713,3 +2713,12 @@ Entries:
   id: 9692
   time: '2026-08-03T03:00:52.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1357
+- author: Cygnall
+  changes:
+    - type: Add
+      message: SLE Radio Implant, currently only Off-Duty
+    - type: Tweak
+      message: TrackingImplant no longer removable
+  id: 9693
+  time: '2026-08-03T03:47:38.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1358
