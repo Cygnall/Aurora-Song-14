@@ -2532,3 +2532,90 @@ Entries:
   id: 9669
   time: '2026-07-31T04:27:54.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1328
+- author: salamanderskies
+  changes:
+    - type: Fix
+      message: Decapoid's Big Claw now actually blocks brute damage when raised.
+  id: 9670
+  time: '2026-07-31T23:04:42.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1337
+- author: Laeras
+  changes:
+    - type: Add
+      message: Added ultraviolet lights and colored lights to the service techfab!
+  id: 9671
+  time: '2026-07-31T23:06:41.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1335
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Fixed right hand-held cheese cake slice visuals
+  id: 9672
+  time: '2026-07-31T23:07:10.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1334
+- author: Laeras
+  changes:
+    - type: Fix
+      message: >-
+        Fixed the chat-breaking shipmind bug, and the loss of the ai eye on
+        death bug.
+  id: 9673
+  time: '2026-07-31T23:10:24.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1326
+- author: salamanderskies
+  changes:
+    - type: Tweak
+      message: Decapoids can now select two head markings.
+    - type: Tweak
+      message: >-
+        Crushers and crusher daggers can now be selected as longarms and
+        sidearms, respectively.
+    - type: Fix
+      message: Decapoid Off-Duty Officers will now spawn with their vaporiser and tank.
+  id: 9674
+  time: '2026-07-31T23:12:27.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1324
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Fixed some items being named "solution"!
+  id: 9675
+  time: '2026-07-31T23:14:02.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1331
+- author: Laeras
+  changes:
+    - type: Fix
+      message: Fixed intellicards!
+  id: 9676
+  time: '2026-07-31T23:18:32.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1332
+- author: salamanderskies
+  changes:
+    - type: Add
+      message: >-
+        You can now bake or steam three varieties of bun, as well as two cotton
+        variants.
+  id: 9677
+  time: '2026-07-31T23:27:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1309
+- author: DimesEqual9
+  changes:
+    - type: Fix
+      message: Clarified the CHL's description
+  id: 9678
+  time: '2026-07-31T23:33:30.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1321
+- author: BudaLope
+  changes:
+    - type: Tweak
+      message: Shipmind back in rotation!
+  id: 9679
+  time: '2026-07-31T23:35:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1342
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Saker and variants to shipyards
+  id: 9680
+  time: '2026-08-01T01:28:53.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1336

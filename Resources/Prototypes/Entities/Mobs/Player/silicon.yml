@@ -84,6 +84,7 @@
   - type: Tag # Aurora's Song
     tags:
     - CanPilot
+    - StationAi # Aurora's Song - allows brains inside AIs to be placed in intellicards
 
 - type: entity
   id: AiHeldIntellicard
@@ -107,6 +108,9 @@
         type: SiliconLawBoundUserInterface
   - type: ShowJobIcons
   - type: ShowCrewIcons
+  - type: Tag # Aurora's Song
+    tags: # Aurora's Song
+    - StationAi # Aurora's Song - allows brains inside intellicards to be put in AI
 
 # Ai
 - type: entity
@@ -510,8 +514,7 @@
         density: 80
         hard: false
         layer:
-        - GhostImpassable
-  - type: NoFTL
+        - GhostImpassable # Aurora's Song - Removed NoFTL tag so the AI eye can move with ships
   - type: Tag
     tags:
     - GhostOnlyWarp
