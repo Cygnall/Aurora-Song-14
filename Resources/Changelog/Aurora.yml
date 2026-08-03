@@ -2706,3 +2706,10 @@ Entries:
   id: 9691
   time: '2026-08-02T06:54:15.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1346
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Sacre door accesses adjusted
+  id: 9692
+  time: '2026-08-03T03:00:52.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1357
