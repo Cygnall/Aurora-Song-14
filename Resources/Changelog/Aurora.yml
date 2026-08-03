@@ -2731,3 +2731,24 @@ Entries:
   id: 9694
   time: '2026-08-03T05:42:49.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1360
+- author: Laeras
+  changes:
+    - type: Add
+      message: Added the AI Restoration Console board to the circuit imprinter!
+    - type: Fix
+      message: Gave cyborgs shortband and shipboard radio!
+    - type: Fix
+      message: Gave Medical Cyborgs Medical Access!
+    - type: Fix
+      message: Shipmind Cyborgs should no longer despawn!
+    - type: Fix
+      message: >-
+        Preemptively fixed a softlock condition occurring during
+        remote-controlled autolobotomization for shipminds!
+    - type: Tweak
+      message: Allows anyone to use the Station Restoration Console
+    - type: Fix
+      message: Made Ion laws not trigger on offline cyborgs!
+  id: 9695
+  time: '2026-08-03T06:49:51.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1348
