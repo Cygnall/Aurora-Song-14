@@ -4282,7 +4282,7 @@ entities:
     - type: Transform
       pos: 0.5,16.5
       parent: 1
-- proto: ComputerShuttle
+- proto: ComputerShuttleSLE
   entities:
   - uid: 657
     components:

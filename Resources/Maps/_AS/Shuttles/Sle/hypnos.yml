@@ -1387,7 +1387,7 @@ entities:
     - type: Transform
       pos: -0.5,11.5
       parent: 1
-- proto: ComputerTabletopShuttle
+- proto: ComputerTabletopShuttleSLE
   entities:
   - uid: 165
     components:

@@ -6170,7 +6170,7 @@ entities:
     - type: Transform
       pos: -2.5,-2.5
       parent: 1
-- proto: ComputerShuttle
+- proto: ComputerShuttleSLE
   entities:
   - uid: 1747
     components:

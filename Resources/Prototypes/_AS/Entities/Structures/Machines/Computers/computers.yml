@@ -85,3 +85,29 @@
       board: !type:Container
   - type: ToggleEvent
     active: false
+
+- type: entity
+  parent: ComputerShuttle
+  id: ComputerShuttleSLE
+  name: SLE shuttle console
+  description: A shuttle console with a long-range mass scanner, custom made for the SLE
+  components:
+  - type: Sprite
+    layers:
+    - map: [ "computerLayerBody" ]
+      state: computer
+    - map: [ "computerLayerKeyboard" ]
+      state: generic_keyboard
+    - map: [ "computerLayerScreen" ]
+      state: sleshuttle
+    - map: [ "computerLayerKeys" ]
+      state: generic_keys
+    - map: [ "enum.WiresVisualLayers.MaintenancePanel" ]
+      state: generic_panel_open
+  #- type: Tag
+  #  tags:
+  #I'm sure the SLE has a tag, I don't know what it is
+  - type: RadarConsole
+    maxRange: 768
+  - type: Computer
+    board: SLEShuttleConsoleCircuitboard
