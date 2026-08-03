@@ -1,0 +1,11 @@
+#region SLE
+
+- type: entity
+  id: RadioImplanterSLE
+  name: SLE radio implanter
+  parent: BaseImplantOnlyImplanter
+  components:
+  - type: Implanter
+    implant: RadioImplantSLE
+
+#endregion SLE
