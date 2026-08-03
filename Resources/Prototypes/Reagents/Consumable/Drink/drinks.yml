@@ -247,10 +247,10 @@
   color: "#DFDFDF"
   recognizable: true
   plantMetabolism:
-    - !type:PlantAdjustNutrition
-      amount: 0.1
-    - !type:PlantAdjustWater
-      amount: 0.9
+  - !type:PlantAdjustNutrition
+    amount: 0.1
+  - !type:PlantAdjustWater
+    amount: 0.9
   metabolisms:
     Digestion:
       effects:
@@ -487,6 +487,19 @@
         ratios: # DeltaV no duplicating O2 >:3
           CarbonDioxide: 0.5
           WaterVapor: -1.0
+        #MACROCOSM START
+      - !type:Oxygenate # for decapoids.
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Decapoid ]
+      - !type:ModifyLungGas
+        conditions:
+        - !type:MetabolizerTypeCondition
+          type: [ Decapoid ]
+        ratios:
+          Ammonia: 1.0
+          WaterVapor: -1.0
+        # MACROCOSM END
 
 - type: reagent
   id: Ice
@@ -578,8 +591,8 @@
   metabolisms:
     Digestion:
       effects:
-        - !type:SatiateThirst
-          factor: 1
+      - !type:SatiateThirst
+        factor: 1
   fizziness: 0.3
 
 - type: reagent

@@ -85,18 +85,18 @@ namespace Pow3r
         // This is updated here.
         private void RefreshLinks()
         {
-            foreach (var battery in _state.Batteries.Values)
+            foreach (ref var battery in _state.Batteries.Values)
             {
                 battery.LinkedNetworkCharging = default;
                 battery.LinkedNetworkDischarging = default;
             }
 
-            foreach (var load in _state.Loads.Values)
+            foreach (ref var load in _state.Loads.Values)
             {
                 load.LinkedNetwork = default;
             }
 
-            foreach (var supply in _state.Supplies.Values)
+            foreach (ref var supply in _state.Supplies.Values)
             {
                 supply.LinkedNetwork = default;
             }
@@ -105,25 +105,25 @@ namespace Pow3r
             {
                 foreach (var loadId in network.Loads)
                 {
-                    var load = _state.Loads[loadId];
+                    ref var load = ref _state.Loads[loadId];
                     load.LinkedNetwork = network.Id;
                 }
 
                 foreach (var supplyId in network.Supplies)
                 {
-                    var supply = _state.Supplies[supplyId];
+                    ref var supply = ref _state.Supplies[supplyId];
                     supply.LinkedNetwork = network.Id;
                 }
 
                 foreach (var batteryId in network.BatteryLoads)
                 {
-                    var battery = _state.Batteries[batteryId];
+                    ref var battery = ref _state.Batteries[batteryId];
                     battery.LinkedNetworkCharging = network.Id;
                 }
 
                 foreach (var batteryId in network.BatterySupplies)
                 {
-                    var battery = _state.Batteries[batteryId];
+                    ref var battery = ref _state.Batteries[batteryId];
                     battery.LinkedNetworkDischarging = network.Id;
                 }
             }

@@ -22,6 +22,7 @@ auto_call_time = 2880
 
 [atmos]
 delta_pressure_damage = false
+space_wind = false
 
 [hub]
 advertise = false
@@ -38,6 +39,10 @@ player_pause_distance = 40
 
 [nf14.respawn]
 time = 20
+
+[nf14.gc]
+idle_count = 1
+period = 300
 
 [infolinks]
 discord    = "https://discord.gg/aurorasong"

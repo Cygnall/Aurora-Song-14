@@ -118,3 +118,141 @@
   parent: ASBaseFloorTileXenoRecipe
   id: FloorTileItemXenoMaint
   result: FloorTileItemXenoMaint
+
+# N14 metal tiles
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalBlue
+  result: FloorTileItemMetalBlue
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalBlueSolid
+  result: FloorTileItemMetalBlueSolid
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalGreen
+  result: FloorTileItemMetalGreen
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalGreenSolid
+  result: FloorTileItemMetalGreenSolid
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalGrey
+  result: FloorTileItemMetalGrey
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalGreySolid
+  result: FloorTileItemMetalGreySolid
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalGreyDark
+  result: FloorTileItemMetalGreyDark
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalGreyDarkSolid
+  result: FloorTileItemMetalGreyDarkSolid
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalPurple
+  result: FloorTileItemMetalPurple
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalPurpleSolid
+  result: FloorTileItemMetalPurpleSolid
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalRed
+  result: FloorTileItemMetalRed
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalRedSolid
+  result: FloorTileItemMetalRedSolid
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalTeal
+  result: FloorTileItemMetalTeal
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalTealSolid
+  result: FloorTileItemMetalTealSolid
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalWhite
+  result: FloorTileItemMetalWhite
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalWhiteSolid
+  result: FloorTileItemMetalWhiteSolid
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalYellow
+  result: FloorTileItemMetalYellow
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalYellowSolid
+  result: FloorTileItemMetalYellowSolid
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalFreezer
+  result: FloorTileItemMetalFreezer
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalIndustrial
+  result: FloorTileItemMetalIndustrial
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalMS13
+  result: FloorTileItemMetalMS13
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalGrate
+  result: FloorTileItemMetalGrate
+
+- type: latheRecipe
+  parent: NFBaseFloorTileRecipe
+  id: FloorTileItemMetalSolid
+  result: FloorTileItemMetalSolid
+
+# N14 wood tiles
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemWoodOak
+  result: FloorTileItemWoodOak
+
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemWoodHouse
+  result: FloorTileItemWoodHouse
+
+- type: latheRecipe
+  parent: NFBaseFloorTileWoodRecipe
+  id: FloorTileItemWoodMaple
+  result: FloorTileItemWoodMaple
+
+# N14 carpets
+- type: latheRecipe
+  parent: NFBaseFloorTileClothRecipe
+  id: FloorTileItemCarpetRed
+  result: FloorTileItemCarpetRed

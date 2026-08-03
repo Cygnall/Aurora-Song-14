@@ -1,0 +1,12 @@
+- type: trait
+  id: SGDrequired
+  name: trait-sgdrequired-name
+  description: trait-sgdrequired-desc
+  traitGear: ClothingNeckSGD
+  category: Disabilities
+  components:
+    - type: SpeechRequiresEquipment
+      whitelist:
+          tags:
+            - SGD
+      failMessage: sgdrequired-cant-speak

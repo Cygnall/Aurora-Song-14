@@ -62200,7 +62200,7 @@ entities:
     - type: DeviceNetwork
       deviceLists:
       - 7758
-- proto: FloorDrain
+- proto: FloorDrainCosmetic
   entities:
   - uid: 2981
     components:

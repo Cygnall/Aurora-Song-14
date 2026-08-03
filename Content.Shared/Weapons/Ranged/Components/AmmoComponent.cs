@@ -44,7 +44,7 @@ public sealed partial class CartridgeAmmoComponent : AmmoComponent
     /// Caseless ammunition.
     /// </summary>
     [DataField]
-    public bool DeleteOnSpawn;
+    public bool DeleteOnSpawn = true; // Aurora's Song
 
     /// <summary>
     /// Sound the case makes when it leaves the weapon.

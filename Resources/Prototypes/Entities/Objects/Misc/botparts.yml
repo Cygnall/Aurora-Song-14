@@ -10,6 +10,7 @@
   - type: Tag
     tags:
       - ProximitySensor
+  - type: SpaceGarbage # Aurora's Song
   - type: StaticPrice
     price: 40
 

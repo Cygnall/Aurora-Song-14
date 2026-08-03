@@ -4,6 +4,7 @@
   save: false
   categories: [ HideSpawnMenu ]
   components:
+  - type: GravityAffected # Aurora's Song
   - type: Vehicle
     # renderOver: East, SouthEast, South, SouthWest, West # Frontier
     renderOver: East, South, West # Frontier

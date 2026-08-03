@@ -14,7 +14,7 @@ public sealed partial class ScrambledAccentSystem : RelayAccentSystem<ScrambledA
 
     protected override string AccentuateInternal(EntityUid uid, ScrambledAccentComponent comp, string message)
     {
-        var words = message.ToLower().Split();
+        var words = message.Split(); // Aurora's Song - Removed the ToLower()
 
         if (words.Length < 2 && comp.ScrambleSingleWords) // Aurora - check if filter is enabled for single word messages.
         {

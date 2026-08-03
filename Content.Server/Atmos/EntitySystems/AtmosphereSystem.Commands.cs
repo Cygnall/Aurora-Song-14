@@ -69,7 +69,7 @@ public sealed partial class AtmosphereSystem
     /// <remarks>Please be responsible with this method. Used only by tests and fixgridatmos.</remarks>
     public void RebuildGridAtmosphere(Entity<GridAtmosphereComponent, MapGridComponent> ent)
     {
-        var mixtures = new GasMixture[15]; // Add one per added array. // Frontier:9<13 // AS: 13<15
+        var mixtures = new GasMixture[17]; // Aurora's Song - 9 > 17
         for (var i = 0; i < mixtures.Length; i++)
         {
             mixtures[i] = new GasMixture(Atmospherics.CellVolume) { Temperature = Atmospherics.T20C };
@@ -121,12 +121,18 @@ public sealed partial class AtmosphereSystem
         mixtures[12].AdjustMoles(Gas.Nitrogen, Atmospherics.NitrogenMolesStandard);
         mixtures[12].AdjustMoles(Gas.WaterVapor, Atmospherics.NitrogenMolesStandard);
         mixtures[12].Temperature = 340f; // Sauna
-      
-       // Aurora - 13: Respiron @ 101kpa, for the motel
-       mixtures[13].AdjustMoles(Gas.Respiron, Atmospherics.MolesCellStandard);
 
-       // Aurora - 14: Respiron (GM), for the motel
-       mixtures[14].AdjustMoles(Gas.Respiron, Atmospherics.MolesCellGasMiner);
+        // Aurora - 13: Respiron @ 101kpa, for the motel
+        mixtures[13].AdjustMoles(Gas.Respiron, Atmospherics.MolesCellStandard);
+
+        // Aurora - 14: Respiron (GM), for the motel
+        mixtures[14].AdjustMoles(Gas.Respiron, Atmospherics.MolesCellGasMiner);
+
+        // Aurora's Song - 15: Water Vapor (GM)
+        mixtures[15].AdjustMoles(Gas.WaterVapor, Atmospherics.MolesCellGasMiner);
+
+        // Aurora's Song - 16: Water Vapor (101kpa)
+        mixtures[16].AdjustMoles(Gas.WaterVapor, Atmospherics.MolesCellStandard);
 
         // Force Invalidate & update air on all tiles
         Entity<GridAtmosphereComponent, GasTileOverlayComponent, MapGridComponent, TransformComponent> grid =

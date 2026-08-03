@@ -543,6 +543,7 @@
     interfaces:
       enum.GasDepositScannerUiKey.Key:
         type: GasDepositScannerBoundUserInterface
+  - type: SpaceGarbage # Aurora's Song
 
 - type: entity
   id: GasDepositLocator

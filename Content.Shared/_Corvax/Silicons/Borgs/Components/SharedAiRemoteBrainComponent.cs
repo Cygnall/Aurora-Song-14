@@ -11,6 +11,8 @@ public sealed partial class AiRemoteControllerComponent : Component
 
     [DataField] public string[]? PreviouslyTransmitterChannels;
     [DataField] public string[]? PreviouslyActiveRadioChannels;
+    [DataField] public string PreviousName = "Empty Remote Chassis"; // Aurora's Song, might need to have the datafield part removed?
+    [DataField] public string? CurrentName;
 
     [DataField] public EntProtoId BackToAiAction = "ActionBackToAi";
     [DataField] public EntityUid? BackToAiActionEntity;

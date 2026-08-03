@@ -1,0 +1,38 @@
+# Author Info
+# GitHub: Cygnall
+# Discord: Vandanna
+
+# Shuttle Notes:
+# An upgrade and paradigm shift from existing SLE options. Quick, nimble, and capable of reconnaissance.
+- type: vessel
+  id: SakerU
+  parent: BaseVessel
+  name: CNS Saker-U
+  description: A small pursuit and patrol craft. Equipped with long-range radar and a fast-recharge FTL drive. Stripped surplus processed by CNS. SLE paint has been stripped for subtlety.
+  price: 36800 # Appraises on purchase at ~26200. 40% markup applied due to the presence of the radar and CTLA-25S FTL drive.
+  category: Small
+  group: Sr # Placed in Staff Shipyard on PB to be accessible to Off-Duty SLE.
+  access: Sergeant
+  shuttlePath: /Maps/_AS/Shuttles/Sle/sakeru.yml
+  guidebookPage: Null
+  class:
+  - Patrol
+  engine:
+  - Uranium
+
+- type: gameMap
+  id: SakerU
+  mapName: 'CNS Saker-U'
+  mapPath: /Maps/_AS/Shuttles/Sle/sakeru.yml
+  minPlayers: 0
+  stations:
+    SakerU:
+      stationProto: StandardFrontierSecurityVessel
+      components:
+        - type: StationNameSetup
+          mapNameTemplate: 'Saker-U {1}'
+          nameGenerator:
+            !type:SleNameGenerator
+            prefixCreator: '14'
+        - type: StationJobs
+          availableJobs: {}

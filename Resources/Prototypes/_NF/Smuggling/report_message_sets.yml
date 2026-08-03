@@ -13,8 +13,8 @@
     - type: DeadDropStation
       message: smuggling-report-nfsd-specific-arcadia # AS: Arcadia version
   - prob: 0.8
-    minDelay: 14
-    maxDelay: 16
+    minDelay: 7 # Aurora's Song 14 > 7
+    maxDelay: 8 # Aurora's Song 16 > 8
     messages:
     - type: PodLocation
       message: smuggling-report-nfsd-pod-arcadia # AS: Arcadia version
@@ -25,8 +25,8 @@
   channel: Freelance
   messageSets:
   - prob: 0.333
-    minDelay: 14
-    maxDelay: 16
+    minDelay: 10 # Aurora's Song 14 > 10
+    maxDelay: 12 # Aurora's Song 16 > 12
     messages:
     - type: PodLocation
       message: smuggling-report-pirate-arcadia # AS: Arcadia version

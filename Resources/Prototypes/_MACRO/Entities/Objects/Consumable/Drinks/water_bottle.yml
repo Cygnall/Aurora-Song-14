@@ -1,0 +1,64 @@
+- type: entity
+  parent: [DrinkVisualsAllFilled, DrinkBottlePlasticBaseFull]
+  id: DrinkWaterBottleLargeFull
+  suffix: Decapoid
+  name: water bottle
+  description: A bottle of clean water designed with claw-based ergonomics in mind. Fresh from the mineral-aquifers of Nest Krr'kik.
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,1,1
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 120 # Aurora's Song - 60 > 120
+      maxVol: 120 # Aurora's Song - 60 > 120
+  - type: Sprite
+    sprite: _MACRO/Objects/Consumable/Drinks/Plastic/bigwaterbottle.rsi
+  - type: FitsInDispenser
+    solution: drink
+  - type: Label
+    currentLabel: reagent-name-water
+
+- type: entity
+  parent: [DrinkVisualsAllFilled, DrinkBottlePlasticBaseFull]
+  id: DrinkWaterBottleTallFull
+  suffix: Decapoid, Extended
+  name: extended-capacity water bottle
+  description: A tall bottle of clean water designed with claw-based ergonomics in mind. Fresh from the mineral-aquifers of Nest Krr'kik.
+  components:
+  - type: Item
+    size: Small
+    shape:
+    - 0,0,0,2
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 90 # Aurora's Song - 80 > 90
+      maxVol: 90 # Aurora's Song - 80 > 90
+  - type: Sprite
+    sprite: _MACRO/Objects/Consumable/Drinks/Plastic/tallwaterbottle.rsi
+  - type: FitsInDispenser
+    solution: drink
+  - type: Label
+    currentLabel: reagent-name-water
+
+- type: entity
+  parent: DrinkWaterBottleLargeFull
+  id: DrinkWaterBottleLargeFunnyFull
+  suffix: Decapoid, funny
+  components:
+  - type: Solution
+    solution:
+      reagents:
+      - ReagentId: Water
+        Quantity: 84 # Aurora's Song - 35 > 84
+      - ReagentId: Laughter
+        Quantity: 36 # Aurora's Song - 15 > 36
+  - type: FitsInDispenser
+    solution: drink
+  - type: Label
+    currentLabel: funny water

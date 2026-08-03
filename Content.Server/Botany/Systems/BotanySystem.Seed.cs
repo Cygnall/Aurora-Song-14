@@ -119,19 +119,19 @@ public sealed partial class BotanySystem : EntitySystem
         return seed;
     }
 
-    public IEnumerable<EntityUid> AutoHarvest(SeedData proto, EntityCoordinates position, int yieldMod = 1)
-    {
-        if (position.IsValid(EntityManager) &&
-            proto.ProductPrototypes.Count > 0)
-        {
-            if (proto.HarvestLogImpact != null)
-                _adminLogger.Add(LogType.Botany, proto.HarvestLogImpact.Value, $"Auto-harvested {Loc.GetString(proto.Name):seed} at Pos:{position}.");
+    // public IEnumerable<EntityUid> AutoHarvest(SeedData proto, EntityCoordinates position, int yieldMod = 1) Aurora's Song: Self Harvest Removal
+    // {
+    //     if (position.IsValid(EntityManager) &&
+    //         proto.ProductPrototypes.Count > 0)
+    //     {
+    //         if (proto.HarvestLogImpact != null)
+    //             _adminLogger.Add(LogType.Botany, proto.HarvestLogImpact.Value, $"Auto-harvested {Loc.GetString(proto.Name):seed} at Pos:{position}.");
 
-            return GenerateProduct(proto, position, yieldMod);
-        }
+    //         return GenerateProduct(proto, position, yieldMod);
+    //     }
 
-        return Enumerable.Empty<EntityUid>();
-    }
+    //     return Enumerable.Empty<EntityUid>();
+    // }
 
     public IEnumerable<EntityUid> Harvest(SeedData proto, EntityUid user, int yieldMod = 1)
     {

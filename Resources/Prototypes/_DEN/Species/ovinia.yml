@@ -9,5 +9,5 @@
   maleFirstNames: NamesFirstMale
   femaleFirstNames: NamesFirstFemale
   lastNames: NamesLast
-  minHeight: 0.8
-  maxHeight: 1.05
+  minHeight: 0.75 # Aurora's Song
+  maxHeight: 1.5 # Aurora's Song

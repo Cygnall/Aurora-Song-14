@@ -8703,7 +8703,7 @@ entities:
     - type: Transform
       pos: 9.462372,35.6454
       parent: 1
-- proto: FloorDrain
+- proto: FloorDrainCosmetic
   entities:
   - uid: 939
     components:

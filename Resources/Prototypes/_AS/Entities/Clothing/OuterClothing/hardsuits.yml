@@ -12,19 +12,21 @@
   - type: ToggleableClothing
     clothingPrototype: ClothingHeadHelmetHardsuitSleCombat
   - type: ExplosionResistance
-    damageCoefficient: 0.4
+    damageCoefficient: 0.2 # .4 > .2 Very hard to explode
   - type: Armor
     modifiers:
       coefficients:
-        Blunt: 0.5
+        Blunt: 0.6 # .5 > .6 Easier to beat
         Slash: 0.6
-        Piercing: 0.55 #buff 40% to 45% piercing resist
-        Heat: 0.60
-        Radiation: 0.50
-        Caustic: 0.7
+        Piercing: 0.45 # .55 > .45 Harder to shoot, 5% diff on most merc suits
+        Heat: 0.4 # .6 > .4 Harder to burn
+        Radiation: 0.4 # .5 > .4 Harder to irradiate
+        Caustic: 0.4 # .7 > .4 Harder to super burn
   - type: ClothingSpeedModifier
-    walkModifier: 0.85
-    sprintModifier: 0.85 #increased speed from .75 to .85, this suit can be painful to wear because of the speed
+    walkModifier: 0.9 # .85 > .9 Better movement
+    sprintModifier: 0.9 # .85 > .9 Better movement
+  - type: StaminaResistance # Stun resist, inline with bloodred values here
+    damageCoefficient: 0.75
 
 - type: entity
   parent: ClothingOuterHardsuitSleCombat

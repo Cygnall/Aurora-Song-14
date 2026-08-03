@@ -136,9 +136,9 @@ public sealed partial class PlantAnalyzerSystem : EntitySystem
             case HarvestType.NoRepeat:
                 harvestType = AnalyzerHarvestType.NoRepeat;
                 break;
-            case HarvestType.SelfHarvest:
-                harvestType = AnalyzerHarvestType.SelfHarvest;
-                break;
+            // case HarvestType.SelfHarvest: Aurora's Song: Self Harvest Removal
+            //     harvestType = AnalyzerHarvestType.SelfHarvest;
+            //     break;
             default:
                 break;
         }

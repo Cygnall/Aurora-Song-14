@@ -249,9 +249,9 @@ public sealed partial class GunSystem : SharedGunSystem
                         MuzzleFlash(gun, cartridge, worldAngle, user);
                         Audio.PlayPredicted(gun.Comp.SoundGunshotModified, gun, user);
                         Recoil(user, direction, gun.Comp.CameraRecoilScalarModified);
-                        // TODO: Can't predict entity deletions.
-                        //if (cartridge.DeleteOnSpawn)
-                        //    Del(cartridge.Owner);
+
+                        if (cartridge.DeleteOnSpawn) // Aurora's Song, uncommented and changed cartridge.Owner to ent
+                            PredictedDel(ent);
                     }
                     else
                     {

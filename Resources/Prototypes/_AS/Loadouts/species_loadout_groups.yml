@@ -1,4 +1,17 @@
 - type: loadoutGroup
+  id: ASDecapoidSpeciesSpecific
+  name: loadout-group-breath-tool # if visible, rename
+  minLimit: 2
+  maxLimit: 2
+  hidden: true
+  loadouts:
+  - LoadoutDecapoidBreathTool
+  - LoadoutSpeciesAquaticFullTank
+  fallbacks:
+  - LoadoutDecapoidBreathTool
+  - LoadoutSpeciesAquaticFullTank
+
+- type: loadoutGroup
   id: SLESpeciesSpecific
   name: loadout-group-breath-tool # if visible, rename
   minLimit: 2

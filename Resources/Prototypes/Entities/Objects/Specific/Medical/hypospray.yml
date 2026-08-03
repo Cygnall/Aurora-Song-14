@@ -18,6 +18,7 @@
   - type: UseDelay
     delay: 0.5
   - type: Appearance
+  - type: SpaceGarbage # Aurora's Song
 
 - type: entity
   abstract: true

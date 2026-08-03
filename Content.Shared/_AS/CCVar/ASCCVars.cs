@@ -2,6 +2,9 @@ using Robust.Shared.Configuration;
 
 namespace Content.Shared._AS.CCVar;
 
+/// <summary>
+/// Contains CVars used by Aurora Song.
+/// </summary>
 [CVarDefs]
 public sealed class ASCCVars
 {

@@ -31,28 +31,28 @@
   spawn: MaterialWebSilk1
 
 - type: stack
-  parent: BaseMediumStack
+  parent: BaseVeryLargeStack # Aurora's Song BaseMediumStack>BaseVeryLargeStack
   id: Bones
   name: stack-bones
   icon: { sprite: /Textures/Objects/Materials/materials.rsi, state: bones }
   spawn: MaterialBones1
 
 - type: stack
-  parent: BaseMediumStack
+  parent: BaseVeryLargeStack # Aurora's Song BaseMediumStack>BaseVeryLargeStack
   id: SpaceCarpTooth
   name: stack-space-carp-tooth
   icon: { sprite: /Textures/Objects/Materials/Mob/carptooth.rsi, state: tooth }
   spawn: MaterialToothSpaceCarp1
 
 - type: stack
-  parent: BaseMediumStack
+  parent: BaseVeryLargeStack # Aurora's Song BaseMediumStack>BaseVeryLargeStack
   id: SharkMinnowTooth
   name: stack-sharkminnow-tooth
   icon: { sprite: /Textures/Objects/Materials/Mob/sharktooth.rsi, state: tooth }
   spawn: MaterialToothSharkminnow1
 
 - type: stack
-  parent: BaseMediumStack
+  parent: BaseVeryLargeStack # Aurora's Song BaseMediumStack>BaseVeryLargeStack
   id: GoliathHide
   name: stack-goliath-hide
   icon: { sprite: /Textures/Objects/Materials/hide.rsi, state: goliath_hide }

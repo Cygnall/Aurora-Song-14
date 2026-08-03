@@ -285,6 +285,7 @@
   - type: Action
     icon: { sprite: Objects/Weapons/Melee/shields.rsi, state: teleriot-icon }
     iconOn: { sprite: Objects/Weapons/Melee/shields.rsi, state: teleriot-on }
+    useDelay: 5 # imp
 
 - type: entity
   parent: BaseMentalAction

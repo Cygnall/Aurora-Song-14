@@ -32,3 +32,8 @@
   id: murderDraught
   flavorType: Base
   description: flavor-base-murderDraught
+
+- type: flavor
+  id: custard
+  flavorType: Complex
+  description: flavor-complex-custard

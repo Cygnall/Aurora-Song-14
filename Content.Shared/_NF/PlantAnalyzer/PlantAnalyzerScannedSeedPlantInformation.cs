@@ -77,8 +77,8 @@ public enum AnalyzerHarvestType : byte
 {
     Unknown, // Just in case the backing enum type changes and we haven't caught it.
     Repeat,
-    NoRepeat,
-    SelfHarvest
+    NoRepeat
+    // SelfHarvest Aurora's Song: Self Harvest Removal
 }
 
 

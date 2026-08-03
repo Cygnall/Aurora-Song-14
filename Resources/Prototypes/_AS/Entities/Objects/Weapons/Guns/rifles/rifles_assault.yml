@@ -23,6 +23,40 @@
     zeroVisible: true
   - type: Appearance
 
+# StarTech
+- type: entity
+  name: Star Tech LDR
+  description: |-
+    A reliable military-grade assault rifle. On the receiver is a label that says 'Certified Surplus.'
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRifleAssaultChamber20, ASBaseWeaponFrameRifleAssaultStarTech ]
+  id: ASWeaponRifleAssaultStarTechLDR
+  suffix: Aurora
+  components: &startechldrComponents
+  - type: Clothing
+    sprite: _AS/Objects/Weapons/Guns/Rifles/ldrifle.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Guns/Rifles/ldrifle.rsi
+  - type: MagazineVisuals
+    magState: mag
+    steps: 4
+    zeroVisible: true
+  - type: Gun
+    soundGunshot:
+      path: /Audio/Weapons/Guns/Gunshots/ltrifle.ogg
+      params:
+        pitch: 1.20
+        volume: -2
+
+# Rubber
+- type: entity
+  id: ASWeaponRifleAssaultStarTechLDRLessLethal
+  parent: [ BaseC2ContrabandUnredeemable, NFBaseWeaponRifleAssaultChamber20Rubber, ASBaseWeaponFrameRifleAssaultStarTech ]
+  name: Star Tech LDR
+  description: |-
+    A medium end military grade assault rifle. On the receiver is a label that says 'for authorized use only.'
+  suffix: Aurora, Less-lethal
+  components: *startechldrComponents
+
 # Surplus
 - type: entity # Aurora's Song - Copy of Lecter from NF but legalized with sprite changes
   name: Lecter
