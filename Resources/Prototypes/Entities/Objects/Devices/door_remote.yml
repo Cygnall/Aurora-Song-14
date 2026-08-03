@@ -73,7 +73,7 @@
       color: "#9f9f00"
   - type: Access
     groups:
-    - Command
+    - AllAccess # Aurora's Song - Change to AA
   - type: DoorRemote
 
 - type: entity

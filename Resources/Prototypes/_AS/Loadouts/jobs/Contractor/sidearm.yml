@@ -1,4 +1,11 @@
 - type: loadout
+  id: ContractorSidearmCrusherDagger
+  price: 1500
+  storage:
+    back:
+    - WeaponCrusherDagger
+
+- type: loadout
   id: ContractorSidearmMK58
   price: 3800
   storage:

@@ -1,4 +1,10 @@
 - type: loadout
+  id: MercenaryLongarmCrusher
+  price: 1500
+  inhand:
+  - WeaponCrusher
+
+- type: loadout
   id: MercenaryLongarmNovaliteC1
   price: 7500
   inhand:

@@ -29,8 +29,11 @@
     activeBlockModifier:
       coefficients:
         Blunt: 1 #see above
+        Piercing: 1 # Aurora's Song - These numbers do matter.
+        Slash: 1 # Aurora's Song
     passiveBlockFraction: 0.0 #does not give damage reduction passively
     activeBlockFraction: 0.5 #gives 50% damage reduction against brute damage to the decapoid while the claw is raised
+  - type: Damageable # Aurora's Song - Needed to actually function as a shield
   - type: Injurable
     damageContainer: DecapoidShield #determines what types of damage are reduced by the Blocking component, DecapoidShield damage container is brute damage only
   - type: ToolTileCompatible
