@@ -2761,3 +2761,10 @@ Entries:
   id: 9696
   time: '2026-08-03T07:06:24.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1353
+- author: carccborg
+  changes:
+    - type: Fix
+      message: Falling asleep no longer makes you fall out of a chair or bed
+  id: 9697
+  time: '2026-08-03T07:00:20.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1343
