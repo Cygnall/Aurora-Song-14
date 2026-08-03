@@ -15,17 +15,19 @@ public sealed partial class GasSaleMenu : FancyWindow
 
     public static readonly string[] GasStrings =
     [
-        "gases-oxygen", // 0
-        "gases-nitrogen", // 1
-        "gases-co2", // 2
-        "gases-plasma", // 3
-        "gases-tritium", // 4
-        "gases-water-vapor", // 5
-        "gases-ammonia", // 6
-        "gases-n2o", // 7
-        "gases-frezon", // 8
-        "gases-respiron", // 9
-        "gases-helium", // 10
+        // Aurora's Song - Start - gases > gas
+        "gas-oxygen", // 0
+        "gas-nitrogen", // 1
+        "gas-co2", // 2
+        "gas-plasma", // 3
+        "gas-tritium", // 4
+        "gas-water-vapor", // 5
+        "gas-ammonia", // 6
+        "gas-n2o", // 7
+        "gas-frezon", // 8
+        "gas-respiron", // 9
+        "gas-helium", // 10
+        // Aurora's Song - End
     ];
 
     public string FallbackGasString = "gas-fallback";

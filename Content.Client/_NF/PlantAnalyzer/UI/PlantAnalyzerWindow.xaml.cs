@@ -157,47 +157,47 @@ public sealed partial class PlantAnalyzerWindow : FancyWindow
         if (flags.HasFlag(GasFlags.Nitrogen))
         {
             output.Append(IndentedNewline);
-            output.Append(Loc.GetString("gases-nitrogen"));
+            output.Append(Loc.GetString("gas-nitrogen")); // Aurora's Song - gases > gas, to fix locale issues
         }
         if (flags.HasFlag(GasFlags.Oxygen))
         {
             output.Append(IndentedNewline);
-            output.Append(Loc.GetString("gases-oxygen"));
+            output.Append(Loc.GetString("gas-oxygen")); // Aurora's Song - gases > gas
         }
         if (flags.HasFlag(GasFlags.CarbonDioxide))
         {
             output.Append(IndentedNewline);
-            output.Append(Loc.GetString("gases-co2"));
+            output.Append(Loc.GetString("gas-co2")); // Aurora's Song - gases > gas
         }
         if (flags.HasFlag(GasFlags.Plasma))
         {
             output.Append(IndentedNewline);
-            output.Append(Loc.GetString("gases-plasma"));
+            output.Append(Loc.GetString("gas-plasma")); // Aurora's Song - gases > gas
         }
         if (flags.HasFlag(GasFlags.Tritium))
         {
             output.Append(IndentedNewline);
-            output.Append(Loc.GetString("gases-tritium"));
+            output.Append(Loc.GetString("gas-tritium")); // Aurora's Song - gases > gas
         }
         if (flags.HasFlag(GasFlags.WaterVapor))
         {
             output.Append(IndentedNewline);
-            output.Append(Loc.GetString("gases-water-vapor"));
+            output.Append(Loc.GetString("gas-water-vapor")); // Aurora's Song - gases > gas
         }
         if (flags.HasFlag(GasFlags.Ammonia))
         {
             output.Append(IndentedNewline);
-            output.Append(Loc.GetString("gases-ammonia"));
+            output.Append(Loc.GetString("gas-ammonia")); // Aurora's Song - gases > gas
         }
         if (flags.HasFlag(GasFlags.NitrousOxide))
         {
             output.Append(IndentedNewline);
-            output.Append(Loc.GetString("gases-n2o"));
+            output.Append(Loc.GetString("gas-n2o")); // Aurora's Song - gases > gas
         }
         if (flags.HasFlag(GasFlags.Frezon))
         {
             output.Append(IndentedNewline);
-            output.Append(Loc.GetString("gases-frezon"));
+            output.Append(Loc.GetString("gas-frezon")); // Aurora's Song - gases > gas
         }
         return output;
     }

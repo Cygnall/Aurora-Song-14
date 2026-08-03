@@ -1,3 +1,4 @@
 gas-fallback = Gas #{number}
-gases-respiron = Respiron
-gases-helium = Helium
+gas-respiron = Respiron
+gas-helium = Helium
+# Aurora's Song - Both lines above, gases > gas

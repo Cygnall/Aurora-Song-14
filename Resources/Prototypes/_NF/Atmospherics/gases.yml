@@ -1,6 +1,6 @@
 - type: gas
   id: Respiron # Aurora's Song 9>Respiron
-  name: gases-respiron
+  name: gas-respiron # Aurora's Song gases-respiron > gas-respiron
   abbreviation: gas-respiron-abbreviation # Aurora's Song
   molarHeatCapacity: 25
   heatCapacityRatio: 1.4
@@ -11,7 +11,7 @@
 
 - type: gas
   id: Helium # Aurora's Song 10>Helium
-  name: gases-helium
+  name: gas-helium # Aurora's Song gases-helium > gas-helium
   abbreviation: gas-helium-abbreviation # Aurora's Song
   molarHeatCapacity: 10
   heatCapacityRatio: 1.3
