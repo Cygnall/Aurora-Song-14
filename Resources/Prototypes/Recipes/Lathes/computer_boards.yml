@@ -70,6 +70,13 @@
   id: TechDiskComputerCircuitboard
   result: TechDiskComputerCircuitboard
 
+#  Aurora's Song - Start:
+- type: latheRecipe # This entry just makes the Station AI Restoration circuitboard craftable
+  parent: BaseGoldCircuitboardRecipe
+  id: StationAiFixerCircuitboard
+  result: StationAiFixerCircuitboard #
+#  Aurora's Song - End
+
 # Cameras
 - type: latheRecipe
   parent: [ BaseCircuitboardRecipe, BaseSecurityComputerRecipeCategory ]

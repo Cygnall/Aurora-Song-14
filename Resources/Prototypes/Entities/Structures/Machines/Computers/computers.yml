@@ -1751,10 +1751,10 @@
     workingPowerDraw: 1000
   - type: Computer
     board: StationAiFixerCircuitboard
-  - type: AccessReader
-    access: [ [ "ResearchDirector" ] ]
-  - type: Lock
-    unlockOnClick: false
+  #- type: AccessReader - Aurora's Song start: We don't have a research director, and frankly I don't think we should be locking the ability to revive the AI? I'm up to discuss it though
+  #  access: [ [ "ResearchDirector" ] ]
+  #- type: Lock
+  #  unlockOnClick: false - Aurora's Song End
   - type: StationAiFixerConsole
   - type: ItemSlotsLock
     slots:

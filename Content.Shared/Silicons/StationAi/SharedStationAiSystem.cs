@@ -10,6 +10,8 @@ using Content.Shared.Destructible;
 using Content.Shared.Doors.Systems;
 using Content.Shared.DoAfter;
 using Content.Shared.Electrocution;
+using Content.Shared.Hands.Components; // Aurora's Song
+using Content.Shared.Hands.EntitySystems; // Aurora's Song
 using Content.Shared.Intellicard;
 using Content.Shared.Interaction;
 using Content.Shared.Item.ItemToggle;
@@ -66,6 +68,7 @@ public abstract partial class SharedStationAiSystem : EntitySystem
     [Dependency] private IPrototypeManager _protoManager = default!;
     [Dependency] private MobStateSystem _mobState = default!;
     [Dependency] private SharedAiRemoteControlSystem _remoteSystem = default!; // Corvax-Next-AiRemoteControl
+    [Dependency] private SharedHandsSystem _sharedHandsSystem = default!; // Aurora's Song
 
     // StationAiHeld is added to anything inside of an AI core.
     // StationAiHolder indicates it can hold an AI positronic brain (e.g. holocard / core).
@@ -79,6 +82,7 @@ public abstract partial class SharedStationAiSystem : EntitySystem
 
     private static readonly EntProtoId DefaultAi = "StationAiBrain";
     private readonly ProtoId<ChatNotificationPrototype> _downloadChatNotificationPrototype = "IntellicardDownload";
+    private static readonly EntProtoId DefaultShipmind = "BorgChassisShipmind"; // Aurora's Song - Defines the Proto to check against if you want an intellicard to be dropped on downloading an AI
 
     public override void Initialize()
     {
@@ -242,6 +246,10 @@ public abstract partial class SharedStationAiSystem : EntitySystem
         // Try to insert our thing into them
         if (_slots.CanEject(ent.Owner, args.User, ent.Comp.Slot))
         {
+            var protoIdentity = MetaData(args.User).EntityPrototype?.ID; // Aurora's Song - Falcon I swear I tried to make this one line but the compiler won
+            if (protoIdentity != null && protoIdentity == DefaultShipmind && TryComp<HandsComponent>(args.User, out var handsComp)) // Aurora's Song - This block checks if the entity pulling the mind out is a shipmind chassis
+                _sharedHandsSystem.TryDrop((args.User, handsComp), args.Args.Target.Value, null, true, true); // Aurora's Song - And then drops the intellicard if it is, to prevent softlocking via autolobotomization
+
             // Corvax-Next-AiRemoteControl-Start
             if (ent.Comp.Slot.Item != null
                 && TryComp<StationAiHeldComponent>(ent.Comp.Slot.Item, out var stationAiHeldComp))

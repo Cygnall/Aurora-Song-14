@@ -181,6 +181,8 @@
     - NamesFirstShipmind
     - NamesLastShipmind
     nameFormat: name-format-shipmind
+  - type: Physics # Aurora's Song
+    bodyType: KinematicController # Aurora's Song - Positronic brains become KinematicControllers when made sentient, but shipminds never do for some reason. Prevents throwing asserts in debug mode.
 
 - type: entity
   id: BorgChassisShipmind
@@ -215,6 +217,8 @@
           - BorgModuleShipmind
       hasMindState: remote_eyes
       noMindState: remote_eyes_empty
+    - type: Touched # Aurora's Song - Prevents shipmind cyborg from being despawned
+      touched: True # Aurora's Song
     - type: ShowHealthBars
     - type: InteractionPopup
       interactSuccessString: petting-success-syndicate-cyborg

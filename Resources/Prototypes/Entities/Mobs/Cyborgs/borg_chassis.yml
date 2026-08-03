@@ -31,6 +31,8 @@
     inherentRadioChannels:
     - Common
     - Binary
+    - Traffic # Aurora's Song - Let all selected cyborgs speak in shortband and shipboard!
+    - Shipboard # Aurora's Song - Be free, my silicon brethren!
 
 - type: entity
   id: BorgChassisGeneric
