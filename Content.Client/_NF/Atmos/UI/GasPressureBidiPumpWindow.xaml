@@ -4,9 +4,15 @@
                       SetSize="340 160" MinSize="340 160" Title="Bidirectional Pressure Pump">
     <BoxContainer Orientation="Vertical" Margin="5 5 5 5" SeparationOverride="10">
         <BoxContainer Orientation="Horizontal" HorizontalExpand="True">
-            <Label Text="{Loc comp-gas-pump-ui-pump-status}" Margin="0 0 5 0" />
-            <Button Name="ToggleStatusButton" />
-            <Control HorizontalExpand="True" />
+        <!--     <Label Text="{Loc comp-gas-pump-ui-pump-status}" Margin="0 0 5 0" /> -->
+        <!--     <Button Name="ToggleStatusButton" /> -->
+        <!--     <Control HorizontalExpand="True" /> -->
+        <!-- Aurora's Song - Moved to switch button control-->
+            <controls:SwitchButton
+                Name="ToggleStatusButton"
+                HorizontalAlignment="Left"
+                Pressed="True" />
+            <Control HorizontalExpand="True"/>
             <Button HorizontalAlignment="Right" Name="SetOutputPressureButton"
                     Text="{Loc comp-gas-pump-ui-pump-set-rate}" Disabled="True" Margin="0 0 5 0" />
             <Button Name="SetMaxPressureButton" Text="{Loc comp-gas-pump-ui-pump-set-max}" />

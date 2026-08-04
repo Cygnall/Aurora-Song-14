@@ -30,13 +30,16 @@ public sealed class GasPressureBidiPumpBoundUserInterface(EntityUid owner, Enum 
         Update();
     }
 
-    private void OnToggleStatusButtonPressed()
+    // Aurora's Song Start - Moved to switch button control
+    private void OnToggleStatusButtonPressed(bool status)
     {
-        if (_window is null)
-            return;
+        // if (_window is null)
+        //     return;
 
-        SendMessage(new GasPressurePumpToggleStatusMessage(_window.PumpStatus));
+        //SendMessage(new GasPressurePumpToggleStatusMessage(_window.PumpStatus));
+        SendPredictedMessage(new GasPressurePumpToggleStatusMessage(status));
     }
+    // Aurora's Song End
 
     private void OnToggleDirectionButtonPressed()
     {

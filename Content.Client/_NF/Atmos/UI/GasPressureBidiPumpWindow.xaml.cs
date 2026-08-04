@@ -11,10 +11,10 @@ namespace Content.Client._NF.Atmos.UI;
 [GenerateTypedNameReferences]
 public sealed partial class GasPressureBidiPumpWindow : FancyWindow
 {
-    public bool PumpStatus = true;
+    // public bool PumpStatus = true; // Aurora's Song - Moved to switch button control
     public bool PumpInwards;
 
-    public event Action? ToggleStatusButtonPressed;
+    public event Action<bool>? ToggleStatusButtonPressed; // Aurora's Song - Moved to switch button control
     public event Action? ToggleDirectionButtonPressed;
     public event Action<float>? PumpOutputPressureChanged;
 
@@ -35,8 +35,11 @@ public sealed partial class GasPressureBidiPumpWindow : FancyWindow
     {
         RobustXamlLoader.Load(this);
 
-        ToggleStatusButton.OnPressed += _ => SetPumpStatus(!PumpStatus);
-        ToggleStatusButton.OnPressed += _ => ToggleStatusButtonPressed?.Invoke();
+        // Aurora's Song Start - Moved to switch button control
+        // ToggleStatusButton.OnPressed += _ => SetPumpStatus(!PumpStatus);
+        // ToggleStatusButton.OnPressed += _ => ToggleStatusButtonPressed?.Invoke();
+        ToggleStatusButton.OnToggled += _ => ToggleStatusButtonPressed?.Invoke(ToggleStatusButton.Pressed);
+        // Aurora's Song End
 
         ToggleDirectionButton.OnPressed += _ => SetPumpDirection(!PumpInwards);
         ToggleDirectionButton.OnPressed += _ => ToggleDirectionButtonPressed?.Invoke();
@@ -63,10 +66,13 @@ public sealed partial class GasPressureBidiPumpWindow : FancyWindow
 
     public void SetPumpStatus(bool enabled)
     {
-        PumpStatus = enabled;
-        ToggleStatusButton.Text = Loc.GetString(enabled
-            ? "comp-gas-pump-ui-status-enabled"
-            : "comp-gas-pump-ui-status-disabled");
+        // Aurora's Song Start - Moved to switch button control
+        // PumpStatus = enabled;
+        // ToggleStatusButton.Text = Loc.GetString(enabled
+        //     ? "comp-gas-pump-ui-status-enabled"
+        //     : "comp-gas-pump-ui-status-disabled");
+        ToggleStatusButton.Pressed = enabled;
+        // Aurora's Song End
     }
 
     public void SetPumpDirection(bool inwards)
