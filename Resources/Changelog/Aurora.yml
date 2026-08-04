@@ -2791,3 +2791,10 @@ Entries:
   id: 9700
   time: '2026-08-03T08:18:55.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1362
+- author: Sunburstschitin
+  changes:
+    - type: Tweak
+      message: Increases in diona marking limits.
+  id: 9701
+  time: '2026-08-04T03:18:43.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1363
