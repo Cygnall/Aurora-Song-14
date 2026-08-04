@@ -4,16 +4,16 @@
   onlyGroupWhitelisted: true
   limits:
     enum.HumanoidVisualLayers.Head:
-      limit: 2
+      limit: 4 # Aurora's Song: 2 > 4
       required: false
     enum.HumanoidVisualLayers.HeadTop:
-      limit: 2 #imp
+      limit: 4 # Aurora's Song: 2 > 4
       required: false
     enum.HumanoidVisualLayers.HeadSide:
-      limit: 2 #imp
+      limit: 4 # Aurora's Song: 2 > 4
       required: false
     enum.HumanoidVisualLayers.Chest:
-      limit: 2
+      limit: 3 # Aurora's Song: 2 > 3
       required: false
     enum.HumanoidVisualLayers.LArm:
       limit: 1
