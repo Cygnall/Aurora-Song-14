@@ -2798,3 +2798,10 @@ Entries:
   id: 9701
   time: '2026-08-04T03:18:43.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1363
+- author: Sere
+  changes:
+    - type: Fix
+      message: Missing portable gaslock localization.
+  id: 9702
+  time: '2026-08-04T03:26:05.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1364
