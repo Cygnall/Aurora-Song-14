@@ -40,6 +40,10 @@ public sealed partial class SmartEquipSystem : EntitySystem
             .Bind(ContentKeyFunctions.SmartEquipPocket1, InputCmdHandler.FromDelegate(HandleSmartEquipPocket1, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipPocket2, InputCmdHandler.FromDelegate(HandleSmartEquipPocket2, handle: false, outsidePrediction: false))
             .Bind(ContentKeyFunctions.SmartEquipSuitStorage, InputCmdHandler.FromDelegate(HandleSmartEquipSuitStorage, handle: false, outsidePrediction: false))
+            // Aurora's Song Start - Legs/Feet Smart Equip
+            .Bind(ContentKeyFunctions.SmartEquipLegs, InputCmdHandler.FromDelegate(HandleSmartEquipLegs, handle: false, outsidePrediction: false))
+            .Bind(ContentKeyFunctions.SmartEquipFeet, InputCmdHandler.FromDelegate(HandleSmartEquipFeet, handle: false, outsidePrediction: false))
+            // Aurora's Song End
             .Register<SmartEquipSystem>();
     }
 
@@ -80,6 +84,18 @@ public sealed partial class SmartEquipSystem : EntitySystem
     {
         HandleSmartEquip(session, "suitstorage");
     }
+
+    // Aurora's Song Start - Legs/Feet Smart Equip
+    private void HandleSmartEquipLegs(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "legs");
+    }
+
+    private void HandleSmartEquipFeet(ICommonSession? session)
+    {
+        HandleSmartEquip(session, "shoes");
+    }
+    // Aurora End
 
     private void HandleSmartEquip(ICommonSession? session, string equipmentSlot)
     {

@@ -1,15 +1,14 @@
-- type: entity
+﻿- type: entity
   abstract: true
-  parent: [SolutionFood, SolutionToolSmall, Clothing, RecyclableItemClothSmall] # Frontier: added RecyclableItemClothSmall
-  id: ClothingNeckBase
+  id: ASClothingLegsBase # LegsBase is effectively identical to NeckBase. It's just here to serve as a parent when needed.
+  parent: [SolutionFood, SolutionToolSmall, Clothing, RecyclableItemClothSmall]
   components:
   - type: Item
     size: Small
   - type: Clothing
     quickEquip: true
     slots:
-    - neck
-    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
+    - LEGS # This is pretty much the only difference.
   - type: Sprite
     state: icon
   - type: Butcherable
@@ -17,7 +16,7 @@
     spawned:
     - id: MaterialCloth1
       amount: 2
-  - type: PhysicalComposition # 50% of the amount of cloth you'd obtain upon butchering
+  - type: PhysicalComposition
     materialComposition:
       Cloth: 100
   - type: Edible
@@ -29,18 +28,6 @@
         Quantity: 15
   - type: Tag
     tags:
-    - ClothMade
-    - Recyclable
-    - WhitelistChameleon
-
-- type: entity
-  abstract: true
-  parent: ClothingNeckBase
-  id: ClothingScarfBase
-  components:
-  - type: Tag
-    tags:
-    - Scarf
     - ClothMade
     - Recyclable
     - WhitelistChameleon

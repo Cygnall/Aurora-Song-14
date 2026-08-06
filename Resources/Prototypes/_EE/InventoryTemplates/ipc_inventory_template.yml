@@ -48,7 +48,7 @@
       slotTexture: gloves
       slotFlags: GLOVES
       uiWindowPos: 2,1
-      strippingWindowPos: 2,0
+      strippingWindowPos: 2,2 # Aurora's Song - Changed to be the same as other species
       displayName: Gloves
     - name: neck
       slotTexture: neck
@@ -71,9 +71,9 @@
         - Cigarette
         - Cigar
         # End TheDen
-    - name: neckalt # Aurora's Song - second neck slot
+    - name: neck2 # Aurora's Song - Second neck slot (slotflags edition)
       slotTexture: neck
-      slotFlags: NECK
+      slotFlags: NECK2 # Aurora's Song - Second neck slot (slotflags edition)
       uiWindowPos: 2,2
       strippingWindowPos: 2,1
       displayName: Neck 2
@@ -119,6 +119,17 @@
       strippingWindowPos: 2,5
       dependsOn: outerClothing
       displayName: Suit Storage
+    # Aurora's Song Start - Moved entire thing up here, because the SecondHotbar draws in slot order, apparently.
+    - name: wallet
+      slotTexture: wallet
+      slotFlags: WALLET
+      slotGroup: SecondHotbar # Aurora's Song - Moved to make room for legs slot.
+      stripTime: 6
+      uiWindowPos: 2,0
+      strippingWindowPos: 2,3
+      dependsOn: jumpsuit
+      displayName: Wallet
+    # Aurora's Song End
     - name: id
       slotTexture: id
       slotFlags: IDCARD
@@ -144,12 +155,12 @@
       uiWindowPos: 3,0
       strippingWindowPos: 0,5
       displayName: Back
-# Aurora
-    - name: wallet
-      slotTexture: wallet
-      slotFlags: WALLET
+    # Aurora's Song Start - Legs Slot
+    - name: legs
+      slotTexture: shoes
+      slotFlags: LEGS
       stripTime: 6
       uiWindowPos: 2,0
-      strippingWindowPos: 2,3
-      dependsOn: jumpsuit
-      displayName: Wallet
+      strippingWindowPos: 0,3
+      displayName: Legs
+    # Aurora's Song End

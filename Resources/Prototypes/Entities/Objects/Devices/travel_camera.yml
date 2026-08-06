@@ -31,6 +31,7 @@
   - type: Clothing
     slots:
     - NECK
+    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
     sprite: Objects/Devices/travel_camera.rsi
 
 # we have a base prototype so that if we need to add components later on its easier

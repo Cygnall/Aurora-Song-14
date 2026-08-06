@@ -50,6 +50,9 @@
       pocket:
       - state: equipped-BELT
         color: "#E37B40"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#E37B40"
 
 #region Command
 
@@ -103,5 +106,8 @@
       - state: equipped-BELT
         color: "#1C4D8D"
       pocket:
+      - state: equipped-BELT
+        color: "#1C4D8D"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#1C4D8D"

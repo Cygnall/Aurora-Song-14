@@ -1,0 +1,11 @@
+﻿- type: entity
+  abstract: true
+  parent: [ASClothingLegsBase, BaseStorageItem] # Once again identical, but with grid storage.
+  id: ASClothingPouchBase
+  components:
+  - type: Storage # Currently same size as pocket/belt pouches. Change as neccessary.
+    maxItemSize: Small
+    grid:
+    - 0,0,2,1
+    blacklist:
+      components: [ Storage ] # Prevents pouch-in-pouch-in-pou-- ad infinitum.

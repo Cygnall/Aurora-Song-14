@@ -333,7 +333,7 @@
       # Weapon
       - sprite: Objects/Weapons/Melee/baseball_bat.rsi
         state: wielded-inhand-right
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       # Gloves
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND
@@ -361,7 +361,7 @@
       # Weapon
       - sprite: Objects/Weapons/Melee/fireaxe.rsi
         state: wielded-inhand-right
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       # Gloves
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND
@@ -385,7 +385,7 @@
       # Weapon
       - sprite: Objects/Weapons/Melee/sledgehammer.rsi
         state: wielded-inhand-right
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       # Gloves
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND
@@ -409,7 +409,7 @@
       # Weapon
       - sprite: Objects/Weapons/Guns/Shotguns/pump_inhands_64x.rsi
         state: wielded-inhand-right
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       # Gloves
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND
@@ -433,7 +433,7 @@
       # Weapon
       - sprite: Objects/Weapons/Guns/SMGs/drozd.rsi
         state: wielded-inhand-right
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       # Gloves
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND
@@ -457,7 +457,7 @@
       # Weapon
       - sprite: Objects/Weapons/Guns/Battery/laser_gun.rsi
         state: wielded-inhand-right
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       # Gloves
       - sprite: Clothing/Hands/Gloves/Color/color.rsi
         state: equipped-HAND

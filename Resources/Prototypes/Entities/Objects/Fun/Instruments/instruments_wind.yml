@@ -49,6 +49,7 @@
     quickEquip: false
     slots:
     - neck
+    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: ActivatableUI
     inHandsOnly: false
 

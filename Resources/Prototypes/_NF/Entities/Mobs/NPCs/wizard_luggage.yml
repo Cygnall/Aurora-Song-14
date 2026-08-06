@@ -14,7 +14,9 @@
   - type: Clothing
     sprite: _NF/Mobs/Wizard/luggage.rsi
     quickEquip: false
-    slots: neck
+    slots:
+    - neck
+    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: SpawnItemsOnUse
     items:
     - id: SpawnMobWizardLuggage

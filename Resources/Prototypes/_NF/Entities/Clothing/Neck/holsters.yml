@@ -1,7 +1,7 @@
 # region base
 - type: entity
   abstract: true
-  parent: ClothingNeckBase
+  parent: ASClothingLegsBase # Aurora's Song - Migrated to legs slot. These aren't actually neck items but whatever, I didn't want to make a new leg folder in _NF or move it to _AS.
   id: NFBaseClothingNeckHolster
   components:
   - type: Item
@@ -67,14 +67,14 @@
           - MagazineBRDIP15 # Auroa's Song - Allow BRDI mags to fit
   - type: ContainerContainer
     containers:
-      storagebase: !type:Container
-        ents: []
+#      storagebase: !type:Container # Aurora's Song - This isn't actually needed at all.
+#        ents: []
       weapon: !type:ContainerSlot {}
       magazine: !type:ContainerSlot {}
 
 - type: entity
   abstract: true
-  parent: ClothingNeckBase
+  parent: ASClothingLegsBase # Aurora's Song - Migrated to legs slot. These aren't actually neck items but whatever, I didn't want to make a new leg folder in _NF or move it to _AS.
   id: NFBaseClothingNeckSheath
   components:
   - type: Item
@@ -100,8 +100,8 @@
           - Baton # Aurora's Song
   - type: ContainerContainer
     containers:
-      storagebase: !type:Container
-        ents: []
+#      storagebase: !type:Container # Aurora's Song - This isn't actually needed at all.
+#        ents: []
       weapon: !type:ContainerSlot {}
 
 # region thigh holster
@@ -119,10 +119,7 @@
   - type: Clothing
     sprite: _NF/Clothing/Neck/Misc/holster_thigh.rsi
     clothingVisuals:
-      neck:
-      - state: equipped-NECK
-        color: "#515151"
-      neckalt: # Aurora's Song - second neck slot
+      legs: # Aurora's Song - Migrated to legs slot; left sprite names untouched for cleanliness.
       - state: equipped-NECK
         color: "#515151"
   - type: Item
@@ -147,7 +144,7 @@
       color: "#493926"
   - type: Clothing
     clothingVisuals:
-      neck:
+      legs: # Aurora's Song - Migrated to legs slot; left sprite names untouched for cleanliness.
       - state: equipped-NECK
         color: "#493926"
   - type: Item
@@ -174,10 +171,7 @@
   - type: Clothing
     sprite: _NF/Clothing/Neck/Misc/holster_thigh_sheath.rsi
     clothingVisuals:
-      neck:
-      - state: equipped-NECK
-        color: "#515151"
-      neckalt: # Aurora's Song - second neck slot
+      legs: # Aurora's Song - Migrated to legs slot; left sprite names untouched for cleanliness.
       - state: equipped-NECK
         color: "#515151"
   - type: Item
@@ -202,7 +196,7 @@
       color: "#493926"
   - type: Clothing
     clothingVisuals:
-      neck:
+      legs: # Aurora's Song - Migrated to legs slot; left sprite names untouched for cleanliness.
       - state: equipped-NECK
         color: "#493926"
   - type: Item

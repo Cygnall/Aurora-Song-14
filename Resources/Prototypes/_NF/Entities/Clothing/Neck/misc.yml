@@ -87,7 +87,7 @@
       - state: equipped-NECK-on
         color: "#a9b6bd"
         shader: unshaded
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#a9b6bd"
@@ -113,7 +113,7 @@
       - state: equipped-NECK-on
         color: "#33cc00"
         shader: unshaded
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#33cc00"
@@ -139,7 +139,7 @@
       - state: equipped-NECK-on
         color: "#990000"
         shader: unshaded
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#990000"
@@ -165,7 +165,7 @@
       - state: equipped-NECK-on
         color: "#0055cc"
         shader: unshaded
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#0055cc"
@@ -191,7 +191,7 @@
       - state: equipped-NECK-on
         color: "#47f8ff"
         shader: unshaded
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#47f8ff"
@@ -217,7 +217,7 @@
       - state: equipped-NECK-on
         color: "#ff8227"
         shader: unshaded
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#ff8227"
@@ -243,7 +243,7 @@
       - state: equipped-NECK-on
         color: "#9c0de1"
         shader: unshaded
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK-off
       - state: equipped-NECK-on
         color: "#9c0de1"

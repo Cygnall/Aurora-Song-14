@@ -13,6 +13,7 @@
     quickEquip: true
     slots:
     - neck
+    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
     - mask
   - type: SpeechSound
     speechSounds: Borg

@@ -34,9 +34,9 @@
       uiWindowPos: 1,2
       strippingWindowPos: 1,1
       displayName: Mask
-    - name: neckalt # Aurora's Song - second neck slot
+    - name: neck2 # Aurora's Song - Second neck slot (slotflags edition)
       slotTexture: neck
-      slotFlags: NECK
+      slotFlags: NECK2 # Aurora's Song - Second neck slot (slotflags edition)
       uiWindowPos: 2,2
       strippingWindowPos: 2,1
       displayName: Neck 2
@@ -93,6 +93,17 @@
       dependsOnComponents:
       - type: AllowSuitStorage
       displayName: Suit Storage
+    # Frontier: wallet slot // Aurora's Song Start - Moved entire thing up here, because the SecondHotbar draws in slot order, apparently.
+    - name: wallet
+      slotTexture: wallet
+      slotFlags: WALLET
+      slotGroup: SecondHotbar # Aurora's Song - Moved to make room for legs slot.
+      stripTime: 6
+      uiWindowPos: 2,0
+      strippingWindowPos: 2,3
+      dependsOn: jumpsuit
+      displayName: Wallet
+    # End Frontier: wallet slot // Aurora's Song End
     - name: id
       slotTexture: id
       fullTextureName: template_small
@@ -124,13 +135,12 @@
       blacklist:
         tags:
         - PetOnly
-    # Frontier: wallet slot
-    - name: wallet
-      slotTexture: wallet
-      slotFlags: WALLET
+    # Aurora's Song Start - Legs Slot
+    - name: legs
+      slotTexture: shoes
+      slotFlags: LEGS
       stripTime: 6
       uiWindowPos: 2,0
-      strippingWindowPos: 2,3
-      dependsOn: jumpsuit
-      displayName: Wallet
-    # End Frontier: wallet slot
+      strippingWindowPos: 0,3
+      displayName: Legs
+    # Aurora's Song End

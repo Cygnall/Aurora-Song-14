@@ -279,6 +279,7 @@
     quickEquip: true
     slots:
     - neck
+    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: EquipSpray
     verbLocId: equip-spray-verb-press
   - type: Solution

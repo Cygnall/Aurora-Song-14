@@ -37,6 +37,17 @@
     strippingWindowPos: 2,4
     dependsOn: jumpsuit
     displayName: ID
+  # Frontier: wallet slot // Aurora's Song Start - Moved entire thing up here, because the SecondHotbar draws in slot order, apparently.
+  - name: wallet
+    slotTexture: wallet
+    slotFlags: WALLET
+    slotGroup: SecondHotbar # Aurora's Song - Moved to make room for legs slot.
+    stripTime: 6
+    uiWindowPos: 2,0
+    strippingWindowPos: 2,3
+    dependsOn: jumpsuit
+    displayName: Wallet
+  # End Frontier: wallet slot // Aurora's Song End
   - name: suitstorage
     slotTexture: suit_storage
     slotFlags:   SUITSTORAGE
@@ -60,13 +71,12 @@
         - MonkeyWearable
       components: # Frontier
         - MonkeyWearable # Frontier
-  # Frontier: wallet slot
-  - name: wallet
-    slotTexture: wallet
-    slotFlags: WALLET
+  # Aurora's Song Start - Legs Slot
+  - name: legs
+    slotTexture: shoes
+    slotFlags: LEGS
     stripTime: 6
     uiWindowPos: 2,0
-    strippingWindowPos: 2,3
-    dependsOn: jumpsuit
-    displayName: Wallet
-  # End Frontier: wallet slot
+    strippingWindowPos: 0,3
+    displayName: Legs
+  # Aurora's Song End

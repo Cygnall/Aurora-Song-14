@@ -14,7 +14,7 @@
   - type: Clothing
     quickEquip: false
     sprite: _NF/Objects/Storage/Pouches/pouch.rsi
-    slots: [ belt, pocket ]
+    slots: [ belt, pocket, legs ]
   - type: Storage
     maxItemSize: Small
     grid:
@@ -123,6 +123,9 @@
       pocket:
       - state: equipped-BELT
         color: "#9a733f"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#9a733f"
 
 # COLORED DEPARTMENTAL
 #region contractor
@@ -171,6 +174,9 @@
       - state: equipped-BELT
         color: "#777b83"
       pocket:
+      - state: equipped-BELT
+        color: "#777b83"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#777b83"
 
@@ -225,6 +231,9 @@
       - state: equipped-BELT
         color: "#194214"
       pocket:
+      - state: equipped-BELT
+        color: "#194214"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#194214"
 
@@ -282,6 +291,9 @@
       pocket:
       - state: equipped-BELT
         color: "#3a6781"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#3a6781"
 
 ## ENGINEERING
 #region engineer
@@ -333,6 +345,9 @@
       - state: equipped-BELT
         color: "#ffde15"
       pocket:
+      - state: equipped-BELT
+        color: "#ffde15"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#ffde15"
 
@@ -457,6 +472,9 @@
       pocket:
       - state: equipped-BELT
         color: "#786243"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#786243"
 
 ## MEDICAL
 #region first aid
@@ -510,6 +528,9 @@
       pocket:
       - state: equipped-BELT
         color: "#ca4545"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#ca4545"
 
 - type: entity
   id: NFPouchFirstAidAlt
@@ -559,6 +580,9 @@
       - state: equipped-BELT
         color: "#5a96bb"
       pocket:
+      - state: equipped-BELT
+        color: "#5a96bb"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#5a96bb"
 
@@ -614,6 +638,9 @@
       pocket:
       - state: equipped-BELT
         color: "#eeeeee"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#eeeeee"
 
 ## SERVICE
 #region janitor
@@ -663,6 +690,9 @@
       - state: equipped-BELT
         color: "#ebdc36"
       pocket:
+      - state: equipped-BELT
+        color: "#ebdc36"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#ebdc36"
 
@@ -715,6 +745,9 @@
       - state: equipped-BELT
         color: "#7dd465"
       pocket:
+      - state: equipped-BELT
+        color: "#7dd465"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#7dd465"
 
@@ -772,6 +805,9 @@
       pocket:
       - state: equipped-BELT
         color: "#3e3e48"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#3e3e48"
 
 #region mime
 - type: entity
@@ -822,6 +858,9 @@
       - state: equipped-BELT
         color: "#eeeeee"
       pocket:
+      - state: equipped-BELT
+        color: "#eeeeee"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#eeeeee"
 
@@ -876,6 +915,9 @@
       pocket:
       - state: equipped-BELT
         color: "#00ff00"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#00ff00"
 
 #region mail
 - type: entity
@@ -928,6 +970,9 @@
       pocket:
       - state: equipped-BELT
         color: "#4960ed"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#4960ed"
 
 ## WILDCARDS
 #region mercenary
@@ -976,6 +1021,9 @@
       - state: equipped-BELT
         color: "#7b7b3f"
       pocket:
+      - state: equipped-BELT
+        color: "#7b7b3f"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#7b7b3f"
 
@@ -1028,6 +1076,9 @@
       - state: equipped-BELT
         color: "#935c3f"
       pocket:
+      - state: equipped-BELT
+        color: "#935c3f"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#935c3f"
 
@@ -1083,6 +1134,9 @@
       pocket:
       - state: equipped-BELT
         color: "#a9947d"
+      legs: # Aurora's Song - Added to leg slot
+      - state: equipped-BELT
+        color: "#a9947d"
 
 #region pirate
 - type: entity
@@ -1134,6 +1188,9 @@
       - state: equipped-BELT
         color: "#5c3714"
       pocket:
+      - state: equipped-BELT
+        color: "#5c3714"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#5c3714"
 
@@ -1189,6 +1246,9 @@
       - state: equipped-BELT
         color: "#5c3714"
       pocket:
+      - state: equipped-BELT
+        color: "#5c3714"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#5c3714"
 
@@ -1249,6 +1309,9 @@
       - state: equipped-BELT
         color: "#8a4f23"
       pocket:
+      - state: equipped-BELT
+        color: "#8a4f23"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#8a4f23"
   - type: Tag
@@ -1338,6 +1401,9 @@
       - state: equipped-BELT
         color: "#555555"
       pocket:
+      - state: equipped-BELT
+        color: "#555555"
+      legs: # Aurora's Song - Added to leg slot
       - state: equipped-BELT
         color: "#555555"
 

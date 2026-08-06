@@ -40,9 +40,9 @@
       uiWindowPos: 1,2
       strippingWindowPos: 1,1
       displayName: Mask
-    - name: neckalt # Aurora's Song - second neck slot
+    - name: neck2 # Aurora's Song - Second neck slot (slotflags edition)
       slotTexture: neck
-      slotFlags: NECK
+      slotFlags: NECK2 # Aurora's Song - Second neck slot (slotflags edition)
       uiWindowPos: 2,2
       strippingWindowPos: 2,1
       displayName: Neck 2
@@ -111,3 +111,12 @@
       dependsOn: jumpsuit
       displayName: Wallet
     # End Frontier: wallet slot
+    # Aurora's Song Start - Legs Slot
+    - name: legs
+      slotTexture: shoes
+      slotFlags: LEGS
+      stripTime: 6
+      uiWindowPos: 2,0
+      strippingWindowPos: 0,3
+      displayName: Legs
+    # Aurora's Song End

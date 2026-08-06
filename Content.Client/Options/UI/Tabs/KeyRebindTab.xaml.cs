@@ -202,6 +202,10 @@ namespace Content.Client.Options.UI.Tabs
             AddButton(ContentKeyFunctions.SmartEquipPocket1);
             AddButton(ContentKeyFunctions.SmartEquipPocket2);
             AddButton(ContentKeyFunctions.SmartEquipSuitStorage);
+            // Aurora's Song Start - Legs/Feet Smart Equip
+            AddButton(ContentKeyFunctions.SmartEquipLegs);
+            AddButton(ContentKeyFunctions.SmartEquipFeet);
+            // Aurora's Song End
             AddButton(ContentKeyFunctions.OpenBackpack);
             AddButton(ContentKeyFunctions.OpenBelt);
             AddButton(ContentKeyFunctions.OpenWallet); // Frontier

@@ -38,7 +38,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#96A3B0"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#A396B0"
         map: [ "wizard_stole_base" ]
@@ -92,7 +92,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#7A3D00"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#7A003D"
         map: [ "wizard_stole_base" ]
@@ -146,7 +146,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#AB769E"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#8376AB"
         map: [ "wizard_stole_base" ]
@@ -200,7 +200,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#6e3c3c"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#422424"
         map: [ "wizard_stole_base" ]
@@ -255,7 +255,7 @@
         map: [ "wizard_stole_runes" ]
         shader: unshaded
         color: "#A65746"
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
         color: "#4593a5"
         map: [ "wizard_stole_base" ]
@@ -299,7 +299,7 @@
       - state: equipped-NECK
       - state: equipped-NECK-unshaded
         shader: unshaded
-      neckalt: # Aurora's Song - second neck slot
+      neck2: # Aurora's Song - Second neck slot (slotflags edition)
       - state: equipped-NECK
       - state: equipped-NECK-unshaded
         shader: unshaded

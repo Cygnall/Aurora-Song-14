@@ -182,6 +182,7 @@
   - type: Clothing
     slots:
     - neck
+    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: ChameleonClothing
     default: ChangelingFleshClothingNeck
     slot:

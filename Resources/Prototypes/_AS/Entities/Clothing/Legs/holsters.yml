@@ -1,0 +1,83 @@
+﻿# This is identical to the existing drop leg holster/sheathe, with the notable difference being that this is set up for sidearm, magazine AND melee all in one.
+# Treat this as an example and base for parenting, HIGHLY recommend creating one with more specific ItemSlots.
+
+- type: entity
+  abstract: true
+  parent: ASClothingLegsBase
+  id: ASClothingHolsterBase
+  components:
+  - type: ItemSlots
+    slots:
+      sidearm:
+        name: clothing-holster-sidearm
+        priority: 4 # Highest priority, interacted first.
+        whitelist:
+          tags:
+          - Sidearm
+        ejectSound:
+          path: /Audio/_DEN/Weapons/pistol_unholster.ogg
+        insertSound:
+          path: /Audio/_DEN/Weapons/pistol_holster.ogg
+      magazine:
+        name: clothing-holster-magazine
+        priority: 3
+        whitelist:
+          tags:
+          - NFMagazinePistol35
+          - NFMagazinePistol45
+          - NFMagazineHighCapacityPistol35
+          - NFSpeedLoaderPistol35
+          - NFSpeedLoaderPistol45
+          - SpeedLoaderRifleHeavy
+          - ASMagazinePistol40
+          - ASMagazineHighCapacityPistol40
+          - ASSpeedLoaderPistol40
+          - ASMagazinePistolCaselessRifle
+          - PowerCellHyper
+          - PowerCellHigh
+          - PowerCellMedium
+          - PowerCellSmall
+          - MagazineBRDIP15
+      melee:
+        name: clothing-holster-melee
+        priority: 2 # Lowest priority, interacted last.
+        whitelist:
+          tags:
+          - Knife
+          - Baton
+  - type: Appearance
+  - type: ItemMapper # Again, this is made for gun, mag and melee; treat as example.
+    mapLayers:
+      icon-gun:
+        whitelist:
+          tags:
+          - Sidearm
+      icon-magazine:
+        whitelist:
+          tags:
+          - NFMagazinePistol35
+          - NFMagazinePistol45
+          - NFMagazineHighCapacityPistol35
+          - NFSpeedLoaderPistol35
+          - NFSpeedLoaderPistol45
+          - SpeedLoaderRifleHeavy
+          - ASMagazinePistol40
+          - ASMagazineHighCapacityPistol40
+          - ASSpeedLoaderPistol40
+          - ASMagazinePistolCaselessRifle
+          - PowerCellHyper
+          - PowerCellHigh
+          - PowerCellMedium
+          - PowerCellSmall
+          - MagazineBRDIP15
+      icon-dagger:
+        whitelist:
+          tags:
+          - Knife
+          - Baton
+  - type: ContainerContainer
+    containers:
+      weapon: !type:ContainerSlot
+      magazine: !type:ContainerSlot
+      melee: !type:ContainerSlot
+

@@ -217,7 +217,9 @@
   - type: Clothing
     sprite: Objects/Fun/whistles.rsi
     quickEquip: false
-    slots: neck
+    slots:
+    - neck
+    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: UseDelay
     delay: 3
   - type: EmitSoundOnUse

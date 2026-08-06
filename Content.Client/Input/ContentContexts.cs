@@ -85,6 +85,10 @@ namespace Content.Client.Input
             human.AddFunction(ContentKeyFunctions.SmartEquipPocket1);
             human.AddFunction(ContentKeyFunctions.SmartEquipPocket2);
             human.AddFunction(ContentKeyFunctions.SmartEquipSuitStorage);
+            // Aurora's Song Start - Legs/Feet Smart Equip
+            human.AddFunction(ContentKeyFunctions.SmartEquipLegs);
+            human.AddFunction(ContentKeyFunctions.SmartEquipFeet);
+            // Aurora's Song End
             human.AddFunction(ContentKeyFunctions.OpenBackpack);
             human.AddFunction(ContentKeyFunctions.OpenBelt);
             human.AddFunction(ContentKeyFunctions.OpenWallet); // Frontier

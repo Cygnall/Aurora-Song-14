@@ -18,6 +18,7 @@
     quickEquip: true
     slots:
     - neck
+    - neck2 # Aurora's Song - Second neck slot (slotflags edition)
   - type: StaticPrice
     price: 12
   - type: Tag
