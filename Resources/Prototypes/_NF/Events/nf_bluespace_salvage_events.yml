@@ -19,8 +19,8 @@
       grid: !type:GridSpawnGroup
         nameDataset: NamesScrap
         nameDatasetType: Nanotrasen # they're shuttles
-        minCount: 2
-        maxCount: 3
+        minCount: 1 # Aurora's Song 2>1, hardly hit and they spawn numerous entities
+        maxCount: 2 # Aurora's Song 3>2, hardly hit and they spawn numerous entities
         minimumDistance: 1000
         maximumDistance: 2000
         addComponents:

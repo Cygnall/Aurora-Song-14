@@ -26,8 +26,8 @@
       grid: !type:GridSpawnGroup
         nameDataset: NamesAmbulance
         nameDatasetType: Nanotrasen
-        minCount: 2
-        maxCount: 3
+        minCount: 4
+        maxCount: 5
         minimumDistance: 500
         maximumDistance: 1500
         addComponents:

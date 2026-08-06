@@ -153,8 +153,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2 #Aurora's Song
-        maxCount: 3 #Aurora's Song
+        minCount: 4 #Aurora's Song
+        maxCount: 5 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -193,8 +193,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2 #Aurora's Song
-        maxCount: 3 #Aurora's Song
+        minCount: 4 #Aurora's Song
+        maxCount: 5 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -233,8 +233,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2 #Aurora's Song
-        maxCount: 3 #Aurora's Song
+        minCount: 4 #Aurora's Song
+        maxCount: 5 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
@@ -344,8 +344,8 @@
       grid: !type:GridSpawnGroup
         nameLoc:
         - station-event-bluespace-name-UnidentifiedVessel
-        minCount: 2 #Aurora's Song
-        maxCount: 3 #Aurora's Song
+        minCount: 4 #Aurora's Song
+        maxCount: 5 #Aurora's Song
         minimumDistance: 1500
         maximumDistance: 2500
         addComponents:
