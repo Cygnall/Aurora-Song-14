@@ -2814,3 +2814,28 @@ Entries:
   id: 9703
   time: '2026-08-06T14:44:03.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1355
+- author: Sere
+  changes:
+    - type: Add
+      message: Added legs slot.
+    - type: Add
+      message: Added smart-equip keybinding for legs and shoes slots.
+    - type: Tweak
+      message: >-
+        Moved drop leg holsters and sheathes to legs slot, allowed most pouches
+        (such as contractor's) to fit in legs slot.
+    - type: Tweak
+      message: >-
+        Rearranged inventory and strip UI a bit. Wallet is now left of the PDA,
+        and legs are where Wallet used to be.
+    - type: Tweak
+      message: >-
+        Moved IPC gloves slot in strip menu to the same location as every other
+        species.
+    - type: Fix
+      message: >-
+        Arachnid strip UI now shows all slots, rather than having a web pocket
+        covering the wallet.
+  id: 9704
+  time: '2026-08-06T23:22:39.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1373
