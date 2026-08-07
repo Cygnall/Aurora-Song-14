@@ -2850,3 +2850,12 @@ Entries:
   id: 9705
   time: '2026-08-07T00:15:09.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1352
+- author: Sere
+  changes:
+    - type: Tweak
+      message: >-
+        Allow silicons to be targets/users of the Knock interaction. Knock that
+        robot.
+  id: 9706
+  time: '2026-08-07T00:15:58.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1376
