@@ -5,7 +5,8 @@ gun-selector-verb = Change to {$mode}
 gun-selected-mode = Selected {$mode}
 gun-disabled = You can't use guns!
 gun-set-fire-mode-examine = Set to [color=yellow]{$mode}[/color].
-gun-set-fire-mode = Changed to {$mode}
+gun-set-fire-mode-popup = Changed to {$mode}
+# Aurora's Song - Firemode Refactor, literally just added -popup to make it compatible with BatteryWeaponFireModesSystem on the two lines above
 gun-magazine-whitelist-fail = That won't fit into the gun!
 gun-magazine-fired-empty = No ammo left!
 

@@ -42,18 +42,19 @@
     maxCharge: 1005
     startingCharge: 1005
   - type: BatteryAmmoProvider
-    proto: NFBulletDisabler
-    fireCost: 50
-  - type: EnergyGun
+    proto: BulletEnergyGunMagnum
+    fireCost: 100
+  - type: BatteryWeaponFireModes # Aurora's Song - Firemode Refactor
     fireModes:
-    - proto: NFBulletDisabler
-      fireCost: 50
-      name: disabling
-      state: disabler
     - proto: BulletEnergyGunMagnum
       fireCost: 100
-      name: lethal
-      state: lethal
+      #name: lethal # Aurora's Song - Firemode Refactor
+      #state: lethal # Aurora's Song - Firemode Refactor
+    - proto: NFBulletDisabler
+      fireCost: 50
+      #name: disabling # Aurora's Song - Firemode Refactor
+      #state: disabler # Aurora's Song - Firemode Refactor
+      pacifismAllowedMode: true # Aurora's Song
   - type: MagazineVisuals
     magState: mag
     steps: 5
@@ -61,10 +62,10 @@
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.EnergyGunFireModeVisuals.State:
+      enum.BatteryWeaponFireModeVisuals.State: # Aurora's Song - Firemode Refactor
         Firemode:
-          Disabler: { state: mode-disabler }
-          Lethal: { state: mode-lethal }
+          BulletEnergyGunMagnum: { state: mode-lethal } # Aurora's Song - Firemode Refactor
+          NFBulletDisabler: { state: mode-disabler } # Aurora's Song - Firemode Refactor
   - type: Tag
     tags:
     - Sidearm

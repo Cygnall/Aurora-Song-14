@@ -266,20 +266,20 @@
   - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
     proto: HoloFlareCyan
     fireCost: 240
-  - type: EnergyGun
+  - type: BatteryWeaponFireModes # Aurora's Song - Firemode Refactor
     fireModes:
     - proto: HoloFlareCyan
       fireCost: 240
-      name: cyan
-      state: cyan
+      #name: cyan # Aurora's Song - Firemode Refactor
+      #state: cyan # Aurora's Song - Firemode Refactor
     - proto: HoloFlareRed
       fireCost: 240
-      name: red
-      state: red
+      #name: red # Aurora's Song - Firemode Refactor
+      #state: red # Aurora's Song - Firemode Refactor
     - proto: HoloFlareYellow
       fireCost: 240
-      name: yellow
-      state: yellow
+      #name: yellow # Aurora's Song - Firemode Refactor
+      #state: yellow # Aurora's Song - Firemode Refactor
   - type: MagazineVisuals
     magState: mag
     steps: 3
@@ -287,11 +287,11 @@
   - type: Appearance
   - type: GenericVisualizer
     visuals:
-      enum.EnergyGunFireModeVisuals.State:
+      enum.BatteryWeaponFireModeVisuals.State: # Aurora's Song - Firemode Refactor
         Firemode:
-          Cyan: { state: mode-cyan }
-          Red: { state: mode-red }
-          Yellow: { state: mode-yellow }
+          HoloFlareCyan: { state: mode-cyan } # Aurora's Song - Firemode Refactor
+          HoloFlareRed: { state: mode-red } # Aurora's Song - Firemode Refactor
+          HoloFlareYellow: { state: mode-yellow } # Aurora's Song - Firemode Refactor
   - type: StaticPrice
     price: 250
   - type: PacifismAllowedGun # Aurora's Song - added PacifismAllowedGun since it is not a weapon

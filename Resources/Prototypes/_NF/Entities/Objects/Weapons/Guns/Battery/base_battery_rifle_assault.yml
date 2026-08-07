@@ -98,6 +98,7 @@
       fireCost: 80
     - proto: NFBulletDisabler
       fireCost: 80
+      pacifismAllowedMode: true # Aurora's Song
 
 - type: entity
   id: NFBaseWeaponEnergyRifleAssaultHitScanPulse

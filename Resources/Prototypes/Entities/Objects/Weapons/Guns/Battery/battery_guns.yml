@@ -884,7 +884,7 @@
     soundGunshot:
       path: /Audio/Weapons/Guns/Gunshots/laser_cannon.ogg
   - type: BatteryAmmoProvider
-    proto: ASBulletLaserSpread # Aurora's Song | moved to AS variant
+    proto: ASBulletLaserSpreadNarrow # Aurora's Song | moved to AS variant
     fireCost: 80
   - type: BatteryWeaponFireModes
     fireModes: # Aurora's Song | Moved to AS variants
@@ -892,6 +892,9 @@
       fireCost: 80
     - proto: ASBulletDisablerSmgSpread
       fireCost: 48
+      pacifismAllowedMode: true # Aurora's Song - Allow pacifism
+    - proto: ASBulletLaserSpread # Aurora's Song | moved to AS variant
+      fireCost: 80 # Aurora's Song - Moved down here to the fireMode list
   - type: Item
     size: Large
     sprite: Objects/Weapons/Guns/Battery/inhands_64x.rsi
@@ -943,7 +946,7 @@
       fireCost: 150
     - proto: BulletDisabler
       fireCost: 62.5
-      pacifismAllowedMode: true
+      pacifismAllowedMode: true # Aurora's Song
   - type: BatterySelfRecharger
     autoRechargeRate: 48
     autoRechargePauseTime: 10

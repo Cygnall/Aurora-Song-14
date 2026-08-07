@@ -135,7 +135,7 @@
     maxCharge: 3000
     startingCharge: 3000
   - type: BatteryAmmoProvider # Aurora's Song - ProjectileBatteryAmmoProvider>BatteryAmmoProvider
-    proto: NFBoltTempgunCold # Frontier
+    proto: NFBoltTempgunCold # Frontier # Unnecessary, uses table below
     fireCost: 100
   - type: BatteryWeaponFireModes
     fireModes:
