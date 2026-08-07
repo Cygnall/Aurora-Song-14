@@ -1,0 +1,15 @@
+﻿- type: Interaction
+  id: KnockOnSelf
+  parent: [SelfInteractionBase, KnockOn]
+  priority: 0
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+    - !type:SelfTargetRequirement
+    - !type:EntityWhitelistRequirement
+      whitelist:
+        tags:
+        - SiliconOrIPCEmotes # Using this to make it easy. Doesn't (currently) affect borgs/bots since they can't interact (yet).
+  effectSuccess:
+    popup: Visible
+    sound: {path: /Audio/Effects/glass_knock.ogg}

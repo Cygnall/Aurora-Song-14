@@ -1,0 +1,12 @@
+﻿- type: Interaction
+  id: KnockOnOther
+  parent: [BaseGlobal, KnockOn]
+  priority: 0
+  hideByRequirement: true
+  requirement:
+    !type:ComplexRequirement
+    requirements:
+    - !type:EntityWhitelistRequirement
+      whitelist:
+        tags:
+        - SiliconOrIPCEmotes

@@ -56,6 +56,11 @@
     resistance: 2
   - type: BlockWeather
   - type: SunShadowCast
+  # Aurora's Song Start - Add Knock interact to walls
+  - type: InteractionVerbs
+    allowedVerbs:
+    - KnockOn
+  # Aurora's Song End
 
 - type: entity
   abstract: true
