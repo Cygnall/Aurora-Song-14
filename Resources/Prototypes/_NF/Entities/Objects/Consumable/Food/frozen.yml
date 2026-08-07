@@ -45,6 +45,10 @@
     - rice
     - icecream
     - sweet
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: bungo mochi
@@ -69,6 +73,10 @@
     - rice
     - icecream
     - bungo
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: cherry mochi
@@ -93,6 +101,10 @@
     - rice
     - icecream
     - cherry
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: chocolate mochi
@@ -117,6 +129,10 @@
     - rice
     - icecream
     - chocolate
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: fiber mochi
@@ -144,6 +160,10 @@
     - icecream
     - fiber
   - type: MothFood # Aurora Song
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: rosy mochi
@@ -168,6 +188,10 @@
     - rice
     - icecream
     - pink
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: cinnamon mochi
@@ -192,6 +216,10 @@
     - rice
     - icecream
     - cinnamon
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: tea mochi
@@ -216,6 +244,10 @@
     - rice
     - icecream
     - tea
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: ube mochi
@@ -242,6 +274,10 @@
     - rice
     - icecream
     - antiseptic
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: pumpkin mochi
@@ -272,6 +308,10 @@
     butcheringType: Knife
     spawned:
     - id: FoodFrozenMochiCarvedPumpkin
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
 
 - type: entity
   name: carved pumpkin mochi
@@ -298,3 +338,7 @@
     - rice
     - icecream
     - spooky
+# Aurora's Song - Start
+  - type: Item
+    size: Tiny
+# Aurora's Song - End
