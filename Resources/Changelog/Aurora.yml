@@ -2859,3 +2859,10 @@ Entries:
   id: 9706
   time: '2026-08-07T00:15:58.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1376
+- author: salpphie
+  changes:
+    - type: Tweak
+      message: Changed mochi to be 1x1 instead of 1x2.
+  id: 9707
+  time: '2026-08-07T00:38:19.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1374
