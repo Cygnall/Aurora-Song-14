@@ -2839,3 +2839,14 @@ Entries:
   id: 9704
   time: '2026-08-06T23:22:39.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1373
+- author: Laeras
+  changes:
+    - type: Tweak
+      message: weapons set to "disable" can now be used by pacifists!
+    - type: Tweak
+      message: >-
+        Refactored energy firemodes, please speak up if a message pops up wrong
+        or I missed something with the visuals somewhere!
+  id: 9705
+  time: '2026-08-07T00:15:09.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1352
