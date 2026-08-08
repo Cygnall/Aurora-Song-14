@@ -2873,3 +2873,10 @@ Entries:
   id: 9708
   time: '2026-08-08T00:51:20.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1378
+- author: Sunburst and Sere
+  changes:
+    - type: Add
+      message: Unique legs slot sprites for every UI theme. All sprites by Sunburst.
+  id: 9709
+  time: '2026-08-08T00:54:34.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1377
