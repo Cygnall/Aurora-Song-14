@@ -9,3 +9,6 @@ consent-BodyModification-desc = Toggle this on to allow body transforming effect
 
 consent-GenderModification-name = Gender Modification
 consent-GenderModification-desc = Toggle this on to allow gender transforming effects to affect your character.
+
+consent-Boo-name = Hauntings
+consent-Boo-desc = Toggle this on to enable ghosts to boo in your general vicinity (20 tile radius).

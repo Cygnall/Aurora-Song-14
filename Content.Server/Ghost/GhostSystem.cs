@@ -1,5 +1,6 @@
 using System.Linq;
 using System.Numerics;
+using Content.Server._Floof.Consent; // Aurora's Song
 using Content.Server._NF.CryoSleep; // Frontier
 using Content.Server.Administration.Logs;
 using Content.Server.Administration.Managers; // Frontier
@@ -7,6 +8,7 @@ using Content.Server.Chat.Managers;
 using Content.Server.GameTicking;
 using Content.Server.Mind;
 using Content.Server.Roles.Jobs;
+using Content.Shared._Floof.Consent; // Aurora's Song
 using Content.Shared.Actions;
 using Content.Shared.Cargo; // Frontier
 using Content.Shared.CCVar;
@@ -73,12 +75,15 @@ namespace Content.Server.Ghost
         [Dependency] private GhostSpriteStateSystem _ghostState = default!;
         [Dependency] private IAdminManager _admin = default!; // Frontier
         [Dependency] private CryoSleepSystem _cryo = default!; // Frontier
+        [Dependency] private ConsentSystem _consent = default!; // Aurora's Song
 
         [Dependency] private EntityQuery<GhostComponent> _ghostQuery = default!;
         [Dependency] private EntityQuery<PhysicsComponent> _physicsQuery = default!;
 
         private static readonly ProtoId<TagPrototype> AllowGhostShownByEventTag = "AllowGhostShownByEvent";
         private static readonly ProtoId<DamageTypePrototype> AsphyxiationDamageType = "Asphyxiation";
+        private static readonly ProtoId<ConsentTogglePrototype> BooConsent = "Boo"; // Aurora's Song
+        private static readonly int BooConsentDistance = 20; // Aurora's Song - About two screens
 
         public override void Initialize()
         {
@@ -146,6 +151,25 @@ namespace Content.Server.Ghost
         {
             if (args.Handled)
                 return;
+
+            // Aurora's Song Start - Haunting consent toggle
+            var mindQuery = EntityQueryEnumerator<MindContainerComponent>();
+            var ghostCoordinates = Transform(uid).Coordinates;
+            while (mindQuery.MoveNext(out var mindUid, out var mindComponent))
+            {
+                if (!mindComponent.HasMind)
+                    continue;
+
+                if (!_transformSystem.InRange(ghostCoordinates, Transform(mindUid).Coordinates, BooConsentDistance))
+                    continue;
+
+                if (_consent.HasConsent((mindUid, mindComponent), BooConsent))
+                    continue;
+
+                _popup.PopupEntity(Loc.GetString("ghost-component-boo-action-failed"), uid, uid);
+                return;
+            }
+            // Aurora's Song End
 
             var entities = _lookup.GetEntitiesInRange(args.Performer, component.BooRadius).ToList();
             // Shuffle the possible targets so we don't favor any particular entities

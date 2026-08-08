@@ -4,10 +4,11 @@
   members:
   - NSFWDescriptions
 
-# - type: consentCategory
-#   id: mechanics
-#   priority: 1
-#   members:
+- type: consentCategory
+  id: mechanics
+  priority: 1
+  members:
+  - Boo
 #   - Hypno
 #   - ParadoxClone
 #   - MindSwap

@@ -1,0 +1,22 @@
+# Effects
+- type: consentToggle
+  id: Aphrodisiacs
+  category: Effects
+
+- type: consentToggle
+  id: Polymorph
+  category: Effects
+
+- type: consentToggle
+  id: BodyModification
+  category: Effects
+
+- type: consentToggle
+  id: GenderModification
+  category: Effects
+
+# Mechanics
+- type: consentToggle
+  id: Boo
+  category: Mechanics
+  defaultValue: true
