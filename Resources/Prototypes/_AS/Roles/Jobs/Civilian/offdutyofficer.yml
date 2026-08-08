@@ -31,7 +31,7 @@
   - GeneralNfsdAccess
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant, RadioImplantSLE ]
+    implants: [ MindShieldImplant, TrackingImplant, RadioImplantSLE, TriageTrackingImplant ]
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
@@ -51,9 +51,10 @@
     - FrontierUplinkCoin20
   licenses:
   - LicenseContrabandHandling
-  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard and triage encryption keys
   - EncryptionKeyTraffic
   - EncryptionKeyShipboard
+  - EncryptionKeyTriage
 
 - type: chameleonOutfit
   id: OffDutyOfficerChameleonOutfit

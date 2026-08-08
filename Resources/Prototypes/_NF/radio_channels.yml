@@ -6,6 +6,7 @@
   color: "#CC6633"
   # Monolith - maxrange added by Monolith, logged by Aurora's Song
   maxRange: 750 # CS - increase range 500 => 750
+  # Aurora's Song - If Shortband (Traffic) range is adjusted, adjust Medical
 
 # Aurora Song - Changed id from "Nfsd" to "Sle" (Sector Law Enforcment)
 - type: radioChannel

@@ -24,7 +24,8 @@
       - Critical
       - Dead
     - type: RattleOnTrigger
-      radioChannel: "Medical"
+      radioChannel: # Aurora's Song - Changed to a list
+      - Medical
 
 - type: entity
   parent: BaseSubdermalImplant
@@ -50,7 +51,8 @@
       - Critical
       - Dead
     - type: RattleOnTrigger
-      radioChannel: "Freelance"
+      radioChannel: # Aurora's Song - Changed to a list
+      - Freelance
 
 - type: entity
   parent: BaseSubdermalImplant

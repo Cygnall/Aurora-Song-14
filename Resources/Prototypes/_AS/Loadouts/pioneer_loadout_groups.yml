@@ -1,0 +1,10 @@
+- type: loadoutGroup
+  id: PioneerRescue
+  name: loadout-group-pioneer-rescue
+  minLimit: 0
+  maxLimit: 1
+  defaultSelected: 1
+  loadouts:
+  - PioneerTriageTrackingImplanter
+  fallbacks:
+  - PioneerTriageTrackingImplanter

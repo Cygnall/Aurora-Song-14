@@ -21,7 +21,7 @@
   - Janitor
   special:
   - !type:AddImplantSpecial
-    implants: [ TrackingImplant ]
+    implants: [ TrackingImplant, TriageTrackingImplant ]
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

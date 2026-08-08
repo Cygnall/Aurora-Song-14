@@ -8,4 +8,25 @@
   - type: Implanter
     implant: RadioImplantSLE
 
+- type: entity
+  id: PrisonTrackingImplanter
+  name: prison tracking implanter
+  parent: [ BaseC2ContrabandUnredeemable, BaseImplantOnlyImplanter ]
+  components:
+  - type: Implanter
+    implant: PrisonTrackingImplant
+
 #endregion SLE
+
+#region Medical
+
+- type: entity
+  id: TriageTrackingImplanter
+  name: triage tracking implanter
+  parent: BaseImplantOnlyImplanter
+  description: An alert system for medical staff and local responders in a disposable implanter.
+  components:
+  - type: Implanter
+    implant: TriageTrackingImplant
+
+#endregion Medical

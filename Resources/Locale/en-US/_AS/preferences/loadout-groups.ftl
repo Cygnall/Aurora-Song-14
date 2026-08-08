@@ -1,3 +1,6 @@
+# region Pioneer
+loadout-group-pioneer-rescue = Rescue Opt-In
+
 # region Medic
 loadout-group-medic-head = head
 loadout-group-medic-jumpsuit = jumpsuit

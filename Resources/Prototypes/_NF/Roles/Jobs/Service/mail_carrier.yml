@@ -21,7 +21,7 @@
   - Aurora # Frontier - Aurora Song - Changed from Frontier to Aurora
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant ]
+    implants: [ MindShieldImplant, TrackingImplant, TriageTrackingImplant ] # Aurora's Song - Added tracking implants
   - !type:GiveItemOnHolidaySpecial # Frontier
     holiday: FrontierBirthday # Frontier
     prototype: FrontierBirthdayGift # Frontier

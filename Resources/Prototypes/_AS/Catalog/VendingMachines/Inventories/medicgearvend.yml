@@ -14,9 +14,12 @@
     ClothingEyesHudMedical: 4294967295 # Infinite
     ClothingEyesEyepatchHudMedical: 4294967295 # Infinite
     ASClothingEyesGlassesMedic: 2 # Limited because powerful
+    TriageTrackingImplanter: 4294967295 # Infinite
     MedicalTrackingImplanter: 4294967295 # Infinite
     LightImplanter: 4294967295 # Infinite
     MedTekCartridge: 4294967295 # Infinite
+    EncryptionKeyMedical: 4294967295 # Infinite
+    EncryptionKeyTriage: 4294967295 # Infinite
     BoxFolderMedicalDoctor: 4294967295 # Infinite
     HandLabeler: 4294967295 # Infinite
   # Tools

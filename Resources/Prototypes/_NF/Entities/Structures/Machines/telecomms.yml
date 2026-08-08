@@ -17,10 +17,11 @@
       - EncryptionKeyNfsd
       - EncryptionKeyTraffic
       - EncryptionKeyShipboard # Aurora's Song - Added Shipboard key to shuttle server, so all ships can have short-range comms
+      - EncryptionKeyTriage # Aurora's Song - Added Triage key to station telecoms server, for med staff
       - EncryptionKeyGreeting
   - type: EncryptionKeyHolder
     keysExtractionMethod: Prying
-    keySlots: 12 # Aurora's Song - Increased to 12 to fit all keys, including new Shipboard key
+    keySlots: 13 # Aurora's Song - Increased to 13 to fit all keys, including new Shipboard and Triage keys
 
 - type: entity
   parent: TelecomServer
