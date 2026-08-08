@@ -2909,3 +2909,10 @@ Entries:
   id: 9712
   time: '2026-08-08T09:50:29.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1384
+- author: ZigTag
+  changes:
+    - type: Add
+      message: Consent toggle for Hauntings (defaults on)
+  id: 9713
+  time: '2026-08-08T22:26:54.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1386
