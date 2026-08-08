@@ -2889,3 +2889,16 @@ Entries:
   id: 9710
   time: '2026-08-08T04:31:21.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1369
+- author: Vandanna
+  changes:
+    - type: Add
+      message: Triage Medical channel
+    - type: Tweak
+      message: Med comm range lowered to match shortband
+    - type: Add
+      message: Triage Medical and Prison Implant/ Implanters
+    - type: Tweak
+      message: Medical Implanter is removable
+  id: 9711
+  time: '2026-08-08T08:04:55.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1383
