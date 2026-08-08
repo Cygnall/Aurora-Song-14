@@ -139,10 +139,12 @@
   parent: [EncryptionKey, RecyclableItemDeviceTiny] # Frontier: added RecyclableItemDeviceTiny, removed BaseMedicalContraband
   id: EncryptionKeyMedical
   name: medical encryption key
-  description: An encryption key used by those who save lives.
+  description: An encryption key used by those who listen to those who save lives. # Aurora's Song - Edit to reflect readonly nature
   components:
   - type: EncryptionKey
     channels:
+    - Medical
+    readOnlyChannels: # Aurora's Song
     - Medical
     defaultChannel: Medical
   - type: Sprite

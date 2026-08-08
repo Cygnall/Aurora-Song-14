@@ -19,4 +19,11 @@ public sealed partial class EncryptionKeyComponent : Component
     /// </summary>
     [DataField]
     public ProtoId<RadioChannelPrototype>? DefaultChannel;
+
+    //RMC14
+    /// <summary>
+    ///     A list of radio channels that are ReadOnly, you must still include the channel in the channels list.
+    /// </summary>
+    [DataField]
+    public HashSet<ProtoId<RadioChannelPrototype>> ReadOnlyChannels = new();
 }

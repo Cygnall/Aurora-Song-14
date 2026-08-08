@@ -111,3 +111,12 @@
     layers:
     - state: crypt_silver
     - state: triage_label
+
+- type: entity
+  parent: EncryptionKeyMedical
+  id: EncryptionKeyMedicalMedic
+  name: medic medical encryption key
+  description: An encryption key used by those who save lives.
+  components:
+  - type: EncryptionKey
+    readOnlyChannels: [] # remove readonly

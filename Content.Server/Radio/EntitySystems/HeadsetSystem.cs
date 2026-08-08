@@ -1,3 +1,4 @@
+using Content.Server.Popups; // Aurora's Song
 using Content.Shared.Chat;
 using Content.Shared.Inventory.Events;
 using Content.Shared.Radio;
@@ -12,6 +13,7 @@ public sealed partial class HeadsetSystem : SharedHeadsetSystem
 {
     [Dependency] private INetManager _netMan = default!;
     [Dependency] private RadioSystem _radio = default!;
+    [Dependency] private PopupSystem _popup = default!; // Aurora's Song
 
     public override void Initialize()
     {
@@ -48,6 +50,13 @@ public sealed partial class HeadsetSystem : SharedHeadsetSystem
             && TryComp(component.Headset, out EncryptionKeyHolderComponent? keys)
             && keys.Channels.Contains(args.Channel.ID))
         {
+            //RMC14
+            if (keys.ReadOnlyChannels.Contains(args.Channel.ID))
+            {
+                _popup.PopupEntity("You hear a crackle as if nothing goes through", uid, uid); // Aurora's Song - Use popup entity here
+                args.Channel = null;
+                return;
+            }
             _radio.SendRadioMessage(uid, args.Message, args.Channel, component.Headset);
             args.Channel = null; // prevent duplicate messages from other listeners.
         }

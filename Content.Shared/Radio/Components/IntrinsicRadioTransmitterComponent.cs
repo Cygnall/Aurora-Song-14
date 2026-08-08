@@ -13,4 +13,11 @@ public sealed partial class IntrinsicRadioTransmitterComponent : Component
 {
     [DataField]
     public HashSet<ProtoId<RadioChannelPrototype>> Channels = new() { SharedChatSystem.CommonChannel };
+
+    // Aurora's Song
+    /// <summary>
+    ///     A list of radio channels that are ReadOnly, you must still include the channel in the channels list.
+    /// </summary>
+    [DataField]
+    public HashSet<ProtoId<RadioChannelPrototype>> ReadOnlyChannels = new();
 }

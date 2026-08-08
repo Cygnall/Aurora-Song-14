@@ -1,6 +1,7 @@
 using Content.Server._NF.Radio; // Frontier
 using Content.Server.Administration.Logs;
 using Content.Server.Chat.Systems;
+using Content.Server.Popups; // Aurora's Song
 using Content.Server.Power.Components;
 using Content.Shared.Chat;
 using Content.Shared.Database;
@@ -30,6 +31,7 @@ public sealed partial class RadioSystem : EntitySystem
     [Dependency] private IPrototypeManager _prototype = default!;
     [Dependency] private IRobustRandom _random = default!;
     [Dependency] private ChatSystem _chat = default!;
+    [Dependency] private PopupSystem _popup = default!; // Aurora's Song
     [Dependency] private EntityQuery<TelecomExemptComponent> _exemptQuery = default!;
 
     // set used to prevent radio feedback loops.
@@ -46,6 +48,14 @@ public sealed partial class RadioSystem : EntitySystem
     {
         if (args.Channel != null && component.Channels.Contains(args.Channel.ID))
         {
+            // Aurora's Song Start - Readonly intrinsic channels
+            if (component.ReadOnlyChannels.Contains(args.Channel.ID))
+            {
+                _popup.PopupEntity("You hear a crackle as if nothing goes through", uid, uid);
+                args.Channel = null;
+                return;
+            }
+            // Aurora's Song End
             SendRadioMessage(uid, args.Message, args.Channel, uid);
             args.Channel = null; // prevent duplicate messages from other listeners.
         }
