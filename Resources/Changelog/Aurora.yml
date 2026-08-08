@@ -2902,3 +2902,10 @@ Entries:
   id: 9711
   time: '2026-08-08T08:04:55.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1383
+- author: ZigTag
+  changes:
+    - type: Tweak
+      message: Now only medics can speak on Medical
+  id: 9712
+  time: '2026-08-08T09:50:29.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1384
