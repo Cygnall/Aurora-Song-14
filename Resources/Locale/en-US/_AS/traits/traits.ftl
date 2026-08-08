@@ -1,3 +1,6 @@
+trait-armblades-name = Armblades
+trait-armblades-desc = Gives you a pair of arm-blades akin to a changeling. In order to not be given suppressants, you had to get a permanent prison implanter put in you.
+
 trait-replicant-name = Replicant
 trait-replicant-desc = You are a Replicant, a biomechanical construst that bleeds oxidant.
 
