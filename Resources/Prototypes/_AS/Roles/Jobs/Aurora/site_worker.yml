@@ -23,7 +23,7 @@
   - GeneralAccess
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant ]
+    implants: [ MindShieldImplant, TrackingImplant, TriageTrackingImplant ]
   - !type:AddComponentSpecial
     components:
       - type: PreventShipyardTitleOverwrite

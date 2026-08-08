@@ -26,7 +26,7 @@
   - GeneralNfsdAccess
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant ]
+    implants: [ MindShieldImplant, TrackingImplant, TriageTrackingImplant ]
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
@@ -44,9 +44,10 @@
     - FrontierUplinkCoin10
   licenses:
   - LicenseContrabandHandling
-  encryptionKeys: # Added traffic, shipboard, and medical encryption keys
+  encryptionKeys: # Added traffic, shipboard, triage, and medical encryption keys
   - EncryptionKeyTraffic
   - EncryptionKeyShipboard
+  - EncryptionKeyTriage
   - EncryptionKeyMedical
 
 - type: chameleonOutfit

@@ -92,3 +92,22 @@
     layers:
     - state: crypt_silver
     - state: nano_label
+
+- type: entity
+  parent: EncryptionKey
+  id: EncryptionKeyTriage
+  name: triage encryption key
+  categories: [ DoNotMap ]
+  description: An encryption key for the Triage channel.
+  components:
+  - type: EncryptionKey
+    channels:
+    - Triage
+    defaultChannel: Triage
+  - type: Item
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+  - type: Sprite
+    sprite: _AS/Objects/Devices/encryption_keys.rsi
+    layers:
+    - state: crypt_silver
+    - state: triage_label

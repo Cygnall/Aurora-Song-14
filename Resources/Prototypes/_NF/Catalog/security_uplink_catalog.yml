@@ -1235,6 +1235,22 @@
         tags:
           - SecurityUplink
 
+- type: listing # Aurora's Song - Added Prison Tracking Implanter to uplink
+  id: UplinkSecurityPrisonTrackingImplanter
+  name:  uplink-security-prison-tracking-implanter-name
+  description: uplink-security-prison-tracking-implanter-desc
+  productEntity: PrisonTrackingImplanter
+  icon: { sprite: Objects/Specific/Medical/implanter.rsi, state: implanter1 }
+  cost:
+    FrontierUplinkCoin: 1
+  categories:
+    - UplinkSecurityUtility
+  conditions:
+    - !type:StoreWhitelistCondition
+      whitelist:
+        tags:
+          - SecurityUplink
+
 #region magazines
 - type: listing
   id: UplinkSecurityMagazineHighCapacityPistol35Overpressure

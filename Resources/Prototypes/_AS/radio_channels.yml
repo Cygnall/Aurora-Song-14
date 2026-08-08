@@ -20,3 +20,10 @@
   keycode: 'a'
   frequency: 3228
   color: "#fc9a9a"
+
+- type: radioChannel
+  id: Triage
+  name: chat-radio-triage
+  keycode: 'k'
+  frequency: 1125
+  color: "#c7e7ae"

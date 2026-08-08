@@ -18,7 +18,7 @@
   - AllAccess
   special:
   - !type:AddImplantSpecial
-    implants: [ MindShieldImplant, TrackingImplant ]
+    implants: [ MindShieldImplant, TrackingImplant, TriageTrackingImplant ] # Aurora's Song - Added Triage Tracking Implant to DoC
   - !type:AddComponentSpecial
     components:
       - type: CommandStaff

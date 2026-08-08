@@ -24,6 +24,8 @@
   - Aurora # Aurora Song - Changed from Frontier to Aurora
   - StationTrafficController
   special:
+  - !type:AddImplantSpecial
+    implants: [ TrackingImplant, TriageTrackingImplant ] # Aurora's Song - Added implants for tracking to the STC
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift

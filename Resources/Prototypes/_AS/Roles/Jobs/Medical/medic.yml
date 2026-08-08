@@ -17,7 +17,7 @@
   - GeneralAccess
   special:
   - !type:AddImplantSpecial
-    implants: [ TrackingImplant ]
+    implants: [ TrackingImplant, TriageTrackingImplant ]
   - !type:GiveItemOnHolidaySpecial
     holiday: FrontierBirthday
     prototype: FrontierBirthdayGift
@@ -32,9 +32,10 @@
     - ShipVoucherAuroraMedic
   licenses:
   - LicenseContrabandHandling
-  encryptionKeys: # Aurora's Song - Added traffic and shipboard encryption keys
+  encryptionKeys: # Aurora's Song - Added traffic and shipboard and triage encryption keys
   - EncryptionKeyTraffic
   - EncryptionKeyShipboard
+  - EncryptionKeyTriage
 
 - type: chameleonOutfit
   id: MedicChameleonOutfit

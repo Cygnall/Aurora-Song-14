@@ -34,6 +34,7 @@
   keycode: 'm'
   frequency: 1355
   color: "#57b8f0"
+  maxRange: 750 # Aurora's Song - Set to the same as Shortband (Traffic), for consistency, if Shortband is adjusted or vice-versa, adjust both
 
 - type: radioChannel
   id: Science
