@@ -1,3 +1,5 @@
+#region SLE
+
 - type: entity
   parent: ClothingEyesHudSecurity
   id: ASClothingEyesHudSLE
@@ -33,3 +35,20 @@
     sprite: _AS/Clothing/Eyes/Hud/sle_patch.rsi
   - type: Clothing
     sprite: _AS/Clothing/Eyes/Hud/sle_patch.rsi
+
+#region Clockwork
+
+- type: entity
+  parent: [ClothingEyesHudBase, ShowSecurityIcons, BaseC3Contraband, ContrabandClothing]
+  id: ASClothingEyesClockworkHud
+  name: judicial visor
+  description: A visor worn by servants of Ratvar on the warpath which protects from intense visual stimuli.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/Eyes/Glasses/judicial_visor.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/Eyes/Glasses/judicial_visor.rsi
+  - type: FlashImmunity
+  - type: EyeProtection
+  - type: IdentityBlocker
+    coverage: EYES

@@ -1,0 +1,21 @@
+#region Clockwork
+
+- type: entity
+  name: clockwork spear
+  parent: Spear
+  id: ASSpearClockwork
+  description: A hefty brass spear covered in clockwork mechanisms which make it easy to swing.
+  components:
+  - type: Sprite
+    sprite: _AS/Objects/Weapons/Melee/clockwork_spear.rsi
+  - type: MeleeWeapon
+    autoAttack: true # the clockwork mechanisms
+    wideAnimationRotation: -135
+    attackRate: 1.2 # it's fast. the clockwork mechanisms
+    damage:
+      types:
+        Piercing: 20 #slightly more than a plasma spear
+  - type: DamageOtherOnHit
+    damage:
+      types:
+        Piercing: 25

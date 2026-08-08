@@ -81,3 +81,24 @@
     sprite: _AS/Clothing/OuterClothing/Misc/cr_jacket.rsi
   - type: Clothing
     sprite: _AS/Clothing/OuterClothing/Misc/cr_jacket.rsi
+
+#region Clockwork
+
+- type: entity
+  parent: [ClothingOuterStorageBase, BaseC3Contraband]
+  id: ASClothingOuterClockworkCoat
+  name: clockwork coat
+  description: A thick, rough leather coat with rigid brass armor sewn between the layers.
+  components:
+  - type: Sprite
+    sprite: _AS/Clothing/OuterClothing/Coats/clockwork_coat.rsi
+  - type: Clothing
+    sprite: _AS/Clothing/OuterClothing/Coats/clockwork_coat.rsi
+  - type: Armor
+    modifiers:
+      coefficients:
+        Blunt: 0.7
+        Slash: 0.7
+        Piercing: 0.7
+        Heat: 0.8
+        Shock: 0.9

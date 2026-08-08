@@ -1,4 +1,4 @@
-﻿- type: entity
+- type: entity
   id: NFBaseWreckDebris
   parent: NFBaseDebris
   abstract: true
@@ -132,8 +132,11 @@
         - id: SalvagePartsT2Spawner
           prob: 0.1
         - id: SalvagePartsT3Spawner
-          prob: 0.05
+          prob: 0.04 # Aurora's Song - changed from 0.05
         - id: SalvagePartsT4Spawner
+          prob: 0.01
+        # Aurora's Song - Clockwork Cult items
+        - id: ASClockworkLoot
           prob: 0.01
         # Big loot
         - id: NFSalvageBrassFurnitureSpawner

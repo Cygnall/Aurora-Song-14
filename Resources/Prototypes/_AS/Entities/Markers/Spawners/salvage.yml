@@ -1,0 +1,14 @@
+#region Clockwork
+
+- type: entity
+  id: ASClockworkLoot
+  parent: MarkerBase
+  name: clockwork cult loot spawner
+  components:
+  - type: RandomSpawner
+    prototypes:
+    - ClockworkShield
+    - ASClothingOuterArmorClockwork
+    - ASClothingOuterClockworkCoat
+    - ASClothingEyesClockworkHud
+    - ASSpearClockwork
