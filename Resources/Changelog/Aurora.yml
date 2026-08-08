@@ -2866,3 +2866,10 @@ Entries:
   id: 9707
   time: '2026-08-07T00:38:19.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1374
+- author: Vandanna
+  changes:
+    - type: Fix
+      message: Off-Duty can uncryo
+  id: 9708
+  time: '2026-08-08T00:51:20.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1378
