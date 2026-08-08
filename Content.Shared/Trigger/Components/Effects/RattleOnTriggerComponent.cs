@@ -16,7 +16,7 @@ public sealed partial class RattleOnTriggerComponent : BaseXOnTriggerComponent
     /// The radio channel the message will be sent to.
     /// </summary>
     [DataField]
-    public List<ProtoId<RadioChannelPrototype>> RadioChannel = new() { "Syndicate" };
+    public List<ProtoId<RadioChannelPrototype>> RadioChannel = new() { "Syndicate" }; // Aurora's Song - Changed to a list
 
     /// <summary>
     /// The message to be send depending on the target's current mob state.
