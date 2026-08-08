@@ -16,17 +16,22 @@ public sealed class IntrinsicRadioKeySystem : EntitySystem
 
     private void OnTransmitterChannelsChanged(EntityUid uid, IntrinsicRadioTransmitterComponent component, EncryptionChannelsChangedEvent args)
     {
-        UpdateChannels(uid, args.Component, ref component.Channels);
+        UpdateChannels(uid, args.Component, ref component.Channels, ref component.ReadOnlyChannels); // Aurora's Song
     }
 
     private void OnReceiverChannelsChanged(EntityUid uid, ActiveRadioComponent component, EncryptionChannelsChangedEvent args)
     {
-        UpdateChannels(uid, args.Component, ref component.Channels);
+        HashSet<ProtoId<RadioChannelPrototype>> doNothing = []; // Aurora's Song - I HAVE to do this
+        UpdateChannels(uid, args.Component, ref component.Channels, ref doNothing); // Aurora's Song
     }
 
-    private void UpdateChannels(EntityUid _, EncryptionKeyHolderComponent keyHolderComp, ref HashSet<ProtoId<RadioChannelPrototype>> channels)
+    private void UpdateChannels(EntityUid _, EncryptionKeyHolderComponent keyHolderComp, ref HashSet<ProtoId<RadioChannelPrototype>> channels, ref HashSet<ProtoId<RadioChannelPrototype>> readonlyChannels) // Aurora's Song
     {
         channels.Clear();
         channels.UnionWith(keyHolderComp.Channels);
+        // Aurora's Song Start
+        readonlyChannels.Clear();
+        readonlyChannels.UnionWith(keyHolderComp.ReadOnlyChannels);
+        // Aurora's Song End
     }
 }

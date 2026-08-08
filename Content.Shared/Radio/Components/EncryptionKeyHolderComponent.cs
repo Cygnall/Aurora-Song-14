@@ -56,4 +56,12 @@ public sealed partial class EncryptionKeyHolderComponent : Component
     [ViewVariables(VVAccess.ReadWrite)]
     [DataField("examineWhileLocked")]
     public bool ExamineWhileLocked = true;
+
+    //RMC14
+    /// <summary>
+    ///     Combined set of radio channels provided by all contained keys that are ReadOnly.
+    /// </summary>
+    [ViewVariables]
+    [AutoNetworkedField]
+    public HashSet<ProtoId<RadioChannelPrototype>> ReadOnlyChannels = new();
 }
