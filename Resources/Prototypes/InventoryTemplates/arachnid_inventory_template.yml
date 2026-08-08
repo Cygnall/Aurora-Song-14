@@ -162,7 +162,7 @@
       displayName: Suit Storage
     # Aurora's Song Start - Legs Slot
     - name: legs
-      slotTexture: shoes
+      slotTexture: legs
       slotFlags: LEGS
       stripTime: 6
       uiWindowPos: 2,0

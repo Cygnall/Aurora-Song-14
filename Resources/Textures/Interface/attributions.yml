@@ -1,0 +1,6 @@
+﻿# Attribution for the legs slot icon and its various UI theme variants
+
+- files: ["legs.png"] # They're technically all named this. This comprises the default legs slot icon AND all of its UI theme variants.
+  license: "CC0-1.0"
+  copyright: "Made by Sunburst (@theantiq) in the Aurora's Song discord"
+  source: "https://discord.com/channels/1374826764169117827/1501009381888889075/1535092829079076904"
