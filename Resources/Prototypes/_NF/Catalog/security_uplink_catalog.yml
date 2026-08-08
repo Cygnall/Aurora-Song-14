@@ -1240,7 +1240,7 @@
   name:  uplink-security-prison-tracking-implanter-name
   description: uplink-security-prison-tracking-implanter-desc
   productEntity: PrisonTrackingImplanter
-  icon: { sprite: Objects/Specific/Medical/implanter.rsi, state: implanter1 }
+  icon: { sprite: Objects/Specific/Medical/implanter.rsi, state: implanter0 }
   cost:
     FrontierUplinkCoin: 1
   categories:

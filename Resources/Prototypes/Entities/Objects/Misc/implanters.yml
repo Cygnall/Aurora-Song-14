@@ -49,7 +49,10 @@
       - RadioImplant
       - ChameleonControllerImplant
       - VoiceMaskImplant
+      - MedicalTrackingImplant # Aurora's Song
+      - TriageTrackingImplant # Aurora's Song
       - RadioImplantFreelance # Frontier
+      - PrisonTrackingImplant # Aurora's Song
       deimplantFailureDamage:
         types:
           Cellular: 50
