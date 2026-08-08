@@ -2880,3 +2880,12 @@ Entries:
   id: 9709
   time: '2026-08-08T00:54:34.0000000+00:00'
   url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1377
+- author: astral_amy
+  changes:
+    - type: Add
+      message: Some new remnants of the Clockwork Cult might show up in their ruins.
+    - type: Tweak
+      message: Resprited the clockwork shield.
+  id: 9710
+  time: '2026-08-08T04:31:21.0000000+00:00'
+  url: https://github.com/AuroraSong14/Aurora-Song-14/pull/1369
