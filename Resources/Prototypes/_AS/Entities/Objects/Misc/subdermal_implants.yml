@@ -81,7 +81,7 @@
       - Sle
 
 - type: entity
-  parent: BaseSubdermalImplant
+  parent: PrisonTrackingImplant
   id: PrisonTrackingImplantPermanent
   name: prison tracking implant
   description: This implant has a condition monitor for the SLE radio channel, for tracking prisoners.

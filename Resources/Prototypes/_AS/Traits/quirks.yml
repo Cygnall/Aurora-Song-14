@@ -1,7 +1,7 @@
 - type: trait
-  id: Armblades
-  name: trait-armblades-name
-  description: trait-armblades-desc
+  id: Armblade
+  name: trait-armblade-name
+  description: trait-armblade-desc
   category: Quirks
   components:
   - type: ActionGrant
