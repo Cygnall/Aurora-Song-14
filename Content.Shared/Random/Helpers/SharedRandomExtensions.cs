@@ -212,6 +212,20 @@ namespace Content.Shared.Random.Helpers
             return hash;
         }
 
+        // Aurora Song start
+        // https://github.com/aappleby/smhasher/blob/07bb4de10a63e8cc2e1724865454eba635742383/src/MurmurHash3.cpp#L68
+        private static int Fmix32(int seed)
+        {
+            uint h = (uint)seed;
+            h ^= h >> 16;
+            h *= 0x85ebca6b;
+            h ^= h >> 13;
+            h *= 0xc2b2ae35;
+            h ^= h >> 16;
+            return (int)h;
+        }
+        // Aurora Song end
+
         // TODO: REPLACE ALL OF THIS WITH PREDICTED RANDOM WHEN ENGINE PR IS MERGED
         /// <summary>
         /// Creates an instance of System.Random that will be the same for both the server and client.
@@ -228,7 +242,8 @@ namespace Content.Shared.Random.Helpers
         public static System.Random PredictedRandom(IGameTiming timing, NetEntity netEnt, NetEntity? netEnt2 = null)
         {
             var seed = HashCodeCombine((int)timing.CurTick.Value, netEnt.Id, netEnt2?.Id ?? 0);
-            return new System.Random(seed);
+            // Aurora Song: use Fmix32 here
+            return new System.Random(Fmix32(seed));
         }
 
         /// <summary>
