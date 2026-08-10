@@ -1,4 +1,17 @@
 - type: trait
+  id: Armblade
+  name: trait-armblade-name
+  description: trait-armblade-desc
+  category: Quirks
+  components:
+  - type: ActionGrant
+    actions:
+    - ActionRetractableItemArmBlade
+  - type: AutoImplant
+    implants:
+    - PrisonTrackingImplantPermanent
+
+- type: trait
   id: Replicant
   name: trait-replicant-name
   description: trait-replicant-desc
